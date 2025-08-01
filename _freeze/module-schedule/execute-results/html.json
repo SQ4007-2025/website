@@ -1,0 +1,15 @@
+{
+  "hash": "9a74c111e66ca165667fb6d6e4cbffd6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Schedule\"\ntbl-colwidths: [5,20,5,5,5,5,5,5,5]\n---\n\nThis schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.\n\n::: column-body\n| Week | Topic | Notes | Slides | Tutorial | HW |\n|:----------:|:-----------|:----------:|:----------:|:----------:|:----------:|\n| 1 | Topic 1 |  | [🖥️](/slides/lab-0.html \"Lab slides\"){aria-label=\"Lab 0 slides\"} [💻](/labs/lab-0.html \"Lab instructions\"){aria-label=\"Lab 0 instructions\"} |  |  |\n| 2 | Topic 2 | [📖](/weeks/week-1.html#prepare){aria-label=\"Week 1 summary\"} | [🖥️](/slides/lec-1.html \"Lecture slides\"){aria-label=\"Lecture 1 slides\"} |  |  |\n| 3 | Topic 3 |  | [🖥️](/slides/lab-1.html \"Lab slides\"){aria-label=\"Lab 1 slides\"} [💻](/labs/lab-1.html \"Lab instructions\"){aria-label=\"Lab 1 instructions\"} |  |  |\n| 4 | Topic 4a | [📖](/weeks/week-2.html#prepare){aria-label=\"Week 2 summary\"} | [🖥️](/slides/lec-2.html \"Lecture slides\"){aria-label=\"Lecture 2 slides\"} |  |  |\n|  | Topic 4b |  | [🖥️](/slides/lec-3.html \"Lecture slides\"){aria-label=\"Lecture 3 slides\"} |  |  |\n| 5 | Topic 5a |  |  |  | [✍️](/hw/hw-5.html){aria-label=\"HW 5 instructions\"} |\n|  | Topic 5 extra |  |  |  |  |\n|  | Topic 5b |  |  |  |  |\n:::\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

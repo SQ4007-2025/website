@@ -1,0 +1,7 @@
+---
+title: "Course title"
+---
+
+Course description.
+
+![](images/background.png){fig-alt="A friendly robot army.  They just want to talk to you." width="600"}
