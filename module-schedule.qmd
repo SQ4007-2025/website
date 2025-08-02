@@ -1,6 +1,6 @@
 ---
 title: "Schedule"
-tbl-colwidths: [5,20,5,5,5,5,5,5,5]
+tbl-colwidths: [5,20,5,5,5,5]
 ---
 
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
@@ -23,5 +23,5 @@ knitr::knit_exit()
 ```
 
 |   |   | Notes | Slides | Tutorial | HW |
-|--------|--------|:------:|:------:|:------:|:------:|
+|------------|------------|:----------:|:----------:|:----------:|:----------:|
 | Week | Topic | 📖 | 🖥️ | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️ |
