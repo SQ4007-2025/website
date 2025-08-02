@@ -3,12 +3,12 @@ project:
 
 website:
   page-navigation: true
-  title: "Course title"
-  description: "Course description"
-  site-url: "https://<GithubOrgName>.github.io/website/"
+  title: "Computing Technology"
+  description: "Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages."
+  site-url: "https://SQ4007-2025.github.io/website/"
   favicon: "images/favicon.ico"
 
-  repo-url: https://github.com/sta210-s22/website
+  repo-url: https://github.com/SQ4007-2025/website
   repo-actions: [edit, issue]
 
   open-graph: true
