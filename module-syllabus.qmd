@@ -6,6 +6,7 @@ title: "Syllabus"
 
 ## Instructor
 
+![images/team/ed.jpg](images/team/ed.png) 
 [Dr. Ed Harris](https://weharris.me)
 
 ## Learning objectives
@@ -19,17 +20,17 @@ title: "Syllabus"
 
 ## Meetings
 
-Scheduled meetings will be held in Telford, Station Quarter. 
+Scheduled meetings will be held in person in Telford, Station Quarter. Autumn 2025: Check your personal schedule for room, day, time.
 
-Autumn 2025: Check your personal schedule for room, day, time.
+Material may be livestreamed to the YouTube channel and recorded for later viewing.
 
 ## Online resources
 
 - [Discord - join the community](https://discord.gg/dnNTE6xhhu)
 - [GitHub - the module repository](https://github.com/SQ4007-2025)
-- [YouTube - the module channel](https://www.youtube.com/@thestatisticslab)
+- [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab)
 - [Twitch - the DataGiri channel](https://www.twitch.tv/DataGiri)
-- [Twitter - Follow Ed's account](https://x.com/EdHarris9000)
+- [Twitter - Follow Ed's account (data science and memes)](https://x.com/EdHarris9000)
 
 ### Duke Community Standard
 
