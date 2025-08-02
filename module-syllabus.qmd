@@ -4,26 +4,28 @@ title: "Syllabus"
 
 [**Click here**](/documents/sta210-s22-syllabus.pdf "PDF of syllabus") **to download a PDF copy of the syllabus.**
 
-## Course info
-
-|           | Day       | Time              | Location                       |
-|-----------|-----------|-------------------|--------------------------------|
-| Lectures  | Tue & Thu | 1:45 pm - 3:00 pm | Reuben-Cooke Building 130      |
-| Section 1 | Mon       | 1:45 pm - 3:00 pm | Perkins LINK 087 (Classroom 3) |
-| Section 2 | Mon       | 3:30 pm - 4:45 pm | Old Chemistry 003              |
-| Section 3 | Mon       | 5:15 pm - 6:30 pm | Social Sciences 311            |
-
 ## Learning objectives
 
-By the end of the semester, you will be able to...
+1.	Analyse and solve problems using computational thinking, applying fundamental concepts of computer science across various domains.
+2.	Design and implement algorithms in different programming languages, demonstrating a clear understanding of functions, variables, conditionals, loops, and data structures.
+3.	Evaluate and improve the correctness, design, and style of code, showcasing the ability to assess and optimise computational solutions.
+4.	Synthesise knowledge of programming concepts to create web and mobile applications, employing technologies like HTML, CSS, and JavaScript.
+5.	Apply the principles of data management using SQL for effective storage and retrieval of information.
 
--   analyze real-world data to answer questions about multivariable relationships.
--   fit and evaluate linear and logistic regression models.
--   assess whether a proposed model is appropriate and describe its limitations.
--   use Quarto to write reproducible reports and GitHub for version control and collaboration.
--   communicate results from statistical analyses to a general audience.
 
-## Community
+## Meetings
+
+Scheduled meetings will be held in Telford, Station Quarter. 
+
+Autumn 2025: Check your personal schedule for room, day, time.
+
+## Online resources
+
+- [Discord](https://discord.gg/466666666666666666)
+- [GitHub](https://github.com/466666666666666666)
+- [YouTube](https://www.youtube.com/@thestatisticslab)
+- [Twitch](https://www.twitch.tv/DataGiri)
+- [Twitter](https://x.com/EdHarris9000)
 
 ### Duke Community Standard
 
