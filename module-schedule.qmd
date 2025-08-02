@@ -1,6 +1,6 @@
 ---
 title: "Schedule"
-tbl-colwidths: [5,20,5,5,5,5]
+tbl-colwidths: [5,15,5,8,5,5]
 ---
 
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
