@@ -35,11 +35,11 @@ Material may be livestreamed to the YouTube channel and recorded for later viewi
 
 ## Assessments
 
-### Assessment 1 
+#### Assessment 1 
 
 **A series of problem sets:** These problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.
 
-### Assessment 2
+#### Assessment 2
 
 **A project:** This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large. 
 
