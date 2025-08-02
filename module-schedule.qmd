@@ -6,22 +6,22 @@ tbl-colwidths: [5,15,5,8,5,5]
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
 
 ::: column-body
-| Week | Topic | Lectures | Notes & Code | Tutorials | Homeworks |
-|:----------:|:-----------|:----------:|:----------:|:----------:|:----------:|
-| 1 | Topic 1 |  | [🖥️](/slides/lab-0.html "Lab slides"){aria-label="Lab 0 slides"} [💻](/labs/lab-0.html "Lab instructions"){aria-label="Lab 0 instructions"} |  |  |
-| 2 | Topic 2 | [📖](/weeks/week-1.html#prepare){aria-label="Week 1 summary"} | [🖥️](/slides/lec-1.html "Lecture slides"){aria-label="Lecture 1 slides"} |  |  |
-| 3 | Topic 3 |  | [🖥️](/slides/lab-1.html "Lab slides"){aria-label="Lab 1 slides"} [💻](/labs/lab-1.html "Lab instructions"){aria-label="Lab 1 instructions"} |  |  |
-| 4 | Topic 4a | [📖](/weeks/week-2.html#prepare){aria-label="Week 2 summary"} | [🖥️](/slides/lec-2.html "Lecture slides"){aria-label="Lecture 2 slides"} |  |  |
-|  | Topic 4b |  | [🖥️](/slides/lec-3.html "Lecture slides"){aria-label="Lecture 3 slides"} |  |  |
-| 5 | Topic 5a |  |  |  | [✍️](/hw/hw-5.html){aria-label="HW 5 instructions"} |
-|  | Topic 5 extra |  |  |  |  |
-|  | Topic 5b |  |  |  |  |
+| Week | Topic         | Lecture | Notes & Code | Tutorial | Homework |
+|:----:|:--------------|:-------:|:------------:|:--------:|:--------:|
+|  1   | Topic 1       |   💻    |      📕      |    👨‍🏫    |    🏠    |
+|  2   | Topic 2       |         |              |          |          |
+|  3   | Topic 3       |         |              |          |          |
+|  4   | Topic 4a      |         |              |          |          |
+|      | Topic 4b      |         |              |          |          |
+|  5   | Topic 5a      |         |              |          |          |
+|      | Topic 5 extra |         |              |          |          |
+|      | Topic 5b      |         |              |          |          |
 :::
 
 ```{r echo = FALSE}
 knitr::knit_exit()
 ```
 
-|   |   | Lectures | Notes & Code | Tutorials | Homeworks |
-|------------|------------|:----------:|:----------:|:----------:|:----------:|
-| Week | Topic | 📖 | 🖥️ | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️ |
+|      |       | Lecture | Notes & Code | Tutorial | Homework |
+|------|-------|:-------:|:------------:|:--------:|:--------:|
+| Week | Topic |   💻    |      📕      |    👨‍🏫    |    🏠    |
