@@ -4,6 +4,10 @@ title: "Syllabus"
 
 [**Click here**](/documents/sta210-s22-syllabus.pdf "PDF of syllabus") **to download a PDF copy of the syllabus.**
 
+## Instructor
+
+[Dr. Ed Harris](https://weharris.me)
+
 ## Learning objectives
 
 1.	Analyse and solve problems using computational thinking, applying fundamental concepts of computer science across various domains.
@@ -21,11 +25,11 @@ Autumn 2025: Check your personal schedule for room, day, time.
 
 ## Online resources
 
-- [Discord](https://discord.gg/dnNTE6xhhu)
-- [GitHub](https://github.com/SQ4007-2025)
-- [YouTube](https://www.youtube.com/@thestatisticslab)
-- [Twitch](https://www.twitch.tv/DataGiri)
-- [Twitter](https://x.com/EdHarris9000)
+- [Discord - join the community](https://discord.gg/dnNTE6xhhu)
+- [GitHub - the module repository](https://github.com/SQ4007-2025)
+- [YouTube - the module channel](https://www.youtube.com/@thestatisticslab)
+- [Twitch - the DataGiri channel](https://www.twitch.tv/DataGiri)
+- [Twitter - Follow Ed's account](https://x.com/EdHarris9000)
 
 ### Duke Community Standard
 
