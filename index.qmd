@@ -9,4 +9,4 @@ title: "Computing Technology"
 
 Welcome!
 
-**Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience.** This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.
+**Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience.** The module demonstrates concepts using various programming languages, emphasizing problem-solving, correctness, design, and style. 
