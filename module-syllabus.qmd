@@ -29,6 +29,8 @@ Material may be livestreamed to the YouTube channel and recorded for later viewi
 
 All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the [module website](SQ4007-2025.github.io/website).
 
+[Harper Adams module website](https://vle.harper-adams.ac.uk/course/view.php?id=282) (university enrolled students only, requires login)
+
 - [Discord - join the community](https://discord.gg/dnNTE6xhhu) - for live discussion and support
 - [GitHub - the module repository](https://github.com/SQ4007-2025) - for the module materials
 - [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab) - for live streams and recordings
