@@ -6,7 +6,7 @@ title: "Syllabus"
 
 ## Instructor
 
-![images/team/ed.jpg](images/team/ed.png) 
+![images/team/ed.jpg](images/team/ed.png, width=250) 
 [Dr. Ed Harris](https://weharris.me)
 
 ## Learning objectives
