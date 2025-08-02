@@ -49,47 +49,17 @@ All lecture notes, assignment instructions, an up-to-date schedule, and other co
 
 For the project you can opt to work individually or collaborate with up to two other classmates, with the expectation that each member contributes equally to the project design and implementation. The complexity of the project should reflect the size of the group, with group projects expected to be more intricate than individual ones. The final project is assessed based on the project complexity and scope, the effectiveness of the implemented solution, creativity, and the overall quality of the code. For group projects, the assessment also considers individual contributions and the collaborative effort. ***NB*** for group projects, the scope and ambition of the project should reflect the size of the group.
 
+## Readings (optional)
 
-```{=html}
-<iframe width="400" height="225" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-```
+While there is no textbook for the module, these may be of interest.
 
-## Textbooks
+Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions of a Coder. Addison-Wesley Professional, Reading, Mass.
 
-While there is no official textbook for the course, we will be assigning readings from the following textbooks.
+Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, NY.
 
--   [R for Data Science](https://r4ds.had.co.nz/) by Garret Grolemund and Hadley Wickham
+## Lectures
 
--   [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) by Mine Çetinkaya-Rundel and Johanna Hardin
-
--   [Tidy modeling with R](https://www.tmwr.org/) by Max Kuhn and Julia Silge
-
--   [Beyond Multiple Linear Regression](https://bookdown.org/roback/bookdown-BeyondMLR/) by Paul Roback and Julie Legler
-
-## Lectures and labs
-
-The goal of both the lectures and the labs is for them to be as interactive as possible. My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. You are expected to attend all lecture and lab sessions and meaningfully contribute to in-class exercises and discussion. Additionally, some lectures will feature [application exercises] that will be graded. In addition to application exercises will be periodic activities help build a learning community. These will be short, fun activities that will help everyone in the class connect throughout the semester.
-
-You are expected to bring a laptop to each class so that you can take part in the in-class exercises. Please make sure your laptop is fully charged before you come to class as the number of outlets in the classroom will not be sufficient to accommodate everyone. More information on loaner laptops can be found [here](https://keeplearning.duke.edu/technical-support/).
-
-## Teams
-
-You will be assigned to a team at the beginning of the semester. You are encouraged to sit with your teammates in lecture and you will also work with them in the lab sessions. All team members are expected to contribute equally to the completion of the labs and project and you will be asked to evaluate your team members throughout the semester. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team's overall mark.
-
-You are expected to make use of the provided GitHub repository as their central collaborative platform. Commits to this repository will be used as a metric (one of several) of each team member's relative contribution for each project.
-
-## Assessment
-
-Assessment for the course is comprised of six components: application exercises, homework assignments, labs, exams, projects, and teamwork.
-
-### Application exercises
-
-Parts of some lectures will be dedicated to working on Application Exercises (AEs). These exercises which give you an opportunity to practice apply the statistical concepts and code introduced in the readings and lectures. These AEs are due within three days of the corresponding lecture period. Specifically, AEs from Tuesday lectures are due Friday by 11:59 pm ET, and AEs from Thursday lectures are due Sunday by 11:59 pm ET.
-
-Because these AEs are for practice, they will be graded based on completion, i.e., a good-faith effort has been made in attempting all parts. Successful on-time completion of at least 80% of AEs will result in full credit for AEs in the final course grade.
-
-### Labs
+## Labs
 
 In labs, you will apply the concepts discussed in lecture to various data analysis scenarios, with a focus on the computation. Most lab assignments will be completed in teams, and all team members are expected to contribute equally to the completion of each assignment. You are expected to use the team's GitHub repository on the course's GitHub organization as the central platform for collaboration. Commits to this repository will be used as a metric of each team member's relative contribution for each lab, and there will be periodic peer evaluation on the team collaboration. Lab assignments will be completed using Quarto, correspond to an appropriate GitHub repository, and submitted for grading in Gradescope.
 
