@@ -59,6 +59,8 @@ Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, N
 
 ## Lectures
 
+Lectures will introduce the topic and sometimes involve live coding demonstration of key concepts. Lectures will be delivered in person, and will be recorded and made available on the module website. 
+
 ## Tutorials
 
 In labs, you will apply the concepts discussed in lecture to various data analysis scenarios, with a focus on the computation. Most lab assignments will be completed in teams, and all team members are expected to contribute equally to the completion of each assignment. You are expected to use the team's GitHub repository on the course's GitHub organization as the central platform for collaboration. Commits to this repository will be used as a metric of each team member's relative contribution for each lab, and there will be periodic peer evaluation on the team collaboration. Lab assignments will be completed using Quarto, correspond to an appropriate GitHub repository, and submitted for grading in Gradescope.
@@ -67,11 +69,8 @@ In labs, you will apply the concepts discussed in lecture to various data analys
 
 ## Homework
 
-In homework, you will apply what you've learned during lecture and lab to complete data analysis tasks. You may discuss homework assignments with other students; however, homework should be completed and submitted individually. Similar to lab assignments, homework must be typed up using Quarto and GitHub and submitted as a PDF in Gradescope.
+In homework, you will apply what you've learned during lectures and tutorials to complete data analysis tasks. You may discuss homework assignments with other students; however, homework should be completed and submitted individually. Homework must be typed up ... and submitted ...
 
-One homework assignment will be dedicated to a *statistics experience*. The statistics experience is an opportunity to engage with statistics and data science outside of the classroom through podcasts, books, seminars, data analysis competitions, and other activities. As you complete these experiences, the goal is to consider how the material you're learning in the course connects with society more broadly.
-
-*The lowest homework grade will be dropped at the end of the semester.*
 
 ## Project
 
