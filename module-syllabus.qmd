@@ -75,6 +75,15 @@ Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions 
 
 Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, NY.
 
+Hermans, F., 2021. The Programmer’s Brain: What every programmer needs to know about cognition. Manning, Shelter Island, NY.
+
+Hunt, A., Thomas, D., 1999. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley Professional.
+
+Kenett, R.S., Redman, T.C., 2019. The Real Work of Data Science: Turning data into information, better decisions, and stronger organizations. Wiley, Hoboken$cChichester.
+
+McConnell, S., 2004. Code Complete: A Practical Handbook of Software Construction, Second Edition. Microsoft Press, Redmond, Wash.
+
+
 ## Five tips for success
 
 Your success on this module depends very much on you and the effort you put into it. Like any learning, the burden of engaging with the material is on you. The module staff and I will help you be providing you with materials and answering questions and setting a pace, but for this to work you must do the following:
