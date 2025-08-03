@@ -1,12 +1,4 @@
-# Week 8 Notes
-
-**CS50x 2025 - Week 8 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/8/
-
----
-
-# Lecture 8
+# Lecture 9 Notes
 
 * [Welcome!](#welcome)
 * [The Internet](#the-internet)

@@ -1,12 +1,4 @@
-# Week 7 Notes
-
-**CS50x 2025 - Week 7 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/7/
-
----
-
-# Lecture 7
+# Lecture 8 Notes
 
 * [Welcome!](#welcome)
 * [Flat-File Database](#flat-file-database)

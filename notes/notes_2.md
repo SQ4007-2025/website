@@ -1,12 +1,4 @@
-# Week 1 Notes
-
-**CS50x 2025 - Week 1 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/1/
-
----
-
-# Lecture 1
+# Lecture 2 Notes
 
 * [Welcome!](#welcome)
 * [Visual Studio Code for CS50](#visual-studio-code-for-cs50)

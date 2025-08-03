@@ -1,12 +1,4 @@
-# Week 1 Notes
-
-**CS50x 2025 - Week 0 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/0/
-
-------------------------------------------------------------------------
-
-# Lecture 0
+# Lecture 1 Notes
 
 -   [Welcome!](#welcome)
 -   [Community!](#community)
@@ -38,9 +30,9 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 ## Community! {#community}
 
--   You are part of a community of those taking this course at Harvard College, Harvard Extension School, and via edX.org.
--   We hope you will join us (whether in person or virtually) at [CS50 Puzzle Day](https://cs50.harvard.edu/college/2024/fall/puzzles/) and the [CS50 Fair](https://www.youtube.com/watch?v=JJPbXou4-0o&list=PLhQjrBD2T381cvtjW82tGZBjIdanUUnk9).
--   You can attend CS50 Lunches and [CS50 Hackathon](https://youtu.be/wTT5ahmaUAc?si=C1h4vW3OYM6NVwKu), if you are a student on Harvard’s campus.
+-   You are part of a community of those taking this course.
+-   We hope you will join us (whether in person or virtually) in [Discord: The Statistics Lab](https://discord.gg/dnNTE6xhhu).
+-   You can attend our community activities including Lunches, hackathons, and our Code Club and HARUG! meetings.
 
 ## Computer Science and Problem Solving {#computer-science-and-problem-solving}
 
@@ -243,6 +235,8 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Pseudocode is a human-readable version of your code. For example, considering the third algorithm above, we could compose pseudocode as follows:
 
+(Old fashioned example, but bear with me!)
+
     ```         
     1  Pick up phone book
     2  Open to middle of phone book
@@ -294,11 +288,9 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   LLMs look at patterns in large blocks of language. Such language models attempt to create a best guess of what words come after one another or alongside one another.
 
--   Although AI-based software is very useful in many avenues of life and work, we stipulate that using AI-based software other than CS50’s own is *not reasonable*.
+-   You may use AI-based software to ask questions, but not presenting its answers as your own.
 
--   CS50’s own AI-based software tool called [CS50.ai](https://cs50.ai) is an AI helper that you can use during this course. It will help you, but not give away the entire answers to the course’s problems.
-
--   You are not permitted to use any AI in this course except the [CS50.ai](https://cs50.ai).
+-   You may not use AI-based software (including ChatGPT, GitHub Copilot, the new Bing, et al.) to suggests answers for your work or lines of code.
 
 ## What’s Ahead {#whats-ahead}
 
@@ -315,7 +307,7 @@ Source: https://cs50.harvard.edu/x/notes/0/
     }
     ```
 
--   By learning C, you will be far more prepared for future learning in other programming languages like *Python*.
+-   By learning *C*, you will be far more prepared for future learning in other programming languages like *Python*.
 
 -   Further, as the weeks progress, you will learn about algorithms.
 
@@ -629,4 +621,4 @@ In this lesson, you learned how this course sits in the wide world of computer s
 -   The basic building blocks of programming including functions, conditionals, loops, and variables.
 -   How to build a project in Scratch.
 
-This was CS50! Welcome aboard! See you next time!
+That's it! Welcome aboard! See you next time!

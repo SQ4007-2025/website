@@ -1,12 +1,4 @@
-# Week 6 Notes
-
-**CS50x 2025 - Week 6 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/6/
-
----
-
-# Lecture 6
+# Lecture 7 Notes
 
 * [Welcome!](#welcome)
 * [Hello Python!](#hello-python)

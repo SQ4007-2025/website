@@ -1,12 +1,4 @@
-# Week 10 Notes
-
-**CS50x 2025 - Week 10 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/10/
-
----
-
-# The End
+# Lecture 11 Notes
 
 * [Recap](#recap)
 * [Looking Ahead](#looking-ahead)

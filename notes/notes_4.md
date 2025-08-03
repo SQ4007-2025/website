@@ -1,12 +1,4 @@
-# Week 3 Notes
-
-**CS50x 2025 - Week 3 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/3/
-
----
-
-# Lecture 3
+# Lecture 4 Notes
 
 * [Welcome!](#welcome)
 * [Linear Search](#linear-search)

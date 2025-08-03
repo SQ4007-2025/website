@@ -1,12 +1,4 @@
-# Week 2 Notes
-
-**CS50x 2025 - Week 2 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/2/
-
----
-
-# Lecture 2
+# Lecture 3 Notes
 
 * [Welcome!](#welcome)
 * [Reading Levels](#reading-levels)

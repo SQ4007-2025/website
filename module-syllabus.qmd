@@ -6,7 +6,6 @@ title: "Syllabus"
 
 [![Dr. Ed Harris](images/team/ed.png){fig-align="left" width="250"}](https://weharris.me)
 
-
 ## Learning objectives
 
 1.  Analyse and solve problems using computational thinking, applying fundamental concepts of computer science
@@ -111,5 +110,5 @@ The essence of all work that you submit to this course must be your own. Unless 
 -   Splitting an assessment’s workload with another individual and combining your work.
 -   Submitting (after possibly modifying) the work of another individual beyond the few lines allowed herein.
 -   Submitting the same or similar work to this course that you have submitted or will submit to another course, unless explictly allowed.
--   Using third-party AI-based software (including ChatGPT, GitHub Copilot, the new Bing, et al.) that suggests answers or lines of code.
+-   Using AI-based software (including ChatGPT, GitHub Copilot, the new Bing, et al.) that suggests answers or lines of code.
 -   Viewing another’s solution to an assessment and basing your own solution on it.

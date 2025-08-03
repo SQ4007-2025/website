@@ -1,12 +1,4 @@
-# Week 9 Notes
-
-**CS50x 2025 - Week 9 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/9/
-
----
-
-# Lecture 9
+# Lecture 10 Notes
 
 * [Welcome!](#welcome)
 * [http-server](#http-server)

@@ -1,12 +1,4 @@
-# Week 5 Notes
-
-**CS50x 2025 - Week 5 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/5/
-
----
-
-# Lecture 5
+# Lecture 6 Notes
 
 * [Welcome!](#welcome)
 * [Data Structures](#data-structures)

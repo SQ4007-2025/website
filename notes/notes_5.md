@@ -1,12 +1,4 @@
-# Week 4 Notes
-
-**CS50x 2025 - Week 4 Lecture Notes**
-
-Source: https://cs50.harvard.edu/x/notes/4/
-
-------------------------------------------------------------------------
-
-# Lecture 4
+# Lecture 5 Notes
 
 -   [Welcome!](#welcome)
 -   [Pixel Art](#pixel-art)
