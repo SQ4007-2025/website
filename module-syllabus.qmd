@@ -23,6 +23,10 @@ title: "Syllabus"
 
 Scheduled meetings will be held in person in Telford, Station Quarter. Autumn 2025: Check your personal schedule for room, day, time.
 
+**Lectures** will introduce the topic and sometimes involve live coding demonstration of key concepts. Lectures will be delivered in person, and will be recorded and made available on the module website. 
+
+**Tutorials** will demonstrate concepts discussed in lectures to various scenarios, with a focus on the problem solving. Tutorials will be demonstrated and should also be completed individually. That is, run the code yourself. 
+
 Material may be livestreamed to the YouTube channel and recorded for later viewing.
 
 ## Online resources
@@ -41,11 +45,11 @@ All lecture notes, assignment instructions, an up-to-date schedule, and other co
 
 ### Assessment 1 
 
-**A series of problem sets:** These problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.
+**Homework:** These homework problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.
 
 ### Assessment 2
 
-**A project:** This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large. 
+**Project:** This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large. 
 
 For the project you can opt to work individually or collaborate with up to two other classmates, with the expectation that each member contributes equally to the project design and implementation. The complexity of the project should reflect the size of the group, with group projects expected to be more intricate than individual ones. The final project is assessed based on the project complexity and scope, the effectiveness of the implemented solution, creativity, and the overall quality of the code. For group projects, the assessment also considers individual contributions and the collaborative effort. ***NB*** for group projects, the scope and ambition of the project should reflect the size of the group.
 
@@ -56,28 +60,6 @@ While there is no textbook for the module, these may be of interest.
 Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions of a Coder. Addison-Wesley Professional, Reading, Mass.
 
 Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, NY.
-
-## Lectures
-
-Lectures will introduce the topic and sometimes involve live coding demonstration of key concepts. Lectures will be delivered in person, and will be recorded and made available on the module website. 
-
-## Tutorials
-
-In labs, you will apply the concepts discussed in lecture to various data analysis scenarios, with a focus on the computation. Most lab assignments will be completed in teams, and all team members are expected to contribute equally to the completion of each assignment. You are expected to use the team's GitHub repository on the course's GitHub organization as the central platform for collaboration. Commits to this repository will be used as a metric of each team member's relative contribution for each lab, and there will be periodic peer evaluation on the team collaboration. Lab assignments will be completed using Quarto, correspond to an appropriate GitHub repository, and submitted for grading in Gradescope.
-
-*The lowest lab grade will be dropped at the end of the semester.*
-
-## Homework
-
-In homework, you will apply what you've learned during lectures and tutorials to complete data analysis tasks. You may discuss homework assignments with other students; however, homework should be completed and submitted individually. Homework must be typed up ... and submitted ...
-
-
-## Project
-
-The purpose of the [project](/project-description/) is to apply what you've learned throughout the semester to analyze an interesting, data-driven research question. The project will be completed with your lab teams, and each team will present their work in video and in writing during the final exam period. More information about the project will be provided during the semester.
-
-## Grading
-
 
 ## Five tips for success
 
