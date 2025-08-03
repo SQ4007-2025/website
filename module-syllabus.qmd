@@ -57,6 +57,20 @@ For the project you can opt to work individually or collaborate with up to two o
 
 While there is no textbook for the module, these may be of interest.
 
+**Blogs**
+
+[Julia Silge's Blog](https://juliasilge.com/blog/)
+
+[Andrew Gelman's Blog](https://statmodeling.stat.columbia.edu/)
+
+[Simply Statistics](https://simplystatistics.org/)
+
+[R bloggers](https://www.r-bloggers.com/)
+
+[Ethan Mollick's Blog](https://www.oneusefulthing.org/)
+
+**Books**
+
 Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions of a Coder. Addison-Wesley Professional, Reading, Mass.
 
 Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, NY.
@@ -66,7 +80,7 @@ Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, N
 Your success on this course depends very much on you and the effort you put into it. Like any learning, the burden of engaging with the material is on you. Your TAs and I will help you be providing you with materials and answering questions and setting a pace, but for this to work you must do the following:
 
 1.  Complete all the preparation work before class.
-2.  Ask questions. As often as you can. In class, out of class. Ask me, ask the TAs, ask your friends, ask the person sitting next to you. This will help you more than anything else. If you get a question wrong on an assessment, ask us why. If you're not sure about the homework, ask. If you hear something on the news that sounds related to what we discussed, ask. If the reading is confusing, ask.
+2.  Ask questions. As often as you can. In class, out of class. Ask me, ask the TAs, ask your friends, ask the person sitting next to you. This will help you more than anything else. If you get a question wrong on an assessment, ask us why. If you're not sure about the homework, let's talk about it. If you hear something on the news that sounds related to what we discussed, share it and let's discuss. If the reading is confusing, ask.
 3.  Do the readings.
 4.  Do the homework and lab.The earlier you start, the better. It's not enough to just mechanically plow through the exercises. You should ask yourself how these exercises relate to earlier material, and imagine how they might be changed (to make questions for an exam, for example.)
 5.  Don't procrastinate. If something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, and eventually you won't know where to begin asking questions. Don't let the week end with unanswered questions. But if you find yourself falling behind and not knowing where to begin asking, come to office hours, and let me help you identify a good (re)starting point.
@@ -100,68 +114,7 @@ Only work that is clearly assigned as team work should be completed collaborativ
 
 I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. On individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class.
 
-### Late work policy
 
-The due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. Note that the lowest homework and lab assignment will be dropped to accommodate such circumstances.
 
--   Homework and labs may be submitted up to 3 days late. There will be a 5% deduction for each 24-hour period the assignment is late.
-
--   There is no late work accepted for application exercises, since these are designed to help you prepare for labs and homework.
-
--   The late work policy for exams will be provided with the exam instructions.
-
--   The late work policy for the project will be provided with the project instructions.
-
-### Waiver for extenuating circumstances
-
-If there are circumstances that prevent you from completing a lab or homework assignment by the stated due date, you may email [Dr. Çetinkaya-Rundel](mailto:mc301@duke.edu) **and** our head TA [Rick Presman](mailto:rick.presman@duke.edu) before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide explanation. This waiver may only be used for once in the semester, so only use it for a truly extenuating circumstance.
-
-If there are circumstances that are having a longer-term impact on your academic performance, please let your academic dean know, as they can be a resource. Please let Dr. Çetinkaya-Rundel know if you need help contacting your academic dean.
-
-### Regrade request policy
-
-Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.
-
-*No grades will be changed after the final project presentations.*
-
-### Attendance policy
-
-Responsibility for class attendance rests with individual students. Since regular and punctual class attendance is expected, students must accept the consequences of failure to attend. More details on Trinity attendance policies are available [here](https://trinity.duke.edu/undergraduate/academic-policies/class-attendance-and-missed-work).
-
-However, there may be many reasons why you cannot be in class on a given day, particularly with possible extra personal and academic stress and health concerns this semester. All course lectures will be recorded and available to enrolled students after class. If you miss a lecture, make sure to watch the recording and review the material before the next class session. Lab time is dedicated to working on your lab assignments and collaborating with your teammates on your project. If you miss a lab session, make sure to communicate with your team about how you can make up your contribution. Given the technologies we use in the course, this is straightforward to do asynchronously. If you know you're going to miss a lab session and you're feeling well enough to do so, notify your teammates ahead of time. Overall these policies are put in place to ensure communication between team members, respect for each others' time, and also to give you a safety net in the case of illness or other reasons that keep you away from attending class.
-
-### Attendance policy related to COVID symptoms, exposure, or infection
-
-Student health, safety, and well-being are the university's top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have symptoms related to COVID-19, have had a known exposure to COVID-19, or have tested positive for COVID-19. If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health at 919-681-9355. To keep the university community as safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.
-
-### Inclement weather policy
-
-In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work. This might entail holding the class on Zoom synchronously or watching a recording of the class.
-
-### Policy on video recording course content
-
-All lectures will be recorded and available on [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22d6c1d58a-cb6d-4732-9d4b-ae0c011bf767%22), so students should not need to create their own recordings of lectures. If you feel that you need record the lectures yourself, you must get permission from me ahead of time and these recordings should be used for personal study only, no for distribution. The full policy on recording of lectures falls under the Duke University Policy on Intellectual Property Rights, available at [provost.duke.edu/sites/default/files/FHB_App_P.pdf](https://provost.duke.edu/sites/default/files/FHB_App_P.pdf). Unauthorized distribution is a cause for disciplinary action by the Judicial Board.
-
-## **Learning during a pandemic**
-
-I want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don't hesitate to ask.
-
--   You *never* owe me personal information about your health (mental or physical) but you're always welcome to talk to me. If I can't help, I likely know someone who can.
-
--   I want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis.
-
-*Note:* If you've read this far in the syllabus, email me a picture of your pet if you have one or your favourite meme!
-
-## Important dates
-
--   **January 5:** Classes begin (Monday meeting schedule)
--   **January 6:** Regular class meeting schedule begins
--   **January 17:** Martin Luther King, Jr. Day holiday, no classes are held
--   **January 19:** Drop/add ends
--   **March 7-11:** Spring recess, no classes are held
--   **March 23**: Last day to withdraw with W
--   **April 20**: Classes end
--   **April 21-24**: Reading period
--   **April 25-30**: Final exams
 
 Click [here](https://registrar.duke.edu/spring-2022-academic-calendar) for the full Duke academic calendar.
