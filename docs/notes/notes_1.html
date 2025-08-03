@@ -74,13 +74,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Computing Technology">
-<meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta property="og:image" content="https://SQ4007-2025.github.io/website/notes/images/week_0/Week0Slide38.png">
 <meta property="og:site_name" content="Computing Technology">
 <meta property="og:image:height" content="362">
 <meta property="og:image:width" content="747">
 <meta name="twitter:title" content="Computing Technology">
-<meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/notes/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
 <meta name="twitter:card" content="summary_large_image">
@@ -328,8 +326,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-0-notes" id="toc-week-0-notes" class="nav-link active" data-scroll-target="#week-0-notes">Week 0 Notes</a></li>
-  <li><a href="#lecture-0" id="toc-lecture-0" class="nav-link" data-scroll-target="#lecture-0">Lecture 0</a>
+  <li><a href="#lecture-1-notes" id="toc-lecture-1-notes" class="nav-link active" data-scroll-target="#lecture-1-notes">Lecture 1 Notes</a>
   <ul class="collapse">
   <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
   <li><a href="#community" id="toc-community" class="nav-link" data-scroll-target="#community">Community!</a></li>
@@ -360,14 +357,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="week-0-notes" class="level1">
-<h1>Week 0 Notes</h1>
-<p><strong>CS50x 2025 - Week 0 Lecture Notes</strong></p>
-<p>Source: https://cs50.harvard.edu/x/notes/0/</p>
-<hr>
-</section>
-<section id="lecture-0" class="level1">
-<h1>Lecture 0</h1>
+<section id="lecture-1-notes" class="level1">
+<h1>Lecture 1 Notes</h1>
 <ul>
 <li><a href="#welcome">Welcome!</a></li>
 <li><a href="#community">Community!</a></li>
@@ -402,9 +393,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="community" class="level2">
 <h2 class="anchored" data-anchor-id="community">Community!</h2>
 <ul>
-<li>You are part of a community of those taking this course at Harvard College, Harvard Extension School, and via edX.org.</li>
-<li>We hope you will join us (whether in person or virtually) at <a href="https://cs50.harvard.edu/college/2024/fall/puzzles/">CS50 Puzzle Day</a> and the <a href="https://www.youtube.com/watch?v=JJPbXou4-0o&amp;list=PLhQjrBD2T381cvtjW82tGZBjIdanUUnk9">CS50 Fair</a>.</li>
-<li>You can attend CS50 Lunches and <a href="https://youtu.be/wTT5ahmaUAc?si=C1h4vW3OYM6NVwKu">CS50 Hackathon</a>, if you are a student on Harvard’s campus.</li>
+<li>You are part of a community of those taking this course.</li>
+<li>We hope you will join us (whether in person or virtually) in <a href="https://discord.gg/dnNTE6xhhu">Discord: The Statistics Lab</a>.</li>
+<li>You can attend our community activities including Lunches, hackathons, and our Code Club and HARUG! meetings.</li>
 </ul>
 </section>
 <section id="computer-science-and-problem-solving" class="level2">
@@ -911,8 +902,11 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>This process of converting instructions into code is called <em>pseudocode</em>.</p></li>
 <li><p>The ability to create <em>pseudocode</em> is central to one’s success in both this class and in computer programming.</p></li>
-<li><p>Pseudocode is a human-readable version of your code. For example, considering the third algorithm above, we could compose pseudocode as follows:</p>
-<pre><code>1  Pick up phone book
+<li><p>Pseudocode is a human-readable version of your code. For example, considering the third algorithm above, we could compose pseudocode as follows:</p></li>
+</ul>
+<p>(Old fashioned example, but bear with me!)</p>
+<pre><code>```         
+1  Pick up phone book
 2  Open to middle of phone book
 3  Look at page
 4  If person is on page
@@ -924,7 +918,9 @@ ul.task-list li input[type="checkbox"] {
 10     Open to middle of right half of book
 11     Go back to line 3
 12 Else
-13     Quit</code></pre></li>
+13     Quit
+```</code></pre>
+<ul>
 <li><p>Pseudocoding is such an important skill for at least two reasons. First, when you pseudocode before you create formal code, it allows you to think through the logic of your problem in advance. Second, when you pseudocode, you can later provide this information to others that are seeking to understand your coding decisions and how your code works.</p></li>
 <li><p>Notice that the language within our pseudocode has some unique features. First, some of these lines begin with verbs like <em>pick up,</em> <em>open,</em> <em>look at.</em> Later, we will call these <em>functions</em>.</p></li>
 <li><p>Second, notice that some lines include statements like <code>if</code> or <code>else if.</code> These are called <em>conditionals</em>.</p></li>
@@ -949,9 +945,8 @@ Else if student asks why 111 in binary is 7 in decimal
 <p>Notice how just to program a handful of interactions, many lines of code would be required. How many lines of code would be required for thousands or tens of thousands of possible interactions?</p></li>
 <li><p>Rather than programming conversational AI like the above, AI programmers train <em>large language models</em> (LLMs) on large datasets.</p></li>
 <li><p>LLMs look at patterns in large blocks of language. Such language models attempt to create a best guess of what words come after one another or alongside one another.</p></li>
-<li><p>Although AI-based software is very useful in many avenues of life and work, we stipulate that using AI-based software other than CS50’s own is <em>not reasonable</em>.</p></li>
-<li><p>CS50’s own AI-based software tool called <a href="https://cs50.ai">CS50.ai</a> is an AI helper that you can use during this course. It will help you, but not give away the entire answers to the course’s problems.</p></li>
-<li><p>You are not permitted to use any AI in this course except the <a href="https://cs50.ai">CS50.ai</a>.</p></li>
+<li><p>You may use AI-based software to ask questions, but not presenting its answers as your own.</p></li>
+<li><p>You may not use AI-based software (including ChatGPT, GitHub Copilot, the new Bing, et al.) to suggests answers for your work or lines of code.</p></li>
 </ul>
 </section>
 <section id="whats-ahead" class="level2">
@@ -965,7 +960,7 @@ int main(void)
 {
   printf("hello, world\n");
 }</code></pre></li>
-<li><p>By learning C, you will be far more prepared for future learning in other programming languages like <em>Python</em>.</p></li>
+<li><p>By learning <em>C</em>, you will be far more prepared for future learning in other programming languages like <em>Python</em>.</p></li>
 <li><p>Further, as the weeks progress, you will learn about algorithms.</p></li>
 <li><p>What makes C so challenging is the punctuation. Setting aside that punctuation and syntax for today, we are going to work solely with ideas in a programming language called Scratch.</p></li>
 </ul>
@@ -1205,7 +1200,7 @@ move (1) steps</code></pre>
 <li>The basic building blocks of programming including functions, conditionals, loops, and variables.</li>
 <li>How to build a project in Scratch.</li>
 </ul>
-<p>This was CS50! Welcome aboard! See you next time!</p>
+<p>That’s it! Welcome aboard! See you next time!</p>
 
 
 </section>
