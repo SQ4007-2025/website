@@ -369,11 +369,11 @@ Source: https://cs50.harvard.edu/x/notes/7/
 * We could separate our database into multiple sheets. We could have a `shows` sheet, a `stars` sheet, and a `people` sheet. On the `people` sheet, each person could have a unique `id`. On the `shows` sheet, each show could have a unique `id` too. On a third sheet called `stars` we could relate how each show has people for each show by having a `show_id` and `person_id`. While this is an improvement, this is not an ideal database.
 * IMDb offers a database of people, shows, writers, stars, genres, and ratings. Each of these tables is related to one another as follows:
 
-  ![six boxes that represent various sql tables arrows are drawn to each showing their many relationships with one another](notes/images/week_7/cs50Week7Slide025.png)
+  ![six boxes that represent various sql tables arrows are drawn to each showing their many relationships with one another](images/week_7/cs50Week7Slide025.png)
 * After downloading [`shows.db`](https://cdn.cs50.net/2024/fall/lectures/7/src7/imdb/shows.db), you can execute `sqlite3 shows.db` in your terminal window.
 * Let’s zero in on the relationship between two tables within the database called `shows` and `ratings`. The relationship between these two tables can be illustrated as follows:
 
-  ![two boxes one called shows and the other called ratings](notes/images/week_7/cs50Week7Slide032.png)
+  ![two boxes one called shows and the other called ratings](images/week_7/cs50Week7Slide032.png)
 * To illustrate the relationship between these tables, we could execute the following command: `SELECT * FROM ratings LIMIT 10;`. Examining the output, we could execute `SELECT * FROM shows LIMIT 10;`.
 * Examining `shows` and `rating`, we can see these have a one-to-one relationship: One show has one rating.
 * To understand the database, upon executing `.schema` you will find not only each of the tables but the individual fields inside each of these fields.
@@ -506,7 +506,7 @@ Source: https://cs50.harvard.edu/x/notes/7/
 * Then, we can create an index with the syntax `CREATE INDEX title_index ON shows (title);`. This tells `sqlite3` to create an index and perform some special under-the-hood optimization relating to this column `title`.
 * This will create a data structure called a *B Tree*, a data structure that looks similar to a binary tree. However, unlike a binary tree, there can be more than two child nodes.
 
-  ![one node at the top from which come four children and below that there are three children coming from one of the nodes and two from another two from another and three from another](notes/images/week_7/cs50Week7Slide039.png)
+  ![one node at the top from which come four children and below that there are three children coming from one of the nodes and two from another two from another and three from another](images/week_7/cs50Week7Slide039.png)
 * Further, we can create indexes as follows:
 
   ```
@@ -573,7 +573,7 @@ Source: https://cs50.harvard.edu/x/notes/7/
 * Now, still considering the code above, you might be wondering what the `?` question marks do above. One of the problems that can arise in real-world applications of SQL is what is called an *injection attack*. An injection attack is where a malicious actor could input malicious SQL code.
 * For example, consider a login screen as follows:
 
-  ![harvard key login screen with username and password fields](notes/images/week_7/cs50Week7Slide051.png)
+  ![harvard key login screen with username and password fields](images/week_7/cs50Week7Slide051.png)
 * Without the proper protections in our own code, a bad actor could run malicious code. Consider the following:
 
   ```

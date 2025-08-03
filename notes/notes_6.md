@@ -755,7 +755,7 @@ Source: https://cs50.harvard.edu/x/notes/6/
 
 * Recall a few weeks ago our challenge of building three blocks on top of one another, like in Mario.
 
-  ![three vertical blocks](notes/images/week_6/cs50Week6Slide073.png)
+  ![three vertical blocks](images/week_6/cs50Week6Slide073.png)
 * In Python, we can implement something akin to this as follows:
 
   ```
@@ -787,7 +787,7 @@ Source: https://cs50.harvard.edu/x/notes/6/
   Notice how the while loop is used to obtain the height. Once a height greater than zero is inputted, the loop breaks.
 * Consider the following image:
 
-  ![four horizontal question blocks](notes/images/week_6/cs50Week6Slide075.png)
+  ![four horizontal question blocks](images/week_6/cs50Week6Slide075.png)
 * In Python, we could implement by modifying your code as follows:
 
   ```
@@ -812,7 +812,7 @@ Source: https://cs50.harvard.edu/x/notes/6/
   Notice that we can utilize `*` to multiply the print statement to repeat `4` times.
 * What about a large block of bricks?
 
-  ![three by three block of mario blocks](notes/images/week_6/cs50Week6Slide078.png)
+  ![three by three block of mario blocks](images/week_6/cs50Week6Slide078.png)
 * To implement the above, you can modify your code as follows:
 
   ```

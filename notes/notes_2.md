@@ -56,7 +56,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
   ```
 * A compiler will take the above code and turn it into the following machine code:
 
-  ![machine code](notes/images/week_2/cs50Week2Slide012.png)
+  ![machine code](images/week_2/cs50Week2Slide012.png)
 * *VS Code*, the programming environment provided to you as a CS50 student, utilizes a compiler called `clang` or *c language*.
 * You can enter the following into the terminal window to compile your code: `clang -o hello hello.c`.
 * *Command-line arguments* are provided at the command line to `clang` as `-o hello hello.c`.
@@ -155,7 +155,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
   ```
 * Finally, during the *linking* step, code from your included libraries is converted also into machine code and combined with your code. The final executable file is then outputted.
 
-  ![linking](notes/images/week_2/cs50Week2Slide049.png)
+  ![linking](images/week_2/cs50Week2Slide049.png)
 
 ## Debugging
 
@@ -165,7 +165,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
 * We have created the CS50 Duck and [CS50.ai](https://cs50.ai) as tools that can help you debug your code.
 * Consider the following image from last week:
 
-  ![mario](notes/images/week_2/cs50Week2Slide061.png)
+  ![mario](images/week_2/cs50Week2Slide061.png)
 * Consider the following code that has a bug purposely inserted within it:
 
   ```
@@ -253,7 +253,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
 * In VS Code, a preconfigured debugger has been provided to you.
 * To utilize this debugger, first set a *breakpoint* by clicking to the left of a line of your code, just to the left of the line number. When you click there, you will see a red dot appearing. Imagine this as a stop sign, asking the compiler to pause so that you can consider what’s happening in this part of your code.
 
-  ![breakpoint](notes/images/week_2/cs50Week2Debugging.png)
+  ![breakpoint](images/week_2/cs50Week2Debugging.png)
 * Second, run `debug50 ./buggy0`. You will notice that after the debugger comes to life and a line of your code will illuminate in a gold-like color. Quite literally, the code has *paused* at this line of code. Notice in the top left corner how all local variables are being displayed, including `h`, which currently does not have a value. At the top of your window, you can click the `step over` button, and it will keep moving through your code. Notice how the value of `h` increases.
 * While this tool will not show you where your bug is, it will help you slow down and see how your code is running step by step. You can use `step into` as a way to look further into the details of your buggy code.
 
@@ -270,13 +270,13 @@ Source: https://cs50.harvard.edu/x/notes/2/
   + `string` ? bytes
 * Inside of your computer, you have a finite amount of memory available.
 
-  ![memory](notes/images/week_2/cs50Week2Slide084.png)
+  ![memory](images/week_2/cs50Week2Slide084.png)
 * Physically, on the memory of your computer, you can imagine how specific types of data are stored on your computer. You might imagine that a `char`, which only requires 1 byte of memory, may look as follows:
 
-  ![1 byte](notes/images/week_2/cs50Week2Slide087.png)
+  ![1 byte](images/week_2/cs50Week2Slide087.png)
 * Similarly, an `int`, which requires 4 bytes, might look as follows:
 
-  ![4 bytes](notes/images/week_2/cs50Week2Slide088.png)
+  ![4 bytes](images/week_2/cs50Week2Slide088.png)
 * We can create a program that explores these concepts. Inside your terminal, type `code scores.c` and write code as follows:
 
   ```
@@ -301,7 +301,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
 * Running `make scores`, the program runs.
 * You can imagine how these variables are stored in memory:
 
-  ![scores in memory](notes/images/week_2/cs50Week2Slide098.png)
+  ![scores in memory](images/week_2/cs50Week2Slide098.png)
 * *Arrays* are a sequence of values that are stored back-to-back in memory.
 * `int scores[3]` is a way of telling the compiler to provide you three back-to-back places in memory of size `int` to store three `scores`. Considering our program, you can revise your code as follows:
 
@@ -434,10 +434,10 @@ Source: https://cs50.harvard.edu/x/notes/2/
   Notice that that ASCII codes are printed by replacing `%c` with `%i`.
 * Considering the following image, you can see how a string is an array of characters that begins with the first character and ends with a special character called a `NUL character`:
 
-  ![hi with terminator](notes/images/week_2/cs50Week2Slide116.png)
+  ![hi with terminator](images/week_2/cs50Week2Slide116.png)
 * Imagining this in decimal, your array would look like the following:
 
-  ![hi with decimal](notes/images/week_2/cs50Week2Slide117.png)
+  ![hi with decimal](images/week_2/cs50Week2Slide117.png)
 * To further understand how a `string` works, revise your code as follows:
 
   ```
@@ -494,7 +494,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
   Notice that two strings are declared and used in this example.
 * You can visualize this as follows:
 
-  ![hi and bye](notes/images/week_2/cs50Week2Slide126.png)
+  ![hi and bye](images/week_2/cs50Week2Slide126.png)
 * We can further improve this code. Modify your code as follows:
 
   ```
@@ -823,7 +823,7 @@ Source: https://cs50.harvard.edu/x/notes/2/
 * Now, with the building block of arrays, chars, and strings, you can cipher and decipher a message.
 * `plaintext` and a `key` are provided to a `cipher`, resulting in ciphered text.
 
-  ![cryptography](notes/images/week_2/cs50Week2Slide153.png)
+  ![cryptography](images/week_2/cs50Week2Slide153.png)
 * The key is a special argument passed to the cipher along with the plaintext. The cipher uses the key to make decisions about how to implement its cipher algorithm.
 * This week, you will undertake programming challenges similar to the above.
 

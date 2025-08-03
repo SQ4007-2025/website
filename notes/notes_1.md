@@ -45,7 +45,7 @@ Source: https://cs50.harvard.edu/x/notes/1/
 * You can open VS Code at [cs50.dev](https://cs50.dev/).
 * The compiler can be divided into a number of regions:
 
-  ![IDE](notes/images/week_1/cs50Week1Slide017.png)
+  ![IDE](images/week_1/cs50Week1Slide017.png)
   Notice that there is a *file explorer* on the left side where you can find your files. Further, notice that there is a region in the middle called a *text editor* where you can edit your program. Finally, there is a `command line interface`, known as a *CLI*, *command line*, or *terminal window*, where we can send commands to the computer in the cloud.
 * In the terminal window, some common command-line arguments we may use include:
   + `cd`, for changing our current directory (folder)
@@ -780,7 +780,7 @@ Source: https://cs50.harvard.edu/x/notes/1/
 * The following will help you orient toward working on a problem set for this class in general: How does one approach a computer science-related problem?
 * Imagine we wanted to emulate the visual of the game Super Mario Bros. Considering the four question blocks pictured, how could we create code that roughly represents these four horizontal blocks?
 
-  ![Mario Question Marks](notes/images/week_1/cs50Week1Slide123.png)
+  ![Mario Question Marks](images/week_1/cs50Week1Slide123.png)
 * In the terminal window, type `code mario.c` and code as follows:
 
   ```
@@ -802,7 +802,7 @@ Source: https://cs50.harvard.edu/x/notes/1/
   Notice how four question marks are printed here using a loop.
 * Similarly, we can apply this same logic to create three vertical blocks.
 
-  ![Mario Blocks](notes/images/week_1/cs50Week1Slide125.png)
+  ![Mario Blocks](images/week_1/cs50Week1Slide125.png)
 * To accomplish this, modify your code as follows:
 
   ```
@@ -823,7 +823,7 @@ Source: https://cs50.harvard.edu/x/notes/1/
   Notice how three vertical bricks are printed using a loop.
 * What if we wanted to combine these ideas to create a three-by-three group of blocks?
 
-  ![Mario Grid](notes/images/week_1/cs50Week1Slide127.png)
+  ![Mario Grid](images/week_1/cs50Week1Slide127.png)
 * We can follow the logic above, combining the same ideas. Modify your code as follows:
 
   ```
