@@ -1,602 +1,1086 @@
-# Week 7 Notes
+# Week 6 Notes
 
-**CS50x 2025 - Week 7 Lecture Notes**
+**CS50x 2025 - Week 6 Lecture Notes**
 
-Source: https://cs50.harvard.edu/x/notes/7/
+Source: https://cs50.harvard.edu/x/notes/6/
 
 ---
 
-# Lecture 7
+# Lecture 6
 
 * [Welcome!](#welcome)
-* [Flat-File Database](#flat-file-database)
-* [Relational Databases](#relational-databases)
-* [SELECT](#select)
-* [INSERT](#insert)
-* [DELETE](#delete)
-* [UPDATE](#update)
-* [IMDb](#imdb)
-* [`JOIN`s](#joins)
-* [Indexes](#indexes)
-* [Using SQL in Python](#using-sql-in-python)
-* [Race Conditions](#race-conditions)
-* [SQL Injection Attacks](#sql-injection-attacks)
+* [Hello Python!](#hello-python)
+* [Speller](#speller)
+* [Filter](#filter)
+* [Functions](#functions)
+* [Libraries, Modules, and Packages](#libraries-modules-and-packages)
+* [Strings](#strings)
+* [Positional Parameters and Named Parameters](#positional-parameters-and-named-parameters)
+* [Variables](#variables)
+* [Types](#types)
+* [Calculator](#calculator)
+* [Conditionals](#conditionals)
+* [Object-Oriented Programming](#object-oriented-programming)
+* [Loops](#loops)
+* [Abstraction](#abstraction)
+* [Truncation and Floating Point Imprecision](#truncation-and-floating-point-imprecision)
+* [Exceptions](#exceptions)
+* [Mario](#mario)
+* [Lists](#lists)
+* [Searching and Dictionaries](#searching-and-dictionaries)
+* [Command-Line Arguments](#command-line-arguments)
+* [Exit Status](#exit-status)
+* [CSV Files](#csv-files)
+* [Third-Party Libraries](#third-party-libraries)
 * [Summing Up](#summing-up)
 
 ## Welcome!
 
-* In previous weeks, we introduced you to Python, a high-level programming language that utilized the same building blocks we learned in C. However, we introduced this new language not for the purpose of learning “just another language.” Instead, we do so because some tools are better for some jobs and not so great for others!
-* This week, we will be continuing more syntax related to Python.
-* Further, we will be integrating this knowledge with data.
-* Finally, we will be discussing *SQL* or *Structured Query Language*, a domain-specific way by which we can interact with and modify data.
-* Overall, one of the goals of this course is to learn to program generally – not simply how to program in the languages described in this course.
+* In previous weeks, you were introduced to the fundamental building blocks of programming.
+* You learned about programming in a lower-level programming language called C.
+* Today, we are going to work with a higher-level programming language called *Python*.
+* As you learn this new language, you’re going to find that you are going to be more able to teach yourself new programming languages.
 
-## Flat-File Database
+## Hello Python!
 
-* As you have likely seen before, data can often be described in patterns of columns and rows.
-* Spreadsheets like those created in Microsoft Excel and Google Sheets can be outputted to a `csv` or *comma-separated values* file.
-* If you look at a `csv` file, you’ll notice that the file is flat in that all of our data is stored in a single table represented by a text file. We call this form of data a *flat-file database*.
-* All data is stored row by row. Each column is separated by a comma or another value.
-* Python comes with native support for `csv` files.
-* First, download [favorites.csv](https://cdn.cs50.net/2023/fall/lectures/7/src7/favorites/favorites.csv) and upload it to your file explorer inside [cs50.dev](https://cs50.dev). Second, examining this data, notice that the first row is special in that it defines each column. Then, each record is stored row by row.
-* In your terminal window, type `code favorites.py` and write code as follows:
+* Humans, over the decades, have seen how previous design decisions made in prior programming languages could be improved upon.
+* Python is a programming language that builds upon what you have already learned in C.
+* Python additionally has access to a vast number of user-created libraries.
+* Unlike in C, which is a *compiled language*, Python is an *interpreted language*, where you need not separately compile your program. Instead, you run your program in the *Python Interpreter*.
+* Up until this point, the code has looked like this:
 
   ```
-  # Prints all favorites in CSV using csv.reader
+  // A program that says hello to the world
 
+  #include <stdio.h>
+
+  int main(void)
+  {
+      printf("hello, world\n");
+  }
+
+  ```
+* Today, you’ll find that the process of writing and compiling code has been simplified.
+* For example, the above code will be rendered in Python as:
+
+  ```
+  # A program that says hello to the world
+
+  print("hello, world")
+
+  ```
+
+  Notice that the semicolon is gone and that no library is needed. You can run this program in your terminal by typing `python hello.py`.
+* Python notably can implement what was quite complicated in C with relative simplicity.
+
+## Speller
+
+* To illustrate this simplicity, let’s type ‘code dictionary.py’ in the terminal window and write code as follows:
+
+  ```
+  # Words in dictionary
+  words = set()
+
+
+  def check(word):
+      """Return true if word is in dictionary else false"""
+      return word.lower() in words
+
+
+  def load(dictionary):
+      """Load dictionary into memory, returning true if successful else false"""
+      with open(dictionary) as file:
+          words.update(file.read().splitlines())
+      return True
+
+
+  def size():
+      """Returns number of words in dictionary if loaded else 0 if not yet loaded"""
+      return len(words)
+
+
+  def unload():
+      """Unloads dictionary from memory, returning true if successful else false"""
+      return True
+
+  ```
+
+  Notice that there are four functions above. In the `check` function, if a `word` is in `words`, it returns `True`. It is so much easier than an implementation in C! Similarly, in the `load` function, the dictionary file is opened. For each line in that file, we add that line to `words`. Using `rstrip`, the trailing new line is removed from the added word. `size` simply returns the `len` or length of `words`. `unload` only needs to return `True` because Python handles memory management on its own.
+* The above code illustrates why higher-level languages exist: To simplify and allow you to write code more easily.
+* However, speed is a tradeoff. Because C allows you, the programmer, to make decisions about memory management, it may run faster than Python – depending on your code. While C only runs your lines of code, Python runs all the code that comes under the hood with it when you call Python’s built-in functions.
+* You can learn more about functions in the [Python documentation](https://docs.python.org/3/library/functions.html)
+
+## Filter
+
+* To further illustrate this simplicity, create a new file by typing `code blur.py` in your terminal window and write code as follows:
+
+  ```
+  # Blurs an image
+
+  from PIL import Image, ImageFilter
+
+  # Blur image
+  before = Image.open("bridge.bmp")
+  after = before.filter(ImageFilter.BoxBlur(1))
+  after.save("out.bmp")
+
+  ```
+
+  Notice that this program imports modules `Image` and `ImageFilter` from a library called `PIL`. This takes an input file and creates an output file.
+* Further, you can create a new file called `edges.py` as follows:
+
+  ```
+  # Finds edges in an image
+
+  from PIL import Image, ImageFilter
+
+  # Find edges
+  before = Image.open("bridge.bmp")
+  after = before.filter(ImageFilter.FIND_EDGES)
+  after.save("out.bmp")
+
+  ```
+
+  Notice that this code is a small adjustment to your `blur` code but produces a dramatically different result.
+* Python allows you to abstract away programming that would be much more complicated within C and other *lower-level* programming languages.
+
+## Functions
+
+* In C, you may have seen functions as follows:
+
+  ```
+  printf("hello, world\n");
+
+  ```
+* In Python, you will see functions as follows:
+
+  ```
+  print("hello, world")
+
+  ```
+
+## Libraries, Modules, and Packages
+
+* As with C, the CS50 library can be utilized within Python.
+* The following functions will be of particular use:
+
+  ```
+    get_float
+    get_int
+    get_string
+
+  ```
+* You can import the cs50 library as follows:
+
+  ```
+  import cs50
+
+  ```
+* You also have the option of importing only specific functions from the CS50 library as follows:
+
+  ```
+  from cs50 import get_float, get_int, get_string
+
+  ```
+
+## Strings
+
+* In C, you might remember this code:
+
+  ```
+  // get_string and printf with %s
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      string answer = get_string("What's your name? ");
+      printf("hello, %s\n", answer);
+  }
+
+  ```
+* This code is transformed in Python to:
+
+  ```
+  # get_string and print, with concatenation
+
+  from cs50 import get_string
+
+  answer = get_string("What's your name? ")
+  print("hello, " + answer)
+
+  ```
+
+  You can write this code by executing `code hello.py` in the terminal window. Then, you can execute this code by running `python hello.py`. Notice how the `+` sign concatenates `"hello, "` and `answer`.
+* Similarly, this can be done without concatenation:
+
+  ```
+  # get_string and print, without concatenation
+
+  from cs50 import get_string
+
+  answer = get_string("What's your name? ")
+  print("hello,", answer)
+
+  ```
+
+  Notice that the print statement automatically creates a space between the `hello` statement and the `answer`.
+* Similarly, you could implement the above code as:
+
+  ```
+  # get_string and print, with format strings
+
+  from cs50 import get_string
+
+  answer  = get_string("What's your name? ")
+  print(f"hello, {answer}")
+
+  ```
+
+  Notice how the curly braces allow for the `print` function to interpolate the `answer` such that `answer` appears within. The `f` is required to include the `answer` properly formatting.
+
+## Positional Parameters and Named Parameters
+
+* Functions in C like `fread`, `fwrite`, and `printf` use positional arguments, where you provide arguments with commas as separators. You, the programmer, must remember what argument is in which position. These are referred to as *positional arguments*.
+* In Python, *named parameters* allow you to provide arguments without regard to positionality.
+* You can learn more about the parameters of the `print` function in the [documentation](https://docs.python.org/3/library/functions.html#print).
+* Accessing that documentation, you may see the following:
+
+  ```
+  print(*objects, sep=' ', end='\n', file=None, flush=False)
+
+  ```
+
+  Notice that various objects can be provided to print. A separator of a single space is provided that will display when more than one object is given to `print`. Similarly, a new line is provided at the end of the `print` statement.
+
+## Variables
+
+* Variable declaration is simplified too. In C, you might have `int counter = 0;`. In Python, this same line would read `counter = 0`. You need not declare the type of the variable.
+* Python favors `counter += 1` to increment by one, losing the ability found in C to type `counter++`.
+
+## Types
+
+* Data types in Python do not need to be explicitly declared. For example, you saw how `answer` above is a string, but we did not have to tell the interpreter this was the case: It knew on its own.
+* In Python, commonly used types include:
+
+  ```
+    bool
+    float
+    int
+    str
+
+  ```
+
+  Notice that `long` and `double` are missing. Python will handle what data type should be used for larger and smaller numbers.
+* Some other data types in Python include:
+
+  ```
+  range   sequence of numbers
+  list    sequence of mutable values
+  tuple   sequence of immutable values
+  dict    collection of key-value pairs
+  set     collection of unique values
+
+  ```
+* Each of these data types can be implemented in C, but in Python, they can be implemented more simply.
+
+## Calculator
+
+* You might recall `calculator.c` from earlier in the course:
+
+  ```
+  // Addition with int
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      int x = get_int("x: ");
+
+      // Prompt user for y
+      int y = get_int("y: ");
+
+      // Perform addition
+      printf("%i\n", x + y);
+  }
+
+  ```
+* We can implement a simple calculator just as we did within C. Type `code calculator.py` into the terminal window and write code as follows:
+
+  ```
+  # Addition with int [using get_int]
+
+  from cs50 import get_int
+
+  # Prompt user for x
+  x = get_int("x: ")
+
+  # Prompt user for y
+  y = get_int("y: ")
+
+  # Perform addition
+  print(x + y)
+
+  ```
+
+  Notice how the CS50 library is imported. Then, `x` and `y` are gathered from the user. Finally, the result is printed. Notice that the `main` function that would have been seen in a C program is gone entirely! While one could utilize a `main` function, it is not required.
+* It’s possible for one to remove the training wheels of the CS50 library. Modify your code as follows:
+
+  ```
+  # Addition with int [using input]
+
+  # Prompt user for x
+  x = input("x: ")
+
+  # Prompt user for y
+  y = input("y: ")
+
+  # Perform addition
+  print(x + y)
+
+  ```
+
+  Notice how executing the above code results in strange program behavior. Why might this be so?
+* You may have guessed that the interpreter understood `x` and `y` to be strings. You can fix your code by employing the `int` function as follows:
+
+  ```
+  # Addition with int [using input]
+
+  # Prompt user for x
+  x = int(input("x: "))
+
+  # Prompt user for y
+  y = int(input("y: "))
+
+  # Perform addition
+  print(x + y)
+
+  ```
+
+  Notice how the input for `x` and `y` is passed to the `int` function, which converts it to an integer. Without converting `x` and `y` to be integers, the characters will concatenate.
+
+## Conditionals
+
+* In C, you might remember a program like this:
+
+  ```
+  // Conditionals, Boolean expressions, relational operators
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for integers
+      int x = get_int("What's x? ");
+      int y = get_int("What's y? ");
+
+      // Compare integers
+      if (x < y)
+      {
+          printf("x is less than y\n");
+      }
+      else if (x > y)
+      {
+          printf("x is greater than y\n");
+      }
+      else
+      {
+          printf("x is equal to y\n");
+      }
+  }
+
+  ```
+* In Python, it would appear as follows:
+
+  ```
+  # Conditionals, Boolean expressions, relational operators
+
+  from cs50 import get_int
+
+  # Prompt user for integers
+  x = get_int("What's x? ")
+  y = get_int("What's y? ")
+
+  # Compare integers
+  if x < y:
+      print("x is less than y")
+  elif x > y:
+      print("x is greater than y")
+  else:
+      print("x is equal to y")
+
+  ```
+
+  Notice that there are no more curly braces. Instead, indentations are utilized. Second, a colon is utilized in the `if` statement. Further, `elif` replaces `else if`. Parentheses are also no longer required in the `if` and `elif` statements.
+* Further looking at comparisons, consider the following code in C:
+
+  ```
+  // Logical operators
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user to agree
+      char c = get_char("Do you agree? ");
+
+      // Check whether agreed
+      if (c == 'Y' || c == 'y')
+      {
+          printf("Agreed.\n");
+      }
+      else if (c == 'N' || c == 'n')
+      {
+          printf("Not agreed.\n");
+      }
+  }
+
+  ```
+* The above can be implemented as follows:
+
+  ```
+  # Logical operators
+
+  from cs50 import get_string
+
+  # Prompt user to agree
+  s = get_string("Do you agree? ")
+
+  # Check whether agreed
+  if s == "Y" or s == "y":
+      print("Agreed.")
+  elif s == "N" or s == "n":
+      print("Not agreed.")
+
+  ```
+
+  Notice that the two vertical bars utilized in C is replaced with `or`. Indeed, people often enjoy Python because it is more readable by humans. Also, notice that `char` does not exist in Python. Instead, `str`s are utilized.
+* Another approach to this same code could be as follows using *lists*:
+
+  ```
+  # Logical operators, using lists
+
+  from cs50 import get_string
+
+  # Prompt user to agree
+  s = get_string("Do you agree? ")
+
+  # Check whether agreed
+  if s in ["y", "yes"]:
+      print("Agreed.")
+  elif s in ["n", "no"]:
+      print("Not agreed.")
+
+  ```
+
+  Notice how we are able to express multiple keywords like `y` and `yes` in a `list`.
+
+## Object-Oriented Programming
+
+* It’s possible to have certain types of values not only have properties or attributes inside of them but have functions as well. In Python, these values are known as *objects*
+* In C, we could create a `struct` where you could associate multiple variables inside a single self-created data type. In Python, we can do this and also include functions in a self-created data type. When a function belongs to a specific *object*, it is known as a *method*.
+* For example, `strs` in Python have built-in *methods*. Therefore, you could modify your code as follows:
+
+  ```
+  # Logical operators, using lists
+
+  # Prompt user to agree
+  s = input("Do you agree? ").lower()
+
+  # Check whether agreed
+  if s in ["y", "yes"]:
+      print("Agreed.")
+  elif s in ["n", "no"]:
+      print("Not agreed.")
+
+  ```
+
+  Notice how the old value of `s` is overwritten with the result of `s.lower()`, a built-in method of `strs`.
+* Similarly, you may recall how we copied a string in C:
+
+  ```
+  // Capitalizes a copy of a string without memory errors
+
+  #include <cs50.h>
+  #include <ctype.h>
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <string.h>
+
+  int main(void)
+  {
+      // Get a string
+      char *s = get_string("s: ");
+      if (s == NULL)
+      {
+          return 1;
+      }
+
+      // Allocate memory for another string
+      char *t = malloc(strlen(s) + 1);
+      if (t == NULL)
+      {
+          return 1;
+      }
+
+      // Copy string into memory
+      strcpy(t, s);
+
+      // Capitalize copy
+      if (strlen(t) > 0)
+      {
+          t[0] = toupper(t[0]);
+      }
+
+      // Print strings
+      printf("s: %s\n", s);
+      printf("t: %s\n", t);
+
+      // Free memory
+      free(t);
+      return 0;
+  }
+
+  ```
+
+  Notice the number of lines of code.
+* We may implement the above in Python as follows:
+
+  ```
+  # Capitalizes a copy of a string
+
+  # Get a string
+  s = input("s: ")
+
+  # Capitalize copy of string
+  t = s.capitalize()
+
+  # Print strings
+  print(f"s: {s}")
+  print(f"t: {t}")
+
+  ```
+
+  Notice how much shorter this program is than its counterpart in C.
+* In this class, we will only scratch the surface of Python. Therefore, the [Python documentation](https://docs.python.org) will be of particular importance as you continue.
+* You can learn more about string methods in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods)
+
+## Loops
+
+* Loops in Python are very similar to C. You may recall the following code in C:
+
+  ```
+  // Demonstrates for loop
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          printf("meow\n");
+      }
+  }
+
+  ```
+* `for` loops can be implemented in Python as follows:
+
+  ```
+  # Better design
+
+  for i in range(3):
+      print("meow")
+
+  ```
+
+  Notice that `i` is never explicitly used. However, Python will increment the value of `i`.
+* Further, a `while` loop could be implemented as follows:
+
+  ```
+  # Demonstrates while loop
+
+  i = 0
+  while i < 3:
+      print("meow")
+      i += 1
+
+  ```
+* To further our understanding of loops and iteration in Python, let’s create a new file called `uppercase.py` as follows:
+
+  ```
+  # Uppercases string one character at a time
+
+  before = input("Before: ")
+  print("After:  ", end="")
+  for c in before:
+      print(c.upper(), end="")
+  print()
+
+  ```
+
+  Notice how `end=` is used to pass a parameter to the `print` function that continues the line without a line ending. This code passes one string at a time.
+* Reading the documentation, we discover that Python has methods that can be implemented upon the entire string as follows:
+
+  ```
+  # Uppercases string all at once
+
+  before = input("Before: ")
+  after = before.upper()
+  print(f"After:  {after}")
+
+  ```
+
+  Notice how `.upper` is applied to the entire string.
+
+## Abstraction
+
+* As we hinted at earlier today, you can further improve upon our code using functions and abstracting away various code into functions. Modify your earlier-created `meow.py` code as follows:
+
+  ```
+  # Abstraction
+
+  def main():
+      for i in range(3):
+          meow()
+
+  # Meow once
+  def meow():
+      print("meow")
+
+
+  main()
+
+  ```
+
+  Notice that the `meow` function abstracts away the `print` statement. Further, notice that the `main` function appears at the top of the file. At the bottom of the file, the `main` function is called. By convention, it’s expected that you create a `main` function in Python.
+* Indeed, we can pass variables between our functions as follows:
+
+  ```
+  # Abstraction with parameterization
+
+  def main():
+      meow(3)
+
+
+  # Meow some number of times
+  def meow(n):
+      for i in range(n):
+          print("meow")
+
+
+  main()
+
+  ```
+
+  Notice how `meow` now takes a variable `n`. In the `main` function, you can call `meow` and pass a value like `3` to it. Then, `meow` utilizes the value of `n` in the `for` loop.
+* Reading the above code, notice how you, as a C programmer, are able to quite easily make sense of the above code. While some conventions are different, the building blocks you previously learned are very apparent in this new programming language.
+
+## Truncation and Floating Point Imprecision
+
+* Recall that in C, we experienced truncation where one integer is divided by another could result in an imprecise result.
+* You can see how Python handles such division as follows by modifying your code for `calculator.py`:
+
+  ```
+  # Division with integers, demonstration lack of truncation
+
+  # Prompt user for x
+  x = int(input("x: "))
+
+  # Prompt user for y
+  y = int(input("y: "))
+
+  # Divide x by y
+  z = x / y
+  print(z)
+
+  ```
+
+  Notice that executing this code results in a value, but that if you were to see more digits after `.333333` you’d see that we are faced with *floating-point imprecision*. Truncation does not occur.
+* We can reveal this imprecision by modifying our codes slightly:
+
+  ```
+  # Floating-point imprecision
+
+  # Prompt user for x
+  x = int(input("x: "))
+
+  # Prompt user for y
+  y = int(input("y: "))
+
+  # Divide x by y
+  z = x / y
+  print(f"{z:.50f}")
+
+  ```
+
+  Notice that this code reveals the imprecision. Python still faces this issue, just as C does.
+
+## Exceptions
+
+* Let’s explore more about exceptions that can occur when we run Python code.
+* Modify `calculator.py` as follows:
+
+  ```
+  # Doesn't handle exception
+
+  # Prompt user for an integer
+  n = int(input("Input: "))
+  print("Integer")
+
+  ```
+
+  Notice that inputting the wrong data could result in an error.
+* We can `try` to handle and *catch* potential exceptions by modifying our code as follows:
+
+  ```
+  # Handles exception
+
+  # Prompt user for an integer
+  try:
+      n = int(input("Input: "))
+      print("Integer.")
+  except ValueError:
+      print("Not integer.")
+
+  ```
+
+  Notice that the above code repeatedly tries to get the correct type of data, providing additional prompts when needed.
+
+## Mario
+
+* Recall a few weeks ago our challenge of building three blocks on top of one another, like in Mario.
+
+  ![three vertical blocks](images/week_6/Week6Slide073.png)
+* In Python, we can implement something akin to this as follows:
+
+  ```
+  # Prints a column of 3 bricks with a loop
+
+  for i in range(3):
+      print("#")
+
+  ```
+
+  This prints a column of three bricks.
+* In C, we had the advantage of a `do-while` loop. However, in Python, it is conventional to utilize a `while` loop, as Python does not have a `do-while` loop. You can write code as follows in a file called `mario.py`:
+
+  ```
+  # Prints a column of n bricks with a loop
+
+  from cs50 import get_int
+
+  while True:
+      n = get_int("Height: ")
+      if n > 0:
+          break
+
+  for i in range(n):
+      print("#")
+
+  ```
+
+  Notice how the while loop is used to obtain the height. Once a height greater than zero is inputted, the loop breaks.
+* Consider the following image:
+
+  ![four horizontal question blocks](images/week_6/Week6Slide075.png)
+* In Python, we could implement by modifying your code as follows:
+
+  ```
+  # Prints a row of 4 question marks with a loop
+
+  for i in range(4):
+      print("?", end="")
+  print()
+
+  ```
+
+  Notice that you can override the behavior of the `print` function to stay on the same line as the previous print.
+* Similar in spirit to previous iterations, we can further simplify this program:
+
+  ```
+  # Prints a row of 4 question marks without a loop
+
+  print("?" * 4)
+
+  ```
+
+  Notice that we can utilize `*` to multiply the print statement to repeat `4` times.
+* What about a large block of bricks?
+
+  ![three by three block of mario blocks](images/week_6/Week6Slide078.png)
+* To implement the above, you can modify your code as follows:
+
+  ```
+  # Prints a 3-by-3 grid of bricks with loops
+
+  for i in range(3):
+      for j in range(3):
+          print("#", end="")
+      print()
+
+  ```
+
+  Notice how one `for` loop exists inside another. The `print` statement adds a new line at the end of each row of bricks.
+* You can learn more about the `print` function in the [Python documentation](https://docs.python.org/3/library/functions.html#print)
+
+## Lists
+
+* `list`s are a data structure within Python.
+* `list`s have built-in methods or functions within them.
+* For example, consider the following code:
+
+  ```
+  # Averages three numbers using a list
+
+  # Scores
+  scores = [72, 73, 33]
+
+  # Print average
+  average = sum(scores) / len(scores)
+  print(f"Average: {average}")
+
+  ```
+
+  Notice that you can use the built-in `sum` method to calculate the average.
+* You can even utilize the following syntax to get values from the user:
+
+  ```
+  # Averages three numbers using a list and a loop
+
+  from cs50 import get_int
+
+  # Get scores
+  scores = []
+  for i in range(3):
+      score = get_int("Score: ")
+      scores.append(score)
+
+  # Print average
+  average = sum(scores) / len(scores)
+  print(f"Average: {average}")
+
+  ```
+
+  Notice that this code utilizes the built-in `append` method for lists.
+* You can learn more about lists in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range)
+* You can also learn more about `len` in the [Python documentation](https://docs.python.org/3/library/functions.html#len)
+
+## Searching and Dictionaries
+
+* We can also search within a data structure.
+* Consider a program called `phonebook.py` as follows:
+
+  ```
+  # Implements linear search for names using loop
+
+  # A list of names
+  names = ["Yuliia", "David", "John"]
+
+  # Ask for name
+  name = input("Name: ")
+
+  # Search for name
+  for n in names:
+      if name == n:
+          print("Found")
+          break
+  else:
+      print("Not found")
+
+  ```
+
+  Notice how this implements linear search for each name.
+* However, we don’t need to iterate through a list. In Python, we can execute linear search as follows:
+
+  ```
+  # Implements linear search for names using `in`
+
+  # A list of names
+  names = ["Yuliia", "David", "John"]
+
+  # Ask for name
+  name = input("Name: ")
+
+  # Search for name
+  if name in names:
+      print("Found")
+  else:
+      print("Not found")
+
+  ```
+
+  Notice how `in` is used to implement linear search.
+* Still, this code could be improved.
+* Recall that a *dictionary* or `dict` is a collection of *key* and *value* pairs.
+* You can implement a dictionary in Python as follows:
+
+  ```
+  # Implements a phone book as a list of dictionaries, without a variable
+
+  from cs50 import get_string
+
+  people = [
+      {"name": "Yuliia", "number": "+1-617-495-1000"},
+      {"name": "David", "number": "+1-617-495-1000"},
+      {"name": "John", "number": "+1-949-468-2750"},
+  ]
+
+  # Search for name
+  name = get_string("Name: ")
+  for person in people:
+      if person["name"] == name:
+          print(f"Found {person['number']}")
+          break
+  else:
+      print("Not found")
+
+  ```
+
+  Notice that the dictionary is implemented having both `name` and `number` for each entry.
+* Even better, strictly speaking, we don’t need both a `name` and a `number`. We can simplify this code as follows:
+
+  ```
+  # Implements a phone book using a dictionary
+
+  from cs50 import get_string
+
+  people = {
+      "Yuliia": "+1-617-495-1000",
+      "David": "+1-617-495-1000",
+      "John": "+1-949-468-2750",
+  }
+
+  # Search for name
+  name = get_string("Name: ")
+  if name in people:
+      print(f"Number: {people[name]}")
+  else:
+      print("Not found")
+
+  ```
+
+  Notice that the dictionary is implemented using curly braces. Then, the statement `if name in people` searches to see if the `name` is in the `people` dictionary. Further, notice how, in the `print` statement, we can index into the people dictionary using the value of `name`. Very useful!
+* Python has done their best to get to *constant time* using their built-in searches.
+* You can learn more about dictionaries in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#dict)
+
+## Command-Line Arguments
+
+* As with C, you can also utilize command-line arguments. Consider the following code:
+
+  ```
+  # Prints a command-line argument
+
+  from sys import argv
+
+  if len(argv) == 2:
+      print(f"hello, {argv[1]}")
+  else:
+      print("hello, world")
+
+  ```
+
+  Notice that `argv[1]` is printed using a *formatted string*, noted by the `f` present in the `print` statement.
+* You can learn more about the `sys` library in the [Python documentation](https://docs.python.org/3/library/sys.html)
+
+## Exit Status
+
+* The `sys` library also has built-in methods. We can use `sys.exit(i)` to exit the program with a specific exit code:
+
+  ```
+  # Exits with explicit value, importing sys
+
+  import sys
+
+  if len(sys.argv) != 2:
+      print("Missing command-line argument")
+      sys.exit(1)
+
+  print(f"hello, {sys.argv[1]}")
+  sys.exit(0)
+
+  ```
+
+  Notice that dot-notation is used to utilize the built-in functions of `sys`.
+
+## CSV Files
+
+* Python also has built-in support for CSV files.
+* Modify your code for `phonebook.py` as follows:
+
+  ```
   import csv
 
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
+  file = open("phonebook.csv", "a")
 
-      # Create reader
-      reader = csv.reader(file)
+  name = input("Name: ")
+  number = input("Number: ")
 
-      # Skip header row
-      next(reader)
+  writer = csv.writer(file)
+  writer.writerow([name,number])
 
-      # Iterate over CSV file, printing each favorite
-      for row in reader:
-          print(row[1])
+  file.close()
 
   ```
 
-  Notice that the `csv` library is imported. Further, we created a `reader` that will hold the result of `csv.reader(file)`. The `csv.reader` function reads each row from the file, and in our code, we store the results in `reader`. `print(row[1])`, therefore, will print the language from the `favorites.csv` file.
-* You can improve your code as follows:
+  Notice `writerow` adds the commas in the CSV file for us.
+* While `file.close` and `file = open` are commonly used and available syntax in Python, this code can be improved as follows:
 
   ```
-  # Stores favorite in a variable
-
   import csv
 
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
+  name = input("Name: ")
+  number = input("Number: ")
 
-      # Create reader
-      reader = csv.reader(file)
+  with open("phonebook.csv", "a") as file:
 
-      # Skip header row
-      next(reader)
-
-      # Iterate over CSV file, printing each favorite
-      for row in reader:
-          favorite = row[1]
-          print(favorite)
+      writer = csv.writer(file)
+      writer.writerow([name,number])
 
   ```
 
-  Notice that `favorite` is stored and then printed. Also, notice that we use the `next` function to skip to the next line of our reader.
-* One of the disadvantages of the above approach is that we are trusting that `row[1]` is always the favorite. However, what would happen if the columns had been moved around?
-* We can fix this potential issue. Python also allows you to index by the keys of a list. Modify your code as follows:
+  Notice that the code is indented under the `with` statement. This automatically closes the file when done.
+* Similarly, we can write a dictionary as follows within the CSV file:
 
   ```
-  # Prints all favorites in CSV using csv.DictReader
-
   import csv
 
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
+  name = input("Name: ")
+  number = input("Number: ")
 
-      # Create DictReader
-      reader = csv.DictReader(file)
+  with open("phonebook.csv", "a") as file:
 
-      # Iterate over CSV file, printing each favorite
-      for row in reader:
-          favorite = row["language"]
-          print(favorite)
+      writer = csv.DictWriter(file, fieldnames=["name", "number"])
+      writer.writerow({"name": name, "number": number})
 
   ```
 
-  Notice that this example directly utilizes the `language` key in the print statement. `favorite` indexes into the `reader` dictionary of `row["language"]`.
-* This could be further simplified to:
+  Notice this code is quite similar to our prior iteration but with `csv.DictWriter` instead.
 
-  ```
-  # Prints all favorites in CSV using csv.DictReader
+## Third-Party Libraries
 
-  import csv
-
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
-
-      # Create DictReader
-      reader = csv.DictReader(file)
-
-      # Iterate over CSV file, printing each favorite
-      for row in reader:
-          print(row["language"])
-
-  ```
-* To count the number of favorite languages expressed in the `csv` file, we can do the following:
-
-  ```
-  # Counts favorites using variables
-
-  import csv
-
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
-
-      # Create DictReader
-      reader = csv.DictReader(file)
-
-      # Counts
-      scratch, c, python = 0, 0, 0
-
-      # Iterate over CSV file, counting favorites
-      for row in reader:
-          favorite = row["language"]
-          if favorite == "Scratch":
-              scratch += 1
-          elif favorite == "C":
-              c += 1
-          elif favorite == "Python":
-              python += 1
-
-  # Print counts
-  print(f"Scratch: {scratch}")
-  print(f"C: {c}")
-  print(f"Python: {python}")
-
-  ```
-
-  Notice that each language is counted using `if` statements. Further, notice the double equal `==` signs in those `if` statements.
-* Python allows us to use a dictionary to count the `counts` of each language. Consider the following improvement upon our code:
-
-  ```
-  # Counts favorites using dictionary
-
-  import csv
-
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
-
-      # Create DictReader
-      reader = csv.DictReader(file)
-
-      # Counts
-      counts = {}
-
-      # Iterate over CSV file, counting favorites
-      for row in reader:
-          favorite = row["language"]
-          if favorite in counts:
-              counts[favorite] += 1
-          else:
-              counts[favorite] = 1
-
-  # Print counts
-  for favorite in counts:
-      print(f"{favorite}: {counts[favorite]}")
-
-  ```
-
-  Notice that the value in `counts` with the key `favorite` is incremented when it exists already. If it does not exist, we define `counts[favorite]` and set it to 1. Further, the formatted string has been improved to present the `counts[favorite]`.
-* Python also allows sorting `counts`. Improve your code as follows:
-
-  ```
-  # Sorts favorites by key
-
-  import csv
-
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
-
-      # Create DictReader
-      reader = csv.DictReader(file)
-
-      # Counts
-      counts = {}
-
-      # Iterate over CSV file, counting favorites
-      for row in reader:
-          favorite = row["language"]
-          if favorite in counts:
-              counts[favorite] += 1
-          else:
-              counts[favorite] = 1
-
-  # Print counts
-  for favorite in sorted(counts):
-      print(f"{favorite}: {counts[favorite]}")
-
-  ```
-
-  Notice the `sorted(counts)` at the bottom of the code.
-* If you look at the parameters for the `sorted` function in the Python documentation, you will find it has many built-in parameters. You can leverage some of these built-in parameters as follows:
-
-  ```
-  # Sorts favorites by value using .get
-
-  import csv
-
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
-
-      # Create DictReader
-      reader = csv.DictReader(file)
-
-      # Counts
-      counts = {}
-
-      # Iterate over CSV file, counting favorites
-      for row in reader:
-          favorite = row["language"]
-          if favorite in counts:
-              counts[favorite] += 1
-          else:
-              counts[favorite] = 1
-
-  # Print counts
-  for favorite in sorted(counts, key=counts.get, reverse=True):
-      print(f"{favorite}: {counts[favorite]}")
-
-  ```
-
-  Notice the arguments passed to `sorted`. The `key` argument allows you to tell Python the method you wish to use to sort items. In this case `counts.get` is used to sort by the values. `reverse=True` tells `sorted` to sort from largest to smallest.
-* Python has numerous libraries that we can utilize in our code. One of these libraries is `collections`, from which we can import `Counter`. `Counter` will allow you to access the counts of each language without the headaches of all the `if` statements seen in our previous code. You can implement as follows:
-
-  ```
-  # Sorts favorites by value using .get
-
-  import csv
-
-  from collections import Counter
-
-  # Open CSV file
-  with open("favorites.csv", "r") as file:
-
-      # Create DictReader
-      reader = csv.DictReader(file)
-
-      # Counts
-      counts = Counter()
-
-      # Iterate over CSV file, counting favorites
-      for row in reader:
-          favorite = row["language"]
-          counts[favorite] += 1
-
-  # Print counts
-  for favorite, count in counts.most_common():
-      print(f"{favorite}: {count}")
-
-  ```
-
-  Notice how `counts = Counter()` enables the use of this imported `Counter` class from `collections`.
-* You can learn more about [sorted](https://docs.python.org/3/howto/sorting.html) in the [Python Documentation](https://docs.python.org/3/howto/sorting.html).
-
-## Relational Databases
-
-* Google, X, and Meta all use relational databases to store their information at scale.
-* Relational databases store data in rows and columns in structures called *tables*.
-* SQL allows for four types of commands:
-
-  ```
-    Create
-    Read
-    Update
-    Delete
-
-  ```
-* These four operations are affectionately called *CRUD*.
-* We can create a database with the SQL syntax `CREATE TABLE table (column type, ...);`. But where do you run this command?
-* `sqlite3` is a type of SQL database that has the core features required for this course.
-* We can create a SQL database at the terminal by typing `sqlite3 favorites.db`. Upon being prompted, we will agree that we want to create `favorites.db` by pressing `y`.
-* You will notice a different prompt as we are now using a program called `sqlite`.
-* We can put `sqlite` into `csv` mode by typing `.mode csv`. Then, we can import our data from our `csv` file by typing `.import favorites.csv favorites`. It seems that nothing has happened!
-* We can type `.schema` to see the structure of the database.
-* You can read items from a table using the syntax `SELECT columns FROM table`.
-* For example, you can type `SELECT * FROM favorites;` which will print every row in `favorites`.
-* You can get a subset of the data using the command `SELECT language FROM favorites;`.
-* SQL supports many commands to access data, including:
-
-  ```
-    AVG
-    COUNT
-    DISTINCT
-    LOWER
-    MAX
-    MIN
-    UPPER
-
-  ```
-* For example, you can type `SELECT COUNT(*) FROM favorites;`. Further, you can type `SELECT DISTINCT language FROM favorites;` to get a list of the individual languages within the database. You could even type `SELECT COUNT(DISTINCT language) FROM favorites;` to get a count of those.
-* SQL offers additional commands we can utilize in our queries:
-
-  ```
-    WHERE       -- adding a Boolean expression to filter our data
-    LIKE        -- filtering responses more loosely
-    ORDER BY    -- ordering responses
-    LIMIT       -- limiting the number of responses
-    GROUP BY    -- grouping responses together
-
-  ```
-
-  Notice that we use `--` to write a comment in SQL.
-
-## SELECT
-
-* For example, we can execute `SELECT COUNT(*) FROM favorites WHERE language = 'C';`. A count is presented.
-* Further, we could type `SELECT COUNT(*) FROM favorites WHERE language = 'C' AND problem = 'Hello, World';`. Notice how the `AND` is utilized to narrow our results.
-* Similarly, we could execute `SELECT language, COUNT(*) FROM favorites GROUP BY language;`. This would offer a temporary table that would show the language and count.
-* We could improve this by typing `SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*);`. This will order the resulting table by the `count`.
-* Likewise, we could execute `SELECT COUNT(*) FROM favorites WHERE language = 'C' AND (problem = 'Hello, World' OR problem = 'Hello, It''s Me');`. Do notice that there are two `''` marks as to allow the use of single quotes in a way that does not confuse SQL.
-* Further, we could execute `SELECT COUNT(*) FROM favorites WHERE language = 'C' AND problem LIKE 'Hello, %';` to find any problems that start with `Hello,`  (including a space).
-* We can also group the values of each language by executing `SELECT language, COUNT(*) FROM favorites GROUP BY language;`.
-* We can order the output as follows: `SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*) DESC;`.
-* We can even create aliases, like variables in our queries: `SELECT language, COUNT(*) AS n FROM favorites GROUP BY language ORDER BY n DESC;`.
-* Finally, we can limit our output to 1 or more values: `SELECT language, COUNT(*) AS n FROM favorites GROUP BY language ORDER BY n DESC LIMIT 1;`.
-
-## INSERT
-
-* We can also `INSERT` into a SQL database utilizing the form `INSERT INTO table (column...) VALUES(value, ...);`.
-* We can execute `INSERT INTO favorites (language, problem) VALUES ('SQL', 'Fiftyville');`.
-* You can verify the addition of this favorite by executing `SELECT * FROM favorites;`.
-
-## DELETE
-
-* `DELETE` allows you to delete parts of your data. For example, you could `DELETE FROM favorites WHERE Timestamp IS NULL;`. This deletes any record where the `Timestamp` is `NULL`.
-
-## UPDATE
-
-* We can also utilize the `UPDATE` command to update your data.
-* For example, you can execute `UPDATE favorites SET language = 'SQL', problem = 'Fiftyville';`. This will result in overwriting all previous statements where C and Scratch were the favorite programming language.
-* Notice that these queries have immense power. Accordingly, in the real-world setting, you should consider who has permissions to execute certain commands and if you have backups available!
-
-## IMDb
-
-* We can imagine a database that we might want to create to catalog various TV shows. We could create a spreadsheet with columns like `title`, `star`, `star`, `star`, `star`, and more stars. A problem with this approach is that it has a lot of wasted space. Some shows may have one star. Others may have dozens.
-* We could separate our database into multiple sheets. We could have a `shows` sheet, a `stars` sheet, and a `people` sheet. On the `people` sheet, each person could have a unique `id`. On the `shows` sheet, each show could have a unique `id` too. On a third sheet called `stars` we could relate how each show has people for each show by having a `show_id` and `person_id`. While this is an improvement, this is not an ideal database.
-* IMDb offers a database of people, shows, writers, stars, genres, and ratings. Each of these tables is related to one another as follows:
-
-  ![six boxes that represent various sql tables arrows are drawn to each showing their many relationships with one another](images/week_7/Week7Slide025.png)
-* After downloading [`shows.db`](https://cdn.cs50.net/2024/fall/lectures/7/src7/imdb/shows.db), you can execute `sqlite3 shows.db` in your terminal window.
-* Let’s zero in on the relationship between two tables within the database called `shows` and `ratings`. The relationship between these two tables can be illustrated as follows:
-
-  ![two boxes one called shows and the other called ratings](images/week_7/Week7Slide032.png)
-* To illustrate the relationship between these tables, we could execute the following command: `SELECT * FROM ratings LIMIT 10;`. Examining the output, we could execute `SELECT * FROM shows LIMIT 10;`.
-* Examining `shows` and `rating`, we can see these have a one-to-one relationship: One show has one rating.
-* To understand the database, upon executing `.schema` you will find not only each of the tables but the individual fields inside each of these fields.
-* More specifically, you could execute `.schema shows` to understand the fields inside `shows`. You can also execute `.schema ratings` to see the fields inside `ratings`.
-* As you can see, `show_id` exists in all of the tables. In the `shows` table, it is simply called `id`. This common field between all the fields is called a *key*. Primary keys are used to identify a unique record in a table. *Foreign keys* are used to build relationships between tables by pointing to the primary key in another table. You can see in the schema of `ratings` that `show_id` is a foreign key that references `id` in `shows`.
-* By storing data in a relational database, as above, data can be more efficiently stored.
-* In *sqlite*, we have five data types, including:
-
-  ```
-    BLOB       -- binary large objects that are groups of ones and zeros
-    INTEGER    -- an integer
-    NUMERIC    -- for numbers that are formatted specially like dates
-    REAL       -- like a float
-    TEXT       -- for strings and the like
-
-  ```
-* Additionally, columns can be set to add special constraints:
-
-  ```
-    NOT NULL
-    UNIQUE
-
-  ```
-* We can further play with this data to understand these relationships. Execute `SELECT * FROM ratings;`. There are a lot of ratings!
-* We can further limit this data down by executing `SELECT show_id FROM ratings WHERE rating >= 6.0 LIMIT 10;`. From this query, you can see that there are 10 shows presented. However, we don’t know what show each `show_id` represents.
-* You can discover what shows these are by executing `SELECT * FROM shows WHERE id = 626124;`
-* We can further our query to be more efficient by executing:
-
-  ```
-  SELECT title
-  FROM shows
-  WHERE id IN (
-      SELECT show_id
-      FROM ratings
-      WHERE rating >= 6.0
-      LIMIT 10
-  )
-
-  ```
-
-  Notice that this query nests together two queries. An inner query is used by an outer query.
-
-## `JOIN`s
-
-* We are pulling data from `shows` and `ratings`. Notice how both `shows` and `ratings` have an `id` in common.
-* How could we combine tables temporarily? Tables could be joined together using the `JOIN` command.
-* Execute the following command:
-
-  ```
-  SELECT * FROM shows
-    JOIN ratings on shows.id = ratings.show_id
-    WHERE rating >= 6.0
-    LIMIT 10;
-
-  ```
-
-  Notice this results in a wider table than we have previously seen.
-* Where the previous queries have illustrated the *one-to-one* relationship between these keys, let’s examine some *one-to-many* relationships. Focusing on the `genres` table, execute the following:
-
-  ```
-  SELECT * FROM genres
-  LIMIT 10;
-
-  ```
-
-  Notice how this provides us a sense of the raw data. You might notice that one show has three values. This is a one-to-many relationship.
-* We can learn more about the `genres` table by typing `.schema genres`.
-* Execute the following command to learn more about the various comedies in the database:
-
-  ```
-  SELECT title FROM shows
-  WHERE id IN (
-    SELECT show_id FROM genres
-    WHERE genre = 'Comedy'
-    LIMIT 10
-  );
-
-  ```
-
-  Notice how this produces a list of comedies, including *Catweazle*.
-* To learn more about Catweazle, by joining various tables through a join:
-
-  ```
-  SELECT * FROM shows
-  JOIN genres
-  ON shows.id = genres.show_id
-  WHERE id = 63881;
-
-  ```
-
-  Notice that this results in a temporary table. It is fine to have a duplicate table.
-* In contrast to one-to-one and one-to-many relationships, there may be *many-to-many* relationships.
-* We can learn more about the show *The Office* and the actors in that show by executing the following command:
-
-  ```
-  SELECT name FROM people WHERE id IN 
-      (SELECT person_id FROM stars WHERE show_id = 
-          (SELECT id FROM shows WHERE title = 'The Office' AND year = 2005));
-
-  ```
-
-  Notice that this results in a table that includes the names of various stars through nested queries.
-* We find all the shows in which Steve Carell starred:
-
-  ```
-  SELECT title FROM shows WHERE id IN 
-      (SELECT show_id FROM stars WHERE person_id = 
-          (SELECT id FROM people WHERE name = 'Steve Carell'));
-
-  ```
-
-  This results in a list of titles of shows wherein Steve Carell starred.
-* This could also be expressed in this way:
-
-  ```
-  SELECT title FROM shows, stars, people 
-  WHERE shows.id = stars.show_id
-  AND people.id = stars.person_id
-  AND name = 'Steve Carell';
-
-  ```
-* The wildcard `%` operator can be used to find all people whose names start with `Steve C` one could employ the syntax `SELECT * FROM people WHERE name LIKE 'Steve C%';`.
-
-## Indexes
-
-* While relational databases have the ability to be faster and more robust than utilizing a `CSV` file, data can be optimized within a table using *indexes*.
-* Indexes can be utilized to speed up our queries.
-* We can track the speed of our queries by executing `.timer on` in `sqlite3`.
-* To understand how indexes can speed up our queries, run the following: `SELECT * FROM shows WHERE title = 'The Office';` Notice the time that displays after the query executes.
-* Then, we can create an index with the syntax `CREATE INDEX title_index ON shows (title);`. This tells `sqlite3` to create an index and perform some special under-the-hood optimization relating to this column `title`.
-* This will create a data structure called a *B Tree*, a data structure that looks similar to a binary tree. However, unlike a binary tree, there can be more than two child nodes.
-
-  ![one node at the top from which come four children and below that there are three children coming from one of the nodes and two from another two from another and three from another](images/week_7/Week7Slide039.png)
-* Further, we can create indexes as follows:
-
-  ```
-  CREATE INDEX name_index ON people (name);
-  CREATE INDEX person_index ON stars (person_id);
-
-  ```
-* Running the query and you will notice that the query runs much more quickly!
-
-  ```
-  SELECT title FROM shows WHERE id IN 
-      (SELECT show_id FROM stars WHERE person_id = 
-          (SELECT id FROM people WHERE name = 'Steve Carell'));
-
-  ```
-* Unfortunately, indexing all columns would result in utilizing more storage space. Therefore, there is a tradeoff for enhanced speed.
-
-## Using SQL in Python
-
-* To assist in working with SQL in this course, the CS50 Library can be utilized as follows in your code:
-
-  ```
-  from cs50 import SQL
-
-  ```
-* Similar to previous uses of the CS50 Library, this library will assist with the complicated steps of utilizing SQL within your Python code.
-* You can read more about the CS50 Library’s SQL functionality in the [documentation](https://cs50.readthedocs.io/libraries/cs50/python/#cs50.SQL).
-* Using our new knowledge of SQL, we can now leverage Python alongside.
-* Modify your code for `favorites.py` as follows:
-
-  ```
-  # Searches database popularity of a problem
-
-  from cs50 import SQL
-
-  # Open database
-  db = SQL("sqlite:///favorites.db")
-
-  # Prompt user for favorite
-  favorite = input("Favorite: ")
-
-  # Search for title
-  rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE language = ?", favorite)
-
-  # Get first (and only) row
-  row = rows[0]
-
-  # Print popularity
-  print(row["n"])
-
-  ```
-
-  Notice that `db = SQL("sqlite:///favorites.db")` provides Python the location of the database file. Then, the line that begins with `rows` executes SQL commands utilizing `db.execute`. Indeed, this command passes the syntax within the quotation marks to the `db.execute` function. We can issue any SQL command using this syntax. Further, notice that `rows` is returned as a list of dictionaries. In this case, there is only one result, one row, returned to the rows list as a dictionary.
-
-## Race Conditions
-
-* Utilization of SQL can sometimes result in some problems.
-* You can imagine a case where multiple users could be accessing the same database and executing commands at the same time.
-* This could result in glitches where code is interrupted by other people’s actions. This could result in a loss of data.
-* Built-in SQL features such as `BEGIN TRANSACTION`, `COMMIT`, and `ROLLBACK` help avoid some of these race condition problems.
-
-## SQL Injection Attacks
-
-* Now, still considering the code above, you might be wondering what the `?` question marks do above. One of the problems that can arise in real-world applications of SQL is what is called an *injection attack*. An injection attack is where a malicious actor could input malicious SQL code.
-* For example, consider a login screen as follows:
-
-  ![harvard key login screen with username and password fields](images/week_7/Week7Slide051.png)
-* Without the proper protections in our own code, a bad actor could run malicious code. Consider the following:
-
-  ```
-  rows = db.execute("SELECT COUNT(*) FROM users WHERE username = ? AND password = ?", username, password)
-
-  ```
-
-  Notice that because the `?` is in place, validation can be run on `favorite` before it is blindly accepted by the query.
-* You never want to utilize formatted strings in queries as above or blindly trust the user’s input.
-* Utilizing the CS50 Library, the library will *sanitize* and remove any potentially malicious characters.
+* One of the advantages of Python is its massive user base and similarly large number of third-party libraries.
+* You can install the CS50 Library on your own computer by typing `pip install cs50`, provided you have [Python](https://python.org) installed.
+* Considering other libraries, David demoed the use of `cowsay` and `qrcode`.
 
 ## Summing Up
 
-In this lesson, you learned more syntax related to Python. Further, you learned how to integrate this knowledge with data in the form of flat-file and relational databases. Finally, you learned about *SQL*. Specifically, we discussed…
+In this lesson, you learned how the building blocks of programming from prior lessons can be implemented within Python. Further, you learned about how Python allowed for more simplified code. Also, you learned how to utilize various Python libraries. In the end, you learned that your skills as a programmer are not limited to a single programming language. Already, you are seeing how you are discovering a new way of learning through this course that could serve you in any programming language – and, perhaps, in nearly any avenue of learning! Specifically, we discussed…
 
-* Flat-file databases
-* Relational databases
-* SQL commands such as `SELECT`, `CREATE`, `INSERT`, `DELETE`, and `UPDATE`.
-* Primary and foreign keys
-* `JOIN`s
-* Indexes
-* Using SQL in Python
-* Race conditions
-* SQL injection attacks
+* Python
+* Variables
+* Conditionals
+* Loops
+* Types
+* Object-Oriented programming
+* Truncation and floating point imprecision
+* Exceptions
+* Dictionaries
+* Command-line arguments
+* Third-Party libraries
 
 See you next time!

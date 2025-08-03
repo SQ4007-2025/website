@@ -1,1083 +1,602 @@
-# Week 8 Notes
+# Week 7 Notes
 
-**CS50x 2025 - Week 8 Lecture Notes**
+**CS50x 2025 - Week 7 Lecture Notes**
 
-Source: https://cs50.harvard.edu/x/notes/8/
+Source: https://cs50.harvard.edu/x/notes/7/
 
 ---
 
-# Lecture 8
+# Lecture 7
 
 * [Welcome!](#welcome)
-* [The Internet](#the-internet)
-* [Routers](#routers)
-* [DNS](#dns)
-* [DHCP](#dhcp)
-* [HTTPS](#https)
-* [HTML](#html)
-* [Regular Expressions](#regular-expressions)
-* [CSS](#css)
-* [Frameworks](#frameworks)
-* [JavaScript](#javascript)
+* [Flat-File Database](#flat-file-database)
+* [Relational Databases](#relational-databases)
+* [SELECT](#select)
+* [INSERT](#insert)
+* [DELETE](#delete)
+* [UPDATE](#update)
+* [IMDb](#imdb)
+* [`JOIN`s](#joins)
+* [Indexes](#indexes)
+* [Using SQL in Python](#using-sql-in-python)
+* [Race Conditions](#race-conditions)
+* [SQL Injection Attacks](#sql-injection-attacks)
 * [Summing Up](#summing-up)
 
 ## Welcome!
 
-* In previous weeks, we introduced you to Python, a high-level programming language that utilized the same building blocks we learned in C. Today, we will extend those building blocks further in HTML, CSS, and JavaScript.
+* In previous weeks, we introduced you to Python, a high-level programming language that utilized the same building blocks we learned in C. However, we introduced this new language not for the purpose of learning “just another language.” Instead, we do so because some tools are better for some jobs and not so great for others!
+* This week, we will be continuing more syntax related to Python.
+* Further, we will be integrating this knowledge with data.
+* Finally, we will be discussing *SQL* or *Structured Query Language*, a domain-specific way by which we can interact with and modify data.
+* Overall, one of the goals of this course is to learn to program generally – not simply how to program in the languages described in this course.
 
-## The Internet
+## Flat-File Database
 
-* The internet is a technology that we all use.
-* Using our skills from previous weeks, we can build our own web pages and applications.
-* The *ARPANET* connected the first points on the internet to one another.
-* Dots between two points could be considered *routers*.
+* As you have likely seen before, data can often be described in patterns of columns and rows.
+* Spreadsheets like those created in Microsoft Excel and Google Sheets can be outputted to a `csv` or *comma-separated values* file.
+* If you look at a `csv` file, you’ll notice that the file is flat in that all of our data is stored in a single table represented by a text file. We call this form of data a *flat-file database*.
+* All data is stored row by row. Each column is separated by a comma or another value.
+* Python comes with native support for `csv` files.
+* First, download [favorites.csv](https://cdn.cs50.net/2023/fall/lectures/7/src7/favorites/favorites.csv) and upload it to your file explorer inside [cs50.dev](https://cs50.dev). Second, examining this data, notice that the first row is special in that it defines each column. Then, each record is stored row by row.
+* In your terminal window, type `code favorites.py` and write code as follows:
 
-## Routers
-
-* To route data from one place to another, we need to make *routing decisions*. That is, someone needs to program how data is transferred from point A to point B.
-* You can imagine how data could take multiple paths from point A and point B, such that when a router is congested, data can flow through another path. *Packets* of data are transferred from one router to another, from one computer to another.
-* *TCP/IP* are two protocols that allow computers to transfer data between them over the internet.
-* *IP* or *internet protocol* is a way by which computers can identify one another across the internet. Every computer has a unique address in the world. Addresses are in this form:
-
-  ```
-  #.#.#.#
-
-  ```
-* Numbers range from `0` to `255`. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses. Newer versions of IP addresses, implementing 128-bits, can accommodate far more computers!
-* In the real world, servers do a lot of work for us.
-* Packets are structured as follows:
-
   ```
-  0                   1                   2                   3  
-  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  |Version|  IHL  |Type of Service|          Total Length         |
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  |         Identification        |Flags|      Fragment Offset    |
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  |  Time to Live |    Protocol   |         Header Checksum       |
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  |                       Source Address                          |
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  |                    Destination Address                        |
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-  |                    Options                    |    Padding    |
-  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  # Prints all favorites in CSV using csv.reader
 
-  ```
-* Packets are standardized. The source and destination are held within each packet.
-* *TCP*, or transmission control protocol, helps keep track of the sequence of packets being sent.
-* Further, TCP is used to distinguish web services from one another. For example, `80` is used to denote HTTP and `443` is used to denote HTTPS. These numbers are *port numbers*.
-* When information is sent from one location to another, a source IP address, a destination IP address, and a TCP port number are sent.
-* These protocols are also used to fragment large files into multiple parts or packets. For example, a large photo of a cat can be sent in multiple packets. When a packet is lost, TCP/IP can request missing packets again from the origin server.
-* TCP will acknowledge when all the data has been transmitted and received.
-
-## DNS
-
-* It would be very tedious if you needed to remember an IP address to visit a website.
-* *DNS*, or *domain name systems*, is a collection of servers on the internet that are used to route website addresses like *harvard.edu* to a specific IP address.
-* DNS is simply a table or database that links specific, fully qualified domain names to specific IP addresses.
+  import csv
 
-## DHCP
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-* *DHCP* is a protocol that ascertains the IP address of your device.
-* Further, this protocol defines the default gateway and nameservers your device uses.
+      # Create reader
+      reader = csv.reader(file)
 
-## HTTPS
+      # Skip header row
+      next(reader)
 
-* *HTTP* or *hypertext transfer protocol* is an application-level protocol that developers use to build powerful and useful things through the transfer of data from one place to another. *HTTPS* is a secure version of this protocol.
-* When you see an address such as `https://www.example.com` you are actually implicitly visiting that address with a `/` at the end of it.
-* The *path* is what exists after that slash. For example, `https://www.example.com/folder/file.html` visits `example.com` and browses to the `folder` directory, and then visits the file named `file.html`.
-* The `.com` is called a *top-level domain* that is used to denote the location or type of organization associated with this address.
-* `https` in this address is the protocol that is used to connect to that web address. By protocol, we mean that HTTP utilizes `GET` or `POST` *requests* to ask for information from a server. For example, you can launch Google Chrome, right-click, and click `inspect`. When you open the `developer tools` and visit `Network`, selecting `Preserve log`, you will see `Request Headers`. You’ll see mentions of `GET`. This is possible in other browsers as well, using slightly different methods.
-* For example, when issuing a GET request, your computer may send the following to a server:
+      # Iterate over CSV file, printing each favorite
+      for row in reader:
+          print(row[1])
 
   ```
-  GET / HTTP/2
-  Host: www.harvard.edu
 
-  ```
+  Notice that the `csv` library is imported. Further, we created a `reader` that will hold the result of `csv.reader(file)`. The `csv.reader` function reads each row from the file, and in our code, we store the results in `reader`. `print(row[1])`, therefore, will print the language from the `favorites.csv` file.
+* You can improve your code as follows:
 
-  Notice that this requests via HTTP the content served on www.harvard.edu.
-* Generally, after making a request to a server, you will receive the following in `Response Headers`:
-
   ```
-  HTTP/2 200
-  Content-Type: text/html
+  # Stores favorite in a variable
 
-  ```
-* This approach to inspecting these logs may be a bit more complicated than need be. You can analyze the work of HTTP protocols at [cs50.dev](https://cs50.dev). For example, type the following in your terminal window:
+  import csv
 
-  ```
-  curl -I https://www.harvard.edu/
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-  ```
+      # Create reader
+      reader = csv.reader(file)
 
-  Notice that the output of this command returns all the header values of the responses of the server.
-* Via developer tools in your web browser, you can see all the HTTP requests when browsing to the above website.
-* Further, execute the following command in your terminal window:
+      # Skip header row
+      next(reader)
 
-  ```
-  curl -I https://harvard.edu
+      # Iterate over CSV file, printing each favorite
+      for row in reader:
+          favorite = row[1]
+          print(favorite)
 
   ```
 
-  Notice that you will see a `301` response, providing a hint to a browser of where it can find the correct website.
-* Similarly, execute the following in your terminal window:
+  Notice that `favorite` is stored and then printed. Also, notice that we use the `next` function to skip to the next line of our reader.
+* One of the disadvantages of the above approach is that we are trusting that `row[1]` is always the favorite. However, what would happen if the columns had been moved around?
+* We can fix this potential issue. Python also allows you to index by the keys of a list. Modify your code as follows:
 
   ```
-  curl -I http://www.harvard.edu/
-
-  ```
-
-  Notice that the `s` in `https` has been removed. The server response will show that the response is `301`, meaning that the website has permanently moved.
-* Similar to `301`, a code of `404` means that a specified URL has not been found. There are numerous other response codes, such as:
+  # Prints all favorites in CSV using csv.DictReader
 
-  ```
-  200 OK
-  301 Moved Permanently
-  302 Found
-  304 Not Modified
-  307 Temporary Redirect
-  401 Unauthorized
-  403 Forbidden
-  404 Not Found
-  418 I'm a Teapot
-  500 Internal Server Error
-  503 Service Unavailable
+  import csv
 
-  ```
-* It’s worth mentioning that `500` errors are always your fault as the developer when they concern a product or application of your creation. This will be especially important for next week’s problem set, and potentially for your final project!
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-## HTML
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-* *HTML* or *hypertext markup language* is made up of *tags*, each of which may have some *attributes* that describe it.
-* In your terminal, type `code hello.html` and write code as follows:
+      # Iterate over CSV file, printing each favorite
+      for row in reader:
+          favorite = row["language"]
+          print(favorite)
 
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates HTML -->
 
-  <html lang="en">
-      <head>
-          <title>hello, title</title>
-      </head>
-      <body>
-          hello, body
-      </body>
-  </html>
+  Notice that this example directly utilizes the `language` key in the print statement. `favorite` indexes into the `reader` dictionary of `row["language"]`.
+* This could be further simplified to:
 
   ```
+  # Prints all favorites in CSV using csv.DictReader
 
-  Notice that the `html` tag both opens and closes this file. Further, notice the `lang` attribute, which modifies the behavior of the `html` tag. Also, notice that there are both `head` tags and `body` tags. Indentation is not required but does suggest a hierarchy.
-* You can serve your code by typing `http-server`. This served content is now available on a very long URL. If you click it, you can visit the website generated by your own code.
-* When you visit this URL, notice that the file name `hello.html` appears at the end of this URL. Further, notice, based upon the URL, that the server is serving via port 8080.
-* The hierarchy of tags can be represented as follows:
+  import csv
 
-  ![html code next to a hierarchy showing parent and child nodes](images/week_8/Week8Slide065.png)
-* Knowledge of this hierarchy will be useful later as we learn JavaScript.
-* The browser will read your HTML file top to bottom and left to right.
-* Because whitespace and indentation are effectively ignored in HTML, you will need to use `<p>` paragraph tags to open and close a paragraph. Consider the following:
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-  ```
-  <!DOCTYPE html>
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-  <!-- Demonstrates paragraphs -->
+      # Iterate over CSV file, printing each favorite
+      for row in reader:
+          print(row["language"])
 
-  <html lang="en">
-      <head>
-          <title>paragraphs</title>
-      </head>
-      <body>
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis scelerisque quam, vel hendrerit lectus viverra eu. Praesent posuere eget lectus ut faucibus. Etiam eu velit laoreet, gravida lorem in, viverra est. Cras ut purus neque. In porttitor non lorem id lobortis. Mauris gravida metus libero, quis maximus dui porta at. Donec lacinia felis consectetur venenatis scelerisque. Nulla eu nisl sollicitudin, varius velit sit amet, vehicula erat. Curabitur sollicitudin felis sit amet orci mattis, a tempus nulla pulvinar. Aliquam erat volutpat.
-          </p>
-          <p>
-              Mauris ut dui in eros semper hendrerit. Morbi vel elit mi. Sed sit amet ex non quam dignissim dignissim et vel arcu. Pellentesque eget elementum orci. Morbi ac cursus ex. Pellentesque quis turpis blandit orci dapibus semper sed non nunc. Nulla et dolor nec lacus finibus volutpat. Sed non lorem diam. Donec feugiat interdum interdum. Vivamus et justo in enim blandit fermentum vel at elit. Phasellus eu ante vitae ligula varius aliquet. Etiam id posuere nibh.
-          </p>
-          <p>
-              Aenean venenatis convallis ante a rhoncus. Nullam in metus vel diam vehicula tincidunt. Donec lacinia metus sem, sit amet egestas elit blandit sit amet. Nunc egestas sem quis nisl mattis semper. Pellentesque ut magna congue lorem eleifend sodales. Donec tortor tortor, aliquam vitae mollis sed, interdum ut lectus. Mauris non purus quis ipsum lacinia tincidunt.
-          </p>
-          <p>
-              Integer at justo lacinia libero blandit aliquam ut ut dui. Quisque tincidunt facilisis venenatis. Nullam dictum odio quis lorem luctus, vel malesuada dolor luctus. Aenean placerat faucibus enim a facilisis. Maecenas eleifend quis massa sed eleifend. Ut ultricies, dui ac vulputate hendrerit, ex metus iaculis diam, vitae fermentum libero dui et ante. Phasellus suscipit, arcu ut consequat sagittis, massa urna accumsan massa, eu aliquet nulla lorem vitae arcu. Pellentesque rutrum felis et metus porta semper. Nam ac consectetur mauris.
-          </p>
-          <p>
-              Suspendisse rutrum vestibulum odio, sed venenatis purus condimentum sed. Morbi ornare tincidunt augue eu auctor. Vivamus sagittis ac lectus at aliquet. Nulla urna mauris, interdum non nibh in, vehicula porta enim. Donec et posuere sapien. Pellentesque ultrices scelerisque ipsum, vel fermentum nibh tincidunt et. Proin gravida porta ipsum nec scelerisque. Vestibulum fringilla erat at turpis laoreet, nec hendrerit nisi scelerisque.
-          </p>
-          <p>
-              Sed quis malesuada mi. Nam id purus quis augue sagittis pharetra. Nulla facilisi. Maecenas vel fringilla ante. Cras tristique, arcu sit amet blandit auctor, urna elit ultricies lacus, a malesuada eros dui id massa. Aliquam sem odio, pretium vel cursus eget, scelerisque at urna. Vestibulum posuere a turpis consectetur consectetur. Cras consequat, risus quis tempor egestas, nulla ipsum ornare erat, nec accumsan nibh lorem nec risus. Integer at iaculis lacus. Integer congue nunc massa, quis molestie felis pellentesque vestibulum. Nulla odio tortor, aliquam nec quam in, ornare aliquet sapien.
-          </p>
-      </body>
-  </html>
-
   ```
-
-  Notice that paragraphs start with a `<p>` tag and end with a `</p>` tag.
-* HTML allows for the representation of headings:
+* To count the number of favorite languages expressed in the `csv` file, we can do the following:
 
   ```
-  <!DOCTYPE html>
+  # Counts favorites using variables
 
-  <!-- Demonstrates headings (for chapters, sections, subsections, etc.) -->
+  import csv
 
-  <html lang="en">
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-      <head>
-          <title>headings</title>
-      </head>
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-      <body>
+      # Counts
+      scratch, c, python = 0, 0, 0
 
-          <h1>One</h1>
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis scelerisque quam, vel hendrerit lectus viverra eu. Praesent posuere eget lectus ut faucibus. Etiam eu velit laoreet, gravida lorem in, viverra est. Cras ut purus neque. In porttitor non lorem id lobortis. Mauris gravida metus libero, quis maximus dui porta at. Donec lacinia felis consectetur venenatis scelerisque. Nulla eu nisl sollicitudin, varius velit sit amet, vehicula erat. Curabitur sollicitudin felis sit amet orci mattis, a tempus nulla pulvinar. Aliquam erat volutpat.
-          </p>
+      # Iterate over CSV file, counting favorites
+      for row in reader:
+          favorite = row["language"]
+          if favorite == "Scratch":
+              scratch += 1
+          elif favorite == "C":
+              c += 1
+          elif favorite == "Python":
+              python += 1
 
-          <h2>Two</h2>
-          <p>
-              Mauris ut dui in eros semper hendrerit. Morbi vel elit mi. Sed sit amet ex non quam dignissim dignissim et vel arcu. Pellentesque eget elementum orci. Morbi ac cursus ex. Pellentesque quis turpis blandit orci dapibus semper sed non nunc. Nulla et dolor nec lacus finibus volutpat. Sed non lorem diam. Donec feugiat interdum interdum. Vivamus et justo in enim blandit fermentum vel at elit. Phasellus eu ante vitae ligula varius aliquet. Etiam id posuere nibh.
-          </p>
+  # Print counts
+  print(f"Scratch: {scratch}")
+  print(f"C: {c}")
+  print(f"Python: {python}")
 
-          <h3>Three</h3>
-          <p>
-              Aenean venenatis convallis ante a rhoncus. Nullam in metus vel diam vehicula tincidunt. Donec lacinia metus sem, sit amet egestas elit blandit sit amet. Nunc egestas sem quis nisl mattis semper. Pellentesque ut magna congue lorem eleifend sodales. Donec tortor tortor, aliquam vitae mollis sed, interdum ut lectus. Mauris non purus quis ipsum lacinia tincidunt.
-          </p>
-
-          <h4>Four</h4>
-          <p>
-              Integer at justo lacinia libero blandit aliquam ut ut dui. Quisque tincidunt facilisis venenatis. Nullam dictum odio quis lorem luctus, vel malesuada dolor luctus. Aenean placerat faucibus enim a facilisis. Maecenas eleifend quis massa sed eleifend. Ut ultricies, dui ac vulputate hendrerit, ex metus iaculis diam, vitae fermentum libero dui et ante. Phasellus suscipit, arcu ut consequat sagittis, massa urna accumsan massa, eu aliquet nulla lorem vitae arcu. Pellentesque rutrum felis et metus porta semper. Nam ac consectetur mauris.
-          </p>
-
-          <h5>Five</h5>
-          <p>
-              Suspendisse rutrum vestibulum odio, sed venenatis purus condimentum sed. Morbi ornare tincidunt augue eu auctor. Vivamus sagittis ac lectus at aliquet. Nulla urna mauris, interdum non nibh in, vehicula porta enim. Donec et posuere sapien. Pellentesque ultrices scelerisque ipsum, vel fermentum nibh tincidunt et. Proin gravida porta ipsum nec scelerisque. Vestibulum fringilla erat at turpis laoreet, nec hendrerit nisi scelerisque.
-          </p>
-
-          <h6>Six</h6>
-          <p>
-              Sed quis malesuada mi. Nam id purus quis augue sagittis pharetra. Nulla facilisi. Maecenas vel fringilla ante. Cras tristique, arcu sit amet blandit auctor, urna elit ultricies lacus, a malesuada eros dui id massa. Aliquam sem odio, pretium vel cursus eget, scelerisque at urna. Vestibulum posuere a turpis consectetur consectetur. Cras consequat, risus quis tempor egestas, nulla ipsum ornare erat, nec accumsan nibh lorem nec risus. Integer at iaculis lacus. Integer congue nunc massa, quis molestie felis pellentesque vestibulum. Nulla odio tortor, aliquam nec quam in, ornare aliquet sapien.
-          </p>
-
-      </body>
-
-  </html>
-
   ```
 
-  Notice that `<h1>`, `<h2>`, and `<h3>` denote different levels of headings.
-* We can also create unordered lists within HTML:
+  Notice that each language is counted using `if` statements. Further, notice the double equal `==` signs in those `if` statements.
+* Python allows us to use a dictionary to count the `counts` of each language. Consider the following improvement upon our code:
 
   ```
-  <!DOCTYPE html>
+  # Counts favorites using dictionary
 
-  <!-- Demonstrates (ordered) lists -->
+  import csv
 
-  <html lang="en">
-      <head>
-          <title>list</title>
-      </head>
-      <body>
-          <ul>
-              <li>foo</li>
-              <li>bar</li>
-              <li>baz</li>
-          </ul>
-      </body>
-  </html>
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-  ```
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-  Notice that the `<ul>` tag creates an unordered list containing three items.
-* We can also create ordered lists within HTML:
-
-  ```
-  <!DOCTYPE html>
+      # Counts
+      counts = {}
 
-  <!-- Demonstrates (ordered) lists -->
+      # Iterate over CSV file, counting favorites
+      for row in reader:
+          favorite = row["language"]
+          if favorite in counts:
+              counts[favorite] += 1
+          else:
+              counts[favorite] = 1
 
-  <html lang="en">
-      <head>
-          <title>list</title>
-      </head>
-      <body>
-          <ol>
-              <li>foo</li>
-              <li>bar</li>
-              <li>baz</li>
-          </ol>
-      </body>
-  </html>
+  # Print counts
+  for favorite in counts:
+      print(f"{favorite}: {counts[favorite]}")
 
   ```
 
-  Notice that the `<ol>` tag creates an ordered list containing three items.
-* We can also create a table in HTML:
+  Notice that the value in `counts` with the key `favorite` is incremented when it exists already. If it does not exist, we define `counts[favorite]` and set it to 1. Further, the formatted string has been improved to present the `counts[favorite]`.
+* Python also allows sorting `counts`. Improve your code as follows:
 
   ```
-  <!DOCTYPE html>
+  # Sorts favorites by key
 
-  <!-- Demonstrates table -->
+  import csv
 
-  <html lang="en">
-      <head>
-          <title>table</title>
-      </head>
-      <body>
-          <table>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-              </tr>
-              <tr>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
-              </tr>
-              <tr>
-                  <td>7</td>
-                  <td>8</td>
-                  <td>9</td>
-              </tr>
-              <tr>
-                  <td>*</td>
-                  <td>0</td>
-                  <td>#</td>
-              </tr>
-          </table>
-      </body>
-  </html>
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-  ```
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-  Tables also have tags that open and close each element within. Also, notice the syntax for comments in HTML.
-* Images can also be utilized within HTML:
-
-  ```
-  <!DOCTYPE html>
+      # Counts
+      counts = {}
 
-  <!-- Demonstrates image -->
+      # Iterate over CSV file, counting favorites
+      for row in reader:
+          favorite = row["language"]
+          if favorite in counts:
+              counts[favorite] += 1
+          else:
+              counts[favorite] = 1
 
-  <html lang="en">
-      <head>
-          <title>image</title>
-      </head>
-      <body>
-          <img alt="photo of bridge" src="bridge.png">
-      </body>
-  </html>
+  # Print counts
+  for favorite in sorted(counts):
+      print(f"{favorite}: {counts[favorite]}")
 
   ```
 
-  Notice that `src="bridge.png"` indicates the path where the image file can be located.
-* Videos can also be included in HTML:
+  Notice the `sorted(counts)` at the bottom of the code.
+* If you look at the parameters for the `sorted` function in the Python documentation, you will find it has many built-in parameters. You can leverage some of these built-in parameters as follows:
 
   ```
-  <!DOCTYPE html>
+  # Sorts favorites by value using .get
 
-  <!-- Demonstrates video -->
+  import csv
 
-  <html lang="en">
-      <head>
-          <title>video</title>
-      </head>
-      <body>
-          <video controls muted>
-              <source src="video.mp4" type="video/mp4">
-          </video>
-      </body>
-  </html>
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-  ```
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-  Notice that the `type` attribute designates that this is a video of type `mp4`. Further, notice how `controls` and `muted` are passed to `video`.
-* You can also link between various web pages:
-
-  ```
-  <!DOCTYPE html>
+      # Counts
+      counts = {}
 
-  <!-- Demonstrates link -->
+      # Iterate over CSV file, counting favorites
+      for row in reader:
+          favorite = row["language"]
+          if favorite in counts:
+              counts[favorite] += 1
+          else:
+              counts[favorite] = 1
 
-  <html lang="en">
-      <head>
-          <title>link</title>
-      </head>
-      <body>
-         Visit <a href="https://www.harvard.edu">Harvard</a>.
-      </body>
-  </html>
+  # Print counts
+  for favorite in sorted(counts, key=counts.get, reverse=True):
+      print(f"{favorite}: {counts[favorite]}")
 
   ```
 
-  Notice that the `<a>` or *anchor* tag is used to make `Harvard` a linkable text.
-* You can also create forms reminiscent of Google’s search:
+  Notice the arguments passed to `sorted`. The `key` argument allows you to tell Python the method you wish to use to sort items. In this case `counts.get` is used to sort by the values. `reverse=True` tells `sorted` to sort from largest to smallest.
+* Python has numerous libraries that we can utilize in our code. One of these libraries is `collections`, from which we can import `Counter`. `Counter` will allow you to access the counts of each language without the headaches of all the `if` statements seen in our previous code. You can implement as follows:
 
   ```
-  <!DOCTYPE html>
+  # Sorts favorites by value using .get
 
-  <!-- Demonstrates form -->
+  import csv
 
-  <html lang="en">
-      <head>
-          <title>search</title>
-      </head>
-      <body>
-          <form action="https://www.google.com/search" method="get">
-              <input name="q" type="search">
-              <input type="submit" value="Google Search">
-          </form>
-      </body>
-  </html>
+  from collections import Counter
 
-  ```
+  # Open CSV file
+  with open("favorites.csv", "r") as file:
 
-  Notice that a `form` tag opens and provides the attribute of what `action` it will take. The `input` field is included, passing the name `q` and the type as `search`.
-* We can make this search better as follows:
+      # Create DictReader
+      reader = csv.DictReader(file)
 
-  ```
-  <!DOCTYPE html>
+      # Counts
+      counts = Counter()
 
-  <!-- Demonstrates additional form attributes -->
+      # Iterate over CSV file, counting favorites
+      for row in reader:
+          favorite = row["language"]
+          counts[favorite] += 1
 
-  <html lang="en">
-      <head>
-          <title>search</title>
-      </head>
-      <body>
-          <form action="https://www.google.com/search" method="get">
-              <input autocomplete="off" autofocus name="q" placeholder="Query" type="search">
-              <button>Google Search</button>
-          </form>
-      </body>
-  </html>
+  # Print counts
+  for favorite, count in counts.most_common():
+      print(f"{favorite}: {count}")
 
   ```
 
-  Notice that `autocomplete` is turned `off`. `autofocus` is enabled.
-* We’ve seen just a few of many HTML elements you can add to your site. If you have an idea for something to add to your site that we haven’t seen yet (a button, an audio file, etc.) try Googling “X in HTML” to find the right syntax! Similarly, you can use [cs50.ai](https://cs50.ai) to help you discover more HTML features!
+  Notice how `counts = Counter()` enables the use of this imported `Counter` class from `collections`.
+* You can learn more about [sorted](https://docs.python.org/3/howto/sorting.html) in the [Python Documentation](https://docs.python.org/3/howto/sorting.html).
 
-## Regular Expressions
+## Relational Databases
 
-* *Regular expressions* or *regexes* are a means by which to ensure that user-provided data fits a specific format.
-* We can implement our own registration page that utilizes regexes as follows:
+* Google, X, and Meta all use relational databases to store their information at scale.
+* Relational databases store data in rows and columns in structures called *tables*.
+* SQL allows for four types of commands:
 
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates type="email" -->
+    Create
+    Read
+    Update
+    Delete
 
-  <html lang="en">
-      <head>
-          <title>register</title>
-      </head>
-      <body>
-          <form>
-              <input autocomplete="off" autofocus name="email" placeholder="Email" type="email">
-              <button>Register</button>
-          </form>
-      </body>
-  </html>
-
   ```
+* These four operations are affectionately called *CRUD*.
+* We can create a database with the SQL syntax `CREATE TABLE table (column type, ...);`. But where do you run this command?
+* `sqlite3` is a type of SQL database that has the core features required for this course.
+* We can create a SQL database at the terminal by typing `sqlite3 favorites.db`. Upon being prompted, we will agree that we want to create `favorites.db` by pressing `y`.
+* You will notice a different prompt as we are now using a program called `sqlite`.
+* We can put `sqlite` into `csv` mode by typing `.mode csv`. Then, we can import our data from our `csv` file by typing `.import favorites.csv favorites`. It seems that nothing has happened!
+* We can type `.schema` to see the structure of the database.
+* You can read items from a table using the syntax `SELECT columns FROM table`.
+* For example, you can type `SELECT * FROM favorites;` which will print every row in `favorites`.
+* You can get a subset of the data using the command `SELECT language FROM favorites;`.
+* SQL supports many commands to access data, including:
 
-  Notice that the `input` tag includes attributes that designate that this is of type `email`. The browser knows to double-check that the input is an email address.
-* While the browser uses these built-in attributes to check for an email address, we can add a `pattern` attribute to ensure that only specific data ends up in the email address:
-
   ```
-  <!DOCTYPE html>
+    AVG
+    COUNT
+    DISTINCT
+    LOWER
+    MAX
+    MIN
+    UPPER
 
-  <!-- Demonstrates pattern attribute -->
+  ```
+* For example, you can type `SELECT COUNT(*) FROM favorites;`. Further, you can type `SELECT DISTINCT language FROM favorites;` to get a list of the individual languages within the database. You could even type `SELECT COUNT(DISTINCT language) FROM favorites;` to get a count of those.
+* SQL offers additional commands we can utilize in our queries:
 
-  <html lang="en">
-      <head>
-          <title>register</title>
-      </head>
-      <body>
-          <form>
-              <input autocomplete="off" autofocus name="email" pattern=".+@.+\.edu" placeholder="Email" type="email">
-              <button>Register</button>
-          </form>
-      </body>
-  </html>
+  ```
+    WHERE       -- adding a Boolean expression to filter our data
+    LIKE        -- filtering responses more loosely
+    ORDER BY    -- ordering responses
+    LIMIT       -- limiting the number of responses
+    GROUP BY    -- grouping responses together
 
   ```
 
-  Notice that the `pattern` attribute is handed a regular expression to denote that the email address must include an `@` symbol and a `.edu`.
-* You can learn more about regular expressions from [Mozilla’s documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions). Further, you can make inquiries to [cs50.ai](https://cs50.ai) for hints.
+  Notice that we use `--` to write a comment in SQL.
 
-## CSS
+## SELECT
 
-* `CSS`, or *cascading style sheet*, is a markup language that allows you to fine-tune the aesthetics of your HTML files.
-* CSS is filled with *properties*, which include key-value pairs.
-* In your terminal, type `code home.html` and write code as follows:
+* For example, we can execute `SELECT COUNT(*) FROM favorites WHERE language = 'C';`. A count is presented.
+* Further, we could type `SELECT COUNT(*) FROM favorites WHERE language = 'C' AND problem = 'Hello, World';`. Notice how the `AND` is utilized to narrow our results.
+* Similarly, we could execute `SELECT language, COUNT(*) FROM favorites GROUP BY language;`. This would offer a temporary table that would show the language and count.
+* We could improve this by typing `SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*);`. This will order the resulting table by the `count`.
+* Likewise, we could execute `SELECT COUNT(*) FROM favorites WHERE language = 'C' AND (problem = 'Hello, World' OR problem = 'Hello, It''s Me');`. Do notice that there are two `''` marks as to allow the use of single quotes in a way that does not confuse SQL.
+* Further, we could execute `SELECT COUNT(*) FROM favorites WHERE language = 'C' AND problem LIKE 'Hello, %';` to find any problems that start with `Hello,`  (including a space).
+* We can also group the values of each language by executing `SELECT language, COUNT(*) FROM favorites GROUP BY language;`.
+* We can order the output as follows: `SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*) DESC;`.
+* We can even create aliases, like variables in our queries: `SELECT language, COUNT(*) AS n FROM favorites GROUP BY language ORDER BY n DESC;`.
+* Finally, we can limit our output to 1 or more values: `SELECT language, COUNT(*) AS n FROM favorites GROUP BY language ORDER BY n DESC LIMIT 1;`.
 
-  ```
-  <!DOCTYPE html>
+## INSERT
 
-  <!-- Demonstrates inline CSS with P tags -->
+* We can also `INSERT` into a SQL database utilizing the form `INSERT INTO table (column...) VALUES(value, ...);`.
+* We can execute `INSERT INTO favorites (language, problem) VALUES ('SQL', 'Fiftyville');`.
+* You can verify the addition of this favorite by executing `SELECT * FROM favorites;`.
 
-  <html lang="en">
-      <head>
-          <title>css</title>
-      </head>
-      <body>
-          <p style="font-size: large; text-align: center;">
-              John Harvard
-          </p>
-          <p style="font-size: medium; text-align: center;">
-              Welcome to my home page!
-          </p>
-          <p style="font-size: small; text-align: center;">
-              Copyright &#169; John Harvard
-          </p>
-      </body>
-  </html>
+## DELETE
 
-  ```
+* `DELETE` allows you to delete parts of your data. For example, you could `DELETE FROM favorites WHERE Timestamp IS NULL;`. This deletes any record where the `Timestamp` is `NULL`.
 
-  Notice that some `style` attributes are provided to the `<p>` tags. The `font-size` is set to `large`, `medium`, or `small`. Then `text-align` is set to center.
-* While correct, the above is not well-designed. We can remove redundancy by modifying our code as follows:
+## UPDATE
 
-  ```
-  <!DOCTYPE html>
+* We can also utilize the `UPDATE` command to update your data.
+* For example, you can execute `UPDATE favorites SET language = 'SQL', problem = 'Fiftyville';`. This will result in overwriting all previous statements where C and Scratch were the favorite programming language.
+* Notice that these queries have immense power. Accordingly, in the real-world setting, you should consider who has permissions to execute certain commands and if you have backups available!
 
-  <!-- Removes outer DIV -->
+## IMDb
 
-  <html lang="en">
-      <head>
-          <title>css</title>
-      </head>
-      <body style="text-align: center">
-          <div style="font-size: large">
-              John Harvard
-          </div>
-          <div style="font-size: medium">
-              Welcome to my home page!
-          </div>
-          <div style="font-size: small">
-              Copyright &#169; John Harvard
-          </div>
-      </body>
-  </html>
+* We can imagine a database that we might want to create to catalog various TV shows. We could create a spreadsheet with columns like `title`, `star`, `star`, `star`, `star`, and more stars. A problem with this approach is that it has a lot of wasted space. Some shows may have one star. Others may have dozens.
+* We could separate our database into multiple sheets. We could have a `shows` sheet, a `stars` sheet, and a `people` sheet. On the `people` sheet, each person could have a unique `id`. On the `shows` sheet, each show could have a unique `id` too. On a third sheet called `stars` we could relate how each show has people for each show by having a `show_id` and `person_id`. While this is an improvement, this is not an ideal database.
+* IMDb offers a database of people, shows, writers, stars, genres, and ratings. Each of these tables is related to one another as follows:
 
-  ```
+  ![six boxes that represent various sql tables arrows are drawn to each showing their many relationships with one another](images/week_7/Week7Slide025.png)
+* After downloading [`shows.db`](https://cdn.cs50.net/2024/fall/lectures/7/src7/imdb/shows.db), you can execute `sqlite3 shows.db` in your terminal window.
+* Let’s zero in on the relationship between two tables within the database called `shows` and `ratings`. The relationship between these two tables can be illustrated as follows:
 
-  Notice that `<div>` tags are used to divide up this HTML file into specific regions. `text-align: center` is invoked on the entire body of the HTML. Because everything inside `body` is a child of `body`, the `center` attribute cascades down to those children.
-* It turns out that there are newer semantic tags included in HTML. We can modify our code as follows:
+  ![two boxes one called shows and the other called ratings](images/week_7/Week7Slide032.png)
+* To illustrate the relationship between these tables, we could execute the following command: `SELECT * FROM ratings LIMIT 10;`. Examining the output, we could execute `SELECT * FROM shows LIMIT 10;`.
+* Examining `shows` and `rating`, we can see these have a one-to-one relationship: One show has one rating.
+* To understand the database, upon executing `.schema` you will find not only each of the tables but the individual fields inside each of these fields.
+* More specifically, you could execute `.schema shows` to understand the fields inside `shows`. You can also execute `.schema ratings` to see the fields inside `ratings`.
+* As you can see, `show_id` exists in all of the tables. In the `shows` table, it is simply called `id`. This common field between all the fields is called a *key*. Primary keys are used to identify a unique record in a table. *Foreign keys* are used to build relationships between tables by pointing to the primary key in another table. You can see in the schema of `ratings` that `show_id` is a foreign key that references `id` in `shows`.
+* By storing data in a relational database, as above, data can be more efficiently stored.
+* In *sqlite*, we have five data types, including:
 
   ```
-  <!DOCTYPE html>
-
-  <!-- Uses semantic tags instead of DIVs -->
-
-  <html lang="en">
-      <head>
-          <title>css</title>
-      </head>
-      <body style="text-align: center">
-          <header style="font-size: large">
-              John Harvard
-          </header>
-          <main style="font-size: medium">
-              Welcome to my home page!
-          </main>
-          <footer style="font-size: small">
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
+    BLOB       -- binary large objects that are groups of ones and zeros
+    INTEGER    -- an integer
+    NUMERIC    -- for numbers that are formatted specially like dates
+    REAL       -- like a float
+    TEXT       -- for strings and the like
 
   ```
+* Additionally, columns can be set to add special constraints:
 
-  Notice that the `header` and `footer` both have different styles assigned to them.
-* This practice of placing the style and information all in the same location is not good practice. We could move the elements of style to the top of the file as follows:
-
   ```
-  <!-- Demonstrates class selectors -->
-
-  <html lang="en">
-      <head>
-          <style>
-
-              .centered
-              {
-                  text-align: center;
-              }
+    NOT NULL
+    UNIQUE
 
-              .large
-              {
-                  font-size: large;
-              }
-
-              .medium
-              {
-                  font-size: medium;
-              }
-
-              .small
-              {
-                  font-size: small;
-              }
-
-          </style>
-          <title>css</title>
-      </head>
-      <body class="centered">
-          <header class="large">
-              John Harvard
-          </header>
-          <main class="medium">
-              Welcome to my home page!
-          </main>
-          <footer class="small">
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
-
   ```
+* We can further play with this data to understand these relationships. Execute `SELECT * FROM ratings;`. There are a lot of ratings!
+* We can further limit this data down by executing `SELECT show_id FROM ratings WHERE rating >= 6.0 LIMIT 10;`. From this query, you can see that there are 10 shows presented. However, we don’t know what show each `show_id` represents.
+* You can discover what shows these are by executing `SELECT * FROM shows WHERE id = 626124;`
+* We can further our query to be more efficient by executing:
 
-  Notice all the style tags are placed up in the `head` in the `style` tag wrapper. Also, notice that we’ve assigned *classes*, called `centered`, `large`, `medium`, and `small` to our elements, and that we select those classes by placing a dot before the name, as in `.centered`
-* It turns out that we can move all our style code into a special file called a *CSS* file. We can create a file called `style.css` and paste our classes there:
+  ```
+  SELECT title
+  FROM shows
+  WHERE id IN (
+      SELECT show_id
+      FROM ratings
+      WHERE rating >= 6.0
+      LIMIT 10
+  )
 
   ```
-  .centered
-  {
-      text-align: center;
-  }
 
-  .large
-  {
-      font-size: large;
-  }
+  Notice that this query nests together two queries. An inner query is used by an outer query.
 
-  .medium
-  {
-      font-size: medium;
-  }
+## `JOIN`s
 
-  .small
-  {
-      font-size: small;
-  }
+* We are pulling data from `shows` and `ratings`. Notice how both `shows` and `ratings` have an `id` in common.
+* How could we combine tables temporarily? Tables could be joined together using the `JOIN` command.
+* Execute the following command:
 
   ```
-
-  Notice that this is verbatim what appeared in our HTML file.
-* We then can tell the browser where to locate the CSS for this HTML file:
+  SELECT * FROM shows
+    JOIN ratings on shows.id = ratings.show_id
+    WHERE rating >= 6.0
+    LIMIT 10;
 
   ```
-  <!DOCTYPE html>
 
-  <!-- Demonstrates external stylesheets -->
+  Notice this results in a wider table than we have previously seen.
+* Where the previous queries have illustrated the *one-to-one* relationship between these keys, let’s examine some *one-to-many* relationships. Focusing on the `genres` table, execute the following:
 
-  <html lang="en">
-      <head>
-          <link href="style.css" rel="stylesheet">
-          <title>css</title>
-      </head>
-      <body class="centered">
-          <header class="large">
-              John Harvard
-          </header>
-          <main class="medium">
-              Welcome to my home page!
-          </main>
-          <footer class="small">
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
-
   ```
-
-  Notice that `style.css` is linked to this HTML file as a stylesheet, telling the browser where to locate the styles we created.
-
-## Frameworks
+  SELECT * FROM genres
+  LIMIT 10;
 
-* Similar to third-party libraries we can leverage in Python, there are third-party libraries called *frameworks* that we can utilize with our HTML files.
-* *Bootstrap* is one of these frameworks that we can use to beautify our HTML and easily perfect design elements such that our pages are more readable.
-* Bootstrap can be utilized by adding the following `link` tag in the `head` of your html file:
-
   ```
-  <head>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      <title>bootstrap</title>
-  </head>
 
-  ```
-* Consider the following HTML:
+  Notice how this provides us a sense of the raw data. You might notice that one show has three values. This is a one-to-many relationship.
+* We can learn more about the `genres` table by typing `.schema genres`.
+* Execute the following command to learn more about the various comedies in the database:
 
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates table -->
+  SELECT title FROM shows
+  WHERE id IN (
+    SELECT show_id FROM genres
+    WHERE genre = 'Comedy'
+    LIMIT 10
+  );
 
-  <html lang="en">
-      <head>
-          <title>phonebook</title>
-      </head>
-      <body>
-          <table>
-              <thead>
-                  <tr>
-                      <th>Name</th>
-                      <th>Number</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Carter</td>
-                      <td>+1-617-495-1000</td>
-                  </tr>
-                  <tr>
-                      <td>David</td>
-                      <td>+1-617-495-1000</td>
-                  </tr>
-                  <tr>
-                      <td>John</td>
-                      <td>+1-949-468-2750</td>
-                  </tr>
-              </tbody>
-          </table>
-      </body>
-  </html>
-
   ```
 
-  Notice how, when looking at a served version of this page, it’s quite plain.
-* Now consider the following HTML that implements the use of Bootstrap:
+  Notice how this produces a list of comedies, including *Catweazle*.
+* To learn more about Catweazle, by joining various tables through a join:
 
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates table with Bootstrap -->
-
-  <html lang="en">
-      <head>
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-          <title>phonebook</title>
-      </head>
-      <body>
-          <table class="table">
-              <thead>
-                  <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Number</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Carter</td>
-                      <td>+1-617-495-1000</td>
-                  </tr>
-                  <tr>
-                      <td>David</td>
-                      <td>+1-949-468-2750</td>
-                  </tr>
-              </tbody>
-          </table>
-      </body>
-  </html>
+  SELECT * FROM shows
+  JOIN genres
+  ON shows.id = genres.show_id
+  WHERE id = 63881;
 
   ```
 
-  Notice how much prettier this website is now.
-* Similarly, consider the following expansion of our search page created earlier:
+  Notice that this results in a temporary table. It is fine to have a duplicate table.
+* In contrast to one-to-one and one-to-many relationships, there may be *many-to-many* relationships.
+* We can learn more about the show *The Office* and the actors in that show by executing the following command:
 
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates layout with Bootstrap -->
-
-  <html lang="en">
-      <head>
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-          <title>search</title>
-      </head>
-      <body>
-
-          <div class="container-fluid">
-
-              <ul class="m-3 nav">
-                  <li class="nav-item">
-                      <a class="nav-link text-dark" href="https://about.google/">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-dark" href="https://store.google.com/">Store</a>
-                  </li>
-                  <li class="nav-item ms-auto">
-                      <a class="nav-link text-dark" href="https://www.google.com/gmail/">Gmail</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-dark" href="https://www.google.com/imghp">Images</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-dark" href="https://www.google.com/intl/en/about/products">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
-                              <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
-                          </svg>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="btn btn-primary" href="https://accounts.google.com/ServiceLogin" role="button">Sign in</a>
-                  </li>
-              </ul>
+  SELECT name FROM people WHERE id IN 
+      (SELECT person_id FROM stars WHERE show_id = 
+          (SELECT id FROM shows WHERE title = 'The Office' AND year = 2005));
 
-              <div class="text-center">
-
-                  <!-- https://knowyourmeme.com/memes/happy-cat -->
-                  <img alt="Happy Cat" class="img-fluid w-25" src="cat.gif">
-
-                  <form action="https://www.google.com/search" class="mt-4" method="get">
-                      <input autocomplete="off" autofocus class="form-control form-control-lg mb-4 mx-auto w-50" name="q" placeholder="Query" type="search">
-                      <button class="btn btn-light">Google Search</button>
-                      <button class="btn btn-light" name="btnI">I'm Feeling Lucky</button>
-                  </form>
-
-              </div>
-
-          </div>
-
-      </body>
-  </html>
-
   ```
 
-  This version of the page is exceedingly stylized, thanks to Bootstrap.
-* You can learn more about this in the [Bootstrap Documentation](https://getbootstrap.com/docs/).
+  Notice that this results in a table that includes the names of various stars through nested queries.
+* We find all the shows in which Steve Carell starred:
 
-## JavaScript
-
-* JavaScript is another programming language that allows for interactivity within web pages.
-* Consider the following implementation of `hello.html` that includes both JavaScript and HTML:
-
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates onsubmit -->
-
-  <html lang="en">
-      <head>
-          <script>
-
-              function greet()
-              {
-                  alert('hello, ' + document.querySelector('#name').value);
-              }
-
-          </script>
-          <title>hello</title>
-      </head>
-      <body>
-          <form onsubmit="greet(); return false;">
-              <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
-              <input type="submit">
-          </form>
-      </body>
-  </html>
+  SELECT title FROM shows WHERE id IN 
+      (SELECT show_id FROM stars WHERE person_id = 
+          (SELECT id FROM people WHERE name = 'Steve Carell'));
 
   ```
 
-  Notice how this form uses an `onsubmit` property to trigger a `script` found at the top of the file. The script uses `alert` to create an alert pop-up. `#name.value` goes to the textbox on the page and obtains the value typed by the user.
-* Generally, it’s considered bad design to mix onsubmit and JavaScript. We can advance our code as follows:
+  This results in a list of titles of shows wherein Steve Carell starred.
+* This could also be expressed in this way:
 
   ```
-  <!DOCTYPE html>
+  SELECT title FROM shows, stars, people 
+  WHERE shows.id = stars.show_id
+  AND people.id = stars.person_id
+  AND name = 'Steve Carell';
 
-  <!-- Demonstrates DOMContentLoaded -->
+  ```
+* The wildcard `%` operator can be used to find all people whose names start with `Steve C` one could employ the syntax `SELECT * FROM people WHERE name LIKE 'Steve C%';`.
 
-  <html lang="en">
-      <head>
-          <script>
+## Indexes
 
-              document.addEventListener('DOMContentLoaded', function() {
-                  document.querySelector('form').addEventListener('submit', function(e) {
-                      alert('hello, ' + document.querySelector('#name').value);
-                      e.preventDefault();
-                  });
-              });
+* While relational databases have the ability to be faster and more robust than utilizing a `CSV` file, data can be optimized within a table using *indexes*.
+* Indexes can be utilized to speed up our queries.
+* We can track the speed of our queries by executing `.timer on` in `sqlite3`.
+* To understand how indexes can speed up our queries, run the following: `SELECT * FROM shows WHERE title = 'The Office';` Notice the time that displays after the query executes.
+* Then, we can create an index with the syntax `CREATE INDEX title_index ON shows (title);`. This tells `sqlite3` to create an index and perform some special under-the-hood optimization relating to this column `title`.
+* This will create a data structure called a *B Tree*, a data structure that looks similar to a binary tree. However, unlike a binary tree, there can be more than two child nodes.
 
-          </script>
-          <title>hello</title>
-      </head>
-      <body>
-          <form>
-              <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
-              <input type="submit">
-          </form>
-      </body>
-  </html>
+  ![one node at the top from which come four children and below that there are three children coming from one of the nodes and two from another two from another and three from another](images/week_7/Week7Slide039.png)
+* Further, we can create indexes as follows:
 
   ```
+  CREATE INDEX name_index ON people (name);
+  CREATE INDEX person_index ON stars (person_id);
 
-  Notice that this version of the code creates an `addEventListener` to listen to the form `submit` being triggered. Notice how `DOMContentLoaded` ensures that the whole page is loaded before executing the JavaScript.
-* We can advance this code as follows:
-
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates keyup and template literals -->
-
-  <html lang="en">
-      <head>
-          <script>
-
-              document.addEventListener('DOMContentLoaded', function() {
-                  let input = document.querySelector('input');
-                  input.addEventListener('keyup', function(event) {
-                      let name = document.querySelector('p');
-                      if (input.value) {
-                          name.innerHTML = `hello, ${input.value}`;
-                      }
-                      else {
-                          name.innerHTML = 'hello, whoever you are';
-                      }
-                  });
-              });
-
-          </script>
-          <title>hello</title>
-      </head>
-      <body>
-          <form>
-              <input autocomplete="off" autofocus placeholder="Name" type="text">
-          </form>
-          <p></p>
-      </body>
-  </html>
+* Running the query and you will notice that the query runs much more quickly!
 
   ```
+  SELECT title FROM shows WHERE id IN 
+      (SELECT show_id FROM stars WHERE person_id = 
+          (SELECT id FROM people WHERE name = 'Steve Carell'));
 
-  Notice that the DOM is dynamically updated in memory as the user types out a name. If there is a value inside `input`, upon the `keyup` on the keyboard, the DOM is updated. Otherwise, default text is presented.
-* JavaScript allows you to dynamically read and modify the html document loaded into memory such that the user need not reload to see changes.
-* Consider the following HTML:
-
   ```
-  <!DOCTYPE html>
-
-  <!-- Demonstrates programmatic changes to style -->
-
-  <html lang="en">
-      <head>
-          <title>background</title>
-      </head>
-      <body>
-          <button id="red">R</button>
-          <button id="green">G</button>
-          <button id="blue">B</button>
-          <script>
+* Unfortunately, indexing all columns would result in utilizing more storage space. Therefore, there is a tradeoff for enhanced speed.
 
-              let body = document.querySelector('body');
-              document.querySelector('#red').addEventListener('click', function() {
-                  body.style.backgroundColor = 'red';
-              });
-              document.querySelector('#green').addEventListener('click', function() {
-                  body.style.backgroundColor = 'green';
-              });
-              document.querySelector('#blue').addEventListener('click', function() {
-                  body.style.backgroundColor = 'blue';
-              });
+## Using SQL in Python
 
-          </script>
-      </body>
-  </html>
+* To assist in working with SQL in this course, the CS50 Library can be utilized as follows in your code:
 
   ```
+  from cs50 import SQL
 
-  Notice that JavaScript listens for when a specific button is clicked. Upon such a click, certain style attributes on the page are changed. `body` is defined as the body of the page. Then, an event listener waits for the clicking of one of the buttons. Then, the `body.style.backgroundColor` is changed.
-* Similarly, consider the following:
+  ```
+* Similar to previous uses of the CS50 Library, this library will assist with the complicated steps of utilizing SQL within your Python code.
+* You can read more about the CS50 Library’s SQL functionality in the [documentation](https://cs50.readthedocs.io/libraries/cs50/python/#cs50.SQL).
+* Using our new knowledge of SQL, we can now leverage Python alongside.
+* Modify your code for `favorites.py` as follows:
 
   ```
-  <!DOCTYPE html>
+  # Searches database popularity of a problem
 
-  <html lang="en">
-      <head>
-          <script>
+  from cs50 import SQL
 
-              // Toggles visibility of greeting
-              function blink()
-              {
-                  let body = document.querySelector('body');
-                  if (body.style.visibility == 'hidden')
-                  {
-                      body.style.visibility = 'visible';
-                  }
-                  else
-                  {
-                      body.style.visibility = 'hidden';
-                  }
-              }
+  # Open database
+  db = SQL("sqlite:///favorites.db")
 
-              // Blink every 500ms
-              window.setInterval(blink, 500);
+  # Prompt user for favorite
+  favorite = input("Favorite: ")
 
-          </script>
-          <title>blink</title>
-      </head>
-      <body>
-          hello, world
-      </body>
-  </html>
+  # Search for title
+  rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE language = ?", favorite)
 
-  ```
+  # Get first (and only) row
+  row = rows[0]
 
-  This example blinks a text at a set interval. Notice that `window.setInterval` takes in two arguments: A function to be called and a waiting period (in milliseconds) between function calls.
-* Consider the following implementation of JavaScript that autocompletes text:
+  # Print popularity
+  print(row["n"])
 
   ```
-  <!DOCTYPE html>
 
-  <html lang="en">
+  Notice that `db = SQL("sqlite:///favorites.db")` provides Python the location of the database file. Then, the line that begins with `rows` executes SQL commands utilizing `db.execute`. Indeed, this command passes the syntax within the quotation marks to the `db.execute` function. We can issue any SQL command using this syntax. Further, notice that `rows` is returned as a list of dictionaries. In this case, there is only one result, one row, returned to the rows list as a dictionary.
 
-      <head>
-          <title>autocomplete</title>
-      </head>
+## Race Conditions
 
-      <body>
+* Utilization of SQL can sometimes result in some problems.
+* You can imagine a case where multiple users could be accessing the same database and executing commands at the same time.
+* This could result in glitches where code is interrupted by other people’s actions. This could result in a loss of data.
+* Built-in SQL features such as `BEGIN TRANSACTION`, `COMMIT`, and `ROLLBACK` help avoid some of these race condition problems.
 
-          <input autocomplete="off" autofocus placeholder="Query" type="text">
+## SQL Injection Attacks
 
-          <ul></ul>
+* Now, still considering the code above, you might be wondering what the `?` question marks do above. One of the problems that can arise in real-world applications of SQL is what is called an *injection attack*. An injection attack is where a malicious actor could input malicious SQL code.
+* For example, consider a login screen as follows:
 
-          <script src="large.js"></script>
-          <script>
-        
-              let input = document.querySelector('input');
-              input.addEventListener('keyup', function(event) {
-                  let html = '';
-                  if (input.value) {
-                      for (word of WORDS) {
-                          if (word.startsWith(input.value)) {
-                              html += `<li>${word}</li>`;
-                          }
-                      }
-                  }
-                  document.querySelector('ul').innerHTML = html;
-              });
+  ![harvard key login screen with username and password fields](images/week_7/Week7Slide051.png)
+* Without the proper protections in our own code, a bad actor could run malicious code. Consider the following:
 
-          </script>
-
-      </body>
-  </html>
+  ```
+  rows = db.execute("SELECT COUNT(*) FROM users WHERE username = ? AND password = ?", username, password)
 
   ```
 
-  This is a JavaScript implementation of autocomplete. This pulls from a file (not pictured here) called `large.js` that is a list of words.
-* The capabilities of JavaScript are many and can be found in the [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+  Notice that because the `?` is in place, validation can be run on `favorite` before it is blindly accepted by the query.
+* You never want to utilize formatted strings in queries as above or blindly trust the user’s input.
+* Utilizing the CS50 Library, the library will *sanitize* and remove any potentially malicious characters.
 
 ## Summing Up
 
-In this lesson, you learned how to create your own HTML files, style them, leverage third-party frameworks, and utilize JavaScript. Specifically, we discussed…
+In this lesson, you learned more syntax related to Python. Further, you learned how to integrate this knowledge with data in the form of flat-file and relational databases. Finally, you learned about *SQL*. Specifically, we discussed…
 
-* TCP/IP
-* DNS
-* HTML
-* Regular expressions
-* CSS
-* Frameworks
-* JavaScript
+* Flat-file databases
+* Relational databases
+* SQL commands such as `SELECT`, `CREATE`, `INSERT`, `DELETE`, and `UPDATE`.
+* Primary and foreign keys
+* `JOIN`s
+* Indexes
+* Using SQL in Python
+* Race conditions
+* SQL injection attacks
 
 See you next time!

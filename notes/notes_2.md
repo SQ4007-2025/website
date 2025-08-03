@@ -1,51 +1,83 @@
-# Week 2 Notes
+# Week 1 Notes
 
-**CS50x 2025 - Week 2 Lecture Notes**
+**CS50x 2025 - Week 1 Lecture Notes**
 
-Source: https://cs50.harvard.edu/x/notes/2/
+Source: https://cs50.harvard.edu/x/notes/1/
 
 ---
 
-# Lecture 2
+# Lecture 1
 
 * [Welcome!](#welcome)
-* [Reading Levels](#reading-levels)
-* [Compiling](#compiling)
-* [Debugging](#debugging)
-* [Arrays](#arrays)
-* [Strings](#strings)
-* [String Length](#string-length)
-* [Command-Line Arguments](#command-line-arguments)
-* [Exit Status](#exit-status)
-* [Cryptography](#cryptography)
+* [Visual Studio Code for CS50](#visual-studio-code-for-cs50)
+* [Hello World](#hello-world)
+* [From Scratch to C](#from-scratch-to-c)
+* [Header Files and CS50 Manual Pages](#header-files-and-cs50-manual-pages)
+* [Hello, You](#hello-you)
+* [Types](#types)
+* [Conditionals](#conditionals)
+* [Operators](#operators)
+* [Variables](#variables)
+* [compare.c](#comparec)
+* [agree.c](#agreec)
+* [Loops and meow.c](#loops-and-meowc)
+* [Functions](#functions)
+* [Correctness, Design, Style](#correctness-design-style)
+* [Mario](#mario)
+* [Comments](#comments)
+* [More About Operators](#more-about-operators)
+* [Truncation](#truncation)
 * [Summing Up](#summing-up)
 
 ## Welcome!
 
-* In our previous session, we learned about C, a text-based programming language.
-* This week, we are going to take a deeper look at additional building blocks that will support our goals of learning more about programming from the bottom up.
-* Fundamentally, in addition to the essentials of programming, this course is about problem-solving. Accordingly, we will also focus further on how to approach computer science problems.
-* By the end of the course, you will learn how to use these aforementioned building blocks to solve a whole host of computer science problems.
+* In our previous session, we learned about Scratch, a visual programming language.
+* Indeed, all the essential programming concepts presented in Scratch will be utilized as you learn how to program any programming language. Functions, conditionals, loops, and variables found in Scratch are fundamental building blocks that you will find in any programming language.
+* Recall that machines only understand binary. Where humans write *source code*, a list of instructions for the computer that is human readable, machines only understand what we can now call *machine code*. This machine code is a pattern of ones and zeros that produces a desired effect.
+* It turns out that we can convert *source code* into machine code using a very special piece of software called a *compiler*. Today, we will be introducing you to a compiler that will allow you to convert source code in the programming language *C* into machine code.
+* Today, in addition to learning how to program, you will be learning how to write good code.
 
-## Reading Levels
+## Visual Studio Code for CS50
 
-* One of the real-world problems we will solve in this course is understanding reading levels.
-* With the help of some of your peers, we presented readings at various reading levels.
-* We will be quantifying reading levels this week as one of your many programming challenges.
+* The text editor that is utilized for this course is *Visual Studio Code*, aka *VS Code*, affectionately referred to as [cs50.dev](https://cs50.dev), which can be accessed via that same URL.
+* One of the most important reasons we utilize VS Code is that it has all the software required for the course already pre-loaded on it. This course and the instructions herein were designed with VS Code in mind.
+* Manually installing the necessary software for the course on your own computer is a cumbersome headache. Best always to utilize VS Code for assignments in this course.
+* You can open VS Code at [cs50.dev](https://cs50.dev/).
+* The compiler can be divided into a number of regions:
 
-## Compiling
+  ![IDE](images/week_1/Week1Slide017.png)
+  Notice that there is a *file explorer* on the left side where you can find your files. Further, notice that there is a region in the middle called a *text editor* where you can edit your program. Finally, there is a `command line interface`, known as a *CLI*, *command line*, or *terminal window*, where we can send commands to the computer in the cloud.
+* In the terminal window, some common command-line arguments we may use include:
+  + `cd`, for changing our current directory (folder)
+  + `cp`, for copying files and directories
+  + `ls`, for listing files in a directory
+  + `mkdir`, for making a directory
+  + `mv`, for moving (renaming) files and directories
+  + `rm`, for removing (deleting) files
+  + `rmdir`, for removing (deleting) directories
+* The most commonly used is `ls` which will list all the files in the current directory. Go ahead and type `ls` into the terminal window and hit `enter`. You’ll see all the files in the current folder.
+* Because this IDE is preconfigured with all the necessary software, you should use it to complete all assignments for this course.
 
-* *Encryption* is the act of hiding plain text from prying eyes. *Decrypting*, then, is the act of taking an encrypted piece of text and returning it to a human-readable form.
-* An encrypted piece of text may look like the following:
+## Hello World
+
+* We will be using three commands to write, compile, and run our first program:
 
   ```
-  U  I  J  T   J  T   D  T  5  0
+  code hello.c
+
+  make hello
+
+  ./hello
+
 
   ```
-* Recall that last week, you learned about a *compiler*, a specialized computer program that converts *source code* into *machine code* that can be understood by a computer.
-* For example, you might have a computer program that looks like this:
+
+  The first command, `code hello.c` creates a file and allows us to type instructions for this program. The second command, `make hello`, *compiles* the file from our instructions in C and creates an executable file called `hello`. The last command, `./hello`, runs the program called `hello`.
+* We can build your first program in C by typing `code hello.c` into the terminal window. Notice that we deliberately lowercased the entire filename and included the `.c` extension. Then, in the text editor that appears, write code as follows:
 
   ```
+  // A program that says hello to the world
+
   #include <stdio.h>
 
   int main(void)
@@ -54,685 +86,107 @@ Source: https://cs50.harvard.edu/x/notes/2/
   }
 
   ```
-* A compiler will take the above code and turn it into the following machine code:
 
-  ![machine code](images/week_2/Week2Slide012.png)
-* *VS Code*, the programming environment provided to you as a CS50 student, utilizes a compiler called `clang` or *c language*.
-* You can enter the following into the terminal window to compile your code: `clang -o hello hello.c`.
-* *Command-line arguments* are provided at the command line to `clang` as `-o hello hello.c`.
-* Running `./hello` in the terminal window, your program runs as intended.
-* Consider the following code from last week:
+  Note that every single character above serves a purpose. If you type it incorrectly, the program will not run. `printf` is a function that can output a line of text. Notice the placement of the quotes and the semicolon. Further, notice that the `\n` creates a new line after the words `hello, world`.
+* Clicking back in the terminal window, you can compile your code by executing `make hello`. Notice that we are omitting `.c`. `make` is a compiler that will look for our `hello.c` file and turn it into a program called `hello`. If executing this command results in no errors, you can proceed. If not, double-check your code to ensure it matches the above.
+* Now, type `./hello` and your program will execute saying `hello, world`.
+* Now, open the file explorer on the left. You will notice that there is now both a file called `hello.c` and another file called `hello`. `hello.c` is able to be read by the compiler: It’s where your code is stored. `hello` is an executable file that you can run but cannot be read by the compiler.
 
-  ```
-  #include <cs50.h>
-  #include <stdio.h>
+## From Scratch to C
 
-  int main(void)
-  {
-      string name = get_string("What's your name? ");
-      printf("hello, %s\n", name);
-  }
+* In Scratch, we utilized the `say` block to display any text on the screen. Indeed, in C, we have a function called `printf` that does exactly this.
+* Notice our code already invokes this function:
 
   ```
-* To compile this code, you can type `clang -o hello hello.c -lcs50`.
-* If you were to type `make hello`, it runs a command that executes clang to create an output file that you can run as a user.
-* VS Code has been pre-programmed such that `make` will run numerous command line arguments along with clang for your convenience as a user.
-* While the above is offered as an illustration, such that you can understand more deeply the process and concept of compiling code, using `make` in CS50 is perfectly fine and the expectation!
-* Compiling involves four major steps, including the following:
-* First, *preprocessing* is where the header files in your code, designated by a `#` (such as `#include <cs50.h>`) are effectively copied and pasted into your file. During this step, the code from `cs50.h` is copied into your program. Similarly, just as your code contains `#include <stdio.h>`, code contained within `stdio.h` somewhere on your computer is copied to your program. This step can be visualized as follows:
+  printf("hello, world\n");
 
   ```
-    string get_string(string prompt);
-    int printf(string format, ...);
 
-    int main(void)
-    {
-        string name = get_string("What's your name? ");
-        printf("hello, %s\n", name);
-    }
+  Notice that the printf function is called. The argument passed to printf is `hello, world\n`. The statement of code is closed with a `;`.
+* Errors in code are common. Modify your code as follows:
 
   ```
-* Second, *compiling* is where your program is converted into assembly code. This step can be visualized as follows:
-
-  ```
-  ...
-  main:
-      .cfi_startproc
-  # BB#0:
-      pushq    %rbp
-  .Ltmp0:
-      .cfi_def_cfa_offset 16
-  .Ltmp1:
-      .cfi_offset %rbp, -16
-      movq    %rsp, %rbp
-  .Ltmp2:
-      .cfi_def_cfa_register %rbp
-      subq    $16, %rsp
-      xorl    %eax, %eax
-      movl    %eax, %edi
-      movabsq    $.L.str, %rsi
-      movb    $0, %al
-      callq    get_string
-      movabsq    $.L.str.1, %rdi
-      movq    %rax, -8(%rbp)
-      movq    -8(%rbp), %rsi
-      movb    $0, %al
-      callq    printf
-      ...
-
-  ```
-* Third, *assembling* involves the compiler converting your assembly code into machine code. This step can be visualized as follows:
-
-  ```
-  01111111010001010100110001000110
-  00000010000000010000000100000000
-  00000000000000000000000000000000
-  00000000000000000000000000000000
-  00000001000000000011111000000000
-  00000001000000000000000000000000
-  00000000000000000000000000000000
-  00000000000000000000000000000000
-  00000000000000000000000000000000
-  00000000000000000000000000000000
-  10100000000000100000000000000000
-  00000000000000000000000000000000
-  00000000000000000000000000000000
-  01000000000000000000000000000000
-  00000000000000000100000000000000
-  00001010000000000000000100000000
-  01010101010010001000100111100101
-  01001000100000111110110000010000
-  00110001110000001000100111000111
-  01001000101111100000000000000000
-  00000000000000000000000000000000
-  00000000000000001011000000000000
-  11101000000000000000000000000000
-  00000000010010001011111100000000
-  00000000000000000000000000000000
-  00000000000000000000000001001000
-  ...
-
-  ```
-* Finally, during the *linking* step, code from your included libraries is converted also into machine code and combined with your code. The final executable file is then outputted.
-
-  ![linking](images/week_2/Week2Slide049.png)
-
-## Debugging
-
-* Everyone will make mistakes while coding.
-* *Debugging* is the process of locating and removing bugs from your code.
-* One of the debugging techniques you will use during this course to debug your code is called *rubber duck debugging*, where you can talk to an inanimate object (or yourself) to help think through your code and why it is not working as intended. When you are having challenges with your code, consider how speaking out loud to, quite literally, a rubber duck about the code problem. If you’d rather not talk to a small plastic duck, you are welcome to speak to a human near you!
-* We have created the CS50 Duck and [CS50.ai](https://cs50.ai) as tools that can help you debug your code.
-* Consider the following image from last week:
-
-  ![mario](images/week_2/Week2Slide061.png)
-* Consider the following code that has a bug purposely inserted within it:
-
-  ```
-  // Buggy example for printf
+  // \n is missing
 
   #include <stdio.h>
 
   int main(void)
   {
-      for (int i = 0; i <= 3; i++)
-      {
-          printf("#\n");
-      }
+      printf("hello, world");
   }
 
   ```
 
-  Notice that this code prints four blocks instead of three.
-* Type `code buggy0.c` into the terminal window and write the above code.
-* Running this code, four bricks appear instead of the intended three.
-* `printf` is a very useful way of debugging your code. You could modify your code as follows:
+  Notice the `\n` is now gone.
+* In your terminal window, run `make hello`. Typing `./hello` in the terminal window, how did your program change? This `\` character is called an *escape character* that tells the compiler that `\n` is a special instruction to create a line break.
+* There are other escape characters you can use:
 
   ```
-  // Buggy example for printf
+  \n  create a new line
+  \r  return to the start of a line
+  \"  print a double quote
+  \'  print a single quote
+  \\  print a backslash
+
+  ```
+* Restore your program to the following:
+
+  ```
+  // A program that says hello to the world
 
   #include <stdio.h>
 
   int main(void)
   {
-      for (int i = 0; i <= 3; i++)
-      {
-          printf("i is %i\n", i);
-          printf("#\n");
-      }
+      printf("hello, world\n");
   }
 
   ```
 
-  Notice how this code outputs the value of `i` during each iteration of the loop such that we can debug our code.
-* Running this code, you will see numerous statements, including `i is 0`, `i is 1`, `i is 2`, and `i is 3`. Seeing this, you might realize that further code needs to be corrected as follows:
+  Notice the semicolon and `\n` have been restored.
+
+## Header Files and CS50 Manual Pages
+
+* The statement at the start of the code `#include <stdio.h>` is a very special command that tells the compile that you want to use the capabilities of a *library* called `stdio.h`, a *header file*. This allows you, among many other things, to utilize the `printf` function.
+* A *library* is a collection of code created by someone. Libraries are collections of pre-written code and functions that others have written in the past that we can utilize in our code.
+* You can read about all the capabilities of this library on the [Manual Pages](https://manual.cs50.io). The Manual Pages provide a means by which to better understand what various commands do and how they function.
+* It turns out that CS50 has its own library called `cs50.h`. There are numerous functions that are included that provide *training wheels* while you get started in C:
 
   ```
-  #include <stdio.h>
-
-  int main(void)
-  {
-      for (int i = 0; i < 3; i++)
-      {
-          printf("#\n");
-      }
-  }
+  get_char
+  get_double
+  get_float
+  get_int
+  get_long
+  get_string
 
   ```
+* Let’s use this library in your program.
 
-  Notice the `<=` has been replaced with `<`.
-* This code can be further improved as follows:
+## Hello, You
 
-  ```
-  // Buggy example for debug50
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  void print_column(int height);
-
-  int main(void)
-  {
-      int h = get_int("Height: ");
-      print_column(h);
-  }
-
-  void print_column(int height)
-  {
-      for (int i = 0; i <= height; i++)
-      {
-          printf("#\n");
-      }
-  }
+* Recall that in Scratch we had the ability to ask the user, “What’s your name?” and say “hello” with that name appended to it.
+* In C, we can do the same. Modify your code as follows:
 
   ```
-
-  Notice that compiling and running this code still results in a bug.
-* To address this bug, we will use a new tool.
-* A second tool in debugging is called a *debugger*, a software tool created by programmers to help track down bugs in code.
-* In VS Code, a preconfigured debugger has been provided to you.
-* To utilize this debugger, first set a *breakpoint* by clicking to the left of a line of your code, just to the left of the line number. When you click there, you will see a red dot appearing. Imagine this as a stop sign, asking the compiler to pause so that you can consider what’s happening in this part of your code.
-
-  ![breakpoint](images/week_2/Week2Debugging.png)
-* Second, run `debug50 ./buggy0`. You will notice that after the debugger comes to life and a line of your code will illuminate in a gold-like color. Quite literally, the code has *paused* at this line of code. Notice in the top left corner how all local variables are being displayed, including `h`, which currently does not have a value. At the top of your window, you can click the `step over` button, and it will keep moving through your code. Notice how the value of `h` increases.
-* While this tool will not show you where your bug is, it will help you slow down and see how your code is running step by step. You can use `step into` as a way to look further into the details of your buggy code.
-
-## Arrays
-
-* In Week 0, we talked about *data types* such as `bool`, `int`, `char`, `string`, etc.
-* Each data type requires a certain amount of system resources:
-  + `bool` 1 byte
-  + `int` 4 bytes
-  + `long` 8 bytes
-  + `float` 4 bytes
-  + `double` 8 bytes
-  + `char` 1 byte
-  + `string` ? bytes
-* Inside of your computer, you have a finite amount of memory available.
-
-  ![memory](images/week_2/Week2Slide084.png)
-* Physically, on the memory of your computer, you can imagine how specific types of data are stored on your computer. You might imagine that a `char`, which only requires 1 byte of memory, may look as follows:
-
-  ![1 byte](images/week_2/Week2Slide087.png)
-* Similarly, an `int`, which requires 4 bytes, might look as follows:
-
-  ![4 bytes](images/week_2/Week2Slide088.png)
-* We can create a program that explores these concepts. Inside your terminal, type `code scores.c` and write code as follows:
-
-  ```
-  // Averages three (hardcoded) numbers
+  // get_string and printf with incorrect placeholder
 
   #include <stdio.h>
 
   int main(void)
   {
-      // Scores
-      int score1 = 72;
-      int score2 = 73;
-      int score3 = 33;
-
-      // Print average
-      printf("Average: %f\n", (score1 + score2 + score3) / 3.0);
+      string answer = get_string("What's your name? ");
+      printf("hello, answer\n");
   }
 
   ```
 
-  Notice that the number on the right is a floating point value of `3.0`, so that the calculation is rendered as a floating point value in the end.
-* Running `make scores`, the program runs.
-* You can imagine how these variables are stored in memory:
-
-  ![scores in memory](images/week_2/Week2Slide098.png)
-* *Arrays* are a sequence of values that are stored back-to-back in memory.
-* `int scores[3]` is a way of telling the compiler to provide you three back-to-back places in memory of size `int` to store three `scores`. Considering our program, you can revise your code as follows:
+  The `get_string` function is used to get a string from the user. Then, the variable `answer` is passed to the `printf` function.
+* Running `make hello` again in the terminal window, notice that numerous errors appear.
+* Looking at the errors, `string` and `get_string` are not recognized by the compiler. We have to teach the compiler these features by adding a library called `cs50.h`. Also, we notice that `answer` is not provided as we intended. Modify your code as follows:
 
   ```
-  // Averages three (hardcoded) numbers using an array
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Scores
-      int scores[3];
-      scores[0] = 72;
-      scores[1] = 73;
-      scores[2] = 33;
-
-      // Print average
-      printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
-  }
-
-  ```
-
-  Notice that `score[0]` examines the value at this location of memory by `indexing into` the array called `scores` at location `0` to see what value is stored there.
-* You can see how, while the above code works, there is still an opportunity for improving our code. Revise your code as follows:
-
-  ```
-  // Averages three numbers using an array and a loop
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Get scores
-      int scores[3];
-      for (int i = 0; i < 3; i++)
-      {
-          scores[i] = get_int("Score: ");
-      }
-
-      // Print average
-      printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
-  }
-
-  ```
-
-  Notice how we index into `scores` by using `scores[i]` where `i` is supplied by the `for` loop.
-* We can simplify or *abstract away* the calculation of the average. Modify your code as follows:
-
-  ```
-  // Averages three numbers using an array, a constant, and a helper function
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  // Constant
-  const int N = 3;
-
-  // Prototype
-  float average(int length, int array[]);
-
-  int main(void)
-  {
-      // Get scores
-      int scores[N];
-      for (int i = 0; i < N; i++)
-      {
-          scores[i] = get_int("Score: ");
-      }
-
-      // Print average
-      printf("Average: %f\n", average(N, scores));
-  }
-
-  float average(int length, int array[])
-  {
-      // Calculate average
-      int sum = 0;
-      for (int i = 0; i < length; i++)
-      {
-          sum += array[i];
-      }
-      return sum / (float) length;
-  }
-
-  ```
-
-  Notice that a new function called `average` is declared. Further, notice that a `const` or constant value of `N` is declared. Most importantly, notice how the `average` function takes `int array[]`, which means that the compiler passes an array to this function.
-* Not only can arrays be containers: They can be passed between functions.
-
-## Strings
-
-* A `string` is simply an array of variables of type `char`: an array of characters.
-* To explore `char` and `string`, type `code hi.c` in the terminal window and write code as follows:
-
-  ```
-  // Prints chars
-
-  #include <stdio.h>
-
-  int main(void)
-  {
-      char c1 = 'H';
-      char c2 = 'I';
-      char c3 = '!';
-
-      printf("%c%c%c\n", c1, c2, c3);
-  }
-
-  ```
-
-  Notice that this will output a string of characters.
-* Similarly, make the following modification to your code:
-
-  ```
-  #include <stdio.h>
-
-  int main(void)
-  {
-      char c1 = 'H';
-      char c2 = 'I';
-      char c3 = '!';
-
-      printf("%i %i %i\n", c1, c2, c3);
-  }
-
-  ```
-
-  Notice that that ASCII codes are printed by replacing `%c` with `%i`.
-* Considering the following image, you can see how a string is an array of characters that begins with the first character and ends with a special character called a `NUL character`:
-
-  ![hi with terminator](images/week_2/Week2Slide116.png)
-* Imagining this in decimal, your array would look like the following:
-
-  ![hi with decimal](images/week_2/Week2Slide117.png)
-* To further understand how a `string` works, revise your code as follows:
-
-  ```
-  // Treats string as array
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string s = "HI!";
-      printf("%c%c%c\n", s[0], s[1], s[2]);
-  }
-
-  ```
-
-  Notice how the `printf` statement presents three values from our array called `s`.
-* As before, we can replace `%c` with `%i` as follows:
-
-  ```
-  // Prints string's ASCII codes, including NUL
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string s = "HI!";
-      printf("%i %i %i %i\n", s[0], s[1], s[2], s[3]);
-  }
-
-  ```
-
-  Notice that this prints the string’s ASCII codes, including NUL.
-* Let’s imagine we want to say both `HI!` and `BYE!`. Modify your code as follows:
-
-  ```
-  // Multiple strings
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string s = "HI!";
-      string t = "BYE!";
-
-      printf("%s\n", s);
-      printf("%s\n", t);
-  }
-
-  ```
-
-  Notice that two strings are declared and used in this example.
-* You can visualize this as follows:
-
-  ![hi and bye](images/week_2/Week2Slide126.png)
-* We can further improve this code. Modify your code as follows:
-
-  ```
-  // Array of strings
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string words[2];
-
-      words[0] = "HI!";
-      words[1] = "BYE!";
-
-      printf("%s\n", words[0]);
-      printf("%s\n", words[1]);
-  }
-
-  ```
-
-  Notice that both strings are stored within a single array of type `string`.
-* We can consolidate our two strings into an array of strings.
-
-  ```
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string words[2];
-
-      words[0] = "HI!";
-      words[1] = "BYE!";
-
-      printf("%c%c%c\n", words[0][0], words[0][1], words[0][2]);
-      printf("%c%c%c%c\n", words[1][0], words[1][1], words[1][2], words[1][3]);
-  }
-
-  ```
-
-  Notice that an array of `words` is created. It is an array of strings. Each word is stored in `words`.
-
-## String Length
-
-* A common problem within programming, and perhaps C more specifically, is to discover the length of an array. How could we implement this in code? Type `code length.c` in the terminal window and code as follows:
-
-  ```
-  // Determines the length of a string
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt for user's name
-      string name = get_string("Name: ");
-
-      // Count number of characters up until '\0' (aka NUL)
-      int n = 0;
-      while (name[n] != '\0')
-      {
-          n++;
-      }
-      printf("%i\n", n);
-  }
-
-  ```
-
-  Notice that this code loops until the NUL character is found.
-* This code can be improved by abstracting away the counting into a function as follows:
-
-  ```
-  // Determines the length of a string using a function
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int string_length(string s);
-
-  int main(void)
-  {
-      // Prompt for user's name
-      string name = get_string("Name: ");
-      int length = string_length(name);
-      printf("%i\n", length);
-  }
-
-  int string_length(string s)
-  {
-      // Count number of characters up until '\0' (aka NUL)
-      int n = 0;
-      while (s[n] != '\0')
-      {
-          n++;
-      }
-      return n;
-  }
-
-  ```
-
-  Notice that a new function called `string_length` counts characters until NUL is located.
-* Since this is such a common problem within programming, other programmers have created code in the `string.h` library to find the length of a string. You can find the length of a string by modifying your code as follows:
-
-  ```
-  // Determines the length of a string using a function
-
-  #include <cs50.h>
-  #include <stdio.h>
-  #include <string.h>
-
-  int main(void)
-  {
-      // Prompt for user's name
-      string name = get_string("Name: ");
-      int length = strlen(name);
-      printf("%i\n", length);
-  }
-
-  ```
-
-  Notice that this code uses the `string.h` library, declared at the top of the file. Further, it uses a function from that library called `strlen`, which calculates the length of the string passed to it.
-* Our code can stand on the shoulders of programmers who came before and use libraries they created.
-* `ctype.h` is another library that is quite useful. Imagine we wanted to create a program that converted all lowercase characters to uppercase ones. In the terminal window, type `code uppercase.c` and write code as follows:
-
-  ```
-  // Uppercases a string
-
-  #include <cs50.h>
-  #include <stdio.h>
-  #include <string.h>
-
-  int main(void)
-  {
-      string s = get_string("Before: ");
-      printf("After:  ");
-      for (int i = 0, n = strlen(s); i < n; i++)
-      {
-          if (s[i] >= 'a' && s[i] <= 'z')
-          {
-              printf("%c", s[i] - 32);
-          }
-          else
-          {
-              printf("%c", s[i]);
-          }
-      }
-      printf("\n");
-  }
-
-  ```
-
-  Notice that this code *iterates* through each value in the string. The program looks at each character. If the character is lowercase, it subtracts the value 32 from it to convert it to uppercase.
-* Recalling our previous work from last week, you might remember this ASCII values chart:
-
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-  | 0 | NUL | 16 | DLE | 32 | SP | 48 | 0 | 64 | @ | 80 | P | 96 | ` | 112 | p |  |
-  | 1 | SOH | 17 | DC1 | 33 | ! | 49 | 1 | 65 | A | 81 | Q | 97 | a | 113 | q |  |
-  | 2 | STX | 18 | DC2 | 34 | ” | 50 | 2 | 66 | B | 82 | R | 98 | b | 114 | r |  |
-  | 3 | ETX | 19 | DC3 | 35 | # | 51 | 3 | 67 | C | 83 | S | 99 | c | 115 | s |  |
-  | 4 | EOT | 20 | DC4 | 36 | $ | 52 | 4 | 68 | D | 84 | T | 100 | d | 116 | t |  |
-  | 5 | ENQ | 21 | NAK | 37 | % | 53 | 5 | 69 | E | 85 | U | 101 | e | 117 | u |  |
-  | 6 | ACK | 22 | SYN | 38 | & | 54 | 6 | 70 | F | 86 | V | 102 | f | 118 | v |  |
-  | 7 | BEL | 23 | ETB | 39 | ’ | 55 | 7 | 71 | G | 87 | W | 103 | g | 119 | w |  |
-  | 8 | BS | 24 | CAN | 40 | ( | 56 | 8 | 72 | H | 88 | X | 104 | h | 120 | x |  |
-  | 9 | HT | 25 | EM | 41 | ) | 57 | 9 | 73 | I | 89 | Y | 105 | i | 121 | y |  |
-  | 10 | LF | 26 | SUB | 42 | \* | 58 | : | 74 | J | 90 | Z | 106 | j | 122 | z |  |
-  | 11 | VT | 27 | ESC | 43 | + | 59 | ; | 75 | K | 91 | [ | 107 | k | 123 | { |  |
-  | 12 | FF | 28 | FS | 44 | , | 60 | < | 76 | L | 92 | \ | 108 | l | 124 |  |  |
-  | 13 | CR | 29 | GS | 45 | - | 61 | = | 77 | M | 93 | ] | 109 | m | 125 | } |  |
-  | 14 | SO | 30 | RS | 46 | . | 62 | > | 78 | N | 94 | ^ | 110 | n | 126 | ~ |  |
-  | 15 | SI | 31 | US | 47 | / | 63 | ? | 79 | O | 95 | \_ | 111 | o | 127 | DEL |  |
-* When a lowercase character has `32` subtracted from it, it results in an uppercase version of that same character.
-* While the program does what we want, there is an easier way using the `ctype.h` library. Modify your program as follows:
-
-  ```
-  // Uppercases string using ctype library (and an unnecessary condition)
-
-  #include <cs50.h>
-  #include <ctype.h>
-  #include <stdio.h>
-  #include <string.h>
-
-  int main(void)
-  {
-      string s = get_string("Before: ");
-      printf("After:  ");
-      for (int i = 0, n = strlen(s); i < n; i++)
-      {
-          if (islower(s[i]))
-          {
-              printf("%c", toupper(s[i]));
-          }
-          else
-          {
-              printf("%c", s[i]);
-          }
-      }
-      printf("\n");
-  }
-
-  ```
-
-  Notice that the program iterates through each character of the string. The `toupper` function is passed `s[i]`. Each character (if lowercase) is converted to uppercase.
-* It’s worth mentioning that `toupper` automatically knows to uppercase only lowercase characters. Hence, your code can be simplified as follows:
-
-  ```
-  // Uppercases string using ctype library
-
-  #include <cs50.h>
-  #include <ctype.h>
-  #include <stdio.h>
-  #include <string.h>
-
-  int main(void)
-  {
-      string s = get_string("Before: ");
-      printf("After:  ");
-      for (int i = 0, n = strlen(s); i < n; i++)
-      {
-          printf("%c", toupper(s[i]));
-      }
-      printf("\n");
-  }
-
-  ```
-
-  Notice that this code uppercases a string using the `ctype` library.
-* You can read about all the capabilities of the `ctype` library on the [Manual Pages](https://manual.cs50.io/#ctype.h).
-
-## Command-Line Arguments
-
-* `Command-line arguments` are those arguments that are passed to your program at the command line. For example, all those statements you typed after `clang` are considered command line arguments. You can use these arguments in your own programs!
-* In your terminal window, type `code greet.c` and write code as follows:
-
-  ```
-  // Uses get_string
+  // get_string and printf with %s
 
   #include <cs50.h>
   #include <stdio.h>
@@ -745,99 +199,909 @@ Source: https://cs50.harvard.edu/x/notes/2/
 
   ```
 
-  Notice that this says `hello` to the user.
-* Still, would it not be nice to be able to take arguments before the program even runs? Modify your code as follows:
+  The `get_string` function is used to get a string from the user. Then, the variable `answer` is passed to the `printf` function. `%s` tells the `printf` function to prepare itself to receive a `string`.
+* Now, running `make hello` again in the terminal window, you can run your program by typing `./hello`. The program now asks for your name and then says hello with your name attached, as intended.
+* `answer` is a special holding place we call a *variable*. `answer` is of type `string` and can hold any string within it. There are many *data types*, such as `int`, `bool`, `char`, and many others.
+* `%s` is a placeholder called a *format code* that tells the `printf` function to prepare to receive a `string`. `answer` is the `string` being passed to `%s`.
+
+## Types
+
+* `printf` allows for many format codes. Here is a non-comprehensive list of ones you may utilize in this course:
 
   ```
-  // Prints a command-line argument
+  %c
+  %f
+  %i
+  %li
+  %s
+
+  ```
+
+  `%s` is used for `string` variables. `%i` is used for `int` or integer variables. You can find out more about this on the [Manual Pages](https://manual.cs50.io)
+* These format codes correspond to the many data types that are available within C:
+
+  ```
+  bool
+  char
+  float
+  int
+  long
+  string
+  ...
+
+  ```
+* We will be using many of C’s available data types throughout this course.
+
+## Conditionals
+
+* Another building block you utilized within Scratch was *conditionals*. For example, you might want to do one thing if x is greater than y. Further, you might want to do something else if that condition is not met.
+* We look at a few examples from Scratch.
+* In C, you can compare two values as follows:
+
+  ```
+  // Conditionals that are mutually exclusive
+
+  if (x < y)
+  {
+      printf("x is less than y\n");
+  }
+  else
+  {
+      printf("x is not less than y\n");
+  }
+
+  ```
+
+  Notice how if `x < y`, one outcome occurs. If `x` is not less than `y`, then another outcome occurs.
+* Similarly, we can plan for three possible outcomes:
+
+  ```
+  // Conditional that isn't necessary
+
+  if (x < y)
+  {
+      printf("x is less than y\n");
+  }
+  else if (x > y)
+  {
+      printf("x is greater than y\n");
+  }
+  else if (x == y)
+  {
+      printf("x is equal to y\n");
+  }
+
+  ```
+
+  Notice that not all these lines of code are required. How could we eliminate the unnecessary calculation above?
+* You may have guessed that we can improve this code as follows:
+
+  ```
+  // Compare integers
+
+  if (x < y)
+  {
+      printf("x is less than y\n");
+  }
+  else if (x > y)
+  {
+      printf("x is greater than y\n");
+  }
+  else
+  {
+      printf("x is equal to y\n");
+  }
+
+  ```
+
+  Notice how the final statement is replaced with `else`.
+
+## Operators
+
+* *Operators* refer to the mathematical operations that are supported by your compiler. In C, these mathematical operators include:
+
+  + `+` for addition
+  + `-` for subtraction
+  + `*` for multiplication
+  + `/` for division
+  + `%` for remainder
+* We will use all of these operators in this course.
+
+## Variables
+
+* In C, you can assign a value to an `int` or integer as follows:
+
+  ```
+  int counter = 0;
+
+  ```
+
+  Notice how a variable called `counter` of type `int` is assigned the value `0`.
+* C can also be programmed to add one to `counter` as follows:
+
+  ```
+  counter = counter + 1;
+
+  ```
+
+  Notice how `1` is added to the value of `counter`.
+* This can be also represented as:
+
+  ```
+  counter += 1;
+
+  ```
+* This can be further simplified to:
+
+  ```
+  counter++;
+
+  ```
+
+  Notice how the `++` is used to add 1.
+* You can also subtract one from `counter` as follows:
+
+  ```
+  counter--;
+
+  ```
+
+  Notice how `1` is removed from the value of `counter`.
+
+## compare.c
+
+* Using this new knowledge about how to assign values to variables, you can program your first conditional statement.
+* In the terminal window, type `code compare.c` and write code as follows:
+
+  ```
+  // Conditional, Boolean expression, relational operator
 
   #include <cs50.h>
   #include <stdio.h>
 
-  int main(int argc, string argv[])
+  int main(void)
   {
-      if (argc == 2)
+      // Prompt user for integers
+      int x = get_int("What's x? ");
+      int y = get_int("What's y? ");
+
+      // Compare integers
+      if (x < y)
       {
-          printf("hello, %s\n", argv[1]);
+          printf("x is less than y\n");
+      }
+  }
+
+  ```
+
+  Notice that we create two variables, an `int` or integer called `x` and another called `y`. The values of these are populated using the `get_int` function.
+* You can run your code by executing `make compare` in the terminal window, followed by `./compare`. If you get any error messages, check your code for errors.
+* *Flow charts* are a way by which you can examine how a computer program functions. Such charts can be used to examine the efficiency of our code.
+* Looking at a flow chart of the above code, we can notice numerous shortcomings.
+* We can improve your program by coding as follows:
+
+  ```
+  // Conditionals
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for integers
+      int x = get_int("What's x? ");
+      int y = get_int("What's y? ");
+
+      // Compare integers
+      if (x < y)
+      {
+          printf("x is less than y\n");
+      }
+      else if (x > y)
+      {
+          printf("x is greater than y\n");
       }
       else
       {
-          printf("hello, world\n");
+          printf("x is equal to y\n");
       }
   }
 
   ```
 
-  Notice that this program knows both `argc`, the number of command line arguments, and `argv`, which is an array of the characters passed as arguments at the command line.
-* Therefore, using the syntax of this program, executing `./greet David` would result in the program saying `hello, David`.
-* You can print each of the command-line arguments with the following:
+  Notice that all potential outcomes are now accounted for.
+* You can re-make and re-run your program and test it out.
+* Examining this program on a flow chart, you can see the efficiency of our code design decisions.
+
+## agree.c
+
+* Considering another data type called a `char`, we can start a new program by typing `code agree.c` into the terminal window.
+* Where a `string` is a series of characters, a `char` is a single character.
+* In the text editor, write code as follows:
 
   ```
-  // Prints command-line arguments
+  // Comparing against lowercase char
 
   #include <cs50.h>
   #include <stdio.h>
 
-  int main(int argc, string argv[])
+  int main(void)
   {
-      for (int i = 0; i < argc; i++)
+      // Prompt user to agree
+      char c = get_char("Do you agree? ");
+
+      // Check whether agreed
+      if (c == 'y')
       {
-          printf("%s\n", argv[i]);
+          printf("Agreed.\n");
+      }
+      else if (c == 'n')
+      {
+          printf("Not agreed.\n");
       }
   }
 
   ```
 
-## Exit Status
-
-* When a program ends, a special exit code is provided to the computer.
-* When a program exits without error, a status code of `0` is provided to the computer. Often, when an error occurs that results in the program ending, a status of `1` is provided by the computer.
-* You could write a program as follows that illustrates this by typing `code status.c` and writing code as follows:
+  Notice that single quotes are utilized for single characters. Further, notice that `==` ensures that something *is equal* to something else, where a single equal sign would have a very different function in C.
+* You can test your code by typing `make agree` into the terminal window, followed by `./agree`.
+* We can also allow for the inputting of uppercase and lowercase characters:
 
   ```
-  // Returns explicit value from main
+  // Comparing against lowercase and uppercase char
 
   #include <cs50.h>
   #include <stdio.h>
 
-  int main(int argc, string argv[])
+  int main(void)
   {
-      if (argc != 2)
+      // Prompt user to agree
+      char c = get_char("Do you agree? ");
+
+      // Check whether agreed
+      if (c == 'y')
       {
-          printf("Missing command-line argument\n");
-          return 1;
+          printf("Agreed.\n");
       }
-      printf("hello, %s\n", argv[1]);
-      return 0;
+      else if (c == 'Y')
+      {
+          printf("Agreed.\n");
+      }
+      else if (c == 'n')
+      {
+          printf("Not agreed.\n");
+      }
+      else if (c == 'N')
+      {
+          printf("Not agreed.\n");
+      }
   }
 
   ```
 
-  Notice that if you fail to provide `./status David`, you will get an exit status of `1`. However, if you do provide `./status David`, you will get an exit status of `0`.
-* You can type `echo $?` in the terminal to see the exit status of the last run command.
-* You can imagine how you might use portions of the above program to check if a user provided the correct number of command-line arguments.
+  Notice that additional options are offered. However, this is not efficient code.
+* We can improve this code as follows:
 
-## Cryptography
+  ```
+  // Logical operators
 
-* Cryptography is the art of ciphering and deciphering a message.
-* Now, with the building block of arrays, chars, and strings, you can cipher and decipher a message.
-* `plaintext` and a `key` are provided to a `cipher`, resulting in ciphered text.
+  #include <cs50.h>
+  #include <stdio.h>
 
-  ![cryptography](images/week_2/Week2Slide153.png)
-* The key is a special argument passed to the cipher along with the plaintext. The cipher uses the key to make decisions about how to implement its cipher algorithm.
-* This week, you will undertake programming challenges similar to the above.
+  int main(void)
+  {
+      // Prompt user to agree
+      char c = get_char("Do you agree? ");
+
+      // Check whether agreed
+      if (c == 'Y' || c == 'y')
+      {
+          printf("Agreed.\n");
+      }
+      else if (c == 'N' || c == 'n')
+      {
+          printf("Not agreed.\n");
+      }
+  }
+
+  ```
+
+  Notice that `||` effectively means *or*.
+
+## Loops and meow.c
+
+* We can also utilize the loop building block from Scratch in our C programs.
+* In your terminal window, type `code meow.c` and write code as follows:
+
+  ```
+  // Opportunity for better design
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      printf("meow\n");
+      printf("meow\n");
+      printf("meow\n");
+  }
+
+  ```
+
+  Notice this does as intended but has an opportunity for better design. Code is repeated over and over.
+* We can improve our program by modifying your code as follows:
+
+  ```
+  // Better design
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      int i = 3;
+      while (i > 0)
+      {
+          printf("meow\n");
+          i--;
+      }
+  }
+
+  ```
+
+  Notice that we create an `int` called `i` and assign it the value `3`. Then, we create a `while` loop that will run as long as `i > 0`. Then, the loop runs. Every time `1` is subtracted to `i` using the `i--` statement.
+* Similarly, we can implement a count-up of sorts by modifying our code as follows:
+
+  ```
+  // Print values of i
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      int i = 1;
+      while (i <= 3)
+      {
+          printf("meow\n");
+          i++;
+      }
+  }
+
+  ```
+
+  Notice how our counter `i` is started at `1`. Each time the loop runs, it will increment the counter by `1`. Once the counter is greater than `3`, it will stop the loop.
+* Generally, in computer science, we count from zero. Best to revise your code as follows:
+
+  ```
+  // Better design
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      int i = 0;
+      while (i < 3)
+      {
+          printf("meow\n");
+          i++;
+      }
+  }
+
+  ```
+
+  Notice we now count from zero.
+* Another tool in our toolbox for looping is a `for` loop.
+* You can further improve the design of our `meow.c` program using a `for` loop. Modify your code as follows:
+
+  ```
+  // Better design
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          printf("meow\n");
+      }
+  }
+
+  ```
+
+  Notice that the `for` loop includes three arguments. The first argument `int i = 0` starts our counter at zero. The second argument `i < 3` is the condition that is being checked. Finally, the argument `i++` tells the loop to increment by one each time the loop runs.
+* We can even loop forever using the following code:
+
+  ```
+  // Infinite loop
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      while (true)
+      {
+          printf("meow\n");
+      }
+  }
+
+  ```
+
+  Notice that `true` will always be the case. Therefore, the code will always run. You will lose control of your terminal window by running this code. You can break from an infinite loop by hitting `control-C` on your keyboard.
+
+## Functions
+
+* While we will provide much more guidance later, you can create your own function within C as follows:
+
+  ```
+  void meow(void)
+  {
+      printf("meow\n");
+  }
+
+  ```
+
+  The initial `void` means that the function does not return any values. The `(void)` means that no values are being provided to the function.
+* This function can be used in the main function as follows:
+
+  ```
+  // Abstraction
+
+  #include <stdio.h>
+
+  void meow(void);
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          meow();
+      }
+  }
+
+  // Meow once
+  void meow(void)
+  {
+      printf("meow\n");
+  }
+
+  ```
+
+  Notice how the `meow` function is called with the `meow()` instruction. This is possible because the `meow` function is defined at the bottom of the code, and the *prototype* of the function is provided at the top of the code as `void meow(void)`.
+* Your `meow` function can be further modified to accept input:
+
+  ```
+  // Abstraction with parameterization
+
+  #include <stdio.h>
+
+  void meow(int n);
+
+  int main(void)
+  {
+      meow(3);
+  }
+
+  // Meow some number of times
+  void meow(int n)
+  {
+      for (int i = 0; i < n; i++)
+      {
+          printf("meow\n");
+      }
+  }
+
+  ```
+
+  Notice that the prototype has changed to `void meow(int n)` to show that `meow` accepts an `int` as its input.
+* Additionally, we can get user input:
+
+  ```
+  // User input
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  void meow(int n);
+
+  int main(void)
+  {
+      int n;
+      do
+      {
+          n = get_int("Number: ");
+      }
+      while (n < 1);
+      meow(n);
+  }
+
+  // Meow some number of times
+  void meow(int n)
+  {
+      for (int i = 0; i < n; i++)
+      {
+          printf("meow\n");
+      }
+  }
+
+  ```
+
+  Notice that `get_int` is used to obtain a number from the user. `n` is passed to `meow`.
+* We can even test to ensure that the input we get provided by the user is correct:
+
+  ```
+  // Return value
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int get_positive_int(void);
+  void meow(int n);
+
+  int main(void)
+  {
+      int n = get_positive_int();
+      meow(n);
+  }
+
+  // Get number of meows
+  int get_positive_int(void)
+  {
+      int n;
+      do
+      {
+          n = get_int("Number: ");
+      }
+      while (n < 1);
+      return n;
+  }
+
+  // Meow some number of times
+  void meow(int n)
+  {
+      for (int i = 0; i < n; i++)
+      {
+          printf("meow\n");
+      }
+  }
+
+  ```
+
+  Notice that a new function called `get_positive_int` asks the user for an integer while `n < 1`. After obtaining a positive integer, this function will `return n` back to the `main` function.
+
+## Correctness, Design, Style
+
+* Code can be evaluated upon three axes.
+* First, *correctness* refers to “Does the code run as intended?” You can check the correctness of your code with `check50`.
+* Second, *design* refers to “How well is the code designed?” You can evaluate the design of your code using `design50`.
+* Finally, *style* refers to “How aesthetically pleasing and consistent is the code?” You can evaluate the style of your code with `style50`.
+
+## Mario
+
+* Everything we’ve discussed today has focused on various building blocks of your work as an emerging computer scientist.
+* The following will help you orient toward working on a problem set for this class in general: How does one approach a computer science-related problem?
+* Imagine we wanted to emulate the visual of the game Super Mario Bros. Considering the four question blocks pictured, how could we create code that roughly represents these four horizontal blocks?
+
+  ![Mario Question Marks](images/week_1/Week1Slide123.png)
+* In the terminal window, type `code mario.c` and code as follows:
+
+  ```
+  // Prints a row of 4 question marks with a loop
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      for (int i = 0; i < 4; i++)
+      {
+          printf("?");
+      }
+      printf("\n");
+  }
+
+  ```
+
+  Notice how four question marks are printed here using a loop.
+* Similarly, we can apply this same logic to create three vertical blocks.
+
+  ![Mario Blocks](images/week_1/Week1Slide125.png)
+* To accomplish this, modify your code as follows:
+
+  ```
+  // Prints a column of 3 bricks with a loop
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          printf("#\n");
+      }
+  }
+
+  ```
+
+  Notice how three vertical bricks are printed using a loop.
+* What if we wanted to combine these ideas to create a three-by-three group of blocks?
+
+  ![Mario Grid](images/week_1/Week1Slide127.png)
+* We can follow the logic above, combining the same ideas. Modify your code as follows:
+
+  ```
+  // Prints a 3-by-3 grid of bricks with nested loops
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          for (int j = 0; j < 3; j++)
+          {
+              printf("#");
+          }
+          printf("\n");
+      }
+  }
+
+  ```
+
+  Notice that one loop is inside another. The first loop defines what vertical row is being printed. For each row, three columns are printed. After each row, a new line is printed.
+* What if we wanted to ensure that the number of blocks is *constant*, that is, unchangeable? Modify your code as follows:
+
+  ```
+  // Prints a 3-by-3 grid of bricks with nested loops using a constant
+
+  #include <stdio.h>
+
+  int main(void)
+  {
+      const int n = 3;
+      for (int i = 0; i < n; i++)
+      {
+          for (int j = 0; j < n; j++)
+          {
+              printf("#");
+          }
+          printf("\n");
+      }
+  }
+
+  ```
+
+  Notice how `n` is now a constant. It can never be changed.
+* As illustrated earlier in this lecture, we can *abstract away* functionality into functions. Consider the following code:
+
+  ```
+  // Helper function
+
+  #include <stdio.h>
+
+  void print_row(int width);
+    
+  int main(void)
+  {
+      const int n = 3;
+      for (int i = 0; i < n; i++)
+      {
+          print_row(n);
+      }
+  }
+
+  void print_row(int width)
+  {
+      for (int i = 0; i < width; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+
+  ```
+
+  Notice how printing a row is accomplished through a new function.
+
+## Comments
+
+* Comments are fundamental parts of a computer program, where you leave explanatory remarks to yourself and others who may be collaborating with you regarding your code.
+* All code you create for this course must include robust comments.
+* Typically, each comment is a few words or more, providing the reader an opportunity to understand what is happening in a specific block of code. Further, such comments serve as a reminder for you later when you need to revise your code.
+* Comments involve placing `//` into your code, followed by a comment. Modify your code as follows to integrate comments:
+
+  ```
+  // Helper function
+
+  #include <stdio.h>
+
+  void print_row(int width);
+    
+  int main(void)
+  {
+      const int n = 3;
+
+      // Print n rows
+      for (int i = 0; i < n; i++)
+      {
+          print_row(n);
+      }
+  }
+
+  void print_row(int width)
+  {
+      for (int i = 0; i < width; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+
+  ```
+
+  Notice how each comment begins with a `//`.
+
+## More About Operators
+
+* You can implement a calculator in C. In your terminal, type `code calculator.c` and write code as follows:
+
+  ```
+  // Addition with int
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      int x = get_int("x: ");
+
+      // Prompt user for y
+      int y = get_int("y: ");
+
+      // Add numbers
+      int z = x + y;
+
+      // Perform addition
+      printf("%i\n", z);
+  }
+
+  ```
+
+  Notice how the `get_int` function is utilized to obtain an integer from the user twice. One integer is stored in the `int` variable called `x`. Another is stored in the `int` variable called `y`. The sum is stored in `z`. Then, the `printf` function prints the value of `z`, designated by the `%i` symbol.
+* We can also double a number:
+
+  ```
+  // int
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      int dollars = 1;
+      while (true)
+      {
+          char c = get_char("Here's $%i. Double it and give to next person? ", dollars);
+          if (c == 'y')
+          {
+              dollars *= 2;
+          }
+          else
+          {
+              break;
+          }
+      }
+      printf("Here's $%i.\n", dollars);
+  }
+
+  ```
+
+  Running this program, some seeming errors appear in `dollars`. Why is this?
+* One of C’s shortcomings is the ease by which it manages memory. While C provides you immense control over how memory is utilized, programmers have to be very aware of the potential pitfalls of memory management.
+* Types refer to the possible data that can be stored within a variable. For example, a `char` is designed to accommodate a single character like `a` or `2`.
+* Types are very important because each type has specific limits. For example, because of the limits in memory, the highest value of an `int` can be `4294967295`. If you attempt to count an `int` higher, an *integer overflow* will result where an incorrect value will be stored in this variable.
+* The number of bits limits how high and low we can count.
+* This can have catastrophic, real-world impacts.
+* We can correct this by using a data type called `long`.
+
+  ```
+  // long
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      long dollars = 1;
+      while (true)
+      {
+          char c = get_char("Here's $%li. Double it and give to next person? ", dollars);
+          if (c == 'y')
+          {
+              dollars *= 2;
+          }
+          else
+          {
+              break;
+          }
+      }
+      printf("Here's $%li.\n", dollars);
+  }
+
+  ```
+
+  Notice how running this code will allow for very high dollar amounts.
+* Types with which you might interact during this course include:
+
+  + `bool`, a Boolean expression of either true or false
+  + `char`, a single character like a or 2
+  + `double`, a floating-point value with more digits than a float
+  + `float`, a floating-point value, or a real number with a decimal value
+  + `int`, integers up to a certain size, or number of bits
+  + `long`, integers with more bits, so they can count higher than an int
+  + `string`, a string of characters
+
+## Truncation
+
+* Another issue that can arise when using data types includes truncation.
+
+  ```
+  // Division with ints, demonstrating truncation
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      int x = get_int("x: ");
+
+      // Prompt user for y
+      int y = get_int("y: ");
+
+      // Divide x by y
+      printf("%i\n", x / y);
+  }
+
+  ```
+
+  An integer divided by an integer will always result in an integer in C. Accordingly, the above code will often result in any digits after the decimal being thrown away.
+* This can be solved by employing a `float`:
+
+  ```
+  // Floats
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      float x = get_float("x: ");
+
+      // Prompt user for y
+      float y = get_float("y: ");
+
+      // Divide x by y
+      printf("%.50f\n", x / y);
+  }
+
+  ```
+
+  Notice that this solves some of our problems. However, we might notice imprecision in the answer provided by the program.
+* *Floating point imprecision* illustrates that there are limits to how precise computers can calculate numbers.
+* As you are coding, pay special attention to the types of variables you are using to avoid problems within your code.
+* We examined some examples of disasters that can occur through type-related errors.
 
 ## Summing Up
 
-In this lesson, you learned more details about compiling and how data is stored within a computer. Specifically, you learned…
+In this lesson, you learned how to apply the building blocks you learned in Scratch to the C programming language. You learned…
 
-* Generally, how a compiler works.
-* How to debug your code using four methods.
-* How to utilize arrays within your code.
-* How arrays store data in back-to-back portions of memory.
-* How strings are simply arrays of characters.
-* How to interact with arrays in your code.
-* How command-line arguments can be passed to your programs.
-* The basic building blocks of cryptography.
+* How to create your first program in C.
+* How to use the command line.
+* About predefined functions that come natively with C.
+* How to use variables, conditionals, and loops.
+* How to create your own functions to simplify and improve your code.
+* How to evaluate your code on three axes: correctness, design, and style.
+* How to integrate comments into your code.
+* How to utilize types and operators and the implications of your choices.
 
 See you next time!

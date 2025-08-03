@@ -1,1086 +1,759 @@
-# Week 6 Notes
+# Week 5 Notes
 
-**CS50x 2025 - Week 6 Lecture Notes**
+**CS50x 2025 - Week 5 Lecture Notes**
 
-Source: https://cs50.harvard.edu/x/notes/6/
+Source: https://cs50.harvard.edu/x/notes/5/
 
 ---
 
-# Lecture 6
+# Lecture 5
 
 * [Welcome!](#welcome)
-* [Hello Python!](#hello-python)
-* [Speller](#speller)
-* [Filter](#filter)
-* [Functions](#functions)
-* [Libraries, Modules, and Packages](#libraries-modules-and-packages)
-* [Strings](#strings)
-* [Positional Parameters and Named Parameters](#positional-parameters-and-named-parameters)
-* [Variables](#variables)
-* [Types](#types)
-* [Calculator](#calculator)
-* [Conditionals](#conditionals)
-* [Object-Oriented Programming](#object-oriented-programming)
-* [Loops](#loops)
-* [Abstraction](#abstraction)
-* [Truncation and Floating Point Imprecision](#truncation-and-floating-point-imprecision)
-* [Exceptions](#exceptions)
-* [Mario](#mario)
-* [Lists](#lists)
-* [Searching and Dictionaries](#searching-and-dictionaries)
-* [Command-Line Arguments](#command-line-arguments)
-* [Exit Status](#exit-status)
-* [CSV Files](#csv-files)
-* [Third-Party Libraries](#third-party-libraries)
+* [Data Structures](#data-structures)
+* [Queues](#queues)
+* [Stacks](#stacks)
+* [Jack Learns the Facts](#jack-learns-the-facts)
+* [Resizing Arrays](#resizing-arrays)
+* [Arrays](#arrays)
+* [Linked Lists](#linked-lists)
+* [Trees](#trees)
+* [Dictionaries](#dictionaries)
+* [Hashing and Hash Tables](#hashing-and-hash-tables)
+* [Tries](#tries)
 * [Summing Up](#summing-up)
 
 ## Welcome!
 
-* In previous weeks, you were introduced to the fundamental building blocks of programming.
-* You learned about programming in a lower-level programming language called C.
-* Today, we are going to work with a higher-level programming language called *Python*.
-* As you learn this new language, you’re going to find that you are going to be more able to teach yourself new programming languages.
+* All the prior weeks have presented you with the fundamental building blocks of programming.
+* All you have learned in C will enable you to implement these building blocks in higher-level programming languages such as Python.
+* Each week, concepts have become more and more challenging, like a hill becoming more and more steep. This week, the challenge evens off as we explore data structures.
+* To date, you have learned about how an array can organize data in memory.
+* Today, we are going to talk about organizing data in memory and design possibilities that emerge from your growing knowledge.
 
-## Hello Python!
+## Data Structures
 
-* Humans, over the decades, have seen how previous design decisions made in prior programming languages could be improved upon.
-* Python is a programming language that builds upon what you have already learned in C.
-* Python additionally has access to a vast number of user-created libraries.
-* Unlike in C, which is a *compiled language*, Python is an *interpreted language*, where you need not separately compile your program. Instead, you run your program in the *Python Interpreter*.
-* Up until this point, the code has looked like this:
+* *Data structures* essentially are forms of organization in memory.
+* There are many ways to organize data in memory.
+* *Abstract data types* are those that we can conceptually imagine. When learning about computer science, it’s often useful to begin with these conceptual data structures. Learning these will make it easier later to understand how to implement more concrete data structures.
+
+## Queues
+
+* *Queues* are one form of abstract data structure.
+* Queues have specific properties. Namely, they are *FIFO* or “first in first out.” You can imagine yourself in a line for a ride at an amusement park. The first person in the line gets to go on the ride first. The last person gets to go on the ride last.
+* Queues have specific actions associated with them. For example, an item can be *enqueued*; that is, the item can join the line or queue. Further, an item can be *dequeued* or leave the queue once it reaches the front of the line.
+* In code, you can imagine a queue as follows:
 
   ```
-  // A program that says hello to the world
+  const int CAPACITY = 50;
+
+  typedef struct
+  {
+      person people[CAPACITY];
+      int size;
+  }
+  queue;
+
+  ```
+
+  Notice that an array called people is of type `person`. The `CAPACITY` is how high the stack could be. The integer `size` is how full the queue actually is, regardless of how much it *can* hold.
+
+## Stacks
+
+* Queues contrast a *stack*. Fundamentally, the properties of a stack are different than those of a queue. Specifically, it is *LIFO* or “last in first out.” Just like stacking trays in a dining hall, a tray that is placed in a stack last is the first that may be picked up.
+* Stacks have specific actions associated with them. For example, *push* places something on top of a stack. *Pop* is removing something from the top of the stack.
+* In code, you might imagine a stack as follows:
+
+  ```
+  const int CAPACITY = 50;
+
+  typedef struct
+  {
+      person people[CAPACITY];
+      int size;
+  }
+  stack;
+
+  ```
+
+  Notice that an array called people is of type `person`. The `CAPACITY` is how high the stack could be. The integer `size` is how full the stack actually is, regardless of how much it *could* hold. Notice that this code is the same as the code from the queue.
+* You might imagine that the above code has a limitation. Since the capacity of the array is always predetermined in this code. Therefore, the stack may always be oversized. You might imagine only using one place in the stack out of 5000.
+* It would be nice for our stack to be dynamic – able to grow as items are added to it.
+
+## Jack Learns the Facts
+
+* We watched a video called [Jack Learns the Facts](https://www.youtube.com/watch?v=ItAG3s6KIEI) by Professor Shannon Duvall of Elon University.
+
+## Resizing Arrays
+
+* Rewinding to Week 2, we introduced you to your first data structure.
+* An array is a block of contiguous memory.
+* You might imagine an array as follows:
+
+  ![three boxes with 1 2 3](images/week_5/Week5Slide019.png)
+* In memory, there are other values being stored by other programs, functions, and variables. Many of these may be unused garbage values that were utilized at one point but are available now for use.
+
+  ![three boxes with 1 2 3 among lots of other memory elements](images/week_5/Week5Slide022.png)
+* Imagine you wanted to store a fourth value `4` in our array. What would be needed is to allocate a new area of memory and move the old array to a new one? Initially, this new area of memory would be populated with garbage values.
+
+  ![Three boxes with 1 2 3 above four boxes with garbage values](images/week_5/Week5Slide025.png)
+* As values are added to this new area of memory, old garbage values would be overwritten.
+
+  ![Three boxes with 1 2 3 above four boxes with 1 2 3 and a garbage value](images/week_5/Week5Slide026.png)
+* Eventually, all old garbage values would be overwritten with our new data.
+
+  ![Three boxes with 1 2 3 above four boxes with 1 2 3 4](images/week_5/Week5Slide027.png)
+* One of the drawbacks of this approach is that it’s bad design: Every time we add a number, we have to copy the array item by item.
+
+## Arrays
+
+* Wouldn’t it be nice if we were able to put the `4` somewhere else in memory? By definition, this would no longer be an array because `4` would no longer be in contiguous memory. How could we connect different locations in memory?
+* In your terminal, type `code list.c` and write code as follows:
+
+  ```
+  // Implements a list of numbers with an array of fixed size
 
   #include <stdio.h>
 
   int main(void)
   {
-      printf("hello, world\n");
-  }
-
-  ```
-* Today, you’ll find that the process of writing and compiling code has been simplified.
-* For example, the above code will be rendered in Python as:
-
-  ```
-  # A program that says hello to the world
-
-  print("hello, world")
-
-  ```
-
-  Notice that the semicolon is gone and that no library is needed. You can run this program in your terminal by typing `python hello.py`.
-* Python notably can implement what was quite complicated in C with relative simplicity.
-
-## Speller
-
-* To illustrate this simplicity, let’s type ‘code dictionary.py’ in the terminal window and write code as follows:
-
-  ```
-  # Words in dictionary
-  words = set()
-
-
-  def check(word):
-      """Return true if word is in dictionary else false"""
-      return word.lower() in words
-
-
-  def load(dictionary):
-      """Load dictionary into memory, returning true if successful else false"""
-      with open(dictionary) as file:
-          words.update(file.read().splitlines())
-      return True
-
-
-  def size():
-      """Returns number of words in dictionary if loaded else 0 if not yet loaded"""
-      return len(words)
-
-
-  def unload():
-      """Unloads dictionary from memory, returning true if successful else false"""
-      return True
-
-  ```
-
-  Notice that there are four functions above. In the `check` function, if a `word` is in `words`, it returns `True`. It is so much easier than an implementation in C! Similarly, in the `load` function, the dictionary file is opened. For each line in that file, we add that line to `words`. Using `rstrip`, the trailing new line is removed from the added word. `size` simply returns the `len` or length of `words`. `unload` only needs to return `True` because Python handles memory management on its own.
-* The above code illustrates why higher-level languages exist: To simplify and allow you to write code more easily.
-* However, speed is a tradeoff. Because C allows you, the programmer, to make decisions about memory management, it may run faster than Python – depending on your code. While C only runs your lines of code, Python runs all the code that comes under the hood with it when you call Python’s built-in functions.
-* You can learn more about functions in the [Python documentation](https://docs.python.org/3/library/functions.html)
-
-## Filter
-
-* To further illustrate this simplicity, create a new file by typing `code blur.py` in your terminal window and write code as follows:
-
-  ```
-  # Blurs an image
-
-  from PIL import Image, ImageFilter
-
-  # Blur image
-  before = Image.open("bridge.bmp")
-  after = before.filter(ImageFilter.BoxBlur(1))
-  after.save("out.bmp")
-
-  ```
-
-  Notice that this program imports modules `Image` and `ImageFilter` from a library called `PIL`. This takes an input file and creates an output file.
-* Further, you can create a new file called `edges.py` as follows:
-
-  ```
-  # Finds edges in an image
-
-  from PIL import Image, ImageFilter
-
-  # Find edges
-  before = Image.open("bridge.bmp")
-  after = before.filter(ImageFilter.FIND_EDGES)
-  after.save("out.bmp")
-
-  ```
-
-  Notice that this code is a small adjustment to your `blur` code but produces a dramatically different result.
-* Python allows you to abstract away programming that would be much more complicated within C and other *lower-level* programming languages.
-
-## Functions
-
-* In C, you may have seen functions as follows:
-
-  ```
-  printf("hello, world\n");
-
-  ```
-* In Python, you will see functions as follows:
-
-  ```
-  print("hello, world")
-
-  ```
-
-## Libraries, Modules, and Packages
-
-* As with C, the CS50 library can be utilized within Python.
-* The following functions will be of particular use:
-
-  ```
-    get_float
-    get_int
-    get_string
-
-  ```
-* You can import the cs50 library as follows:
-
-  ```
-  import cs50
-
-  ```
-* You also have the option of importing only specific functions from the CS50 library as follows:
-
-  ```
-  from cs50 import get_float, get_int, get_string
-
-  ```
-
-## Strings
-
-* In C, you might remember this code:
-
-  ```
-  // get_string and printf with %s
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string answer = get_string("What's your name? ");
-      printf("hello, %s\n", answer);
-  }
-
-  ```
-* This code is transformed in Python to:
-
-  ```
-  # get_string and print, with concatenation
-
-  from cs50 import get_string
-
-  answer = get_string("What's your name? ")
-  print("hello, " + answer)
-
-  ```
-
-  You can write this code by executing `code hello.py` in the terminal window. Then, you can execute this code by running `python hello.py`. Notice how the `+` sign concatenates `"hello, "` and `answer`.
-* Similarly, this can be done without concatenation:
-
-  ```
-  # get_string and print, without concatenation
-
-  from cs50 import get_string
-
-  answer = get_string("What's your name? ")
-  print("hello,", answer)
-
-  ```
-
-  Notice that the print statement automatically creates a space between the `hello` statement and the `answer`.
-* Similarly, you could implement the above code as:
-
-  ```
-  # get_string and print, with format strings
-
-  from cs50 import get_string
-
-  answer  = get_string("What's your name? ")
-  print(f"hello, {answer}")
-
-  ```
-
-  Notice how the curly braces allow for the `print` function to interpolate the `answer` such that `answer` appears within. The `f` is required to include the `answer` properly formatting.
-
-## Positional Parameters and Named Parameters
-
-* Functions in C like `fread`, `fwrite`, and `printf` use positional arguments, where you provide arguments with commas as separators. You, the programmer, must remember what argument is in which position. These are referred to as *positional arguments*.
-* In Python, *named parameters* allow you to provide arguments without regard to positionality.
-* You can learn more about the parameters of the `print` function in the [documentation](https://docs.python.org/3/library/functions.html#print).
-* Accessing that documentation, you may see the following:
-
-  ```
-  print(*objects, sep=' ', end='\n', file=None, flush=False)
-
-  ```
-
-  Notice that various objects can be provided to print. A separator of a single space is provided that will display when more than one object is given to `print`. Similarly, a new line is provided at the end of the `print` statement.
-
-## Variables
-
-* Variable declaration is simplified too. In C, you might have `int counter = 0;`. In Python, this same line would read `counter = 0`. You need not declare the type of the variable.
-* Python favors `counter += 1` to increment by one, losing the ability found in C to type `counter++`.
-
-## Types
-
-* Data types in Python do not need to be explicitly declared. For example, you saw how `answer` above is a string, but we did not have to tell the interpreter this was the case: It knew on its own.
-* In Python, commonly used types include:
-
-  ```
-    bool
-    float
-    int
-    str
-
-  ```
-
-  Notice that `long` and `double` are missing. Python will handle what data type should be used for larger and smaller numbers.
-* Some other data types in Python include:
-
-  ```
-  range   sequence of numbers
-  list    sequence of mutable values
-  tuple   sequence of immutable values
-  dict    collection of key-value pairs
-  set     collection of unique values
-
-  ```
-* Each of these data types can be implemented in C, but in Python, they can be implemented more simply.
-
-## Calculator
-
-* You might recall `calculator.c` from earlier in the course:
-
-  ```
-  // Addition with int
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt user for x
-      int x = get_int("x: ");
-
-      // Prompt user for y
-      int y = get_int("y: ");
-
-      // Perform addition
-      printf("%i\n", x + y);
-  }
-
-  ```
-* We can implement a simple calculator just as we did within C. Type `code calculator.py` into the terminal window and write code as follows:
-
-  ```
-  # Addition with int [using get_int]
-
-  from cs50 import get_int
-
-  # Prompt user for x
-  x = get_int("x: ")
-
-  # Prompt user for y
-  y = get_int("y: ")
-
-  # Perform addition
-  print(x + y)
-
-  ```
-
-  Notice how the CS50 library is imported. Then, `x` and `y` are gathered from the user. Finally, the result is printed. Notice that the `main` function that would have been seen in a C program is gone entirely! While one could utilize a `main` function, it is not required.
-* It’s possible for one to remove the training wheels of the CS50 library. Modify your code as follows:
-
-  ```
-  # Addition with int [using input]
-
-  # Prompt user for x
-  x = input("x: ")
-
-  # Prompt user for y
-  y = input("y: ")
-
-  # Perform addition
-  print(x + y)
-
-  ```
-
-  Notice how executing the above code results in strange program behavior. Why might this be so?
-* You may have guessed that the interpreter understood `x` and `y` to be strings. You can fix your code by employing the `int` function as follows:
-
-  ```
-  # Addition with int [using input]
-
-  # Prompt user for x
-  x = int(input("x: "))
-
-  # Prompt user for y
-  y = int(input("y: "))
-
-  # Perform addition
-  print(x + y)
-
-  ```
-
-  Notice how the input for `x` and `y` is passed to the `int` function, which converts it to an integer. Without converting `x` and `y` to be integers, the characters will concatenate.
-
-## Conditionals
-
-* In C, you might remember a program like this:
-
-  ```
-  // Conditionals, Boolean expressions, relational operators
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt user for integers
-      int x = get_int("What's x? ");
-      int y = get_int("What's y? ");
-
-      // Compare integers
-      if (x < y)
+      // List of size 3
+      int list[3];
+
+      // Initialize list with numbers
+      list[0] = 1;
+      list[1] = 2;
+      list[2] = 3;
+
+      // Print list
+      for (int i = 0; i < 3; i++)
       {
-          printf("x is less than y\n");
-      }
-      else if (x > y)
-      {
-          printf("x is greater than y\n");
-      }
-      else
-      {
-          printf("x is equal to y\n");
+          printf("%i\n", list[i]);
       }
   }
 
   ```
-* In Python, it would appear as follows:
+
+  Notice that the above is very much like what we learned earlier in this course. Memory is preallocated for three items.
+* Building upon our knowledge obtained more recently, we can leverage our understanding of pointers to create a better design in this code. Modify your code as follows:
 
   ```
-  # Conditionals, Boolean expressions, relational operators
+  // Implements a list of numbers with an array of dynamic size
 
-  from cs50 import get_int
-
-  # Prompt user for integers
-  x = get_int("What's x? ")
-  y = get_int("What's y? ")
-
-  # Compare integers
-  if x < y:
-      print("x is less than y")
-  elif x > y:
-      print("x is greater than y")
-  else:
-      print("x is equal to y")
-
-  ```
-
-  Notice that there are no more curly braces. Instead, indentations are utilized. Second, a colon is utilized in the `if` statement. Further, `elif` replaces `else if`. Parentheses are also no longer required in the `if` and `elif` statements.
-* Further looking at comparisons, consider the following code in C:
-
-  ```
-  // Logical operators
-
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt user to agree
-      char c = get_char("Do you agree? ");
-
-      // Check whether agreed
-      if (c == 'Y' || c == 'y')
-      {
-          printf("Agreed.\n");
-      }
-      else if (c == 'N' || c == 'n')
-      {
-          printf("Not agreed.\n");
-      }
-  }
-
-  ```
-* The above can be implemented as follows:
-
-  ```
-  # Logical operators
-
-  from cs50 import get_string
-
-  # Prompt user to agree
-  s = get_string("Do you agree? ")
-
-  # Check whether agreed
-  if s == "Y" or s == "y":
-      print("Agreed.")
-  elif s == "N" or s == "n":
-      print("Not agreed.")
-
-  ```
-
-  Notice that the two vertical bars utilized in C is replaced with `or`. Indeed, people often enjoy Python because it is more readable by humans. Also, notice that `char` does not exist in Python. Instead, `str`s are utilized.
-* Another approach to this same code could be as follows using *lists*:
-
-  ```
-  # Logical operators, using lists
-
-  from cs50 import get_string
-
-  # Prompt user to agree
-  s = get_string("Do you agree? ")
-
-  # Check whether agreed
-  if s in ["y", "yes"]:
-      print("Agreed.")
-  elif s in ["n", "no"]:
-      print("Not agreed.")
-
-  ```
-
-  Notice how we are able to express multiple keywords like `y` and `yes` in a `list`.
-
-## Object-Oriented Programming
-
-* It’s possible to have certain types of values not only have properties or attributes inside of them but have functions as well. In Python, these values are known as *objects*
-* In C, we could create a `struct` where you could associate multiple variables inside a single self-created data type. In Python, we can do this and also include functions in a self-created data type. When a function belongs to a specific *object*, it is known as a *method*.
-* For example, `strs` in Python have built-in *methods*. Therefore, you could modify your code as follows:
-
-  ```
-  # Logical operators, using lists
-
-  # Prompt user to agree
-  s = input("Do you agree? ").lower()
-
-  # Check whether agreed
-  if s in ["y", "yes"]:
-      print("Agreed.")
-  elif s in ["n", "no"]:
-      print("Not agreed.")
-
-  ```
-
-  Notice how the old value of `s` is overwritten with the result of `s.lower()`, a built-in method of `strs`.
-* Similarly, you may recall how we copied a string in C:
-
-  ```
-  // Capitalizes a copy of a string without memory errors
-
-  #include <cs50.h>
-  #include <ctype.h>
   #include <stdio.h>
   #include <stdlib.h>
-  #include <string.h>
 
   int main(void)
   {
-      // Get a string
-      char *s = get_string("s: ");
-      if (s == NULL)
+      // List of size 3
+      int *list = malloc(3 * sizeof(int));
+      if (list == NULL)
       {
           return 1;
       }
 
-      // Allocate memory for another string
-      char *t = malloc(strlen(s) + 1);
-      if (t == NULL)
+      // Initialize list of size 3 with numbers
+      list[0] = 1;
+      list[1] = 2;
+      list[2] = 3;
+
+      // List of size 4
+      int *tmp = malloc(4 * sizeof(int));
+      if (tmp == NULL)
       {
+          free(list);
           return 1;
       }
 
-      // Copy string into memory
-      strcpy(t, s);
-
-      // Capitalize copy
-      if (strlen(t) > 0)
+      // Copy list of size 3 into list of size 4
+      for (int i = 0; i < 3; i++)
       {
-          t[0] = toupper(t[0]);
+          tmp[i] = list[i];
       }
 
-      // Print strings
-      printf("s: %s\n", s);
-      printf("t: %s\n", t);
+      // Add number to list of size 4
+      tmp[3] = 4;
 
-      // Free memory
-      free(t);
+      // Free list of size 3
+      free(list);
+
+      // Remember list of size 4
+      list = tmp;
+
+      // Print list
+      for (int i = 0; i < 4; i++)
+      {
+          printf("%i\n", list[i]);
+      }
+
+      // Free list
+      free(list);
       return 0;
   }
 
   ```
 
-  Notice the number of lines of code.
-* We may implement the above in Python as follows:
+  Notice that a list of size three integers is created. Then, three memory addresses can be assigned the values `1`, `2`, and `3`. Then, a list of size four is created. Next, the list is copied from the first to the second. The value for the `4` is added to the `tmp` list. Since the block of memory that `list` points to is no longer used, it is freed using the command `free(list)`. Finally, the compiler is told to point `list` pointer now to the block of memory that `tmp` points to. The contents of `list` are printed and then freed. Further, notice the inclusion of `stdlib.h`.
+* It’s useful to think about `list` and `tmp` as both signs that point to a chunk of memory. As in the example above, `list` at one point *pointed* to an array of size 3. By the end, `list` was told to point to a chunk of memory of size 4. Technically, by the end of the above code, `tmp` and `list` both pointed to the same block of memory.
+* One way by which we can copy the array without a for loop is by using `realloc`:
 
   ```
-  # Capitalizes a copy of a string
-
-  # Get a string
-  s = input("s: ")
-
-  # Capitalize copy of string
-  t = s.capitalize()
-
-  # Print strings
-  print(f"s: {s}")
-  print(f"t: {t}")
-
-  ```
-
-  Notice how much shorter this program is than its counterpart in C.
-* In this class, we will only scratch the surface of Python. Therefore, the [Python documentation](https://docs.python.org) will be of particular importance as you continue.
-* You can learn more about string methods in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods)
-
-## Loops
-
-* Loops in Python are very similar to C. You may recall the following code in C:
-
-  ```
-  // Demonstrates for loop
+  // Implements a list of numbers with an array of dynamic size using realloc
 
   #include <stdio.h>
+  #include <stdlib.h>
 
   int main(void)
   {
+      // List of size 3
+      int *list = malloc(3 * sizeof(int));
+      if (list == NULL)
+      {
+          return 1;
+      }
+
+      // Initialize list of size 3 with numbers
+      list[0] = 1;
+      list[1] = 2;
+      list[2] = 3;
+
+      // Resize list to be of size 4
+      int *tmp = realloc(list, 4 * sizeof(int));
+      if (tmp == NULL)
+      {
+          free(list);
+          return 1;
+      }
+      list = tmp;
+
+      // Add number to list
+      list[3] = 4;
+
+      // Print list
+      for (int i = 0; i < 4; i++)
+      {
+          printf("%i\n", list[i]);
+      }
+
+      // Free list
+      free(list);
+      return 0;
+  }
+
+  ```
+
+  Notice that the list is reallocated to a new array via `realloc`.
+* One may be tempted to allocate way more memory than required for the list, such as 30 items instead of the required 3 or 4. However, this is bad design as it taxes system resources when they are not potentially needed. Further, there is little guarantee that memory for more than 30 items will be needed eventually.
+
+## Linked Lists
+
+* In recent weeks, you have learned about three useful primitives. A `struct` is a data type that you can define yourself. A `.` in *dot notation* allows you to access variables inside that structure. The `*` operator is used to declare a pointer or dereference a variable.
+* Today, you are introduced to the `->` operator. It is an arrow. This operator goes to an address and looks inside a structure.
+* A *linked list* is one of the most powerful data structures within C. A linked list allows you to include values that are located in varying areas of memory. Further, they allow you to dynamically grow and shrink the list as you desire.
+* You might imagine three values stored in three different areas of memory as follows:
+
+  ![Three boxes with 1 2 3 in separate areas of memory](images/week_5/Week5Slide036.png)
+* How could one stitch together these values in a list?
+* We could imagine the data pictured above as follows:
+
+  ![Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached](images/week_5/Week5Slide037.png)
+* We could utilize more memory to keep track of where the next item using a pointer.
+
+  ![Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached where memory addresses are in those attached boxes](images/week_5/Week5Slide041.png)
+
+  Notice that NULL is utilized to indicate that nothing else is *next* in the list.
+* By convention, we would keep one more element in memory, a pointer, that keeps track of the first item in the list, called the *head* of the list.
+
+  ![Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached where memory addresses are in those attached boxes now with a final box with the memory address of the first box](images/week_5/Week5Slide042.png)
+* Abstracting away the memory addresses, the list would appear as follows:
+
+  ![Three boxes with in separate areas of memory with smaller boxes with a final box where the one box points to another and another until the end of the boxes](images/week_5/Week5Slide043.png)
+* These boxes are called *nodes*. A *node* contains both an *item* and a pointer called *next*. In code, you can imagine a node as follows:
+
+  ```
+  typedef struct node
+  {
+      int number;
+      struct node *next;
+  }
+  node;
+
+  ```
+
+  Notice that the item contained within this node is an integer called `number`. Second, a pointer to a node called `next` is included, which will point to another node somewhere in memory.
+* We can recreate `list.c` to utilize a linked list:
+
+  ```
+  // Start to build a linked list by prepending nodes
+
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  typedef struct node
+  {
+      int number;
+      struct node *next;
+  } node;
+
+  int main(void)
+  {
+      // Memory for numbers
+      node *list = NULL;
+
+      // Build list
       for (int i = 0; i < 3; i++)
       {
-          printf("meow\n");
+          // Allocate node for number
+          node *n = malloc(sizeof(node));
+          if (n == NULL)
+          {
+              return 1;
+          }
+          n->number = get_int("Number: ");
+          n->next = NULL;
+
+          // Prepend node to list
+          n->next = list;
+          list = n;
       }
+      return 0;
   }
 
   ```
-* `for` loops can be implemented in Python as follows:
+
+  First, a `node` is defined as a `struct`. For each element of the list, memory for a `node` is allocated via `malloc` to the size of a node. `n->number` (or `n`’s number field) is assigned an integer. `n->next` (or `n`’s next field) is assigned `null`. Then, the node is placed at the start of the list at memory location `list`.
+* Conceptually, we can imagine the process of creating a linked list. First, `node *list` is declared, but it is of a garbage value.
+
+  ![One garbage value](images/week_5/Week5Slide055.png)
+* Next, a node called `n` is allocated in memory.
+
+  ![One garbage value called n with another pointer called list](images/week_5/Week5Slide059.png)
+* Next, the `number` of node is assigned the value `1`.
+
+  ![n pointing to a node with 1 as the number and garbage value as the next](images/week_5/Week5Slide064.png)
+* Next, the node’s `next` field is assigned `NULL`.
+
+  ![n pointing to a node with 1 as the number and null as the value of next](images/week_5/Week5Slide066.png)
+* Next, `list` is pointed at the memory location to where `n` points. `n` and `list` now point to the same place.
+
+  ![n and list both pointing to a node with 1 as the number and null as the value of next](images/week_5/Week5Slide068.png)
+* A new node is then created. Both the `number` and `next` field are filled with garbage values.
+
+  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with garbage values](images/week_5/Week5Slide073.png)
+* The `number` value of `n`’s node (the new node) is updated to `2`.
+
+  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and garbage as the next](images/week_5/Week5Slide075.png)
+* Also, the `next` field is updated as well.
+
+  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and null as the next](images/week_5/Week5Slide077.png)
+* Most importantly, we do not want to lose our connection to any of these nodes lest they be lost forever. Accordingly, `n`’s `next` field is pointed to the same memory location as `list`.
+
+  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and null as the next](images/week_5/Week5Slide084.png)
+* Finally, `list` is updated to point at `n`. We now have a linked list of two items.
+
+  ![list pointing to a node with 1 as the number and next pointing to a node with an n pointing the same place the node with one points to a node with 2 as the number and null as the next](images/week_5/Week5Slide086.png)
+* Looking at our diagram of the list, we can see that the last number added is the first number that appears in the list. Accordingly, if we print the list in order, starting with the first node, the list will appear out of order.
+* We can print the list in the correct order as follows:
 
   ```
-  # Better design
-
-  for i in range(3):
-      print("meow")
-
-  ```
-
-  Notice that `i` is never explicitly used. However, Python will increment the value of `i`.
-* Further, a `while` loop could be implemented as follows:
-
-  ```
-  # Demonstrates while loop
-
-  i = 0
-  while i < 3:
-      print("meow")
-      i += 1
-
-  ```
-* To further our understanding of loops and iteration in Python, let’s create a new file called `uppercase.py` as follows:
-
-  ```
-  # Uppercases string one character at a time
-
-  before = input("Before: ")
-  print("After:  ", end="")
-  for c in before:
-      print(c.upper(), end="")
-  print()
-
-  ```
-
-  Notice how `end=` is used to pass a parameter to the `print` function that continues the line without a line ending. This code passes one string at a time.
-* Reading the documentation, we discover that Python has methods that can be implemented upon the entire string as follows:
-
-  ```
-  # Uppercases string all at once
-
-  before = input("Before: ")
-  after = before.upper()
-  print(f"After:  {after}")
-
-  ```
-
-  Notice how `.upper` is applied to the entire string.
-
-## Abstraction
-
-* As we hinted at earlier today, you can further improve upon our code using functions and abstracting away various code into functions. Modify your earlier-created `meow.py` code as follows:
-
-  ```
-  # Abstraction
-
-  def main():
-      for i in range(3):
-          meow()
-
-  # Meow once
-  def meow():
-      print("meow")
-
-
-  main()
-
-  ```
-
-  Notice that the `meow` function abstracts away the `print` statement. Further, notice that the `main` function appears at the top of the file. At the bottom of the file, the `main` function is called. By convention, it’s expected that you create a `main` function in Python.
-* Indeed, we can pass variables between our functions as follows:
-
-  ```
-  # Abstraction with parameterization
-
-  def main():
-      meow(3)
-
-
-  # Meow some number of times
-  def meow(n):
-      for i in range(n):
-          print("meow")
-
-
-  main()
-
-  ```
-
-  Notice how `meow` now takes a variable `n`. In the `main` function, you can call `meow` and pass a value like `3` to it. Then, `meow` utilizes the value of `n` in the `for` loop.
-* Reading the above code, notice how you, as a C programmer, are able to quite easily make sense of the above code. While some conventions are different, the building blocks you previously learned are very apparent in this new programming language.
-
-## Truncation and Floating Point Imprecision
-
-* Recall that in C, we experienced truncation where one integer is divided by another could result in an imprecise result.
-* You can see how Python handles such division as follows by modifying your code for `calculator.py`:
-
-  ```
-  # Division with integers, demonstration lack of truncation
-
-  # Prompt user for x
-  x = int(input("x: "))
-
-  # Prompt user for y
-  y = int(input("y: "))
-
-  # Divide x by y
-  z = x / y
-  print(z)
-
-  ```
-
-  Notice that executing this code results in a value, but that if you were to see more digits after `.333333` you’d see that we are faced with *floating-point imprecision*. Truncation does not occur.
-* We can reveal this imprecision by modifying our codes slightly:
-
-  ```
-  # Floating-point imprecision
-
-  # Prompt user for x
-  x = int(input("x: "))
-
-  # Prompt user for y
-  y = int(input("y: "))
-
-  # Divide x by y
-  z = x / y
-  print(f"{z:.50f}")
-
-  ```
-
-  Notice that this code reveals the imprecision. Python still faces this issue, just as C does.
-
-## Exceptions
-
-* Let’s explore more about exceptions that can occur when we run Python code.
-* Modify `calculator.py` as follows:
-
-  ```
-  # Doesn't handle exception
-
-  # Prompt user for an integer
-  n = int(input("Input: "))
-  print("Integer")
-
-  ```
-
-  Notice that inputting the wrong data could result in an error.
-* We can `try` to handle and *catch* potential exceptions by modifying our code as follows:
-
-  ```
-  # Handles exception
-
-  # Prompt user for an integer
-  try:
-      n = int(input("Input: "))
-      print("Integer.")
-  except ValueError:
-      print("Not integer.")
-
-  ```
-
-  Notice that the above code repeatedly tries to get the correct type of data, providing additional prompts when needed.
-
-## Mario
-
-* Recall a few weeks ago our challenge of building three blocks on top of one another, like in Mario.
-
-  ![three vertical blocks](images/week_6/Week6Slide073.png)
-* In Python, we can implement something akin to this as follows:
-
-  ```
-  # Prints a column of 3 bricks with a loop
-
-  for i in range(3):
-      print("#")
-
-  ```
-
-  This prints a column of three bricks.
-* In C, we had the advantage of a `do-while` loop. However, in Python, it is conventional to utilize a `while` loop, as Python does not have a `do-while` loop. You can write code as follows in a file called `mario.py`:
-
-  ```
-  # Prints a column of n bricks with a loop
-
-  from cs50 import get_int
-
-  while True:
-      n = get_int("Height: ")
-      if n > 0:
-          break
-
-  for i in range(n):
-      print("#")
-
-  ```
-
-  Notice how the while loop is used to obtain the height. Once a height greater than zero is inputted, the loop breaks.
-* Consider the following image:
-
-  ![four horizontal question blocks](images/week_6/Week6Slide075.png)
-* In Python, we could implement by modifying your code as follows:
-
-  ```
-  # Prints a row of 4 question marks with a loop
-
-  for i in range(4):
-      print("?", end="")
-  print()
-
-  ```
-
-  Notice that you can override the behavior of the `print` function to stay on the same line as the previous print.
-* Similar in spirit to previous iterations, we can further simplify this program:
-
-  ```
-  # Prints a row of 4 question marks without a loop
-
-  print("?" * 4)
-
-  ```
-
-  Notice that we can utilize `*` to multiply the print statement to repeat `4` times.
-* What about a large block of bricks?
-
-  ![three by three block of mario blocks](images/week_6/Week6Slide078.png)
-* To implement the above, you can modify your code as follows:
-
-  ```
-  # Prints a 3-by-3 grid of bricks with loops
-
-  for i in range(3):
-      for j in range(3):
-          print("#", end="")
-      print()
-
-  ```
-
-  Notice how one `for` loop exists inside another. The `print` statement adds a new line at the end of each row of bricks.
-* You can learn more about the `print` function in the [Python documentation](https://docs.python.org/3/library/functions.html#print)
-
-## Lists
-
-* `list`s are a data structure within Python.
-* `list`s have built-in methods or functions within them.
-* For example, consider the following code:
-
-  ```
-  # Averages three numbers using a list
-
-  # Scores
-  scores = [72, 73, 33]
-
-  # Print average
-  average = sum(scores) / len(scores)
-  print(f"Average: {average}")
-
-  ```
-
-  Notice that you can use the built-in `sum` method to calculate the average.
-* You can even utilize the following syntax to get values from the user:
-
-  ```
-  # Averages three numbers using a list and a loop
-
-  from cs50 import get_int
-
-  # Get scores
-  scores = []
-  for i in range(3):
-      score = get_int("Score: ")
-      scores.append(score)
-
-  # Print average
-  average = sum(scores) / len(scores)
-  print(f"Average: {average}")
-
-  ```
-
-  Notice that this code utilizes the built-in `append` method for lists.
-* You can learn more about lists in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range)
-* You can also learn more about `len` in the [Python documentation](https://docs.python.org/3/library/functions.html#len)
-
-## Searching and Dictionaries
-
-* We can also search within a data structure.
-* Consider a program called `phonebook.py` as follows:
-
-  ```
-  # Implements linear search for names using loop
-
-  # A list of names
-  names = ["Yuliia", "David", "John"]
-
-  # Ask for name
-  name = input("Name: ")
-
-  # Search for name
-  for n in names:
-      if name == n:
-          print("Found")
-          break
-  else:
-      print("Not found")
-
-  ```
-
-  Notice how this implements linear search for each name.
-* However, we don’t need to iterate through a list. In Python, we can execute linear search as follows:
-
-  ```
-  # Implements linear search for names using `in`
-
-  # A list of names
-  names = ["Yuliia", "David", "John"]
-
-  # Ask for name
-  name = input("Name: ")
-
-  # Search for name
-  if name in names:
-      print("Found")
-  else:
-      print("Not found")
-
-  ```
-
-  Notice how `in` is used to implement linear search.
-* Still, this code could be improved.
-* Recall that a *dictionary* or `dict` is a collection of *key* and *value* pairs.
-* You can implement a dictionary in Python as follows:
-
-  ```
-  # Implements a phone book as a list of dictionaries, without a variable
-
-  from cs50 import get_string
-
-  people = [
-      {"name": "Yuliia", "number": "+1-617-495-1000"},
-      {"name": "David", "number": "+1-617-495-1000"},
-      {"name": "John", "number": "+1-949-468-2750"},
-  ]
-
-  # Search for name
-  name = get_string("Name: ")
-  for person in people:
-      if person["name"] == name:
-          print(f"Found {person['number']}")
-          break
-  else:
-      print("Not found")
-
-  ```
-
-  Notice that the dictionary is implemented having both `name` and `number` for each entry.
-* Even better, strictly speaking, we don’t need both a `name` and a `number`. We can simplify this code as follows:
-
-  ```
-  # Implements a phone book using a dictionary
-
-  from cs50 import get_string
-
-  people = {
-      "Yuliia": "+1-617-495-1000",
-      "David": "+1-617-495-1000",
-      "John": "+1-949-468-2750",
+  // Print nodes in a linked list with a while loop
+
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  typedef struct node
+  {
+      int number;
+      struct node *next;
+  } node;
+
+  int main(void)
+  {
+      // Memory for numbers
+      node *list = NULL;
+
+      // Build list
+      for (int i = 0; i < 3; i++)
+      {
+          // Allocate node for number
+          node *n = malloc(sizeof(node));
+          if (n == NULL)
+          {
+              return 1;
+          }
+          n->number = get_int("Number: ");
+          n->next = NULL;
+
+          // Prepend node to list
+          n->next = list;
+          list = n;
+      }
+
+      // Print numbers
+      node *ptr = list;
+      while (ptr != NULL)
+      {
+          printf("%i\n", ptr->number);
+          ptr = ptr->next;
+      }
+      return 0;
   }
 
-  # Search for name
-  name = get_string("Name: ")
-  if name in people:
-      print(f"Number: {people[name]}")
-  else:
-      print("Not found")
+  ```
+
+  Notice that `node *ptr = list` creates a temporary variable that points at the same spot that `list` points to. The `while` prints what at the node `ptr` points to, and then updates `ptr` to point to the `next` node in the list.
+* In this example, inserting into the list is always in the order of \(O(1)\), as it only takes a very small number of steps to insert at the front of a list.
+* Considering the amount of time required to search this list, it is in the order of \(O(n)\), because in the worst case the entire list must always be searched to find an item. The time complexity for adding a new element to the list will depend on where that element is added. This is illustrated in the examples below.
+* Linked lists are not stored in a contiguous block of memory. They can grow as large as you wish, provided that enough system resources exist. The downside, however, is that more memory is required to keep track of the list instead of an array. For each element you must store not just the value of the element, but also a pointer to the next node. Further, linked lists cannot be indexed into like is possible in an array because we need to pass through the first \(n - 1\) elements to find the location of the \(n\)th element. Because of this, the list pictured above must be linearly searched. Binary search, therefore, is not possible in a list constructed as above.
+* Further, you could place numbers at the end of the list as illustrated in this code:
+
+  ```
+  // Appends numbers to a linked list
+
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  typedef struct node
+  {
+      int number;
+      struct node *next;
+  } node;
+
+  int main(void)
+  {
+      // Memory for numbers
+      node *list = NULL;
+
+      // Build list
+      for (int i = 0; i < 3; i++)
+      {
+          // Allocate node for number
+          node *n = malloc(sizeof(node));
+          if (n == NULL)
+          {
+              return 1;
+          }
+          n->number = get_int("Number: ");
+          n->next = NULL;
+
+          // If list is empty
+          if (list == NULL)
+          {
+              // This node is the whole list
+              list = n;
+          }
+
+          // If list has numbers already
+          else
+          {
+              // Iterate over nodes in list
+              for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+              {
+                  // If at end of list
+                  if (ptr->next == NULL)
+                  {
+                      // Append node
+                      ptr->next = n;
+                      break;
+                  }
+              }
+          }
+      }
+
+      // Print numbers
+      for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+      {
+          printf("%i\n", ptr->number);
+      }
+
+      // Free memory
+      node *ptr = list;
+      while (ptr != NULL)
+      {
+          node *next = ptr->next;
+          free(ptr);
+          ptr = next;
+      }
+      return 0;
+  }
 
   ```
 
-  Notice that the dictionary is implemented using curly braces. Then, the statement `if name in people` searches to see if the `name` is in the `people` dictionary. Further, notice how, in the `print` statement, we can index into the people dictionary using the value of `name`. Very useful!
-* Python has done their best to get to *constant time* using their built-in searches.
-* You can learn more about dictionaries in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#dict)
-
-## Command-Line Arguments
-
-* As with C, you can also utilize command-line arguments. Consider the following code:
+  Notice how this code *walks down* this list to find the end. When appending an element (adding to the end of the list) our code will run in \(O(n)\), as we have to go through our entire list before we can add the final element. Further, notice that a temporary variable called `next` is used to track `ptr->next`.
+* Further, you could sort your list as items are added:
 
   ```
-  # Prints a command-line argument
+  // Implements a sorted linked list of numbers
 
-  from sys import argv
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <stdlib.h>
 
-  if len(argv) == 2:
-      print(f"hello, {argv[1]}")
-  else:
-      print("hello, world")
+  typedef struct node
+  {
+      int number;
+      struct node *next;
+  } node;
 
-  ```
+  int main(void)
+  {
+      // Memory for numbers
+      node *list = NULL;
 
-  Notice that `argv[1]` is printed using a *formatted string*, noted by the `f` present in the `print` statement.
-* You can learn more about the `sys` library in the [Python documentation](https://docs.python.org/3/library/sys.html)
+      // Build list
+      for (int i = 0; i < 3; i++)
+      {
+          // Allocate node for number
+          node *n = malloc(sizeof(node));
+          if (n == NULL)
+          {
+              return 1;
+          }
+          n->number = get_int("Number: ");
+          n->next = NULL;
 
-## Exit Status
+          // If list is empty
+          if (list == NULL)
+          {
+              list = n;
+          }
 
-* The `sys` library also has built-in methods. We can use `sys.exit(i)` to exit the program with a specific exit code:
+          // If number belongs at beginning of list
+          else if (n->number < list->number)
+          {
+              n->next = list;
+              list = n; 
+          }
 
-  ```
-  # Exits with explicit value, importing sys
+          // If number belongs later in list
+          else
+          {
+              // Iterate over nodes in list
+              for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+              {
+                  // If at end of list
+                  if (ptr->next == NULL)
+                  {
+                      // Append node
+                      ptr->next = n;
+                      break;
+                  }
 
-  import sys
+                  // If in middle of list
+                  if (n->number < ptr->next->number)
+                  {
+                      n->next = ptr->next;
+                      ptr->next = n;
+                      break;
+                  }
+              }
+          }
+      }
 
-  if len(sys.argv) != 2:
-      print("Missing command-line argument")
-      sys.exit(1)
+      // Print numbers
+      for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+      {
+          printf("%i\n", ptr->number);
+      }
 
-  print(f"hello, {sys.argv[1]}")
-  sys.exit(0)
-
-  ```
-
-  Notice that dot-notation is used to utilize the built-in functions of `sys`.
-
-## CSV Files
-
-* Python also has built-in support for CSV files.
-* Modify your code for `phonebook.py` as follows:
-
-  ```
-  import csv
-
-  file = open("phonebook.csv", "a")
-
-  name = input("Name: ")
-  number = input("Number: ")
-
-  writer = csv.writer(file)
-  writer.writerow([name,number])
-
-  file.close()
-
-  ```
-
-  Notice `writerow` adds the commas in the CSV file for us.
-* While `file.close` and `file = open` are commonly used and available syntax in Python, this code can be improved as follows:
-
-  ```
-  import csv
-
-  name = input("Name: ")
-  number = input("Number: ")
-
-  with open("phonebook.csv", "a") as file:
-
-      writer = csv.writer(file)
-      writer.writerow([name,number])
-
-  ```
-
-  Notice that the code is indented under the `with` statement. This automatically closes the file when done.
-* Similarly, we can write a dictionary as follows within the CSV file:
-
-  ```
-  import csv
-
-  name = input("Name: ")
-  number = input("Number: ")
-
-  with open("phonebook.csv", "a") as file:
-
-      writer = csv.DictWriter(file, fieldnames=["name", "number"])
-      writer.writerow({"name": name, "number": number})
+      // Free memory
+      node *ptr = list;
+      while (ptr != NULL)
+      {
+          node *next = ptr->next;
+          free(ptr);
+          ptr = next;
+      }
+      return 0;
+  }
 
   ```
 
-  Notice this code is quite similar to our prior iteration but with `csv.DictWriter` instead.
+  Notice how this list is sorted as it is built. To insert an element in this specific order, our code will still run in \(O(n)\) for each insertion, as in the worst case we will have to look through all current elements.
+* This code may seem complicated. However, notice that with pointers and the syntax above, we can stitch data together in different places in memory.
 
-## Third-Party Libraries
+## Trees
 
-* One of the advantages of Python is its massive user base and similarly large number of third-party libraries.
-* You can install the CS50 Library on your own computer by typing `pip install cs50`, provided you have [Python](https://python.org) installed.
-* Considering other libraries, David demoed the use of `cowsay` and `qrcode`.
+* Arrays offer contiguous memory that can be searched quickly. Arrays also offered the opportunity to engage in binary search.
+* Could we combine the best of both arrays and linked lists?
+* *Binary search trees* are another data structure that can be used to store data more efficiently so that it can be searched and retrieved.
+* You can imagine a sorted sequence of numbers.
+
+  ![1 2 3 4 5 6 7 in boxes next to each other](images/week_5/Week5Slide118.png)
+* Imagine then that the center value becomes the top of a tree. Those that are less than this value are placed to the left. Those values that are more than this value are to the right.
+
+  ![1 2 3 4 5 6 7 in boxes arranged in a hierarchy 4 is at the top 3 and 5 are below that and 1 2 6 7 are below those](images/week_5/Week5Slide119.png)
+* Pointers can then be used to point to the correct location of each area of memory such that each of these nodes can be connected.
+
+  ![1 2 3 4 5 6 7 in boxes arranged in a hierarchy 4 is at the top 3 and 5 are below that and 1 2 6 7 are below those arrows connect them in a tree formation](images/week_5/Week5Slide120.png)
+* In code, this can be implemented as follows.
+
+  ```
+  // Implements a list of numbers as a binary search tree
+
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  // Represents a node
+  typedef struct node
+  {
+      int number;
+      struct node *left;
+      struct node *right;
+  }
+  node;
+
+  void free_tree(node *root);
+  void print_tree(node *root);
+
+  int main(void)
+  {
+      // Tree of size 0
+      node *tree = NULL;
+
+      // Add number to list
+      node *n = malloc(sizeof(node));
+      if (n == NULL)
+      {
+          return 1;
+      }
+      n->number = 2;
+      n->left = NULL;
+      n->right = NULL;
+      tree = n;
+
+      // Add number to list
+      n = malloc(sizeof(node));
+      if (n == NULL)
+      {
+          free_tree(tree);
+          return 1;
+      }
+      n->number = 1;
+      n->left = NULL;
+      n->right = NULL;
+      tree->left = n;
+
+      // Add number to list
+      n = malloc(sizeof(node));
+      if (n == NULL)
+      {
+          free_tree(tree);
+          return 1;
+      }
+      n->number = 3;
+      n->left = NULL;
+      n->right = NULL;
+      tree->right = n;
+
+      // Print tree
+      print_tree(tree);
+
+      // Free tree
+      free_tree(tree);
+      return 0;
+  }
+
+  void free_tree(node *root)
+  {
+      if (root == NULL)
+      {
+          return;
+      }
+      free_tree(root->left);
+      free_tree(root->right);
+      free(root);
+  }
+
+  void print_tree(node *root)
+  {
+      if (root == NULL)
+      {
+          return;
+      }
+      print_tree(root->left);
+      printf("%i\n", root->number);
+      print_tree(root->right);
+  }
+
+  ```
+
+  Notice this search function begins by going to the location of `tree`. Then, it uses recursion to search for `number`. The `free_tree` function recursively frees the tree. `print_tree` recursively prints the tree.
+* A tree like the above offers dynamism that an array does not offer. It can grow and shrink as we wish.
+* Further, this structure offers a search time of \(O(log n)\) when the tree is balanced.
+
+## Dictionaries
+
+* *Dictionaries* are another data structure.
+* Dictionaries, like actual book-form dictionaries that have a word and a definition, have a *key* and a *value*.
+* The *holy grail* of algorithmic time complexity is \(O(1)\) or *constant time*. That is, the ultimate is for access to be instantaneous.
+
+  ![a graph of various time complexities where O of log n is second best and O of 1 is best](images/week_5/Week5Slide151.png)
+* Dictionaries can offer this speed of access through hashing.
+
+## Hashing and Hash Tables
+
+* *Hashing* is the idea of taking a value and being able to output a value that becomes a shortcut to it later.
+* For example, hashing *apple* may hash as a value of `1`, and *berry* may be hashed as `2`. Therefore, finding *apple* is as easy as asking the *hash* algorithm where *apple* is stored. While not ideal in terms of design, ultimately, putting all *a*’s in one bucket and *b*’s in another, this concept of *bucketizing* hashed values illustrates how you can use this concept: a hashed value can be used to shortcut finding such a value.
+* A *hash function* is an algorithm that reduces a larger value to something small and predictable. Generally, this function takes in an item you wish to add to your hash table, and returns an integer representing the array index in which the item should be placed.
+* A *hash table* is a fantastic combination of both arrays and linked lists. When implemented in code, a hash table is an *array* of *pointers* to *node*s.
+* A hash table could be imagined as follows:
+
+  ![a vertical column of 26 boxes one for each letter of the alphabet](images/week_5/Week5Slide157.png)
+
+  Notice that this is an array that is assigned each value of the alphabet.
+* Then, at each location of the array, a linked list is used to track each value being stored there:
+
+  ![a vertical column of 26 boxes one for each letter of the alphabet with various names from the mario universe emerging to the right luigi is with l and mario is with m](images/week_5/Week5Slide169.png)
+* *Collisions* are when you add values to the hash table, and something already exists at the hashed location. In the above, collisions are simply appended to the end of the list.
+* Collisions can be reduced by better programming your hash table and hash algorithm. You can imagine an improvement upon the above as follows:
+
+  ![a vertical column of various boxes arranged by L A K and L I N with Lakitu emerging from L A K and link emerging from L I N](images/week_5/Week5Slide184.png)
+* Consider the following example of a hash algorithm:
+
+  ![luigi being given to a hash algorithm outputting 11](images/week_5/Week5Slide173.png)
+* This could be implemented in code as follows:
+
+  ```
+  #include <ctype.h>
+
+  unsigned int hash(const char *word)
+  {
+      return toupper(word[0]) - 'A';
+  }
+
+
+  ```
+
+  Notice how the hash function returns the value of `toupper(word[0]) - 'A'`.
+* You, as the programmer, have to make a decision about the advantages of using more memory to have a large hash table and potentially reducing search time or using less memory and potentially increasing search time.
+* This structure offers a search time of \(O(n)\).
+
+## Tries
+
+* *Tries* are another form of data structure. Tries are trees of arrays.
+* *Tries* are always searchable in constant time.
+* One downside to *Tries* is that they tend to take up a large amount of memory. Notice that we need \(26 \times 4 = 104\) `node`s just to store *Toad*!
+* *Toad* would be stored as follows:
+
+  ![toad being spelled with one letter at a time where one letter is associated with one list T from one list O from another and so on ](images/week_5/Week5Slide207.png)
+* *Tom* would then be stored as follows:
+
+  ![toad being spelled with one letter at a time where one letter is associated with one list T from one list O from another and so on and tom being spelled similarly where toad and tom share a two common letters T and O](images/week_5/Week5Slide209.png)
+* This structure offers a search time of \(O(1)\).
+* The downside of this structure is how many resources are required to use it.
 
 ## Summing Up
 
-In this lesson, you learned how the building blocks of programming from prior lessons can be implemented within Python. Further, you learned about how Python allowed for more simplified code. Also, you learned how to utilize various Python libraries. In the end, you learned that your skills as a programmer are not limited to a single programming language. Already, you are seeing how you are discovering a new way of learning through this course that could serve you in any programming language – and, perhaps, in nearly any avenue of learning! Specifically, we discussed…
+In this lesson, you learned about using pointers to build new data structures. Specifically, we delved into…
 
-* Python
-* Variables
-* Conditionals
-* Loops
-* Types
-* Object-Oriented programming
-* Truncation and floating point imprecision
-* Exceptions
+* Data structures
+* Stacks and queues
+* Resizing arrays
+* Linked lists
 * Dictionaries
-* Command-line arguments
-* Third-Party libraries
+* Tries
 
 See you next time!

@@ -1,759 +1,1066 @@
-# Week 5 Notes
+# Week 4 Notes
 
-**CS50x 2025 - Week 5 Lecture Notes**
+**CS50x 2025 - Week 4 Lecture Notes**
 
-Source: https://cs50.harvard.edu/x/notes/5/
+Source: https://cs50.harvard.edu/x/notes/4/
 
----
+------------------------------------------------------------------------
 
-# Lecture 5
+# Lecture 4
 
-* [Welcome!](#welcome)
-* [Data Structures](#data-structures)
-* [Queues](#queues)
-* [Stacks](#stacks)
-* [Jack Learns the Facts](#jack-learns-the-facts)
-* [Resizing Arrays](#resizing-arrays)
-* [Arrays](#arrays)
-* [Linked Lists](#linked-lists)
-* [Trees](#trees)
-* [Dictionaries](#dictionaries)
-* [Hashing and Hash Tables](#hashing-and-hash-tables)
-* [Tries](#tries)
-* [Summing Up](#summing-up)
+-   [Welcome!](#welcome)
+-   [Pixel Art](#pixel-art)
+-   [Hexadecimal](#hexadecimal)
+-   [Memory](#memory)
+-   [Pointers](#pointers)
+-   [Strings](#strings)
+-   [Pointer Arithmetic](#pointer-arithmetic)
+-   [String Comparison](#string-comparison)
+-   [Copying and malloc](#copying-and-malloc)
+-   [Valgrind](#valgrind)
+-   [Garbage Values](#garbage-values)
+-   [Pointer Fun with Binky](#pointer-fun-with-binky)
+-   [Swapping](#swapping)
+-   [Overflow](#overflow)
+-   [`scanf`](#scanf)
+-   [File I/O](#file-io)
+-   [Summing Up](#summing-up)
 
-## Welcome!
+## Welcome! {#welcome}
 
-* All the prior weeks have presented you with the fundamental building blocks of programming.
-* All you have learned in C will enable you to implement these building blocks in higher-level programming languages such as Python.
-* Each week, concepts have become more and more challenging, like a hill becoming more and more steep. This week, the challenge evens off as we explore data structures.
-* To date, you have learned about how an array can organize data in memory.
-* Today, we are going to talk about organizing data in memory and design possibilities that emerge from your growing knowledge.
+-   In previous weeks, we talked about images being made of smaller building blocks called pixels.
+-   Today, we will go into further detail about the zeros and ones that make up these images. In particular, we will be going deeper into the fundamental building blocks that make up files, including images.
+-   Further, we will discuss how to access the underlying data stored in computer memory.
+-   As we begin today, know that the concepts covered in this lecture may take some time to fully *click*.
 
-## Data Structures
+## Pixel Art {#pixel-art}
 
-* *Data structures* essentially are forms of organization in memory.
-* There are many ways to organize data in memory.
-* *Abstract data types* are those that we can conceptually imagine. When learning about computer science, it’s often useful to begin with these conceptual data structures. Learning these will make it easier later to understand how to implement more concrete data structures.
+-   Pixels are squares, individual dots, of color that are arranged on an up-down, left-right grid.
 
-## Queues
+-   You can imagine an image as a map of bits, where zeros represent black and ones represent white.
 
-* *Queues* are one form of abstract data structure.
-* Queues have specific properties. Namely, they are *FIFO* or “first in first out.” You can imagine yourself in a line for a ride at an amusement park. The first person in the line gets to go on the ride first. The last person gets to go on the ride last.
-* Queues have specific actions associated with them. For example, an item can be *enqueued*; that is, the item can join the line or queue. Further, an item can be *dequeued* or leave the queue once it reaches the front of the line.
-* In code, you can imagine a queue as follows:
+    ![Zeros and ones being converted to a black and white smiley](images/week_4/Week4Slide015.png)
 
-  ```
-  const int CAPACITY = 50;
+## Hexadecimal {#hexadecimal}
 
-  typedef struct
-  {
-      person people[CAPACITY];
-      int size;
-  }
-  queue;
+-   *RGB*, or *red, green, blue*, are numbers that represent the amount of each of these colors. In Adobe Photoshop, you can see these settings as follows:
 
-  ```
+    ![A photoshop panel with RGB values and hexadecimal input](images/week_4/Week4Slide016.png)
 
-  Notice that an array called people is of type `person`. The `CAPACITY` is how high the stack could be. The integer `size` is how full the queue actually is, regardless of how much it *can* hold.
+    Notice how the amount of red, blue, and green changes the color selected.
 
-## Stacks
+-   You can see from the image above that color is not just represented by three values. At the bottom of the window, there is a special value made up of numbers and characters. `255` is represented as `FF`. Why might this be?
 
-* Queues contrast a *stack*. Fundamentally, the properties of a stack are different than those of a queue. Specifically, it is *LIFO* or “last in first out.” Just like stacking trays in a dining hall, a tray that is placed in a stack last is the first that may be picked up.
-* Stacks have specific actions associated with them. For example, *push* places something on top of a stack. *Pop* is removing something from the top of the stack.
-* In code, you might imagine a stack as follows:
+-   *Hexadecimal* is a system of counting that has 16 counting values. They are as follows:
 
-  ```
-  const int CAPACITY = 50;
+    ```         
+      0 1 2 3 4 5 6 7 8 9 A B C D E F
+    ```
 
-  typedef struct
-  {
-      person people[CAPACITY];
-      int size;
-  }
-  stack;
+    Notice that `F` represents `15`.
 
-  ```
+-   Hexadecimal is also known as *base-16*.
 
-  Notice that an array called people is of type `person`. The `CAPACITY` is how high the stack could be. The integer `size` is how full the stack actually is, regardless of how much it *could* hold. Notice that this code is the same as the code from the queue.
-* You might imagine that the above code has a limitation. Since the capacity of the array is always predetermined in this code. Therefore, the stack may always be oversized. You might imagine only using one place in the stack out of 5000.
-* It would be nice for our stack to be dynamic – able to grow as items are added to it.
+-   When counting in hexadecimal, each column is a power of 16.
 
-## Jack Learns the Facts
+-   The number `0` is represented as `00`.
 
-* We watched a video called [Jack Learns the Facts](https://www.youtube.com/watch?v=ItAG3s6KIEI) by Professor Shannon Duvall of Elon University.
+-   The number `1` is represented as `01`.
 
-## Resizing Arrays
+-   The number `9` is represented by `09`.
 
-* Rewinding to Week 2, we introduced you to your first data structure.
-* An array is a block of contiguous memory.
-* You might imagine an array as follows:
+-   The number `10` is represented as `0A`.
 
-  ![three boxes with 1 2 3](images/week_5/Week5Slide019.png)
-* In memory, there are other values being stored by other programs, functions, and variables. Many of these may be unused garbage values that were utilized at one point but are available now for use.
+-   The number `15` is represented as `0F`.
 
-  ![three boxes with 1 2 3 among lots of other memory elements](images/week_5/Week5Slide022.png)
-* Imagine you wanted to store a fourth value `4` in our array. What would be needed is to allocate a new area of memory and move the old array to a new one? Initially, this new area of memory would be populated with garbage values.
+-   The number `16` is represented as `10`.
 
-  ![Three boxes with 1 2 3 above four boxes with garbage values](images/week_5/Week5Slide025.png)
-* As values are added to this new area of memory, old garbage values would be overwritten.
+-   The number `255` is represented as `FF`, because 16 x 15 (or `F`) is 240. Add 15 more to make 255. This is the highest number you can count using a two-digit hexadecimal system.
 
-  ![Three boxes with 1 2 3 above four boxes with 1 2 3 and a garbage value](images/week_5/Week5Slide026.png)
-* Eventually, all old garbage values would be overwritten with our new data.
-
-  ![Three boxes with 1 2 3 above four boxes with 1 2 3 4](images/week_5/Week5Slide027.png)
-* One of the drawbacks of this approach is that it’s bad design: Every time we add a number, we have to copy the array item by item.
-
-## Arrays
-
-* Wouldn’t it be nice if we were able to put the `4` somewhere else in memory? By definition, this would no longer be an array because `4` would no longer be in contiguous memory. How could we connect different locations in memory?
-* In your terminal, type `code list.c` and write code as follows:
-
-  ```
-  // Implements a list of numbers with an array of fixed size
-
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // List of size 3
-      int list[3];
-
-      // Initialize list with numbers
-      list[0] = 1;
-      list[1] = 2;
-      list[2] = 3;
-
-      // Print list
-      for (int i = 0; i < 3; i++)
-      {
-          printf("%i\n", list[i]);
-      }
-  }
-
-  ```
-
-  Notice that the above is very much like what we learned earlier in this course. Memory is preallocated for three items.
-* Building upon our knowledge obtained more recently, we can leverage our understanding of pointers to create a better design in this code. Modify your code as follows:
-
-  ```
-  // Implements a list of numbers with an array of dynamic size
-
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  int main(void)
-  {
-      // List of size 3
-      int *list = malloc(3 * sizeof(int));
-      if (list == NULL)
-      {
-          return 1;
-      }
-
-      // Initialize list of size 3 with numbers
-      list[0] = 1;
-      list[1] = 2;
-      list[2] = 3;
-
-      // List of size 4
-      int *tmp = malloc(4 * sizeof(int));
-      if (tmp == NULL)
-      {
-          free(list);
-          return 1;
-      }
-
-      // Copy list of size 3 into list of size 4
-      for (int i = 0; i < 3; i++)
-      {
-          tmp[i] = list[i];
-      }
-
-      // Add number to list of size 4
-      tmp[3] = 4;
-
-      // Free list of size 3
-      free(list);
-
-      // Remember list of size 4
-      list = tmp;
-
-      // Print list
-      for (int i = 0; i < 4; i++)
-      {
-          printf("%i\n", list[i]);
-      }
-
-      // Free list
-      free(list);
-      return 0;
-  }
-
-  ```
-
-  Notice that a list of size three integers is created. Then, three memory addresses can be assigned the values `1`, `2`, and `3`. Then, a list of size four is created. Next, the list is copied from the first to the second. The value for the `4` is added to the `tmp` list. Since the block of memory that `list` points to is no longer used, it is freed using the command `free(list)`. Finally, the compiler is told to point `list` pointer now to the block of memory that `tmp` points to. The contents of `list` are printed and then freed. Further, notice the inclusion of `stdlib.h`.
-* It’s useful to think about `list` and `tmp` as both signs that point to a chunk of memory. As in the example above, `list` at one point *pointed* to an array of size 3. By the end, `list` was told to point to a chunk of memory of size 4. Technically, by the end of the above code, `tmp` and `list` both pointed to the same block of memory.
-* One way by which we can copy the array without a for loop is by using `realloc`:
-
-  ```
-  // Implements a list of numbers with an array of dynamic size using realloc
-
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  int main(void)
-  {
-      // List of size 3
-      int *list = malloc(3 * sizeof(int));
-      if (list == NULL)
-      {
-          return 1;
-      }
-
-      // Initialize list of size 3 with numbers
-      list[0] = 1;
-      list[1] = 2;
-      list[2] = 3;
-
-      // Resize list to be of size 4
-      int *tmp = realloc(list, 4 * sizeof(int));
-      if (tmp == NULL)
-      {
-          free(list);
-          return 1;
-      }
-      list = tmp;
-
-      // Add number to list
-      list[3] = 4;
-
-      // Print list
-      for (int i = 0; i < 4; i++)
-      {
-          printf("%i\n", list[i]);
-      }
-
-      // Free list
-      free(list);
-      return 0;
-  }
-
-  ```
-
-  Notice that the list is reallocated to a new array via `realloc`.
-* One may be tempted to allocate way more memory than required for the list, such as 30 items instead of the required 3 or 4. However, this is bad design as it taxes system resources when they are not potentially needed. Further, there is little guarantee that memory for more than 30 items will be needed eventually.
-
-## Linked Lists
-
-* In recent weeks, you have learned about three useful primitives. A `struct` is a data type that you can define yourself. A `.` in *dot notation* allows you to access variables inside that structure. The `*` operator is used to declare a pointer or dereference a variable.
-* Today, you are introduced to the `->` operator. It is an arrow. This operator goes to an address and looks inside a structure.
-* A *linked list* is one of the most powerful data structures within C. A linked list allows you to include values that are located in varying areas of memory. Further, they allow you to dynamically grow and shrink the list as you desire.
-* You might imagine three values stored in three different areas of memory as follows:
-
-  ![Three boxes with 1 2 3 in separate areas of memory](images/week_5/Week5Slide036.png)
-* How could one stitch together these values in a list?
-* We could imagine the data pictured above as follows:
-
-  ![Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached](images/week_5/Week5Slide037.png)
-* We could utilize more memory to keep track of where the next item using a pointer.
-
-  ![Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached where memory addresses are in those attached boxes](images/week_5/Week5Slide041.png)
-
-  Notice that NULL is utilized to indicate that nothing else is *next* in the list.
-* By convention, we would keep one more element in memory, a pointer, that keeps track of the first item in the list, called the *head* of the list.
-
-  ![Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached where memory addresses are in those attached boxes now with a final box with the memory address of the first box](images/week_5/Week5Slide042.png)
-* Abstracting away the memory addresses, the list would appear as follows:
-
-  ![Three boxes with in separate areas of memory with smaller boxes with a final box where the one box points to another and another until the end of the boxes](images/week_5/Week5Slide043.png)
-* These boxes are called *nodes*. A *node* contains both an *item* and a pointer called *next*. In code, you can imagine a node as follows:
-
-  ```
-  typedef struct node
-  {
-      int number;
-      struct node *next;
-  }
-  node;
-
-  ```
-
-  Notice that the item contained within this node is an integer called `number`. Second, a pointer to a node called `next` is included, which will point to another node somewhere in memory.
-* We can recreate `list.c` to utilize a linked list:
-
-  ```
-  // Start to build a linked list by prepending nodes
-
-  #include <cs50.h>
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  typedef struct node
-  {
-      int number;
-      struct node *next;
-  } node;
-
-  int main(void)
-  {
-      // Memory for numbers
-      node *list = NULL;
-
-      // Build list
-      for (int i = 0; i < 3; i++)
-      {
-          // Allocate node for number
-          node *n = malloc(sizeof(node));
-          if (n == NULL)
-          {
-              return 1;
-          }
-          n->number = get_int("Number: ");
-          n->next = NULL;
-
-          // Prepend node to list
-          n->next = list;
-          list = n;
-      }
-      return 0;
-  }
-
-  ```
-
-  First, a `node` is defined as a `struct`. For each element of the list, memory for a `node` is allocated via `malloc` to the size of a node. `n->number` (or `n`’s number field) is assigned an integer. `n->next` (or `n`’s next field) is assigned `null`. Then, the node is placed at the start of the list at memory location `list`.
-* Conceptually, we can imagine the process of creating a linked list. First, `node *list` is declared, but it is of a garbage value.
-
-  ![One garbage value](images/week_5/Week5Slide055.png)
-* Next, a node called `n` is allocated in memory.
-
-  ![One garbage value called n with another pointer called list](images/week_5/Week5Slide059.png)
-* Next, the `number` of node is assigned the value `1`.
-
-  ![n pointing to a node with 1 as the number and garbage value as the next](images/week_5/Week5Slide064.png)
-* Next, the node’s `next` field is assigned `NULL`.
-
-  ![n pointing to a node with 1 as the number and null as the value of next](images/week_5/Week5Slide066.png)
-* Next, `list` is pointed at the memory location to where `n` points. `n` and `list` now point to the same place.
-
-  ![n and list both pointing to a node with 1 as the number and null as the value of next](images/week_5/Week5Slide068.png)
-* A new node is then created. Both the `number` and `next` field are filled with garbage values.
-
-  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with garbage values](images/week_5/Week5Slide073.png)
-* The `number` value of `n`’s node (the new node) is updated to `2`.
-
-  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and garbage as the next](images/week_5/Week5Slide075.png)
-* Also, the `next` field is updated as well.
-
-  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and null as the next](images/week_5/Week5Slide077.png)
-* Most importantly, we do not want to lose our connection to any of these nodes lest they be lost forever. Accordingly, `n`’s `next` field is pointed to the same memory location as `list`.
-
-  ![list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and null as the next](images/week_5/Week5Slide084.png)
-* Finally, `list` is updated to point at `n`. We now have a linked list of two items.
-
-  ![list pointing to a node with 1 as the number and next pointing to a node with an n pointing the same place the node with one points to a node with 2 as the number and null as the next](images/week_5/Week5Slide086.png)
-* Looking at our diagram of the list, we can see that the last number added is the first number that appears in the list. Accordingly, if we print the list in order, starting with the first node, the list will appear out of order.
-* We can print the list in the correct order as follows:
-
-  ```
-  // Print nodes in a linked list with a while loop
-
-  #include <cs50.h>
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  typedef struct node
-  {
-      int number;
-      struct node *next;
-  } node;
-
-  int main(void)
-  {
-      // Memory for numbers
-      node *list = NULL;
-
-      // Build list
-      for (int i = 0; i < 3; i++)
-      {
-          // Allocate node for number
-          node *n = malloc(sizeof(node));
-          if (n == NULL)
-          {
-              return 1;
-          }
-          n->number = get_int("Number: ");
-          n->next = NULL;
-
-          // Prepend node to list
-          n->next = list;
-          list = n;
-      }
-
-      // Print numbers
-      node *ptr = list;
-      while (ptr != NULL)
-      {
-          printf("%i\n", ptr->number);
-          ptr = ptr->next;
-      }
-      return 0;
-  }
-
-  ```
-
-  Notice that `node *ptr = list` creates a temporary variable that points at the same spot that `list` points to. The `while` prints what at the node `ptr` points to, and then updates `ptr` to point to the `next` node in the list.
-* In this example, inserting into the list is always in the order of \(O(1)\), as it only takes a very small number of steps to insert at the front of a list.
-* Considering the amount of time required to search this list, it is in the order of \(O(n)\), because in the worst case the entire list must always be searched to find an item. The time complexity for adding a new element to the list will depend on where that element is added. This is illustrated in the examples below.
-* Linked lists are not stored in a contiguous block of memory. They can grow as large as you wish, provided that enough system resources exist. The downside, however, is that more memory is required to keep track of the list instead of an array. For each element you must store not just the value of the element, but also a pointer to the next node. Further, linked lists cannot be indexed into like is possible in an array because we need to pass through the first \(n - 1\) elements to find the location of the \(n\)th element. Because of this, the list pictured above must be linearly searched. Binary search, therefore, is not possible in a list constructed as above.
-* Further, you could place numbers at the end of the list as illustrated in this code:
-
-  ```
-  // Appends numbers to a linked list
-
-  #include <cs50.h>
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  typedef struct node
-  {
-      int number;
-      struct node *next;
-  } node;
-
-  int main(void)
-  {
-      // Memory for numbers
-      node *list = NULL;
-
-      // Build list
-      for (int i = 0; i < 3; i++)
-      {
-          // Allocate node for number
-          node *n = malloc(sizeof(node));
-          if (n == NULL)
-          {
-              return 1;
-          }
-          n->number = get_int("Number: ");
-          n->next = NULL;
-
-          // If list is empty
-          if (list == NULL)
-          {
-              // This node is the whole list
-              list = n;
-          }
-
-          // If list has numbers already
-          else
-          {
-              // Iterate over nodes in list
-              for (node *ptr = list; ptr != NULL; ptr = ptr->next)
-              {
-                  // If at end of list
-                  if (ptr->next == NULL)
-                  {
-                      // Append node
-                      ptr->next = n;
-                      break;
-                  }
-              }
-          }
-      }
-
-      // Print numbers
-      for (node *ptr = list; ptr != NULL; ptr = ptr->next)
-      {
-          printf("%i\n", ptr->number);
-      }
-
-      // Free memory
-      node *ptr = list;
-      while (ptr != NULL)
-      {
-          node *next = ptr->next;
-          free(ptr);
-          ptr = next;
-      }
-      return 0;
-  }
-
-  ```
-
-  Notice how this code *walks down* this list to find the end. When appending an element (adding to the end of the list) our code will run in \(O(n)\), as we have to go through our entire list before we can add the final element. Further, notice that a temporary variable called `next` is used to track `ptr->next`.
-* Further, you could sort your list as items are added:
-
-  ```
-  // Implements a sorted linked list of numbers
-
-  #include <cs50.h>
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  typedef struct node
-  {
-      int number;
-      struct node *next;
-  } node;
-
-  int main(void)
-  {
-      // Memory for numbers
-      node *list = NULL;
-
-      // Build list
-      for (int i = 0; i < 3; i++)
-      {
-          // Allocate node for number
-          node *n = malloc(sizeof(node));
-          if (n == NULL)
-          {
-              return 1;
-          }
-          n->number = get_int("Number: ");
-          n->next = NULL;
-
-          // If list is empty
-          if (list == NULL)
-          {
-              list = n;
-          }
-
-          // If number belongs at beginning of list
-          else if (n->number < list->number)
-          {
-              n->next = list;
-              list = n; 
-          }
-
-          // If number belongs later in list
-          else
-          {
-              // Iterate over nodes in list
-              for (node *ptr = list; ptr != NULL; ptr = ptr->next)
-              {
-                  // If at end of list
-                  if (ptr->next == NULL)
-                  {
-                      // Append node
-                      ptr->next = n;
-                      break;
-                  }
-
-                  // If in middle of list
-                  if (n->number < ptr->next->number)
-                  {
-                      n->next = ptr->next;
-                      ptr->next = n;
-                      break;
-                  }
-              }
-          }
-      }
-
-      // Print numbers
-      for (node *ptr = list; ptr != NULL; ptr = ptr->next)
-      {
-          printf("%i\n", ptr->number);
-      }
-
-      // Free memory
-      node *ptr = list;
-      while (ptr != NULL)
-      {
-          node *next = ptr->next;
-          free(ptr);
-          ptr = next;
-      }
-      return 0;
-  }
-
-  ```
-
-  Notice how this list is sorted as it is built. To insert an element in this specific order, our code will still run in \(O(n)\) for each insertion, as in the worst case we will have to look through all current elements.
-* This code may seem complicated. However, notice that with pointers and the syntax above, we can stitch data together in different places in memory.
-
-## Trees
-
-* Arrays offer contiguous memory that can be searched quickly. Arrays also offered the opportunity to engage in binary search.
-* Could we combine the best of both arrays and linked lists?
-* *Binary search trees* are another data structure that can be used to store data more efficiently so that it can be searched and retrieved.
-* You can imagine a sorted sequence of numbers.
-
-  ![1 2 3 4 5 6 7 in boxes next to each other](images/week_5/Week5Slide118.png)
-* Imagine then that the center value becomes the top of a tree. Those that are less than this value are placed to the left. Those values that are more than this value are to the right.
-
-  ![1 2 3 4 5 6 7 in boxes arranged in a hierarchy 4 is at the top 3 and 5 are below that and 1 2 6 7 are below those](images/week_5/Week5Slide119.png)
-* Pointers can then be used to point to the correct location of each area of memory such that each of these nodes can be connected.
-
-  ![1 2 3 4 5 6 7 in boxes arranged in a hierarchy 4 is at the top 3 and 5 are below that and 1 2 6 7 are below those arrows connect them in a tree formation](images/week_5/Week5Slide120.png)
-* In code, this can be implemented as follows.
-
-  ```
-  // Implements a list of numbers as a binary search tree
-
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  // Represents a node
-  typedef struct node
-  {
-      int number;
-      struct node *left;
-      struct node *right;
-  }
-  node;
-
-  void free_tree(node *root);
-  void print_tree(node *root);
-
-  int main(void)
-  {
-      // Tree of size 0
-      node *tree = NULL;
-
-      // Add number to list
-      node *n = malloc(sizeof(node));
-      if (n == NULL)
-      {
-          return 1;
-      }
-      n->number = 2;
-      n->left = NULL;
-      n->right = NULL;
-      tree = n;
-
-      // Add number to list
-      n = malloc(sizeof(node));
-      if (n == NULL)
-      {
-          free_tree(tree);
-          return 1;
-      }
-      n->number = 1;
-      n->left = NULL;
-      n->right = NULL;
-      tree->left = n;
-
-      // Add number to list
-      n = malloc(sizeof(node));
-      if (n == NULL)
-      {
-          free_tree(tree);
-          return 1;
-      }
-      n->number = 3;
-      n->left = NULL;
-      n->right = NULL;
-      tree->right = n;
-
-      // Print tree
-      print_tree(tree);
-
-      // Free tree
-      free_tree(tree);
-      return 0;
-  }
-
-  void free_tree(node *root)
-  {
-      if (root == NULL)
-      {
-          return;
-      }
-      free_tree(root->left);
-      free_tree(root->right);
-      free(root);
-  }
-
-  void print_tree(node *root)
-  {
-      if (root == NULL)
-      {
-          return;
-      }
-      print_tree(root->left);
-      printf("%i\n", root->number);
-      print_tree(root->right);
-  }
-
-  ```
-
-  Notice this search function begins by going to the location of `tree`. Then, it uses recursion to search for `number`. The `free_tree` function recursively frees the tree. `print_tree` recursively prints the tree.
-* A tree like the above offers dynamism that an array does not offer. It can grow and shrink as we wish.
-* Further, this structure offers a search time of \(O(log n)\) when the tree is balanced.
-
-## Dictionaries
-
-* *Dictionaries* are another data structure.
-* Dictionaries, like actual book-form dictionaries that have a word and a definition, have a *key* and a *value*.
-* The *holy grail* of algorithmic time complexity is \(O(1)\) or *constant time*. That is, the ultimate is for access to be instantaneous.
-
-  ![a graph of various time complexities where O of log n is second best and O of 1 is best](images/week_5/Week5Slide151.png)
-* Dictionaries can offer this speed of access through hashing.
-
-## Hashing and Hash Tables
-
-* *Hashing* is the idea of taking a value and being able to output a value that becomes a shortcut to it later.
-* For example, hashing *apple* may hash as a value of `1`, and *berry* may be hashed as `2`. Therefore, finding *apple* is as easy as asking the *hash* algorithm where *apple* is stored. While not ideal in terms of design, ultimately, putting all *a*’s in one bucket and *b*’s in another, this concept of *bucketizing* hashed values illustrates how you can use this concept: a hashed value can be used to shortcut finding such a value.
-* A *hash function* is an algorithm that reduces a larger value to something small and predictable. Generally, this function takes in an item you wish to add to your hash table, and returns an integer representing the array index in which the item should be placed.
-* A *hash table* is a fantastic combination of both arrays and linked lists. When implemented in code, a hash table is an *array* of *pointers* to *node*s.
-* A hash table could be imagined as follows:
-
-  ![a vertical column of 26 boxes one for each letter of the alphabet](images/week_5/Week5Slide157.png)
-
-  Notice that this is an array that is assigned each value of the alphabet.
-* Then, at each location of the array, a linked list is used to track each value being stored there:
-
-  ![a vertical column of 26 boxes one for each letter of the alphabet with various names from the mario universe emerging to the right luigi is with l and mario is with m](images/week_5/Week5Slide169.png)
-* *Collisions* are when you add values to the hash table, and something already exists at the hashed location. In the above, collisions are simply appended to the end of the list.
-* Collisions can be reduced by better programming your hash table and hash algorithm. You can imagine an improvement upon the above as follows:
-
-  ![a vertical column of various boxes arranged by L A K and L I N with Lakitu emerging from L A K and link emerging from L I N](images/week_5/Week5Slide184.png)
-* Consider the following example of a hash algorithm:
-
-  ![luigi being given to a hash algorithm outputting 11](images/week_5/Week5Slide173.png)
-* This could be implemented in code as follows:
-
-  ```
-  #include <ctype.h>
-
-  unsigned int hash(const char *word)
-  {
-      return toupper(word[0]) - 'A';
-  }
-
-
-  ```
-
-  Notice how the hash function returns the value of `toupper(word[0]) - 'A'`.
-* You, as the programmer, have to make a decision about the advantages of using more memory to have a large hash table and potentially reducing search time or using less memory and potentially increasing search time.
-* This structure offers a search time of \(O(n)\).
-
-## Tries
-
-* *Tries* are another form of data structure. Tries are trees of arrays.
-* *Tries* are always searchable in constant time.
-* One downside to *Tries* is that they tend to take up a large amount of memory. Notice that we need \(26 \times 4 = 104\) `node`s just to store *Toad*!
-* *Toad* would be stored as follows:
-
-  ![toad being spelled with one letter at a time where one letter is associated with one list T from one list O from another and so on ](images/week_5/Week5Slide207.png)
-* *Tom* would then be stored as follows:
-
-  ![toad being spelled with one letter at a time where one letter is associated with one list T from one list O from another and so on and tom being spelled similarly where toad and tom share a two common letters T and O](images/week_5/Week5Slide209.png)
-* This structure offers a search time of \(O(1)\).
-* The downside of this structure is how many resources are required to use it.
-
-## Summing Up
-
-In this lesson, you learned about using pointers to build new data structures. Specifically, we delved into…
-
-* Data structures
-* Stacks and queues
-* Resizing arrays
-* Linked lists
-* Dictionaries
-* Tries
+-   Hexadecimal is useful because it can be represented using fewer digits. Hexadecimal allows us to represent information more succinctly.
+
+## Memory {#memory}
+
+-   In weeks past, you may recall our artist rendering of concurrent blocks of memory. Applying hexadecimal numbering to each of these blocks of memory, you can visualize these as follows:
+
+    ![Blocks of memory numbered in hex](images/week_4/Week4Slide065.png)
+
+-   You can imagine how there may be confusion regarding whether the `10` block above may represent a location in memory or the value `10`. Accordingly, by convention, all hexadecimal numbers are often represented with the `0x` prefix as follows:
+
+    ![blocks of memory numbered in hex with 0x](images/week_4/Week4Slide066.png)
+
+-   In your terminal window, type `code addresses.c` and write your code as follows:
+
+    ```         
+    // Prints an integer
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int n = 50;
+        printf("%i\n", n);
+    }
+    ```
+
+    Notice how `n` is stored in memory with the value `50`.
+
+-   You can visualize how this program stores this value as follows:
+
+    ![the value 50 stored in a memory location with hex](images/week_4/Week4Slide070.png)
+
+## Pointers {#pointers}
+
+-   The C language has two powerful operators that relate to memory:
+
+    ```         
+      & Provides the address of something stored in memory.
+      * Instructs the compiler to go to a location in memory.
+    ```
+
+-   We can leverage this knowledge by modifying our code as follows:
+
+    ```         
+    // Prints an integer's address
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int n = 50;
+        printf("%p\n", &n);
+    }
+    ```
+
+    Notice the `%p`, which allows us to view the address of a location in memory. `&n` can be literally translated as “the address of `n`.” Executing this code will return an address of memory beginning with `0x`.
+
+-   A *pointer* is a variable that stores the address of something. Most succinctly, a pointer is an address in your computer’s memory.
+
+-   Consider the following code:
+
+    ```         
+    int n = 50;
+    int *p = &n;
+    ```
+
+    Notice that `p` is a pointer that contains the address of an integer `n`.
+
+-   Modify your code as follows:
+
+    ```         
+    // Stores and prints an integer's address
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int n = 50;
+        int *p = &n;
+        printf("%p\n", p);
+    }
+    ```
+
+    Notice that this code has the same effect as our previous code. We have simply leveraged our new knowledge of the `&` and `*` operators.
+
+-   To illustrate the use of the `*` operator, consider the following:
+
+    ```         
+    // Stores and prints an integer via its address
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int n = 50;
+        int *p = &n;
+        printf("%i\n", *p);
+    }
+    ```
+
+    Notice that the `printf` line prints the integer at the location of `p`. `int *p` creates a pointer whose job is to store the memory address of an integer.
+
+-   You can visualize our code as follows:
+
+    ![Same value of 50 in a memory location with a pointer value stored elsewhere](images/week_4/Week4Slide078.png)
+
+    Notice the pointer seems rather large. Indeed, a pointer is usually stored as an 8-byte value. `p` is storing the address of the `50`.
+
+-   You can more accurately visualize a pointer as one address that points to another:
+
+    ![A pointer as an arrow, pointing from one location of memory to another](images/week_4/Week4Slide079.png)
+
+## Strings {#strings}
+
+-   Now that we have a mental model for pointers, we can peel back a level of simplification that was offered earlier in this course.
+
+-   Modify your code as follows:
+
+    ```         
+    // Prints a string
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        string s = "HI!";
+        printf("%s\n", s);
+    }
+    ```
+
+    Notice that a string `s` is printed.
+
+-   Recall that a string is simply an array of characters. For example, `string s = "HI!"` can be represented as follows:
+
+    ![The string HI with an exclamation point stored in memory](images/week_4/Week4Slide085.png)
+
+-   However, what is `s` really? Where is the `s` stored in memory? As you can imagine, `s` needs to be stored somewhere. You can visualize the relationship of `s` to the string as follows:
+
+    ![Same string HI with a pointer pointing to it](images/week_4/Week4Slide086.png)
+
+    Notice how a pointer called `s` tells the compiler where the first byte of the string exists in memory.
+
+-   Modify your code as follows:
+
+    ```         
+    // Prints a string's address as well the addresses of its chars
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        string s = "HI!";
+        printf("%p\n", s);
+        printf("%p\n", &s[0]);
+        printf("%p\n", &s[1]);
+        printf("%p\n", &s[2]);
+        printf("%p\n", &s[3]);
+    }
+    ```
+
+    Notice the above prints the memory locations of each character in the string `s`. The `&` symbol is used to show the address of each element of the string. When running this code, notice that elements `0`, `1`, `2`, and `3` are next to one another in memory.
+
+-   Likewise, you can modify your code as follows:
+
+    ```         
+    // Declares a string with CS50 Library
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        string s = "HI!";
+        printf("%s\n", s);
+    }
+    ```
+
+    Notice that this code will present the string that starts at the location of `s`. This code effectively removes the training wheels of the `string` data type offered by `cs50.h`. This is raw C code, without the scaffolding of the cs50 library.
+
+-   Taking off the training wheels, you can modify your code again:
+
+    ```         
+    // Declares a string without CS50 Library
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char *s = "HI!";
+        printf("%s\n", s);
+    }
+    ```
+
+    Notice that `cs50.h` is removed. A string is implemented as a `char *`.
+
+-   You can imagine how a string, as a data type, is created.
+
+-   Last week, we learned how to create your own data type as a struct.
+
+-   The cs50 library includes a struct as follows: `typedef char *string`
+
+-   This struct, when using the cs50 library, allows one to use a custom data type called `string`.
+
+## Pointer Arithmetic {#pointer-arithmetic}
+
+-   Pointer arithmetic is the ability to do math on locations of memory.
+
+-   You can modify your code to print out each memory location in the string as follows:
+
+    ```         
+    // Prints a string's chars
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char *s = "HI!";
+        printf("%c\n", s[0]);
+        printf("%c\n", s[1]);
+        printf("%c\n", s[2]);
+    }
+    ```
+
+    Notice that we are printing each character at the location of `s`.
+
+-   Further, you can modify your code as follows:
+
+    ```         
+    // Prints a string's chars via pointer arithmetic
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char *s = "HI!";
+        printf("%c\n", *s);
+        printf("%c\n", *(s + 1));
+        printf("%c\n", *(s + 2));
+    }
+    ```
+
+    Notice that the first character at the location of `s` is printed. Then, the character at the location `s + 1` is printed, and so on.
+
+-   Likewise, consider the following:
+
+    ```         
+    // Prints substrings via pointer arithmetic
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char *s = "HI!";
+        printf("%s\n", s);
+        printf("%s\n", s + 1);
+        printf("%s\n", s + 2);
+    }
+    ```
+
+    Notice that this code prints the values stored at various memory locations starting with `s`.
+
+## String Comparison {#string-comparison}
+
+-   A string of characters is simply an array of characters identified by the location of its first byte.
+
+-   Earlier in the course, we considered the comparison of integers. We could represent this in code by typing `code compare.c` into the terminal window as follows:
+
+    ```         
+    // Compares two integers
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        // Get two integers
+        int i = get_int("i: ");
+        int j = get_int("j: ");
+
+        // Compare integers
+        if (i == j)
+        {
+            printf("Same\n");
+        }
+        else
+        {
+            printf("Different\n");
+        }
+    }
+    ```
+
+    Notice that this code takes two integers from the user and compares them.
+
+-   In the case of strings, however, one cannot compare two strings using the `==` operator.
+
+-   Utilizing the `==` operator in an attempt to compare strings will attempt to compare the memory locations of the strings instead of the characters therein. Accordingly, we recommended the use of `strcmp`.
+
+-   To illustrate this, modify your code as follows:
+
+    ```         
+    // Compares two strings' addresses
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        // Get two strings
+        char *s = get_string("s: ");
+        char *t = get_string("t: ");
+
+        // Compare strings' addresses
+        if (s == t)
+        {
+            printf("Same\n");
+        }
+        else
+        {
+            printf("Different\n");
+        }
+    }
+    ```
+
+    Noticing that typing in `HI!` for both strings still results in the output of `Different`.
+
+-   Why are these strings seemingly different? You can use the following to visualize why:
+
+    ![two strings stored separately in memory](images/week_4/Week4Slide115.png)
+
+-   Therefore, the code for `compare.c` above is actually attempting to see if the memory addresses are different, not the strings themselves.
+
+-   Using `strcmp`, we can correct our code:
+
+    ```         
+    // Compares two strings using strcmp
+
+    #include <cs50.h>
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get two strings
+        char *s = get_string("s: ");
+        char *t = get_string("t: ");
+
+        // Compare strings
+        if (strcmp(s, t) == 0)
+        {
+            printf("Same\n");
+        }
+        else
+        {
+            printf("Different\n");
+        }
+    }
+    ```
+
+    Notice that `strcmp` can return `0` if the strings are the same.
+
+-   To further illustrate how these two strings are living in two locations, modify your code as follows:
+
+    ```         
+    // Prints two strings
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        // Get two strings
+        char *s = get_string("s: ");
+        char *t = get_string("t: ");
+
+        // Print strings
+        printf("%s\n", s);
+        printf("%s\n", t);
+    }
+    ```
+
+    Notice how we now have two separate strings stored, likely at two separate locations.
+
+-   You can see the locations of these two stored strings with a small modification:
+
+    ```         
+    // Prints two strings' addresses
+
+    #include <cs50.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+        // Get two strings
+        char *s = get_string("s: ");
+        char *t = get_string("t: ");
+
+        // Print strings' addresses
+        printf("%p\n", s);
+        printf("%p\n", t);
+    }
+    ```
+
+    Notice that the `%s` has been changed to `%p` in the print statement.
+
+## Copying and malloc {#copying-and-malloc}
+
+-   A common need in programming is to copy one string to another.
+
+-   In your terminal window, type `code copy.c` and write code as follows:
+
+    ```         
+    // Capitalizes a string
+
+    #include <cs50.h>
+    #include <ctype.h>
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get a string
+        string s = get_string("s: ");
+
+        // Copy string's address
+        string t = s;
+
+        // Capitalize first letter in string
+        t[0] = toupper(t[0]);
+
+        // Print string twice
+        printf("s: %s\n", s);
+        printf("t: %s\n", t);
+    }
+    ```
+
+    Notice that `string t = s` copies the address of `s` to `t`. This does not accomplish what we are desiring. The string is not copied – only the address is. Further, notice the inclusion of `ctype.h`.
+
+-   You can visualize the above code as follows:
+
+    ![two pointers pointing at the same memory location with a string](images/week_4/Week4Slide124.png)
+
+    Notice that `s` and `t` are still pointing at the same blocks of memory. This is not an authentic copy of a string. Instead, these are two pointers pointing at the same string.
+
+-   Before we address this challenge, it’s important to ensure that we don’t experience a *segmentation fault* through our code, where we attempt to copy `string s` to `string t`, where `string t` does not exist. We can employ the `strlen` function as follows to assist with that:
+
+    ```         
+    // Capitalizes a string, checking length first
+
+    #include <cs50.h>
+    #include <ctype.h>
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get a string
+        string s = get_string("s: ");
+
+        // Copy string's address
+        string t = s;
+
+        // Capitalize first letter in string
+        if (strlen(t) > 0)
+        {
+            t[0] = toupper(t[0]);
+        }
+
+        // Print string twice
+        printf("s: %s\n", s);
+        printf("t: %s\n", t);
+    }
+    ```
+
+    Notice that `strlen` is used to make sure `string t` exists. If it does not, nothing will be copied.
+
+-   To be able to make an authentic copy of the string, we will need to introduce two new building blocks. First, `malloc` allows you, the programmer, to allocate a block of a specific size of memory. Second, `free` allows you to tell the compiler to *free up* that block of memory you previously allocated.
+
+-   We can modify our code to create an authentic copy of our string as follows:
+
+    ```         
+    // Capitalizes a copy of a string
+
+    #include <cs50.h>
+    #include <ctype.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get a string
+        char *s = get_string("s: ");
+
+        // Allocate memory for another string
+        char *t = malloc(strlen(s) + 1);
+
+        // Copy string into memory, including '\0'
+        for (int i = 0; i <= strlen(s); i++)
+        {
+            t[i] = s[i];
+        }
+
+        // Capitalize copy
+        t[0] = toupper(t[0]);
+
+        // Print strings
+        printf("s: %s\n", s);
+        printf("t: %s\n", t);
+    }
+    ```
+
+    Notice that `malloc(strlen(s) + 1)` creates a block of memory that is the length of the string `s` plus one. This allows for the inclusion of the *null* `\0` character in our final copied string. Then, the `for` loop walks through the string `s` and assigns each value to that same location on the string `t`.
+
+-   It turns out that our code is inefficient. Modify your code as follows:
+
+    ```         
+    // Capitalizes a copy of a string, defining n in loop too
+
+    #include <cs50.h>
+    #include <ctype.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get a string
+        char *s = get_string("s: ");
+
+        // Allocate memory for another string
+        char *t = malloc(strlen(s) + 1);
+
+        // Copy string into memory, including '\0'
+        for (int i = 0, n = strlen(s); i <= n; i++)
+        {
+            t[i] = s[i];
+        }
+
+        // Capitalize copy
+        t[0] = toupper(t[0]);
+
+        // Print strings
+        printf("s: %s\n", s);
+        printf("t: %s\n", t);
+    }
+    ```
+
+    Notice that `n = strlen(s)` is defined now in the left-hand side of the `for loop`. It’s best not to call unneeded functions in the middle condition of the `for` loop, as it will run over and over again. When moving `n = strlen(s)` to the left-hand side, the function `strlen` only runs once.
+
+-   The `C` Language has a built-in function to copy strings called `strcpy`. It can be implemented as follows:
+
+    ```         
+    // Capitalizes a copy of a string using strcpy
+
+    #include <cs50.h>
+    #include <ctype.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get a string
+        char *s = get_string("s: ");
+
+        // Allocate memory for another string
+        char *t = malloc(strlen(s) + 1);
+
+        // Copy string into memory
+        strcpy(t, s);
+
+        // Capitalize copy
+        t[0] = toupper(t[0]);
+
+        // Print strings
+        printf("s: %s\n", s);
+        printf("t: %s\n", t);
+    }
+    ```
+
+    Notice that `strcpy` does the same work that our `for` loop previously did.
+
+-   Both `get_string` and `malloc` return `NULL`, a special value in memory, in the event that something goes wrong. You can write code that can check for this `NULL` condition as follows:
+
+    ```         
+    // Capitalizes a copy of a string without memory errors
+
+    #include <cs50.h>
+    #include <ctype.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Get a string
+        char *s = get_string("s: ");
+        if (s == NULL)
+        {
+            return 1;
+        }
+
+        // Allocate memory for another string
+        char *t = malloc(strlen(s) + 1);
+        if (t == NULL)
+        {
+            return 1;
+        }
+
+        // Copy string into memory
+        strcpy(t, s);
+
+        // Capitalize copy
+        if (strlen(t) > 0)
+        {
+            t[0] = toupper(t[0]);
+        }
+
+        // Print strings
+        printf("s: %s\n", s);
+        printf("t: %s\n", t);
+
+        // Free memory
+        free(t);
+        return 0;
+    }
+    ```
+
+    Notice that if the string obtained is of length `0` or malloc fails, `NULL` is returned. Further, notice that `free` lets the computer know you are done with this block of memory you created via `malloc`.
+
+## Valgrind {#valgrind}
+
+-   *Valgrind* is a tool that can check to see if there are memory-related issues with your programs wherein you utilized `malloc`. Specifically, it checks to see if you `free` all the memory you allocated.
+
+-   Consider the following code for `memory.c`:
+
+    ```         
+    // Demonstrates memory errors via valgrind
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main(void)
+    {
+        int *x = malloc(3 * sizeof(int));
+        x[1] = 72;
+        x[2] = 73;
+        x[3] = 33;
+    }
+    ```
+
+    Notice that running this program does not cause any errors. While `malloc` is used to allocate enough memory for an array, the code fails to `free` that allocated memory.
+
+-   If you type `make memory` followed by `valgrind ./memory`, you will get a report from valgrind that will report where memory has been lost as a result of your program. One error that valgrind reveals is that we attempted to assign the value of `33` at the 4th position of the array, where we only allocated an array of size `3`. Another error is that we never freed `x`.
+
+-   You can modify your code to free the memory of `x` as follows:
+
+    ```         
+    // Demonstrates memory errors via valgrind
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main(void)
+    {
+        int *x = malloc(3 * sizeof(int));
+        x[1] = 72;
+        x[2] = 73;
+        x[3] = 33;
+        free(x);
+    }
+    ```
+
+    Notice that running valgrind again now results in no memory leaks.
+
+## Garbage Values {#garbage-values}
+
+-   When you ask the compiler for a block of memory, there is no guarantee that this memory will be empty.
+
+-   It’s very possible that the memory you allocated was previously utilized by the computer. Accordingly, you may see *junk* or *garbage values*. This is a result of you getting a block of memory but not initializing it. For example, consider the following code for `garbage.c`:
+
+    ```         
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main(void)
+    {
+        int scores[1024];
+        for (int i = 0; i < 1024; i++)
+        {
+            printf("%i\n", scores[i]);
+        }
+    }
+    ```
+
+    Notice that running this code will allocate `1024` locations in memory for your array, but the `for` loop will likely show that not all values therein are `0`. It’s always best practice to be aware of the potential for garbage values when you do not initialize blocks of memory to some other value like zero or otherwise.
+
+## Pointer Fun with Binky {#pointer-fun-with-binky}
+
+-   We watched a [video from Stanford University](https://www.youtube.com/watch?v=5VnDaHBi8dM) that helped us visualize and understand pointers.
+
+## Swapping {#swapping}
+
+-   In the real world, a common need in programming is to swap two values. Naturally, it’s hard to swap two variables without a temporary holding space. In practice, you can type `code swap.c` and write code as follows to see this in action:
+
+    ```         
+    // Fails to swap two integers
+
+    #include <stdio.h>
+
+    void swap(int a, int b);
+
+    int main(void)
+    {
+        int x = 1;
+        int y = 2;
+
+        printf("x is %i, y is %i\n", x, y);
+        swap(x, y);
+        printf("x is %i, y is %i\n", x, y);
+    }
+
+    void swap(int a, int b)
+    {
+        int tmp = a;
+        a = b;
+        b = tmp;
+    }
+    ```
+
+    Notice that while this code runs, it does not work. The values, even after being sent to the `swap` function, do not swap. Why?
+
+-   When you pass values to a function, you are only providing copies. The *scope* of `x` and `y` is limited to the main function as the code is presently written. That is, the values of `x` and `y` created in the curly `{}` braces of the `main` function only have the scope of the `main` function. In our code above, `x` and `y` are being passed by *value*.
+
+-   Consider the following image:
+
+    ![a rectangle with machine code at top followed by globals heap and stack](images/week_4/Week4Slide163.png)
+
+    Notice that *global* variables, which we have not used in this course, live in one place in memory. Various functions are stored in the `stack` in another area of memory.
+
+-   Now, consider the following image:
+
+    ![a rectangle with main function at bottom and swap function directly above it](images/week_4/Week4Slide167.png)
+
+    Notice that `main` and `swap` have two separate *frames* or areas of memory. Therefore, we cannot simply pass the values from one function to another to change them.
+
+-   Modify your code as follows:
+
+    ```         
+    // Swaps two integers using pointers
+
+    #include <stdio.h>
+
+    void swap(int *a, int *b);
+
+    int main(void)
+    {
+        int x = 1;
+        int y = 2;
+
+        printf("x is %i, y is %i\n", x, y);
+        swap(&x, &y);
+        printf("x is %i, y is %i\n", x, y);
+    }
+
+    void swap(int *a, int *b)
+    {
+        int tmp = *a;
+        *a = *b;
+        *b = tmp;
+    }
+    ```
+
+    Notice that variables are not passed by *value* but by *reference*. That is, the addresses of `a` and `b` are provided to the function. Therefore, the `swap` function can know where to make changes to the actual `a` and `b` from the main function.
+
+-   You can visualize this as follows:
+
+    ![a and b stored in main function being passed by reference to the swap function](images/week_4/Week4Slide198.png)
+
+## Overflow {#overflow}
+
+-   A *heap overflow* is when you overflow the heap, touching areas of memory you are not supposed to.
+-   A *stack overflow* is when too many functions are called, overflowing the amount of memory available.
+-   Both of these are considered *buffer overflows*.
+
+## `scanf` {#scanf}
+
+-   In CS50, we have created functions like `get_int` to simplify the act of getting input from the user.
+
+-   `scanf` is a built-in function that can get user input.
+
+-   We can reimplement `get_int` rather easily using `scanf` as follows:
+
+    ```         
+    // Gets an int from user using scanf
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int n;
+        printf("n: ");
+        scanf("%i", &n);
+        printf("n: %i\n", n);
+    }
+    ```
+
+    Notice that the value of `n` is stored at the location of `n` in the line `scanf("%i", &n)`.
+
+-   However, attempting to reimplement `get_string` is not easy. Consider the following:
+
+    ```         
+    // Dangerously gets a string from user using scanf with array
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char s[4];
+        printf("s: ");
+        scanf("%s", s);
+        printf("s: %s\n", s);
+    }
+    ```
+
+    Notice that no `&` is required because strings are special. Still, this program will not function correctly every time it is run. Nowhere in this program do we allocate the amount of memory required for our string. Indeed, we don’t know how long of a string may be inputted by the user! Further, we don’t know what garbage values may exist at the memory location.
+
+-   Further, your code could be modified as follows. However, we have to pre-allocate a certain amount of memory for a string:
+
+    ```         
+    // Using malloc
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main(void)
+    {
+        char *s = malloc(4);
+        if (s == NULL)
+        {
+            return 1;
+        }
+        printf("s: ");
+        scanf("%s", s);
+        printf("s: %s\n", s);
+        free(s);
+        return 0;
+    }
+    ```
+
+    Notice that if a string that is four bytes is provided you *might* get an error.
+
+-   Simplifying our code as follows, we can further understand this essential problem of pre-allocation:
+
+    ```         
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char s[4];
+        printf("s: ");
+        scanf("%s", s);
+        printf("s: %s\n", s);
+    }
+    ```
+
+    Notice that if we pre-allocate an array of size `4`, we can type `cat` and the program functions. However, a string larger than this *could* create an error.
+
+-   Sometimes, the compiler or the system running it may allocate more memory than we indicate. Fundamentally, though, the above code is unsafe. We cannot trust that the user will input a string that fits into our pre-allocated memory.
+
+## File I/O {#file-io}
+
+-   You can read from and manipulate files. While this topic will be discussed further in a future week, consider the following code for `phonebook.c`:
+
+    ```         
+    // Saves names and numbers to a CSV file
+
+    #include <cs50.h>
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Open CSV file
+        FILE *file = fopen("phonebook.csv", "a");
+
+        // Get name and number
+        char *name = get_string("Name: ");
+        char *number = get_string("Number: ");
+
+        // Print to file
+        fprintf(file, "%s,%s\n", name, number);
+
+        // Close file
+        fclose(file);
+    }
+    ```
+
+    Notice that this code uses pointers to access the file.
+
+-   You can create a file called `phonebook.csv` in advance of running the above code or download [phonebook.csv](https://cdn.cs50.net/2024/fall/lectures/4/src4/phonebook.csv?download). After running the above program and inputting a name and phone number, you will notice that this data persists in your CSV file.
+
+-   If we want to ensure that `phonebook.csv` exists prior to running the program, we can modify our code as follows:
+
+    ```         
+    // Saves names and numbers to a CSV file
+
+    #include <cs50.h>
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        // Open CSV file
+        FILE *file = fopen("phonebook.csv", "a");
+        if (!file)
+        {
+            return 1;
+        }
+
+        // Get name and number
+        char *name = get_string("Name: ");
+        char *number = get_string("Number: ");
+
+        // Print to file
+        fprintf(file, "%s,%s\n", name, number);
+
+        // Close file
+        fclose(file);
+    }
+    ```
+
+    Notice that this program protects against a `NULL` pointer by invoking `return 1`.
+
+-   We can implement our own copy program by typing `code cp.c` and writing code as follows:
+
+    ```         
+    // Copies a file
+
+    #include <stdio.h>
+    #include <stdint.h>
+
+    typedef uint8_t BYTE;
+
+    int main(int argc, char *argv[])
+    {
+        FILE *src = fopen(argv[1], "rb");
+        FILE *dst = fopen(argv[2], "wb");
+
+        BYTE b;
+
+        while (fread(&b, sizeof(b), 1, src) != 0)
+        {
+            fwrite(&b, sizeof(b), 1, dst);
+        }
+
+        fclose(dst);
+        fclose(src);
+    }
+    ```
+
+    Notice that this file creates our own data type called a BYTE , which is the size of a uint8_t. Then, the file reads a `BYTE` and writes it to a file.
+
+-   BMPs are also assortments of data that we can examine and manipulate. This week, you will be doing just that in your problem sets!
+
+## Summing Up {#summing-up}
+
+In this lesson, you learned about pointers that provide you with the ability to access and manipulate data at specific memory locations. Specifically, we delved into…
+
+-   Pixel art
+-   Hexadecimal
+-   Memory
+-   Pointers
+-   Strings
+-   Pointer Arithmetic
+-   String Comparison
+-   Copying
+-   malloc and Valgrind
+-   Garbage values
+-   Swapping
+-   Overflow
+-   `scanf`
+-   File I/O
 
 See you next time!
