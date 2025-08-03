@@ -6,18 +6,20 @@ tbl-colwidths: [5,15,5,5,5,5,5]
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
 
 ::: column-body
-| Week | Topic            | Lecture | Notes | Code | Tutorial | Homework |
-|:----:|:-----------------|:-------:|:-----:|:----:|:--------:|:--------:|
-|  1   | 1.1 Introduction |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|      | 1.2 Scratch      |   💻    |       |      |          |          |
-|      |                  |         |       |      |          |          |
-|  2   | Topic 2          |         |       |      |          |          |
-|  3   | Topic 3          |         |       |      |          |          |
-|  4   | Topic 4a         |         |       |      |          |          |
-|      | Topic 4b         |         |       |      |          |          |
-|  5   | Topic 5a         |         |       |      |          |          |
-|      | Topic 5 extra    |         |       |      |          |          |
-|      | Topic 5b         |         |       |      |          |          |
+| Week | Topic              | Lecture | Notes | Code | Tutorial | Homework |
+|:----:|:-------------------|:-------:|:-----:|:----:|:--------:|:--------:|
+|  1   | 👋 Introduction    |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
+|      | 🐈 Scratch         |   💻    |  📕   |      |          |          |
+|  2   | 🟢 C               |         |  📕   |      |          |          |
+|  3   | 🟢 Arrays          |         |  📕   |      |          |          |
+|  4   | 🟢 Algorithms      |         |  📕   |      |          |          |
+|  5   | 🟢 Memory          |         |  📕   |      |          |          |
+|  6   | 🟢 Data structures |         |  📕   |      |          |          |
+|  7   | 🐍 Python          |         |  📕   |      |          |          |
+|  8   | 📊 SQL             |         |  📕   |      |          |          |
+|  9   | 🌐 Web programming |         |  📕   |      |          |          |
+|  10  | 🐍 Flask           |         |  📕   |      |          |          |
+|  11  | 👋 Wrap up         |         |  📕   |      |          |          |
 :::
 
 ```{r echo = FALSE}
