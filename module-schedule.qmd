@@ -6,19 +6,19 @@ tbl-colwidths: [5,15,5,5,5,5,5]
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
 
 ::: column-body
-| Week | Topic              | Lecture | Notes | Code | Tutorial | Homework |
-|:----:|:-------------------|:-------:|:-----:|:----:|:--------:|:--------:|
-|  1   | 🐈 Scratch         |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  2   | 🟢 C               |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  3   | 🟢 Arrays          |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  4   | 🟢 Algorithms      |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  5   | 🟢 Memory          |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  6   | 🟢 Data structures |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  7   | 🐍 Python          |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  8   | 📊 SQL             |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  9   | 🌐 Web programming |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  10  | 🐍 Flask           |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
-|  11  | 👋 Wrap up         |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
+| Week | Topic | Lecture | Notes | Code | Tutorial | Homework |
+|:--------:|:-----------|:--------:|:--------:|:--------:|:--------:|:--------:|
+| 1 | 🐈 Scratch | 💻 | [📕](notes/notes_1.html "Notes 1") | 🤖 | 👨‍🏫 | 🏠 |
+| 2 | 🟢 C | 💻 | [📕](notes/notes_2.html "Notes 2") | 🤖 | 👨‍🏫 | 🏠 |
+| 3 | 🟢 Arrays | 💻 | [📕](notes/notes_3.html "Notes 3") | 🤖 | 👨‍🏫 | 🏠 |
+| 4 | 🟢 Algorithms | 💻 | [📕](notes/notes_4.html "Notes 4") | 🤖 | 👨‍🏫 | 🏠 |
+| 5 | 🟢 Memory | 💻 | [📕](notes/notes_5.html "Notes 5") | 🤖 | 👨‍🏫 | 🏠 |
+| 6 | 🟢 Data structures | 💻 | [📕](notes/notes_6.html "Notes 6") | 🤖 | 👨‍🏫 | 🏠 |
+| 7 | 🐍 Python | 💻 | [📕](notes/notes_7.html "Notes 7") | 🤖 | 👨‍🏫 | 🏠 |
+| 8 | 📊 SQL | 💻 | [📕](notes/notes_8.html "Notes 8") | 🤖 | 👨‍🏫 | 🏠 |
+| 9 | 🌐 Web programming | 💻 | [📕](notes/notes_9.html "Notes 9") | 🤖 | 👨‍🏫 | 🏠 |
+| 10 | 🐍 Flask | 💻 | [📕](notes/notes_10.html "Notes 10") | 🤖 | 👨‍🏫 | 🏠 |
+| 11 | 👋 Wrap up | 💻 | [📕](notes/notes_11.html "Notes 11") | 🤖 | 👨‍🏫 | 🏠 |
 :::
 
 ```{r echo = FALSE}
