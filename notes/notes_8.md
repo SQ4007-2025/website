@@ -175,7 +175,7 @@ Source: https://cs50.harvard.edu/x/notes/8/
 * When you visit this URL, notice that the file name `hello.html` appears at the end of this URL. Further, notice, based upon the URL, that the server is serving via port 8080.
 * The hierarchy of tags can be represented as follows:
 
-  ![html code next to a hierarchy showing parent and child nodes](images/week_8/cs50Week8Slide065.png)
+  ![html code next to a hierarchy showing parent and child nodes](images/week_8/Week8Slide065.png)
 * Knowledge of this hierarchy will be useful later as we learn JavaScript.
 * The browser will read your HTML file top to bottom and left to right.
 * Because whitespace and indentation are effectively ignored in HTML, you will need to use `<p>` paragraph tags to open and close a paragraph. Consider the following:

@@ -28,7 +28,7 @@ Source: https://cs50.harvard.edu/x/notes/3/
 * Also, we are going to consider the efficiency of these algorithms. Indeed, we are going to be building upon our understanding of how to use some of the concepts we discussed last week in building algorithms.
 * Recall back to earlier in the course when we introduced the following graph:
 
-  ![chart with: "size of problem" as x-axis; "time to solve" as y-axis; red, steep straight line from origin to top of graph close to yellow, less-steep straight line from origin to top of graph, both labeled "n"; green, curved line that gets less and less steep from origin to right of graph, labeled "log n"](images/week_3/cs50Week3Slide010.png)
+  ![chart with: "size of problem" as x-axis; "time to solve" as y-axis; red, steep straight line from origin to top of graph close to yellow, less-steep straight line from origin to top of graph, both labeled "n"; green, curved line that gets less and less steep from origin to right of graph, labeled "log n"](images/week_3/Week3Slide010.png)
 * As we step into this week, you should consider how the way an algorithm works with a problem may determine the time it takes to solve a problem! Algorithms can be designed to be more and more efficient to a limit.
 * Today, we will focus on the design of algorithms and how to measure their efficiency.
 
@@ -37,12 +37,12 @@ Source: https://cs50.harvard.edu/x/notes/3/
 * Recall that last week, you were introduced to the idea of an *array*, blocks of memory that are consecutive: side-by-side with one another.
 * You can metaphorically imagine an array like a series of seven red lockers as follows:
 
-  ![Seven red lockers side by side](images/week_3/cs50Week3Slide018.png)
+  ![Seven red lockers side by side](images/week_3/Week3Slide018.png)
 * The far-left position is called *location 0* or *the beginning of the array*. The far-right position is *location 7* or *the end of the array*.
 * We can imagine that we have an essential problem of wanting to know, “Is the number 50 inside an array?” A computer must look at each locker to be able to see if the number 50 is inside. We call this process of finding such a number, character, string, or other item *searching*.
 * We can potentially hand our array to an algorithm, wherein our algorithm will search through our lockers to see if the number 50 is behind one of the doors, returning the value `true` or `false`.
 
-  ![seven red lockers pointing to an empty box. Out of the empty box comes an output of bool](images/week_3/cs50Week3Slide022.png)
+  ![seven red lockers pointing to an empty box. Out of the empty box comes an output of bool](images/week_3/Week3Slide022.png)
 * We can imagine various instructions we might provide our algorithm to undertake this task as follows:
 
   ```
@@ -103,7 +103,7 @@ Source: https://cs50.harvard.edu/x/notes/3/
 * You can consider how much time it takes an algorithm to solve a problem.
 * *running time* involves an analysis using *big O* notation. Take a look at the following graph:
 
-  ![chart with: "size of problem" as x-axis; "time to solve" as y-axis; red, steep straight line from origin to top of graph close to yellow, less-steep straight line from origin to top of graph, both labeled "O(n)"; green, curved line that gets less and less steep from origin to right of graph, labeled "O(log n"](images/week_3/cs50Week3Slide042.png)
+  ![chart with: "size of problem" as x-axis; "time to solve" as y-axis; red, steep straight line from origin to top of graph close to yellow, less-steep straight line from origin to top of graph, both labeled "O(n)"; green, curved line that gets less and less steep from origin to right of graph, labeled "O(log n"](images/week_3/Week3Slide042.png)
 * Rather than being ultra-specific about the mathematical efficiency of an algorithm, computer scientists discuss efficiency in terms of *the order of* various running times.
 * In the above graph, the first algorithm is \(O(n)\) or *in the order of n*. The second is in \(O(n)\) as well. The third is in \(O(\log n)\).
 * It’s the shape of the curve that shows the efficiency of an algorithm. Some common running times we may see are:
@@ -294,7 +294,7 @@ Source: https://cs50.harvard.edu/x/notes/3/
 * *Selection sort* is one such sorting algorithm.
 * We can represent an array as follows:
 
-  ![Seven red lockers side by side with the last labeled as n-1](images/week_3/cs50Week3Slide104.png)
+  ![Seven red lockers side by side with the last labeled as n-1](images/week_3/Week3Slide104.png)
 * The algorithm for selection sort in pseudocode is:
 
   ```

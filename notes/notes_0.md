@@ -46,7 +46,7 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Essentially, computer programming is about taking some input and creating some output - thus solving a problem. What happens in between the input and output, what we could call *a black box,* is the focus of this course.
 
-    ![Black box with input and output](images/week_0/cs50Week0Slide38.png)
+    ![Black box with input and output](images/week_0/Week0Slide38.png)
 
 -   For example, we may need to take attendance for a class. We could use a system called *unary* (also called *base-1*) to count one finger at a time.
 
@@ -199,11 +199,11 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Red, green, and blue (called `RGB`) are a combination of three numbers.
 
-    ![red green blue boxes](images/week_0/cs50Week0Slide118.png)
+    ![red green blue boxes](images/week_0/Week0Slide118.png)
 
 -   Taking our previously used 72, 73, and 33, which said `HI!` via text, would be interpreted by image readers as a light shade of yellow. The red value would be 72, the green value would be 73, and the blue would be 33.
 
-    ![yellow box](images/week_0/cs50Week0Slide120.png)
+    ![yellow box](images/week_0/Week0Slide120.png)
 
 -   The three bytes required to represent various colors of red, blue, and green (or *RGB*) make up each *pixel* (or dot) of color in any digital image. Images are simply collections of RGB values.
 
@@ -229,7 +229,7 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Each of these approaches could be called algorithms. The speed of each of these algorithms can be pictured as follows in what is called *big-O notation*:
 
-    ![big o notation](images/week_0/cs50Week0Slide141.png)
+    ![big o notation](images/week_0/Week0Slide141.png)
 
     Notice that the first algorithm, highlighted in red, has a big-O of `n` because if there are 100 names in the phone book, it could take up to 100 tries to find the correct name. The second algorithm, where two pages were searched at a time, has a big-O of `n/2` because we searched twice as fast through the pages. The final algorithm has a big-O of log2n, as doubling the problem would only result in one more step to solve the problem.
 
@@ -331,13 +331,13 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Scratch `IDE` (integrated development environment) looks like the following:
 
-    ![scratch interface](images/week_0/cs50Week0Slide162.png)
+    ![scratch interface](images/week_0/Week0Slide162.png)
 
     Notice that on the left, there is a palette of *building blocks* that you can use in your programming. To the immediate right of the building blocks, there is the area to which you can drag blocks to build a program. To the right of that, you see the *stage* where a cat stands. The stage is where your programming comes to life.
 
 -   Scratch operates on a coordinate system as follows:
 
-    ![scratch coordinate system](images/week_0/cs50Week0Slide167.png)
+    ![scratch coordinate system](images/week_0/Week0Slide167.png)
 
     Notice that the center of the stage is at coordinate (0,0). Right now, the cat’s position is at that same position.
 
@@ -354,7 +354,7 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   This illustrates quite well what we were discussing earlier regarding programming:
 
-    ![scratch with black box](images/week_0/cs50Week0Slide172.png)
+    ![scratch with black box](images/week_0/Week0Slide172.png)
 
     Notice that the input `hello, world` is passed to the function `say`, and the *side effect* of that function running is the cat saying `hello, world`.
 
@@ -372,7 +372,7 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Throughout this course, you will be providing inputs into an algorithm and getting outputs (or side effects). This can be pictured in terms of the above program as follows:
 
-    ![scratch as algorithm](images/week_0/cs50Week0Slide169.png)
+    ![scratch as algorithm](images/week_0/Week0Slide169.png)
 
     Notice that the inputs `hello,` and `answer` are provided to `join`, resulting in the side effect of `hello, David`.
 
@@ -475,7 +475,7 @@ Source: https://cs50.harvard.edu/x/notes/0/
 
 -   Building Oscartime ourselves, we first add the lamp post.
 
-    ![oscartime interface](images/week_0/cs50Week0Scratch10.png)
+    ![oscartime interface](images/week_0/Week0Scratch10.png)
 
 -   Then, write code as follows:
 

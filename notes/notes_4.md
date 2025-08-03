@@ -39,13 +39,13 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   You can imagine an image as a map of bits, where zeros represent black and ones represent white.
 
-    ![Zeros and ones being converted to a black and white smiley](images/week_4/cs50Week4Slide015.png)
+    ![Zeros and ones being converted to a black and white smiley](images/week_4/Week4Slide015.png)
 
 ## Hexadecimal {#hexadecimal}
 
 -   *RGB*, or *red, green, blue*, are numbers that represent the amount of each of these colors. In Adobe Photoshop, you can see these settings as follows:
 
-    ![A photoshop panel with RGB values and hexadecimal input](images/week_4/cs50Week4Slide016.png)
+    ![A photoshop panel with RGB values and hexadecimal input](images/week_4/Week4Slide016.png)
 
     Notice how the amount of red, blue, and green changes the color selected.
 
@@ -83,11 +83,11 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   In weeks past, you may recall our artist rendering of concurrent blocks of memory. Applying hexadecimal numbering to each of these blocks of memory, you can visualize these as follows:
 
-    ![Blocks of memory numbered in hex](images/week_4/cs50Week4Slide065.png)
+    ![Blocks of memory numbered in hex](images/week_4/Week4Slide065.png)
 
 -   You can imagine how there may be confusion regarding whether the `10` block above may represent a location in memory or the value `10`. Accordingly, by convention, all hexadecimal numbers are often represented with the `0x` prefix as follows:
 
-    ![blocks of memory numbered in hex with 0x](images/week_4/cs50Week4Slide066.png)
+    ![blocks of memory numbered in hex with 0x](images/week_4/Week4Slide066.png)
 
 -   In your terminal window, type `code addresses.c` and write your code as follows:
 
@@ -107,7 +107,7 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   You can visualize how this program stores this value as follows:
 
-    ![the value 50 stored in a memory location with hex](images/week_4/cs50Week4Slide070.png)
+    ![the value 50 stored in a memory location with hex](images/week_4/Week4Slide070.png)
 
 ## Pointers {#pointers}
 
@@ -181,13 +181,13 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   You can visualize our code as follows:
 
-    ![Same value of 50 in a memory location with a pointer value stored elsewhere](images/week_4/cs50Week4Slide078.png)
+    ![Same value of 50 in a memory location with a pointer value stored elsewhere](images/week_4/Week4Slide078.png)
 
     Notice the pointer seems rather large. Indeed, a pointer is usually stored as an 8-byte value. `p` is storing the address of the `50`.
 
 -   You can more accurately visualize a pointer as one address that points to another:
 
-    ![A pointer as an arrow, pointing from one location of memory to another](images/week_4/cs50Week4Slide079.png)
+    ![A pointer as an arrow, pointing from one location of memory to another](images/week_4/Week4Slide079.png)
 
 ## Strings {#strings}
 
@@ -212,11 +212,11 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   Recall that a string is simply an array of characters. For example, `string s = "HI!"` can be represented as follows:
 
-    ![The string HI with an exclamation point stored in memory](images/week_4/cs50Week4Slide085.png)
+    ![The string HI with an exclamation point stored in memory](images/week_4/Week4Slide085.png)
 
 -   However, what is `s` really? Where is the `s` stored in memory? As you can imagine, `s` needs to be stored somewhere. You can visualize the relationship of `s` to the string as follows:
 
-    ![Same string HI with a pointer pointing to it](images/week_4/cs50Week4Slide086.png)
+    ![Same string HI with a pointer pointing to it](images/week_4/Week4Slide086.png)
 
     Notice how a pointer called `s` tells the compiler where the first byte of the string exists in memory.
 
@@ -406,7 +406,7 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   Why are these strings seemingly different? You can use the following to visualize why:
 
-    ![two strings stored separately in memory](images/week_4/cs50Week4Slide115.png)
+    ![two strings stored separately in memory](images/week_4/Week4Slide115.png)
 
 -   Therefore, the code for `compare.c` above is actually attempting to see if the memory addresses are different, not the strings themselves.
 
@@ -518,7 +518,7 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   You can visualize the above code as follows:
 
-    ![two pointers pointing at the same memory location with a string](images/week_4/cs50Week4Slide124.png)
+    ![two pointers pointing at the same memory location with a string](images/week_4/Week4Slide124.png)
 
     Notice that `s` and `t` are still pointing at the same blocks of memory. This is not an authentic copy of a string. Instead, these are two pointers pointing at the same string.
 
@@ -815,13 +815,13 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   Consider the following image:
 
-    ![a rectangle with machine code at top followed by globals heap and stack](images/week_4/cs50Week4Slide163.png)
+    ![a rectangle with machine code at top followed by globals heap and stack](images/week_4/Week4Slide163.png)
 
     Notice that *global* variables, which we have not used in this course, live in one place in memory. Various functions are stored in the `stack` in another area of memory.
 
 -   Now, consider the following image:
 
-    ![a rectangle with main function at bottom and swap function directly above it](images/week_4/cs50Week4Slide167.png)
+    ![a rectangle with main function at bottom and swap function directly above it](images/week_4/Week4Slide167.png)
 
     Notice that `main` and `swap` have two separate *frames* or areas of memory. Therefore, we cannot simply pass the values from one function to another to change them.
 
@@ -856,7 +856,7 @@ Source: https://cs50.harvard.edu/x/notes/4/
 
 -   You can visualize this as follows:
 
-    ![a and b stored in main function being passed by reference to the swap function](images/week_4/cs50Week4Slide198.png)
+    ![a and b stored in main function being passed by reference to the swap function](images/week_4/Week4Slide198.png)
 
 ## Overflow {#overflow}
 
