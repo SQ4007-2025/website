@@ -1,27 +1,29 @@
 ---
 title: "Schedule"
-tbl-colwidths: [5,15,5,8,5,5]
+tbl-colwidths: [5,15,5,5,5,5,5]
 ---
 
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
 
 ::: column-body
-| Week | Topic         | Lecture | Notes & Code | Tutorial | Homework |
-|:----:|:--------------|:-------:|:------------:|:--------:|:--------:|
-|  1   | Topic 1       |   💻    |      📕      |    👨‍🏫    |    🏠    |
-|  2   | Topic 2       |         |              |          |          |
-|  3   | Topic 3       |         |              |          |          |
-|  4   | Topic 4a      |         |              |          |          |
-|      | Topic 4b      |         |              |          |          |
-|  5   | Topic 5a      |         |              |          |          |
-|      | Topic 5 extra |         |              |          |          |
-|      | Topic 5b      |         |              |          |          |
+| Week | Topic            | Lecture | Notes | Code | Tutorial | Homework |
+|:----:|:-----------------|:-------:|:-----:|:----:|:--------:|:--------:|
+|  1   | 1.1 Introduction |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
+|      | 1.2 Scratch      |   💻    |       |      |          |          |
+|      |                  |         |       |      |          |          |
+|  2   | Topic 2          |         |       |      |          |          |
+|  3   | Topic 3          |         |       |      |          |          |
+|  4   | Topic 4a         |         |       |      |          |          |
+|      | Topic 4b         |         |       |      |          |          |
+|  5   | Topic 5a         |         |       |      |          |          |
+|      | Topic 5 extra    |         |       |      |          |          |
+|      | Topic 5b         |         |       |      |          |          |
 :::
 
 ```{r echo = FALSE}
 knitr::knit_exit()
 ```
 
-|      |       | Lecture | Notes & Code | Tutorial | Homework |
-|------|-------|:-------:|:------------:|:--------:|:--------:|
-| Week | Topic |   💻    |      📕      |    👨‍🏫    |    🏠    |
+| Week | Topic | Lecture | Notes | Code | Tutorial | Homework |
+|:----:|-------|:-------:|:-----:|:----:|:--------:|:--------:|
+| Week | Topic |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
