@@ -75,7 +75,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/notes/images/week_3/Week3Slide010.png">
 <meta property="og:site_name" content="Computing Technology">
+<meta property="og:image:height" content="540">
+<meta property="og:image:width" content="960">
 <meta name="twitter:title" content="Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/notes/images/twitter-card.png">
@@ -326,7 +329,21 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#week-3-notes" id="toc-week-3-notes" class="nav-link active" data-scroll-target="#week-3-notes">Week 3 Notes</a></li>
-  <li><a href="#week-3-algorithms" id="toc-week-3-algorithms" class="nav-link" data-scroll-target="#week-3-algorithms">Week 3 <em>Algorithms</em></a></li>
+  <li><a href="#lecture-3" id="toc-lecture-3" class="nav-link" data-scroll-target="#lecture-3">Lecture 3</a>
+  <ul class="collapse">
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#linear-search" id="toc-linear-search" class="nav-link" data-scroll-target="#linear-search">Linear Search</a></li>
+  <li><a href="#binary-search" id="toc-binary-search" class="nav-link" data-scroll-target="#binary-search">Binary Search</a></li>
+  <li><a href="#running-time" id="toc-running-time" class="nav-link" data-scroll-target="#running-time">Running Time</a></li>
+  <li><a href="#search.c" id="toc-search.c" class="nav-link" data-scroll-target="#search.c">search.c</a></li>
+  <li><a href="#phonebook.c" id="toc-phonebook.c" class="nav-link" data-scroll-target="#phonebook.c">phonebook.c</a></li>
+  <li><a href="#structs" id="toc-structs" class="nav-link" data-scroll-target="#structs">Structs</a></li>
+  <li><a href="#sorting" id="toc-sorting" class="nav-link" data-scroll-target="#sorting">Sorting</a></li>
+  <li><a href="#bubble-sort" id="toc-bubble-sort" class="nav-link" data-scroll-target="#bubble-sort">Bubble Sort</a></li>
+  <li><a href="#recursion" id="toc-recursion" class="nav-link" data-scroll-target="#recursion">Recursion</a></li>
+  <li><a href="#merge-sort" id="toc-merge-sort" class="nav-link" data-scroll-target="#merge-sort">Merge Sort</a></li>
+  <li><a href="#summing-up" id="toc-summing-up" class="nav-link" data-scroll-target="#summing-up">Summing Up</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_4.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -339,68 +356,509 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="week-3-notes" class="level1">
 <h1>Week 3 Notes</h1>
-<p><strong>CS50x 2025 - Week 3</strong></p>
-<p>Source: https://cs50.harvard.edu/x/weeks/3/</p>
+<p><strong>CS50x 2025 - Week 3 Lecture Notes</strong></p>
+<p>Source: https://cs50.harvard.edu/x/notes/3/</p>
 <hr>
 </section>
-<section id="week-3-algorithms" class="level1">
-<h1>Week 3 <em>Algorithms</em></h1>
-<p>Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, Merge Sort. Asymptotic Notation: (O), (), (). Recursion.</p>
+<section id="lecture-3" class="level1">
+<h1>Lecture 3</h1>
 <ul>
-<li>Lecture
-<ul>
-<li><a href="../../notes/3/">Notes</a></li>
-<li>Slides
-<ul>
-<li><a href="https://docs.google.com/presentation/d/1CrAkADE3EOZUVRxY8OPp-o4ev1Uokd6EM9ZKlz_M7xQ/edit?usp=sharing">Google Slides</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3.pdf">PDF</a></li>
-</ul></li>
-<li>Source Code
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/src3/">Index</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/src3.pdf">PDF</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/src3.zip">Zip</a></li>
-</ul></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lang/en/lecture3.srt">Subtitles</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lang/en/lecture3.txt">Transcript</a></li>
-<li>Video
-<ul>
-<li><a href="https://video.cs50.io/iCx3zwK8Ms8?screen=EJO-bqFqX8E">CS50 Video Player</a></li>
-<li>MP4
-<ul>
-<li>HDR
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-360p-hdr.mp4">360p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-720p-hdr.mp4">720p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-1080p-hdr.mp4">1080p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-4k-hdr.mp4">4K</a></li>
-</ul></li>
-<li>SDR
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-360p.mp4">360p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-720p.mp4">720p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-1080p.mp4">1080p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/3/lecture3-4k.mp4">4K</a></li>
-</ul></li>
-</ul></li>
-<li><a href="https://youtu.be/iCx3zwK8Ms8">YouTube</a></li>
-</ul></li>
-</ul></li>
-<li>Shorts
-<ol type="1">
-<li><a href="../../shorts/linear_search/">Linear Search</a></li>
-<li><a href="../../shorts/binary_search/">Binary Search</a></li>
-<li><a href="../../shorts/bubble_sort/">Bubble Sort</a></li>
-<li><a href="../../shorts/selection_sort/">Selection Sort</a></li>
-<li><a href="../../shorts/call_stacks/">Call Stacks</a></li>
-<li><a href="../../shorts/recursion/">Recursion</a></li>
-<li><a href="../../shorts/merge_sort/">Merge Sort</a></li>
-</ol></li>
-<li><a href="../../sections/3/">Section</a></li>
-<li><a href="../../psets/3/">Problem Set 3</a></li>
+<li><a href="#welcome">Welcome!</a></li>
+<li><a href="#linear-search">Linear Search</a></li>
+<li><a href="#binary-search">Binary Search</a></li>
+<li><a href="#running-time">Running Time</a></li>
+<li><a href="#searchc">search.c</a></li>
+<li><a href="#phonebookc">phonebook.c</a></li>
+<li><a href="#structs">Structs</a></li>
+<li><a href="#sorting">Sorting</a></li>
+<li><a href="#bubble-sort">Bubble Sort</a></li>
+<li><a href="#recursion">Recursion</a></li>
+<li><a href="#merge-sort">Merge Sort</a></li>
+<li><a href="#summing-up">Summing Up</a></li>
 </ul>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<ul>
+<li><p>In week zero, we introduced the idea of an <em>algorithm</em>: a black box that may take an input and create an output.</p></li>
+<li><p>This week, we are going to expand upon our understanding of algorithms through pseudocode and into code itself.</p></li>
+<li><p>Also, we are going to consider the efficiency of these algorithms. Indeed, we are going to be building upon our understanding of how to use some of the concepts we discussed last week in building algorithms.</p></li>
+<li><p>Recall back to earlier in the course when we introduced the following graph:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_3/Week3Slide010.png" class="img-fluid figure-img"></p>
+<figcaption>chart with: “size of problem” as x-axis; “time to solve” as y-axis; red, steep straight line from origin to top of graph close to yellow, less-steep straight line from origin to top of graph, both labeled “n”; green, curved line that gets less and less steep from origin to right of graph, labeled “log n”</figcaption>
+</figure>
+</div></li>
+<li><p>As we step into this week, you should consider how the way an algorithm works with a problem may determine the time it takes to solve a problem! Algorithms can be designed to be more and more efficient to a limit.</p></li>
+<li><p>Today, we will focus on the design of algorithms and how to measure their efficiency.</p></li>
+</ul>
+</section>
+<section id="linear-search" class="level2">
+<h2 class="anchored" data-anchor-id="linear-search">Linear Search</h2>
+<ul>
+<li><p>Recall that last week, you were introduced to the idea of an <em>array</em>, blocks of memory that are consecutive: side-by-side with one another.</p></li>
+<li><p>You can metaphorically imagine an array like a series of seven red lockers as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_3/Week3Slide018.png" class="img-fluid figure-img"></p>
+<figcaption>Seven red lockers side by side</figcaption>
+</figure>
+</div></li>
+<li><p>The far-left position is called <em>location 0</em> or <em>the beginning of the array</em>. The far-right position is <em>location 7</em> or <em>the end of the array</em>.</p></li>
+<li><p>We can imagine that we have an essential problem of wanting to know, “Is the number 50 inside an array?” A computer must look at each locker to be able to see if the number 50 is inside. We call this process of finding such a number, character, string, or other item <em>searching</em>.</p></li>
+<li><p>We can potentially hand our array to an algorithm, wherein our algorithm will search through our lockers to see if the number 50 is behind one of the doors, returning the value <code>true</code> or <code>false</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_3/Week3Slide022.png" class="img-fluid figure-img"></p>
+<figcaption>seven red lockers pointing to an empty box. Out of the empty box comes an output of bool</figcaption>
+</figure>
+</div></li>
+<li><p>We can imagine various instructions we might provide our algorithm to undertake this task as follows:</p>
+<pre><code>For each door from left to right
+    If 50 is behind door
+        Return true
+Return false
+</code></pre>
+<p>Notice that the above instructions are called <em>pseudocode</em>: A human-readable version of the instructions that we could provide the computer.</p></li>
+<li><p>A computer scientist could translate that pseudocode as follows:</p>
+<pre><code>For i from 0 to n-1
+    If 50 is behind doors[i]
+        Return true
+Return false
+</code></pre>
+<p>Notice that the above is still not code, but it is a pretty close approximation of what the final code might look like.</p></li>
+</ul>
+</section>
+<section id="binary-search" class="level2">
+<h2 class="anchored" data-anchor-id="binary-search">Binary Search</h2>
+<ul>
+<li><p><em>Binary search</em> is another <em>search algorithm</em> that could be employed in our task of finding the 50.</p></li>
+<li><p>Assuming that the values within the lockers have been arranged from smallest to largest, the pseudocode for binary search would appear as follows:</p>
+<pre><code>If no doors left
+    Return false
+If 50 is behind middle door
+    Return true
+Else if 50 &lt; middle door
+    Search left half
+Else if 50 &gt; middle door
+    Search right half
+</code></pre></li>
+<li><p>Using the nomenclature of code, we can further modify our algorithm as follows:</p>
+<pre><code>If no doors left
+    Return false
+If 50 is behind doors[middle]
+    Return true
+Else if 50 &lt; doors[middle]
+    Search doors[0] through doors[middle - 1]
+Else if 50 &gt; doors[middle]
+    Search doors[middle + 1] through doors[n - 1]
+</code></pre>
+<p>Notice that by looking at this approximation of code, you can nearly imagine what this might look like in actual code.</p></li>
+</ul>
+</section>
+<section id="running-time" class="level2">
+<h2 class="anchored" data-anchor-id="running-time">Running Time</h2>
+<ul>
+<li><p>You can consider how much time it takes an algorithm to solve a problem.</p></li>
+<li><p><em>running time</em> involves an analysis using <em>big O</em> notation. Take a look at the following graph:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_3/Week3Slide042.png" class="img-fluid figure-img"></p>
+<figcaption>chart with: “size of problem” as x-axis; “time to solve” as y-axis; red, steep straight line from origin to top of graph close to yellow, less-steep straight line from origin to top of graph, both labeled “O(n)”; green, curved line that gets less and less steep from origin to right of graph, labeled “O(log n”</figcaption>
+</figure>
+</div></li>
+<li><p>Rather than being ultra-specific about the mathematical efficiency of an algorithm, computer scientists discuss efficiency in terms of <em>the order of</em> various running times.</p></li>
+<li><p>In the above graph, the first algorithm is (O(n)) or <em>in the order of n</em>. The second is in (O(n)) as well. The third is in (O(n)).</p></li>
+<li><p>It’s the shape of the curve that shows the efficiency of an algorithm. Some common running times we may see are:</p>
+<ul>
+<li>(O(n^2))</li>
+<li>(O(n n))</li>
+<li>(O(n))</li>
+<li>(O(n))</li>
+<li>(O(1))</li>
+</ul></li>
+<li><p>Of the running times above, (O(n^2)) is considered the slowest running time. (O(1)) is the fastest.</p></li>
+<li><p>Linear search was of order (O(n)) because it could take <em>n</em> steps in the worst-case to run.</p></li>
+<li><p>Binary search was of order (O(n)) because it would take fewer and fewer steps to run, even in the worst-case.</p></li>
+<li><p>Programmers are interested in both the worst-case, or <em>upper bound</em>, and the best-case, or <em>lower bound</em>.</p></li>
+<li><p>The () symbol is used to denote the best-case of an algorithm, such as ((n)).</p></li>
+<li><p>The () symbol is used to denote where the upper bound and lower bound are the same: Where the best-case and the worst-case running times are the same.</p></li>
+<li><p><em>Asymptotic notation</em> is the measure of how well algorithms perform as the input gets larger and larger.</p></li>
+<li><p>As you continue to develop your knowledge in computer science, you will explore these topics in more detail in future courses.</p></li>
+</ul>
+</section>
+<section id="search.c" class="level2">
+<h2 class="anchored" data-anchor-id="search.c">search.c</h2>
+<ul>
+<li><p>You can implement linear search by typing <code>code search.c</code> in your terminal window and by writing code as follows:</p>
+<pre><code>// Implements linear search for integers
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // An array of integers
+    int numbers[] = {20, 500, 10, 5, 100, 1, 50};
+
+    // Search for number
+    int n = get_int("Number: ");
+    for (int i = 0; i &lt; 7; i++)
+    {
+        if (numbers[i] == n)
+        {
+            printf("Found\n");
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 1;
+}
+</code></pre>
+<p>Notice that the line beginning with <code>int numbers[]</code> allows us to define the values of each element of the array as we create it. Then, in the <code>for</code> loop, we have an implementation of linear search. <code>return 0</code> is used to indicate success and exit the program. <code>return 1</code> is used to exit the program with an error (failure).</p></li>
+<li><p>We have now implemented linear search ourselves in C!</p></li>
+<li><p>What if we wanted to search for a string within an array? Modify your code as follows:</p>
+<pre><code>// Implements linear search for strings
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void)
+{
+    // An array of strings
+    string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"};
+
+    // Search for string
+    string s = get_string("String: ");
+    for (int i = 0; i &lt; 6; i++)
+    {
+        if (strcmp(strings[i], s) == 0)
+        {
+            printf("Found\n");
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 1;
+}
+</code></pre>
+<p>Notice that we cannot utilize <code>==</code> as in our previous iteration of this program. Instead, we use <code>strcmp</code>, which comes from the <code>string.h</code> library. <code>strcmp</code> will return <code>0</code> if the strings are the same. Also, notice that the string length of <code>6</code> is hard-coded, which is not good programming practice.</p></li>
+<li><p>Indeed, running this code allows us to iterate over this array of strings to see if a certain string is within it. However, if you see a <em>segmentation fault</em>, where a part of memory was touched by your program that it should not have access to, do make sure you have <code>i &lt; 6</code> noted above instead of <code>i &lt; 7</code>.</p></li>
+<li><p>You can learn more about <code>strcmp</code> at the <a href="https://manual.cs50.io/3/strcmp">CS50 Manual Pages</a>.</p></li>
+</ul>
+</section>
+<section id="phonebook.c" class="level2">
+<h2 class="anchored" data-anchor-id="phonebook.c">phonebook.c</h2>
+<ul>
+<li><p>We can combine these ideas of both numbers and strings into a single program. Type <code>code phonebook.c</code> into your terminal window and write code as follows:</p>
+<pre><code>// Implements a phone book without structs
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void)
+{
+    // Arrays of strings
+    string names[] = {"Yuliia", "David", "John"};
+    string numbers[] = {"+1-617-495-1000", "+1-617-495-1000", "+1-949-468-2750"};
+
+    // Search for name
+    string name = get_string("Name: ");
+    for (int i = 0; i &lt; 3; i++)
+    {
+        if (strcmp(names[i], name) == 0)
+        {
+            printf("Found %s\n", numbers[i]);
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 1;
+}
+</code></pre>
+<p>Notice that Yuliia’s number begins with <code>+1-617</code>, David’s phone number starts with <code>+1-617</code>, and John’s number starts with <code>+1-949</code>. Therefore, <code>names[0]</code> is Yuliia, and <code>numbers[0]</code> is Yuliia’s number. This code will allow us to search the phonebook for a person’s specific number.</p></li>
+<li><p>While this code works, there are numerous inefficiencies. Indeed, there is a chance that names and phone numbers may not correspond to one another. Wouldn’t it be nice if we could create our own data type where we could associate a person with the phone number?</p></li>
+</ul>
+</section>
+<section id="structs" class="level2">
+<h2 class="anchored" data-anchor-id="structs">Structs</h2>
+<ul>
+<li><p>It turns out that C allows us to create our own data types via a <code>struct</code>.</p></li>
+<li><p>Would it not be useful to create our own data type called a <code>person</code> that has inside of it a <code>name</code> and <code>number</code>? Consider the following:</p>
+<pre><code>typedef struct
+{
+    string name;
+    string number;
+} person;
+</code></pre>
+<p>Notice how this represents our own datatype called a <code>person</code> that has a string called <code>name</code> and another string called <code>number</code>.</p></li>
+<li><p>We can improve our prior code by modifying our phonebook program as follows:</p>
+<pre><code>// Implements a phone book with structs
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct
+{
+    string name;
+    string number;
+} person;
+
+int main(void)
+{
+    person people[3];
+
+    people[0].name = "Yuliia";
+    people[0].number = "+1-617-495-1000";
+
+    people[1].name = "David";
+    people[1].number = "+1-617-495-1000";
+
+    people[2].name = "John";
+    people[2].number = "+1-949-468-2750";
+
+    // Search for name
+    string name = get_string("Name: ");
+    for (int i = 0; i &lt; 3; i++)
+    {
+        if (strcmp(people[i].name, name) == 0)
+        {
+            printf("Found %s\n", people[i].number);
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 1;
+}
+</code></pre>
+<p>Notice that the code begins with <code>typedef struct</code> where a new datatype called <code>person</code> is defined. Inside a <code>person</code> is a string called <code>name</code> and a <code>string</code> called number. In the <code>main</code> function, begin by creating an array called <code>people</code> that is of type <code>person</code> that is a size of 3. Then, we update the names and phone numbers of the two people in our <code>people</code> array. Most importantly, notice how the <em>dot notation</em>, such as <code>people[0].name</code>, allows us to access the <code>person</code> at the 0th location and assign that individual a name.</p></li>
+</ul>
+</section>
+<section id="sorting" class="level2">
+<h2 class="anchored" data-anchor-id="sorting">Sorting</h2>
+<ul>
+<li><p><em>Sorting</em> is the act of taking an unsorted list of values and transforming this list into a sorted one.</p></li>
+<li><p>When a list is sorted, searching that list is far less taxing on the computer. Recall that we can use binary search on a sorted list but not on an unsorted one.</p></li>
+<li><p>It turns out that there are many different types of sorting algorithms.</p></li>
+<li><p><em>Selection sort</em> is one such sorting algorithm.</p></li>
+<li><p>We can represent an array as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_3/Week3Slide104.png" class="img-fluid figure-img"></p>
+<figcaption>Seven red lockers side by side with the last labeled as n-1</figcaption>
+</figure>
+</div></li>
+<li><p>The algorithm for selection sort in pseudocode is:</p>
+<pre><code>For i from 0 to n–1
+    Find smallest number between numbers[i] and numbers[n-1]
+    Swap smallest number with numbers[i]
+</code></pre></li>
+<li><p>Summarizing those steps, the first time iterating through the list took <code>n - 1</code> steps. The second time, it took <code>n - 2</code> steps. Carrying this logic forward, the steps required could be represented as follows:</p>
+<pre><code>(n - 1) + (n - 2) + (n - 3) + ... + 1
+</code></pre></li>
+<li><p>This could be simplified to n(n-1)/2 or, more simply, (O(n^2)). In the worst-case or upper-bound, selection sort is in the order of (O(n^2)). In the best-case, or lower-bound, selection sort is in the order of ((n^2)).</p></li>
+</ul>
+</section>
+<section id="bubble-sort" class="level2">
+<h2 class="anchored" data-anchor-id="bubble-sort">Bubble Sort</h2>
+<ul>
+<li><p><em>Bubble sort</em> is another sorting algorithm that works by repeatedly swapping elements to “bubble” larger elements to the end.</p></li>
+<li><p>The pseudocode for bubble sort is:</p>
+<pre><code>Repeat n-1 times
+    For i from 0 to n–2
+        If numbers[i] and numbers[i+1] out of order
+            Swap them
+    If no swaps
+        Quit
+</code></pre></li>
+<li><p>As we further sort the array, we know more and more of it becomes sorted, so we only need to look at the pairs of numbers that haven’t been sorted yet.</p></li>
+<li><p>Bubble sort can be analyzed as follows:</p>
+<pre><code>  (n – 1) × (n – 1)
+  n2 – 1n – 1n + 1
+  n2 – 2n + 1
+</code></pre>
+<p>or, more simply (O(n^2)).</p></li>
+<li><p>In the worst-case, or upper-bound, bubble sort is in the order of (O(n^2)). In the best-case, or lower-bound, bubble sort is in the order of ((n)).</p></li>
+<li><p>You can <a href="https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html">visualize</a> a comparison of these algorithms.</p></li>
+</ul>
+</section>
+<section id="recursion" class="level2">
+<h2 class="anchored" data-anchor-id="recursion">Recursion</h2>
+<ul>
+<li><p>How could we improve our efficiency in our sorting?</p></li>
+<li><p><em>Recursion</em> is a concept within programming where a function calls itself. We saw this earlier when we saw…</p>
+<pre><code>If no doors left
+    Return false
+If number behind middle door
+    Return true
+Else if number &lt; middle door
+    Search left half
+Else if number &gt; middle door
+    Search right half
+</code></pre>
+<p>Notice that we are calling <code>search</code> on smaller and smaller iterations of this problem.</p></li>
+<li><p>Similarly, in our pseudocode for Week 0, you can see where recursion was implemented:</p>
+<pre><code>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If person is on page
+5      Call person
+6  Else if person is earlier in book
+7      Open to middle of left half of book
+8      Go back to line 3
+9  Else if person is later in book
+10     Open to middle of right half of book
+11     Go back to line 3
+12 Else
+13     Quit
+</code></pre></li>
+<li><p>This code could have been simplified to highlight its recursive properties as follows:</p>
+<pre><code>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If person is on page
+5      Call person
+6  Else if person is earlier in book
+7      Search left half of book
+9  Else if person is later in book
+10     Search right half of book
+12 Else
+13     Quit
+</code></pre></li>
+<li><p>Consider how in Week 1 we wanted to create a pyramid structure as follows:</p>
+<pre><code>  #
+  ##
+  ###
+  ####
+</code></pre></li>
+<li><p>Type <code>code iteration.c</code> into your terminal window and write code as follows:</p>
+<pre><code>// Draws a pyramid using iteration
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void draw(int n);
+
+int main(void)
+{
+    // Get height of pyramid
+    int height = get_int("Height: ");
+
+    // Draw pyramid
+    draw(height);
+}
+
+void draw(int n)
+{
+    // Draw pyramid of height n
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int j = 0; j &lt; i + 1; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+</code></pre>
+<p>Notice that this code builds the pyramid by looping.</p></li>
+<li><p>To implement this using recursion, type <code>code iteration.c</code> into your terminal window and write code as follows:</p>
+<pre><code>// Draws a pyramid using recursion
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void draw(int n);
+
+int main(void)
+{
+    // Get height of pyramid
+    int height = get_int("Height: ");
+
+    // Draw pyramid
+    draw(height);
+}
+
+void draw(int n)
+{
+    // If nothing to draw
+    if (n &lt;= 0)
+    {
+        return;
+    }
+
+    // Draw pyramid of height n - 1
+    draw(n - 1);
+
+    // Draw one more row of width n
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
+</code></pre>
+<p>Notice the <em>base case</em> will ensure the code does not run forever. The line <code>if (n &lt;= 0)</code> terminates the recursion because the problem has been solved. Every time, <code>draw</code> calls itself, it calls itself by <code>n-1</code>. At some point, <code>n-1</code> will equal <code>0</code>, resulting in the <code>draw</code> function returning, and the program will end.</p></li>
+</ul>
+</section>
+<section id="merge-sort" class="level2">
+<h2 class="anchored" data-anchor-id="merge-sort">Merge Sort</h2>
+<ul>
+<li><p>We can now leverage recursion in our quest for a more efficient sort algorithm and implement what is called <em>merge sort</em>, a very efficient sort algorithm.</p></li>
+<li><p>The pseudocode for merge sort is quite short:</p>
+<pre><code>If only one number
+    Quit
+Else
+    Sort left half of number
+    Sort right half of number
+    Merge sorted halves
+</code></pre></li>
+<li><p>Consider the following list of the numbers:</p>
+<pre><code>  6341
+</code></pre></li>
+<li><p>First, merge sort asks, “is this one number?” The answer is “no,” so the algorithm continues.</p>
+<pre><code>  6341
+</code></pre></li>
+<li><p>Second, merge sort will now split the numbers down the middle (or as close as it can get) and sort the left half of numbers.</p>
+<pre><code>  63|41
+</code></pre></li>
+<li><p>Third, merge sort would look at these numbers on the left and ask, “is this one number?” Since the answer is no, it would then split the numbers on the left down the middle.</p>
+<pre><code>  6|3
+</code></pre></li>
+<li><p>Fourth, merge sort will again ask, “is this one number?” The answer is yes this time! Therefore, it will quit this task and return to the last task it was running at this point:</p>
+<pre><code>  63|41
+</code></pre></li>
+<li><p>Fifth, merge sort will sort the numbers on the left.</p>
+<pre><code>  36|41
+</code></pre></li>
+<li><p>Now, we return to where we left off in the pseudocode now that the left side has been sorted. A similar process of steps 3-5 will occur with the right-hand numbers. This will result in:</p>
+<pre><code>  36|14
+</code></pre></li>
+<li><p>Both halves are now sorted. Finally, the algorithm will merge both sides. It will look at the first number on the left and the first number on the right. It will put the smaller number first, then the second smallest. The algorithm will repeat this for all numbers, resulting in:</p>
+<pre><code>  1346
+</code></pre></li>
+<li><p>Merge sort is complete, and the program quits.</p></li>
+<li><p>Merge sort is a very efficient sort algorithm with a worst-case of (O(n n)). The best-case is still ((n n)) because the algorithm still must visit each place in the list. Therefore, merge sort is also ((n n)) since the best-case and worst-case are the same.</p></li>
+<li><p>A final <a href="https://www.youtube.com/watch?v=ZZuD6iUe3Pc">visualization</a> was shared.</p></li>
+</ul>
+</section>
+<section id="summing-up" class="level2">
+<h2 class="anchored" data-anchor-id="summing-up">Summing Up</h2>
+<p>In this lesson, you learned about algorithmic thinking and building your own data types. Specifically, you learned…</p>
+<ul>
+<li>Algorithms.</li>
+<li>Big <em>O</em> notation.</li>
+<li>Binary search and linear search.</li>
+<li>Various sort algorithms, including bubble sort, selection sort, and merge sort.</li>
+<li>Recursion.</li>
+</ul>
+<p>See you next time!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

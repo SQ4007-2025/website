@@ -75,7 +75,11 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/notes/images/week_1/Week1Slide017.png">
 <meta property="og:site_name" content="Computing Technology">
+<meta property="og:image:alt" content="IDE">
+<meta property="og:image:height" content="1162">
+<meta property="og:image:width" content="2064">
 <meta name="twitter:title" content="Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/notes/images/twitter-card.png">
@@ -326,7 +330,29 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#week-1-notes" id="toc-week-1-notes" class="nav-link active" data-scroll-target="#week-1-notes">Week 1 Notes</a></li>
-  <li><a href="#week-1-c" id="toc-week-1-c" class="nav-link" data-scroll-target="#week-1-c">Week 1 <em>C</em></a></li>
+  <li><a href="#lecture-1" id="toc-lecture-1" class="nav-link" data-scroll-target="#lecture-1">Lecture 1</a>
+  <ul class="collapse">
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#visual-studio-code-for-cs50" id="toc-visual-studio-code-for-cs50" class="nav-link" data-scroll-target="#visual-studio-code-for-cs50">Visual Studio Code for CS50</a></li>
+  <li><a href="#hello-world" id="toc-hello-world" class="nav-link" data-scroll-target="#hello-world">Hello World</a></li>
+  <li><a href="#from-scratch-to-c" id="toc-from-scratch-to-c" class="nav-link" data-scroll-target="#from-scratch-to-c">From Scratch to C</a></li>
+  <li><a href="#header-files-and-cs50-manual-pages" id="toc-header-files-and-cs50-manual-pages" class="nav-link" data-scroll-target="#header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</a></li>
+  <li><a href="#hello-you" id="toc-hello-you" class="nav-link" data-scroll-target="#hello-you">Hello, You</a></li>
+  <li><a href="#types" id="toc-types" class="nav-link" data-scroll-target="#types">Types</a></li>
+  <li><a href="#conditionals" id="toc-conditionals" class="nav-link" data-scroll-target="#conditionals">Conditionals</a></li>
+  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators">Operators</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#compare.c" id="toc-compare.c" class="nav-link" data-scroll-target="#compare.c">compare.c</a></li>
+  <li><a href="#agree.c" id="toc-agree.c" class="nav-link" data-scroll-target="#agree.c">agree.c</a></li>
+  <li><a href="#loops-and-meow.c" id="toc-loops-and-meow.c" class="nav-link" data-scroll-target="#loops-and-meow.c">Loops and meow.c</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#correctness-design-style" id="toc-correctness-design-style" class="nav-link" data-scroll-target="#correctness-design-style">Correctness, Design, Style</a></li>
+  <li><a href="#mario" id="toc-mario" class="nav-link" data-scroll-target="#mario">Mario</a></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
+  <li><a href="#more-about-operators" id="toc-more-about-operators" class="nav-link" data-scroll-target="#more-about-operators">More About Operators</a></li>
+  <li><a href="#truncation" id="toc-truncation" class="nav-link" data-scroll-target="#truncation">Truncation</a></li>
+  <li><a href="#summing-up" id="toc-summing-up" class="nav-link" data-scroll-target="#summing-up">Summing Up</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_2.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -339,91 +365,985 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="week-1-notes" class="level1">
 <h1>Week 1 Notes</h1>
-<p><strong>CS50x 2025 - Week 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/weeks/1/</p>
+<p><strong>CS50x 2025 - Week 1 Lecture Notes</strong></p>
+<p>Source: https://cs50.harvard.edu/x/notes/1/</p>
 <hr>
 </section>
-<section id="week-1-c" class="level1">
-<h1>Week 1 <em>C</em></h1>
-<p>C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studio Code. Syntax Highlighting. Escape Sequences. Header Files. Libraries. Manual Pages. Types. Conditionals. Variables. Loops. Linux. Graphical User Interface (GUI). Command-Line Interface (CLI). Constants. Comments. Pseudocode. Operators. Integer Overflow. Floating-Point Imprecision.</p>
-<p>How to download source code into VS Code</p>
-<ol type="1">
-<li><p>Log into <a href="https://cs50.dev/">cs50.dev</a>.</p></li>
-<li><p>In your terminal window, type</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/lectures/1/src1.zip
-</code></pre>
-<p>followed by Enter in order to download a Zip file of lecture’s source code into your codespace.</p></li>
-<li><p>In your terminal window, type</p>
-<pre><code>unzip src1.zip
-</code></pre>
-<p>followed by Enter to unzip (i.e., decompress) that Zip file.</p></li>
-<li><p>In your terminal window, type</p>
-<pre><code>cd src1
-</code></pre>
-<p>followed by Enter in order to “change directory” into that <code>src1</code> directory (i.e., folder).</p></li>
-<li><p>In your terminal window, type, e.g.,</p>
-<pre><code>make hello0
-</code></pre>
-<p>followed by Enter in order to compile, e.g., <code>hello0.c</code> (source code) into <code>hello0</code> (machine code).</p></li>
-<li><p>In your terminal window, type, e.g.,</p>
-<pre><code>./hello0
-</code></pre>
-<p>followed by Enter in order to run, e.g., <code>hello0</code>.</p></li>
-</ol>
+<section id="lecture-1" class="level1">
+<h1>Lecture 1</h1>
 <ul>
-<li>Lecture
-<ul>
-<li><a href="../../notes/1/">Notes</a></li>
-<li>Slides
-<ul>
-<li><a href="https://docs.google.com/presentation/d/14FGAvRSsL7JhFNQv10Osuziq55rC9FDv68oAxVSCYIw/edit?usp=sharing">Google Slides</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1.pdf">PDF</a></li>
-</ul></li>
-<li>Source Code
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/src1/">Index</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/src1.pdf">PDF</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/src1.zip">Zip</a></li>
-</ul></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lang/en/lecture1.srt">Subtitles</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lang/en/lecture1.txt">Transcript</a></li>
-<li>Video
-<ul>
-<li><a href="https://video.cs50.io/89cbCbWrM4U?screen=xYu0YclZ_hI">CS50 Video Player</a></li>
-<li>MP4
-<ul>
-<li>HDR
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-360p-hdr.mp4">360p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-720p-hdr.mp4">720p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-1080p-hdr.mp4">1080p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-4k-hdr.mp4">4K</a></li>
-</ul></li>
-<li>SDR
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-360p.mp4">360p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-720p.mp4">720p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-1080p.mp4">1080p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/1/lecture1-4k.mp4">4K</a></li>
-</ul></li>
-</ul></li>
-<li><a href="https://youtu.be/89cbCbWrM4U">YouTube</a></li>
-</ul></li>
-</ul></li>
-<li>Shorts
-<ol type="1">
-<li><a href="../../shorts/data_types/">Data Types</a></li>
-<li><a href="../../shorts/operators/">Operators</a></li>
-<li><a href="../../shorts/conditional_statements/">Conditional Statements</a></li>
-<li><a href="../../shorts/loops/">Loops</a></li>
-<li><a href="../../shorts/command_line/">Command Line</a></li>
-<li><a href="../../shorts/magic_numbers/">Magic Numbers</a></li>
-</ol></li>
-<li><a href="../../sections/1/">Section</a></li>
-<li><a href="../../psets/1/">Problem Set 1</a></li>
+<li><a href="#welcome">Welcome!</a></li>
+<li><a href="#visual-studio-code-for-cs50">Visual Studio Code for CS50</a></li>
+<li><a href="#hello-world">Hello World</a></li>
+<li><a href="#from-scratch-to-c">From Scratch to C</a></li>
+<li><a href="#header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</a></li>
+<li><a href="#hello-you">Hello, You</a></li>
+<li><a href="#types">Types</a></li>
+<li><a href="#conditionals">Conditionals</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#comparec">compare.c</a></li>
+<li><a href="#agreec">agree.c</a></li>
+<li><a href="#loops-and-meowc">Loops and meow.c</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#correctness-design-style">Correctness, Design, Style</a></li>
+<li><a href="#mario">Mario</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#more-about-operators">More About Operators</a></li>
+<li><a href="#truncation">Truncation</a></li>
+<li><a href="#summing-up">Summing Up</a></li>
 </ul>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<ul>
+<li>In our previous session, we learned about Scratch, a visual programming language.</li>
+<li>Indeed, all the essential programming concepts presented in Scratch will be utilized as you learn how to program any programming language. Functions, conditionals, loops, and variables found in Scratch are fundamental building blocks that you will find in any programming language.</li>
+<li>Recall that machines only understand binary. Where humans write <em>source code</em>, a list of instructions for the computer that is human readable, machines only understand what we can now call <em>machine code</em>. This machine code is a pattern of ones and zeros that produces a desired effect.</li>
+<li>It turns out that we can convert <em>source code</em> into machine code using a very special piece of software called a <em>compiler</em>. Today, we will be introducing you to a compiler that will allow you to convert source code in the programming language <em>C</em> into machine code.</li>
+<li>Today, in addition to learning how to program, you will be learning how to write good code.</li>
+</ul>
+</section>
+<section id="visual-studio-code-for-cs50" class="level2">
+<h2 class="anchored" data-anchor-id="visual-studio-code-for-cs50">Visual Studio Code for CS50</h2>
+<ul>
+<li><p>The text editor that is utilized for this course is <em>Visual Studio Code</em>, aka <em>VS Code</em>, affectionately referred to as <a href="https://cs50.dev">cs50.dev</a>, which can be accessed via that same URL.</p></li>
+<li><p>One of the most important reasons we utilize VS Code is that it has all the software required for the course already pre-loaded on it. This course and the instructions herein were designed with VS Code in mind.</p></li>
+<li><p>Manually installing the necessary software for the course on your own computer is a cumbersome headache. Best always to utilize VS Code for assignments in this course.</p></li>
+<li><p>You can open VS Code at <a href="https://cs50.dev/">cs50.dev</a>.</p></li>
+<li><p>The compiler can be divided into a number of regions:</p>
+<p><img src="images/week_1/Week1Slide017.png" class="img-fluid" alt="IDE"> Notice that there is a <em>file explorer</em> on the left side where you can find your files. Further, notice that there is a region in the middle called a <em>text editor</em> where you can edit your program. Finally, there is a <code>command line interface</code>, known as a <em>CLI</em>, <em>command line</em>, or <em>terminal window</em>, where we can send commands to the computer in the cloud.</p></li>
+<li><p>In the terminal window, some common command-line arguments we may use include:</p>
+<ul>
+<li><code>cd</code>, for changing our current directory (folder)</li>
+<li><code>cp</code>, for copying files and directories</li>
+<li><code>ls</code>, for listing files in a directory</li>
+<li><code>mkdir</code>, for making a directory</li>
+<li><code>mv</code>, for moving (renaming) files and directories</li>
+<li><code>rm</code>, for removing (deleting) files</li>
+<li><code>rmdir</code>, for removing (deleting) directories</li>
+</ul></li>
+<li><p>The most commonly used is <code>ls</code> which will list all the files in the current directory. Go ahead and type <code>ls</code> into the terminal window and hit <code>enter</code>. You’ll see all the files in the current folder.</p></li>
+<li><p>Because this IDE is preconfigured with all the necessary software, you should use it to complete all assignments for this course.</p></li>
+</ul>
+</section>
+<section id="hello-world" class="level2">
+<h2 class="anchored" data-anchor-id="hello-world">Hello World</h2>
+<ul>
+<li><p>We will be using three commands to write, compile, and run our first program:</p>
+<pre><code>code hello.c
+
+make hello
+
+./hello
+
+</code></pre>
+<p>The first command, <code>code hello.c</code> creates a file and allows us to type instructions for this program. The second command, <code>make hello</code>, <em>compiles</em> the file from our instructions in C and creates an executable file called <code>hello</code>. The last command, <code>./hello</code>, runs the program called <code>hello</code>.</p></li>
+<li><p>We can build your first program in C by typing <code>code hello.c</code> into the terminal window. Notice that we deliberately lowercased the entire filename and included the <code>.c</code> extension. Then, in the text editor that appears, write code as follows:</p>
+<pre><code>// A program that says hello to the world
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+</code></pre>
+<p>Note that every single character above serves a purpose. If you type it incorrectly, the program will not run. <code>printf</code> is a function that can output a line of text. Notice the placement of the quotes and the semicolon. Further, notice that the <code>\n</code> creates a new line after the words <code>hello, world</code>.</p></li>
+<li><p>Clicking back in the terminal window, you can compile your code by executing <code>make hello</code>. Notice that we are omitting <code>.c</code>. <code>make</code> is a compiler that will look for our <code>hello.c</code> file and turn it into a program called <code>hello</code>. If executing this command results in no errors, you can proceed. If not, double-check your code to ensure it matches the above.</p></li>
+<li><p>Now, type <code>./hello</code> and your program will execute saying <code>hello, world</code>.</p></li>
+<li><p>Now, open the file explorer on the left. You will notice that there is now both a file called <code>hello.c</code> and another file called <code>hello</code>. <code>hello.c</code> is able to be read by the compiler: It’s where your code is stored. <code>hello</code> is an executable file that you can run but cannot be read by the compiler.</p></li>
+</ul>
+</section>
+<section id="from-scratch-to-c" class="level2">
+<h2 class="anchored" data-anchor-id="from-scratch-to-c">From Scratch to C</h2>
+<ul>
+<li><p>In Scratch, we utilized the <code>say</code> block to display any text on the screen. Indeed, in C, we have a function called <code>printf</code> that does exactly this.</p></li>
+<li><p>Notice our code already invokes this function:</p>
+<pre><code>printf("hello, world\n");
+</code></pre>
+<p>Notice that the printf function is called. The argument passed to printf is <code>hello, world\n</code>. The statement of code is closed with a <code>;</code>.</p></li>
+<li><p>Errors in code are common. Modify your code as follows:</p>
+<pre><code>// \n is missing
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("hello, world");
+}
+</code></pre>
+<p>Notice the <code>\n</code> is now gone.</p></li>
+<li><p>In your terminal window, run <code>make hello</code>. Typing <code>./hello</code> in the terminal window, how did your program change? This <code>\</code> character is called an <em>escape character</em> that tells the compiler that <code>\n</code> is a special instruction to create a line break.</p></li>
+<li><p>There are other escape characters you can use:</p>
+<pre><code>\n  create a new line
+\r  return to the start of a line
+\"  print a double quote
+\'  print a single quote
+\\  print a backslash
+</code></pre></li>
+<li><p>Restore your program to the following:</p>
+<pre><code>// A program that says hello to the world
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+</code></pre>
+<p>Notice the semicolon and <code>\n</code> have been restored.</p></li>
+</ul>
+</section>
+<section id="header-files-and-cs50-manual-pages" class="level2">
+<h2 class="anchored" data-anchor-id="header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</h2>
+<ul>
+<li><p>The statement at the start of the code <code>#include &lt;stdio.h&gt;</code> is a very special command that tells the compile that you want to use the capabilities of a <em>library</em> called <code>stdio.h</code>, a <em>header file</em>. This allows you, among many other things, to utilize the <code>printf</code> function.</p></li>
+<li><p>A <em>library</em> is a collection of code created by someone. Libraries are collections of pre-written code and functions that others have written in the past that we can utilize in our code.</p></li>
+<li><p>You can read about all the capabilities of this library on the <a href="https://manual.cs50.io">Manual Pages</a>. The Manual Pages provide a means by which to better understand what various commands do and how they function.</p></li>
+<li><p>It turns out that CS50 has its own library called <code>cs50.h</code>. There are numerous functions that are included that provide <em>training wheels</em> while you get started in C:</p>
+<pre><code>get_char
+get_double
+get_float
+get_int
+get_long
+get_string
+</code></pre></li>
+<li><p>Let’s use this library in your program.</p></li>
+</ul>
+</section>
+<section id="hello-you" class="level2">
+<h2 class="anchored" data-anchor-id="hello-you">Hello, You</h2>
+<ul>
+<li><p>Recall that in Scratch we had the ability to ask the user, “What’s your name?” and say “hello” with that name appended to it.</p></li>
+<li><p>In C, we can do the same. Modify your code as follows:</p>
+<pre><code>// get_string and printf with incorrect placeholder
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    string answer = get_string("What's your name? ");
+    printf("hello, answer\n");
+}
+</code></pre>
+<p>The <code>get_string</code> function is used to get a string from the user. Then, the variable <code>answer</code> is passed to the <code>printf</code> function.</p></li>
+<li><p>Running <code>make hello</code> again in the terminal window, notice that numerous errors appear.</p></li>
+<li><p>Looking at the errors, <code>string</code> and <code>get_string</code> are not recognized by the compiler. We have to teach the compiler these features by adding a library called <code>cs50.h</code>. Also, we notice that <code>answer</code> is not provided as we intended. Modify your code as follows:</p>
+<pre><code>// get_string and printf with %s
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    string answer = get_string("What's your name? ");
+    printf("hello, %s\n", answer);
+}
+</code></pre>
+<p>The <code>get_string</code> function is used to get a string from the user. Then, the variable <code>answer</code> is passed to the <code>printf</code> function. <code>%s</code> tells the <code>printf</code> function to prepare itself to receive a <code>string</code>.</p></li>
+<li><p>Now, running <code>make hello</code> again in the terminal window, you can run your program by typing <code>./hello</code>. The program now asks for your name and then says hello with your name attached, as intended.</p></li>
+<li><p><code>answer</code> is a special holding place we call a <em>variable</em>. <code>answer</code> is of type <code>string</code> and can hold any string within it. There are many <em>data types</em>, such as <code>int</code>, <code>bool</code>, <code>char</code>, and many others.</p></li>
+<li><p><code>%s</code> is a placeholder called a <em>format code</em> that tells the <code>printf</code> function to prepare to receive a <code>string</code>. <code>answer</code> is the <code>string</code> being passed to <code>%s</code>.</p></li>
+</ul>
+</section>
+<section id="types" class="level2">
+<h2 class="anchored" data-anchor-id="types">Types</h2>
+<ul>
+<li><p><code>printf</code> allows for many format codes. Here is a non-comprehensive list of ones you may utilize in this course:</p>
+<pre><code>%c
+%f
+%i
+%li
+%s
+</code></pre>
+<p><code>%s</code> is used for <code>string</code> variables. <code>%i</code> is used for <code>int</code> or integer variables. You can find out more about this on the <a href="https://manual.cs50.io">Manual Pages</a></p></li>
+<li><p>These format codes correspond to the many data types that are available within C:</p>
+<pre><code>bool
+char
+float
+int
+long
+string
+...
+</code></pre></li>
+<li><p>We will be using many of C’s available data types throughout this course.</p></li>
+</ul>
+</section>
+<section id="conditionals" class="level2">
+<h2 class="anchored" data-anchor-id="conditionals">Conditionals</h2>
+<ul>
+<li><p>Another building block you utilized within Scratch was <em>conditionals</em>. For example, you might want to do one thing if x is greater than y. Further, you might want to do something else if that condition is not met.</p></li>
+<li><p>We look at a few examples from Scratch.</p></li>
+<li><p>In C, you can compare two values as follows:</p>
+<pre><code>// Conditionals that are mutually exclusive
+
+if (x &lt; y)
+{
+    printf("x is less than y\n");
+}
+else
+{
+    printf("x is not less than y\n");
+}
+</code></pre>
+<p>Notice how if <code>x &lt; y</code>, one outcome occurs. If <code>x</code> is not less than <code>y</code>, then another outcome occurs.</p></li>
+<li><p>Similarly, we can plan for three possible outcomes:</p>
+<pre><code>// Conditional that isn't necessary
+
+if (x &lt; y)
+{
+    printf("x is less than y\n");
+}
+else if (x &gt; y)
+{
+    printf("x is greater than y\n");
+}
+else if (x == y)
+{
+    printf("x is equal to y\n");
+}
+</code></pre>
+<p>Notice that not all these lines of code are required. How could we eliminate the unnecessary calculation above?</p></li>
+<li><p>You may have guessed that we can improve this code as follows:</p>
+<pre><code>// Compare integers
+
+if (x &lt; y)
+{
+    printf("x is less than y\n");
+}
+else if (x &gt; y)
+{
+    printf("x is greater than y\n");
+}
+else
+{
+    printf("x is equal to y\n");
+}
+</code></pre>
+<p>Notice how the final statement is replaced with <code>else</code>.</p></li>
+</ul>
+</section>
+<section id="operators" class="level2">
+<h2 class="anchored" data-anchor-id="operators">Operators</h2>
+<ul>
+<li><p><em>Operators</em> refer to the mathematical operations that are supported by your compiler. In C, these mathematical operators include:</p>
+<ul>
+<li><code>+</code> for addition</li>
+<li><code>-</code> for subtraction</li>
+<li><code>*</code> for multiplication</li>
+<li><code>/</code> for division</li>
+<li><code>%</code> for remainder</li>
+</ul></li>
+<li><p>We will use all of these operators in this course.</p></li>
+</ul>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<ul>
+<li><p>In C, you can assign a value to an <code>int</code> or integer as follows:</p>
+<pre><code>int counter = 0;
+</code></pre>
+<p>Notice how a variable called <code>counter</code> of type <code>int</code> is assigned the value <code>0</code>.</p></li>
+<li><p>C can also be programmed to add one to <code>counter</code> as follows:</p>
+<pre><code>counter = counter + 1;
+</code></pre>
+<p>Notice how <code>1</code> is added to the value of <code>counter</code>.</p></li>
+<li><p>This can be also represented as:</p>
+<pre><code>counter += 1;
+</code></pre></li>
+<li><p>This can be further simplified to:</p>
+<pre><code>counter++;
+</code></pre>
+<p>Notice how the <code>++</code> is used to add 1.</p></li>
+<li><p>You can also subtract one from <code>counter</code> as follows:</p>
+<pre><code>counter--;
+</code></pre>
+<p>Notice how <code>1</code> is removed from the value of <code>counter</code>.</p></li>
+</ul>
+</section>
+<section id="compare.c" class="level2">
+<h2 class="anchored" data-anchor-id="compare.c">compare.c</h2>
+<ul>
+<li><p>Using this new knowledge about how to assign values to variables, you can program your first conditional statement.</p></li>
+<li><p>In the terminal window, type <code>code compare.c</code> and write code as follows:</p>
+<pre><code>// Conditional, Boolean expression, relational operator
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user for integers
+    int x = get_int("What's x? ");
+    int y = get_int("What's y? ");
+
+    // Compare integers
+    if (x &lt; y)
+    {
+        printf("x is less than y\n");
+    }
+}
+</code></pre>
+<p>Notice that we create two variables, an <code>int</code> or integer called <code>x</code> and another called <code>y</code>. The values of these are populated using the <code>get_int</code> function.</p></li>
+<li><p>You can run your code by executing <code>make compare</code> in the terminal window, followed by <code>./compare</code>. If you get any error messages, check your code for errors.</p></li>
+<li><p><em>Flow charts</em> are a way by which you can examine how a computer program functions. Such charts can be used to examine the efficiency of our code.</p></li>
+<li><p>Looking at a flow chart of the above code, we can notice numerous shortcomings.</p></li>
+<li><p>We can improve your program by coding as follows:</p>
+<pre><code>// Conditionals
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user for integers
+    int x = get_int("What's x? ");
+    int y = get_int("What's y? ");
+
+    // Compare integers
+    if (x &lt; y)
+    {
+        printf("x is less than y\n");
+    }
+    else if (x &gt; y)
+    {
+        printf("x is greater than y\n");
+    }
+    else
+    {
+        printf("x is equal to y\n");
+    }
+}
+</code></pre>
+<p>Notice that all potential outcomes are now accounted for.</p></li>
+<li><p>You can re-make and re-run your program and test it out.</p></li>
+<li><p>Examining this program on a flow chart, you can see the efficiency of our code design decisions.</p></li>
+</ul>
+</section>
+<section id="agree.c" class="level2">
+<h2 class="anchored" data-anchor-id="agree.c">agree.c</h2>
+<ul>
+<li><p>Considering another data type called a <code>char</code>, we can start a new program by typing <code>code agree.c</code> into the terminal window.</p></li>
+<li><p>Where a <code>string</code> is a series of characters, a <code>char</code> is a single character.</p></li>
+<li><p>In the text editor, write code as follows:</p>
+<pre><code>// Comparing against lowercase char
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user to agree
+    char c = get_char("Do you agree? ");
+
+    // Check whether agreed
+    if (c == 'y')
+    {
+        printf("Agreed.\n");
+    }
+    else if (c == 'n')
+    {
+        printf("Not agreed.\n");
+    }
+}
+</code></pre>
+<p>Notice that single quotes are utilized for single characters. Further, notice that <code>==</code> ensures that something <em>is equal</em> to something else, where a single equal sign would have a very different function in C.</p></li>
+<li><p>You can test your code by typing <code>make agree</code> into the terminal window, followed by <code>./agree</code>.</p></li>
+<li><p>We can also allow for the inputting of uppercase and lowercase characters:</p>
+<pre><code>// Comparing against lowercase and uppercase char
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user to agree
+    char c = get_char("Do you agree? ");
+
+    // Check whether agreed
+    if (c == 'y')
+    {
+        printf("Agreed.\n");
+    }
+    else if (c == 'Y')
+    {
+        printf("Agreed.\n");
+    }
+    else if (c == 'n')
+    {
+        printf("Not agreed.\n");
+    }
+    else if (c == 'N')
+    {
+        printf("Not agreed.\n");
+    }
+}
+</code></pre>
+<p>Notice that additional options are offered. However, this is not efficient code.</p></li>
+<li><p>We can improve this code as follows:</p>
+<pre><code>// Logical operators
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user to agree
+    char c = get_char("Do you agree? ");
+
+    // Check whether agreed
+    if (c == 'Y' || c == 'y')
+    {
+        printf("Agreed.\n");
+    }
+    else if (c == 'N' || c == 'n')
+    {
+        printf("Not agreed.\n");
+    }
+}
+</code></pre>
+<p>Notice that <code>||</code> effectively means <em>or</em>.</p></li>
+</ul>
+</section>
+<section id="loops-and-meow.c" class="level2">
+<h2 class="anchored" data-anchor-id="loops-and-meow.c">Loops and meow.c</h2>
+<ul>
+<li><p>We can also utilize the loop building block from Scratch in our C programs.</p></li>
+<li><p>In your terminal window, type <code>code meow.c</code> and write code as follows:</p>
+<pre><code>// Opportunity for better design
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("meow\n");
+    printf("meow\n");
+    printf("meow\n");
+}
+</code></pre>
+<p>Notice this does as intended but has an opportunity for better design. Code is repeated over and over.</p></li>
+<li><p>We can improve our program by modifying your code as follows:</p>
+<pre><code>// Better design
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int i = 3;
+    while (i &gt; 0)
+    {
+        printf("meow\n");
+        i--;
+    }
+}
+</code></pre>
+<p>Notice that we create an <code>int</code> called <code>i</code> and assign it the value <code>3</code>. Then, we create a <code>while</code> loop that will run as long as <code>i &gt; 0</code>. Then, the loop runs. Every time <code>1</code> is subtracted to <code>i</code> using the <code>i--</code> statement.</p></li>
+<li><p>Similarly, we can implement a count-up of sorts by modifying our code as follows:</p>
+<pre><code>// Print values of i
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int i = 1;
+    while (i &lt;= 3)
+    {
+        printf("meow\n");
+        i++;
+    }
+}
+</code></pre>
+<p>Notice how our counter <code>i</code> is started at <code>1</code>. Each time the loop runs, it will increment the counter by <code>1</code>. Once the counter is greater than <code>3</code>, it will stop the loop.</p></li>
+<li><p>Generally, in computer science, we count from zero. Best to revise your code as follows:</p>
+<pre><code>// Better design
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int i = 0;
+    while (i &lt; 3)
+    {
+        printf("meow\n");
+        i++;
+    }
+}
+</code></pre>
+<p>Notice we now count from zero.</p></li>
+<li><p>Another tool in our toolbox for looping is a <code>for</code> loop.</p></li>
+<li><p>You can further improve the design of our <code>meow.c</code> program using a <code>for</code> loop. Modify your code as follows:</p>
+<pre><code>// Better design
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    for (int i = 0; i &lt; 3; i++)
+    {
+        printf("meow\n");
+    }
+}
+</code></pre>
+<p>Notice that the <code>for</code> loop includes three arguments. The first argument <code>int i = 0</code> starts our counter at zero. The second argument <code>i &lt; 3</code> is the condition that is being checked. Finally, the argument <code>i++</code> tells the loop to increment by one each time the loop runs.</p></li>
+<li><p>We can even loop forever using the following code:</p>
+<pre><code>// Infinite loop
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    while (true)
+    {
+        printf("meow\n");
+    }
+}
+</code></pre>
+<p>Notice that <code>true</code> will always be the case. Therefore, the code will always run. You will lose control of your terminal window by running this code. You can break from an infinite loop by hitting <code>control-C</code> on your keyboard.</p></li>
+</ul>
+</section>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<ul>
+<li><p>While we will provide much more guidance later, you can create your own function within C as follows:</p>
+<pre><code>void meow(void)
+{
+    printf("meow\n");
+}
+</code></pre>
+<p>The initial <code>void</code> means that the function does not return any values. The <code>(void)</code> means that no values are being provided to the function.</p></li>
+<li><p>This function can be used in the main function as follows:</p>
+<pre><code>// Abstraction
+
+#include &lt;stdio.h&gt;
+
+void meow(void);
+
+int main(void)
+{
+    for (int i = 0; i &lt; 3; i++)
+    {
+        meow();
+    }
+}
+
+// Meow once
+void meow(void)
+{
+    printf("meow\n");
+}
+</code></pre>
+<p>Notice how the <code>meow</code> function is called with the <code>meow()</code> instruction. This is possible because the <code>meow</code> function is defined at the bottom of the code, and the <em>prototype</em> of the function is provided at the top of the code as <code>void meow(void)</code>.</p></li>
+<li><p>Your <code>meow</code> function can be further modified to accept input:</p>
+<pre><code>// Abstraction with parameterization
+
+#include &lt;stdio.h&gt;
+
+void meow(int n);
+
+int main(void)
+{
+    meow(3);
+}
+
+// Meow some number of times
+void meow(int n)
+{
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("meow\n");
+    }
+}
+</code></pre>
+<p>Notice that the prototype has changed to <code>void meow(int n)</code> to show that <code>meow</code> accepts an <code>int</code> as its input.</p></li>
+<li><p>Additionally, we can get user input:</p>
+<pre><code>// User input
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void meow(int n);
+
+int main(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Number: ");
+    }
+    while (n &lt; 1);
+    meow(n);
+}
+
+// Meow some number of times
+void meow(int n)
+{
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("meow\n");
+    }
+}
+</code></pre>
+<p>Notice that <code>get_int</code> is used to obtain a number from the user. <code>n</code> is passed to <code>meow</code>.</p></li>
+<li><p>We can even test to ensure that the input we get provided by the user is correct:</p>
+<pre><code>// Return value
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int get_positive_int(void);
+void meow(int n);
+
+int main(void)
+{
+    int n = get_positive_int();
+    meow(n);
+}
+
+// Get number of meows
+int get_positive_int(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Number: ");
+    }
+    while (n &lt; 1);
+    return n;
+}
+
+// Meow some number of times
+void meow(int n)
+{
+    for (int i = 0; i &lt; n; i++)
+    {
+        printf("meow\n");
+    }
+}
+</code></pre>
+<p>Notice that a new function called <code>get_positive_int</code> asks the user for an integer while <code>n &lt; 1</code>. After obtaining a positive integer, this function will <code>return n</code> back to the <code>main</code> function.</p></li>
+</ul>
+</section>
+<section id="correctness-design-style" class="level2">
+<h2 class="anchored" data-anchor-id="correctness-design-style">Correctness, Design, Style</h2>
+<ul>
+<li>Code can be evaluated upon three axes.</li>
+<li>First, <em>correctness</em> refers to “Does the code run as intended?” You can check the correctness of your code with <code>check50</code>.</li>
+<li>Second, <em>design</em> refers to “How well is the code designed?” You can evaluate the design of your code using <code>design50</code>.</li>
+<li>Finally, <em>style</em> refers to “How aesthetically pleasing and consistent is the code?” You can evaluate the style of your code with <code>style50</code>.</li>
+</ul>
+</section>
+<section id="mario" class="level2">
+<h2 class="anchored" data-anchor-id="mario">Mario</h2>
+<ul>
+<li><p>Everything we’ve discussed today has focused on various building blocks of your work as an emerging computer scientist.</p></li>
+<li><p>The following will help you orient toward working on a problem set for this class in general: How does one approach a computer science-related problem?</p></li>
+<li><p>Imagine we wanted to emulate the visual of the game Super Mario Bros.&nbsp;Considering the four question blocks pictured, how could we create code that roughly represents these four horizontal blocks?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_1/Week1Slide123.png" class="img-fluid figure-img"></p>
+<figcaption>Mario Question Marks</figcaption>
+</figure>
+</div></li>
+<li><p>In the terminal window, type <code>code mario.c</code> and code as follows:</p>
+<pre><code>// Prints a row of 4 question marks with a loop
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    for (int i = 0; i &lt; 4; i++)
+    {
+        printf("?");
+    }
+    printf("\n");
+}
+</code></pre>
+<p>Notice how four question marks are printed here using a loop.</p></li>
+<li><p>Similarly, we can apply this same logic to create three vertical blocks.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_1/Week1Slide125.png" class="img-fluid figure-img"></p>
+<figcaption>Mario Blocks</figcaption>
+</figure>
+</div></li>
+<li><p>To accomplish this, modify your code as follows:</p>
+<pre><code>// Prints a column of 3 bricks with a loop
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    for (int i = 0; i &lt; 3; i++)
+    {
+        printf("#\n");
+    }
+}
+</code></pre>
+<p>Notice how three vertical bricks are printed using a loop.</p></li>
+<li><p>What if we wanted to combine these ideas to create a three-by-three group of blocks?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_1/Week1Slide127.png" class="img-fluid figure-img"></p>
+<figcaption>Mario Grid</figcaption>
+</figure>
+</div></li>
+<li><p>We can follow the logic above, combining the same ideas. Modify your code as follows:</p>
+<pre><code>// Prints a 3-by-3 grid of bricks with nested loops
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    for (int i = 0; i &lt; 3; i++)
+    {
+        for (int j = 0; j &lt; 3; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+</code></pre>
+<p>Notice that one loop is inside another. The first loop defines what vertical row is being printed. For each row, three columns are printed. After each row, a new line is printed.</p></li>
+<li><p>What if we wanted to ensure that the number of blocks is <em>constant</em>, that is, unchangeable? Modify your code as follows:</p>
+<pre><code>// Prints a 3-by-3 grid of bricks with nested loops using a constant
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    const int n = 3;
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int j = 0; j &lt; n; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+</code></pre>
+<p>Notice how <code>n</code> is now a constant. It can never be changed.</p></li>
+<li><p>As illustrated earlier in this lecture, we can <em>abstract away</em> functionality into functions. Consider the following code:</p>
+<pre><code>// Helper function
+
+#include &lt;stdio.h&gt;
+
+void print_row(int width);
+
+int main(void)
+{
+    const int n = 3;
+    for (int i = 0; i &lt; n; i++)
+    {
+        print_row(n);
+    }
+}
+
+void print_row(int width)
+{
+    for (int i = 0; i &lt; width; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
+</code></pre>
+<p>Notice how printing a row is accomplished through a new function.</p></li>
+</ul>
+</section>
+<section id="comments" class="level2">
+<h2 class="anchored" data-anchor-id="comments">Comments</h2>
+<ul>
+<li><p>Comments are fundamental parts of a computer program, where you leave explanatory remarks to yourself and others who may be collaborating with you regarding your code.</p></li>
+<li><p>All code you create for this course must include robust comments.</p></li>
+<li><p>Typically, each comment is a few words or more, providing the reader an opportunity to understand what is happening in a specific block of code. Further, such comments serve as a reminder for you later when you need to revise your code.</p></li>
+<li><p>Comments involve placing <code>//</code> into your code, followed by a comment. Modify your code as follows to integrate comments:</p>
+<pre><code>// Helper function
+
+#include &lt;stdio.h&gt;
+
+void print_row(int width);
+
+int main(void)
+{
+    const int n = 3;
+
+    // Print n rows
+    for (int i = 0; i &lt; n; i++)
+    {
+        print_row(n);
+    }
+}
+
+void print_row(int width)
+{
+    for (int i = 0; i &lt; width; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
+</code></pre>
+<p>Notice how each comment begins with a <code>//</code>.</p></li>
+</ul>
+</section>
+<section id="more-about-operators" class="level2">
+<h2 class="anchored" data-anchor-id="more-about-operators">More About Operators</h2>
+<ul>
+<li><p>You can implement a calculator in C. In your terminal, type <code>code calculator.c</code> and write code as follows:</p>
+<pre><code>// Addition with int
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user for x
+    int x = get_int("x: ");
+
+    // Prompt user for y
+    int y = get_int("y: ");
+
+    // Add numbers
+    int z = x + y;
+
+    // Perform addition
+    printf("%i\n", z);
+}
+</code></pre>
+<p>Notice how the <code>get_int</code> function is utilized to obtain an integer from the user twice. One integer is stored in the <code>int</code> variable called <code>x</code>. Another is stored in the <code>int</code> variable called <code>y</code>. The sum is stored in <code>z</code>. Then, the <code>printf</code> function prints the value of <code>z</code>, designated by the <code>%i</code> symbol.</p></li>
+<li><p>We can also double a number:</p>
+<pre><code>// int
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int dollars = 1;
+    while (true)
+    {
+        char c = get_char("Here's $%i. Double it and give to next person? ", dollars);
+        if (c == 'y')
+        {
+            dollars *= 2;
+        }
+        else
+        {
+            break;
+        }
+    }
+    printf("Here's $%i.\n", dollars);
+}
+</code></pre>
+<p>Running this program, some seeming errors appear in <code>dollars</code>. Why is this?</p></li>
+<li><p>One of C’s shortcomings is the ease by which it manages memory. While C provides you immense control over how memory is utilized, programmers have to be very aware of the potential pitfalls of memory management.</p></li>
+<li><p>Types refer to the possible data that can be stored within a variable. For example, a <code>char</code> is designed to accommodate a single character like <code>a</code> or <code>2</code>.</p></li>
+<li><p>Types are very important because each type has specific limits. For example, because of the limits in memory, the highest value of an <code>int</code> can be <code>4294967295</code>. If you attempt to count an <code>int</code> higher, an <em>integer overflow</em> will result where an incorrect value will be stored in this variable.</p></li>
+<li><p>The number of bits limits how high and low we can count.</p></li>
+<li><p>This can have catastrophic, real-world impacts.</p></li>
+<li><p>We can correct this by using a data type called <code>long</code>.</p>
+<pre><code>// long
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    long dollars = 1;
+    while (true)
+    {
+        char c = get_char("Here's $%li. Double it and give to next person? ", dollars);
+        if (c == 'y')
+        {
+            dollars *= 2;
+        }
+        else
+        {
+            break;
+        }
+    }
+    printf("Here's $%li.\n", dollars);
+}
+</code></pre>
+<p>Notice how running this code will allow for very high dollar amounts.</p></li>
+<li><p>Types with which you might interact during this course include:</p>
+<ul>
+<li><code>bool</code>, a Boolean expression of either true or false</li>
+<li><code>char</code>, a single character like a or 2</li>
+<li><code>double</code>, a floating-point value with more digits than a float</li>
+<li><code>float</code>, a floating-point value, or a real number with a decimal value</li>
+<li><code>int</code>, integers up to a certain size, or number of bits</li>
+<li><code>long</code>, integers with more bits, so they can count higher than an int</li>
+<li><code>string</code>, a string of characters</li>
+</ul></li>
+</ul>
+</section>
+<section id="truncation" class="level2">
+<h2 class="anchored" data-anchor-id="truncation">Truncation</h2>
+<ul>
+<li><p>Another issue that can arise when using data types includes truncation.</p>
+<pre><code>// Division with ints, demonstrating truncation
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user for x
+    int x = get_int("x: ");
+
+    // Prompt user for y
+    int y = get_int("y: ");
+
+    // Divide x by y
+    printf("%i\n", x / y);
+}
+</code></pre>
+<p>An integer divided by an integer will always result in an integer in C. Accordingly, the above code will often result in any digits after the decimal being thrown away.</p></li>
+<li><p>This can be solved by employing a <code>float</code>:</p>
+<pre><code>// Floats
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // Prompt user for x
+    float x = get_float("x: ");
+
+    // Prompt user for y
+    float y = get_float("y: ");
+
+    // Divide x by y
+    printf("%.50f\n", x / y);
+}
+</code></pre>
+<p>Notice that this solves some of our problems. However, we might notice imprecision in the answer provided by the program.</p></li>
+<li><p><em>Floating point imprecision</em> illustrates that there are limits to how precise computers can calculate numbers.</p></li>
+<li><p>As you are coding, pay special attention to the types of variables you are using to avoid problems within your code.</p></li>
+<li><p>We examined some examples of disasters that can occur through type-related errors.</p></li>
+</ul>
+</section>
+<section id="summing-up" class="level2">
+<h2 class="anchored" data-anchor-id="summing-up">Summing Up</h2>
+<p>In this lesson, you learned how to apply the building blocks you learned in Scratch to the C programming language. You learned…</p>
+<ul>
+<li>How to create your first program in C.</li>
+<li>How to use the command line.</li>
+<li>About predefined functions that come natively with C.</li>
+<li>How to use variables, conditionals, and loops.</li>
+<li>How to create your own functions to simplify and improve your code.</li>
+<li>How to evaluate your code on three axes: correctness, design, and style.</li>
+<li>How to integrate comments into your code.</li>
+<li>How to utilize types and operators and the implications of your choices.</li>
+</ul>
+<p>See you next time!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

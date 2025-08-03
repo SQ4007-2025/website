@@ -75,7 +75,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/notes/images/week_7/Week7Slide025.png">
 <meta property="og:site_name" content="Computing Technology">
+<meta property="og:image:height" content="540">
+<meta property="og:image:width" content="960">
 <meta name="twitter:title" content="Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/notes/images/twitter-card.png">
@@ -326,7 +329,23 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#week-7-notes" id="toc-week-7-notes" class="nav-link active" data-scroll-target="#week-7-notes">Week 7 Notes</a></li>
-  <li><a href="#week-7-sql" id="toc-week-7-sql" class="nav-link" data-scroll-target="#week-7-sql">Week 7 <em>SQL</em></a></li>
+  <li><a href="#lecture-7" id="toc-lecture-7" class="nav-link" data-scroll-target="#lecture-7">Lecture 7</a>
+  <ul class="collapse">
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#flat-file-database" id="toc-flat-file-database" class="nav-link" data-scroll-target="#flat-file-database">Flat-File Database</a></li>
+  <li><a href="#relational-databases" id="toc-relational-databases" class="nav-link" data-scroll-target="#relational-databases">Relational Databases</a></li>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select">SELECT</a></li>
+  <li><a href="#insert" id="toc-insert" class="nav-link" data-scroll-target="#insert">INSERT</a></li>
+  <li><a href="#delete" id="toc-delete" class="nav-link" data-scroll-target="#delete">DELETE</a></li>
+  <li><a href="#update" id="toc-update" class="nav-link" data-scroll-target="#update">UPDATE</a></li>
+  <li><a href="#imdb" id="toc-imdb" class="nav-link" data-scroll-target="#imdb">IMDb</a></li>
+  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins"><code>JOIN</code>s</a></li>
+  <li><a href="#indexes" id="toc-indexes" class="nav-link" data-scroll-target="#indexes">Indexes</a></li>
+  <li><a href="#using-sql-in-python" id="toc-using-sql-in-python" class="nav-link" data-scroll-target="#using-sql-in-python">Using SQL in Python</a></li>
+  <li><a href="#race-conditions" id="toc-race-conditions" class="nav-link" data-scroll-target="#race-conditions">Race Conditions</a></li>
+  <li><a href="#sql-injection-attacks" id="toc-sql-injection-attacks" class="nav-link" data-scroll-target="#sql-injection-attacks">SQL Injection Attacks</a></li>
+  <li><a href="#summing-up" id="toc-summing-up" class="nav-link" data-scroll-target="#summing-up">Summing Up</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_8.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -339,62 +358,551 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="week-7-notes" class="level1">
 <h1>Week 7 Notes</h1>
-<p><strong>CS50x 2025 - Week 7</strong></p>
-<p>Source: https://cs50.harvard.edu/x/weeks/7/</p>
+<p><strong>CS50x 2025 - Week 7 Lecture Notes</strong></p>
+<p>Source: https://cs50.harvard.edu/x/notes/7/</p>
 <hr>
 </section>
-<section id="week-7-sql" class="level1">
-<h1>Week 7 <em>SQL</em></h1>
-<p>SQL: Tables; Types; Statements; Constraints; Indexes; Keywords, Functions; Transactions. Race Conditions. SQL Injection Attacks.</p>
+<section id="lecture-7" class="level1">
+<h1>Lecture 7</h1>
 <ul>
-<li>Lecture
-<ul>
-<li><a href="../../notes/7/">Notes</a></li>
-<li>Slides
-<ul>
-<li><a href="https://docs.google.com/presentation/d/1eiG43h8iOyZhYqnDrpii3Gv1Zbi8ABsy_1NdzPCKVRM/edit?usp=sharing">Google Slides</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7.pdf">PDF</a></li>
-</ul></li>
-<li>Source Code
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/src7/">Index</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/src7.pdf">PDF</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/src7.zip">Zip</a></li>
-</ul></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lang/en/lecture7.srt">Subtitles</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lang/en/lecture7.txt">Transcript</a></li>
-<li>Video
-<ul>
-<li><a href="https://video.cs50.io/ZA25WHO62ZA?screen=HI8um-uyJzI">CS50 Video Player</a></li>
-<li>MP4
-<ul>
-<li>HDR
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-360p-hdr.mp4">360p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-720p-hdr.mp4">720p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-1080p-hdr.mp4">1080p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-4k-hdr.mp4">4K</a></li>
-</ul></li>
-<li>SDR
-<ul>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-360p.mp4">360p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-720p.mp4">720p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-1080p.mp4">1080p</a></li>
-<li><a href="https://cdn.cs50.net/2024/fall/lectures/7/lecture7-4k.mp4">4K</a></li>
-</ul></li>
-</ul></li>
-<li><a href="https://youtu.be/ZA25WHO62ZA">YouTube</a></li>
-</ul></li>
-</ul></li>
-<li>Shorts
-<ul>
-<li><a href="../../shorts/sql/">SQL</a></li>
-</ul></li>
-<li><a href="../../sections/7/">Section</a></li>
-<li><a href="../../psets/7/">Problem Set 7</a></li>
+<li><a href="#welcome">Welcome!</a></li>
+<li><a href="#flat-file-database">Flat-File Database</a></li>
+<li><a href="#relational-databases">Relational Databases</a></li>
+<li><a href="#select">SELECT</a></li>
+<li><a href="#insert">INSERT</a></li>
+<li><a href="#delete">DELETE</a></li>
+<li><a href="#update">UPDATE</a></li>
+<li><a href="#imdb">IMDb</a></li>
+<li><a href="#joins"><code>JOIN</code>s</a></li>
+<li><a href="#indexes">Indexes</a></li>
+<li><a href="#using-sql-in-python">Using SQL in Python</a></li>
+<li><a href="#race-conditions">Race Conditions</a></li>
+<li><a href="#sql-injection-attacks">SQL Injection Attacks</a></li>
+<li><a href="#summing-up">Summing Up</a></li>
 </ul>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<ul>
+<li>In previous weeks, we introduced you to Python, a high-level programming language that utilized the same building blocks we learned in C. However, we introduced this new language not for the purpose of learning “just another language.” Instead, we do so because some tools are better for some jobs and not so great for others!</li>
+<li>This week, we will be continuing more syntax related to Python.</li>
+<li>Further, we will be integrating this knowledge with data.</li>
+<li>Finally, we will be discussing <em>SQL</em> or <em>Structured Query Language</em>, a domain-specific way by which we can interact with and modify data.</li>
+<li>Overall, one of the goals of this course is to learn to program generally – not simply how to program in the languages described in this course.</li>
+</ul>
+</section>
+<section id="flat-file-database" class="level2">
+<h2 class="anchored" data-anchor-id="flat-file-database">Flat-File Database</h2>
+<ul>
+<li><p>As you have likely seen before, data can often be described in patterns of columns and rows.</p></li>
+<li><p>Spreadsheets like those created in Microsoft Excel and Google Sheets can be outputted to a <code>csv</code> or <em>comma-separated values</em> file.</p></li>
+<li><p>If you look at a <code>csv</code> file, you’ll notice that the file is flat in that all of our data is stored in a single table represented by a text file. We call this form of data a <em>flat-file database</em>.</p></li>
+<li><p>All data is stored row by row. Each column is separated by a comma or another value.</p></li>
+<li><p>Python comes with native support for <code>csv</code> files.</p></li>
+<li><p>First, download <a href="https://cdn.cs50.net/2023/fall/lectures/7/src7/favorites/favorites.csv">favorites.csv</a> and upload it to your file explorer inside <a href="https://cs50.dev">cs50.dev</a>. Second, examining this data, notice that the first row is special in that it defines each column. Then, each record is stored row by row.</p></li>
+<li><p>In your terminal window, type <code>code favorites.py</code> and write code as follows:</p>
+<pre><code># Prints all favorites in CSV using csv.reader
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create reader
+    reader = csv.reader(file)
+
+    # Skip header row
+    next(reader)
+
+    # Iterate over CSV file, printing each favorite
+    for row in reader:
+        print(row[1])
+</code></pre>
+<p>Notice that the <code>csv</code> library is imported. Further, we created a <code>reader</code> that will hold the result of <code>csv.reader(file)</code>. The <code>csv.reader</code> function reads each row from the file, and in our code, we store the results in <code>reader</code>. <code>print(row[1])</code>, therefore, will print the language from the <code>favorites.csv</code> file.</p></li>
+<li><p>You can improve your code as follows:</p>
+<pre><code># Stores favorite in a variable
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create reader
+    reader = csv.reader(file)
+
+    # Skip header row
+    next(reader)
+
+    # Iterate over CSV file, printing each favorite
+    for row in reader:
+        favorite = row[1]
+        print(favorite)
+</code></pre>
+<p>Notice that <code>favorite</code> is stored and then printed. Also, notice that we use the <code>next</code> function to skip to the next line of our reader.</p></li>
+<li><p>One of the disadvantages of the above approach is that we are trusting that <code>row[1]</code> is always the favorite. However, what would happen if the columns had been moved around?</p></li>
+<li><p>We can fix this potential issue. Python also allows you to index by the keys of a list. Modify your code as follows:</p>
+<pre><code># Prints all favorites in CSV using csv.DictReader
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Iterate over CSV file, printing each favorite
+    for row in reader:
+        favorite = row["language"]
+        print(favorite)
+</code></pre>
+<p>Notice that this example directly utilizes the <code>language</code> key in the print statement. <code>favorite</code> indexes into the <code>reader</code> dictionary of <code>row["language"]</code>.</p></li>
+<li><p>This could be further simplified to:</p>
+<pre><code># Prints all favorites in CSV using csv.DictReader
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Iterate over CSV file, printing each favorite
+    for row in reader:
+        print(row["language"])
+</code></pre></li>
+<li><p>To count the number of favorite languages expressed in the <code>csv</code> file, we can do the following:</p>
+<pre><code># Counts favorites using variables
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Counts
+    scratch, c, python = 0, 0, 0
+
+    # Iterate over CSV file, counting favorites
+    for row in reader:
+        favorite = row["language"]
+        if favorite == "Scratch":
+            scratch += 1
+        elif favorite == "C":
+            c += 1
+        elif favorite == "Python":
+            python += 1
+
+# Print counts
+print(f"Scratch: {scratch}")
+print(f"C: {c}")
+print(f"Python: {python}")
+</code></pre>
+<p>Notice that each language is counted using <code>if</code> statements. Further, notice the double equal <code>==</code> signs in those <code>if</code> statements.</p></li>
+<li><p>Python allows us to use a dictionary to count the <code>counts</code> of each language. Consider the following improvement upon our code:</p>
+<pre><code># Counts favorites using dictionary
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Counts
+    counts = {}
+
+    # Iterate over CSV file, counting favorites
+    for row in reader:
+        favorite = row["language"]
+        if favorite in counts:
+            counts[favorite] += 1
+        else:
+            counts[favorite] = 1
+
+# Print counts
+for favorite in counts:
+    print(f"{favorite}: {counts[favorite]}")
+</code></pre>
+<p>Notice that the value in <code>counts</code> with the key <code>favorite</code> is incremented when it exists already. If it does not exist, we define <code>counts[favorite]</code> and set it to 1. Further, the formatted string has been improved to present the <code>counts[favorite]</code>.</p></li>
+<li><p>Python also allows sorting <code>counts</code>. Improve your code as follows:</p>
+<pre><code># Sorts favorites by key
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Counts
+    counts = {}
+
+    # Iterate over CSV file, counting favorites
+    for row in reader:
+        favorite = row["language"]
+        if favorite in counts:
+            counts[favorite] += 1
+        else:
+            counts[favorite] = 1
+
+# Print counts
+for favorite in sorted(counts):
+    print(f"{favorite}: {counts[favorite]}")
+</code></pre>
+<p>Notice the <code>sorted(counts)</code> at the bottom of the code.</p></li>
+<li><p>If you look at the parameters for the <code>sorted</code> function in the Python documentation, you will find it has many built-in parameters. You can leverage some of these built-in parameters as follows:</p>
+<pre><code># Sorts favorites by value using .get
+
+import csv
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Counts
+    counts = {}
+
+    # Iterate over CSV file, counting favorites
+    for row in reader:
+        favorite = row["language"]
+        if favorite in counts:
+            counts[favorite] += 1
+        else:
+            counts[favorite] = 1
+
+# Print counts
+for favorite in sorted(counts, key=counts.get, reverse=True):
+    print(f"{favorite}: {counts[favorite]}")
+</code></pre>
+<p>Notice the arguments passed to <code>sorted</code>. The <code>key</code> argument allows you to tell Python the method you wish to use to sort items. In this case <code>counts.get</code> is used to sort by the values. <code>reverse=True</code> tells <code>sorted</code> to sort from largest to smallest.</p></li>
+<li><p>Python has numerous libraries that we can utilize in our code. One of these libraries is <code>collections</code>, from which we can import <code>Counter</code>. <code>Counter</code> will allow you to access the counts of each language without the headaches of all the <code>if</code> statements seen in our previous code. You can implement as follows:</p>
+<pre><code># Sorts favorites by value using .get
+
+import csv
+
+from collections import Counter
+
+# Open CSV file
+with open("favorites.csv", "r") as file:
+
+    # Create DictReader
+    reader = csv.DictReader(file)
+
+    # Counts
+    counts = Counter()
+
+    # Iterate over CSV file, counting favorites
+    for row in reader:
+        favorite = row["language"]
+        counts[favorite] += 1
+
+# Print counts
+for favorite, count in counts.most_common():
+    print(f"{favorite}: {count}")
+</code></pre>
+<p>Notice how <code>counts = Counter()</code> enables the use of this imported <code>Counter</code> class from <code>collections</code>.</p></li>
+<li><p>You can learn more about <a href="https://docs.python.org/3/howto/sorting.html">sorted</a> in the <a href="https://docs.python.org/3/howto/sorting.html">Python Documentation</a>.</p></li>
+</ul>
+</section>
+<section id="relational-databases" class="level2">
+<h2 class="anchored" data-anchor-id="relational-databases">Relational Databases</h2>
+<ul>
+<li><p>Google, X, and Meta all use relational databases to store their information at scale.</p></li>
+<li><p>Relational databases store data in rows and columns in structures called <em>tables</em>.</p></li>
+<li><p>SQL allows for four types of commands:</p>
+<pre><code>  Create
+  Read
+  Update
+  Delete
+</code></pre></li>
+<li><p>These four operations are affectionately called <em>CRUD</em>.</p></li>
+<li><p>We can create a database with the SQL syntax <code>CREATE TABLE table (column type, ...);</code>. But where do you run this command?</p></li>
+<li><p><code>sqlite3</code> is a type of SQL database that has the core features required for this course.</p></li>
+<li><p>We can create a SQL database at the terminal by typing <code>sqlite3 favorites.db</code>. Upon being prompted, we will agree that we want to create <code>favorites.db</code> by pressing <code>y</code>.</p></li>
+<li><p>You will notice a different prompt as we are now using a program called <code>sqlite</code>.</p></li>
+<li><p>We can put <code>sqlite</code> into <code>csv</code> mode by typing <code>.mode csv</code>. Then, we can import our data from our <code>csv</code> file by typing <code>.import favorites.csv favorites</code>. It seems that nothing has happened!</p></li>
+<li><p>We can type <code>.schema</code> to see the structure of the database.</p></li>
+<li><p>You can read items from a table using the syntax <code>SELECT columns FROM table</code>.</p></li>
+<li><p>For example, you can type <code>SELECT * FROM favorites;</code> which will print every row in <code>favorites</code>.</p></li>
+<li><p>You can get a subset of the data using the command <code>SELECT language FROM favorites;</code>.</p></li>
+<li><p>SQL supports many commands to access data, including:</p>
+<pre><code>  AVG
+  COUNT
+  DISTINCT
+  LOWER
+  MAX
+  MIN
+  UPPER
+</code></pre></li>
+<li><p>For example, you can type <code>SELECT COUNT(*) FROM favorites;</code>. Further, you can type <code>SELECT DISTINCT language FROM favorites;</code> to get a list of the individual languages within the database. You could even type <code>SELECT COUNT(DISTINCT language) FROM favorites;</code> to get a count of those.</p></li>
+<li><p>SQL offers additional commands we can utilize in our queries:</p>
+<pre><code>  WHERE       -- adding a Boolean expression to filter our data
+  LIKE        -- filtering responses more loosely
+  ORDER BY    -- ordering responses
+  LIMIT       -- limiting the number of responses
+  GROUP BY    -- grouping responses together
+</code></pre>
+<p>Notice that we use <code>--</code> to write a comment in SQL.</p></li>
+</ul>
+</section>
+<section id="select" class="level2">
+<h2 class="anchored" data-anchor-id="select">SELECT</h2>
+<ul>
+<li>For example, we can execute <code>SELECT COUNT(*) FROM favorites WHERE language = 'C';</code>. A count is presented.</li>
+<li>Further, we could type <code>SELECT COUNT(*) FROM favorites WHERE language = 'C' AND problem = 'Hello, World';</code>. Notice how the <code>AND</code> is utilized to narrow our results.</li>
+<li>Similarly, we could execute <code>SELECT language, COUNT(*) FROM favorites GROUP BY language;</code>. This would offer a temporary table that would show the language and count.</li>
+<li>We could improve this by typing <code>SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*);</code>. This will order the resulting table by the <code>count</code>.</li>
+<li>Likewise, we could execute <code>SELECT COUNT(*) FROM favorites WHERE language = 'C' AND (problem = 'Hello, World' OR problem = 'Hello, It''s Me');</code>. Do notice that there are two <code>''</code> marks as to allow the use of single quotes in a way that does not confuse SQL.</li>
+<li>Further, we could execute <code>SELECT COUNT(*) FROM favorites WHERE language = 'C' AND problem LIKE 'Hello, %';</code> to find any problems that start with <code>Hello,</code> (including a space).</li>
+<li>We can also group the values of each language by executing <code>SELECT language, COUNT(*) FROM favorites GROUP BY language;</code>.</li>
+<li>We can order the output as follows: <code>SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*) DESC;</code>.</li>
+<li>We can even create aliases, like variables in our queries: <code>SELECT language, COUNT(*) AS n FROM favorites GROUP BY language ORDER BY n DESC;</code>.</li>
+<li>Finally, we can limit our output to 1 or more values: <code>SELECT language, COUNT(*) AS n FROM favorites GROUP BY language ORDER BY n DESC LIMIT 1;</code>.</li>
+</ul>
+</section>
+<section id="insert" class="level2">
+<h2 class="anchored" data-anchor-id="insert">INSERT</h2>
+<ul>
+<li>We can also <code>INSERT</code> into a SQL database utilizing the form <code>INSERT INTO table (column...) VALUES(value, ...);</code>.</li>
+<li>We can execute <code>INSERT INTO favorites (language, problem) VALUES ('SQL', 'Fiftyville');</code>.</li>
+<li>You can verify the addition of this favorite by executing <code>SELECT * FROM favorites;</code>.</li>
+</ul>
+</section>
+<section id="delete" class="level2">
+<h2 class="anchored" data-anchor-id="delete">DELETE</h2>
+<ul>
+<li><code>DELETE</code> allows you to delete parts of your data. For example, you could <code>DELETE FROM favorites WHERE Timestamp IS NULL;</code>. This deletes any record where the <code>Timestamp</code> is <code>NULL</code>.</li>
+</ul>
+</section>
+<section id="update" class="level2">
+<h2 class="anchored" data-anchor-id="update">UPDATE</h2>
+<ul>
+<li>We can also utilize the <code>UPDATE</code> command to update your data.</li>
+<li>For example, you can execute <code>UPDATE favorites SET language = 'SQL', problem = 'Fiftyville';</code>. This will result in overwriting all previous statements where C and Scratch were the favorite programming language.</li>
+<li>Notice that these queries have immense power. Accordingly, in the real-world setting, you should consider who has permissions to execute certain commands and if you have backups available!</li>
+</ul>
+</section>
+<section id="imdb" class="level2">
+<h2 class="anchored" data-anchor-id="imdb">IMDb</h2>
+<ul>
+<li><p>We can imagine a database that we might want to create to catalog various TV shows. We could create a spreadsheet with columns like <code>title</code>, <code>star</code>, <code>star</code>, <code>star</code>, <code>star</code>, and more stars. A problem with this approach is that it has a lot of wasted space. Some shows may have one star. Others may have dozens.</p></li>
+<li><p>We could separate our database into multiple sheets. We could have a <code>shows</code> sheet, a <code>stars</code> sheet, and a <code>people</code> sheet. On the <code>people</code> sheet, each person could have a unique <code>id</code>. On the <code>shows</code> sheet, each show could have a unique <code>id</code> too. On a third sheet called <code>stars</code> we could relate how each show has people for each show by having a <code>show_id</code> and <code>person_id</code>. While this is an improvement, this is not an ideal database.</p></li>
+<li><p>IMDb offers a database of people, shows, writers, stars, genres, and ratings. Each of these tables is related to one another as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_7/Week7Slide025.png" class="img-fluid figure-img"></p>
+<figcaption>six boxes that represent various sql tables arrows are drawn to each showing their many relationships with one another</figcaption>
+</figure>
+</div></li>
+<li><p>After downloading <a href="https://cdn.cs50.net/2024/fall/lectures/7/src7/imdb/shows.db"><code>shows.db</code></a>, you can execute <code>sqlite3 shows.db</code> in your terminal window.</p></li>
+<li><p>Let’s zero in on the relationship between two tables within the database called <code>shows</code> and <code>ratings</code>. The relationship between these two tables can be illustrated as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_7/Week7Slide032.png" class="img-fluid figure-img"></p>
+<figcaption>two boxes one called shows and the other called ratings</figcaption>
+</figure>
+</div></li>
+<li><p>To illustrate the relationship between these tables, we could execute the following command: <code>SELECT * FROM ratings LIMIT 10;</code>. Examining the output, we could execute <code>SELECT * FROM shows LIMIT 10;</code>.</p></li>
+<li><p>Examining <code>shows</code> and <code>rating</code>, we can see these have a one-to-one relationship: One show has one rating.</p></li>
+<li><p>To understand the database, upon executing <code>.schema</code> you will find not only each of the tables but the individual fields inside each of these fields.</p></li>
+<li><p>More specifically, you could execute <code>.schema shows</code> to understand the fields inside <code>shows</code>. You can also execute <code>.schema ratings</code> to see the fields inside <code>ratings</code>.</p></li>
+<li><p>As you can see, <code>show_id</code> exists in all of the tables. In the <code>shows</code> table, it is simply called <code>id</code>. This common field between all the fields is called a <em>key</em>. Primary keys are used to identify a unique record in a table. <em>Foreign keys</em> are used to build relationships between tables by pointing to the primary key in another table. You can see in the schema of <code>ratings</code> that <code>show_id</code> is a foreign key that references <code>id</code> in <code>shows</code>.</p></li>
+<li><p>By storing data in a relational database, as above, data can be more efficiently stored.</p></li>
+<li><p>In <em>sqlite</em>, we have five data types, including:</p>
+<pre><code>  BLOB       -- binary large objects that are groups of ones and zeros
+  INTEGER    -- an integer
+  NUMERIC    -- for numbers that are formatted specially like dates
+  REAL       -- like a float
+  TEXT       -- for strings and the like
+</code></pre></li>
+<li><p>Additionally, columns can be set to add special constraints:</p>
+<pre><code>  NOT NULL
+  UNIQUE
+</code></pre></li>
+<li><p>We can further play with this data to understand these relationships. Execute <code>SELECT * FROM ratings;</code>. There are a lot of ratings!</p></li>
+<li><p>We can further limit this data down by executing <code>SELECT show_id FROM ratings WHERE rating &gt;= 6.0 LIMIT 10;</code>. From this query, you can see that there are 10 shows presented. However, we don’t know what show each <code>show_id</code> represents.</p></li>
+<li><p>You can discover what shows these are by executing <code>SELECT * FROM shows WHERE id = 626124;</code></p></li>
+<li><p>We can further our query to be more efficient by executing:</p>
+<pre><code>SELECT title
+FROM shows
+WHERE id IN (
+    SELECT show_id
+    FROM ratings
+    WHERE rating &gt;= 6.0
+    LIMIT 10
+)
+</code></pre>
+<p>Notice that this query nests together two queries. An inner query is used by an outer query.</p></li>
+</ul>
+</section>
+<section id="joins" class="level2">
+<h2 class="anchored" data-anchor-id="joins"><code>JOIN</code>s</h2>
+<ul>
+<li><p>We are pulling data from <code>shows</code> and <code>ratings</code>. Notice how both <code>shows</code> and <code>ratings</code> have an <code>id</code> in common.</p></li>
+<li><p>How could we combine tables temporarily? Tables could be joined together using the <code>JOIN</code> command.</p></li>
+<li><p>Execute the following command:</p>
+<pre><code>SELECT * FROM shows
+  JOIN ratings on shows.id = ratings.show_id
+  WHERE rating &gt;= 6.0
+  LIMIT 10;
+</code></pre>
+<p>Notice this results in a wider table than we have previously seen.</p></li>
+<li><p>Where the previous queries have illustrated the <em>one-to-one</em> relationship between these keys, let’s examine some <em>one-to-many</em> relationships. Focusing on the <code>genres</code> table, execute the following:</p>
+<pre><code>SELECT * FROM genres
+LIMIT 10;
+</code></pre>
+<p>Notice how this provides us a sense of the raw data. You might notice that one show has three values. This is a one-to-many relationship.</p></li>
+<li><p>We can learn more about the <code>genres</code> table by typing <code>.schema genres</code>.</p></li>
+<li><p>Execute the following command to learn more about the various comedies in the database:</p>
+<pre><code>SELECT title FROM shows
+WHERE id IN (
+  SELECT show_id FROM genres
+  WHERE genre = 'Comedy'
+  LIMIT 10
+);
+</code></pre>
+<p>Notice how this produces a list of comedies, including <em>Catweazle</em>.</p></li>
+<li><p>To learn more about Catweazle, by joining various tables through a join:</p>
+<pre><code>SELECT * FROM shows
+JOIN genres
+ON shows.id = genres.show_id
+WHERE id = 63881;
+</code></pre>
+<p>Notice that this results in a temporary table. It is fine to have a duplicate table.</p></li>
+<li><p>In contrast to one-to-one and one-to-many relationships, there may be <em>many-to-many</em> relationships.</p></li>
+<li><p>We can learn more about the show <em>The Office</em> and the actors in that show by executing the following command:</p>
+<pre><code>SELECT name FROM people WHERE id IN 
+    (SELECT person_id FROM stars WHERE show_id = 
+        (SELECT id FROM shows WHERE title = 'The Office' AND year = 2005));
+</code></pre>
+<p>Notice that this results in a table that includes the names of various stars through nested queries.</p></li>
+<li><p>We find all the shows in which Steve Carell starred:</p>
+<pre><code>SELECT title FROM shows WHERE id IN 
+    (SELECT show_id FROM stars WHERE person_id = 
+        (SELECT id FROM people WHERE name = 'Steve Carell'));
+</code></pre>
+<p>This results in a list of titles of shows wherein Steve Carell starred.</p></li>
+<li><p>This could also be expressed in this way:</p>
+<pre><code>SELECT title FROM shows, stars, people 
+WHERE shows.id = stars.show_id
+AND people.id = stars.person_id
+AND name = 'Steve Carell';
+</code></pre></li>
+<li><p>The wildcard <code>%</code> operator can be used to find all people whose names start with <code>Steve C</code> one could employ the syntax <code>SELECT * FROM people WHERE name LIKE 'Steve C%';</code>.</p></li>
+</ul>
+</section>
+<section id="indexes" class="level2">
+<h2 class="anchored" data-anchor-id="indexes">Indexes</h2>
+<ul>
+<li><p>While relational databases have the ability to be faster and more robust than utilizing a <code>CSV</code> file, data can be optimized within a table using <em>indexes</em>.</p></li>
+<li><p>Indexes can be utilized to speed up our queries.</p></li>
+<li><p>We can track the speed of our queries by executing <code>.timer on</code> in <code>sqlite3</code>.</p></li>
+<li><p>To understand how indexes can speed up our queries, run the following: <code>SELECT * FROM shows WHERE title = 'The Office';</code> Notice the time that displays after the query executes.</p></li>
+<li><p>Then, we can create an index with the syntax <code>CREATE INDEX title_index ON shows (title);</code>. This tells <code>sqlite3</code> to create an index and perform some special under-the-hood optimization relating to this column <code>title</code>.</p></li>
+<li><p>This will create a data structure called a <em>B Tree</em>, a data structure that looks similar to a binary tree. However, unlike a binary tree, there can be more than two child nodes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_7/Week7Slide039.png" class="img-fluid figure-img"></p>
+<figcaption>one node at the top from which come four children and below that there are three children coming from one of the nodes and two from another two from another and three from another</figcaption>
+</figure>
+</div></li>
+<li><p>Further, we can create indexes as follows:</p>
+<pre><code>CREATE INDEX name_index ON people (name);
+CREATE INDEX person_index ON stars (person_id);
+</code></pre></li>
+<li><p>Running the query and you will notice that the query runs much more quickly!</p>
+<pre><code>SELECT title FROM shows WHERE id IN 
+    (SELECT show_id FROM stars WHERE person_id = 
+        (SELECT id FROM people WHERE name = 'Steve Carell'));
+</code></pre></li>
+<li><p>Unfortunately, indexing all columns would result in utilizing more storage space. Therefore, there is a tradeoff for enhanced speed.</p></li>
+</ul>
+</section>
+<section id="using-sql-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="using-sql-in-python">Using SQL in Python</h2>
+<ul>
+<li><p>To assist in working with SQL in this course, the CS50 Library can be utilized as follows in your code:</p>
+<pre><code>from cs50 import SQL
+</code></pre></li>
+<li><p>Similar to previous uses of the CS50 Library, this library will assist with the complicated steps of utilizing SQL within your Python code.</p></li>
+<li><p>You can read more about the CS50 Library’s SQL functionality in the <a href="https://cs50.readthedocs.io/libraries/cs50/python/#cs50.SQL">documentation</a>.</p></li>
+<li><p>Using our new knowledge of SQL, we can now leverage Python alongside.</p></li>
+<li><p>Modify your code for <code>favorites.py</code> as follows:</p>
+<pre><code># Searches database popularity of a problem
+
+from cs50 import SQL
+
+# Open database
+db = SQL("sqlite:///favorites.db")
+
+# Prompt user for favorite
+favorite = input("Favorite: ")
+
+# Search for title
+rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE language = ?", favorite)
+
+# Get first (and only) row
+row = rows[0]
+
+# Print popularity
+print(row["n"])
+</code></pre>
+<p>Notice that <code>db = SQL("sqlite:///favorites.db")</code> provides Python the location of the database file. Then, the line that begins with <code>rows</code> executes SQL commands utilizing <code>db.execute</code>. Indeed, this command passes the syntax within the quotation marks to the <code>db.execute</code> function. We can issue any SQL command using this syntax. Further, notice that <code>rows</code> is returned as a list of dictionaries. In this case, there is only one result, one row, returned to the rows list as a dictionary.</p></li>
+</ul>
+</section>
+<section id="race-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="race-conditions">Race Conditions</h2>
+<ul>
+<li>Utilization of SQL can sometimes result in some problems.</li>
+<li>You can imagine a case where multiple users could be accessing the same database and executing commands at the same time.</li>
+<li>This could result in glitches where code is interrupted by other people’s actions. This could result in a loss of data.</li>
+<li>Built-in SQL features such as <code>BEGIN TRANSACTION</code>, <code>COMMIT</code>, and <code>ROLLBACK</code> help avoid some of these race condition problems.</li>
+</ul>
+</section>
+<section id="sql-injection-attacks" class="level2">
+<h2 class="anchored" data-anchor-id="sql-injection-attacks">SQL Injection Attacks</h2>
+<ul>
+<li><p>Now, still considering the code above, you might be wondering what the <code>?</code> question marks do above. One of the problems that can arise in real-world applications of SQL is what is called an <em>injection attack</em>. An injection attack is where a malicious actor could input malicious SQL code.</p></li>
+<li><p>For example, consider a login screen as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_7/Week7Slide051.png" class="img-fluid figure-img"></p>
+<figcaption>harvard key login screen with username and password fields</figcaption>
+</figure>
+</div></li>
+<li><p>Without the proper protections in our own code, a bad actor could run malicious code. Consider the following:</p>
+<pre><code>rows = db.execute("SELECT COUNT(*) FROM users WHERE username = ? AND password = ?", username, password)
+</code></pre>
+<p>Notice that because the <code>?</code> is in place, validation can be run on <code>favorite</code> before it is blindly accepted by the query.</p></li>
+<li><p>You never want to utilize formatted strings in queries as above or blindly trust the user’s input.</p></li>
+<li><p>Utilizing the CS50 Library, the library will <em>sanitize</em> and remove any potentially malicious characters.</p></li>
+</ul>
+</section>
+<section id="summing-up" class="level2">
+<h2 class="anchored" data-anchor-id="summing-up">Summing Up</h2>
+<p>In this lesson, you learned more syntax related to Python. Further, you learned how to integrate this knowledge with data in the form of flat-file and relational databases. Finally, you learned about <em>SQL</em>. Specifically, we discussed…</p>
+<ul>
+<li>Flat-file databases</li>
+<li>Relational databases</li>
+<li>SQL commands such as <code>SELECT</code>, <code>CREATE</code>, <code>INSERT</code>, <code>DELETE</code>, and <code>UPDATE</code>.</li>
+<li>Primary and foreign keys</li>
+<li><code>JOIN</code>s</li>
+<li>Indexes</li>
+<li>Using SQL in Python</li>
+<li>Race conditions</li>
+<li>SQL injection attacks</li>
+</ul>
+<p>See you next time!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
