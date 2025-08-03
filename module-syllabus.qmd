@@ -77,7 +77,7 @@ Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, N
 
 ## Five tips for success
 
-Your success on this course depends very much on you and the effort you put into it. Like any learning, the burden of engaging with the material is on you. Your TAs and I will help you be providing you with materials and answering questions and setting a pace, but for this to work you must do the following:
+Your success on this module depends very much on you and the effort you put into it. Like any learning, the burden of engaging with the material is on you. The module staff and I will help you be providing you with materials and answering questions and setting a pace, but for this to work you must do the following:
 
 1.  Complete all the preparation work before class.
 2.  Ask questions. As often as you can. In class, out of class. Ask me, ask the TAs, ask your friends, ask the person sitting next to you. This will help you more than anything else. If you get a question wrong on an assessment, ask us why. If you're not sure about the homework, let's talk about it. If you hear something on the news that sounds related to what we discussed, share it and let's discuss. If the reading is confusing, ask.
