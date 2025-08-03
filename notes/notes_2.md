@@ -29,7 +29,7 @@
 * It turns out that we can convert *source code* into machine code using a very special piece of software called a *compiler*. Today, we will be introducing you to a compiler that will allow you to convert source code in the programming language *C* into machine code.
 * Today, in addition to learning how to program, you will be learning how to write good code.
 
-## Visual Studio Code for CS50
+## Visual Studio Code
 
 * The text editor that is utilized for this course is *Visual Studio Code*, aka *VS Code*, affectionately referred to as [cs50.dev](https://cs50.dev), which can be accessed via that same URL.
 * One of the most important reasons we utilize VS Code is that it has all the software required for the course already pre-loaded on it. This course and the instructions herein were designed with VS Code in mind.
