@@ -6,26 +6,24 @@ title: "Syllabus"
 
 ## Instructor
 
-![Dr. Ed Harris](images/team/ed.png){width="250"} 
+[![Dr. Ed Harris](images/team/ed.png){fig-align="left" width="250"}](weharris.me)
 
-[Dr. Ed Harris](https://weharris.me)
 
 ## Learning objectives
 
-1.	Analyse and solve problems using computational thinking, applying fundamental concepts of computer science
-2.	Design and implement algorithms in different programming languages
-3.	Evaluate and improve the correctness, design, and style of code
-4.	Synthesise knowledge of programming concepts to create apps
-5.	Apply the principles of data management for the storage and retrieval of information
-
+1.  Analyse and solve problems using computational thinking, applying fundamental concepts of computer science
+2.  Design and implement algorithms in different programming languages
+3.  Evaluate and improve the correctness, design, and style of code
+4.  Synthesise knowledge of programming concepts to create apps
+5.  Apply the principles of data management for the storage and retrieval of information
 
 ## Meetings
 
 Scheduled meetings will be held in person in Telford, Station Quarter. Autumn 2025: Check your personal schedule for room, day, time.
 
-**Lectures** will introduce the topic and sometimes involve live coding demonstration of key concepts. Lectures will be delivered in person, and will be recorded and made available on the module website. 
+**Lectures** will introduce the topic and sometimes involve live coding demonstration of key concepts. Lectures will be delivered in person, and will be recorded and made available on the module website.
 
-**Tutorials** will demonstrate concepts discussed in lectures to various scenarios, with a focus on the problem solving. Tutorials will be demonstrated and should also be completed individually. That is, run the code yourself. 
+**Tutorials** will demonstrate concepts discussed in lectures to various scenarios, with a focus on the problem solving. Tutorials will be demonstrated and should also be completed individually. That is, run the code yourself.
 
 Material may be livestreamed to the YouTube channel and recorded for later viewing.
 
@@ -35,21 +33,21 @@ All lecture notes, assignment instructions, an up-to-date schedule, and other co
 
 [Harper Adams module website](https://vle.harper-adams.ac.uk/course/view.php?id=282) (university enrolled students only, requires login)
 
-- [Discord - join the community](https://discord.gg/dnNTE6xhhu) - for live discussion and support
-- [GitHub - the module repository](https://github.com/SQ4007-2025) - for the module materials
-- [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab) - for live streams and recordings
-- [Twitch - the DataGiri channel](https://www.twitch.tv/DataGiri) - for live streams and recordings
-- [Twitter - Follow Ed's account](https://x.com/EdHarris9000) - for information, and memes
+-   [Discord - join the community](https://discord.gg/dnNTE6xhhu) - for live discussion and support
+-   [GitHub - the module repository](https://github.com/SQ4007-2025) - for the module materials
+-   [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab) - for live streams and recordings
+-   [Twitch - the DataGiri channel](https://www.twitch.tv/DataGiri) - for live streams and recordings
+-   [Twitter - Follow Ed's account](https://x.com/EdHarris9000) - for information, and memes
 
 ## Assessments
 
-### Assessment 1 
+### Assessment 1
 
 **Homework:** These homework problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.
 
 ### Assessment 2
 
-**Project:** This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large. 
+**Project:** This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large.
 
 For the project you can opt to work individually or collaborate with up to two other classmates, with the expectation that each member contributes equally to the project design and implementation. The complexity of the project should reflect the size of the group, with group projects expected to be more intricate than individual ones. The final project is assessed based on the project complexity and scope, the effectiveness of the implemented solution, creativity, and the overall quality of the code. For group projects, the assessment also considers individual contributions and the collaborative effort. ***NB*** for group projects, the scope and ambition of the project should reflect the size of the group.
 
@@ -79,10 +77,9 @@ Hermans, F., 2021. The Programmer’s Brain: What every programmer needs to know
 
 Hunt, A., Thomas, D., 1999. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley Professional.
 
-Kenett, R.S., Redman, T.C., 2019. The Real Work of Data Science: Turning data into information, better decisions, and stronger organizations. Wiley, Hoboken$cChichester.
+Kenett, R.S., Redman, T.C., 2019. The Real Work of Data Science: Turning data into information, better decisions, and stronger organizations. Wiley, Hoboken\$cChichester.
 
 McConnell, S., 2004. Code Complete: A Practical Handbook of Software Construction, Second Edition. Microsoft Press, Redmond, Wash.
-
 
 ## Five tips for success
 
@@ -122,8 +119,5 @@ Only work that is clearly assigned as team work should be completed collaborativ
 ### Policy on sharing and reusing code
 
 I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. On individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class.
-
-
-
 
 Click [here](https://registrar.duke.edu/spring-2022-academic-calendar) for the full Duke academic calendar.

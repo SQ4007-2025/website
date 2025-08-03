@@ -1,4 +1,4 @@
-# Week 0 Notes
+# Week 1 Notes
 
 **CS50x 2025 - Week 0 Lecture Notes**
 
