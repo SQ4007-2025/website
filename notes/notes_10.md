@@ -42,7 +42,7 @@
 
 * This week, we introduce the ability to engage with *routes* such as `https://www.example.com/route?key=value`, where specific functionality can be generated on the server via the keys and values provided in the URL.
 * *Flask* is a third-party library that allows you to host web applications using the Flask framework, or a micro-framework, within Python.
-* You can run Flask by executing `flask run` in your terminal window in [cs50.dev](https://cs50.dev).
+* You can run Flask by executing `flask run` in your terminal window in [The Sandbox)](https://classroom.github.com/a/zT0wsGr1).
 * To do so, you will need a file called `app.py` and another called `requirements.txt`. `app.py` contains code the tells Flask how to run your web application. `requirements.txt` includes a list of the libraries that are required for your Flask application to run.
 * Here is a sample of `requirements.txt`:
 
