@@ -851,7 +851,7 @@ def registrants():
 <ul>
 <li><p>Just as we have seen how Python can interface with a SQL database, we can combine the power of Flask, Python, and SQL to create a web application where data will persist!</p></li>
 <li><p>To implement this, you will need to take a number of steps.</p></li>
-<li><p>First, download the following <a href="https://cdn.cs50.net/2024/fall/lectures/9/src9/froshims4/froshims.db">SQL database</a> into your <code>froshims</code> folder.</p></li>
+<li><p>First, download the following <a href="https://raw.githubusercontent.com/SQ4007-2025/website/master/data/froshims.db">SQL database</a> (right click, save as…) into your <code>froshims</code> folder.</p></li>
 <li><p>Execute in the terminal <code>sqlite3 froshims.db</code> and type <code>.schema</code> to see the contents of the database file. Further type <code>SELECT * FROM registrants;</code> to learn about the contents. You’ll notice that there are currently no registrations in the file.</p></li>
 <li><p>Next, modify <code>requirements.txt</code> as follows:</p>
 <pre><code>cs50
@@ -990,7 +990,7 @@ def registrants():
 </code></pre>
 <p>Notice that the <code>cs50</code> library is utilized. A route is included for <code>register</code> for the <code>post</code> method. This route will take the name and sport taken from the registration form and execute a SQL query to add the <code>name</code> and the <code>sport</code> to the <code>registrants</code> table. The <code>deregister</code> routes to a SQL query that will grab the user’s <code>id</code> and utilize that information to deregister this individual.</p></li>
 <li><p>You can execute <code>flask run</code> and examine the result.</p></li>
-<li><p>If you want to download our implementation of <code>froshims</code> you can do so <a href="https://cdn.cs50.net/2024/fall/lectures/9/src9/froshims5/">here</a>.</p></li>
+<li><p>If you want to download our implementation of <code>froshims</code> you can do so <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/froshims5">here</a>.</p></li>
 <li><p>You can read more about Flask in the <a href="https://flask.palletsprojects.com">Flask documentation</a>.</p></li>
 </ul>
 </section>
@@ -1091,7 +1091,7 @@ def logout():
 </code></pre>
 <p>Notice the modified <em>imports</em> at the top of the file, including <code>session</code>, which will allow you to support sessions. Most importantly, notice how <code>session["name"]</code> is used in the <code>login</code> and <code>logout</code> routes. The <code>login</code> route will assign the login name provided and assign it to <code>session["name"]</code>. However, in the <code>logout</code> route, the logging out is implemented by clearing the value of <code>session</code>.</p></li>
 <li><p>The <code>session</code> abstraction allows you to ensure only a specific user has access to specific data and features in our application. It allows you to ensure that no one acts on behalf of another user, for good or bad!</p></li>
-<li><p>If you wish, you can download <a href="https://cdn.cs50.net/2024/fall/lectures/9/src9/login/">our implementation</a> of <code>login</code>.</p></li>
+<li><p>If you wish, you can download <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/login">our implementation</a> of <code>login</code>.</p></li>
 <li><p>You can read more about sessions in the <a href="https://flask.palletsprojects.com/en/stable/api/#flask.session">Flask documentation</a>.</p></li>
 </ul>
 </section>
@@ -1158,7 +1158,7 @@ def cart():
 {% endblock %}
 </code></pre>
 <p>Notice how this creates the ability to <code>Add to Cart</code> for each book using <code>for book in books</code>.</p></li>
-<li><p>You can see the rest of the files that power this <code>flask</code> implementation in the <a href="https://cdn.cs50.net/2024/fall/lectures/9/src9/store/">source code</a>.</p></li>
+<li><p>You can see the rest of the files that power this <code>flask</code> implementation in the <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/store">source code</a>.</p></li>
 </ul>
 </section>
 <section id="shows" class="level2">
@@ -1221,7 +1221,7 @@ def search():
 &lt;/html&gt;
 </code></pre>
 <p>Notice that the JavaScript <code>script</code> creates an implementation of autocomplete, where titles that match the <code>input</code> are displayed.</p></li>
-<li><p>You can see the rest of the files of this implementation in the <a href="https://cdn.cs50.net/2024/fall/lectures/9/src9/shows3/">source code</a>.</p></li>
+<li><p>You can see the rest of the files of this implementation in the <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/shows3">source code</a>.</p></li>
 </ul>
 </section>
 <section id="apis" class="level2">
