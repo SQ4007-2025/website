@@ -447,7 +447,7 @@
   ```
 
   Notice that `autocomplete` is turned `off`. `autofocus` is enabled.
-* We’ve seen just a few of many HTML elements you can add to your site. If you have an idea for something to add to your site that we haven’t seen yet (a button, an audio file, etc.) try Googling “X in HTML” to find the right syntax! Similarly, you can use [cs50.ai](https://cs50.ai) to help you discover more HTML features!
+* We’ve seen just a few of many HTML elements you can add to your site. If you have an idea for something to add to your site that we haven’t seen yet (a button, an audio file, etc.) try Googling “X in HTML” to find the right syntax! Similarly, you can use [The Sandbox)](https://classroom.github.com/a/zT0wsGr1) to help you discover more HTML features!
 
 ## Regular Expressions
 
