@@ -858,7 +858,7 @@
 
 ## `scanf` {#scanf}
 
--   In CS50, we have created functions like `get_int` to simplify the act of getting input from the user.
+-   Functions like `get_int` to simplify the act of getting input from the user.
 
 -   `scanf` is a built-in function that can get user input.
 
@@ -971,7 +971,7 @@
 
     Notice that this code uses pointers to access the file.
 
--   You can create a file called `phonebook.csv` in advance of running the above code or download [phonebook.csv](https://cdn.cs50.net/2024/fall/lectures/4/src4/phonebook.csv?download). After running the above program and inputting a name and phone number, you will notice that this data persists in your CSV file.
+-   You can create a file called `phonebook.csv` in advance of running the above code or download [phonebook.csv](data/phonebook.csv?download). After running the above program and inputting a name and phone number, you will notice that this data persists in your CSV file.
 
 -   If we want to ensure that `phonebook.csv` exists prior to running the program, we can modify our code as follows:
 
