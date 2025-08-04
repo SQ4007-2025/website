@@ -1,10 +1,10 @@
 # Lecture 2 Notes
 
 * [Welcome!](#welcome)
-* [Visual Studio Code for CS50](#visual-studio-code-for-cs50)
+* [Visual Studio Code](#visual-studio-code)
 * [Hello World](#hello-world)
 * [From Scratch to C](#from-scratch-to-c)
-* [Header Files and CS50 Manual Pages](#header-files-and-cs50-manual-pages)
+* [Header Files and C Manual Pages](#header-files-and-c-manual-pages)
 * [Hello, You](#hello-you)
 * [Types](#types)
 * [Conditionals](#conditionals)
@@ -31,10 +31,10 @@
 
 ## Visual Studio Code
 
-* The text editor that is utilized for this course is *Visual Studio Code*, aka *VS Code*, affectionately referred to as [cs50.dev](https://cs50.dev), which can be accessed via that same URL.
-* One of the most important reasons we utilize VS Code is that it has all the software required for the course already pre-loaded on it. This course and the instructions herein were designed with VS Code in mind.
-* Manually installing the necessary software for the course on your own computer is a cumbersome headache. Best always to utilize VS Code for assignments in this course.
-* You can open VS Code at [cs50.dev](https://cs50.dev/).
+* The text editor that is utilized for this course is *Visual Studio Code*, aka *VS Code*.
+* We will utilize VS Code for this module via Github Classroom (it has all the software required for the course already pre-loaded on it). This course and the instructions herein were designed with VS Code in mind.
+* Manually installing the necessary software for the course on your own computer is possible, but cumbersome. 
+.
 * The compiler can be divided into a number of regions:
 
   ![IDE](images/week_1/Week1Slide017.png)
@@ -137,11 +137,11 @@
 
   Notice the semicolon and `\n` have been restored.
 
-## Header Files and CS50 Manual Pages
+## Header Files and C Manual Pages
 
 * The statement at the start of the code `#include <stdio.h>` is a very special command that tells the compile that you want to use the capabilities of a *library* called `stdio.h`, a *header file*. This allows you, among many other things, to utilize the `printf` function.
 * A *library* is a collection of code created by someone. Libraries are collections of pre-written code and functions that others have written in the past that we can utilize in our code.
-* You can read about all the capabilities of this library on the [Manual Pages](https://manual.cs50.io). The Manual Pages provide a means by which to better understand what various commands do and how they function.
+* You can read about all the capabilities of this library on the [Manual Pages](https://manual.cs50.io). The Manual Pages provide a means by which to learn what various commands do and how they function.
 * It turns out that CS50 has its own library called `cs50.h`. There are numerous functions that are included that provide *training wheels* while you get started in C:
 
   ```

@@ -49,7 +49,7 @@
 * A compiler will take the above code and turn it into the following machine code:
 
   ![machine code](images/week_2/Week2Slide012.png)
-* *VS Code*, the programming environment provided to you as a CS50 student, utilizes a compiler called `clang` or *c language*.
+* *VS Code*, the programming environment provided to you as on Github Codespaces, utilizes a compiler called `clang` or *c language*.
 * You can enter the following into the terminal window to compile your code: `clang -o hello hello.c`.
 * *Command-line arguments* are provided at the command line to `clang` as `-o hello hello.c`.
 * Running `./hello` in the terminal window, your program runs as intended.
@@ -69,7 +69,7 @@
 * To compile this code, you can type `clang -o hello hello.c -lcs50`.
 * If you were to type `make hello`, it runs a command that executes clang to create an output file that you can run as a user.
 * VS Code has been pre-programmed such that `make` will run numerous command line arguments along with clang for your convenience as a user.
-* While the above is offered as an illustration, such that you can understand more deeply the process and concept of compiling code, using `make` in CS50 is perfectly fine and the expectation!
+* While the above is offered as an illustration, such that you can understand more deeply the process and concept of compiling code, using `make` is perfectly fine and the expectation!
 * Compiling involves four major steps, including the following:
 * First, *preprocessing* is where the header files in your code, designated by a `#` (such as `#include <cs50.h>`) are effectively copied and pasted into your file. During this step, the code from `cs50.h` is copied into your program. Similarly, just as your code contains `#include <stdio.h>`, code contained within `stdio.h` somewhere on your computer is copied to your program. This step can be visualized as follows:
 
@@ -154,7 +154,8 @@
 * Everyone will make mistakes while coding.
 * *Debugging* is the process of locating and removing bugs from your code.
 * One of the debugging techniques you will use during this course to debug your code is called *rubber duck debugging*, where you can talk to an inanimate object (or yourself) to help think through your code and why it is not working as intended. When you are having challenges with your code, consider how speaking out loud to, quite literally, a rubber duck about the code problem. If you’d rather not talk to a small plastic duck, you are welcome to speak to a human near you!
-* We have created the CS50 Duck and [CS50.ai](https://cs50.ai) as tools that can help you debug your code.
+
+
 * Consider the following image from last week:
 
   ![mario](images/week_2/Week2Slide061.png)
