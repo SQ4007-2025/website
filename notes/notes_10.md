@@ -361,7 +361,8 @@
   ```
 
   Notice how `hello, {{ name }}` is changed to allow for a default output when no name is identified.
-* As we’ve been changing many files, you may wish to compare your final code with [our final code](https://cdn.cs50.net/2024/fall/lectures/9/src9/hello10/).
+* As we’ve been changing many files, you may wish to compare your final code with [our final code](https://raw.githubusercontent.com/SQ4007-2025/website/master/datacode/src10/hello10/app.py).
+
 
 ## Frosh IMs
 
