@@ -6,7 +6,7 @@ tbl-colwidths: [5,15,5,5,5,5,5]
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
 
 ::: column-body
-| Week | Topic | Lecture | Notes | Code | Tutorial | Homework |
+| Week | Topics | Lectures | Notes | Code | Tutorials | Homework |
 |:---------:|:----------|:---------:|:---------:|:---------:|:---------:|:---------:|
 | 1 | 🐈 Scratch | 💻 | [📕](notes/notes_1.html "Notes 1") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src1) | 👨‍🏫 | 🏠 |
 | 2 | 🟢 C | 💻 | [📕](notes/notes_2.html "Notes 2") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src2) | 👨‍🏫 | 🏠 |
@@ -25,6 +25,6 @@ This schedule is an outline of the topics, content, and assignments. Note that t
 knitr::knit_exit()
 ```
 
-| Week | Topic | Lecture | Notes | Code | Tutorial | Homework |
-|:----:|-------|:-------:|:-----:|:----:|:--------:|:--------:|
-| Week | Topic |   💻    |  📕   |  🤖  |    👨‍🏫    |    🏠    |
+| Week | Topics | Lectures | Notes | Code | Tutorials | Homework |
+|:----:|--------|:--------:|:-----:|:----:|:---------:|:--------:|
+| Week | Topic  |    💻    |  📕   |  🤖  |    👨‍🏫     |    🏠    |
