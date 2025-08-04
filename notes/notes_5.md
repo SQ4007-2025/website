@@ -971,7 +971,7 @@
 
     Notice that this code uses pointers to access the file.
 
--   You can create a file called `phonebook.csv` in advance of running the above code or download [phonebook.csv](https://github.com/SQ4007-2025/website/blob/master/data/phonebook.csv?download). After running the above program and inputting a name and phone number, you will notice that this data persists in your CSV file.
+-   You can create a file called `phonebook.csv` in advance of running the above code or download [phonebook.csv](https://raw.githubusercontent.com/SQ4007-2025/website/data/phonebook.csv?download). After running the above program and inputting a name and phone number, you will notice that this data persists in your CSV file.
 
 -   If we want to ensure that `phonebook.csv` exists prior to running the program, we can modify our code as follows:
 
