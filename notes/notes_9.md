@@ -496,7 +496,7 @@
   ```
 
   Notice that the `pattern` attribute is handed a regular expression to denote that the email address must include an `@` symbol and a `.edu`.
-* You can learn more about regular expressions from [Mozilla’s documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions). Further, you can make inquiries to [cs50.ai](https://cs50.ai) for hints.
+* You can learn more about regular expressions from [Mozilla’s documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions). Further, you can check out [this cheatsheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/).
 
 ## CSS
 
