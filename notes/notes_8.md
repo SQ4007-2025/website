@@ -30,7 +30,7 @@
 * If you look at a `csv` file, you’ll notice that the file is flat in that all of our data is stored in a single table represented by a text file. We call this form of data a *flat-file database*.
 * All data is stored row by row. Each column is separated by a comma or another value.
 * Python comes with native support for `csv` files.
-* First, download [favorites.csv](https://raw.githubusercontent.com/SQ4007-2025/website/master/data/favorites.csv?download) (right click, save as...). and upload it to your file explorer inside [cs50.dev](https://cs50.dev). Second, examining this data, notice that the first row is special in that it defines each column. Then, each record is stored row by row.
+* First, download [favorites.csv](https://raw.githubusercontent.com/SQ4007-2025/website/master/data/favorites.csv?download) (right click, save as...) and upload it to your file explorer inside [our VS Code Sandbox](https://classroom.github.com/a/zT0wsGr1). Second, examining this data, notice that the first row is special in that it defines each column. Then, each record is stored row by row.
 * In your terminal window, type `code favorites.py` and write code as follows:
 
   ```

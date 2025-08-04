@@ -98,10 +98,10 @@
   Content-Type: text/html
 
   ```
-* This approach to inspecting these logs may be a bit more complicated than need be. You can analyze the work of HTTP protocols at [cs50.dev](https://cs50.dev). For example, type the following in your terminal window:
+* This approach to inspecting these logs may be a bit more complicated than need be. You can analyze the work of HTTP protocols in [The Sandbox)](https://classroom.github.com/a/zT0wsGr1). For example, type the following in your terminal window:
 
   ```
-  curl -I https://www.harvard.edu/
+  curl -I https://www.google.com/
 
   ```
 
@@ -110,7 +110,7 @@
 * Further, execute the following command in your terminal window:
 
   ```
-  curl -I https://harvard.edu
+  curl -I https://google.com
 
   ```
 
@@ -118,7 +118,7 @@
 * Similarly, execute the following in your terminal window:
 
   ```
-  curl -I http://www.harvard.edu/
+  curl -I http://www.google.com/
 
   ```
 
@@ -396,13 +396,13 @@
           <title>link</title>
       </head>
       <body>
-         Visit <a href="https://www.harvard.edu">Harvard</a>.
+         Visit <a href="https://www.bbc.com/news">BBC news</a>.
       </body>
   </html>
 
   ```
 
-  Notice that the `<a>` or *anchor* tag is used to make `Harvard` a linkable text.
+  Notice that the `<a>` or *anchor* tag is used to make `BBC news` a linkable text.
 * You can also create forms reminiscent of Google’s search:
 
   ```

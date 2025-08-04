@@ -2,11 +2,10 @@
 title: "Computing Technology"
 ---
 
-
 ![](images/background.png){fig-alt="A friendly robot army.  They just want to talk to you." width="500"}
 
-> Use the computer well and it will be a great ally.  Use it badly and it will be your master.
+> Use the computer well and it will be a great ally. Use it badly and it will be your master.
 
 Welcome!
 
-**Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience.** The module demonstrates concepts using various programming languages, emphasizing problem-solving, correctness, design, and style. 
+**Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience.** The module demonstrates concepts using various programming languages, emphasizing problem-solving, correctness, design, and style.
