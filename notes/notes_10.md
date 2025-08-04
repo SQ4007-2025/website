@@ -590,7 +590,7 @@
 
 * Just as we have seen how Python can interface with a SQL database, we can combine the power of Flask, Python, and SQL to create a web application where data will persist!
 * To implement this, you will need to take a number of steps.
-* First, download the following [SQL database](https://cdn.cs50.net/2024/fall/lectures/9/src9/froshims4/froshims.db) into your `froshims` folder.
+* First, download the following [SQL database](https://raw.githubusercontent.com/SQ4007-2025/website/master/data/froshims.db) (right click, save as...) into your `froshims` folder.
 * Execute in the terminal `sqlite3 froshims.db` and type `.schema` to see the contents of the database file. Further type `SELECT * FROM registrants;` to learn about the contents. You’ll notice that there are currently no registrations in the file.
 * Next, modify `requirements.txt` as follows:
 
@@ -749,7 +749,7 @@
 
   Notice that the `cs50` library is utilized. A route is included for `register` for the `post` method. This route will take the name and sport taken from the registration form and execute a SQL query to add the `name` and the `sport` to the `registrants` table. The `deregister` routes to a SQL query that will grab the user’s `id` and utilize that information to deregister this individual.
 * You can execute `flask run` and examine the result.
-* If you want to download our implementation of `froshims` you can do so [here](https://cdn.cs50.net/2024/fall/lectures/9/src9/froshims5/).
+* If you want to download our implementation of `froshims` you can do so [here](https://github.com/SQ4007-2025/website/tree/master/code/src10/froshims5).
 * You can read more about Flask in the [Flask documentation](https://flask.palletsprojects.com).
 
 ## Cookies and Session
@@ -872,7 +872,7 @@
 
   Notice the modified *imports* at the top of the file, including `session`, which will allow you to support sessions. Most importantly, notice how `session["name"]` is used in the `login` and `logout` routes. The `login` route will assign the login name provided and assign it to `session["name"]`. However, in the `logout` route, the logging out is implemented by clearing the value of `session`.
 * The `session` abstraction allows you to ensure only a specific user has access to specific data and features in our application. It allows you to ensure that no one acts on behalf of another user, for good or bad!
-* If you wish, you can download [our implementation](https://cdn.cs50.net/2024/fall/lectures/9/src9/login/) of `login`.
+* If you wish, you can download [our implementation](https://github.com/SQ4007-2025/website/tree/master/code/src10/login) of `login`.
 * You can read more about sessions in the [Flask documentation](https://flask.palletsprojects.com/en/stable/api/#flask.session).
 
 ## Shopping Cart
@@ -945,7 +945,7 @@
   ```
 
   Notice how this creates the ability to `Add to Cart` for each book using `for book in books`.
-* You can see the rest of the files that power this `flask` implementation in the [source code](https://cdn.cs50.net/2024/fall/lectures/9/src9/store/).
+* You can see the rest of the files that power this `flask` implementation in the [source code](https://github.com/SQ4007-2025/website/tree/master/code/src10/store).
 
 ## Shows
 
@@ -1014,7 +1014,7 @@
   ```
 
   Notice that the JavaScript `script` creates an implementation of autocomplete, where titles that match the `input` are displayed.
-* You can see the rest of the files of this implementation in the [source code](https://cdn.cs50.net/2024/fall/lectures/9/src9/shows3/).
+* You can see the rest of the files of this implementation in the [source code](https://github.com/SQ4007-2025/website/tree/master/code/src10/shows3).
 
 ## APIs
 
