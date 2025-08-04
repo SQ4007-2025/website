@@ -405,7 +405,7 @@ int main(void)
 <figcaption>machine code</figcaption>
 </figure>
 </div></li>
-<li><p><em>VS Code</em>, the programming environment provided to you as a CS50 student, utilizes a compiler called <code>clang</code> or <em>c language</em>.</p></li>
+<li><p><em>VS Code</em>, the programming environment provided to you as on Github Codespaces, utilizes a compiler called <code>clang</code> or <em>c language</em>.</p></li>
 <li><p>You can enter the following into the terminal window to compile your code: <code>clang -o hello hello.c</code>.</p></li>
 <li><p><em>Command-line arguments</em> are provided at the command line to <code>clang</code> as <code>-o hello hello.c</code>.</p></li>
 <li><p>Running <code>./hello</code> in the terminal window, your program runs as intended.</p></li>
@@ -422,7 +422,7 @@ int main(void)
 <li><p>To compile this code, you can type <code>clang -o hello hello.c -lcs50</code>.</p></li>
 <li><p>If you were to type <code>make hello</code>, it runs a command that executes clang to create an output file that you can run as a user.</p></li>
 <li><p>VS Code has been pre-programmed such that <code>make</code> will run numerous command line arguments along with clang for your convenience as a user.</p></li>
-<li><p>While the above is offered as an illustration, such that you can understand more deeply the process and concept of compiling code, using <code>make</code> in CS50 is perfectly fine and the expectation!</p></li>
+<li><p>While the above is offered as an illustration, such that you can understand more deeply the process and concept of compiling code, using <code>make</code> is perfectly fine and the expectation!</p></li>
 <li><p>Compiling involves four major steps, including the following:</p></li>
 <li><p>First, <em>preprocessing</em> is where the header files in your code, designated by a <code>#</code> (such as <code>#include &lt;cs50.h&gt;</code>) are effectively copied and pasted into your file. During this step, the code from <code>cs50.h</code> is copied into your program. Similarly, just as your code contains <code>#include &lt;stdio.h&gt;</code>, code contained within <code>stdio.h</code> somewhere on your computer is copied to your program. This step can be visualized as follows:</p>
 <pre><code>  string get_string(string prompt);
@@ -504,7 +504,6 @@ main:
 <li><p>Everyone will make mistakes while coding.</p></li>
 <li><p><em>Debugging</em> is the process of locating and removing bugs from your code.</p></li>
 <li><p>One of the debugging techniques you will use during this course to debug your code is called <em>rubber duck debugging</em>, where you can talk to an inanimate object (or yourself) to help think through your code and why it is not working as intended. When you are having challenges with your code, consider how speaking out loud to, quite literally, a rubber duck about the code problem. If you’d rather not talk to a small plastic duck, you are welcome to speak to a human near you!</p></li>
-<li><p>We have created the CS50 Duck and <a href="https://cs50.ai">CS50.ai</a> as tools that can help you debug your code.</p></li>
 <li><p>Consider the following image from last week:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

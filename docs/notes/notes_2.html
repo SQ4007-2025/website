@@ -330,10 +330,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lecture-2-notes" id="toc-lecture-2-notes" class="nav-link active" data-scroll-target="#lecture-2-notes">Lecture 2 Notes</a>
   <ul class="collapse">
   <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
-  <li><a href="#visual-studio-code-for-cs50" id="toc-visual-studio-code-for-cs50" class="nav-link" data-scroll-target="#visual-studio-code-for-cs50">Visual Studio Code for CS50</a></li>
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code">Visual Studio Code</a></li>
   <li><a href="#hello-world" id="toc-hello-world" class="nav-link" data-scroll-target="#hello-world">Hello World</a></li>
   <li><a href="#from-scratch-to-c" id="toc-from-scratch-to-c" class="nav-link" data-scroll-target="#from-scratch-to-c">From Scratch to C</a></li>
-  <li><a href="#header-files-and-cs50-manual-pages" id="toc-header-files-and-cs50-manual-pages" class="nav-link" data-scroll-target="#header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</a></li>
+  <li><a href="#header-files-and-c-manual-pages" id="toc-header-files-and-c-manual-pages" class="nav-link" data-scroll-target="#header-files-and-c-manual-pages">Header Files and C Manual Pages</a></li>
   <li><a href="#hello-you" id="toc-hello-you" class="nav-link" data-scroll-target="#hello-you">Hello, You</a></li>
   <li><a href="#types" id="toc-types" class="nav-link" data-scroll-target="#types">Types</a></li>
   <li><a href="#conditionals" id="toc-conditionals" class="nav-link" data-scroll-target="#conditionals">Conditionals</a></li>
@@ -364,10 +364,10 @@ ul.task-list li input[type="checkbox"] {
 <h1>Lecture 2 Notes</h1>
 <ul>
 <li><a href="#welcome">Welcome!</a></li>
-<li><a href="#visual-studio-code-for-cs50">Visual Studio Code for CS50</a></li>
+<li><a href="#visual-studio-code">Visual Studio Code</a></li>
 <li><a href="#hello-world">Hello World</a></li>
 <li><a href="#from-scratch-to-c">From Scratch to C</a></li>
-<li><a href="#header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</a></li>
+<li><a href="#header-files-and-c-manual-pages">Header Files and C Manual Pages</a></li>
 <li><a href="#hello-you">Hello, You</a></li>
 <li><a href="#types">Types</a></li>
 <li><a href="#conditionals">Conditionals</a></li>
@@ -394,13 +394,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Today, in addition to learning how to program, you will be learning how to write good code.</li>
 </ul>
 </section>
-<section id="visual-studio-code-for-cs50" class="level2">
-<h2 class="anchored" data-anchor-id="visual-studio-code-for-cs50">Visual Studio Code for CS50</h2>
+<section id="visual-studio-code" class="level2">
+<h2 class="anchored" data-anchor-id="visual-studio-code">Visual Studio Code</h2>
 <ul>
-<li><p>The text editor that is utilized for this course is <em>Visual Studio Code</em>, aka <em>VS Code</em>, affectionately referred to as <a href="https://cs50.dev">cs50.dev</a>, which can be accessed via that same URL.</p></li>
-<li><p>One of the most important reasons we utilize VS Code is that it has all the software required for the course already pre-loaded on it. This course and the instructions herein were designed with VS Code in mind.</p></li>
-<li><p>Manually installing the necessary software for the course on your own computer is a cumbersome headache. Best always to utilize VS Code for assignments in this course.</p></li>
-<li><p>You can open VS Code at <a href="https://cs50.dev/">cs50.dev</a>.</p></li>
+<li><p>The text editor that is utilized for this course is <em>Visual Studio Code</em>, aka <em>VS Code</em>.</p></li>
+<li><p>We will utilize VS Code for this module via Github Classroom (it has all the software required for the course already pre-loaded on it). This course and the instructions herein were designed with VS Code in mind.</p></li>
+<li><p>Manually installing the necessary software for the course on your own computer is possible, but cumbersome. .</p></li>
 <li><p>The compiler can be divided into a number of regions:</p>
 <p><img src="images/week_1/Week1Slide017.png" class="img-fluid" alt="IDE"> Notice that there is a <em>file explorer</em> on the left side where you can find your files. Further, notice that there is a region in the middle called a <em>text editor</em> where you can edit your program. Finally, there is a <code>command line interface</code>, known as a <em>CLI</em>, <em>command line</em>, or <em>terminal window</em>, where we can send commands to the computer in the cloud.</p></li>
 <li><p>In the terminal window, some common command-line arguments we may use include:</p>
@@ -485,12 +484,12 @@ int main(void)
 <p>Notice the semicolon and <code>\n</code> have been restored.</p></li>
 </ul>
 </section>
-<section id="header-files-and-cs50-manual-pages" class="level2">
-<h2 class="anchored" data-anchor-id="header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</h2>
+<section id="header-files-and-c-manual-pages" class="level2">
+<h2 class="anchored" data-anchor-id="header-files-and-c-manual-pages">Header Files and C Manual Pages</h2>
 <ul>
 <li><p>The statement at the start of the code <code>#include &lt;stdio.h&gt;</code> is a very special command that tells the compile that you want to use the capabilities of a <em>library</em> called <code>stdio.h</code>, a <em>header file</em>. This allows you, among many other things, to utilize the <code>printf</code> function.</p></li>
 <li><p>A <em>library</em> is a collection of code created by someone. Libraries are collections of pre-written code and functions that others have written in the past that we can utilize in our code.</p></li>
-<li><p>You can read about all the capabilities of this library on the <a href="https://manual.cs50.io">Manual Pages</a>. The Manual Pages provide a means by which to better understand what various commands do and how they function.</p></li>
+<li><p>You can read about all the capabilities of this library on the <a href="https://manual.cs50.io">Manual Pages</a>. The Manual Pages provide a means by which to learn what various commands do and how they function.</p></li>
 <li><p>It turns out that CS50 has its own library called <code>cs50.h</code>. There are numerous functions that are included that provide <em>training wheels</em> while you get started in C:</p>
 <pre><code>get_char
 get_double
