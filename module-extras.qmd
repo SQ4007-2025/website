@@ -6,9 +6,13 @@ title: "Extra Meetings"
 
 Our first hackathon will be held on <date> from 10am to 12pm. This is an epic late-nighter where we work on our projects together
 
+## The Statistics Lab meetings
+
+The Statistics Lab is a group of people (students, researchers, and staff) who are interested in statistics and data science. We meet every week to discuss practical statistics and data science topics.
+
 ## Code Club
 
-Our first Code Club will be held regularly on <date> from xxx to yyy. This is a group meeting where we share tips and tricks, do live coding, and discuss all sort of topics related to data science, AI, programming and other topics. Big theme are community and problem solving.
+The Code Club is an outreach-based initiative that aims to help schoolstudents learn programming and data science. Our first Code Club will be held regularly on <date> from xxx to yyy. This is an opportunity for you to help mentor younger students - it is fun, rewarding, and a great way to build your CV.
 
 
 

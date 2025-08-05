@@ -21,14 +21,13 @@
 ## Looking Ahead
 
 * As you journey from the work of this course to the world outside CS50, you may want to take a number of steps to prepare and adventure out.
-* Journeying on, [download](https://code.visualstudio.com/) and [learn](https://cs50.readthedocs.io/cs50.dev/) about VS Code.
-* To be able to execute commands on the terminal, much like you did on [CS50.dev](https://cs50.dev), install command-line tools on your [Mac](https://developer.apple.com/xcode/) or [PC](https://learn.microsoft.com/en-us/windows/wsl/about).
+* Journeying on, [download](https://code.visualstudio.com/) and learn about VS Code.
+* To be able to execute commands on the terminal, much like you did in The Sandbox, install command-line tools on your [Mac](https://developer.apple.com/xcode/) or [PC](https://learn.microsoft.com/en-us/windows/wsl/about).
 * Learn more about [Git](https://youtu.be/MJUJ4wbFm_A).
-* Host a website using [GitHub](https://pages.github.com/) or [Netlify](https://www.netlify.com/).
+* Host a website using [GitHub](https://pages.github.com/) and/or [Netlify](https://www.netlify.com/).
 * If applicable, host a web app using [AWS](https://aws.amazon.com/education/awseducate/), [Azure](https://azure.microsoft.com/en-us/free/students/), or [Google Cloud](https://cloud.google.com/edu/students).
 * Ask questions in relevant online communities.
 * Ask questions using AI-based tools like [ChatGPT](https://chat.openai.com/) and [GitHub Copilot](https://github.com/features/copilot).
-* Take any of our other [CS50 courses](https://cs50.harvard.edu/x/courses/).
 * Join one of our many [communities](https://cs50.harvard.edu/communities).
 
 ## Thank You!
@@ -45,4 +44,4 @@ In this lesson, we reflected on your journey through this course. Specifically, 
 * Finish strong and submit your final project.
 * [Quack!](https://youtu.be/DLzxrzFCyOs?si=PC0oK7Pv_NkO4FmX)
 
-This was CS50!
+This was Computing Technology!
