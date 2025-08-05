@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://SQ4007-2025.github.io/website/slides/lec-2.html</loc>
-    <lastmod>2025-08-01T21:38:15.405Z</lastmod>
-  </url>
-  <url>
-    <loc>https://SQ4007-2025.github.io/website/slides/lab-1.html</loc>
-    <lastmod>2025-08-01T21:38:15.405Z</lastmod>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-2.html</loc>
+    <lastmod>2025-08-05T20:09:39.158Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_8.html</loc>
@@ -34,11 +30,11 @@
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/module-links.html</loc>
-    <lastmod>2025-08-05T06:52:25.632Z</lastmod>
+    <lastmod>2025-08-05T07:38:17.772Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/module-extras.html</loc>
-    <lastmod>2025-08-05T06:51:44.542Z</lastmod>
+    <lastmod>2025-08-05T07:43:06.878Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/labs/lab-3.html</loc>
@@ -74,7 +70,7 @@
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/module-schedule.html</loc>
-    <lastmod>2025-08-05T17:40:17.911Z</lastmod>
+    <lastmod>2025-08-05T20:11:29.943Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_1.html</loc>
@@ -82,7 +78,7 @@
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_11.html</loc>
-    <lastmod>2025-08-05T07:08:34.435Z</lastmod>
+    <lastmod>2025-08-05T07:44:37.838Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_3.html</loc>
@@ -99,9 +95,5 @@
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_9.html</loc>
     <lastmod>2025-08-04T15:13:43.008Z</lastmod>
-  </url>
-  <url>
-    <loc>https://SQ4007-2025.github.io/website/slides/lec-1.html</loc>
-    <lastmod>2025-08-01T21:38:15.405Z</lastmod>
   </url>
 </urlset>
