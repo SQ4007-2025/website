@@ -1,0 +1,13 @@
+---
+title: "Tutorials week 5"
+---
+
+ ▶ 👨‍🏫 [Defining custom types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.defining_custom_types.pptx)
+
+ ▶ 👨‍🏫 [Dynamic memory allocation](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.dynamic_memory_allocation.pptx)
+
+ ▶ 👨‍🏫 [File pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.file_pointers.pptx)
+
+ ▶ 👨‍🏫 [Hexadecimal](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.hexadecimal.pptx)
+
+ ▶ 👨‍🏫 [Pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.pointers.pptx)

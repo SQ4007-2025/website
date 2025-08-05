@@ -1,0 +1,5 @@
+---
+title: "Tutorials week 8"
+---
+
+ ▶ 👨‍🏫 [SQL](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_8/8.sql.pptx)

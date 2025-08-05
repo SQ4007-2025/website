@@ -10,6 +10,6 @@ title: "Tutorials week 2"
 
  ▶ 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pptx)
 
- ▶ 👨‍🏫 [magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pptx)
+ ▶ 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pptx)
 
  ▶ 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pptx)
