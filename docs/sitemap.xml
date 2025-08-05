@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-2.html</loc>
-    <lastmod>2025-08-05T20:09:39.158Z</lastmod>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-9.html</loc>
+    <lastmod>2025-08-05T20:22:05.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-7.html</loc>
+    <lastmod>2025-08-05T20:21:10.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-5.html</loc>
+    <lastmod>2025-08-05T20:21:10.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-3.html</loc>
+    <lastmod>2025-08-05T20:21:10.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-10.html</loc>
+    <lastmod>2025-08-05T20:22:05.624Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_8.html</loc>
@@ -70,7 +86,7 @@
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/module-schedule.html</loc>
-    <lastmod>2025-08-05T20:14:39.710Z</lastmod>
+    <lastmod>2025-08-05T20:25:50.002Z</lastmod>
   </url>
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_1.html</loc>
@@ -95,5 +111,21 @@
   <url>
     <loc>https://SQ4007-2025.github.io/website/notes/notes_9.html</loc>
     <lastmod>2025-08-04T15:13:43.008Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-2.html</loc>
+    <lastmod>2025-08-05T20:19:18.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-4.html</loc>
+    <lastmod>2025-08-05T20:21:10.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-6.html</loc>
+    <lastmod>2025-08-05T20:21:10.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://SQ4007-2025.github.io/website/tutorials/tutorial-week-8.html</loc>
+    <lastmod>2025-08-05T20:22:05.624Z</lastmod>
   </url>
 </urlset>

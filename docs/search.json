@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "tutorials/tutorial-week-2.html",
-    "href": "tutorials/tutorial-week-2.html",
-    "title": "Tutorials week 2",
+    "objectID": "tutorials/tutorial-week-9.html",
+    "href": "tutorials/tutorial-week-9.html",
+    "title": "Tutorials week 9",
     "section": "",
-    "text": "▶ 👨‍🏫 Command line\n▶ 👨‍🏫 Conditional statements\n▶ 👨‍🏫 Data types\n▶ 👨‍🏫 Loops\n▶ 👨‍🏫 magic numbers\n▶ 👨‍🏫 Operators"
+    "text": "▶ 👨‍🏫 CSS\n▶ 👨‍🏫 DOM\n▶ 👨‍🏫 HTML\n▶ 👨‍🏫 HTTP\n▶ 👨‍🏫 Internet primer\n▶ 👨‍🏫 IP\n▶ 👨‍🏫 JavaScript\n▶ 👨‍🏫 TCP"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-7.html",
+    "href": "tutorials/tutorial-week-7.html",
+    "title": "Tutorials week 7",
+    "section": "",
+    "text": "▶ 👨‍🏫 Python"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-5.html",
+    "href": "tutorials/tutorial-week-5.html",
+    "title": "Tutorials week 5",
+    "section": "",
+    "text": "▶ 👨‍🏫 Defining custom types\n▶ 👨‍🏫 Dynamic memory allocation\n▶ 👨‍🏫 File pointers\n▶ 👨‍🏫 Hexadecimal\n▶ 👨‍🏫 Pointers"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-3.html",
+    "href": "tutorials/tutorial-week-3.html",
+    "title": "Tutorials week 3",
+    "section": "",
+    "text": "▶ 👨‍🏫 Arrays\n▶ 👨‍🏫 Command line arguments\n▶ 👨‍🏫 Functions\n▶ 👨‍🏫 Variables and scope"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-10.html",
+    "href": "tutorials/tutorial-week-10.html",
+    "title": "Tutorials week 10",
+    "section": "",
+    "text": "▶ 👨‍🏫 AJAX\n▶ 👨‍🏫 Flask"
   },
   {
     "objectID": "notes/notes_8.html",
@@ -1719,5 +1747,33 @@
     "title": "Lecture 9 Notes",
     "section": "",
     "text": "In this lesson, you learned how to create your own HTML files, style them, leverage third-party frameworks, and utilize JavaScript. Specifically, we discussed…\n\nTCP/IP\nDNS\nHTML\nRegular expressions\nCSS\nFrameworks\nJavaScript\n\nSee you next time!"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-2.html",
+    "href": "tutorials/tutorial-week-2.html",
+    "title": "Tutorials week 2",
+    "section": "",
+    "text": "▶ 👨‍🏫 Command line\n▶ 👨‍🏫 Conditional statements\n▶ 👨‍🏫 Data types\n▶ 👨‍🏫 Loops\n▶ 👨‍🏫 Magic numbers\n▶ 👨‍🏫 Operators"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-4.html",
+    "href": "tutorials/tutorial-week-4.html",
+    "title": "Tutorials week 4",
+    "section": "",
+    "text": "▶ 👨‍🏫 Binary search\n▶ 👨‍🏫 Bubble sort\n▶ 👨‍🏫 Call stacks\n▶ 👨‍🏫 Linear search\n▶ 👨‍🏫 Merge sort\n▶ 👨‍🏫 Recursion\n▶ 👨‍🏫 Selection sort"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-6.html",
+    "href": "tutorials/tutorial-week-6.html",
+    "title": "Tutorials week 6",
+    "section": "",
+    "text": "▶ 👨‍🏫 Data structures\n▶ 👨‍🏫 Doubly-linked lists\n▶ 👨‍🏫 Hash tables\n▶ 👨‍🏫 Queues\n▶ 👨‍🏫 Singly-linked lists\n▶ 👨‍🏫 Stacks\n▶ 👨‍🏫 Structures\n▶ 👨‍🏫 Tries"
+  },
+  {
+    "objectID": "tutorials/tutorial-week-8.html",
+    "href": "tutorials/tutorial-week-8.html",
+    "title": "Tutorials week 8",
+    "section": "",
+    "text": "▶ 👨‍🏫 SQL"
   }
 ]
