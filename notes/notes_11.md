@@ -16,7 +16,7 @@
 * Notice how some instructions were more specific than others. Remember times when you had to refine your code to do exactly as you wanted.
 * Also, notice how some instructions were abstracted away, like *draw arms*. This is similar to how we abstracted away code into functions.
 * Looking at all the weeks of the course, you gathered tools and built skills. Above all, though, you learned how to teach yourself.
-* Your final project is your opportunity to build a project, using these skills, that is of your specification and design. We hope you will join us for our [Hackathon](.../module-extras.html), an epic late-nighter wherein we work together on our final projects.
+* Your final project is your opportunity to build a project, using these skills, that is of your specification and design. We hope you will join us for the [CS50 Hackathon](https://cs50.harvard.edu/college/2024/fall/hackathon/), an epic all-nighter wherein we work together on our final projects.
 
 ## Looking Ahead
 
