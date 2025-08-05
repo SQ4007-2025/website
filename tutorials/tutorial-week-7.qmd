@@ -1,0 +1,5 @@
+---
+title: "Tutorials week 7"
+---
+
+▶ 👨‍🏫 [Python](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_7/7.python.pptx)
