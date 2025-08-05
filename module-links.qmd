@@ -2,7 +2,7 @@
 title: "Useful links"
 ---
 
-🔗 [VS Code Codespace (aka "The Sandbox")](https://classroom.github.com/a/zT0wsGr1)
+🔗 [VS Code Codespace (aka "The Sandbox")](https://classroom.github.com/a/zT0wsGr1) - Once you "accept the assessment" you will be able to access The Sandbox anytime.
 
 🔗 [Harper Adams VLE site for this module (HAU enrolled students only)](https://vle.harper-adams.ac.uk/course/view.php?id=282)
 
@@ -10,4 +10,4 @@ title: "Useful links"
 
 🔗 
 
-🔗
+🔗 [Code Club meetings](module-extras.html)
