@@ -166,7 +166,6 @@ website:
             text: "Homework 09 🌐"
           - href: homework/hw_10.md
             text: "Homework 10 🐍"
-          
 
 format:
   html:
