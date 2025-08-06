@@ -1167,7 +1167,7 @@
     "text": "Week 5 Problem Set\nSource: https://cs50.harvard.edu/x/psets/5/",
     "crumbs": [
       "Homework",
-      "Week 05 ��"
+      "Week 05 🟢"
     ]
   },
   {
@@ -1178,7 +1178,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Inheritance\nSubmit Speller",
     "crumbs": [
       "Homework",
-      "Week 05 ��"
+      "Week 05 🟢"
     ]
   },
   {
@@ -1189,7 +1189,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 05 ��"
+      "Week 05 🟢"
     ]
   },
   {
@@ -1200,7 +1200,7 @@
     "text": "Advice\n\nTry out any of David’s programs from Week 5.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile speller, and\nmake speller\n\nis yielding errors, try running\nhelp50 make speller\n\ninstead!",
     "crumbs": [
       "Homework",
-      "Week 05 ��"
+      "Week 05 🟢"
     ]
   },
   {
@@ -1663,9 +1663,9 @@
   {
     "objectID": "homework/hw_2.html",
     "href": "homework/hw_2.html",
-    "title": "Problem Set 1",
+    "title": "Homework week 2",
     "section": "",
-    "text": "Week 1 Problem Set\nSource: https://cs50.harvard.edu/x/psets/1/",
+    "text": "Log into submit.cs50.io using your GitHub account and click Authorize cs50, then close the tab.\nLog into cs50.dev using your GitHub account to access your very own “codespace.”\nOnce your codespace has loaded, close any Welcome tabs that might have opened by default.\nRun update50 in your codespace’s terminal window to ensure that your codespace is up-to-date and, if prompted, click Rebuild now.\nComplete Hello, World.\nSubmit Hello, It’s Me.\nSubmit one of:\n\nthis version of Mario, if feeling less comfortable\nthis version of Mario, if feeling more comfortable\n\nSubmit one of:\n\nCash, if feeling less comfortable\nCredit, if feeling more comfortable\n\n\nIf you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.",
     "crumbs": [
       "Homework",
       "Week 02 🟢"
@@ -1674,9 +1674,9 @@
   {
     "objectID": "homework/hw_2.html#what-to-do",
     "href": "homework/hw_2.html#what-to-do",
-    "title": "Problem Set 1",
-    "section": "What to Do",
-    "text": "What to Do\n\nLog into submit.cs50.io using your GitHub account and click Authorize cs50, then close the tab.\nLog into cs50.dev using your GitHub account to access your very own “codespace.”\nOnce your codespace has loaded, close any Welcome tabs that might have opened by default.\nRun update50 in your codespace’s terminal window to ensure that your codespace is up-to-date and, if prompted, click Rebuild now.\nComplete Hello, World.\nSubmit Hello, It’s Me.\nSubmit one of:\n\nthis version of Mario, if feeling less comfortable\nthis version of Mario, if feeling more comfortable\n\nSubmit one of:\n\nCash, if feeling less comfortable\nCredit, if feeling more comfortable\n\n\nIf you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.",
+    "title": "Homework week 2",
+    "section": "",
+    "text": "Log into submit.cs50.io using your GitHub account and click Authorize cs50, then close the tab.\nLog into cs50.dev using your GitHub account to access your very own “codespace.”\nOnce your codespace has loaded, close any Welcome tabs that might have opened by default.\nRun update50 in your codespace’s terminal window to ensure that your codespace is up-to-date and, if prompted, click Rebuild now.\nComplete Hello, World.\nSubmit Hello, It’s Me.\nSubmit one of:\n\nthis version of Mario, if feeling less comfortable\nthis version of Mario, if feeling more comfortable\n\nSubmit one of:\n\nCash, if feeling less comfortable\nCredit, if feeling more comfortable\n\n\nIf you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.",
     "crumbs": [
       "Homework",
       "Week 02 🟢"
@@ -1685,7 +1685,7 @@
   {
     "objectID": "homework/hw_2.html#when-to-do-it",
     "href": "homework/hw_2.html#when-to-do-it",
-    "title": "Problem Set 1",
+    "title": "Homework week 2",
     "section": "When to Do It",
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
@@ -1696,7 +1696,7 @@
   {
     "objectID": "homework/hw_2.html#advice",
     "href": "homework/hw_2.html#advice",
-    "title": "Problem Set 1",
+    "title": "Homework week 2",
     "section": "Advice",
     "text": "Advice\n\nTry out any of David’s programs from class via Week 1’s source code.\nSee CS50’s style guide for C for tips on how to improve your code’s style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile hello, and\nmake hello\n\nis yielding errors, try running\nhelp50 make hello\n\ninstead!",
     "crumbs": [
@@ -1756,49 +1756,49 @@
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html",
     "href": "homework/hw_2/2.3_this_version_of_mario.html",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "",
     "text": "Week 1, Problem 3\nSource: https://cs50.harvard.edu/x/psets/1/mario/less/"
   },
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html#problem-to-solve",
     "href": "homework/hw_2/2.3_this_version_of_mario.html#problem-to-solve",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "Problem to Solve",
     "text": "Problem to Solve\nToward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.\n\n\n\nscreenshot of Mario jumping up a right-aligned pyramid\n\n\nIn a file called mario.c in a folder called mario-less, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nBut prompt the user for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:\n  #\n ##\n###\n\nRe-prompt the user, again and again as needed, if their input is not greater than 0 or not an int altogether.\nHints\n\nRecall that you can get an int from a user with get_int, which is declared in cs50.h.\nRecall that you can print a string with printf, which is declared in stdio.h."
   },
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html#demo",
     "href": "homework/hw_2/2.3_this_version_of_mario.html#demo",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "Demo",
     "text": "Demo"
   },
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html#advice",
     "href": "homework/hw_2/2.3_this_version_of_mario.html#advice",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "Advice",
     "text": "Advice\nClick the below toggles to read some advice!\nWrite some code that you know will compile\nEven though this program won’t do anything, it should at least compile with make!\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n\n}\n\nWrite some pseudocode before writing more code\nIf unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really two problems:\n\nPrompt the user for the pyramid’s height\nPrint a pyramid of that height\n\nSo write some pseudcode as comments that remind you to do just that:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n\n    // Print a pyramid of that height\n}\n\nConvert the pseudocode to code\nFirst, consider how you might prompt the user for the pyramid’s height. Recall that a do while loop is helpful when you want to do something at least once, and possibly again and again, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n}\n\nSecond, consider how you might print a pyramid of that height, from top to bottom. Notice how the first row should have one brick, the second row should have two bricks, and so on. Odds are you’ll want a loop, as in the below, even if not (yet!) sure what to put in that loop. So add some more pseudocode as a comment for now:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nHow to print that row of bricks? Well, wouldn’t it be nice if there were a function called print_row that could do just that? Let’s suppose that there is:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nvoid print_row(int bricks)\n{\n    // Print row of bricks\n}\n\nWe could then call that function from main, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n        print_row(i + 1);\n    }\n}\n\nvoid print_row(int bricks)\n{\n    // Print row of bricks\n}\n\nWhy i + 1, though?\nLet’s now implement print_row:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n        print_row(i + 1);\n    }\n}\n\nvoid print_row(int bricks)\n{\n    for (int i = 0; i &lt; bricks; i++)\n    {\n        printf(\"#\");\n    }\n    printf(\"\\n\");\n}\n\nWhy the \\n at the end, though?\nUnfortunately, this code prints a left-aligned pyramid, but you need a right-aligned one! Perhaps we should print some blank spaces before some of the bricks, to move them to the right? Let’s change print_row as follows so that it can print both:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int spaces, int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nvoid print_row(int spaces, int bricks)\n{\n    // Print spaces\n\n    // Print bricks\n}\n\nSome pseudocode now remains in both main and print_row, so that we leave to you!\nAnd consider whether you could factor out some of the code in main to a get_height function, too, that returns the int you need!"
   },
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html#walkthrough",
     "href": "homework/hw_2/2.3_this_version_of_mario.html#walkthrough",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "Walkthrough",
     "text": "Walkthrough\nNote this walkthrough specifies your program should prompt the user for a pyramid’s height and re-prompt if the user inputs a value less than 1 or greater than 8. The specification only requires you to re-prompt the user if they input a value less than 1."
   },
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html#how-to-test",
     "href": "homework/hw_2/2.3_this_version_of_mario.html#how-to-test",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "How to Test",
     "text": "How to Test\nDoes your code work as prescribed when you input:\n\n-1 or other negative numbers?\n0?\n1 or other positive numbers?\nletters or words?\nno input at all, when you only hit Enter?\n\n\nCorrectness\nIn your terminal, execute the below to check your work’s correctness.\ncheck50 cs50/problems/2025/x/mario/less\n\n\n\nStyle\nExecute the below to evaluate the style of your code using style50.\nstyle50 mario.c"
   },
   {
     "objectID": "homework/hw_2/2.3_this_version_of_mario.html#how-to-submit",
     "href": "homework/hw_2/2.3_this_version_of_mario.html#how-to-submit",
-    "title": "this version of Mario",
+    "title": "this version of Mario (less)",
     "section": "How to Submit",
     "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/mario/less"
   },
@@ -1926,7 +1926,7 @@
     "href": "homework/hw_1.html",
     "title": "Homework week 1",
     "section": "",
-    "text": "Download and install the latest version of Chrome, if you don’t have it already.\nSubmit Starting from Scratch.",
+    "text": "Complete and submit Starting from Scratch.",
     "crumbs": [
       "Homework",
       "Week 01 🐈"
@@ -1937,7 +1937,7 @@
     "href": "homework/hw_1.html#what-to-do",
     "title": "Homework week 1",
     "section": "",
-    "text": "Download and install the latest version of Chrome, if you don’t have it already.\nSubmit Starting from Scratch.",
+    "text": "Complete and submit Starting from Scratch.",
     "crumbs": [
       "Homework",
       "Week 01 🐈"
@@ -1948,7 +1948,7 @@
     "href": "homework/hw_1.html#advice",
     "title": "Homework week 1",
     "section": "Advice",
-    "text": "Advice\nHere are some examples from lecture if you’d like to review! To see the source code of each, click See inside.",
+    "text": "Advice\nIf you have trouble running Scratch in your browser, use Chrome; consider downloading and installing the latest version of Chrome, if you don’t have it already.\nHere are some examples from lecture if you’d like to review! To see the source code of each, click See inside.",
     "crumbs": [
       "Homework",
       "Week 01 🐈"
@@ -1959,7 +1959,7 @@
     "href": "homework/hw_1.html#academic-integrity",
     "title": "Homework week 1",
     "section": "Academic integrity",
-    "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you.\nThe staff conducts audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
+    "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
       "Homework",
       "Week 01 🐈"
@@ -2127,21 +2127,21 @@
   {
     "objectID": "homework/hw_2/2.4_this_version_of_mario.html",
     "href": "homework/hw_2/2.4_this_version_of_mario.html",
-    "title": "this version of Mario",
+    "title": "this version of Mario (more)",
     "section": "",
     "text": "Week 1, Problem 4\nSource: https://cs50.harvard.edu/x/psets/1/mario/more/"
   },
   {
     "objectID": "homework/hw_2/2.4_this_version_of_mario.html#problem-to-solve",
     "href": "homework/hw_2/2.4_this_version_of_mario.html#problem-to-solve",
-    "title": "this version of Mario",
+    "title": "this version of Mario (more)",
     "section": "Problem to Solve",
     "text": "Problem to Solve\nToward the beginning of World 1-1 in Nintendo’s Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, per the below.\n\n\n\nscreenshot of Mario jumping over adjacent pyramids\n\n\nIn a file called mario.c in a folder called mario-more, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n   #  #\n  ##  ##\n ###  ###\n####  ####\n\nAnd let’s allow the user to decide just how tall the pyramids should be by first prompting them for a positive int between, say, 1 and 8, inclusive.\nExamples\nHere’s how the program might work if the user inputs 8 when prompted:\n$ ./mario\nHeight: 8\n       #  #\n      ##  ##\n     ###  ###\n    ####  ####\n   #####  #####\n  ######  ######\n #######  #######\n########  ########\n\n\nHere’s how the program might work if the user inputs 4 when prompted:\n$ ./mario\nHeight: 4\n   #  #\n  ##  ##\n ###  ###\n####  ####\n\nHere’s how the program might work if the user inputs 2 when prompted:\n$ ./mario\nHeight: 2\n #  #\n##  ##\n\nAnd here’s how the program might work if the user inputs 1 when prompted:\n$ ./mario\nHeight: 1\n#  #\n\nIf the user doesn’t, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:\n$ ./mario\nHeight: -1\nHeight: 0\nHeight: 42\nHeight: 50\nHeight: 4\n   #  #\n  ##  ##\n ###  ###\n####  ####\n\nNotice that width of the “gap” between adjacent pyramids is equal to the width of two hashes, irrespective of the pyramids’ heights.\n\nWalkthrough\n\n\nHow to Test Your Code\nDoes your code work as prescribed when you input\n\n-1 (or other negative numbers)?\n0?\n1 through 8?\n9 or other positive numbers?\nletters or words?\nno input at all, when you only hit Enter?\n\nYou can also execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!\n\n\nCorrectness\nIn your terminal, execute the below to check your work’s correctness.\ncheck50 cs50/problems/2025/x/mario/more\n\n\n\nStyle\nExecute the below to evaluate the style of your code using style50.\nstyle50 mario.c"
   },
   {
     "objectID": "homework/hw_2/2.4_this_version_of_mario.html#how-to-submit",
     "href": "homework/hw_2/2.4_this_version_of_mario.html#how-to-submit",
-    "title": "this version of Mario",
+    "title": "this version of Mario (more)",
     "section": "How to Submit",
     "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/mario/more"
   },
@@ -3228,7 +3228,7 @@
     "href": "module-schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nTopics\nLectures\nNotes\nCode\nTutorials\nHomework\n\n\n\n\n01\n🐈 Scratch\n▶ 💻\n📕\n🤖\n\n🏠\n\n\n02\n🟢 C\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n03\n🟢 Arrays\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n04\n🟢 Algorithms\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n05\n🟢 Memory\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n06\n🟢 Data structures\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n07\n🐍 Python\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n08\n📊 SQL\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n09\n🌐 Web programming\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n10\n🐍 Flask\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n11\n👋 Wrap up\n▶ 💻\n📕\n🤖\n\n🏠",
+    "text": "This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nTopics\nLectures\nNotes\nCode\nTutorials\nHomework\n\n\n\n\n01\n🐈 Scratch\n▶ 💻\n📕\n🤖\n\n🏠\n\n\n02\n🟢 C\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n03\n🟢 Arrays\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n04\n🟢 Algorithms\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n05\n🟢 Memory\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n06\n🟢 Data structures\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n07\n🐍 Python\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n08\n📊 SQL\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n09\n🌐 Web programming\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n10\n🐍 Flask\n▶ 💻\n📕\n🤖\n👨‍🏫\n🏠\n\n\n11\n👋 Wrap up\n▶ 💻\n📕\n🤖",
     "crumbs": [
       "Schedule"
     ]
