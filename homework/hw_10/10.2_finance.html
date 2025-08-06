@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>finance – Computing Technology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e9f3ba5fbee03b112b18b9666ab66a2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Computing Technology">
+<meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_10/finance_2024.png">
+<meta property="og:site_name" content="Computing Technology">
+<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_10/images/twitter-card.png">
+<meta name="twitter:creator" content="@EdHarris9000">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/weharris" title="Course GitHub repo" class="quarto-navigation-tool px-1" aria-label="Course GitHub repo"><i class="bi bi-github"></i></a>
+    <a href="https://youtube.com/@TheStatisticsLab" title="YouTube" class="quarto-navigation-tool px-1" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://discord.gg/dnNTE6xhhu" title="Join our Discord" class="quarto-navigation-tool px-1" aria-label="Join our Discord"><i class="bi bi-discord"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../module-schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../module-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../module-links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful links</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../module-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/tutorial-week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#finance" id="toc-finance" class="nav-link active" data-scroll-target="#finance">Finance</a></li>
+  <li><a href="#c50-finance" id="toc-c50-finance" class="nav-link" data-scroll-target="#c50-finance">C$50 Finance</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
+  <ul class="collapse">
+  <li><a href="#running" id="toc-running" class="nav-link" data-scroll-target="#running">Running</a></li>
+  <li><a href="#understanding" id="toc-understanding" class="nav-link" data-scroll-target="#understanding">Understanding</a></li>
+  </ul></li>
+  <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a>
+  <ul class="collapse">
+  <li><a href="#register" id="toc-register" class="nav-link" data-scroll-target="#register"><code>register</code></a></li>
+  <li><a href="#quote" id="toc-quote" class="nav-link" data-scroll-target="#quote"><code>quote</code></a></li>
+  <li><a href="#buy" id="toc-buy" class="nav-link" data-scroll-target="#buy"><code>buy</code></a></li>
+  <li><a href="#index" id="toc-index" class="nav-link" data-scroll-target="#index"><code>index</code></a></li>
+  <li><a href="#sell" id="toc-sell" class="nav-link" data-scroll-target="#sell"><code>sell</code></a></li>
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history"><code>history</code></a></li>
+  <li><a href="#personal-touch" id="toc-personal-touch" class="nav-link" data-scroll-target="#personal-touch">personal touch</a></li>
+  </ul></li>
+  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
+  <li><a href="#staffs-solution" id="toc-staffs-solution" class="nav-link" data-scroll-target="#staffs-solution">Staff’s Solution</a></li>
+  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
+  <li><a href="#faqs" id="toc-faqs" class="nav-link" data-scroll-target="#faqs">FAQs</a>
+  <ul class="collapse">
+  <li><a href="#importerror-no-module-named-application" id="toc-importerror-no-module-named-application" class="nav-link" data-scroll-target="#importerror-no-module-named-application">ImportError: No module named ‘application’</a></li>
+  <li><a href="#oserror-errno-98-address-already-in-use" id="toc-oserror-errno-98-address-already-in-use" class="nav-link" data-scroll-target="#oserror-errno-98-address-already-in-use">OSError: [Errno 98] Address already in use</a></li>
+  </ul></li>
+  <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a>
+  <ul class="collapse">
+  <li><a href="#why-does-my-submission-pass-check50-but-shows-no-results-in-my-gradebook-after-running-submit50" id="toc-why-does-my-submission-pass-check50-but-shows-no-results-in-my-gradebook-after-running-submit50" class="nav-link" data-scroll-target="#why-does-my-submission-pass-check50-but-shows-no-results-in-my-gradebook-after-running-submit50">Why does my submission pass check50, but shows “No results” in my Gradebook after running submit50?</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_10/10.2_finance.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="finance" class="level1">
+<h1>Finance</h1>
+<p><strong>Week 9, Problem 2</strong></p>
+<p>Source: https://cs50.harvard.edu/x/psets/9/finance/</p>
+<hr>
+</section>
+<section id="c50-finance" class="level1">
+<h1>C$50 Finance</h1>
+<p>Implement a website via which users can “buy” and “sell” stocks, à la the below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="finance_2024.png" class="img-fluid figure-img"></p>
+<figcaption>C$50 Finance</figcaption>
+</figure>
+</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>If you’re not quite sure what it means to buy and sell stocks (i.e., shares of a company), head <a href="https://www.investopedia.com/articles/basics/06/invest1000.asp">here</a> for a tutorial.</p>
+<p>You’re about to implement C$50 Finance, a web app via which you can manage portfolios of stocks. Not only will this tool allow you to check real stocks’ prices and portfolios’ values, it will also let you buy (okay, “buy”) and sell (okay, “sell”) stocks by querying for stocks’ prices.</p>
+<p>Indeed, there are tools (one is known as IEX) that let you download stock quotes via their API (application programming interface) using URLs like <code>https://api.iex.cloud/v1/data/core/quote/nflx?token=API_KEY</code>. Notice how Netflix’s symbol (NFLX) is embedded in this URL; that’s how IEX knows whose data to return. That link won’t actually return any data because IEX requires you to use an API key, but if it did, you’d see a response in JSON (JavaScript Object Notation) format like this:</p>
+<pre><code>{
+  "avgTotalVolume":6787785,
+  "calculationPrice":"tops",
+  "change":1.46,
+  "changePercent":0.00336,
+  "close":null,
+  "closeSource":"official",
+  "closeTime":null,
+  "companyName":"Netflix Inc.",
+  "currency":"USD",
+  "delayedPrice":null,
+  "delayedPriceTime":null,
+  "extendedChange":null,
+  "extendedChangePercent":null,
+  "extendedPrice":null,
+  "extendedPriceTime":null,
+  "high":null,
+  "highSource":"IEX real time price",
+  "highTime":1699626600947,
+  "iexAskPrice":460.87,
+  "iexAskSize":123,
+  "iexBidPrice":435,
+  "iexBidSize":100,
+  "iexClose":436.61,
+  "iexCloseTime":1699626704609,
+  "iexLastUpdated":1699626704609,
+  "iexMarketPercent":0.00864679844447232,
+  "iexOpen":437.37,
+  "iexOpenTime":1699626600859,
+  "iexRealtimePrice":436.61,
+  "iexRealtimeSize":5,
+  "iexVolume":965,
+  "lastTradeTime":1699626704609,
+  "latestPrice":436.61,
+  "latestSource":"IEX real time price",
+  "latestTime":"9:31:44 AM",
+  "latestUpdate":1699626704609,
+  "latestVolume":null,
+  "low":null,
+  "lowSource":"IEX real time price",
+  "lowTime":1699626634509,
+  "marketCap":192892118443,
+  "oddLotDelayedPrice":null,
+  "oddLotDelayedPriceTime":null,
+  "open":null,
+  "openTime":null,
+  "openSource":"official",
+  "peRatio":43.57,
+  "previousClose":435.15,
+  "previousVolume":2735507,
+  "primaryExchange":"NASDAQ",
+  "symbol":"NFLX",
+  "volume":null,
+  "week52High":485,
+  "week52Low":271.56,
+  "ytdChange":0.4790450244167119,
+  "isUSMarketOpen":true
+}
+</code></pre>
+<p>Notice how, between the curly braces, there’s a comma-separated list of key-value pairs, with a colon separating each key from its value. We’re going to be doing something very similar with our own stock database API.</p>
+<p>Let’s turn our attention now to getting this problem’s distribution code!</p>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<pre><code>$
+</code></pre>
+<p>Next execute</p>
+<pre><code>wget https://cdn.cs50.net/2024/fall/psets/9/finance.zip
+</code></pre>
+<p>in order to download a ZIP called <code>finance.zip</code> into your codespace.</p>
+<p>Then execute</p>
+<pre><code>unzip finance.zip
+</code></pre>
+<p>to create a folder called <code>finance</code>. You no longer need the ZIP file, so you can execute</p>
+<pre><code>rm finance.zip
+</code></pre>
+<p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
+<p>Now type</p>
+<pre><code>cd finance
+</code></pre>
+<p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
+<pre><code>finance/ $
+</code></pre>
+<p>Execute <code>ls</code> by itself, and you should see a few files and folders:</p>
+<pre><code>app.py  finance.db  helpers.py  requirements.txt  static/  templates/
+</code></pre>
+<p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
+<section id="running" class="level3">
+<h3 class="anchored" data-anchor-id="running">Running</h3>
+<p>Start Flask’s built-in web server (within <code>finance/</code>):</p>
+<pre><code>$ flask run
+</code></pre>
+<p>Visit the URL outputted by <code>flask</code> to see the distribution code in action. You won’t be able to log in or register, though, just yet!</p>
+<p>Within <code>finance/</code>, run <code>sqlite3 finance.db</code> to open <code>finance.db</code> with <code>sqlite3</code>. If you run <code>.schema</code> in the SQLite prompt, notice how <code>finance.db</code> comes with a table called <code>users</code>. Take a look at its structure (i.e., schema). Notice how, by default, new users will receive $10,000 in cash. But if you run <code>SELECT * FROM users;</code>, there aren’t (yet!) any users (i.e., rows) therein to browse.</p>
+<p>Another way to view <code>finance.db</code> is with a program called phpLiteAdmin. Click on <code>finance.db</code> in your codespace’s file browser, then click the link shown underneath the text “Please visit the following link to authorize GitHub Preview”. You should see information about the database itself, as well as a table, <code>users</code>, just like you saw in the <code>sqlite3</code> prompt with <code>.schema</code>.</p>
+</section>
+<section id="understanding" class="level3">
+<h3 class="anchored" data-anchor-id="understanding">Understanding</h3>
+<section id="app.py" class="level4">
+<h4 class="anchored" data-anchor-id="app.py"><code>app.py</code></h4>
+<p>Open up <code>app.py</code>. Atop the file are a bunch of imports, among them CS50’s SQL module and a few helper functions. More on those soon.</p>
+<p>After configuring <a href="https://flask.palletsprojects.com/en/stable/">Flask</a>, notice how this file disables caching of responses (provided you’re in debugging mode, which you are by default in your code50 codespace), lest you make a change to some file but your browser not notice. Notice next how it configures <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a> with a custom “filter,” <code>usd</code>, a function (defined in <code>helpers.py</code>) that will make it easier to format values as US dollars (USD). It then further configures Flask to store <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions">sessions</a> on the local filesystem (i.e., disk) as opposed to storing them inside of (digitally signed) cookies, which is Flask’s default. The file then configures CS50’s SQL module to use <code>finance.db</code>.</p>
+<p>Thereafter are a whole bunch of routes, only two of which are fully implemented: <code>login</code> and <code>logout</code>. Read through the implementation of <code>login</code> first. Notice how it uses <code>db.execute</code> (from CS50’s library) to query <code>finance.db</code>. And notice how it uses <code>check_password_hash</code> to compare hashes of users’ passwords. Also notice how <code>login</code> “remembers” that a user is logged in by storing his or her <code>user_id</code>, an INTEGER, in <code>session</code>. That way, any of this file’s routes can check which user, if any, is logged in. Finally, notice how once the user has successfully logged in, <code>login</code> will redirect to <code>"/"</code>, taking the user to their home page. Meanwhile, notice how <code>logout</code> simply clears <code>session</code>, effectively logging a user out.</p>
+<p>Notice how most routes are “decorated” with <code>@login_required</code> (a function defined in <code>helpers.py</code> too). That decorator ensures that, if a user tries to visit any of those routes, he or she will first be redirected to <code>login</code> so as to log in.</p>
+<p>Notice too how most routes support GET and POST. Even so, most of them (for now!) simply return an “apology,” since they’re not yet implemented.</p>
+</section>
+<section id="helpers.py" class="level4">
+<h4 class="anchored" data-anchor-id="helpers.py"><code>helpers.py</code></h4>
+<p>Next take a look at <code>helpers.py</code>. Ah, there’s the implementation of <code>apology</code>. Notice how it ultimately renders a template, <code>apology.html</code>. It also happens to define within itself another function, <code>escape</code>, that it simply uses to replace special characters in apologies. By defining <code>escape</code> inside of <code>apology</code>, we’ve scoped the former to the latter alone; no other functions will be able (or need) to call it.</p>
+<p>Next in the file is <code>login_required</code>. No worries if this one’s a bit cryptic, but if you’ve ever wondered how a function can return another function, here’s an example!</p>
+<p>Thereafter is <code>lookup</code>, a function that, given a <code>symbol</code> (e.g., NFLX), returns a stock quote for a company in the form of a <code>dict</code> with three keys: <code>name</code>, whose value is a <code>str</code>; <code>price</code>, whose value is a <code>float</code>; and <code>symbol</code>, whose value is a <code>str</code>, a canonicalized (uppercase) version of a stock’s symbol, irrespective of how that symbol was capitalized when passed into <code>lookup</code>. Note that these are not “real-time” prices but do change over time, just like in the real world!</p>
+<p>Last in the file is <code>usd</code>, a short function that simply formats a <code>float</code> as USD (e.g., <code>1234.56</code> is formatted as <code>$1,234.56</code>).</p>
+</section>
+<section id="requirements.txt" class="level4">
+<h4 class="anchored" data-anchor-id="requirements.txt"><code>requirements.txt</code></h4>
+<p>Next take a quick look at <code>requirements.txt</code>. That file simply prescribes the packages on which this app will depend.</p>
+</section>
+<section id="static" class="level4">
+<h4 class="anchored" data-anchor-id="static"><code>static/</code></h4>
+<p>Glance too at <code>static/</code>, inside of which is <code>styles.css</code>. That’s where some initial CSS lives. You’re welcome to alter it as you see fit.</p>
+</section>
+<section id="templates" class="level4">
+<h4 class="anchored" data-anchor-id="templates"><code>templates/</code></h4>
+<p>Now look in <code>templates/</code>. In <code>login.html</code> is, essentially, just an HTML form, stylized with <a href="https://getbootstrap.com/">Bootstrap</a>. In <code>apology.html</code>, meanwhile, is a template for an apology. Recall that <code>apology</code> in <code>helpers.py</code> took two arguments: <code>message</code>, which was passed to <code>render_template</code> as the value of <code>bottom</code>, and, optionally, <code>code</code>, which was passed to <code>render_template</code> as the value of <code>top</code>. Notice in <code>apology.html</code> how those values are ultimately used! And <a href="https://github.com/jacebrowning/memegen">here’s why</a> 0:-)</p>
+<p>Last up is <code>layout.html</code>. It’s a bit bigger than usual, but that’s mostly because it comes with a fancy, mobile-friendly “navbar” (navigation bar), also based on Bootstrap. Notice how it defines a block, <code>main</code>, inside of which templates (including <code>apology.html</code> and <code>login.html</code>) shall go. It also includes support for Flask’s <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#message-flashing">message flashing</a> so that you can relay messages from one route to another for the user to see.</p>
+</section>
+</section>
+</section>
+<section id="specification" class="level2">
+<h2 class="anchored" data-anchor-id="specification">Specification</h2>
+<section id="register" class="level3">
+<h3 class="anchored" data-anchor-id="register"><code>register</code></h3>
+<p>Complete the implementation of <code>register</code> in such a way that it allows a user to register for an account via a form.</p>
+<ul>
+<li>Require that a user input a username, implemented as a text field whose <code>name</code> is <code>username</code>. Render an apology if the user’s input is blank or the username already exists.
+<ul>
+<li>Note that <a href="https://cs50.readthedocs.io/libraries/cs50/python/#cs50.SQL"><code>cs50.SQL.execute</code></a> will raise a <code>ValueError</code> exception if you try to <code>INSERT</code> a duplicate username because we have created a <code>UNIQUE INDEX</code> on <code>users.username</code>. Be sure, then, to use <code>try</code> and <code>except</code> to determine if the username already exists.</li>
+</ul></li>
+<li>Require that a user input a password, implemented as a text field whose <code>name</code> is <code>password</code>, and then that same password again, implemented as a text field whose <code>name</code> is <code>confirmation</code>. Render an apology if either input is blank or the passwords do not match.</li>
+<li>Submit the user’s input via <code>POST</code> to <code>/register</code>.</li>
+<li><code>INSERT</code> the new user into <code>users</code>, storing a hash of the user’s password, not the password itself. Hash the user’s password with <a href="https://werkzeug.palletsprojects.com/en/2.3.x/utils/#werkzeug.security.generate_password_hash"><code>generate_password_hash</code></a> Odds are you’ll want to create a new template (e.g., <code>register.html</code>) that’s quite similar to <code>login.html</code>.</li>
+</ul>
+<p>Once you’ve implemented <code>register</code> correctly, you should be able to register for an account and log in (since <code>login</code> and <code>logout</code> already work)! And you should be able to see your rows via phpLiteAdmin or <code>sqlite3</code>.</p>
+</section>
+<section id="quote" class="level3">
+<h3 class="anchored" data-anchor-id="quote"><code>quote</code></h3>
+<p>Complete the implementation of <code>quote</code> in such a way that it allows a user to look up a stock’s current price.</p>
+<ul>
+<li>Require that a user input a stock’s symbol, implemented as a text field whose <code>name</code> is <code>symbol</code>.</li>
+<li>Submit the user’s input via <code>POST</code> to <code>/quote</code>.</li>
+<li>Odds are you’ll want to create two new templates (e.g., <code>quote.html</code> and <code>quoted.html</code>). When a user visits <code>/quote</code> via GET, render one of those templates, inside of which should be an HTML form that submits to <code>/quote</code> via POST. In response to a POST, <code>quote</code> can render that second template, embedding within it one or more values from <code>lookup</code>.</li>
+</ul>
+</section>
+<section id="buy" class="level3">
+<h3 class="anchored" data-anchor-id="buy"><code>buy</code></h3>
+<p>Complete the implementation of <code>buy</code> in such a way that it enables a user to buy stocks.</p>
+<ul>
+<li>Require that a user input a stock’s symbol, implemented as a text field whose <code>name</code> is <code>symbol</code>. Render an apology if the input is blank or the symbol does not exist (as per the return value of <code>lookup</code>).</li>
+<li>Require that a user input a number of shares, implemented as a text field whose <code>name</code> is <code>shares</code>. Render an apology if the input is not a positive integer.</li>
+<li>Submit the user’s input via <code>POST</code> to <code>/buy</code>.</li>
+<li>Upon completion, redirect the user to the home page.</li>
+<li>Odds are you’ll want to call <code>lookup</code> to look up a stock’s current price.</li>
+<li>Odds are you’ll want to <code>SELECT</code> how much cash the user currently has in <code>users</code>.</li>
+<li>Add one or more new tables to <code>finance.db</code> via which to keep track of the purchase. Store enough information so that you know who bought what at what price and when.
+<ul>
+<li>Use appropriate SQLite types.</li>
+<li>Define <code>UNIQUE</code> indexes on any fields that should be unique.</li>
+<li>Define (non-<code>UNIQUE</code>) indexes on any fields via which you will search (as via <code>SELECT</code> with <code>WHERE</code>).</li>
+</ul></li>
+<li>Render an apology, without completing a purchase, if the user cannot afford the number of shares at the current price.</li>
+<li>You don’t need to worry about race conditions (or use transactions).</li>
+</ul>
+<p>Once you’ve implemented <code>buy</code> correctly, you should be able to see users’ purchases in your new table(s) via phpLiteAdmin or <code>sqlite3</code>.</p>
+</section>
+<section id="index" class="level3">
+<h3 class="anchored" data-anchor-id="index"><code>index</code></h3>
+<p>Complete the implementation of <code>index</code> in such a way that it displays an HTML table summarizing, for the user currently logged in, which stocks the user owns, the numbers of shares owned, the current price of each stock, and the total value of each holding (i.e., shares times price). Also display the user’s current cash balance along with a grand total (i.e., stocks’ total value plus cash).</p>
+<ul>
+<li>Odds are you’ll want to execute multiple <code>SELECT</code>s. Depending on how you implement your table(s), you might find <a href="https://www.google.com/search?q=SQLite+GROUP+BY">GROUP BY</a>, <a href="https://www.google.com/search?q=SQLite+HAVING">HAVING</a>, <a href="https://www.google.com/search?q=SQLite+SUM">SUM</a>, and/or <a href="https://www.google.com/search?q=SQLite+WHERE">WHERE</a> of interest.</li>
+<li>Odds are you’ll want to call <code>lookup</code> for each stock.</li>
+</ul>
+</section>
+<section id="sell" class="level3">
+<h3 class="anchored" data-anchor-id="sell"><code>sell</code></h3>
+<p>Complete the implementation of <code>sell</code> in such a way that it enables a user to sell shares of a stock (that he or she owns).</p>
+<ul>
+<li>Require that a user input a stock’s symbol, implemented as a <code>select</code> menu whose <code>name</code> is <code>symbol</code>. Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.</li>
+<li>Require that a user input a number of shares, implemented as a text field whose <code>name</code> is <code>shares</code>. Render an apology if the input is not a positive integer or if the user does not own that many shares of the stock.</li>
+<li>Submit the user’s input via <code>POST</code> to <code>/sell</code>.</li>
+<li>Upon completion, redirect the user to the home page.</li>
+<li>You don’t need to worry about race conditions (or use transactions).</li>
+</ul>
+</section>
+<section id="history" class="level3">
+<h3 class="anchored" data-anchor-id="history"><code>history</code></h3>
+<p>Complete the implementation of <code>history</code> in such a way that it displays an HTML table summarizing all of a user’s transactions ever, listing row by row each and every buy and every sell.</p>
+<ul>
+<li>For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price, the number of shares bought or sold, and the date and time at which the transaction occurred.</li>
+<li>You might need to alter the table you created for <code>buy</code> or supplement it with an additional table. Try to minimize redundancies.</li>
+</ul>
+</section>
+<section id="personal-touch" class="level3">
+<h3 class="anchored" data-anchor-id="personal-touch">personal touch</h3>
+<p>Implement at least one personal touch of your choice:</p>
+<ul>
+<li>Allow users to change their passwords.</li>
+<li>Allow users to add additional cash to their account.</li>
+<li>Allow users to buy more shares or sell shares of stocks they already own via <code>index</code> itself, without having to type stocks’ symbols manually.</li>
+<li>Implement some other feature of comparable scope.</li>
+</ul>
+</section>
+</section>
+<section id="walkthrough" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
+</section>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Testing</h2>
+<p>Be sure to test your web app manually, as by</p>
+<ul>
+<li>registering a new user and verifying that their portfolio page loads with the correct information,</li>
+<li>requesting a quote using a valid stock symbol,</li>
+<li>purchasing one stock multiple times, verifying that the portfolio displays correct totals,</li>
+<li>selling all or some of a stock, again verifying the portfolio, and</li>
+<li>verifying that your history page shows all transactions for your logged in user.</li>
+</ul>
+<p>Also test some unexpected usage, as by</p>
+<ul>
+<li>inputting alphabetical strings into forms when only numbers are expected,</li>
+<li>inputting zero or negative numbers into forms when only positive numbers are expected,</li>
+<li>inputting floating-point values into forms when only integers are expected,</li>
+<li>trying to spend more cash than a user has,</li>
+<li>trying to sell more shares than a user has,</li>
+<li>inputting an invalid stock symbol, and</li>
+<li>including potentially dangerous characters like <code>'</code> and <code>;</code> in SQL queries.</li>
+</ul>
+<p>You can also check the validity of your HTML by clicking the <strong>I ♥ VALIDATOR</strong> button in the footer of each of your pages, which will POST your HTML to <a href="https://validator.w3.org/">validator.w3.org</a>.</p>
+<p>Once satisfied, to test your code with <code>check50</code>, execute the below.</p>
+<pre><code>check50 cs50/problems/2025/x/finance
+</code></pre>
+<p>Be aware that <code>check50</code> will test your entire program as a whole. If you run it <strong>before</strong> completing all required functions, it may report errors on functions that are actually correct but depend on other functions.</p>
+</section>
+<section id="style" class="level2">
+<h2 class="anchored" data-anchor-id="style">Style</h2>
+<pre><code>style50 app.py
+</code></pre>
+</section>
+<section id="staffs-solution" class="level2">
+<h2 class="anchored" data-anchor-id="staffs-solution">Staff’s Solution</h2>
+<p>You’re welcome to stylize your own app differently, but here’s what the staff’s solution looks like!</p>
+<p><a href="https://finance.cs50.net/" class="uri">https://finance.cs50.net/</a></p>
+<p>Feel free to register for an account and play around. Do <strong>not</strong> use a password that you use on other sites.</p>
+<p>It is <strong>reasonable</strong> to look at the staff’s HTML and CSS.</p>
+</section>
+<section id="hints" class="level2">
+<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<ul>
+<li><p>To format a value as a US dollar value (with cents listed to two decimal places), you can use the <code>usd</code> filter in your Jinja templates (printing values as <code>{ value | usd }</code> instead of <code>{ value }</code>.</p></li>
+<li><p>Within <code>cs50.SQL</code> is an <code>execute</code> method whose first argument should be a <code>str</code> of SQL. If that <code>str</code> contains question mark parameters to which values should be bound, those values can be provided as additional named parameters to <code>execute</code>. See the implementation of <code>login</code> for one such example. The return value of <code>execute</code> is as follows:</p>
+<ul>
+<li>If <code>str</code> is a <code>SELECT</code>, then <code>execute</code> returns a <code>list</code> of zero or more <code>dict</code> objects, inside of which are keys and values representing a table’s fields and cells, respectively.</li>
+<li>If <code>str</code> is an <code>INSERT</code>, and the table into which data was inserted contains an autoincrementing <code>PRIMARY KEY</code>, then <code>execute</code> returns the value of the newly inserted row’s primary key.</li>
+<li>If <code>str</code> is a <code>DELETE</code> or an <code>UPDATE</code>, then <code>execute</code> returns the number of rows deleted or updated by <code>str</code>.</li>
+</ul></li>
+<li><p>Recall that <code>cs50.SQL</code> will log to your terminal window any queries that you execute via <code>execute</code> (so that you can confirm whether they’re as intended).</p></li>
+<li><p>Be sure to use question mark-bound parameters (i.e., a <a href="https://www.python.org/dev/peps/pep-0249/#paramstyle">paramstyle</a> of <code>named</code>) when calling CS50’s <code>execute</code> method, à la <code>WHERE ?</code>. Do <strong>not</strong> use f-strings, <a href="https://docs.python.org/3/library/functions.html#format"><code>format</code></a> or <code>+</code> (i.e., concatenation), lest you risk a SQL injection attack.</p></li>
+<li><p>If (and only if) already comfortable with SQL, you’re welcome to use <a href="https://docs.sqlalchemy.org/en/latest/index.html">SQLAlchemy Core</a> or <a href="https://flask-sqlalchemy.readthedocs.io/en/stable/">Flask-SQLAlchemy</a> (i.e., <a href="https://docs.sqlalchemy.org/en/latest/index.html">SQLAlchemy ORM</a>) instead of <code>cs50.SQL</code>.</p></li>
+<li><p>Recall that while you can validate values entered in an HTML form, savvy users may bypass those. Be sure that you are validating values server-side as well. In that same vein, if you’ve chosen to use Javascript in your solution, be sure that your application still works if your user has disabled Javascript.</p></li>
+<li><p>You’re welcome to add additional static files to <code>static/</code>.</p></li>
+<li><p>Odds are you’ll want to consult <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja’s documentation</a> when implementing your templates.</p></li>
+<li><p>It is <strong>reasonable</strong> to ask others to try out (and try to trigger errors in) your site.</p></li>
+<li><p>You’re welcome to alter the aesthetics of the sites, as via</p>
+<ul>
+<li><a href="https://bootswatch.com/">bootswatch.com</a>,</li>
+<li><a href="https://getbootstrap.com/docs/5.1/content/">getbootstrap.com/docs/5.1/content</a>,</li>
+<li><a href="https://getbootstrap.com/docs/5.1/components/">getbootstrap.com/docs/5.1/components</a>, and/or</li>
+<li><a href="https://memegen.link/">memegen.link</a>.</li>
+</ul></li>
+<li><p>You may find <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/">Flask’s documentation</a> and <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/">Jinja’s documentation</a> helpful!</p></li>
+</ul>
+</section>
+<section id="faqs" class="level2">
+<h2 class="anchored" data-anchor-id="faqs">FAQs</h2>
+<section id="importerror-no-module-named-application" class="level3">
+<h3 class="anchored" data-anchor-id="importerror-no-module-named-application">ImportError: No module named ‘application’</h3>
+<p>By default, <code>flask</code> looks for a file called <code>app.py</code> in your current working directory (because we’ve configured the value of <code>FLASK_APP</code>, an environment variable, to be <code>app.py</code>). If seeing this error, odds are you’ve run <code>flask</code> in the wrong directory!</p>
+</section>
+<section id="oserror-errno-98-address-already-in-use" class="level3">
+<h3 class="anchored" data-anchor-id="oserror-errno-98-address-already-in-use">OSError: [Errno 98] Address already in use</h3>
+<p>If, upon running <code>flask</code>, you see this error, odds are you (still) have <code>flask</code> running in another tab. Be sure to kill that other process, as with ctrl-c, before starting <code>flask</code> again. If you haven’t any such other tab, execute <code>fuser -k 8080/tcp</code> to kill any processes that are (still) listening on TCP port 8080.</p>
+</section>
+</section>
+<section id="how-to-submit" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
+<p>In your terminal, execute the below to submit your work.</p>
+<pre><code>submit50 cs50/problems/2025/x/finance
+</code></pre>
+<section id="why-does-my-submission-pass-check50-but-shows-no-results-in-my-gradebook-after-running-submit50" class="level3">
+<h3 class="anchored" data-anchor-id="why-does-my-submission-pass-check50-but-shows-no-results-in-my-gradebook-after-running-submit50">Why does my submission pass check50, but shows “No results” in my Gradebook after running submit50?</h3>
+<p>In some cases, <code>submit50</code> may not grade the assignment due to (1) inconsistent formatting in your <code>app.py</code> file, and/or (2) additional, unneeded files being submitted with the problem set. To fix these issues, run <code>style50 app.py</code> in the <code>finance</code> folder. Address any issues that are revealed. Next, examine the contents of your <code>finance</code> folder. Delete extraneous files, such as flask sessions or other files that are not part of your implementation of the problem set. Further, run <code>check50</code> again to ensure your submission still functions. Finally, run the <code>submit50</code> command above again. Your result will appear in your <a href="https://cs50.me/cs50x">Gradebook</a> within a few minutes.</p>
+<p>Please note that if there is a numerical score next to your finance submission in the <code>submissions</code> area of your <a href="https://cs50.me/cs50x">Gradebook</a>, the procedure discussed above does not apply to you. Likely, you have not fully addressed the requirements of the problem set and should rely upon <code>check50</code> for clues as to what work remains.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/SQ4007-2025\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 🐊 <a href="https://weharris.me">W. Edwin Harris</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_10/10.2_finance.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
