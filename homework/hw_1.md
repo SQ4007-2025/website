@@ -4,7 +4,7 @@ title: "Homework week 1"
 
 ## What to do
 
-Complete and submit [Starting from Scratch](homework/hw_1/1.1_startting_from_scratch.html).
+🐈 [Starting from Scratch](homework/hw_1/1.1_starting_from_scratch.html).
 
 ## Advice
 
