@@ -74,6 +74,28 @@ website:
             text: "Week 09 🌐"
           - href: tutorials/tutorial-week-10.qmd
             text: "Week 10 🐍"
+      - section: "Homework"
+        contents:
+          - href: homework/hw_1.qmd
+            text: "Week 01 🐈"
+          - href: homework/hw_2.qmd
+            text: "Week 02 🟢"
+          - href: homework/hw_3.qmd
+            text: "Week 03 🟢"
+          - href: homework/hw_4.qmd
+            text: "Week 04 🟢"
+          - href: homework/hw_5.qmd
+            text: "Week 05 🟢"
+          - href: homework/hw_6.qmd
+            text: "Week 05 🟢"
+          - href: homework/hw_7.qmd
+            text: "Week 06 🐍"
+          - href: homework/hw_8.qmd
+            text: "Week 08 📊"
+          - href: homework/hw_9.qmd
+            text: "Week 09 🌐"
+          - href: homework/hw_10.qmd
+            text: "Week 10 🐍"
           
 
 format:
