@@ -127,23 +127,23 @@ website:
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
-            text: "Tutorials 02 🟢"
+            text: "Tutorial 02 🟢"
           - href: tutorials/tutorial-week-3.qmd
-            text: "Tutorials 03 🟢"
+            text: "Tutorial 03 🟢"
           - href: tutorials/tutorial-week-4.qmd
-            text: "Tutorials 04 🟢"
+            text: "Tutorial 04 🟢"
           - href: tutorials/tutorial-week-5.qmd
-            text: "Tutorials 05 🟢"
+            text: "Tutorial 05 🟢"
           - href: tutorials/tutorial-week-6.qmd
-            text: "Tutorials 06 🟢"
+            text: "Tutorial 06 🟢"
           - href: tutorials/tutorial-week-7.qmd
-            text: "Tutorials 07 🐍"
+            text: "Tutorial 07 🐍"
           - href: tutorials/tutorial-week-8.qmd
-            text: "Tutorials 08 📊"
+            text: "Tutorial 08 📊"
           - href: tutorials/tutorial-week-9.qmd
-            text: "Tutorials 09 🌐"
+            text: "Tutorial 09 🌐"
           - href: tutorials/tutorial-week-10.qmd
-            text: "Tutorials 10 🐍"
+            text: "Tutorial 10 🐍"
       - section: "Homework"
         contents:
           - href: homework/hw_1.md
