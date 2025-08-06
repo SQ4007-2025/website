@@ -54,6 +54,31 @@ website:
         text: Useful links
       - href: module-faq.qmd
         text: FAQ
+      - section: "Lectures"
+        contents:
+          - href: lectures/slides1.pptx
+            text: "Lecture 01 🐈"
+          - href: lectures/slides2.pptx
+            text: "Lecture 02 🟢"
+          - href: lectures/slides3.pptx
+            text: "Lecture 03 🟢"
+          - href: lectures/slides4.pptx
+            text: "Lecture 04 🟢"
+          - href: lectures/slides5.pptx
+            text: "Lecture 05 🟢"
+          - href: lectures/slides6.pptx
+            text: "Lecture 06 🟢"
+          - href: lectures/slides7.pptx
+            text: "Lecture 07 🐍"
+          - href: lectures/slides8.pptx
+            text: "Lecture 08 📊"
+          - href: lectures/slides9.pptx
+            text: "Lecture 09 🌐"
+          - href: lectures/slides10.pptx
+            text: "Lecture 10 🐍"
+          - href: lectures/slides11.pptx
+            text: "Lecture 11 👋"
+          - href: lectures/slides12.pptx
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
@@ -87,7 +112,7 @@ website:
           - href: homework/hw_5.md
             text: "Week 05 🟢"
           - href: homework/hw_6.md
-            text: "Week 05 ��"
+            text: "Week 05 🟢"
           - href: homework/hw_7.md
             text: "Week 06 🐍"
           - href: homework/hw_8.md

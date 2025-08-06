@@ -1,12 +1,6 @@
-# Problem Set 1
-
-**Week 1 Problem Set**
-
-Source: https://cs50.harvard.edu/x/psets/1/
-
 ---
-
-# Problem Set 1
+title: "Homework week 2"
+---
 
 ## What to Do
 
