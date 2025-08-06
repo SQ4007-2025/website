@@ -56,29 +56,28 @@ website:
         text: FAQ
       - section: "Lectures"
         contents:
-          - href: lectures/slides1.pptx
+          - href: lectures/slides_1.pptx
             text: "Lecture 01 🐈"
-          - href: lectures/slides2.pptx
+          - href: lectures/slides_2.pptx
             text: "Lecture 02 🟢"
-          - href: lectures/slides3.pptx
+          - href: lectures/slides_3.pptx
             text: "Lecture 03 🟢"
-          - href: lectures/slides4.pptx
+          - href: lectures/slides_4.pptx
             text: "Lecture 04 🟢"
-          - href: lectures/slides5.pptx
+          - href: lectures/slides_5.pptx
             text: "Lecture 05 🟢"
-          - href: lectures/slides6.pptx
+          - href: lectures/slides_6.pptx
             text: "Lecture 06 🟢"
-          - href: lectures/slides7.pptx
+          - href: lectures/slides_7.pptx
             text: "Lecture 07 🐍"
-          - href: lectures/slides8.pptx
+          - href: lectures/slides_8.pptx
             text: "Lecture 08 📊"
-          - href: lectures/slides9.pptx
+          - href: lectures/slides_9.pptx
             text: "Lecture 09 🌐"
-          - href: lectures/slides10.pptx
+          - href: lectures/slides_10.pptx
             text: "Lecture 10 🐍"
-          - href: lectures/slides11.pptx
+          - href: lectures/slides_11.pptx
             text: "Lecture 11 👋"
-          - href: lectures/slides12.pptx
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
