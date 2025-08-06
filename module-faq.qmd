@@ -9,9 +9,9 @@ title: "FAQ"
 ```
 ## How do I submit my homework assignments in Github Codespaces?
 
-## Can I use a local install of VS Code, C, Python, SQL,etc. instead of using The Sandbox in Github Codespaces?
+## Can I use a local install of VS Code, C, Python, SQL, etc. instead of using The Sandbox in Github Codespaces to code my homework assignments?
 
-The short answer is, heck yeah! However, installing and configuring all this software on your own computer is sometimes complicated and irritating, even for experienced programmers. Comfiguring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still you can do it if you want to; most of the tools are open source and free and will work. Also, we are here to help support you if you want to try.
+The short answer is, heck yeah (but you will still need to use codespaces to submit your work)! However, installing and configuring all this software on your own computer is sometimes complicated and irritating, even for experienced programmers. Comfiguring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still, you can do it if you want to; most of the tools are open source and free and will work for most tasks. Also, we are here to help support you if you want to try.
 
 If you want to take this path, here is what you need to do:
 
