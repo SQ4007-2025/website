@@ -78,6 +78,30 @@ website:
             text: "Lecture 10 🐍"
           - href: lectures/slides_11.pptx
             text: "Lecture 11 👋"
+      - section: "Notes"
+        contents:
+          - href: notes/notes_1.md
+            text: "Notes 01 🐈"
+          - href: notes/notes_2.md
+            text: "Notes 02 🟢"
+          - href: notes/notes_3.md
+            text: "Notes 03 🟢"
+          - href: notes/notes_4.md
+            text: "Notes 04 🟢"
+          - href: notes/notes_5.md
+            text: "Notes 05 🟢"
+          - href: notes/notes_6.md
+            text: "Notes 06 🟢"
+          - href: notes/notes_7.md
+            text: "Notes 07 🐍"
+          - href: notes/notes_8.md
+            text: "Notes 08 📊"
+          - href: notes/notes_9.md
+            text: "Notes 09 🌐"
+          - href: notes/notes_10.md
+            text: "Notes 10 🐍"
+          - href: notes/notes_11.md
+            text: "Notes 11 👋"
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
