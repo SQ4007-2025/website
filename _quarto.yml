@@ -76,25 +76,25 @@ website:
             text: "Week 10 🐍"
       - section: "Homework"
         contents:
-          - href: homework/hw_1.qmd
+          - href: homework/hw_1.md
             text: "Week 01 🐈"
-          - href: homework/hw_2.qmd
+          - href: homework/hw_2.md
             text: "Week 02 🟢"
-          - href: homework/hw_3.qmd
+          - href: homework/hw_3.md
             text: "Week 03 🟢"
-          - href: homework/hw_4.qmd
+          - href: homework/hw_4.md
             text: "Week 04 🟢"
-          - href: homework/hw_5.qmd
+          - href: homework/hw_5.md
             text: "Week 05 🟢"
-          - href: homework/hw_6.qmd
-            text: "Week 05 🟢"
-          - href: homework/hw_7.qmd
+          - href: homework/hw_6.md
+            text: "Week 05 ��"
+          - href: homework/hw_7.md
             text: "Week 06 🐍"
-          - href: homework/hw_8.qmd
+          - href: homework/hw_8.md
             text: "Week 08 📊"
-          - href: homework/hw_9.qmd
+          - href: homework/hw_9.md
             text: "Week 09 🌐"
-          - href: homework/hw_10.qmd
+          - href: homework/hw_10.md
             text: "Week 10 🐍"
           
 
