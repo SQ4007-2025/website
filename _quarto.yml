@@ -127,45 +127,45 @@ website:
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
-            text: "Week 02 🟢"
+            text: "Tutorials 02 🟢"
           - href: tutorials/tutorial-week-3.qmd
-            text: "Week 03 🟢"
+            text: "Tutorials 03 🟢"
           - href: tutorials/tutorial-week-4.qmd
-            text: "Week 04 🟢"
+            text: "Tutorials 04 🟢"
           - href: tutorials/tutorial-week-5.qmd
-            text: "Week 05 🟢"
+            text: "Tutorials 05 🟢"
           - href: tutorials/tutorial-week-6.qmd
-            text: "Week 06 🟢"
+            text: "Tutorials 06 🟢"
           - href: tutorials/tutorial-week-7.qmd
-            text: "Week 07 🐍"
+            text: "Tutorials 07 🐍"
           - href: tutorials/tutorial-week-8.qmd
-            text: "Week 08 📊"
+            text: "Tutorials 08 📊"
           - href: tutorials/tutorial-week-9.qmd
-            text: "Week 09 🌐"
+            text: "Tutorials 09 🌐"
           - href: tutorials/tutorial-week-10.qmd
-            text: "Week 10 🐍"
+            text: "Tutorials 10 🐍"
       - section: "Homework"
         contents:
           - href: homework/hw_1.md
-            text: "Week 01 🐈"
+            text: "Homework 01 🐈"
           - href: homework/hw_2.md
-            text: "Week 02 🟢"
+            text: "Homework 02 🟢"
           - href: homework/hw_3.md
-            text: "Week 03 🟢"
+            text: "Homework 03 🟢"
           - href: homework/hw_4.md
-            text: "Week 04 🟢"
+            text: "Homework 04 🟢"
           - href: homework/hw_5.md
-            text: "Week 05 🟢"
+            text: "Homework 05 🟢"
           - href: homework/hw_6.md
-            text: "Week 05 🟢"
+            text: "Homework 06 🟢"
           - href: homework/hw_7.md
-            text: "Week 06 🐍"
+            text: "Homework 07 🐍"
           - href: homework/hw_8.md
-            text: "Week 08 📊"
+            text: "Homework 08 📊"
           - href: homework/hw_9.md
-            text: "Week 09 🌐"
+            text: "Homework 09 🌐"
           - href: homework/hw_10.md
-            text: "Week 10 🐍"
+            text: "Homework 10 🐍"
           
 
 format:
