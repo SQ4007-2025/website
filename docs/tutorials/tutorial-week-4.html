@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.7.30" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Tutorials week 4 – Computing Technology</title>
@@ -24,7 +22,30 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../tutorials/tutorial-week-5.html" rel="next">
+<link href="../tutorials/tutorial-week-3.html" rel="prev">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e9f3ba5fbee03b112b18b9666ab66a2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -54,307 +75,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<meta property="og:title" content="Tutorials week 4 – Computing Technology">
+<meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta property="og:site_name" content="Computing Technology">
+<meta name="twitter:title" content="Tutorials week 4 – Computing Technology">
+<meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta name="twitter:image" content="https://SQ4007-2025.github.io/website/tutorials/images/twitter-card.png">
+<meta name="twitter:creator" content="@EdHarris9000">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body>
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn"
-      data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" role="link"
-        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-        onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="/index.html" class="sidebar-logo-link">
-      <img src="/images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"/>
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/weharris"  title="Course GitHub repo" class="quarto-navigation-tool px-1" aria-label="Course GitHub repo"><i class="bi bi-github"></i></a>
-    <a href="https://youtube.com/@TheStatisticsLab"  title="YouTube" class="quarto-navigation-tool px-1" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-    <a href="https://discord.gg/dnNTE6xhhu"  title="Join our Discord" class="quarto-navigation-tool px-1" aria-label="Join our Discord"><i class="bi bi-discord"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome!</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/module-schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schedule</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/module-syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/module-links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Useful links</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/module-faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FAQ</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1"  role="navigation" aria-expanded="false">
- <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_1.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 01 🐈</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_2.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 02 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_3.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 03 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_4.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 04 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_5.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 05 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_6.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 06 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_7.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 07 🐍</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_8.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 08 📊</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_9.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 09 🌐</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_10.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 10 🐍</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/lectures/slides_11.pptx" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 11 👋</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2"  role="navigation" aria-expanded="true">
- <span class="menu-text">Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 02 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 03 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Week 04 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 05 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 06 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 07 🐍</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 08 📊</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 09 🌐</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/tutorials/tutorial-week-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 10 🐍</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3"  role="navigation" aria-expanded="false">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 01 🐈</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 02 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 03 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 04 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 05 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 05 🟢</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 06 🐍</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 08 📊</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 09 🌐</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/homework/hw_10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 10 🐍</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" ></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-<script id = "quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -518,7 +249,300 @@ ul.task-list li input[type="checkbox"] {
     }
   </script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/tutorial-week-2.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-week-4.html">Week 04 🟢</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/weharris" title="Course GitHub repo" class="quarto-navigation-tool px-1" aria-label="Course GitHub repo"><i class="bi bi-github"></i></a>
+    <a href="https://youtube.com/@TheStatisticsLab" title="YouTube" class="quarto-navigation-tool px-1" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://discord.gg/dnNTE6xhhu" title="Join our Discord" class="quarto-navigation-tool px-1" aria-label="Join our Discord"><i class="bi bi-discord"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful links</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_1.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 01 🐈</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_2.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_3.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_4.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_5.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_6.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_7.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_8.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_9.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_10.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 10 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_11.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 11 👋</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 01 🐈</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/tutorial-week-2.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/tutorial-week-4.html">Week 04 🟢</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Tutorials week 4</h1>
 </div>
@@ -544,24 +568,11 @@ ul.task-list li input[type="checkbox"] {
 <p>▶ 👨‍🏫 <a href="https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pptx">Merge sort</a></p>
 <p>▶ 👨‍🏫 <a href="https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pptx">Recursion</a></p>
 <p>▶ 👨‍🏫 <a href="https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.selection_sort.pptx">Selection sort</a></p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">Computing Technology</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Computing Technology</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0">Week 05 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">Week 03 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sV2VsY29tZSE=">Welcome!</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tb2R1bGUtc2NoZWR1bGUuaHRtbFNjaGVkdWxl">Schedule</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tb2R1bGUtc3lsbGFidXMuaHRtbFN5bGxhYnVz">Syllabus</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tb2R1bGUtbGlua3MuaHRtbFVzZWZ1bC1saW5rcw==">Useful links</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tb2R1bGUtZmFxLmh0bWxGQVE=">FAQ</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Lectures</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfMS5wcHR4TGVjdHVyZS0wMS3wn5CI">Lecture 01 🐈</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfMi5wcHR4TGVjdHVyZS0wMi3wn5+i">Lecture 02 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfMy5wcHR4TGVjdHVyZS0wMy3wn5+i">Lecture 03 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfNC5wcHR4TGVjdHVyZS0wNC3wn5+i">Lecture 04 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfNS5wcHR4TGVjdHVyZS0wNS3wn5+i">Lecture 05 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfNi5wcHR4TGVjdHVyZS0wNi3wn5+i">Lecture 06 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfNy5wcHR4TGVjdHVyZS0wNy3wn5CN">Lecture 07 🐍</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfOC5wcHR4TGVjdHVyZS0wOC3wn5OK">Lecture 08 📊</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfOS5wcHR4TGVjdHVyZS0wOS3wn4yQ">Lecture 09 🌐</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfMTAucHB0eExlY3R1cmUtMTAt8J+QjQ==">Lecture 10 🐍</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9sZWN0dXJlcy9zbGlkZXNfMTEucHB0eExlY3R1cmUtMTEt8J+Riw==">Lecture 11 👋</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Tutorials</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay0yLmh0bWxXZWVrLTAyLfCfn6I=">Week 02 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay0zLmh0bWxXZWVrLTAzLfCfn6I=">Week 03 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay00Lmh0bWxXZWVrLTA0LfCfn6I=">Week 04 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay01Lmh0bWxXZWVrLTA1LfCfn6I=">Week 05 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay02Lmh0bWxXZWVrLTA2LfCfn6I=">Week 06 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay03Lmh0bWxXZWVrLTA3LfCfkI0=">Week 07 🐍</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay04Lmh0bWxXZWVrLTA4LfCfk4o=">Week 08 📊</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay05Lmh0bWxXZWVrLTA5LfCfjJA=">Week 09 🌐</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90dXRvcmlhbHMvdHV0b3JpYWwtd2Vlay0xMC5odG1sV2Vlay0xMC3wn5CN">Week 10 🐍</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Homework</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od18xLmh0bWxXZWVrLTAxLfCfkIg=">Week 01 🐈</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od18yLmh0bWxXZWVrLTAyLfCfn6I=">Week 02 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od18zLmh0bWxXZWVrLTAzLfCfn6I=">Week 03 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od180Lmh0bWxXZWVrLTA0LfCfn6I=">Week 04 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od181Lmh0bWxXZWVrLTA1LfCfn6I=">Week 05 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od182Lmh0bWxXZWVrLTA1LfCfn6I=">Week 05 🟢</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od183Lmh0bWxXZWVrLTA2LfCfkI0=">Week 06 🐍</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od184Lmh0bWxXZWVrLTA4LfCfk4o=">Week 08 📊</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od185Lmh0bWxXZWVrLTA5LfCfjJA=">Week 09 🌐</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ob21ld29yay9od18xMC5odG1sV2Vlay0xMC3wn5CN">Week 10 🐍</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLVR1dG9yaWFscw==">Tutorials</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLVdlZWstMDQt8J+fog==">Week 04 🟢</span></p>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLWxlZnQ=">
-<p>© 2025 🐊 <a href="https://weharris.me">W. Edwin Harris</a></p>
-</div>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLWNlbnRlcg==">
-<p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
-</div>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLXJpZ2h0">
-<p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Tutorials week 4 – Computing Technology</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Tutorials week 4 – Computing Technology</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Tutorials week 4 – Computing Technology</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">Computing Technology</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==">Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj">Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.</span></p>
-</div>
+
+
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -975,12 +986,12 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a  href="/tutorials/tutorial-week-3.html" class="pagination-link" aria-label="Week 03 🟢">
+      <a href="../tutorials/tutorial-week-3.html" class="pagination-link" aria-label="Week 03 🟢">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 03 🟢</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a  href="/tutorials/tutorial-week-5.html" class="pagination-link" aria-label="Week 05 🟢">
+      <a href="../tutorials/tutorial-week-5.html" class="pagination-link" aria-label="Week 05 🟢">
         <span class="nav-page-text">Week 05 🟢</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -989,17 +1000,18 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      <div class='footer-contents'>&copy; 2025 🐊 [W. Edwin Harris](https://weharris.me)</div>  
-    </div>   
+<p>© 2025 🐊 <a href="https://weharris.me">W. Edwin Harris</a></p>
+</div>   
     <div class="nav-footer-center">
-      <div class='footer-contents'>📊 [The Statistics Lab](https://thestatisticslab.com)</div>  
-    </div>
+<p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/tutorials/tutorial-week-4.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-      <div class='footer-contents'>🚀 Built with [Quarto](https://quarto.org/).</div>  
-    </div>
+<p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
 
-</body>
 
-</html>
+
+
+</body></html>
