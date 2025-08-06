@@ -4,10 +4,11 @@ title: "Homework week 1"
 
 ## What to do
 
-1. Download and install the latest version of [Chrome](https://www.google.com/chrome/), if you don’t have it already.
-2. Submit [Starting from Scratch](homework/hw_1/1.1_startting_from_scratch.html).
+Complete and submit [Starting from Scratch](homework/hw_1/1.1_startting_from_scratch.html).
 
 ## Advice
+
+If you have trouble running Scratch in your browser, use Chrome; consider downloading and installing the latest version of [Chrome](https://www.google.com/chrome/), if you don’t have it already.
 
 Here are [some examples](https://scratch.mit.edu/studios/30233348/) from lecture if you’d like to review! To see the source code of each, click **See inside**.
 
