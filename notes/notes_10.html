@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>notes_10 – Computing Technology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e9f3ba5fbee03b112b18b9666ab66a2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Computing Technology">
+<meta property="og:site_name" content="Computing Technology">
+<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:image" content="https://SQ4007-2025.github.io/website/notes/images/twitter-card.png">
+<meta name="twitter:creator" content="@EdHarris9000">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/weharris" title="Course GitHub repo" class="quarto-navigation-tool px-1" aria-label="Course GitHub repo"><i class="bi bi-github"></i></a>
+    <a href="https://youtube.com/@TheStatisticsLab" title="YouTube" class="quarto-navigation-tool px-1" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://discord.gg/dnNTE6xhhu" title="Join our Discord" class="quarto-navigation-tool px-1" aria-label="Join our Discord"><i class="bi bi-discord"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful links</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_1.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 01 🐈</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_2.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_3.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_4.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_5.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_6.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_7.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_8.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_9.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_10.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 10 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_11.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 11 👋</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 01 🐈</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lecture-10-notes" id="toc-lecture-10-notes" class="nav-link active" data-scroll-target="#lecture-10-notes">Lecture 10 Notes</a>
+  <ul class="collapse">
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#http-server" id="toc-http-server" class="nav-link" data-scroll-target="#http-server">http-server</a></li>
+  <li><a href="#flask" id="toc-flask" class="nav-link" data-scroll-target="#flask">Flask</a></li>
+  <li><a href="#forms" id="toc-forms" class="nav-link" data-scroll-target="#forms">Forms</a></li>
+  <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates">Templates</a></li>
+  <li><a href="#request-methods" id="toc-request-methods" class="nav-link" data-scroll-target="#request-methods">Request Methods</a></li>
+  <li><a href="#frosh-ims" id="toc-frosh-ims" class="nav-link" data-scroll-target="#frosh-ims">Frosh IMs</a></li>
+  <li><a href="#flask-and-sql" id="toc-flask-and-sql" class="nav-link" data-scroll-target="#flask-and-sql">Flask and SQL</a></li>
+  <li><a href="#cookies-and-session" id="toc-cookies-and-session" class="nav-link" data-scroll-target="#cookies-and-session">Cookies and Session</a></li>
+  <li><a href="#shopping-cart" id="toc-shopping-cart" class="nav-link" data-scroll-target="#shopping-cart">Shopping Cart</a></li>
+  <li><a href="#shows" id="toc-shows" class="nav-link" data-scroll-target="#shows">Shows</a></li>
+  <li><a href="#apis" id="toc-apis" class="nav-link" data-scroll-target="#apis">APIs</a></li>
+  <li><a href="#json" id="toc-json" class="nav-link" data-scroll-target="#json">JSON</a></li>
+  <li><a href="#summing-up" id="toc-summing-up" class="nav-link" data-scroll-target="#summing-up">Summing Up</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_10.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="lecture-10-notes" class="level1">
+<h1>Lecture 10 Notes</h1>
+<ul>
+<li><a href="#welcome">Welcome!</a></li>
+<li><a href="#http-server">http-server</a></li>
+<li><a href="#flask">Flask</a></li>
+<li><a href="#forms">Forms</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#request-methods">Request Methods</a></li>
+<li><a href="#frosh-ims">Frosh IMs</a></li>
+<li><a href="#flask-and-sql">Flask and SQL</a></li>
+<li><a href="#cookies-and-session">Cookies and Session</a></li>
+<li><a href="#shopping-cart">Shopping Cart</a></li>
+<li><a href="#shows">Shows</a></li>
+<li><a href="#apis">APIs</a></li>
+<li><a href="#json">JSON</a></li>
+<li><a href="#summing-up">Summing Up</a></li>
+</ul>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<ul>
+<li>In previous weeks, you have learned numerous programming languages, techniques, and strategies.</li>
+<li>Indeed, this class has been far less of a <em>C class</em> or <em>Python class</em> and far more of a <em>programming class</em>, such that you can go on to follow future trends.</li>
+<li>In these past several weeks, you have learned <em>how to learn</em> about programming.</li>
+<li>Today, we will be moving from HTML and CSS into combining HTML, CSS, SQL, Python, and JavaScript so you can create your own web applications.</li>
+<li>You might consider using the skills you learn this week to create your final project.</li>
+</ul>
+</section>
+<section id="http-server" class="level2">
+<h2 class="anchored" data-anchor-id="http-server">http-server</h2>
+<ul>
+<li><p>Up until this point, all HTML you saw was pre-written and static.</p></li>
+<li><p>In the past, when you visited a page, the browser downloaded an HTML page, and you were able to view it. These are considered <em>static</em> pages, in that what is programmed in the HTML is exactly what the user sees and downloads <em>client-side</em> to their internet browser.</p></li>
+<li><p>Dynamic pages refer to the ability of Python and similar languages to create HTML on-the-fly. Accordingly, you can have web pages that are generated <em>server-side</em> by code based upon the input or behavior of users.</p></li>
+<li><p>You have used <code>http-server</code> in the past to serve your web pages. Today, we are going to utilize a new server that can parse out a web address and perform actions based on the URL provided.</p></li>
+<li><p>Further, last week, you saw URLs as follows:</p>
+<pre><code>https://www.example.com/folder/file.html
+</code></pre>
+<p>Notice that <code>file.html</code> is an HTML file inside a folder called <code>folder</code> at <code>example.com</code>.</p></li>
+</ul>
+</section>
+<section id="flask" class="level2">
+<h2 class="anchored" data-anchor-id="flask">Flask</h2>
+<ul>
+<li><p>This week, we introduce the ability to engage with <em>routes</em> such as <code>https://www.example.com/route?key=value</code>, where specific functionality can be generated on the server via the keys and values provided in the URL.</p></li>
+<li><p><em>Flask</em> is a third-party library that allows you to host web applications using the Flask framework, or a micro-framework, within Python.</p></li>
+<li><p>You can run Flask by executing <code>flask run</code> in your terminal window in <a href="https://classroom.github.com/a/zT0wsGr1">The Sandbox)</a>.</p></li>
+<li><p>To do so, you will need a file called <code>app.py</code> and another called <code>requirements.txt</code>. <code>app.py</code> contains code the tells Flask how to run your web application. <code>requirements.txt</code> includes a list of the libraries that are required for your Flask application to run.</p></li>
+<li><p>Here is a sample of <code>requirements.txt</code>:</p>
+<pre><code>Flask
+</code></pre>
+<p>Notice only <code>Flask</code> appears in this file. This is because Flask is required to run the Flask application.</p></li>
+<li><p>Here is a very simple Flask application in <code>app.py</code>:</p>
+<pre><code># Says hello to world by returning a string of text
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return "hello, world"
+</code></pre>
+<p>Notice that the <code>/</code> route simply returns the text <code>hello, world</code>.</p></li>
+<li><p>We can also create code that implements HTML:</p>
+<pre><code># Says hello to world by returning a string of HTML
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return '&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;title&gt;hello&lt;/title&gt;&lt;/head&gt;&lt;body&gt;hello, world&lt;/body&gt;&lt;/html&gt;'
+</code></pre>
+<p>Notice that rather than returning simple text, this provides HTML.</p></li>
+<li><p>Improving our application, we can also serve HTML based upon templates by creating a folder called <code>templates</code> and creating a file called <code>index.html</code> with the following code within that folder:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;hello&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        hello, {{ name }}
+    &lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+<p>Notice the double <code>{ name }</code> that is a placeholder for something that will be later provided by our Flask server.</p></li>
+<li><p>Then, in the same folder that the <code>templates</code> folder appears, create a file called <code>app.py</code> and add the following code:</p>
+<pre><code># Uses request.args.get
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    name = request.args.get("name", "world")
+    return render_template("index.html", name=name)
+</code></pre>
+<p>Notice that this code defines <code>app</code> as the Flask application. Then, it defines the <code>/</code> route of <code>app</code> as returning the contents of <code>index.html</code> with the argument of <code>name</code>. By default, the <code>request.args.get</code> function will look for the <code>name</code> being provided by the user. If no name is provided, it will default to <code>world</code>. <code>@app.route</code> is otherwise known as a decorator.</p></li>
+<li><p>You can run this web application by typing <code>flask run</code> in the terminal window. If Flask does not run, ensure that your syntax is correct in each of the files above. Further, if Flask will not run, make sure your files are organized as follows:</p>
+<pre><code>/templates
+    index.html
+app.py
+requirements.txt
+</code></pre></li>
+<li><p>Once you get it running, you will be prompted to click a link. Once you navigate to that webpage, try adding <code>?name=[Your Name]</code> to the base URL in your browser’s URL bar.</p></li>
+</ul>
+</section>
+<section id="forms" class="level2">
+<h2 class="anchored" data-anchor-id="forms">Forms</h2>
+<ul>
+<li><p>Improving upon our program, we know that most users will not type arguments into the address bar. Instead, programmers rely upon users to fill out forms on web pages. Accordingly, we can modify <code>index.html</code> as follows:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;hello&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;form action="/greet" method="get"&gt;
+            &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+            &lt;button type="submit"&gt;Greet&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Notice that a form is now created that takes the user’s name and then passes it off to a route called <code>/greet</code>. <code>autocomplete</code> is turned off. Further, a <code>placeholder</code> with the text <code>name</code> is included. Further, notice how the <code>meta</code> tag is used to make the web page mobile-responsive.</p></li>
+<li><p>Further, we can change <code>app.py</code> as follows:</p>
+<pre><code># Adds a form, second route
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/greet")
+def greet():
+    return render_template("greet.html", name=request.args.get("name", "world"))
+</code></pre>
+<p>Notice that the default path will display a form for the user to input their name. The <code>/greet</code> route will pass the <code>name</code> to that web page.</p></li>
+<li><p>To finalize this implementation, you will need another template for <code>greet.html</code> in the <code>templates</code> folder as follows:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;hello&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        hello, {{ name }}
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Notice that this route will now render the greeting to the user, followed by their name.</p></li>
+</ul>
+</section>
+<section id="templates" class="level2">
+<h2 class="anchored" data-anchor-id="templates">Templates</h2>
+<ul>
+<li><p>Both of our web pages, <code>index.html</code> and <code>greet.html</code>, have much of the same data. Wouldn’t it be nice to allow the body to be unique but copy the same layout from page to page?</p></li>
+<li><p>First, create a new template called <code>layout.html</code> and write code as follows:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;hello&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        {% block body %}{% endblock %}
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Notice that the <code>{% block body %}{% endblock %}</code> allows for the insertion of other code from other HTML files.</p></li>
+<li><p>Then, modify your <code>index.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+
+    &lt;form action="/greet" method="get"&gt;
+        &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+        &lt;button type="submit"&gt;Greet&lt;/button&gt;
+    &lt;/form&gt;
+
+{% endblock %}
+</code></pre>
+<p>Notice that the line <code>{% extends "layout.html" %}</code> tells the server where to get the layout of this page. Then, the <code>{% block body %}{% endblock %}</code> tells what code to be inserted into <code>layout.html</code>.</p></li>
+<li><p>Finally, change <code>greet.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    hello, {{ name }}
+{% endblock %}
+</code></pre>
+<p>Notice how this code is shorter and more compact.</p></li>
+</ul>
+</section>
+<section id="request-methods" class="level2">
+<h2 class="anchored" data-anchor-id="request-methods">Request Methods</h2>
+<ul>
+<li><p>You can imagine scenarios where it is not safe to utilize <code>get</code>, as usernames and passwords would show up in the URL.</p></li>
+<li><p>We can utilize the method <code>post</code> to help with this problem by modifying <code>app.py</code> as follows:</p>
+<pre><code># Switches to POST
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/greet", methods=["POST"])
+def greet():
+    return render_template("greet.html", name=request.form.get("name", "world"))
+</code></pre>
+<p>Notice that <code>POST</code> is added to the <code>/greet</code> route, and that we use <code>request.form.get</code> rather than <code>request.args.get</code>.</p></li>
+<li><p>This tells the server to look <em>deeper</em> into the virtual envelope and not reveal the items in <code>post</code> in the URL.</p></li>
+<li><p>Still, this code can be advanced further by utilizing a single route for both <code>get</code> and <code>post</code>. To do this, modify <code>app.py</code> as follows:</p>
+<pre><code># Uses a single route
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        return render_template("greet.html", name=request.form.get("name", "world"))
+    return render_template("index.html")
+</code></pre>
+<p>Notice that both <code>get</code> and <code>post</code> are done in a single routing. However, <code>request.method</code> is utilized to properly route based on the type of routing requested by the user.</p></li>
+<li><p>Accordingly, you can modify your <code>index.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+
+    &lt;form action="/" method="post"&gt;
+        &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+        &lt;button type="submit"&gt;Greet&lt;/button&gt;
+    &lt;/form&gt;
+
+{% endblock %}
+</code></pre>
+<p>Notice that the form <code>action</code> is changed.</p></li>
+<li><p>Still, there is a bug still in this code. With our new implementation, when someone types in no name into the form, <code>Hello,</code> is displayed without a name. We can improve our code by editing <code>app.py</code> as follows:</p>
+<pre><code># Moves default value to template
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        return render_template("greet.html", name=request.form.get("name"))
+    return render_template("index.html")
+</code></pre>
+<p>Notice that <code>name=request.form.get("name"))</code> is changed.</p></li>
+<li><p>Finally, change <code>greet.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+
+    hello,
+    {% if name %}
+        {{ name }}
+    {% else %}
+        world
+    {% endif %}
+
+{% endblock %}
+</code></pre>
+<p>Notice how <code>hello, {{ name }}</code> is changed to allow for a default output when no name is identified.</p></li>
+<li><p>As we’ve been changing many files, you may wish to compare your final code with <a href="https://raw.githubusercontent.com/SQ4007-2025/website/master/code/src10/hello10/app.py">our final code</a>.</p></li>
+</ul>
+</section>
+<section id="frosh-ims" class="level2">
+<h2 class="anchored" data-anchor-id="frosh-ims">Frosh IMs</h2>
+<ul>
+<li><p>Frosh IMs or <em>froshims</em> is a web application that allows students to register for intramural sports.</p></li>
+<li><p>Close all your <code>hello</code> related windows and create a folder by typing <code>mkdir froshims</code> in the terminal window. Then, type <code>cd froshims</code> to browse to this folder. Within, create a directory called templates by typing <code>mkdir templates</code>.</p></li>
+<li><p>Next, in the <code>froshims</code> folder, type <code>code requirements.txt</code> and code as follows:</p>
+<pre><code>Flask
+</code></pre>
+<p>As before, Flask is required to run a Flask application.</p></li>
+<li><p>Finally, type <code>code app.py</code> and write code as follows:</p>
+<pre><code># Implements a registration form using a select menu, validating sport server-side
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+SPORTS = [
+    "Basketball",
+    "Soccer",
+    "Ultimate Frisbee"
+]
+
+
+@app.route("/")
+def index():
+    return render_template("index.html", sports=SPORTS)
+
+
+@app.route("/register", methods=["POST"])
+def register():
+
+    # Validate submission
+    if not request.form.get("name") or request.form.get("sport") not in SPORTS:
+        return render_template("failure.html")
+
+    # Confirm registration
+    return render_template("success.html")
+</code></pre>
+<p>Notice that a <code>failure</code> option is provided, such that a failure message will be displayed to the user if the <code>name</code> or <code>sport</code> field is not properly filled out.</p></li>
+<li><p>Next, create a file in the <code>templates</code> folder called <code>index.html</code> by typing <code>code templates/index.html</code> and write code as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Register&lt;/h1&gt;
+    &lt;form action="/register" method="post"&gt;
+        &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+        &lt;select name="sport"&gt;
+            &lt;option disabled selected value=""&gt;Sport&lt;/option&gt;
+            {% for sport in sports %}
+                &lt;option value="{{ sport }}"&gt;{{ sport }}&lt;/option&gt;
+            {% endfor %}
+        &lt;/select&gt;
+        &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;/form&gt;
+{% endblock %}
+</code></pre></li>
+<li><p>Next, create a file called <code>layout.html</code> by typing <code>code templates/layout.html</code> and write code as follows:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;froshims&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        {% block body %}{% endblock %}
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre></li>
+<li><p>Fourth, create a file in templates called <code>success.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    You are registered!
+{% endblock %}
+</code></pre></li>
+<li><p>Finally, create a file in templates called <code>failure.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    You are not registered!
+{% endblock %}
+</code></pre></li>
+<li><p>Execute <code>flask run</code> and check out the application at this stage.</p></li>
+<li><p>You can imagine how we might want to see the various registration options using radio buttons. We can improve <code>index.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Register&lt;/h1&gt;
+    &lt;form action="/register" method="post"&gt;
+        &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+        {% for sport in sports %}
+            &lt;input name="sport" type="radio" value="{{ sport }}"&gt; {{ sport }}
+        {% endfor %}
+        &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;/form&gt;
+{% endblock %}
+</code></pre>
+<p>Notice how <code>type</code> has been changed to <code>radio</code>.</p></li>
+<li><p>Again, executing <code>flask run</code> you can see how the interface has now changed.</p></li>
+<li><p>You can imagine how we might want to accept the registration of many different registrants. We can improve <code>app.py</code> as follows:</p>
+<pre><code># Implements a registration form, storing registrants in a dictionary, with error messages
+
+from flask import Flask, redirect, render_template, request
+
+app = Flask(__name__)
+
+REGISTRANTS = {}
+
+SPORTS = [
+    "Basketball",
+    "Soccer",
+    "Ultimate Frisbee"
+]
+
+
+@app.route("/")
+def index():
+    return render_template("index.html", sports=SPORTS)
+
+
+@app.route("/register", methods=["POST"])
+def register():
+
+    # Validate name
+    name = request.form.get("name")
+    if not name:
+        return render_template("error.html", message="Missing name")
+
+    # Validate sport
+    sport = request.form.get("sport")
+    if not sport:
+        return render_template("error.html", message="Missing sport")
+    if sport not in SPORTS:
+        return render_template("error.html", message="Invalid sport")
+
+    # Remember registrant
+    REGISTRANTS[name] = sport
+
+    # Confirm registration
+    return redirect("/registrants")
+
+
+@app.route("/registrants")
+def registrants():
+    return render_template("registrants.html", registrants=REGISTRANTS)
+</code></pre>
+<p>Notice that a dictionary called <code>REGISTRANTS</code> is used to log the <code>sport</code> selected by <code>REGISTRANTS[name]</code>. Also, notice that <code>registrants=REGISTRANTS</code> passes the dictionary on to this template.</p></li>
+<li><p>Additionally, we can implement <code>error.html</code>:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Error&lt;/h1&gt;
+    &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;img alt="Grumpy Cat" src="/static/cat.jpg"&gt;
+{% endblock %}
+</code></pre></li>
+<li><p>Further, create a new template called <code>registrants.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Registrants&lt;/h1&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Sport&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            {% for name in registrants %}
+                &lt;tr&gt;
+                    &lt;td&gt;{{ name }}&lt;/td&gt;
+                    &lt;td&gt;{{ registrants[name] }}&lt;/td&gt;
+                &lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+{% endblock %}
+</code></pre>
+<p>Notice that <code>{% for name in registrants %}...{% endfor %}</code> will iterate through each of the registrants. Very powerful to be able to iterate on a dynamic web page!</p></li>
+<li><p>Finally, create a folder called <code>static</code> in the same folder as <code>app.py</code>. There, upload the following file of a <a href="https://cdn.cs50.net/2024/fall/lectures/9/src9/froshims4/static/cat.jpg">cat</a>.</p></li>
+<li><p>Execute <code>flask run</code> and play with the application.</p></li>
+<li><p>You now have a web application! However, there are some security flaws! Because everything is client-side, an adversary could change the HTML and <em>hack</em> a website. Further, this data will not persist if the server is shut down. Could there be some way we could have our data persist even when the server restarts?</p></li>
+</ul>
+</section>
+<section id="flask-and-sql" class="level2">
+<h2 class="anchored" data-anchor-id="flask-and-sql">Flask and SQL</h2>
+<ul>
+<li><p>Just as we have seen how Python can interface with a SQL database, we can combine the power of Flask, Python, and SQL to create a web application where data will persist!</p></li>
+<li><p>To implement this, you will need to take a number of steps.</p></li>
+<li><p>First, download the following <a href="https://raw.githubusercontent.com/SQ4007-2025/website/master/data/froshims.db">SQL database</a> (right click, save as…) into your <code>froshims</code> folder.</p></li>
+<li><p>Execute in the terminal <code>sqlite3 froshims.db</code> and type <code>.schema</code> to see the contents of the database file. Further type <code>SELECT * FROM registrants;</code> to learn about the contents. You’ll notice that there are currently no registrations in the file.</p></li>
+<li><p>Next, modify <code>requirements.txt</code> as follows:</p>
+<pre><code>cs50
+Flask
+</code></pre></li>
+<li><p>Modify <code>index.html</code> as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Register&lt;/h1&gt;
+    &lt;form action="/register" method="post"&gt;
+        &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+        {% for sport in sports %}
+            &lt;input name="sport" type="checkbox" value="{{ sport }}"&gt; {{ sport }}
+        {% endfor %}
+        &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;/form&gt;
+{% endblock %}
+</code></pre></li>
+<li><p>Modify <code>layout.html</code> as follows:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;froshims&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        {% block body %}{% endblock %}
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre></li>
+<li><p>Ensure <code>error.html</code> appears as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Error&lt;/h1&gt;
+    &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;img alt="Grumpy Cat" src="/static/cat.jpg"&gt;
+{% endblock %}
+</code></pre></li>
+<li><p>Modify <code>registrants.html</code> to appear as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+    &lt;h1&gt;Registrants&lt;/h1&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Sport&lt;/th&gt;
+                &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            {% for registrant in registrants %}
+                &lt;tr&gt;
+                    &lt;td&gt;{{ registrant.name }}&lt;/td&gt;
+                    &lt;td&gt;{{ registrant.sport }}&lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;form action="/deregister" method="post"&gt;
+                            &lt;input name="id" type="hidden" value="{{ registrant.id }}"&gt;
+                            &lt;button type="submit"&gt;Deregister&lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+{% endblock %}
+</code></pre>
+<p>Notice that a hidden value <code>registrant.id</code> is included such that it’s possible to use this <code>id</code> later in <code>app.py</code></p></li>
+<li><p>Finally, modify <code>app.py</code> as follows:</p>
+<pre><code># Implements a registration form, storing registrants in a SQLite database, with support for deregistration
+
+from cs50 import SQL
+from flask import Flask, redirect, render_template, request
+
+app = Flask(__name__)
+
+db = SQL("sqlite:///froshims.db")
+
+SPORTS = [
+    "Basketball",
+    "Soccer",
+    "Ultimate Frisbee"
+]
+
+
+@app.route("/")
+def index():
+    return render_template("index.html", sports=SPORTS)
+
+
+@app.route("/deregister", methods=["POST"])
+def deregister():
+
+    # Forget registrant
+    id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM registrants WHERE id = ?", id)
+    return redirect("/registrants")
+
+
+@app.route("/register", methods=["POST"])
+def register():
+
+    # Validate name
+    name = request.form.get("name")
+    if not name:
+        return render_template("error.html", message="Missing name")
+
+    # Validate sports
+    sports = request.form.getlist("sport")
+    if not sports:
+        return render_template("error.html", message="Missing sport")
+    for sport in sports:
+        if sport not in SPORTS:
+            return render_template("error.html", message="Invalid sport")
+
+    # Remember registrant
+    for sport in sports:
+        db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport)
+
+    # Confirm registration
+    return redirect("/registrants")
+
+
+@app.route("/registrants")
+def registrants():
+    registrants = db.execute("SELECT * FROM registrants")
+    return render_template("registrants.html", registrants=registrants)
+</code></pre>
+<p>Notice that the <code>cs50</code> library is utilized. A route is included for <code>register</code> for the <code>post</code> method. This route will take the name and sport taken from the registration form and execute a SQL query to add the <code>name</code> and the <code>sport</code> to the <code>registrants</code> table. The <code>deregister</code> routes to a SQL query that will grab the user’s <code>id</code> and utilize that information to deregister this individual.</p></li>
+<li><p>You can execute <code>flask run</code> and examine the result.</p></li>
+<li><p>If you want to download our implementation of <code>froshims</code> you can do so <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/froshims5">here</a>.</p></li>
+<li><p>You can read more about Flask in the <a href="https://flask.palletsprojects.com">Flask documentation</a>.</p></li>
+</ul>
+</section>
+<section id="cookies-and-session" class="level2">
+<h2 class="anchored" data-anchor-id="cookies-and-session">Cookies and Session</h2>
+<ul>
+<li><p><code>app.py</code> is considered a <em>controller</em>. A <em>view</em> is considered what the users see. A <em>model</em> is how data is stored and manipulated. Together, this is referred to as <em>MVC</em> (model, view, controller).</p></li>
+<li><p>While the prior implementation of <code>froshims</code> is useful from an administrative standpoint, where a back-office administrator could add and remove individuals from the database, one can imagine how this code is not safe to implement on a public server.</p></li>
+<li><p>For one, bad actors could make decisions on behalf of other users by hitting the deregister button – effectively deleting their recorded answer from the server.</p></li>
+<li><p>Web services like Google use login credentials to ensure users only have access to the right data.</p></li>
+<li><p>We can actually implement this itself using <em>cookies</em>. Cookies are small files that are stored on your computer such that your computer can communicate with the server and effectively say, “I’m an authorized user that has already logged in.” This authorization through this cookie is called a <em>session</em>.</p></li>
+<li><p>Cookies may be stored as follows:</p>
+<pre><code>GET / HTTP/2
+Host: accounts.google.com
+Cookie: session=value
+</code></pre>
+<p>Here, a <code>session</code> id is stored with a particular <code>value</code> representing that session.</p></li>
+<li><p>In the simplest form, we can implement this by creating a folder called <code>login</code> and then adding the following files.</p></li>
+<li><p>First, create a file called <code>requirements.txt</code> that reads as follows:</p>
+<pre><code>Flask
+Flask-Session
+</code></pre>
+<p>Notice that in addition to <code>Flask</code>, we also include <code>Flask-Session</code>, which is required to support login sessions.</p></li>
+<li><p>Second, in a <code>templates</code> folder, create a file called <code>layout.html</code> that appears as follows:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;login&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        {% block body %}{% endblock %}
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Notice this provides a very simple layout with a title and a body.</p></li>
+<li><p>Third, create a file in the <code>templates</code> folder called <code>index.html</code> that appears as follows:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+
+    {% if name %}
+        You are logged in as {{ name }}. &lt;a href="/logout"&gt;Log out&lt;/a&gt;.
+    {% else %}
+        You are not logged in. &lt;a href="/login"&gt;Log in&lt;/a&gt;.
+    {% endif %}
+
+{% endblock %}
+</code></pre>
+<p>Notice that this file looks to see if <code>session["name"]</code> exists (elaborated further in <code>app.py</code> below). If it does, it will display a welcome message. If not, it will recommend you browse to a page to log in.</p></li>
+<li><p>Fourth, create a file called <code>login.html</code> and add the following code:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+
+    &lt;form action="/login" method="post"&gt;
+        &lt;input autocomplete="off" autofocus name="name" placeholder="Name" type="text"&gt;
+        &lt;button type="submit"&gt;Log In&lt;/button&gt;
+    &lt;/form&gt;
+
+{% endblock %}
+</code></pre>
+<p>Notice this is the layout of a basic login page.</p></li>
+<li><p>Finally, create a file called <code>app.py</code> and write code as follows:</p>
+<pre><code>from flask import Flask, redirect, render_template, request, session
+from flask_session import Session
+
+# Configure app
+app = Flask(__name__)
+
+# Configure session
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+
+@app.route("/")
+def index():
+    return render_template("index.html", name=session.get("name"))
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        session["name"] = request.form.get("name")
+        return redirect("/")
+    return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
+</code></pre>
+<p>Notice the modified <em>imports</em> at the top of the file, including <code>session</code>, which will allow you to support sessions. Most importantly, notice how <code>session["name"]</code> is used in the <code>login</code> and <code>logout</code> routes. The <code>login</code> route will assign the login name provided and assign it to <code>session["name"]</code>. However, in the <code>logout</code> route, the logging out is implemented by clearing the value of <code>session</code>.</p></li>
+<li><p>The <code>session</code> abstraction allows you to ensure only a specific user has access to specific data and features in our application. It allows you to ensure that no one acts on behalf of another user, for good or bad!</p></li>
+<li><p>If you wish, you can download <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/login">our implementation</a> of <code>login</code>.</p></li>
+<li><p>You can read more about sessions in the <a href="https://flask.palletsprojects.com/en/stable/api/#flask.session">Flask documentation</a>.</p></li>
+</ul>
+</section>
+<section id="shopping-cart" class="level2">
+<h2 class="anchored" data-anchor-id="shopping-cart">Shopping Cart</h2>
+<ul>
+<li><p>Moving on to a final example of utilizing Flask’s ability to enable a session.</p></li>
+<li><p>We examined the following code for <code>store</code> in <code>app.py</code>. The following code was shown:</p>
+<pre><code>from cs50 import SQL
+from flask import Flask, redirect, render_template, request, session
+from flask_session import Session
+
+# Configure app
+app = Flask(__name__)
+
+# Connect to database
+db = SQL("sqlite:///store.db")
+
+# Configure session
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+
+@app.route("/")
+def index():
+    books = db.execute("SELECT * FROM books")
+    return render_template("books.html", books=books)
+
+
+@app.route("/cart", methods=["GET", "POST"])
+def cart():
+
+    # Ensure cart exists
+    if "cart" not in session:
+        session["cart"] = []
+
+    # POST
+    if request.method == "POST":
+        book_id = request.form.get("id")
+        if book_id:
+            session["cart"].append(book_id)
+        return redirect("/cart")
+
+    # GET
+    books = db.execute("SELECT * FROM books WHERE id IN (?)", session["cart"])
+    return render_template("cart.html", books=books)
+</code></pre>
+<p>Notice that <code>cart</code> is implemented using a list. Items can be added to this list using the <code>Add to Cart</code> buttons in <code>books.html</code>. When clicking such a button, the <code>post</code> method is invoked, where the <code>id</code> of the item is appended to the <code>cart</code>. When viewing the cart, invoking the <code>get</code> method, SQL is executed to display a list of the books in the cart.</p></li>
+<li><p>We also saw the contents of <code>books.html</code>:</p>
+<pre><code>{% extends "layout.html" %}
+
+{% block body %}
+
+    &lt;h1&gt;Books&lt;/h1&gt;
+    {% for book in books %}
+        &lt;h2&gt;{{ book["title"] }}&lt;/h2&gt;
+        &lt;form action="/cart" method="post"&gt;
+            &lt;input name="id" type="hidden" value="{{ book['id'] }}"&gt;
+            &lt;button type="submit"&gt;Add to Cart&lt;/button&gt;
+        &lt;/form&gt;
+    {% endfor %}
+
+{% endblock %}
+</code></pre>
+<p>Notice how this creates the ability to <code>Add to Cart</code> for each book using <code>for book in books</code>.</p></li>
+<li><p>You can see the rest of the files that power this <code>flask</code> implementation in the <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/store">source code</a>.</p></li>
+</ul>
+</section>
+<section id="shows" class="level2">
+<h2 class="anchored" data-anchor-id="shows">Shows</h2>
+<ul>
+<li><p>We looked at a pre-designed program called <code>shows</code>, in <code>app.py</code>:</p>
+<pre><code># Searches for shows using LIKE
+
+from cs50 import SQL
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+db = SQL("sqlite:///shows.db")
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/search")
+def search():
+    shows = db.execute("SELECT * FROM shows WHERE title LIKE ?", "%" + request.args.get("q") + "%")
+    return render_template("search.html", shows=shows)
+</code></pre>
+<p>Notice how the <code>search</code> route allows for a way by which to search for a <code>show</code>. This search looks for titles <code>LIKE</code> the one provided by the user.</p></li>
+<li><p>We also examined <code>index.html</code>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;shows&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;input autocomplete="off" autofocus placeholder="Query" type="text"&gt;
+
+        &lt;ul&gt;&lt;/ul&gt;
+
+        &lt;script&gt;
+            let input = document.querySelector('input');
+            input.addEventListener('input', async function() {
+                let response = await fetch('/search?q=' + input.value);
+                let shows = await response.json();
+                let html = '';
+                for (let id in shows) {
+                    let title = shows[id].title.replace('&lt;', '&amp;lt;').replace('&amp;', '&amp;amp;');
+                    html += '&lt;li&gt;' + title + '&lt;/li&gt;';
+                }
+                document.querySelector('ul').innerHTML = html;
+            });
+        &lt;/script&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Notice that the JavaScript <code>script</code> creates an implementation of autocomplete, where titles that match the <code>input</code> are displayed.</p></li>
+<li><p>You can see the rest of the files of this implementation in the <a href="https://github.com/SQ4007-2025/website/tree/master/code/src10/shows3">source code</a>.</p></li>
+</ul>
+</section>
+<section id="apis" class="level2">
+<h2 class="anchored" data-anchor-id="apis">APIs</h2>
+<ul>
+<li><p>An <em>application program interface</em> or <em>API</em> is a series of specifications that allow you to interface with another service. For example, we could utilize IMDB’s API to interface with their database. We might even integrate APIs for handling specific types of data downloadable from a server.</p></li>
+<li><p>Improving upon <code>shows</code>, looking at an improvement of <code>app.py</code>, we saw the following:</p>
+<pre><code># Searches for shows using Ajax
+
+from cs50 import SQL
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+db = SQL("sqlite:///shows.db")
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/search")
+def search():
+    q = request.args.get("q")
+    if q:
+        shows = db.execute("SELECT * FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
+    else:
+        shows = []
+    return render_template("search.html", shows=shows)
+</code></pre>
+<p>Notice that the <code>search</code> route executes a SQL query.</p></li>
+<li><p>Looking at <code>search.html</code>, you’ll notice that it is very simple:</p>
+<pre><code>{% for show in shows %}
+    &lt;li&gt;{{ show["title"] }}&lt;/li&gt;
+{% endfor %}
+</code></pre>
+<p>Notice that it provides a bulleted list.</p></li>
+<li><p>Finally, looking at <code>index.html</code>, notice that <em>AJAX</em> code is utilized to power the search:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;shows&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;input autocomplete="off" autofocus placeholder="Query" type="search"&gt;
+
+        &lt;ul&gt;&lt;/ul&gt;
+
+        &lt;script&gt;
+            let input = document.querySelector('input');
+            input.addEventListener('input', async function() {
+                let response = await fetch('/search?q=' + input.value);
+                let shows = await response.text();
+                document.querySelector('ul').innerHTML = shows;
+            });
+        &lt;/script&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Notice an event listener is utilized to dynamically query the server to provide a list that matches the title provided. This will locate the <code>ul</code> tag in the HTML and modify the web page accordingly to include the list of the matches.</p></li>
+<li><p>You can read more in the <a href="https://api.jquery.com/category/ajax/">AJAX documentation</a>.</p></li>
+</ul>
+</section>
+<section id="json" class="level2">
+<h2 class="anchored" data-anchor-id="json">JSON</h2>
+<ul>
+<li><p><em>JavaScript Object Notation</em> or <em>JSON</em> is a text file of dictionaries with keys and values. This is a raw, computer-friendly way to get lots of data.</p></li>
+<li><p>JSON is a very useful way of getting back data from the server.</p></li>
+<li><p>You can see this in action in the <code>index.html</code> we examined together:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+    &lt;head&gt;
+        &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt;
+        &lt;title&gt;shows&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;input autocomplete="off" autofocus placeholder="Query" type="text"&gt;
+
+        &lt;ul&gt;&lt;/ul&gt;
+
+        &lt;script&gt;
+            let input = document.querySelector('input');
+            input.addEventListener('input', async function() {
+                let response = await fetch('/search?q=' + input.value);
+                let shows = await response.json();
+                let html = '';
+                for (let id in shows) {
+                    let title = shows[id].title.replace('&lt;', '&amp;lt;').replace('&amp;', '&amp;amp;');
+                    html += '&lt;li&gt;' + title + '&lt;/li&gt;';
+                }
+                document.querySelector('ul').innerHTML = html;
+            });
+        &lt;/script&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>While the above may be somewhat cryptic, it provides a starting point for you to research JSON on your own to see how it can be implemented in your own web applications.</p></li>
+<li><p>Further, we examined <code>app.py</code> to see how the JSON response is obtained:</p>
+<pre><code># Searches for shows using Ajax with JSON
+
+from cs50 import SQL
+from flask import Flask, jsonify, render_template, request
+
+app = Flask(__name__)
+
+db = SQL("sqlite:///shows.db")
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/search")
+def search():
+    q = request.args.get("q")
+    if q:
+        shows = db.execute("SELECT * FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
+    else:
+        shows = []
+    return jsonify(shows)
+</code></pre>
+<p>Notice how <code>jsonify</code> is used to convert the result into a readable format acceptable by contemporary web applications.</p></li>
+<li><p>You can read more in the <a href="https://www.json.org/json-en.html">JSON documentation</a>.</p></li>
+<li><p>In summary, you now have the ability to complete your own web applications using Python, Flask, HTML, and SQL.</p></li>
+</ul>
+</section>
+<section id="summing-up" class="level2">
+<h2 class="anchored" data-anchor-id="summing-up">Summing Up</h2>
+<p>In this lesson, you learned how to utilize Python, SQL, and Flask to create web applications. Specifically, we discussed…</p>
+<ul>
+<li>Flask</li>
+<li>Forms</li>
+<li>Templates</li>
+<li>Request Methods</li>
+<li>Flask and SQL</li>
+<li>Cookies and Session</li>
+<li>APIs</li>
+<li>JSON</li>
+</ul>
+<p>See you next time for our final lecture for this term at <a href="https://websites.harvard.edu/memhall/home-2/buildings/sanders-theatre/">Sanders Theatre</a>!</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/SQ4007-2025\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 🐊 <a href="https://weharris.me">W. Edwin Harris</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_10.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

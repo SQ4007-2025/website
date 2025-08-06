@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>notes_6 – Computing Technology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e9f3ba5fbee03b112b18b9666ab66a2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-595e7a736fcf46aa1895a448280c433c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Computing Technology">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/notes/images/week_5/Week5Slide019.png">
+<meta property="og:site_name" content="Computing Technology">
+<meta property="og:image:height" content="540">
+<meta property="og:image:width" content="960">
+<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:image" content="https://SQ4007-2025.github.io/website/notes/images/twitter-card.png">
+<meta name="twitter:creator" content="@EdHarris9000">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/weharris" title="Course GitHub repo" class="quarto-navigation-tool px-1" aria-label="Course GitHub repo"><i class="bi bi-github"></i></a>
+    <a href="https://youtube.com/@TheStatisticsLab" title="YouTube" class="quarto-navigation-tool px-1" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://discord.gg/dnNTE6xhhu" title="Join our Discord" class="quarto-navigation-tool px-1" aria-label="Join our Discord"><i class="bi bi-discord"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful links</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../module-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_1.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 01 🐈</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_2.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_3.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_4.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_5.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_6.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_7.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_8.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_9.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_10.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 10 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/slides_11.pptx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 11 👋</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 07 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 01 🐈</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 02 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 03 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 04 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 05 🟢</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 06 🐍</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 08 📊</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 09 🌐</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/hw_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 🐍</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lecture-6-notes" id="toc-lecture-6-notes" class="nav-link active" data-scroll-target="#lecture-6-notes">Lecture 6 Notes</a>
+  <ul class="collapse">
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures">Data Structures</a></li>
+  <li><a href="#queues" id="toc-queues" class="nav-link" data-scroll-target="#queues">Queues</a></li>
+  <li><a href="#stacks" id="toc-stacks" class="nav-link" data-scroll-target="#stacks">Stacks</a></li>
+  <li><a href="#jack-learns-the-facts" id="toc-jack-learns-the-facts" class="nav-link" data-scroll-target="#jack-learns-the-facts">Jack Learns the Facts</a></li>
+  <li><a href="#resizing-arrays" id="toc-resizing-arrays" class="nav-link" data-scroll-target="#resizing-arrays">Resizing Arrays</a></li>
+  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays">Arrays</a></li>
+  <li><a href="#linked-lists" id="toc-linked-lists" class="nav-link" data-scroll-target="#linked-lists">Linked Lists</a></li>
+  <li><a href="#trees" id="toc-trees" class="nav-link" data-scroll-target="#trees">Trees</a></li>
+  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries">Dictionaries</a></li>
+  <li><a href="#hashing-and-hash-tables" id="toc-hashing-and-hash-tables" class="nav-link" data-scroll-target="#hashing-and-hash-tables">Hashing and Hash Tables</a></li>
+  <li><a href="#tries" id="toc-tries" class="nav-link" data-scroll-target="#tries">Tries</a></li>
+  <li><a href="#summing-up" id="toc-summing-up" class="nav-link" data-scroll-target="#summing-up">Summing Up</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_6.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="lecture-6-notes" class="level1">
+<h1>Lecture 6 Notes</h1>
+<ul>
+<li><a href="#welcome">Welcome!</a></li>
+<li><a href="#data-structures">Data Structures</a></li>
+<li><a href="#queues">Queues</a></li>
+<li><a href="#stacks">Stacks</a></li>
+<li><a href="#jack-learns-the-facts">Jack Learns the Facts</a></li>
+<li><a href="#resizing-arrays">Resizing Arrays</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#linked-lists">Linked Lists</a></li>
+<li><a href="#trees">Trees</a></li>
+<li><a href="#dictionaries">Dictionaries</a></li>
+<li><a href="#hashing-and-hash-tables">Hashing and Hash Tables</a></li>
+<li><a href="#tries">Tries</a></li>
+<li><a href="#summing-up">Summing Up</a></li>
+</ul>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<ul>
+<li>All the prior weeks have presented you with the fundamental building blocks of programming.</li>
+<li>All you have learned in C will enable you to implement these building blocks in higher-level programming languages such as Python.</li>
+<li>Each week, concepts have become more and more challenging, like a hill becoming more and more steep. This week, the challenge evens off as we explore data structures.</li>
+<li>To date, you have learned about how an array can organize data in memory.</li>
+<li>Today, we are going to talk about organizing data in memory and design possibilities that emerge from your growing knowledge.</li>
+</ul>
+</section>
+<section id="data-structures" class="level2">
+<h2 class="anchored" data-anchor-id="data-structures">Data Structures</h2>
+<ul>
+<li><em>Data structures</em> essentially are forms of organization in memory.</li>
+<li>There are many ways to organize data in memory.</li>
+<li><em>Abstract data types</em> are those that we can conceptually imagine. When learning about computer science, it’s often useful to begin with these conceptual data structures. Learning these will make it easier later to understand how to implement more concrete data structures.</li>
+</ul>
+</section>
+<section id="queues" class="level2">
+<h2 class="anchored" data-anchor-id="queues">Queues</h2>
+<ul>
+<li><p><em>Queues</em> are one form of abstract data structure.</p></li>
+<li><p>Queues have specific properties. Namely, they are <em>FIFO</em> or “first in first out.” You can imagine yourself in a line for a ride at an amusement park. The first person in the line gets to go on the ride first. The last person gets to go on the ride last.</p></li>
+<li><p>Queues have specific actions associated with them. For example, an item can be <em>enqueued</em>; that is, the item can join the line or queue. Further, an item can be <em>dequeued</em> or leave the queue once it reaches the front of the line.</p></li>
+<li><p>In code, you can imagine a queue as follows:</p>
+<pre><code>const int CAPACITY = 50;
+
+typedef struct
+{
+    person people[CAPACITY];
+    int size;
+}
+queue;
+</code></pre>
+<p>Notice that an array called people is of type <code>person</code>. The <code>CAPACITY</code> is how high the stack could be. The integer <code>size</code> is how full the queue actually is, regardless of how much it <em>can</em> hold.</p></li>
+</ul>
+</section>
+<section id="stacks" class="level2">
+<h2 class="anchored" data-anchor-id="stacks">Stacks</h2>
+<ul>
+<li><p>Queues contrast a <em>stack</em>. Fundamentally, the properties of a stack are different than those of a queue. Specifically, it is <em>LIFO</em> or “last in first out.” Just like stacking trays in a dining hall, a tray that is placed in a stack last is the first that may be picked up.</p></li>
+<li><p>Stacks have specific actions associated with them. For example, <em>push</em> places something on top of a stack. <em>Pop</em> is removing something from the top of the stack.</p></li>
+<li><p>In code, you might imagine a stack as follows:</p>
+<pre><code>const int CAPACITY = 50;
+
+typedef struct
+{
+    person people[CAPACITY];
+    int size;
+}
+stack;
+</code></pre>
+<p>Notice that an array called people is of type <code>person</code>. The <code>CAPACITY</code> is how high the stack could be. The integer <code>size</code> is how full the stack actually is, regardless of how much it <em>could</em> hold. Notice that this code is the same as the code from the queue.</p></li>
+<li><p>You might imagine that the above code has a limitation. Since the capacity of the array is always predetermined in this code. Therefore, the stack may always be oversized. You might imagine only using one place in the stack out of 5000.</p></li>
+<li><p>It would be nice for our stack to be dynamic – able to grow as items are added to it.</p></li>
+</ul>
+</section>
+<section id="jack-learns-the-facts" class="level2">
+<h2 class="anchored" data-anchor-id="jack-learns-the-facts">Jack Learns the Facts</h2>
+<ul>
+<li>We watched a video called <a href="https://www.youtube.com/watch?v=ItAG3s6KIEI">Jack Learns the Facts</a> by Professor Shannon Duvall of Elon University.</li>
+</ul>
+</section>
+<section id="resizing-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="resizing-arrays">Resizing Arrays</h2>
+<ul>
+<li><p>Rewinding to Week 2, we introduced you to your first data structure.</p></li>
+<li><p>An array is a block of contiguous memory.</p></li>
+<li><p>You might imagine an array as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide019.png" class="img-fluid figure-img"></p>
+<figcaption>three boxes with 1 2 3</figcaption>
+</figure>
+</div></li>
+<li><p>In memory, there are other values being stored by other programs, functions, and variables. Many of these may be unused garbage values that were utilized at one point but are available now for use.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide022.png" class="img-fluid figure-img"></p>
+<figcaption>three boxes with 1 2 3 among lots of other memory elements</figcaption>
+</figure>
+</div></li>
+<li><p>Imagine you wanted to store a fourth value <code>4</code> in our array. What would be needed is to allocate a new area of memory and move the old array to a new one? Initially, this new area of memory would be populated with garbage values.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide025.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 above four boxes with garbage values</figcaption>
+</figure>
+</div></li>
+<li><p>As values are added to this new area of memory, old garbage values would be overwritten.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide026.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 above four boxes with 1 2 3 and a garbage value</figcaption>
+</figure>
+</div></li>
+<li><p>Eventually, all old garbage values would be overwritten with our new data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide027.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 above four boxes with 1 2 3 4</figcaption>
+</figure>
+</div></li>
+<li><p>One of the drawbacks of this approach is that it’s bad design: Every time we add a number, we have to copy the array item by item.</p></li>
+</ul>
+</section>
+<section id="arrays" class="level2">
+<h2 class="anchored" data-anchor-id="arrays">Arrays</h2>
+<ul>
+<li><p>Wouldn’t it be nice if we were able to put the <code>4</code> somewhere else in memory? By definition, this would no longer be an array because <code>4</code> would no longer be in contiguous memory. How could we connect different locations in memory?</p></li>
+<li><p>In your terminal, type <code>code list.c</code> and write code as follows:</p>
+<pre><code>// Implements a list of numbers with an array of fixed size
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    // List of size 3
+    int list[3];
+
+    // Initialize list with numbers
+    list[0] = 1;
+    list[1] = 2;
+    list[2] = 3;
+
+    // Print list
+    for (int i = 0; i &lt; 3; i++)
+    {
+        printf("%i\n", list[i]);
+    }
+}
+</code></pre>
+<p>Notice that the above is very much like what we learned earlier in this course. Memory is preallocated for three items.</p></li>
+<li><p>Building upon our knowledge obtained more recently, we can leverage our understanding of pointers to create a better design in this code. Modify your code as follows:</p>
+<pre><code>// Implements a list of numbers with an array of dynamic size
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(void)
+{
+    // List of size 3
+    int *list = malloc(3 * sizeof(int));
+    if (list == NULL)
+    {
+        return 1;
+    }
+
+    // Initialize list of size 3 with numbers
+    list[0] = 1;
+    list[1] = 2;
+    list[2] = 3;
+
+    // List of size 4
+    int *tmp = malloc(4 * sizeof(int));
+    if (tmp == NULL)
+    {
+        free(list);
+        return 1;
+    }
+
+    // Copy list of size 3 into list of size 4
+    for (int i = 0; i &lt; 3; i++)
+    {
+        tmp[i] = list[i];
+    }
+
+    // Add number to list of size 4
+    tmp[3] = 4;
+
+    // Free list of size 3
+    free(list);
+
+    // Remember list of size 4
+    list = tmp;
+
+    // Print list
+    for (int i = 0; i &lt; 4; i++)
+    {
+        printf("%i\n", list[i]);
+    }
+
+    // Free list
+    free(list);
+    return 0;
+}
+</code></pre>
+<p>Notice that a list of size three integers is created. Then, three memory addresses can be assigned the values <code>1</code>, <code>2</code>, and <code>3</code>. Then, a list of size four is created. Next, the list is copied from the first to the second. The value for the <code>4</code> is added to the <code>tmp</code> list. Since the block of memory that <code>list</code> points to is no longer used, it is freed using the command <code>free(list)</code>. Finally, the compiler is told to point <code>list</code> pointer now to the block of memory that <code>tmp</code> points to. The contents of <code>list</code> are printed and then freed. Further, notice the inclusion of <code>stdlib.h</code>.</p></li>
+<li><p>It’s useful to think about <code>list</code> and <code>tmp</code> as both signs that point to a chunk of memory. As in the example above, <code>list</code> at one point <em>pointed</em> to an array of size 3. By the end, <code>list</code> was told to point to a chunk of memory of size 4. Technically, by the end of the above code, <code>tmp</code> and <code>list</code> both pointed to the same block of memory.</p></li>
+<li><p>One way by which we can copy the array without a for loop is by using <code>realloc</code>:</p>
+<pre><code>// Implements a list of numbers with an array of dynamic size using realloc
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(void)
+{
+    // List of size 3
+    int *list = malloc(3 * sizeof(int));
+    if (list == NULL)
+    {
+        return 1;
+    }
+
+    // Initialize list of size 3 with numbers
+    list[0] = 1;
+    list[1] = 2;
+    list[2] = 3;
+
+    // Resize list to be of size 4
+    int *tmp = realloc(list, 4 * sizeof(int));
+    if (tmp == NULL)
+    {
+        free(list);
+        return 1;
+    }
+    list = tmp;
+
+    // Add number to list
+    list[3] = 4;
+
+    // Print list
+    for (int i = 0; i &lt; 4; i++)
+    {
+        printf("%i\n", list[i]);
+    }
+
+    // Free list
+    free(list);
+    return 0;
+}
+</code></pre>
+<p>Notice that the list is reallocated to a new array via <code>realloc</code>.</p></li>
+<li><p>One may be tempted to allocate way more memory than required for the list, such as 30 items instead of the required 3 or 4. However, this is bad design as it taxes system resources when they are not potentially needed. Further, there is little guarantee that memory for more than 30 items will be needed eventually.</p></li>
+</ul>
+</section>
+<section id="linked-lists" class="level2">
+<h2 class="anchored" data-anchor-id="linked-lists">Linked Lists</h2>
+<ul>
+<li><p>In recent weeks, you have learned about three useful primitives. A <code>struct</code> is a data type that you can define yourself. A <code>.</code> in <em>dot notation</em> allows you to access variables inside that structure. The <code>*</code> operator is used to declare a pointer or dereference a variable.</p></li>
+<li><p>Today, you are introduced to the <code>-&gt;</code> operator. It is an arrow. This operator goes to an address and looks inside a structure.</p></li>
+<li><p>A <em>linked list</em> is one of the most powerful data structures within C. A linked list allows you to include values that are located in varying areas of memory. Further, they allow you to dynamically grow and shrink the list as you desire.</p></li>
+<li><p>You might imagine three values stored in three different areas of memory as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide036.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 in separate areas of memory</figcaption>
+</figure>
+</div></li>
+<li><p>How could one stitch together these values in a list?</p></li>
+<li><p>We could imagine the data pictured above as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide037.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached</figcaption>
+</figure>
+</div></li>
+<li><p>We could utilize more memory to keep track of where the next item using a pointer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide041.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached where memory addresses are in those attached boxes</figcaption>
+</figure>
+</div>
+<p>Notice that NULL is utilized to indicate that nothing else is <em>next</em> in the list.</p></li>
+<li><p>By convention, we would keep one more element in memory, a pointer, that keeps track of the first item in the list, called the <em>head</em> of the list.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide042.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with 1 2 3 in separate areas of memory with smaller boxes attached where memory addresses are in those attached boxes now with a final box with the memory address of the first box</figcaption>
+</figure>
+</div></li>
+<li><p>Abstracting away the memory addresses, the list would appear as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide043.png" class="img-fluid figure-img"></p>
+<figcaption>Three boxes with in separate areas of memory with smaller boxes with a final box where the one box points to another and another until the end of the boxes</figcaption>
+</figure>
+</div></li>
+<li><p>These boxes are called <em>nodes</em>. A <em>node</em> contains both an <em>item</em> and a pointer called <em>next</em>. In code, you can imagine a node as follows:</p>
+<pre><code>typedef struct node
+{
+    int number;
+    struct node *next;
+}
+node;
+</code></pre>
+<p>Notice that the item contained within this node is an integer called <code>number</code>. Second, a pointer to a node called <code>next</code> is included, which will point to another node somewhere in memory.</p></li>
+<li><p>We can recreate <code>list.c</code> to utilize a linked list:</p>
+<pre><code>// Start to build a linked list by prepending nodes
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+} node;
+
+int main(void)
+{
+    // Memory for numbers
+    node *list = NULL;
+
+    // Build list
+    for (int i = 0; i &lt; 3; i++)
+    {
+        // Allocate node for number
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return 1;
+        }
+        n-&gt;number = get_int("Number: ");
+        n-&gt;next = NULL;
+
+        // Prepend node to list
+        n-&gt;next = list;
+        list = n;
+    }
+    return 0;
+}
+</code></pre>
+<p>First, a <code>node</code> is defined as a <code>struct</code>. For each element of the list, memory for a <code>node</code> is allocated via <code>malloc</code> to the size of a node. <code>n-&gt;number</code> (or <code>n</code>’s number field) is assigned an integer. <code>n-&gt;next</code> (or <code>n</code>’s next field) is assigned <code>null</code>. Then, the node is placed at the start of the list at memory location <code>list</code>.</p></li>
+<li><p>Conceptually, we can imagine the process of creating a linked list. First, <code>node *list</code> is declared, but it is of a garbage value.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide055.png" class="img-fluid figure-img"></p>
+<figcaption>One garbage value</figcaption>
+</figure>
+</div></li>
+<li><p>Next, a node called <code>n</code> is allocated in memory.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide059.png" class="img-fluid figure-img"></p>
+<figcaption>One garbage value called n with another pointer called list</figcaption>
+</figure>
+</div></li>
+<li><p>Next, the <code>number</code> of node is assigned the value <code>1</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide064.png" class="img-fluid figure-img"></p>
+<figcaption>n pointing to a node with 1 as the number and garbage value as the next</figcaption>
+</figure>
+</div></li>
+<li><p>Next, the node’s <code>next</code> field is assigned <code>NULL</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide066.png" class="img-fluid figure-img"></p>
+<figcaption>n pointing to a node with 1 as the number and null as the value of next</figcaption>
+</figure>
+</div></li>
+<li><p>Next, <code>list</code> is pointed at the memory location to where <code>n</code> points. <code>n</code> and <code>list</code> now point to the same place.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide068.png" class="img-fluid figure-img"></p>
+<figcaption>n and list both pointing to a node with 1 as the number and null as the value of next</figcaption>
+</figure>
+</div></li>
+<li><p>A new node is then created. Both the <code>number</code> and <code>next</code> field are filled with garbage values.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide073.png" class="img-fluid figure-img"></p>
+<figcaption>list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with garbage values</figcaption>
+</figure>
+</div></li>
+<li><p>The <code>number</code> value of <code>n</code>’s node (the new node) is updated to <code>2</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide075.png" class="img-fluid figure-img"></p>
+<figcaption>list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and garbage as the next</figcaption>
+</figure>
+</div></li>
+<li><p>Also, the <code>next</code> field is updated as well.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide077.png" class="img-fluid figure-img"></p>
+<figcaption>list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and null as the next</figcaption>
+</figure>
+</div></li>
+<li><p>Most importantly, we do not want to lose our connection to any of these nodes lest they be lost forever. Accordingly, <code>n</code>’s <code>next</code> field is pointed to the same memory location as <code>list</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide084.png" class="img-fluid figure-img"></p>
+<figcaption>list pointing to a node with 1 as the number and null as the value of next and n pointing to a new node with 2 as the number and null as the next</figcaption>
+</figure>
+</div></li>
+<li><p>Finally, <code>list</code> is updated to point at <code>n</code>. We now have a linked list of two items.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide086.png" class="img-fluid figure-img"></p>
+<figcaption>list pointing to a node with 1 as the number and next pointing to a node with an n pointing the same place the node with one points to a node with 2 as the number and null as the next</figcaption>
+</figure>
+</div></li>
+<li><p>Looking at our diagram of the list, we can see that the last number added is the first number that appears in the list. Accordingly, if we print the list in order, starting with the first node, the list will appear out of order.</p></li>
+<li><p>We can print the list in the correct order as follows:</p>
+<pre><code>// Print nodes in a linked list with a while loop
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+} node;
+
+int main(void)
+{
+    // Memory for numbers
+    node *list = NULL;
+
+    // Build list
+    for (int i = 0; i &lt; 3; i++)
+    {
+        // Allocate node for number
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return 1;
+        }
+        n-&gt;number = get_int("Number: ");
+        n-&gt;next = NULL;
+
+        // Prepend node to list
+        n-&gt;next = list;
+        list = n;
+    }
+
+    // Print numbers
+    node *ptr = list;
+    while (ptr != NULL)
+    {
+        printf("%i\n", ptr-&gt;number);
+        ptr = ptr-&gt;next;
+    }
+    return 0;
+}
+</code></pre>
+<p>Notice that <code>node *ptr = list</code> creates a temporary variable that points at the same spot that <code>list</code> points to. The <code>while</code> prints what at the node <code>ptr</code> points to, and then updates <code>ptr</code> to point to the <code>next</code> node in the list.</p></li>
+<li><p>In this example, inserting into the list is always in the order of (O(1)), as it only takes a very small number of steps to insert at the front of a list.</p></li>
+<li><p>Considering the amount of time required to search this list, it is in the order of (O(n)), because in the worst case the entire list must always be searched to find an item. The time complexity for adding a new element to the list will depend on where that element is added. This is illustrated in the examples below.</p></li>
+<li><p>Linked lists are not stored in a contiguous block of memory. They can grow as large as you wish, provided that enough system resources exist. The downside, however, is that more memory is required to keep track of the list instead of an array. For each element you must store not just the value of the element, but also a pointer to the next node. Further, linked lists cannot be indexed into like is possible in an array because we need to pass through the first (n - 1) elements to find the location of the (n)th element. Because of this, the list pictured above must be linearly searched. Binary search, therefore, is not possible in a list constructed as above.</p></li>
+<li><p>Further, you could place numbers at the end of the list as illustrated in this code:</p>
+<pre><code>// Appends numbers to a linked list
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+} node;
+
+int main(void)
+{
+    // Memory for numbers
+    node *list = NULL;
+
+    // Build list
+    for (int i = 0; i &lt; 3; i++)
+    {
+        // Allocate node for number
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return 1;
+        }
+        n-&gt;number = get_int("Number: ");
+        n-&gt;next = NULL;
+
+        // If list is empty
+        if (list == NULL)
+        {
+            // This node is the whole list
+            list = n;
+        }
+
+        // If list has numbers already
+        else
+        {
+            // Iterate over nodes in list
+            for (node *ptr = list; ptr != NULL; ptr = ptr-&gt;next)
+            {
+                // If at end of list
+                if (ptr-&gt;next == NULL)
+                {
+                    // Append node
+                    ptr-&gt;next = n;
+                    break;
+                }
+            }
+        }
+    }
+
+    // Print numbers
+    for (node *ptr = list; ptr != NULL; ptr = ptr-&gt;next)
+    {
+        printf("%i\n", ptr-&gt;number);
+    }
+
+    // Free memory
+    node *ptr = list;
+    while (ptr != NULL)
+    {
+        node *next = ptr-&gt;next;
+        free(ptr);
+        ptr = next;
+    }
+    return 0;
+}
+</code></pre>
+<p>Notice how this code <em>walks down</em> this list to find the end. When appending an element (adding to the end of the list) our code will run in (O(n)), as we have to go through our entire list before we can add the final element. Further, notice that a temporary variable called <code>next</code> is used to track <code>ptr-&gt;next</code>.</p></li>
+<li><p>Further, you could sort your list as items are added:</p>
+<pre><code>// Implements a sorted linked list of numbers
+
+#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+} node;
+
+int main(void)
+{
+    // Memory for numbers
+    node *list = NULL;
+
+    // Build list
+    for (int i = 0; i &lt; 3; i++)
+    {
+        // Allocate node for number
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return 1;
+        }
+        n-&gt;number = get_int("Number: ");
+        n-&gt;next = NULL;
+
+        // If list is empty
+        if (list == NULL)
+        {
+            list = n;
+        }
+
+        // If number belongs at beginning of list
+        else if (n-&gt;number &lt; list-&gt;number)
+        {
+            n-&gt;next = list;
+            list = n; 
+        }
+
+        // If number belongs later in list
+        else
+        {
+            // Iterate over nodes in list
+            for (node *ptr = list; ptr != NULL; ptr = ptr-&gt;next)
+            {
+                // If at end of list
+                if (ptr-&gt;next == NULL)
+                {
+                    // Append node
+                    ptr-&gt;next = n;
+                    break;
+                }
+
+                // If in middle of list
+                if (n-&gt;number &lt; ptr-&gt;next-&gt;number)
+                {
+                    n-&gt;next = ptr-&gt;next;
+                    ptr-&gt;next = n;
+                    break;
+                }
+            }
+        }
+    }
+
+    // Print numbers
+    for (node *ptr = list; ptr != NULL; ptr = ptr-&gt;next)
+    {
+        printf("%i\n", ptr-&gt;number);
+    }
+
+    // Free memory
+    node *ptr = list;
+    while (ptr != NULL)
+    {
+        node *next = ptr-&gt;next;
+        free(ptr);
+        ptr = next;
+    }
+    return 0;
+}
+</code></pre>
+<p>Notice how this list is sorted as it is built. To insert an element in this specific order, our code will still run in (O(n)) for each insertion, as in the worst case we will have to look through all current elements.</p></li>
+<li><p>This code may seem complicated. However, notice that with pointers and the syntax above, we can stitch data together in different places in memory.</p></li>
+</ul>
+</section>
+<section id="trees" class="level2">
+<h2 class="anchored" data-anchor-id="trees">Trees</h2>
+<ul>
+<li><p>Arrays offer contiguous memory that can be searched quickly. Arrays also offered the opportunity to engage in binary search.</p></li>
+<li><p>Could we combine the best of both arrays and linked lists?</p></li>
+<li><p><em>Binary search trees</em> are another data structure that can be used to store data more efficiently so that it can be searched and retrieved.</p></li>
+<li><p>You can imagine a sorted sequence of numbers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide118.png" class="img-fluid figure-img"></p>
+<figcaption>1 2 3 4 5 6 7 in boxes next to each other</figcaption>
+</figure>
+</div></li>
+<li><p>Imagine then that the center value becomes the top of a tree. Those that are less than this value are placed to the left. Those values that are more than this value are to the right.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide119.png" class="img-fluid figure-img"></p>
+<figcaption>1 2 3 4 5 6 7 in boxes arranged in a hierarchy 4 is at the top 3 and 5 are below that and 1 2 6 7 are below those</figcaption>
+</figure>
+</div></li>
+<li><p>Pointers can then be used to point to the correct location of each area of memory such that each of these nodes can be connected.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide120.png" class="img-fluid figure-img"></p>
+<figcaption>1 2 3 4 5 6 7 in boxes arranged in a hierarchy 4 is at the top 3 and 5 are below that and 1 2 6 7 are below those arrows connect them in a tree formation</figcaption>
+</figure>
+</div></li>
+<li><p>In code, this can be implemented as follows.</p>
+<pre><code>// Implements a list of numbers as a binary search tree
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Represents a node
+typedef struct node
+{
+    int number;
+    struct node *left;
+    struct node *right;
+}
+node;
+
+void free_tree(node *root);
+void print_tree(node *root);
+
+int main(void)
+{
+    // Tree of size 0
+    node *tree = NULL;
+
+    // Add number to list
+    node *n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        return 1;
+    }
+    n-&gt;number = 2;
+    n-&gt;left = NULL;
+    n-&gt;right = NULL;
+    tree = n;
+
+    // Add number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free_tree(tree);
+        return 1;
+    }
+    n-&gt;number = 1;
+    n-&gt;left = NULL;
+    n-&gt;right = NULL;
+    tree-&gt;left = n;
+
+    // Add number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free_tree(tree);
+        return 1;
+    }
+    n-&gt;number = 3;
+    n-&gt;left = NULL;
+    n-&gt;right = NULL;
+    tree-&gt;right = n;
+
+    // Print tree
+    print_tree(tree);
+
+    // Free tree
+    free_tree(tree);
+    return 0;
+}
+
+void free_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    free_tree(root-&gt;left);
+    free_tree(root-&gt;right);
+    free(root);
+}
+
+void print_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    print_tree(root-&gt;left);
+    printf("%i\n", root-&gt;number);
+    print_tree(root-&gt;right);
+}
+</code></pre>
+<p>Notice this search function begins by going to the location of <code>tree</code>. Then, it uses recursion to search for <code>number</code>. The <code>free_tree</code> function recursively frees the tree. <code>print_tree</code> recursively prints the tree.</p></li>
+<li><p>A tree like the above offers dynamism that an array does not offer. It can grow and shrink as we wish.</p></li>
+<li><p>Further, this structure offers a search time of (O(log n)) when the tree is balanced.</p></li>
+</ul>
+</section>
+<section id="dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
+<ul>
+<li><p><em>Dictionaries</em> are another data structure.</p></li>
+<li><p>Dictionaries, like actual book-form dictionaries that have a word and a definition, have a <em>key</em> and a <em>value</em>.</p></li>
+<li><p>The <em>holy grail</em> of algorithmic time complexity is (O(1)) or <em>constant time</em>. That is, the ultimate is for access to be instantaneous.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide151.png" class="img-fluid figure-img"></p>
+<figcaption>a graph of various time complexities where O of log n is second best and O of 1 is best</figcaption>
+</figure>
+</div></li>
+<li><p>Dictionaries can offer this speed of access through hashing.</p></li>
+</ul>
+</section>
+<section id="hashing-and-hash-tables" class="level2">
+<h2 class="anchored" data-anchor-id="hashing-and-hash-tables">Hashing and Hash Tables</h2>
+<ul>
+<li><p><em>Hashing</em> is the idea of taking a value and being able to output a value that becomes a shortcut to it later.</p></li>
+<li><p>For example, hashing <em>apple</em> may hash as a value of <code>1</code>, and <em>berry</em> may be hashed as <code>2</code>. Therefore, finding <em>apple</em> is as easy as asking the <em>hash</em> algorithm where <em>apple</em> is stored. While not ideal in terms of design, ultimately, putting all <em>a</em>’s in one bucket and <em>b</em>’s in another, this concept of <em>bucketizing</em> hashed values illustrates how you can use this concept: a hashed value can be used to shortcut finding such a value.</p></li>
+<li><p>A <em>hash function</em> is an algorithm that reduces a larger value to something small and predictable. Generally, this function takes in an item you wish to add to your hash table, and returns an integer representing the array index in which the item should be placed.</p></li>
+<li><p>A <em>hash table</em> is a fantastic combination of both arrays and linked lists. When implemented in code, a hash table is an <em>array</em> of <em>pointers</em> to <em>node</em>s.</p></li>
+<li><p>A hash table could be imagined as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide157.png" class="img-fluid figure-img"></p>
+<figcaption>a vertical column of 26 boxes one for each letter of the alphabet</figcaption>
+</figure>
+</div>
+<p>Notice that this is an array that is assigned each value of the alphabet.</p></li>
+<li><p>Then, at each location of the array, a linked list is used to track each value being stored there:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide169.png" class="img-fluid figure-img"></p>
+<figcaption>a vertical column of 26 boxes one for each letter of the alphabet with various names from the mario universe emerging to the right luigi is with l and mario is with m</figcaption>
+</figure>
+</div></li>
+<li><p><em>Collisions</em> are when you add values to the hash table, and something already exists at the hashed location. In the above, collisions are simply appended to the end of the list.</p></li>
+<li><p>Collisions can be reduced by better programming your hash table and hash algorithm. You can imagine an improvement upon the above as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide184.png" class="img-fluid figure-img"></p>
+<figcaption>a vertical column of various boxes arranged by L A K and L I N with Lakitu emerging from L A K and link emerging from L I N</figcaption>
+</figure>
+</div></li>
+<li><p>Consider the following example of a hash algorithm:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide173.png" class="img-fluid figure-img"></p>
+<figcaption>luigi being given to a hash algorithm outputting 11</figcaption>
+</figure>
+</div></li>
+<li><p>This could be implemented in code as follows:</p>
+<pre><code>#include &lt;ctype.h&gt;
+
+unsigned int hash(const char *word)
+{
+    return toupper(word[0]) - 'A';
+}
+
+</code></pre>
+<p>Notice how the hash function returns the value of <code>toupper(word[0]) - 'A'</code>.</p></li>
+<li><p>You, as the programmer, have to make a decision about the advantages of using more memory to have a large hash table and potentially reducing search time or using less memory and potentially increasing search time.</p></li>
+<li><p>This structure offers a search time of (O(n)).</p></li>
+</ul>
+</section>
+<section id="tries" class="level2">
+<h2 class="anchored" data-anchor-id="tries">Tries</h2>
+<ul>
+<li><p><em>Tries</em> are another form of data structure. Tries are trees of arrays.</p></li>
+<li><p><em>Tries</em> are always searchable in constant time.</p></li>
+<li><p>One downside to <em>Tries</em> is that they tend to take up a large amount of memory. Notice that we need (26 = 104) <code>node</code>s just to store <em>Toad</em>!</p></li>
+<li><p><em>Toad</em> would be stored as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide207.png" class="img-fluid figure-img"></p>
+<figcaption>toad being spelled with one letter at a time where one letter is associated with one list T from one list O from another and so on</figcaption>
+</figure>
+</div></li>
+<li><p><em>Tom</em> would then be stored as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week_5/Week5Slide209.png" class="img-fluid figure-img"></p>
+<figcaption>toad being spelled with one letter at a time where one letter is associated with one list T from one list O from another and so on and tom being spelled similarly where toad and tom share a two common letters T and O</figcaption>
+</figure>
+</div></li>
+<li><p>This structure offers a search time of (O(1)).</p></li>
+<li><p>The downside of this structure is how many resources are required to use it.</p></li>
+</ul>
+</section>
+<section id="summing-up" class="level2">
+<h2 class="anchored" data-anchor-id="summing-up">Summing Up</h2>
+<p>In this lesson, you learned about using pointers to build new data structures. Specifically, we delved into…</p>
+<ul>
+<li>Data structures</li>
+<li>Stacks and queues</li>
+<li>Resizing arrays</li>
+<li>Linked lists</li>
+<li>Dictionaries</li>
+<li>Tries</li>
+</ul>
+<p>See you next time!</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/SQ4007-2025\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 🐊 <a href="https://weharris.me">W. Edwin Harris</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/notes/notes_6.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
