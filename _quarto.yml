@@ -54,6 +54,27 @@ website:
         text: Useful links
       - href: module-faq.qmd
         text: FAQ
+      - section: "Tutorials"
+        contents:
+          - href: tutorials/tutorial-week-2.qmd
+            text: "Week 2"
+          - href: tutorials/tutorial-week-3.qmd
+            text: "Week 3"
+          - href: tutorials/tutorial-week-4.qmd
+            text: "Week 4"
+          - href: tutorials/tutorial-week-5.qmd
+            text: "Week 5"
+          - href: tutorials/tutorial-week-6.qmd
+            text: "Week 6"
+          - href: tutorials/tutorial-week-7.qmd
+            text: "Week 7"
+          - href: tutorials/tutorial-week-8.qmd
+            text: "Week 8"
+          - href: tutorials/tutorial-week-9.qmd
+            text: "Week 9"
+          - href: tutorials/tutorial-week-10.qmd
+            text: "Week 10"
+          
 
 format:
   html:
