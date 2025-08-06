@@ -7,7 +7,7 @@
     "text": "▶ 👨‍🏫 CSS\n▶ 👨‍🏫 DOM\n▶ 👨‍🏫 HTML\n▶ 👨‍🏫 HTTP\n▶ 👨‍🏫 Internet primer\n▶ 👨‍🏫 IP\n▶ 👨‍🏫 JavaScript\n▶ 👨‍🏫 TCP",
     "crumbs": [
       "Tutorials",
-      "Week 09 🌐"
+      "Tutorial 09 🌐"
     ]
   },
   {
@@ -18,7 +18,7 @@
     "text": "▶ 👨‍🏫 Python",
     "crumbs": [
       "Tutorials",
-      "Week 07 🐍"
+      "Tutorial 07 🐍"
     ]
   },
   {
@@ -29,7 +29,7 @@
     "text": "▶ 👨‍🏫 Defining custom types\n▶ 👨‍🏫 Dynamic memory allocation\n▶ 👨‍🏫 File pointers\n▶ 👨‍🏫 Hexadecimal\n▶ 👨‍🏫 Pointers",
     "crumbs": [
       "Tutorials",
-      "Week 05 🟢"
+      "Tutorial 05 🟢"
     ]
   },
   {
@@ -40,7 +40,7 @@
     "text": "▶ 👨‍🏫 Arrays\n▶ 👨‍🏫 Command line arguments\n▶ 👨‍🏫 Functions\n▶ 👨‍🏫 Variables and scope",
     "crumbs": [
       "Tutorials",
-      "Week 03 🟢"
+      "Tutorial 03 🟢"
     ]
   },
   {
@@ -51,7 +51,7 @@
     "text": "▶ 👨‍🏫 AJAX\n▶ 👨‍🏫 Flask",
     "crumbs": [
       "Tutorials",
-      "Week 10 🐍"
+      "Tutorial 10 🐍"
     ]
   },
   {
@@ -1177,7 +1177,7 @@
     "text": "Week 7 Problem Set\nSource: https://cs50.harvard.edu/x/psets/7/",
     "crumbs": [
       "Homework",
-      "Week 08 📊"
+      "Homework 08 📊"
     ]
   },
   {
@@ -1188,7 +1188,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Songs\nSubmit Movies\nSubmit Fiftyville",
     "crumbs": [
       "Homework",
-      "Week 08 📊"
+      "Homework 08 📊"
     ]
   },
   {
@@ -1199,7 +1199,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 08 📊"
+      "Homework 08 📊"
     ]
   },
   {
@@ -1210,7 +1210,7 @@
     "text": "Advice\n\nHead to w3schools.com/sql for a handy reference!",
     "crumbs": [
       "Homework",
-      "Week 08 📊"
+      "Homework 08 📊"
     ]
   },
   {
@@ -1298,7 +1298,7 @@
     "text": "Week 6 Problem Set\nSource: https://cs50.harvard.edu/x/psets/6/",
     "crumbs": [
       "Homework",
-      "Week 06 🐍"
+      "Homework 07 🐍"
     ]
   },
   {
@@ -1309,7 +1309,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date.\nSubmit Hello in Python\nSubmit one of:\n\nthis version of Mario in Python, if feeling less comfortable\nthis version of Mario in Python, if feeling more comfortable\n\nSubmit one of:\n\nCash in Python, if feeling less comfortable\nCredit in Python, if feeling more comfortable\n\nSubmit Readability in Python\nSubmit DNA in Python\n\nIf you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.",
     "crumbs": [
       "Homework",
-      "Week 06 🐍"
+      "Homework 07 🐍"
     ]
   },
   {
@@ -1320,7 +1320,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 06 🐍"
+      "Homework 07 🐍"
     ]
   },
   {
@@ -1331,7 +1331,7 @@
     "text": "Advice\n\nTry out any of David’s programs from Week 6.",
     "crumbs": [
       "Homework",
-      "Week 06 🐍"
+      "Homework 07 🐍"
     ]
   },
   {
@@ -1342,7 +1342,7 @@
     "text": "Academic Honesty\n\nFor Hello, Mario, Cash, Credit, and Readability, it is reasonable to look at your own implementations thereof in C and others’ implementations thereof in C.\nIt is not reasonable to look at others’ implementations of the same in Python.\nInsofar as a goal of these problems is to teach you how to teach yourself a new language, keep in mind that these acts are not only reasonable, per the syllabus, but encouraged toward that end:\n\nIncorporating a few lines of code that you find online or elsewhere into your own code, provided that those lines are not themselves solutions to assigned problems and that you cite the lines’ origins.\nTurning to the web or elsewhere for instruction beyond the course’s own, for references, and for solutions to technical difficulties, but not for outright solutions to problem set’s problems or your own final project.",
     "crumbs": [
       "Homework",
-      "Week 06 🐍"
+      "Homework 07 🐍"
     ]
   },
   {
@@ -1479,7 +1479,7 @@
     "text": "Week 5 Problem Set\nSource: https://cs50.harvard.edu/x/psets/5/",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 06 🟢"
     ]
   },
   {
@@ -1490,7 +1490,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Inheritance\nSubmit Speller",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 06 🟢"
     ]
   },
   {
@@ -1501,7 +1501,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 06 🟢"
     ]
   },
   {
@@ -1512,7 +1512,7 @@
     "text": "Advice\n\nTry out any of David’s programs from Week 5.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile speller, and\nmake speller\n\nis yielding errors, try running\nhelp50 make speller\n\ninstead!",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 06 🟢"
     ]
   },
   {
@@ -1719,7 +1719,7 @@
     "text": "Week 3 Problem Set\nSource: https://cs50.harvard.edu/x/psets/3/",
     "crumbs": [
       "Homework",
-      "Week 04 🟢"
+      "Homework 04 🟢"
     ]
   },
   {
@@ -1730,7 +1730,7 @@
     "text": "What to Do\n\nSubmit Sort\nSubmit Plurality\nSubmit one of:\n\nRunoff, if feeling more or less comfortable\nTideman, if feeling very, very, very comfortable\n\n\nIf you submit both Runoff and Tideman, we’ll record the higher of your two scores. Note that Tideman is optional but challenging!",
     "crumbs": [
       "Homework",
-      "Week 04 🟢"
+      "Homework 04 🟢"
     ]
   },
   {
@@ -1741,7 +1741,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 04 🟢"
+      "Homework 04 🟢"
     ]
   },
   {
@@ -1752,7 +1752,7 @@
     "text": "Advice\n\nTry out any of David’s programs from class via Week 3’s source code.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile plurality, and\nmake plurality\n\nis yielding errors, try running\nhelp50 make plurality\n\ninstead!",
     "crumbs": [
       "Homework",
-      "Week 04 🟢"
+      "Homework 04 🟢"
     ]
   },
   {
@@ -1980,7 +1980,7 @@
     "text": "Log into submit.cs50.io using your GitHub account and click Authorize cs50, then close the tab.\nLog into cs50.dev using your GitHub account to access your very own “codespace.”\nOnce your codespace has loaded, close any Welcome tabs that might have opened by default.\nRun update50 in your codespace’s terminal window to ensure that your codespace is up-to-date and, if prompted, click Rebuild now.\nComplete Hello, World.\nSubmit Hello, It’s Me.\nSubmit one of:\n\nthis version of Mario, if feeling less comfortable\nthis version of Mario, if feeling more comfortable\n\nSubmit one of:\n\nCash, if feeling less comfortable\nCredit, if feeling more comfortable\n\n\nIf you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.",
     "crumbs": [
       "Homework",
-      "Week 02 🟢"
+      "Homework 02 🟢"
     ]
   },
   {
@@ -1991,7 +1991,7 @@
     "text": "Log into submit.cs50.io using your GitHub account and click Authorize cs50, then close the tab.\nLog into cs50.dev using your GitHub account to access your very own “codespace.”\nOnce your codespace has loaded, close any Welcome tabs that might have opened by default.\nRun update50 in your codespace’s terminal window to ensure that your codespace is up-to-date and, if prompted, click Rebuild now.\nComplete Hello, World.\nSubmit Hello, It’s Me.\nSubmit one of:\n\nthis version of Mario, if feeling less comfortable\nthis version of Mario, if feeling more comfortable\n\nSubmit one of:\n\nCash, if feeling less comfortable\nCredit, if feeling more comfortable\n\n\nIf you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.",
     "crumbs": [
       "Homework",
-      "Week 02 🟢"
+      "Homework 02 🟢"
     ]
   },
   {
@@ -2002,7 +2002,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 02 🟢"
+      "Homework 02 🟢"
     ]
   },
   {
@@ -2013,7 +2013,7 @@
     "text": "Advice\n\nTry out any of David’s programs from class via Week 1’s source code.\nSee CS50’s style guide for C for tips on how to improve your code’s style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile hello, and\nmake hello\n\nis yielding errors, try running\nhelp50 make hello\n\ninstead!",
     "crumbs": [
       "Homework",
-      "Week 02 🟢"
+      "Homework 02 🟢"
     ]
   },
   {
@@ -2241,7 +2241,7 @@
     "text": "Complete and submit Starting from Scratch.",
     "crumbs": [
       "Homework",
-      "Week 01 🐈"
+      "Homework 01 🐈"
     ]
   },
   {
@@ -2252,7 +2252,7 @@
     "text": "Complete and submit Starting from Scratch.",
     "crumbs": [
       "Homework",
-      "Week 01 🐈"
+      "Homework 01 🐈"
     ]
   },
   {
@@ -2263,7 +2263,7 @@
     "text": "Advice\nIf you have trouble running Scratch in your browser, use Chrome; consider downloading and installing the latest version of Chrome, if you don’t have it already.\nHere are some examples from lecture if you’d like to review! To see the source code of each, click See inside.",
     "crumbs": [
       "Homework",
-      "Week 01 🐈"
+      "Homework 01 🐈"
     ]
   },
   {
@@ -2274,7 +2274,7 @@
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
       "Homework",
-      "Week 01 🐈"
+      "Homework 01 🐈"
     ]
   },
   {
@@ -2362,7 +2362,7 @@
     "text": "Week 9 Problem Set\nSource: https://cs50.harvard.edu/x/psets/9/",
     "crumbs": [
       "Homework",
-      "Week 10 🐍"
+      "Homework 10 🐍"
     ]
   },
   {
@@ -2373,7 +2373,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Birthdays\nSubmit Finance",
     "crumbs": [
       "Homework",
-      "Week 10 🐍"
+      "Homework 10 🐍"
     ]
   },
   {
@@ -2384,7 +2384,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 10 🐍"
+      "Homework 10 🐍"
     ]
   },
   {
@@ -2598,7 +2598,7 @@
     "text": "Week 2 Problem Set\nSource: https://cs50.harvard.edu/x/psets/2/",
     "crumbs": [
       "Homework",
-      "Week 03 🟢"
+      "Homework 03 🟢"
     ]
   },
   {
@@ -2609,7 +2609,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account using Chrome, Edge, or Safari, not Firefox\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Scrabble\nSubmit Readability\nSubmit one of:\n\nCaesar, if feeling less comfortable\nSubstitution, if feeling more comfortable\n\n\nIf you submit both Caesar and Substitution, we’ll record the higher of your two scores.",
     "crumbs": [
       "Homework",
-      "Week 03 🟢"
+      "Homework 03 🟢"
     ]
   },
   {
@@ -2620,7 +2620,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 03 🟢"
+      "Homework 03 🟢"
     ]
   },
   {
@@ -2631,7 +2631,7 @@
     "text": "Advice\n\nTry out any of David’s programs from class via Week 2’s examples.\nTo see the manual pages for C functions, visit manual.cs50.io.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile readability, and\nmake readability\n\nis yielding errors, try running\nhelp50 make readability\n\ninstead!",
     "crumbs": [
       "Homework",
-      "Week 03 🟢"
+      "Homework 03 🟢"
     ]
   },
   {
@@ -2908,7 +2908,7 @@
     "text": "Week 4 Problem Set\nSource: https://cs50.harvard.edu/x/psets/4/",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 05 🟢"
     ]
   },
   {
@@ -2919,7 +2919,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Volume\nSubmit one of:\n\nthis version of Filter if feeling less comfortable\nthis version of Filter if feeling more comfortable\n\nSubmit Recover",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 05 🟢"
     ]
   },
   {
@@ -2930,7 +2930,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 05 🟢"
     ]
   },
   {
@@ -2941,7 +2941,7 @@
     "text": "Advice\n\nTry out any of David’s programs from Week 4.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile filter, and\nmake filter\n\nis yielding errors, try running\nhelp50 make filter\n\ninstead!",
     "crumbs": [
       "Homework",
-      "Week 05 🟢"
+      "Homework 05 🟢"
     ]
   },
   {
@@ -3407,7 +3407,7 @@
     "text": "Week 8 Problem Set\nSource: https://cs50.harvard.edu/x/psets/8/",
     "crumbs": [
       "Homework",
-      "Week 09 🌐"
+      "Homework 09 🌐"
     ]
   },
   {
@@ -3418,7 +3418,7 @@
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Trivia\nSubmit Homepage",
     "crumbs": [
       "Homework",
-      "Week 09 🌐"
+      "Homework 09 🌐"
     ]
   },
   {
@@ -3429,7 +3429,7 @@
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
       "Homework",
-      "Week 09 🌐"
+      "Homework 09 🌐"
     ]
   },
   {
@@ -4576,7 +4576,7 @@
     "text": "▶ 👨‍🏫 Command line\n▶ 👨‍🏫 Conditional statements\n▶ 👨‍🏫 Data types\n▶ 👨‍🏫 Loops\n▶ 👨‍🏫 Magic numbers\n▶ 👨‍🏫 Operators",
     "crumbs": [
       "Tutorials",
-      "Week 02 🟢"
+      "Tutorial 02 🟢"
     ]
   },
   {
@@ -4587,7 +4587,7 @@
     "text": "▶ 👨‍🏫 Binary search\n▶ 👨‍🏫 Bubble sort\n▶ 👨‍🏫 Call stacks\n▶ 👨‍🏫 Linear search\n▶ 👨‍🏫 Merge sort\n▶ 👨‍🏫 Recursion\n▶ 👨‍🏫 Selection sort",
     "crumbs": [
       "Tutorials",
-      "Week 04 🟢"
+      "Tutorial 04 🟢"
     ]
   },
   {
@@ -4598,7 +4598,7 @@
     "text": "▶ 👨‍🏫 Data structures\n▶ 👨‍🏫 Doubly-linked lists\n▶ 👨‍🏫 Hash tables\n▶ 👨‍🏫 Queues\n▶ 👨‍🏫 Singly-linked lists\n▶ 👨‍🏫 Stacks\n▶ 👨‍🏫 Structures\n▶ 👨‍🏫 Tries",
     "crumbs": [
       "Tutorials",
-      "Week 06 🟢"
+      "Tutorial 06 🟢"
     ]
   },
   {
@@ -4609,7 +4609,7 @@
     "text": "▶ 👨‍🏫 SQL",
     "crumbs": [
       "Tutorials",
-      "Week 08 📊"
+      "Tutorial 08 📊"
     ]
   }
 ]
