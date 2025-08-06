@@ -102,6 +102,28 @@ website:
             text: "Notes 10 🐍"
           - href: notes/notes_11.md
             text: "Notes 11 👋"
+      - section: "Code"
+        contents:
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src1
+            text: "Code 01 🐈"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src2
+            text: "Code 02 🟢"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src3
+            text: "Code 03 🟢"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src4
+            text: "Code 04 🟢"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src5
+            text: "Code 05 🟢"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src6
+            text: "Code 06 🟢"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src7
+            text: "Code 07 🐍"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src8
+            text: "Code 08 📊"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src9
+            text: "Code 09 🌐"
+          - href: https://github.com/SQ4007-2025/website/tree/master/code/src10
+            text: "Code 10 🐍"
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
