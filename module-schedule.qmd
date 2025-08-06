@@ -17,7 +17,7 @@ This schedule is an outline of the topics, content, and assignments. Note that t
 | 08 | 📊 SQL | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_8.pptx) | [📕](notes/notes_8.html "Notes 8") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src8) | [👨‍🏫](tutorials/tutorial-week-8.html) | 🏠 |
 | 09 | 🌐 Web programming | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_9.pptx) | [📕](notes/notes_9.html "Notes 9") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src9) | [👨‍🏫](tutorials/tutorial-week-9.html) | 🏠 |
 | 10 | 🐍 Flask | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_10.pptx) | [📕](notes/notes_10.html "Notes 10") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src10) | [👨‍🏫](tutorials/tutorial-week-10.html) | 🏠 |
-| 11 | 👋 Wrap up | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_11.pptx) | [📕](notes/notes_11.html "Notes 11") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src11) |  | 🏠 |
+| 11 | 👋 Wrap up | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_11.pptx) | [📕](notes/notes_11.html "Notes 11") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src11) |  |  |
 
 ```{r echo = FALSE}
 knitr::knit_exit()

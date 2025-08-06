@@ -14,8 +14,8 @@ Here are [some examples](https://scratch.mit.edu/studios/30233348/) from lecture
 
 ## Academic integrity
 
-Collaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you.
+Collaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you.  AI use to generate any code or text related to assignments is **not permitted**.
 
-The staff conducts audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for [Academic Misconduct](https://www.harper-adams.ac.uk/documents/Academic-misconduct-procedure.pdf). 
+The staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for [Academic Misconduct](https://www.harper-adams.ac.uk/documents/Academic-misconduct-procedure.pdf). 
 
 
