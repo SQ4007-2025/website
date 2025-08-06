@@ -4611,5 +4611,25 @@
       "Tutorials",
       "Tutorial 08 📊"
     ]
+  },
+  {
+    "objectID": "module-faq.html#how-do-i-submit-my-homework-assignments-in-github-codespaces",
+    "href": "module-faq.html#how-do-i-submit-my-homework-assignments-in-github-codespaces",
+    "title": "FAQ",
+    "section": "How do I submit my homework assignments in Github Codespaces?",
+    "text": "How do I submit my homework assignments in Github Codespaces?",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "module-faq.html#can-i-use-a-local-install-of-vs-code-c-python-sqletc.-instead-of-using-the-sandbox-in-github-codespaces",
+    "href": "module-faq.html#can-i-use-a-local-install-of-vs-code-c-python-sqletc.-instead-of-using-the-sandbox-in-github-codespaces",
+    "title": "FAQ",
+    "section": "Can I use a local install of VS Code, C, Python, SQL,etc. instead of using The Sandbox in Github Codespaces?",
+    "text": "Can I use a local install of VS Code, C, Python, SQL,etc. instead of using The Sandbox in Github Codespaces?\nThe short answer is, heck yeah! However, installing and configuring all this software on your own computer is sometimes complicated and irritating, even for experienced programmers. Comfiguring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still you can do it if you want to; most of the tools are open source and free and will work. Also, we are here to help support you if you want to try.\nIf you want to take this path, here is what you need to do:\nFor a start… - Download and install Python (&gt; v3.11): https://www.python.org/downloads/ - Download and install VS Code: https://code.visualstudio.com/download - Install C/C++ in VS Code: https://code.visualstudio.com/docs/languages/cpp - Install Git: https://happygitwithr.com/install-git.html",
+    "crumbs": [
+      "FAQ"
+    ]
   }
 ]
