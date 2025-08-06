@@ -42,7 +42,7 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - href: index.qmd
         text: Welcome!
@@ -57,23 +57,23 @@ website:
       - section: "Tutorials"
         contents:
           - href: tutorials/tutorial-week-2.qmd
-            text: "Week 2"
+            text: "Week 02 🟢"
           - href: tutorials/tutorial-week-3.qmd
-            text: "Week 3"
+            text: "Week 03 🟢"
           - href: tutorials/tutorial-week-4.qmd
-            text: "Week 4"
+            text: "Week 04 🟢"
           - href: tutorials/tutorial-week-5.qmd
-            text: "Week 5"
+            text: "Week 05 🟢"
           - href: tutorials/tutorial-week-6.qmd
-            text: "Week 6"
+            text: "Week 06 🟢"
           - href: tutorials/tutorial-week-7.qmd
-            text: "Week 7"
+            text: "Week 07 🐍"
           - href: tutorials/tutorial-week-8.qmd
-            text: "Week 8"
+            text: "Week 08 📊"
           - href: tutorials/tutorial-week-9.qmd
-            text: "Week 9"
+            text: "Week 09 🌐"
           - href: tutorials/tutorial-week-10.qmd
-            text: "Week 10"
+            text: "Week 10 🐍"
           
 
 format:
