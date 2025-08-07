@@ -2,18 +2,20 @@
 title: "FAQ"
 ---
 
-## How do I get started using The Sandbox in Github Codespaces?
+## How to use The Sandbox?
 
 ```{=html}
 <iframe width="700" height="394" src="https://www.youtube.com/embed/cAHCMpPJx3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
-## How do I submit my homework assignments in Github Codespaces?
+## How do I submit my homework?
 
-## Can I use a local install of VS Code, C, Python, SQL, etc. instead of using The Sandbox in Github Codespaces to code my homework assignments?
+
+
+## Can I use VS Code, C, Python, SQL, etc. on my own computer?
 
 The short answer is, heck yeah (but you will still need to use codespaces to submit your work)! However, installing and configuring all this software on your own computer is sometimes complicated and irritating, even for experienced programmers. Comfiguring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still, you can do it if you want to; most of the tools are open source and free and will work for most tasks. Also, we are here to help support you if you want to try.
 
-If you want to take this path, here is what you need to do:
+If you want to explore this path, here are the main things you need to do:
 
 For a start...
 -   Download and install Python (> v3.11): <https://www.python.org/downloads/>
