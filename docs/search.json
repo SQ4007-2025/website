@@ -4631,5 +4631,25 @@
     "crumbs": [
       "FAQ"
     ]
+  },
+  {
+    "objectID": "module-faq.html#how-do-i-submit-my-homework",
+    "href": "module-faq.html#how-do-i-submit-my-homework",
+    "title": "FAQ",
+    "section": "How do I submit my homework?",
+    "text": "How do I submit my homework?",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "module-faq.html#can-i-use-vs-code-c-python-sql-etc.-on-my-own-computer",
+    "href": "module-faq.html#can-i-use-vs-code-c-python-sql-etc.-on-my-own-computer",
+    "title": "FAQ",
+    "section": "Can I use VS Code, C, Python, SQL, etc. on my own computer?",
+    "text": "Can I use VS Code, C, Python, SQL, etc. on my own computer?\nThe short answer is, heck yeah (but you will still need to use codespaces to submit your work)! However, installing and configuring all this software on your own computer is sometimes complicated and irritating, even for experienced programmers. Comfiguring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still, you can do it if you want to; most of the tools are open source and free and will work for most tasks. Also, we are here to help support you if you want to try.\nIf you want to explore this path, here are the main things you need to do:\nFor a start…\n-Download and install Python (&gt; v3.11): https://www.python.org/downloads/ -Download and install VS Code: https://code.visualstudio.com/download -Install C/C++ in VS Code: https://code.visualstudio.com/docs/languages/cpp -Install Git: https://happygitwithr.com/install-git.html",
+    "crumbs": [
+      "FAQ"
+    ]
   }
 ]
