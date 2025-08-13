@@ -4465,5 +4465,15 @@
       "Tutorials",
       "Tutorial 08 📊"
     ]
+  },
+  {
+    "objectID": "module-faq.html",
+    "href": "module-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "How to get started with Github Codespaces, The Sandbox?",
+    "crumbs": [
+      "FAQ"
+    ]
   }
 ]
