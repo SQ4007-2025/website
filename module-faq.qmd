@@ -11,9 +11,9 @@ title: "FAQ"
 
 
 
-## Can I use VS Code, C, Python, SQL, etc. on my own computer?
+## Can I just code on my own computer?
 
-The short answer is, heck yeah (but you will still need to use codespaces to submit your work)! However, installing and configuring all this software on your own computer is sometimes complicated and irritating, even for experienced programmers. Comfiguring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still, you can do it if you want to; most of the tools are open source and free and will work for most tasks. Also, we are here to help support you if you want to try.
+The short answer is, heck yeah (but you will still need to use Github Codespaces to submit your work)! However, installing and configuring programming and editing software on your own computer is sometimes complicated and irritating, even for experienced programmers. Configuring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still, you can do it if you want to; most of the tools are open source and free and will work for most tasks. Also, we are here to help support you if you want to try.
 
 If you want to explore this path, here are the main things you need to do:
 
