@@ -13,9 +13,3 @@ The Statistics Lab is a group of people (students, researchers, and staff) who a
 ## Code Club
 
 The Code Club is an outreach-based initiative that aims to help schoolstudents learn programming and data science. Our first Code Club will be held regularly on <date> from xxx to yyy. This is an opportunity for you to help mentor younger students - it is fun, rewarding, and a great way to build your CV.
-
-
-
-
-
-
