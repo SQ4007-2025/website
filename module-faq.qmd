@@ -2,11 +2,12 @@
 title: "FAQ"
 ---
 
-## How to get started with our Github Codespaces environment, The Sandbox?
+
 
 ```{=html}
 <iframe width="200" height="125" src="https://www.youtube.com/embed/cAHCMpPJx3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
+``` How to get started with our Github Codespaces environment, The Sandbox?
+
 ## How do I submit my homework assignments?
 
 ```{=html}
