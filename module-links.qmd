@@ -8,4 +8,4 @@ title: "Useful links"
 
 🔗 [🏠 Access your Codespaces](https://github.com/codespaces)
 
-🔗 [🎤 Code Club meetings](module-extras.html)
+🔗 [🎤 Statistics Lab & Code Club meetings](module-extras.html)
