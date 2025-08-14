@@ -2,8 +2,6 @@
 title: "FAQ"
 ---
 
-
-
 ::: {.columns}
 ::: {.column width="28%"}
 ```{=html}
@@ -14,6 +12,7 @@ title: "FAQ"
 ## How do I submit my homework assignments?
 :::
 :::
+---
 
 ::: {.columns}
 ::: {.column width="28%"}
@@ -22,15 +21,6 @@ title: "FAQ"
 ```
 :::
 ::: {.column}
-## Can I just code on my own computer?
-:::
-:::
-
-
-```{=html}
-<iframe width="200" height="125" src="https://www.youtube.com/embed/cAHCMpPJx3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
-
 ## Can I just code on my own computer?
 
 The short answer is, heck yeah (but you will still need to use Github Codespaces to submit your work)! However, installing and configuring programming and editing software on your own computer is sometimes complicated and irritating, even for experienced programmers. Configuring all the tools we will be using in The Sandbox to be exactly the same on your own computer, operating system, etc., will require advanced skills. Still, you can do it if you want to; most of the tools are open source and free and will work for most tasks. Also, we are here to help support you if you want to try.
@@ -43,4 +33,11 @@ For a start...
 * Download and install VS Code: <https://code.visualstudio.com/download>
 * Install C/C++ in VS Code: <https://code.visualstudio.com/docs/languages/cpp>
 * Install Git: <https://happygitwithr.com/install-git.html>
+
+
+:::
+:::
+---
+
+
 
