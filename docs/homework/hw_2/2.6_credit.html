@@ -741,20 +741,24 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>That’s kind of confusing, so let’s try an example with a Visa: 4003600000000014.</p>
 <ol type="1">
-<li><p>For the sake of discussion, let’s first underline every other digit, starting with the number’s second-to-last digit:</p>
+<li>For the sake of discussion, let’s first underline every other digit, starting with the number’s second-to-last digit:</li>
+</ol>
 <ins>
-<p>4</p>
+4
 </ins>
-<p>003600000000014</p>
-<p>Okay, let’s multiply each of the underlined digits by 2:</p>
+<p>0<ins>0</ins>3<ins>6</ins>0<ins>0</ins>0<ins>0</ins>0<ins>0</ins>0<ins>0</ins>0<ins>1</ins>4</p>
+<p>Okay, let’s multiply each of the underlined digits by 2, starting with the 2nd to last:</p>
 <p>1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2</p>
 <p>That gives us:</p>
 <p>2 + 0 + 0 + 0 + 0 + 12 + 0 + 8</p>
 <p>Now let’s add those products’ digits (i.e., not the products themselves) together:</p>
-<p>2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13</p></li>
-<li><p>Now let’s add that sum (13) to the sum of the digits that weren’t multiplied by 2 (starting from the end):</p>
-<p>13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20</p></li>
-<li><p>Yup, the last digit in that sum (20) is a 0, so David’s card is legit!</p></li>
+<p>2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13</p>
+<ol start="2" type="1">
+<li>Now let’s add that sum (13) to the sum of the digits that weren’t multiplied by 2 (starting from the end):</li>
+</ol>
+<p>13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20</p>
+<ol start="3" type="1">
+<li>Yup, the last digit in that sum (20) is a 0, so this card is legit!</li>
 </ol>
 <p>So, validating credit card numbers isn’t hard, but it does get a bit tedious by hand. Let’s write a program.</p>
 </section>
