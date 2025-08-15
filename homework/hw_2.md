@@ -4,17 +4,14 @@ title: "Homework week 2"
 
 ## What to do
 
-🟢 [2.1 Scratch](hw_1/1.1_scratch.html).
+🟢 [2.1 Hello World](hw_2/2.1_hello_world.html).
 
-🟢 [1.1 Scratch](hw_1/1.1_scratch.html).
+🟢 [2.2 Hello, it's me](hw_2/2.2_hello_its_me.html).
 
-🟢 [1.1 Scratch](hw_1/1.1_scratch.html).
+🟢 [2.3 Mario](hw_2/2.3_mario1.html).
 
-🟢 [1.1 Scratch](hw_1/1.1_scratch.html).
+🟢 [2.4 cash](hw_2/1.1_cash.html).
 
-🟢 [1.1 Scratch](hw_1/1.1_scratch.html).
-
-🟢 [1.1 Scratch](hw_1/1.1_scratch.html).
 
 1. Log into [submit.cs50.io](https://submit.cs50.io) using your GitHub account and click **Authorize cs50**, then close the tab.
 2. Log into [cs50.dev](https://cs50.dev/) using your GitHub account to access your very own “codespace.”
