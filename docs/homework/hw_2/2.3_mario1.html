@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>cash – Computing Technology</title>
+<title>mario1 – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_2/coins.jpg">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_2/pyramid.png">
 <meta property="og:site_name" content="Computing Technology">
 <meta name="twitter:title" content="Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
@@ -687,13 +687,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cash" id="toc-cash" class="nav-link active" data-scroll-target="#cash">Cash</a></li>
-  <li><a href="#cash-1" id="toc-cash-1" class="nav-link" data-scroll-target="#cash-1">Cash</a>
+  <li><a href="#this-version-of-mario-less" id="toc-this-version-of-mario-less" class="nav-link active" data-scroll-target="#this-version-of-mario-less">this version of Mario (less)</a></li>
+  <li><a href="#mario" id="toc-mario" class="nav-link" data-scroll-target="#mario">Mario</a>
   <ul class="collapse">
   <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
   <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#greedy-algorithms" id="toc-greedy-algorithms" class="nav-link" data-scroll-target="#greedy-algorithms">Greedy Algorithms</a></li>
   <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
+  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
   <ul class="collapse">
   <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
@@ -702,7 +702,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.5_cash.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.3_mario1.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -711,41 +711,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="cash" class="level1">
-<h1>Cash</h1>
-<p><strong>Week 1, Problem 5</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/1/cash/</p>
+<section id="this-version-of-mario-less" class="level1">
+<h1>this version of Mario (less)</h1>
+<p><strong>Week 1, Problem 3</strong></p>
+<p>Source: https://cs50.harvard.edu/x/psets/1/mario/less/</p>
 <hr>
 </section>
-<section id="cash-1" class="level1">
-<h1>Cash</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="coins.jpg" class="img-fluid figure-img"></p>
-<figcaption>US coins</figcaption>
-</figure>
-</div>
+<section id="mario" class="level1">
+<h1>Mario</h1>
 <section id="problem-to-solve" class="level2">
 <h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
-<p>Suppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You’ll need to pay them their “change,” the amount leftover after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you’re dispensing for each customer, lest you run out (or annoy the customer!). In a file called <code>cash.c</code> in a folder called <code>cash</code>, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:</p>
-<pre><code>Change owed: 25
-1
+<p>Toward the end of World 1-1 in Nintendo’s <a href="https://en.wikipedia.org/wiki/Super_Mario_Bros.">Super Mario Bros.</a>, Mario must ascend right-aligned pyramid of bricks, as in the below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pyramid.png" class="img-fluid figure-img"></p>
+<figcaption>screenshot of Mario jumping up a right-aligned pyramid</figcaption>
+</figure>
+</div>
+<p>In a file called <code>mario.c</code> in a folder called <code>mario-less</code>, implement a program in C that recreates that pyramid, using hashes (<code>#</code>) for bricks, as in the below:</p>
+<pre><code>       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
 </code></pre>
-<p>But prompt the user for an <code>int</code> greater than 0, so that the program works for any amount of change:</p>
-<pre><code>Change owed: 70
-4
+<p>But prompt the user for an <code>int</code> for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:</p>
+<pre><code>  #
+ ##
+###
 </code></pre>
-<p>Re-prompt the user, again and again as needed, if their input is not greater than or equal to 0 (or if their input isn’t an <code>int</code> at all!).</p>
+<p>Re-prompt the user, again and again as needed, if their input is not greater than 0 or not an <code>int</code> altogether.</p>
+<p>Hints</p>
+<ul>
+<li>Recall that you can get an <code>int</code> from a user with <code>get_int</code>, which is declared in <code>cs50.h</code>.</li>
+<li>Recall that you can print a <code>string</code> with <code>printf</code>, which is declared in <code>stdio.h</code>.</li>
+</ul>
 </section>
 <section id="demo" class="level2">
 <h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="greedy-algorithms" class="level2">
-<h2 class="anchored" data-anchor-id="greedy-algorithms">Greedy Algorithms</h2>
-<p>Fortunately, computer science has given cashiers everywhere ways to minimize numbers of coins due: greedy algorithms.</p>
-<p>According to the National Institute of Standards and Technology (NIST), a greedy algorithm is one “that always takes the best immediate, or local, solution while finding an answer. Greedy algorithms find the overall, or globally, optimal solution for some optimization problems, but may find less-than-optimal solutions for some instances of other problems.”</p>
-<p>What’s all that mean? Well, suppose that a cashier owes a customer some change and in that cashier’s drawer are quarters (25¢), dimes (10¢), nickels (5¢), and pennies (1¢). The problem to be solved is to decide which coins and how many of each to hand to the customer. Think of a “greedy” cashier as one who wants to take the biggest bite out of this problem as possible with each coin they take out of the drawer. For instance, if some customer is owed 41¢, the biggest first (i.e., best immediate, or local) bite that can be taken is 25¢. (That bite is “best” inasmuch as it gets us closer to 0¢ faster than any other coin would.) Note that a bite of this size would whittle what was a 41¢ problem down to a 16¢ problem, since 41 - 25 = 16. That is, the remainder is a similar but smaller problem. Needless to say, another 25¢ bite would be too big (assuming the cashier prefers not to lose money), and so our greedy cashier would move on to a bite of size 10¢, leaving him or her with a 6¢ problem. At that point, greed calls for one 5¢ bite followed by one 1¢ bite, at which point the problem is solved. The customer receives one quarter, one dime, one nickel, and one penny: four coins in total.</p>
-<p>It turns out that this greedy approach (i.e., algorithm) is not only locally optimal but also globally so for America’s currency (and also the European Union’s). That is, so long as a cashier has enough of each coin, this largest-to-smallest approach will yield the fewest coins possible. How few? Well, you tell us!</p>
 </section>
 <section id="advice" class="level2">
 <h2 class="anchored" data-anchor-id="advice">Advice</h2>
@@ -760,148 +766,218 @@ int main(void)
 
 }
 </code></pre>
-<p>Notice that you’ve now included <code>cs50.h</code> and <code>stdio.h</code>, two “header files” that will give you access to functions that might help you solve this problem.</p>
 <p>Write some pseudocode before writing more code</p>
-<p>If unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really only a handful of problems:</p>
+<p>If unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really two problems:</p>
 <ol type="1">
-<li>Prompt the user for change owed, in cents.</li>
-<li>Calculate how many <em>quarters</em> you should give customer. Subtract the value of those quarters from cents.</li>
-<li>Calculate how many <em>dimes</em> you should give customer. Subtract the value of those dimes from remaining cents.</li>
-<li>Calculate how many <em>nickels</em> you should give customer. Subtract the value of those nickels from remaining cents.</li>
-<li>Calculate how many <em>pennies</em> you should give customer. Subtract the value of those pennies from remaining cents.</li>
-<li>Sum the number of quarters, dimes, nickels, and pennies used.</li>
-<li>Print that sum.</li>
+<li>Prompt the user for the pyramid’s height</li>
+<li>Print a pyramid of that height</li>
 </ol>
-<p>This is the greedy algorithm you can use to solve this problem, so let’s write some pseudcode as comments to remind you to do just that:</p>
+<p>So write some pseudcode as comments that remind you to do just that:</p>
 <pre><code>#include &lt;cs50.h&gt;
 #include &lt;stdio.h&gt;
 
 int main(void)
 {
-    // Prompt the user for change owed, in cents
+    // Prompt the user for the pyramid's height
 
-    // Calculate how many quarters you should give customer
-    // Subtract the value of those quarters from cents
-
-    // Calculate how many dimes you should give customer
-    // Subtract the value of those dimes from remaining cents
-
-    // Calculate how many nickels you should give customer
-    // Subtract the value of those nickels from remaining cents
-
-    // Calculate how many pennies you should give customer
-    // Subtract the value of those pennies from remaining cents
-
-    // Sum the number of quarters, dimes, nickels, and pennies used
-    // Print that sum
+    // Print a pyramid of that height
 }
 </code></pre>
 <p>Convert the pseudocode to code</p>
-<p>First, consider how you might prompt the user for the cents they are owed. Recall that a <code>do while</code> loop is helpful when you want to do something at least once, and possibly again and again, as in the below:</p>
+<p>First, consider how you might prompt the user for the pyramid’s height. Recall that a <code>do while</code> loop is helpful when you want to do something at least once, and possibly again and again, as in the below:</p>
 <pre><code>#include &lt;cs50.h&gt;
 #include &lt;stdio.h&gt;
 
 int main(void)
 {
-    // Prompt the user for change owed, in cents
-    int cents;
+    // Prompt the user for the pyramid's height
+    int n;
     do
     {
-        cents = get_int("Change owed: ");
+        n = get_int("Height: ");
     }
-    while (cents &lt; 0);
+    while (n &lt; 1);
+
+    // Print a pyramid of that height
 }
 </code></pre>
-<p>It’s wise to stop here and <code>make</code> your program. Test to be sure your program compiles, and that it reprompts you if you enter less than 0 cents (or if you enter an input like “cat”).</p>
-<p>Next, consider how to calculate how many quarters you should give the customer. Since we’re using a greedy algorithm, this question becomes “what’s the <em>greatest</em> number of quarters could you give them?”. You <em>could</em> write a solution to this problem in your <code>main</code> function. But, it might clear up your thinking to write a new function: one called <code>calculate_quarters</code>. That way you can better focus on the logic to calculate quarters. Later, you can integrate this function into your larger solution.</p>
-<pre><code>int calculate_quarters(int cents)
-{
-    // Calculate how many quarters you should give customer
-}
-</code></pre>
-<p>Notice that this function is indeed named <code>calculate_quarters</code>. Per <code>int cents</code> in parentheses, it takes an <code>int</code> called <code>cents</code> as input. And, per the <code>int</code> in front of its name, it should also “return” an <code>int</code>. That is, the output of this function is an integer: the number of quarters that fit into cents. If curious about this idea, recall there are several sample programs in Week 1’s <a href="https://github.com/cs50/lectures/tree/2024/fall/1/src1">Source Code</a> that illustrate how functions can return a value.</p>
-<p>Now consider this way of implementing <code>calculate_quarters</code> by adding to the number of quarters until we’ve run out of cents to convert to quarters:</p>
-<pre><code>int calculate_quarters(int cents)
-{
-    // Calculate how many quarters you should give customer
-    int quarters = 0;
-    while (cents &gt;= 25)
-    {
-        quarters++;
-        cents = cents - 25;
-    }
-    return quarters;
-}
-</code></pre>
-<p>Granted, there is at least one simpler way to solve this <code>calculate_quarters</code> problem. But we’ll leave that up to you to figure out!</p>
-<p>With <code>calculate_quarters</code> functioning as intended, you can integrate this function into your program. Take care to “declare” the function’s “signature” (i.e., <code>int calculate_quarters(int cents)</code>) above your <code>main</code> function, so you can indeed use <code>calculate_quarters</code> there while defining it later, below <code>main</code>.</p>
+<p>Second, consider how you might print a pyramid of that height, from top to bottom. Notice how the first row should have one brick, the second row should have two bricks, and so on. Odds are you’ll want a loop, as in the below, even if not (yet!) sure what to put in that loop. So add some more pseudocode as a comment for now:</p>
 <pre><code>#include &lt;cs50.h&gt;
 #include &lt;stdio.h&gt;
 
-int calculate_quarters(int cents);
+int main(void)
+{
+    // Prompt the user for the pyramid's height
+    int n;
+    do
+    {
+        n = get_int("Height: ");
+    }
+    while (n &lt; 1);
+
+    // Print a pyramid of that height
+    for (int i = 0; i &lt; n; i++)
+    {
+        // Print row of bricks
+    }
+}
+</code></pre>
+<p>How to print that row of bricks? Well, wouldn’t it be nice if there were a function called <code>print_row</code> that could do just that? Let’s suppose that there is:</p>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void print_row(int bricks);
 
 int main(void)
 {
-    // Prompt the user for change owed, in cents
-    int cents;
+    // Prompt the user for the pyramid's height
+    int n;
     do
     {
-        cents = get_int("Change owed: ");
+        n = get_int("Height: ");
     }
-    while (cents &lt; 0);
+    while (n &lt; 1);
 
-    // Calculate how many quarters you should give customer
-    int quarters = calculate_quarters(cents);
-
-    // Subtract the value of those quarters from cents
-    cents = cents - (quarters * 25);
+    // Print a pyramid of that height
+    for (int i = 0; i &lt; n; i++)
+    {
+        // Print row of bricks
+    }
 }
 
-int calculate_quarters(int cents)
+void print_row(int bricks)
 {
-    // Calculate how many quarters you should give customer
-    int quarters = 0;
-    while (cents &gt;= 25)
-    {
-        quarters++;
-        cents = cents - 25;
-    }
-    return quarters;
+    // Print row of bricks
 }
 </code></pre>
-<p>A few problems down, and a few more to go! Notice a pattern you could re-use here?</p>
+<p>We could then call that function from <code>main</code>, as in the below:</p>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void print_row(int bricks);
+
+int main(void)
+{
+    // Prompt the user for the pyramid's height
+    int n;
+    do
+    {
+        n = get_int("Height: ");
+    }
+    while (n &lt; 1);
+
+    // Print a pyramid of that height
+    for (int i = 0; i &lt; n; i++)
+    {
+        // Print row of bricks
+        print_row(i + 1);
+    }
+}
+
+void print_row(int bricks)
+{
+    // Print row of bricks
+}
+</code></pre>
+<p>Why <code>i + 1</code>, though?</p>
+<p>Let’s now implement <code>print_row</code>:</p>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void print_row(int bricks);
+
+int main(void)
+{
+    // Prompt the user for the pyramid's height
+    int n;
+    do
+    {
+        n = get_int("Height: ");
+    }
+    while (n &lt; 1);
+
+    // Print a pyramid of that height
+    for (int i = 0; i &lt; n; i++)
+    {
+        // Print row of bricks
+        print_row(i + 1);
+    }
+}
+
+void print_row(int bricks)
+{
+    for (int i = 0; i &lt; bricks; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
+</code></pre>
+<p>Why the <code>\n</code> at the end, though?</p>
+<p>Unfortunately, this code prints a left-aligned pyramid, but you need a right-aligned one! Perhaps we should print some blank spaces before some of the bricks, to move them to the right? Let’s change <code>print_row</code> as follows so that it can print both:</p>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+
+void print_row(int spaces, int bricks);
+
+int main(void)
+{
+    // Prompt the user for the pyramid's height
+    int n;
+    do
+    {
+        n = get_int("Height: ");
+    }
+    while (n &lt; 1);
+
+    // Print a pyramid of that height
+    for (int i = 0; i &lt; n; i++)
+    {
+        // Print row of bricks
+    }
+}
+
+void print_row(int spaces, int bricks)
+{
+    // Print spaces
+
+    // Print bricks
+}
+</code></pre>
+<p>Some pseudocode now remains in both <code>main</code> and <code>print_row</code>, so that we leave to you!</p>
+<p>And consider whether you could factor out some of the code in <code>main</code> to a <code>get_height</code> function, too, that returns the <code>int</code> you need!</p>
+</section>
+<section id="walkthrough" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
+<p>Note this walkthrough specifies your program should prompt the user for a pyramid’s height and <em>re</em>-prompt if the user inputs a value less than 1 or greater than 8. The specification only requires you to re-prompt the user if they input a value less than 1.</p>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
-<p>For this program, try testing your code manually. It’s good practice:</p>
+<p>Does your code work as prescribed when you input:</p>
 <ul>
-<li>If you input <code>-1</code>, does your program prompt you again?</li>
-<li>If you input <code>0</code>, does your program output <code>0</code>?</li>
-<li>If you input <code>1</code>, does your program output <code>1</code> (i.e., one penny)?</li>
-<li>If you input <code>4</code>, does your program output <code>4</code> (i.e., four pennies)?</li>
-<li>If you input <code>5</code>, does your program output <code>1</code> (i.e., one nickel)?</li>
-<li>If you input <code>24</code>, does your program output <code>6</code> (i.e., two dimes and four pennies)?</li>
-<li>If you input <code>25</code>, does your program output <code>1</code> (i.e., one quarter)?</li>
-<li>If you input <code>26</code>, does your program output <code>2</code> (i.e., one quarter and one penny)?</li>
-<li>If you input <code>99</code>, does your program output <code>9</code> (i.e., three quarters, two dimes, and four pennies)?</li>
+<li><code>-1</code> or other negative numbers?</li>
+<li><code>0</code>?</li>
+<li><code>1</code> or other positive numbers?</li>
+<li>letters or words?</li>
+<li>no input at all, when you only hit Enter?</li>
 </ul>
 <section id="correctness" class="level3">
 <h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
 <p>In your terminal, execute the below to check your work’s correctness.</p>
-<pre><code>check50 cs50/problems/2025/x/cash
+<pre><code>check50 cs50/problems/2025/x/mario/less
 </code></pre>
 </section>
 <section id="style" class="level3">
 <h3 class="anchored" data-anchor-id="style">Style</h3>
 <p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<pre><code>style50 cash.c
+<pre><code>style50 mario.c
 </code></pre>
 </section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
 <p>In your terminal, execute the below to submit your work.</p>
-<pre><code>submit50 cs50/problems/2025/x/cash
+<pre><code>submit50 cs50/problems/2025/x/mario/less
 </code></pre>
 
 
@@ -1329,7 +1405,7 @@ int calculate_quarters(int cents)
 </div>   
     <div class="nav-footer-center">
 <p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.5_cash.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.3_mario1.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

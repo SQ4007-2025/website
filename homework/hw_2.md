@@ -10,31 +10,11 @@ title: "Homework week 2"
 
 🟢 [2.3 Mario](hw_2/2.3_mario1.html).
 
-🟢 [2.4 cash](hw_2/1.1_cash.html).
-
-
-1. Log into [submit.cs50.io](https://submit.cs50.io) using your GitHub account and click **Authorize cs50**, then close the tab.
-2. Log into [cs50.dev](https://cs50.dev/) using your GitHub account to access your very own “codespace.”
-3. Once your codespace has loaded, close any **Welcome** tabs that might have opened by default.
-4. Run `update50` in your codespace’s terminal window to ensure that your codespace is up-to-date and, if prompted, click **Rebuild now**.
-5. Complete [Hello, World](world/).
-6. Submit [Hello, It’s Me](me/).
-7. Submit one of:
-   * [this version of Mario](mario/less/), if feeling less comfortable
-   * [this version of Mario](mario/more/), if feeling more comfortable
-8. Submit one of:
-   * [Cash](cash/), if feeling less comfortable
-   * [Credit](credit/), if feeling more comfortable
-
-If you submit both versions of Mario, we’ll record the higher of your two scores. If you submit both Cash and Credit, we’ll record the higher of your two scores.
-
-## When to Do It
-
-By [2025-12-31T23:59:00+00:00](https://time.cs50.io/20251231T235900Z).
+🟢 [2.4 cash](hw_2/2.4_cash.html).
 
 ## Advice
 
-* Try out any of David’s programs from class via [Week 1](../../weeks/1/)’s source code.
+* Try out any of the programs from lectures via the source code tab on the [schedule page](module-schedule.html).
 * See CS50’s [style guide for C](https://cs50.readthedocs.io/style/c/) for tips on how to improve your code’s style.
 * If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking `help50` for help. For instance, if trying to compile `hello`, and
 
