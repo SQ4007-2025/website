@@ -688,19 +688,12 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#assignment-link" id="toc-assignment-link" class="nav-link active" data-scroll-target="#assignment-link">Assignment Link</a></li>
   <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link" data-scroll-target="#what-to-do">What to do</a></li>
-  <li><a href="#hello-world" id="toc-hello-world" class="nav-link" data-scroll-target="#hello-world">Hello, World</a></li>
-  <li><a href="#hello-world-1" id="toc-hello-world-1" class="nav-link" data-scroll-target="#hello-world-1">Hello, World</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#how-to-begin" id="toc-how-to-begin" class="nav-link" data-scroll-target="#how-to-begin">How to Begin</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
   <ul class="collapse">
   <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
   <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
   </ul></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.1_hello_world.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -732,21 +725,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-</section>
-<section id="hello-world" class="level1">
-<h1>Hello, World</h1>
-<p><strong>Week 1, Problem 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/1/world/</p>
-<hr>
-</section>
-<section id="hello-world-1" class="level1">
-<h1>Hello, World</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
 <p>Thanks to Professor <a href="https://en.wikipedia.org/wiki/Brian_Kernighan">Brian Kernighan</a>, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!</p>
-<p>In a file called <code>hello.c</code>, in a folder called <code>world</code>, implement a program in C that prints <code>hello, world\n</code>, and that’s it!</p>
-<p>Hint</p>
-<p>Here’s the actual code you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.</p>
+<ul>
+<li>In a file called <code>hello.c</code>, in a folder called <code>world</code>, implement a program in C that prints <code>hello, world\n</code>, and that’s it!</li>
+</ul>
+<blockquote class="blockquote">
+<p>Here’s the <strong>actual code</strong> you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.</p>
+</blockquote>
 <pre><code>#include &lt;stdio.h&gt;
 
 int main(void)
@@ -754,14 +739,8 @@ int main(void)
     printf("hello, world\n");
 }
 </code></pre>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-<p>Here’s a demo of what should happen when you compile and execute your program.</p>
-</section>
-<section id="how-to-begin" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-begin">How to Begin</h2>
-<p>Open <a href="https://cs50.dev/">VS Code</a>.</p>
+<p><strong>How to Begin</strong></p>
+<p>Click and accept the Homework Link above.</p>
 <p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
 <pre><code>$
 </code></pre>
@@ -786,10 +765,7 @@ int main(void)
 <pre><code>ls
 </code></pre>
 <p>which should list not only <code>hello.c</code> (which is source code) but also <code>hello</code> (which is machine code).</p>
-<p>If you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, though, try executing</p>
-<pre><code>help50 make hello
-</code></pre>
-<p>for advice.</p>
+<p>If you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, seek help.</p>
 <p>Once your code compiles successfully, you can execute your program with:</p>
 <pre><code>./hello
 </code></pre>
@@ -811,7 +787,6 @@ int main(void)
 <p>No need to submit this one!</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
