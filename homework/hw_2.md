@@ -4,13 +4,13 @@ title: "Homework week 2"
 
 ## What to do
 
-🟢 [2.1 Hello World](hw_2/2.1_hello_world.html).
+🟢 [2.1 Hello, World](hw_2/2.1_hello_world.html).
 
 🟢 [2.2 Hello, it's me](hw_2/2.2_hello_its_me.html).
 
 🟢 [2.3 Mario](hw_2/2.3_mario1.html).
 
-🟢 [2.4 cash](hw_2/2.4_cash.html).
+🟢 [2.4 Cash](hw_2/2.4_cash.html).
 
 ## Advice
 

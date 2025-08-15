@@ -1914,7 +1914,7 @@
     "href": "homework/hw_2.html",
     "title": "Homework week 2",
     "section": "",
-    "text": "🟢 2.1 Hello World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 cash.",
+    "text": "🟢 2.1 Hello, World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 Cash.",
     "crumbs": [
       "Homework",
       "Homework 02 🟢"
@@ -1925,7 +1925,7 @@
     "href": "homework/hw_2.html#what-to-do",
     "title": "Homework week 2",
     "section": "",
-    "text": "🟢 2.1 Hello World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 cash.",
+    "text": "🟢 2.1 Hello, World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 Cash.",
     "crumbs": [
       "Homework",
       "Homework 02 🟢"
@@ -2027,44 +2027,44 @@
     "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/mario/less"
   },
   {
-    "objectID": "homework/hw_2/2.1_hello_world.html",
-    "href": "homework/hw_2/2.1_hello_world.html",
-    "title": "Hello, World",
-    "section": "",
-    "text": "Week 1, Problem 1\nSource: https://cs50.harvard.edu/x/psets/1/world/"
+    "objectID": "homework/hw_2/2.1_hello_world.html#what-to-do",
+    "href": "homework/hw_2/2.1_hello_world.html#what-to-do",
+    "title": "2.1 Hello, World",
+    "section": "What to do",
+    "text": "What to do"
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#problem-to-solve",
     "href": "homework/hw_2/2.1_hello_world.html#problem-to-solve",
-    "title": "Hello, World",
+    "title": "2.1 Hello, World",
     "section": "Problem to Solve",
     "text": "Problem to Solve\nThanks to Professor Brian Kernighan, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!\nIn a file called hello.c, in a folder called world, implement a program in C that prints hello, world\\n, and that’s it!\nHint\nHere’s the actual code you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    printf(\"hello, world\\n\");\n}"
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#demo",
     "href": "homework/hw_2/2.1_hello_world.html#demo",
-    "title": "Hello, World",
+    "title": "2.1 Hello, World",
     "section": "Demo",
     "text": "Demo\nHere’s a demo of what should happen when you compile and execute your program."
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#how-to-begin",
     "href": "homework/hw_2/2.1_hello_world.html#how-to-begin",
-    "title": "Hello, World",
+    "title": "2.1 Hello, World",
     "section": "How to Begin",
     "text": "How to Begin\nOpen VS Code.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\n\nNext execute\nmkdir world\n\nto make a folder called world in your codespace.\nThen execute\ncd world\n\nto change directories into that folder. You should now see your terminal prompt as world/ $. You can now execute\ncode hello.c\n\nto create a file called hello.c in which you can write your code."
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#how-to-test",
     "href": "homework/hw_2/2.1_hello_world.html#how-to-test",
-    "title": "Hello, World",
+    "title": "2.1 Hello, World",
     "section": "How to Test",
     "text": "How to Test\nRecall that you can compile hello.c with:\nmake hello\n\nIf you don’t see an error message, it compiled successfully! You can confirm as much with\nls\n\nwhich should list not only hello.c (which is source code) but also hello (which is machine code).\nIf you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, though, try executing\nhelp50 make hello\n\nfor advice.\nOnce your code compiles successfully, you can execute your program with:\n./hello\n\n\nCorrectness\nExecute the below to evaluate the correctness of your code using check50, a command-line program that will output happy faces whenever your code passes CS50’s automated tests and sad faces whenever it doesn’t!\ncheck50 cs50/problems/2025/x/world\n\n\n\nStyle\nExecute the below to evaluate the style of your code using style50, a command-line program that will output additions (in green) and deletions (in red) that you should make to your program in order to improve its style. If you have trouble seeing those colors, style50 supports other modes too!\nstyle50 hello.c"
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#how-to-submit",
     "href": "homework/hw_2/2.1_hello_world.html#how-to-submit",
-    "title": "Hello, World",
+    "title": "2.1 Hello, World",
     "section": "How to Submit",
     "text": "How to Submit\nNo need to submit this one!"
   },
