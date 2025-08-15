@@ -1936,7 +1936,18 @@
     "href": "homework/hw_2.html#advice",
     "title": "Homework week 2",
     "section": "Advice",
-    "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee CS50’s style guide for C for tips on how to improve your code’s style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile hello, and\nmake hello\n\nis yielding errors, try running\nhelp50 make hello\n\ninstead!",
+    "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
+    "crumbs": [
+      "Homework",
+      "Homework 02 🟢"
+    ]
+  },
+  {
+    "objectID": "homework/hw_2.html#academic-integrity",
+    "href": "homework/hw_2.html#academic-integrity",
+    "title": "Homework week 2",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
       "Homework",
       "Homework 02 🟢"
@@ -1989,7 +2000,7 @@
     "href": "homework/hw_2/2.3_mario1.html#problem-to-solve",
     "title": "this version of Mario (less)",
     "section": "Problem to Solve",
-    "text": "Problem to Solve\nToward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.\n\n\n\nscreenshot of Mario jumping up a right-aligned pyramid\n\n\nIn a file called mario.c in a folder called mario-less, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nBut prompt the user for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:\n  #\n ##\n###\n\nRe-prompt the user, again and again as needed, if their input is not greater than 0 or not an int altogether.\nHints\n\nRecall that you can get an int from a user with get_int, which is declared in cs50.h.\nRecall that you can print a string with printf, which is declared in stdio.h."
+    "text": "Problem to Solve\nToward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.\n\n\n\nscreenshot of Mario jumping up a right-aligned pyramid\n\n\nIn a file called mario.c in a folder called mario, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nBut prompt the user for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:\n  #\n ##\n###\n\nRe-prompt the user, again and again as needed, if their input is not greater than 0 or not an int altogether.\nHints\n\nRecall that you can get an int from a user with get_int, which is declared in cs50.h.\nRecall that you can print a string with printf, which is declared in stdio.h."
   },
   {
     "objectID": "homework/hw_2/2.3_mario1.html#demo",
@@ -2032,27 +2043,6 @@
     "title": "2.1 Hello, World",
     "section": "What to do",
     "text": "What to do\nThanks to Professor Brian Kernighan, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!\n\nIn a file called hello.c, in a folder called world, implement a program in C that prints hello, world\\n, and that’s it!\n\n\nHint: Here’s the actual code you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.\n\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    printf(\"hello, world\\n\");\n}\n\nHow to Begin\nClick and accept the Homework Link above.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\n\nNext execute\nmkdir world\n\nto make a folder called world in your codespace.\nThen execute\ncd world\n\nto change directories into that folder. You should now see your terminal prompt as world/ $. You can now execute\ncode hello.c\n\nto create a file called hello.c in which you can write your code."
-  },
-  {
-    "objectID": "homework/hw_2/2.1_hello_world.html#problem-to-solve",
-    "href": "homework/hw_2/2.1_hello_world.html#problem-to-solve",
-    "title": "2.1 Hello, World",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nThanks to Professor Brian Kernighan, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!\nIn a file called hello.c, in a folder called world, implement a program in C that prints hello, world\\n, and that’s it!\nHint\nHere’s the actual code you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    printf(\"hello, world\\n\");\n}"
-  },
-  {
-    "objectID": "homework/hw_2/2.1_hello_world.html#demo",
-    "href": "homework/hw_2/2.1_hello_world.html#demo",
-    "title": "2.1 Hello, World",
-    "section": "Demo",
-    "text": "Demo\nHere’s a demo of what should happen when you compile and execute your program."
-  },
-  {
-    "objectID": "homework/hw_2/2.1_hello_world.html#how-to-begin",
-    "href": "homework/hw_2/2.1_hello_world.html#how-to-begin",
-    "title": "2.1 Hello, World",
-    "section": "How to Begin",
-    "text": "How to Begin\nOpen VS Code.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\n\nNext execute\nmkdir world\n\nto make a folder called world in your codespace.\nThen execute\ncd world\n\nto change directories into that folder. You should now see your terminal prompt as world/ $. You can now execute\ncode hello.c\n\nto create a file called hello.c in which you can write your code."
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#how-to-test",
@@ -2201,7 +2191,7 @@
     "href": "homework/hw_1/1.1_scratch.html#how-to-submit",
     "title": "1.1 Scratch",
     "section": "How to Submit",
-    "text": "How to Submit\n\nDownloaded your Scratch project as a file whose name ends in .sb3.\nLog into your GitHub account.\nUpload exactly one file named project.sb3 to the root of this repository.\nClick “Add file” → “Upload files” in your repository (your project.sb3 file).\nClick “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
+    "text": "How to Submit\n\nDownload your Scratch project as a file whose name ends in .sb3.\nClick and accept the Homework Link above.\nUpload exactly one file named project.sb3 to the root of the repository.\nClick “Add file” → “Upload files” in your repository (your project.sb3 file).\nClick “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
   },
   {
     "objectID": "homework/hw_1/1.1_scratch.html#advice",
