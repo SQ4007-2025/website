@@ -2,18 +2,18 @@
 title: "Tutorials week 6"
 ---
 
- ▶ 👨‍🏫 [Data structures](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.data_structures.pptx)
+▶ 👨‍🏫 [Data structures](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.data_structures.pdf)
 
- ▶ 👨‍🏫 [Doubly-linked lists](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.doubly-linked_lists.pptx)
+▶ 👨‍🏫 [Doubly-linked lists](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.doubly-linked_lists.pdf)
 
- ▶ 👨‍🏫 [Hash tables](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.hash_tables.pptx)
+▶ 👨‍🏫 [Hash tables](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.hash_tables.pdf)
 
- ▶ 👨‍🏫 [Queues](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.queues.pptx)
+▶ 👨‍🏫 [Queues](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.queues.pdf)
 
- ▶ 👨‍🏫 [Singly-linked lists](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.singly-linked_lists.pptx)
+▶ 👨‍🏫 [Singly-linked lists](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.singly-linked_lists.pdf)
 
- ▶ 👨‍🏫 [Stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.stacks.pptx)
+▶ 👨‍🏫 [Stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.stacks.pdf)
 
- ▶ 👨‍🏫 [Structures](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.structures.pptx)
+▶ 👨‍🏫 [Structures](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.structures.pdf)
 
- ▶ 👨‍🏫 [Tries](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.tries.pptx)
+▶ 👨‍🏫 [Tries](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_6/6.tries.pdf)

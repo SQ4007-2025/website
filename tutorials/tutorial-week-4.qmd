@@ -2,16 +2,16 @@
 title: "Tutorials week 4"
 ---
 
-▶ 👨‍🏫 [Binary search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.binary_search.pptx)
+▶ 👨‍🏫 [Binary search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.binary_search.pdf)
 
-▶ 👨‍🏫 [Bubble sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.bubble_sort.pptx)
+▶ 👨‍🏫 [Bubble sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.bubble_sort.pdf)
 
-▶ 👨‍🏫 [Call stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.call_stacks.pptx)
+▶ 👨‍🏫 [Call stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.call_stacks.pdf)
 
-▶ 👨‍🏫 [Linear search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.linear_search.pptx)
+▶ 👨‍🏫 [Linear search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.linear_search.pdf)
 
-▶ 👨‍🏫 [Merge sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pptx)
+▶ 👨‍🏫 [Merge sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pdf)
 
-▶ 👨‍🏫 [Recursion](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pptx)
+▶ 👨‍🏫 [Recursion](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pdf)
 
-▶ 👨‍🏫 [Selection sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.selection_sort.pptx)
+▶ 👨‍🏫 [Selection sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.selection_sort.pdf)
