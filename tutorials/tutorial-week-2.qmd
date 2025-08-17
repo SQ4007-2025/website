@@ -2,14 +2,14 @@
 title: "Tutorials week 2"
 ---
 
-▶ 👨‍🏫 [Command line](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.command_line.pptx)
+▶ 👨‍🏫 [Command line](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.command_line.pdf)
 
-▶ 👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pptx)
+▶ 👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
 
-▶ 👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pptx)
+▶ 👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pdf)
 
-▶ 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pptx)
+▶ 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
 
-▶ 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pptx)
+▶ 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
 
-▶ 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pptx)
+▶ 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pdf)
