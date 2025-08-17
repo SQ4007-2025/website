@@ -2,6 +2,6 @@
 title: "Tutorials week 10"
 ---
 
- ▶ 👨‍🏫 [AJAX](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_10/10.ajax.pptx)
+▶ 👨‍🏫 [AJAX](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_10/10.ajax.pdf)
 
- ▶ 👨‍🏫 [Flask](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_10/10.flask.pptx)
+▶ 👨‍🏫 [Flask](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_10/10.flask.pdf)
