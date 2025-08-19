@@ -2,6 +2,10 @@
 title: "Homework week 2"
 ---
 
+## [Homework Link for turn-in]()
+
+**Note all homeworks for each week will be turned in via the same Github Reposity via the link**
+
 ## What to do
 
 🟢 [2.1 Hello, World](hw_2/2.1_hello_world.html).

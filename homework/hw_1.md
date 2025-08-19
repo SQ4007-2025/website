@@ -2,6 +2,8 @@
 title: "Homework week 1"
 ---
 
+## [Homework Link for turn-in](https://classroom.github.com/a/y-bJCLIw)
+
 ## What to do
 
 🐈 [1.1 Scratch](hw_1/1.1_scratch.html).
