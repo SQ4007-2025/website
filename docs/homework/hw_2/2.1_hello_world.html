@@ -721,15 +721,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-link" id="toc-assignment-link" class="nav-link active" data-scroll-target="#assignment-link">Assignment Link</a></li>
-  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link" data-scroll-target="#what-to-do">What to do</a></li>
-  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.1_hello_world.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -756,14 +750,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="assignment-link" class="level2">
-<h2 class="anchored" data-anchor-id="assignment-link"><a href="">Assignment Link</a></h2>
-</section>
 <section id="what-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Thanks to Professor <a href="https://en.wikipedia.org/wiki/Brian_Kernighan">Brian Kernighan</a>, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!</p>
 <ul>
 <li>In a file called <code>hello.c</code>, in a folder called <code>world</code>, implement a program in C that prints <code>hello, world\n</code>, and that’s it!</li>
+</ul>
+</section>
+<section id="how-to-submit" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
+<ul>
+<li>Click and accept the Homework Link on the homework 2 main page.</li>
+<li>Complete each assignment for week 2 in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
 </ul>
 </section>
 <section id="advice" class="level2">
@@ -778,22 +778,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"hello, world</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>How to Begin</strong></p>
-<ul>
-<li>Click and accept the Homework Link.</li>
-</ul>
+<p>Click and accept the Homework Link.</p>
 <p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> world</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>to make a folder called <code>world</code> in (the default or “root” directory of) your codespace.</p>
+<p>This makes a folder called <code>world</code> in (the default or “root” directory of) your codespace.</p>
 <p>Then execute</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> world</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>to change directories into that folder. You should now see your terminal prompt as <code>world/ $</code>. You can now execute</p>
+<p>This changes directories into that folder. You should now see your terminal prompt as <code>world/ $</code>. You can now execute</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> hello.c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a file called <code>hello.c</code> in which you can write your code.</p>
-</section>
-<section id="how-to-test" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>Recall that you can compile <code>hello.c</code> with:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> hello</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you don’t see an error message, it compiled successfully! You can confirm as much with</p>
@@ -802,22 +797,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, seek help.</p>
 <p>Once your code compiles successfully, you can execute your program with:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./hello</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<p>Execute the below to evaluate the correctness of your code using <code>check50</code>, a command-line program that will output happy faces whenever your code passes CS50’s automated tests and sad faces whenever it doesn’t!</p>
-<pre><code>check50 cs50/problems/2025/x/world
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<p>Execute the below to evaluate the style of your code using <code>style50</code>, a command-line program that will output additions (in green) and deletions (in red) that you should make to your program in order to improve its style. If you have trouble seeing those colors, <code>style50</code> supports other <a href="https://cs50.readthedocs.io/style50/">modes</a> too!</p>
-<pre><code>style50 hello.c
-</code></pre>
-</section>
-</section>
-<section id="how-to-submit" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<p>No need to submit this one!</p>
+<p>Save and click “Commit changes”.</p>
 
 
 </section>

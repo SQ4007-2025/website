@@ -1914,7 +1914,18 @@
     "href": "homework/hw_2.html",
     "title": "Homework week 2",
     "section": "",
-    "text": "🟢 2.1 Hello, World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 Cash.",
+    "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
+    "crumbs": [
+      "Homework",
+      "Homework 02 🟢"
+    ]
+  },
+  {
+    "objectID": "homework/hw_2.html#homework-link-for-turn-in",
+    "href": "homework/hw_2.html#homework-link-for-turn-in",
+    "title": "Homework week 2",
+    "section": "",
+    "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
       "Homework",
       "Homework 02 🟢"
@@ -1924,8 +1935,8 @@
     "objectID": "homework/hw_2.html#what-to-do",
     "href": "homework/hw_2.html#what-to-do",
     "title": "Homework week 2",
-    "section": "",
-    "text": "🟢 2.1 Hello, World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 Cash.",
+    "section": "What to do",
+    "text": "What to do\n🟢 2.1 Hello, World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 Cash.",
     "crumbs": [
       "Homework",
       "Homework 02 🟢"
@@ -1991,79 +2002,72 @@
   {
     "objectID": "homework/hw_2/2.3_mario1.html",
     "href": "homework/hw_2/2.3_mario1.html",
-    "title": "this version of Mario (less)",
+    "title": "2.3 Mario",
     "section": "",
-    "text": "Week 1, Problem 3\nSource: https://cs50.harvard.edu/x/psets/1/mario/less/"
+    "text": "Toward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.\n\n\n\nscreenshot of Mario jumping up a right-aligned pyramid\n\n\nIn a file called mario.c in a folder called mario, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nBut prompt the user for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:\n  #\n ##\n###\n\nRe-prompt the user, again and again as needed, if their input is not greater than 0 or not an int altogether."
   },
   {
-    "objectID": "homework/hw_2/2.3_mario1.html#problem-to-solve",
-    "href": "homework/hw_2/2.3_mario1.html#problem-to-solve",
-    "title": "this version of Mario (less)",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nToward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.\n\n\n\nscreenshot of Mario jumping up a right-aligned pyramid\n\n\nIn a file called mario.c in a folder called mario, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nBut prompt the user for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:\n  #\n ##\n###\n\nRe-prompt the user, again and again as needed, if their input is not greater than 0 or not an int altogether.\nHints\n\nRecall that you can get an int from a user with get_int, which is declared in cs50.h.\nRecall that you can print a string with printf, which is declared in stdio.h."
-  },
-  {
-    "objectID": "homework/hw_2/2.3_mario1.html#demo",
-    "href": "homework/hw_2/2.3_mario1.html#demo",
-    "title": "this version of Mario (less)",
-    "section": "Demo",
-    "text": "Demo"
-  },
-  {
-    "objectID": "homework/hw_2/2.3_mario1.html#advice",
-    "href": "homework/hw_2/2.3_mario1.html#advice",
-    "title": "this version of Mario (less)",
-    "section": "Advice",
-    "text": "Advice\nClick the below toggles to read some advice!\nWrite some code that you know will compile\nEven though this program won’t do anything, it should at least compile with make!\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n\n}\n\nWrite some pseudocode before writing more code\nIf unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really two problems:\n\nPrompt the user for the pyramid’s height\nPrint a pyramid of that height\n\nSo write some pseudcode as comments that remind you to do just that:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n\n    // Print a pyramid of that height\n}\n\nConvert the pseudocode to code\nFirst, consider how you might prompt the user for the pyramid’s height. Recall that a do while loop is helpful when you want to do something at least once, and possibly again and again, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n}\n\nSecond, consider how you might print a pyramid of that height, from top to bottom. Notice how the first row should have one brick, the second row should have two bricks, and so on. Odds are you’ll want a loop, as in the below, even if not (yet!) sure what to put in that loop. So add some more pseudocode as a comment for now:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nHow to print that row of bricks? Well, wouldn’t it be nice if there were a function called print_row that could do just that? Let’s suppose that there is:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nvoid print_row(int bricks)\n{\n    // Print row of bricks\n}\n\nWe could then call that function from main, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n        print_row(i + 1);\n    }\n}\n\nvoid print_row(int bricks)\n{\n    // Print row of bricks\n}\n\nWhy i + 1, though?\nLet’s now implement print_row:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n        print_row(i + 1);\n    }\n}\n\nvoid print_row(int bricks)\n{\n    for (int i = 0; i &lt; bricks; i++)\n    {\n        printf(\"#\");\n    }\n    printf(\"\\n\");\n}\n\nWhy the \\n at the end, though?\nUnfortunately, this code prints a left-aligned pyramid, but you need a right-aligned one! Perhaps we should print some blank spaces before some of the bricks, to move them to the right? Let’s change print_row as follows so that it can print both:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int spaces, int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nvoid print_row(int spaces, int bricks)\n{\n    // Print spaces\n\n    // Print bricks\n}\n\nSome pseudocode now remains in both main and print_row, so that we leave to you!\nAnd consider whether you could factor out some of the code in main to a get_height function, too, that returns the int you need!"
-  },
-  {
-    "objectID": "homework/hw_2/2.3_mario1.html#walkthrough",
-    "href": "homework/hw_2/2.3_mario1.html#walkthrough",
-    "title": "this version of Mario (less)",
-    "section": "Walkthrough",
-    "text": "Walkthrough\nNote this walkthrough specifies your program should prompt the user for a pyramid’s height and re-prompt if the user inputs a value less than 1 or greater than 8. The specification only requires you to re-prompt the user if they input a value less than 1."
-  },
-  {
-    "objectID": "homework/hw_2/2.3_mario1.html#how-to-test",
-    "href": "homework/hw_2/2.3_mario1.html#how-to-test",
-    "title": "this version of Mario (less)",
-    "section": "How to Test",
-    "text": "How to Test\nDoes your code work as prescribed when you input:\n\n-1 or other negative numbers?\n0?\n1 or other positive numbers?\nletters or words?\nno input at all, when you only hit Enter?\n\n\nCorrectness\nIn your terminal, execute the below to check your work’s correctness.\ncheck50 cs50/problems/2025/x/mario/less\n\n\n\nStyle\nExecute the below to evaluate the style of your code using style50.\nstyle50 mario.c"
+    "objectID": "homework/hw_2/2.3_mario1.html#what-to-do",
+    "href": "homework/hw_2/2.3_mario1.html#what-to-do",
+    "title": "2.3 Mario",
+    "section": "",
+    "text": "Toward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.\n\n\n\nscreenshot of Mario jumping up a right-aligned pyramid\n\n\nIn a file called mario.c in a folder called mario, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nBut prompt the user for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:\n  #\n ##\n###\n\nRe-prompt the user, again and again as needed, if their input is not greater than 0 or not an int altogether."
   },
   {
     "objectID": "homework/hw_2/2.3_mario1.html#how-to-submit",
     "href": "homework/hw_2/2.3_mario1.html#how-to-submit",
-    "title": "this version of Mario (less)",
+    "title": "2.3 Mario",
     "section": "How to Submit",
-    "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/mario/less"
+    "text": "How to Submit\n\nClick and accept the Homework Link on the homework 2 main page.\nComplete each assignment for week 2 in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback.# this version of Mario (less)"
+  },
+  {
+    "objectID": "homework/hw_2/2.3_mario1.html#advice",
+    "href": "homework/hw_2/2.3_mario1.html#advice",
+    "title": "2.3 Mario",
+    "section": "Advice",
+    "text": "Advice\n\nRecall that you can get an int from a user with get_int, which is declared in cs50.h.\nRecall that you can print a string with printf, which is declared in stdio.h."
+  },
+  {
+    "objectID": "homework/hw_2/2.3_mario1.html#demo",
+    "href": "homework/hw_2/2.3_mario1.html#demo",
+    "title": "2.3 Mario",
+    "section": "Demo",
+    "text": "Demo"
+  },
+  {
+    "objectID": "homework/hw_2/2.3_mario1.html#advice-1",
+    "href": "homework/hw_2/2.3_mario1.html#advice-1",
+    "title": "2.3 Mario",
+    "section": "Advice",
+    "text": "Advice\n\nWrite some code that you know will compile\nEven though this program won’t do anything, it should at least compile with make!\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n\n}\n\n\n\nWrite some pseudocode before writing more code\nIf unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really two problems:\n\nPrompt the user for the pyramid’s height\nPrint a pyramid of that height\n\nSo write some pseudcode as comments that remind you to do just that:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n\n    // Print a pyramid of that height\n}\n\n\n\nConvert the pseudocode to code\nFirst, consider how you might prompt the user for the pyramid’s height. Recall that a do while loop is helpful when you want to do something at least once, and possibly again and again, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n}\n\nSecond, consider how you might print a pyramid of that height, from top to bottom. Notice how the first row should have one brick, the second row should have two bricks, and so on. Odds are you’ll want a loop, as in the below, even if not (yet!) sure what to put in that loop. So add some more pseudocode as a comment for now:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nHow to print that row of bricks? Well, wouldn’t it be nice if there were a function called print_row that could do just that? Let’s suppose that there is:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nvoid print_row(int bricks)\n{\n    // Print row of bricks\n}\n\nWe could then call that function from main, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n        print_row(i + 1);\n    }\n}\n\nvoid print_row(int bricks)\n{\n    // Print row of bricks\n}\n\nWhy i + 1, though?\nLet’s now implement print_row:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n        print_row(i + 1);\n    }\n}\n\nvoid print_row(int bricks)\n{\n    for (int i = 0; i &lt; bricks; i++)\n    {\n        printf(\"#\");\n    }\n    printf(\"\\n\");\n}\n\nWhy the \\n at the end, though?\nUnfortunately, this code prints a left-aligned pyramid, but you need a right-aligned one! Perhaps we should print some blank spaces before some of the bricks, to move them to the right? Let’s change print_row as follows so that it can print both:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nvoid print_row(int spaces, int bricks);\n\nint main(void)\n{\n    // Prompt the user for the pyramid's height\n    int n;\n    do\n    {\n        n = get_int(\"Height: \");\n    }\n    while (n &lt; 1);\n\n    // Print a pyramid of that height\n    for (int i = 0; i &lt; n; i++)\n    {\n        // Print row of bricks\n    }\n}\n\nvoid print_row(int spaces, int bricks)\n{\n    // Print spaces\n\n    // Print bricks\n}\n\nSome pseudocode now remains in both main and print_row, so that we leave to you!\nAnd consider whether you could factor out some of the code in main to a get_height function, too, that returns the int you need!\nNote this walkthrough specifies your program should prompt the user for a pyramid’s height and re-prompt if the user inputs a value less than 1 or greater than 8. The specification only requires you to re-prompt the user if they input a value less than 1.\nTests\nDoes your code work as prescribed when you input:\n\n-1 or other negative numbers?\n0?\n1 or other positive numbers?\nletters or words?\nno input at all, when you only hit Enter?"
+  },
+  {
+    "objectID": "homework/hw_2/2.1_hello_world.html",
+    "href": "homework/hw_2/2.1_hello_world.html",
+    "title": "2.1 Hello, World",
+    "section": "",
+    "text": "Thanks to Professor Brian Kernighan, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!\n\nIn a file called hello.c, in a folder called world, implement a program in C that prints hello, world\\n, and that’s it!"
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#what-to-do",
     "href": "homework/hw_2/2.1_hello_world.html#what-to-do",
     "title": "2.1 Hello, World",
-    "section": "What to do",
-    "text": "What to do\nThanks to Professor Brian Kernighan, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!\n\nIn a file called hello.c, in a folder called world, implement a program in C that prints hello, world\\n, and that’s it!"
-  },
-  {
-    "objectID": "homework/hw_2/2.1_hello_world.html#advice",
-    "href": "homework/hw_2/2.1_hello_world.html#advice",
-    "title": "2.1 Hello, World",
-    "section": "Advice",
-    "text": "Advice\n\nHint: Here’s the actual code you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.\n\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    printf(\"hello, world\\n\");\n}\nHow to Begin\n\nClick and accept the Homework Link.\n\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\nNext execute\nmkdir world\nto make a folder called world in (the default or “root” directory of) your codespace.\nThen execute\ncd world\nto change directories into that folder. You should now see your terminal prompt as world/ $. You can now execute\ntouch hello.c\nto create a file called hello.c in which you can write your code."
-  },
-  {
-    "objectID": "homework/hw_2/2.1_hello_world.html#how-to-test",
-    "href": "homework/hw_2/2.1_hello_world.html#how-to-test",
-    "title": "2.1 Hello, World",
-    "section": "How to Test",
-    "text": "How to Test\nRecall that you can compile hello.c with:\nmake hello\nIf you don’t see an error message, it compiled successfully! You can confirm as much with\nls\nwhich should list not only hello.c (which is source code) but also hello (which is machine code).\nIf you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, seek help.\nOnce your code compiles successfully, you can execute your program with:\n./hello\n\nCorrectness\nExecute the below to evaluate the correctness of your code using check50, a command-line program that will output happy faces whenever your code passes CS50’s automated tests and sad faces whenever it doesn’t!\ncheck50 cs50/problems/2025/x/world\n\n\n\nStyle\nExecute the below to evaluate the style of your code using style50, a command-line program that will output additions (in green) and deletions (in red) that you should make to your program in order to improve its style. If you have trouble seeing those colors, style50 supports other modes too!\nstyle50 hello.c"
+    "section": "",
+    "text": "Thanks to Professor Brian Kernighan, “hello, world” has been implemented in hundreds of languages. Let’s add your implementation to the list!\n\nIn a file called hello.c, in a folder called world, implement a program in C that prints hello, world\\n, and that’s it!"
   },
   {
     "objectID": "homework/hw_2/2.1_hello_world.html#how-to-submit",
     "href": "homework/hw_2/2.1_hello_world.html#how-to-submit",
     "title": "2.1 Hello, World",
     "section": "How to Submit",
-    "text": "How to Submit\nNo need to submit this one!"
+    "text": "How to Submit\n\nClick and accept the Homework Link on the homework 2 main page.\nComplete each assignment for week 2 in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
+  },
+  {
+    "objectID": "homework/hw_2/2.1_hello_world.html#advice",
+    "href": "homework/hw_2/2.1_hello_world.html#advice",
+    "title": "2.1 Hello, World",
+    "section": "Advice",
+    "text": "Advice\n\nHint: Here’s the actual code you should write! (Quite the hint, huh?) Best to type it yourself, though, rather than copy/paste, so that you start to develop some “muscle memory” for writing code.\n\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    printf(\"hello, world\\n\");\n}\nHow to Begin\nClick and accept the Homework Link.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\nNext execute\nmkdir world\nThis makes a folder called world in (the default or “root” directory of) your codespace.\nThen execute\ncd world\nThis changes directories into that folder. You should now see your terminal prompt as world/ $. You can now execute\ntouch hello.c\nto create a file called hello.c in which you can write your code.\nRecall that you can compile hello.c with:\nmake hello\nIf you don’t see an error message, it compiled successfully! You can confirm as much with\nls\nwhich should list not only hello.c (which is source code) but also hello (which is machine code).\nIf you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, seek help.\nOnce your code compiles successfully, you can execute your program with:\n./hello\nSave and click “Commit changes”."
   },
   {
     "objectID": "homework/hw_10/10.2_finance.html",
@@ -2143,22 +2147,11 @@
     "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/finance\n\n\nWhy does my submission pass check50, but shows “No results” in my Gradebook after running submit50?\nIn some cases, submit50 may not grade the assignment due to (1) inconsistent formatting in your app.py file, and/or (2) additional, unneeded files being submitted with the problem set. To fix these issues, run style50 app.py in the finance folder. Address any issues that are revealed. Next, examine the contents of your finance folder. Delete extraneous files, such as flask sessions or other files that are not part of your implementation of the problem set. Further, run check50 again to ensure your submission still functions. Finally, run the submit50 command above again. Your result will appear in your Gradebook within a few minutes.\nPlease note that if there is a numerical score next to your finance submission in the submissions area of your Gradebook, the procedure discussed above does not apply to you. Likely, you have not fully addressed the requirements of the problem set and should rely upon check50 for clues as to what work remains."
   },
   {
-    "objectID": "homework/hw_1.html",
-    "href": "homework/hw_1.html",
-    "title": "Homework week 1",
-    "section": "",
-    "text": "🐈 1.1 Scratch.",
-    "crumbs": [
-      "Homework",
-      "Homework 01 🐈"
-    ]
-  },
-  {
     "objectID": "homework/hw_1.html#what-to-do",
     "href": "homework/hw_1.html#what-to-do",
     "title": "Homework week 1",
-    "section": "",
-    "text": "🐈 1.1 Scratch.",
+    "section": "What to do",
+    "text": "What to do\n🐈 1.1 Scratch.",
     "crumbs": [
       "Homework",
       "Homework 01 🐈"
@@ -2187,18 +2180,25 @@
     ]
   },
   {
+    "objectID": "homework/hw_1/1.1_scratch.html",
+    "href": "homework/hw_1/1.1_scratch.html",
+    "title": "1.1 Scratch",
+    "section": "",
+    "text": "Create your own adventure! Your assignment, quite simply, is to implement in Scratch, at scratch.mit.edu, any project of your choice, be it an interactive story, game, animation, or anything else, subject only to the following requirements:\n\nYour project must use at least two sprites, at least one of which must not be a cat.\nYour project must have at least three scripts total (i.e., not necessarily three per sprite).\nYour project must use at least one conditional, at least one loop, and at least one variable.\nYour project must use at least one custom block that you have made yourself (via Make a Block), which must take at least one input.\nYour project should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than Oscartime and Ivy’s Hardest Game.\n\nTo meet these requirements, you will probably need to use a few dozen puzzle pieces overall. And your code should ideally be not only correct but also well-designed. If one of your scripts is getting a bit long, try to break it up into multiple scripts (each of which does something specific). And try to leverage “abstraction” where possible: if you can imagine giving a descriptive name to a sequence of blocks (e.g., meow), those could probably be moved to a custom block!"
+  },
+  {
     "objectID": "homework/hw_1/1.1_scratch.html#what-to-do",
     "href": "homework/hw_1/1.1_scratch.html#what-to-do",
     "title": "1.1 Scratch",
-    "section": "What to do",
-    "text": "What to do\nCreate your own adventure! Your assignment, quite simply, is to implement in Scratch, at scratch.mit.edu, any project of your choice, be it an interactive story, game, animation, or anything else, subject only to the following requirements:\n\nYour project must use at least two sprites, at least one of which must not be a cat.\nYour project must have at least three scripts total (i.e., not necessarily three per sprite).\nYour project must use at least one conditional, at least one loop, and at least one variable.\nYour project must use at least one custom block that you have made yourself (via Make a Block), which must take at least one input.\nYour project should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than Oscartime and Ivy’s Hardest Game.\n\nTo meet these requirements, you will probably need to use a few dozen puzzle pieces overall. And your code should ideally be not only correct but also well-designed. If one of your scripts is getting a bit long, try to break it up into multiple scripts (each of which does something specific). And try to leverage “abstraction” where possible: if you can imagine giving a descriptive name to a sequence of blocks (e.g., meow), those could probably be moved to a custom block!"
+    "section": "",
+    "text": "Create your own adventure! Your assignment, quite simply, is to implement in Scratch, at scratch.mit.edu, any project of your choice, be it an interactive story, game, animation, or anything else, subject only to the following requirements:\n\nYour project must use at least two sprites, at least one of which must not be a cat.\nYour project must have at least three scripts total (i.e., not necessarily three per sprite).\nYour project must use at least one conditional, at least one loop, and at least one variable.\nYour project must use at least one custom block that you have made yourself (via Make a Block), which must take at least one input.\nYour project should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than Oscartime and Ivy’s Hardest Game.\n\nTo meet these requirements, you will probably need to use a few dozen puzzle pieces overall. And your code should ideally be not only correct but also well-designed. If one of your scripts is getting a bit long, try to break it up into multiple scripts (each of which does something specific). And try to leverage “abstraction” where possible: if you can imagine giving a descriptive name to a sequence of blocks (e.g., meow), those could probably be moved to a custom block!"
   },
   {
     "objectID": "homework/hw_1/1.1_scratch.html#how-to-submit",
     "href": "homework/hw_1/1.1_scratch.html#how-to-submit",
     "title": "1.1 Scratch",
     "section": "How to Submit",
-    "text": "How to Submit\n\nDownload your Scratch project as a file whose name ends in .sb3.\nClick and accept the Homework Link above.\nUpload exactly one file named project.sb3 to the root of the repository.\nClick “Add file” → “Upload files” in your repository (your project.sb3 file).\nClick “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
+    "text": "How to Submit\n\nDownload your Scratch project as a file whose name ends in .sb3.\nClick and accept the Homework Link on the homework 1 main page.\nUpload exactly one file named project.sb3 to the root of the repository.\nClick “Add file” → “Upload files” in your repository (your project.sb3 file).\nClick “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
   },
   {
     "objectID": "homework/hw_1/1.1_scratch.html#advice",
@@ -2292,100 +2292,58 @@
   {
     "objectID": "homework/hw_2/2.2_hello_its_me.html",
     "href": "homework/hw_2/2.2_hello_its_me.html",
-    "title": "Hello, It’s Me",
+    "title": "2.2 Hello, It’s Me",
     "section": "",
-    "text": "Week 1, Problem 2\nSource: https://cs50.harvard.edu/x/psets/1/me/"
+    "text": "In a file called hello.c, in a folder called me, implement a program in C that prompts the user for their name and then says hello to that user. For instance, if the user’s name is Adele, your program should print hello, Adele\\n!"
   },
   {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#problem-to-solve",
-    "href": "homework/hw_2/2.2_hello_its_me.html#problem-to-solve",
-    "title": "Hello, It’s Me",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nIn a file called hello.c, in a folder called me, implement a program in C that prompts the user for their name and then says hello to that user. For instance, if the user’s name is Adele, your program should print hello, Adele\\n!\nHints\n\nRecall that you can get a string from a user with get_string, which is declared in cs50.h.\nRecall that you can print a string with printf, which is declared in stdio.h.\nRecall that you can format a string with printf with %s."
-  },
-  {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#demo",
-    "href": "homework/hw_2/2.2_hello_its_me.html#demo",
-    "title": "Hello, It’s Me",
-    "section": "Demo",
-    "text": "Demo"
-  },
-  {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#how-to-begin",
-    "href": "homework/hw_2/2.2_hello_its_me.html#how-to-begin",
-    "title": "Hello, It’s Me",
-    "section": "How to Begin",
-    "text": "How to Begin\nExecute cd by itself in your terminal window. You should find that your terminal window’s prompt resembles the below:\n$\n\nNext execute\nmkdir me\n\nto make a folder called me in your codespace.\nThen execute\ncd me\n\nto change directories into that folder. You should now see your terminal prompt as me/ $. You can now execute\ncode hello.c\n\nto create a file called hello.c in which you can write your code."
-  },
-  {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#walkthrough",
-    "href": "homework/hw_2/2.2_hello_its_me.html#walkthrough",
-    "title": "Hello, It’s Me",
-    "section": "Walkthrough",
-    "text": "Walkthrough\nHere’s a “walkthrough” (i.e., tour) of this problem, if you’d like a verbal overview of what to do too!"
-  },
-  {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#how-to-test",
-    "href": "homework/hw_2/2.2_hello_its_me.html#how-to-test",
-    "title": "Hello, It’s Me",
-    "section": "How to Test",
-    "text": "How to Test\n\nCorrectness\nIn your terminal, execute the below to check your work’s correctness.\ncheck50 cs50/problems/2025/x/me\n\n\n\nStyle\nstyle50 hello.c"
+    "objectID": "homework/hw_2/2.2_hello_its_me.html#what-to-do",
+    "href": "homework/hw_2/2.2_hello_its_me.html#what-to-do",
+    "title": "2.2 Hello, It’s Me",
+    "section": "",
+    "text": "In a file called hello.c, in a folder called me, implement a program in C that prompts the user for their name and then says hello to that user. For instance, if the user’s name is Adele, your program should print hello, Adele\\n!"
   },
   {
     "objectID": "homework/hw_2/2.2_hello_its_me.html#how-to-submit",
     "href": "homework/hw_2/2.2_hello_its_me.html#how-to-submit",
-    "title": "Hello, It’s Me",
+    "title": "2.2 Hello, It’s Me",
     "section": "How to Submit",
-    "text": "How to Submit\nsubmit50 cs50/problems/2025/x/me"
+    "text": "How to Submit\n\nClick and accept the Homework Link on the homework 2 main page.\nComplete each assignment for week 2 in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
+  },
+  {
+    "objectID": "homework/hw_2/2.2_hello_its_me.html#advice",
+    "href": "homework/hw_2/2.2_hello_its_me.html#advice",
+    "title": "2.2 Hello, It’s Me",
+    "section": "Advice",
+    "text": "Advice\n\nHints * Recall that you can get a string from a user with get_string, which is declared in cs50.h. * Recall that you can print a string with printf, which is declared in stdio.h. * Recall that you can format a string with printf with %s.\n\nExecute cd by itself in your terminal window. You should find that your terminal window’s prompt resembles the below:\n$\nNext execute\nmkdir me\nto make a folder called me in your codespace.\nThen execute\ncd me\nto change directories into that folder. You should now see your terminal prompt as me/ $. You can now execute\ntouch hello.c\nto create a file called hello.c in which you can write your code."
   },
   {
     "objectID": "homework/hw_2/2.4_cash.html",
     "href": "homework/hw_2/2.4_cash.html",
-    "title": "Cash",
+    "title": "2.4 Cash",
     "section": "",
-    "text": "Week 1, Problem 5\nSource: https://cs50.harvard.edu/x/psets/1/cash/"
+    "text": "US coins\n\n\nSuppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You’ll need to pay them their “change,” the amount leftover after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you’re dispensing for each customer, lest you run out (or annoy the customer!). In a file called cash.c in a folder called cash, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:\nChange owed: 25\n1\n\nBut prompt the user for an int greater than 0, so that the program works for any amount of change:\nChange owed: 70\n4\n\nRe-prompt the user, again and again as needed, if their input is not greater than or equal to 0 (or if their input isn’t an int at all!).\nGreedy Algorithms\nFortunately, computer science has given cashiers everywhere ways to minimize numbers of coins due: greedy algorithms.\nAccording to the National Institute of Standards and Technology (NIST), a greedy algorithm is one “that always takes the best immediate, or local, solution while finding an answer. Greedy algorithms find the overall, or globally, optimal solution for some optimization problems, but may find less-than-optimal solutions for some instances of other problems.”\nWhat’s all that mean? Well, suppose that a cashier owes a customer some change and in that cashier’s drawer are quarters (25¢), dimes (10¢), nickels (5¢), and pennies (1¢). The problem to be solved is to decide which coins and how many of each to hand to the customer. Think of a “greedy” cashier as one who wants to take the biggest bite out of this problem as possible with each coin they take out of the drawer. For instance, if some customer is owed 41¢, the biggest first (i.e., best immediate, or local) bite that can be taken is 25¢. (That bite is “best” inasmuch as it gets us closer to 0¢ faster than any other coin would.) Note that a bite of this size would whittle what was a 41¢ problem down to a 16¢ problem, since 41 - 25 = 16. That is, the remainder is a similar but smaller problem. Needless to say, another 25¢ bite would be too big (assuming the cashier prefers not to lose money), and so our greedy cashier would move on to a bite of size 10¢, leaving him or her with a 6¢ problem. At that point, greed calls for one 5¢ bite followed by one 1¢ bite, at which point the problem is solved. The customer receives one quarter, one dime, one nickel, and one penny: four coins in total.\nIt turns out that this greedy approach (i.e., algorithm) is not only locally optimal but also globally so for America’s currency (and also the European Union’s). That is, so long as a cashier has enough of each coin, this largest-to-smallest approach will yield the fewest coins possible. How few? Well, you tell us!"
   },
   {
-    "objectID": "homework/hw_2/2.4_cash.html#problem-to-solve",
-    "href": "homework/hw_2/2.4_cash.html#problem-to-solve",
-    "title": "Cash",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nSuppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You’ll need to pay them their “change,” the amount leftover after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you’re dispensing for each customer, lest you run out (or annoy the customer!). In a file called cash.c in a folder called cash, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:\nChange owed: 25\n1\n\nBut prompt the user for an int greater than 0, so that the program works for any amount of change:\nChange owed: 70\n4\n\nRe-prompt the user, again and again as needed, if their input is not greater than or equal to 0 (or if their input isn’t an int at all!)."
-  },
-  {
-    "objectID": "homework/hw_2/2.4_cash.html#demo",
-    "href": "homework/hw_2/2.4_cash.html#demo",
-    "title": "Cash",
-    "section": "Demo",
-    "text": "Demo"
-  },
-  {
-    "objectID": "homework/hw_2/2.4_cash.html#greedy-algorithms",
-    "href": "homework/hw_2/2.4_cash.html#greedy-algorithms",
-    "title": "Cash",
-    "section": "Greedy Algorithms",
-    "text": "Greedy Algorithms\nFortunately, computer science has given cashiers everywhere ways to minimize numbers of coins due: greedy algorithms.\nAccording to the National Institute of Standards and Technology (NIST), a greedy algorithm is one “that always takes the best immediate, or local, solution while finding an answer. Greedy algorithms find the overall, or globally, optimal solution for some optimization problems, but may find less-than-optimal solutions for some instances of other problems.”\nWhat’s all that mean? Well, suppose that a cashier owes a customer some change and in that cashier’s drawer are quarters (25¢), dimes (10¢), nickels (5¢), and pennies (1¢). The problem to be solved is to decide which coins and how many of each to hand to the customer. Think of a “greedy” cashier as one who wants to take the biggest bite out of this problem as possible with each coin they take out of the drawer. For instance, if some customer is owed 41¢, the biggest first (i.e., best immediate, or local) bite that can be taken is 25¢. (That bite is “best” inasmuch as it gets us closer to 0¢ faster than any other coin would.) Note that a bite of this size would whittle what was a 41¢ problem down to a 16¢ problem, since 41 - 25 = 16. That is, the remainder is a similar but smaller problem. Needless to say, another 25¢ bite would be too big (assuming the cashier prefers not to lose money), and so our greedy cashier would move on to a bite of size 10¢, leaving him or her with a 6¢ problem. At that point, greed calls for one 5¢ bite followed by one 1¢ bite, at which point the problem is solved. The customer receives one quarter, one dime, one nickel, and one penny: four coins in total.\nIt turns out that this greedy approach (i.e., algorithm) is not only locally optimal but also globally so for America’s currency (and also the European Union’s). That is, so long as a cashier has enough of each coin, this largest-to-smallest approach will yield the fewest coins possible. How few? Well, you tell us!"
-  },
-  {
-    "objectID": "homework/hw_2/2.4_cash.html#advice",
-    "href": "homework/hw_2/2.4_cash.html#advice",
-    "title": "Cash",
-    "section": "Advice",
-    "text": "Advice\nClick the below toggles to read some advice!\nWrite some code that you know will compile\nEven though this program won’t do anything, it should at least compile with make!\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n\n}\n\nNotice that you’ve now included cs50.h and stdio.h, two “header files” that will give you access to functions that might help you solve this problem.\nWrite some pseudocode before writing more code\nIf unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really only a handful of problems:\n\nPrompt the user for change owed, in cents.\nCalculate how many quarters you should give customer. Subtract the value of those quarters from cents.\nCalculate how many dimes you should give customer. Subtract the value of those dimes from remaining cents.\nCalculate how many nickels you should give customer. Subtract the value of those nickels from remaining cents.\nCalculate how many pennies you should give customer. Subtract the value of those pennies from remaining cents.\nSum the number of quarters, dimes, nickels, and pennies used.\nPrint that sum.\n\nThis is the greedy algorithm you can use to solve this problem, so let’s write some pseudcode as comments to remind you to do just that:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for change owed, in cents\n\n    // Calculate how many quarters you should give customer\n    // Subtract the value of those quarters from cents\n\n    // Calculate how many dimes you should give customer\n    // Subtract the value of those dimes from remaining cents\n\n    // Calculate how many nickels you should give customer\n    // Subtract the value of those nickels from remaining cents\n\n    // Calculate how many pennies you should give customer\n    // Subtract the value of those pennies from remaining cents\n\n    // Sum the number of quarters, dimes, nickels, and pennies used\n    // Print that sum\n}\n\nConvert the pseudocode to code\nFirst, consider how you might prompt the user for the cents they are owed. Recall that a do while loop is helpful when you want to do something at least once, and possibly again and again, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for change owed, in cents\n    int cents;\n    do\n    {\n        cents = get_int(\"Change owed: \");\n    }\n    while (cents &lt; 0);\n}\n\nIt’s wise to stop here and make your program. Test to be sure your program compiles, and that it reprompts you if you enter less than 0 cents (or if you enter an input like “cat”).\nNext, consider how to calculate how many quarters you should give the customer. Since we’re using a greedy algorithm, this question becomes “what’s the greatest number of quarters could you give them?”. You could write a solution to this problem in your main function. But, it might clear up your thinking to write a new function: one called calculate_quarters. That way you can better focus on the logic to calculate quarters. Later, you can integrate this function into your larger solution.\nint calculate_quarters(int cents)\n{\n    // Calculate how many quarters you should give customer\n}\n\nNotice that this function is indeed named calculate_quarters. Per int cents in parentheses, it takes an int called cents as input. And, per the int in front of its name, it should also “return” an int. That is, the output of this function is an integer: the number of quarters that fit into cents. If curious about this idea, recall there are several sample programs in Week 1’s Source Code that illustrate how functions can return a value.\nNow consider this way of implementing calculate_quarters by adding to the number of quarters until we’ve run out of cents to convert to quarters:\nint calculate_quarters(int cents)\n{\n    // Calculate how many quarters you should give customer\n    int quarters = 0;\n    while (cents &gt;= 25)\n    {\n        quarters++;\n        cents = cents - 25;\n    }\n    return quarters;\n}\n\nGranted, there is at least one simpler way to solve this calculate_quarters problem. But we’ll leave that up to you to figure out!\nWith calculate_quarters functioning as intended, you can integrate this function into your program. Take care to “declare” the function’s “signature” (i.e., int calculate_quarters(int cents)) above your main function, so you can indeed use calculate_quarters there while defining it later, below main.\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint calculate_quarters(int cents);\n\nint main(void)\n{\n    // Prompt the user for change owed, in cents\n    int cents;\n    do\n    {\n        cents = get_int(\"Change owed: \");\n    }\n    while (cents &lt; 0);\n\n    // Calculate how many quarters you should give customer\n    int quarters = calculate_quarters(cents);\n\n    // Subtract the value of those quarters from cents\n    cents = cents - (quarters * 25);\n}\n\nint calculate_quarters(int cents)\n{\n    // Calculate how many quarters you should give customer\n    int quarters = 0;\n    while (cents &gt;= 25)\n    {\n        quarters++;\n        cents = cents - 25;\n    }\n    return quarters;\n}\n\nA few problems down, and a few more to go! Notice a pattern you could re-use here?"
-  },
-  {
-    "objectID": "homework/hw_2/2.4_cash.html#how-to-test",
-    "href": "homework/hw_2/2.4_cash.html#how-to-test",
-    "title": "Cash",
-    "section": "How to Test",
-    "text": "How to Test\nFor this program, try testing your code manually. It’s good practice:\n\nIf you input -1, does your program prompt you again?\nIf you input 0, does your program output 0?\nIf you input 1, does your program output 1 (i.e., one penny)?\nIf you input 4, does your program output 4 (i.e., four pennies)?\nIf you input 5, does your program output 1 (i.e., one nickel)?\nIf you input 24, does your program output 6 (i.e., two dimes and four pennies)?\nIf you input 25, does your program output 1 (i.e., one quarter)?\nIf you input 26, does your program output 2 (i.e., one quarter and one penny)?\nIf you input 99, does your program output 9 (i.e., three quarters, two dimes, and four pennies)?\n\n\nCorrectness\nIn your terminal, execute the below to check your work’s correctness.\ncheck50 cs50/problems/2025/x/cash\n\n\n\nStyle\nExecute the below to evaluate the style of your code using style50.\nstyle50 cash.c"
+    "objectID": "homework/hw_2/2.4_cash.html#what-to-do",
+    "href": "homework/hw_2/2.4_cash.html#what-to-do",
+    "title": "2.4 Cash",
+    "section": "",
+    "text": "US coins\n\n\nSuppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You’ll need to pay them their “change,” the amount leftover after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you’re dispensing for each customer, lest you run out (or annoy the customer!). In a file called cash.c in a folder called cash, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:\nChange owed: 25\n1\n\nBut prompt the user for an int greater than 0, so that the program works for any amount of change:\nChange owed: 70\n4\n\nRe-prompt the user, again and again as needed, if their input is not greater than or equal to 0 (or if their input isn’t an int at all!).\nGreedy Algorithms\nFortunately, computer science has given cashiers everywhere ways to minimize numbers of coins due: greedy algorithms.\nAccording to the National Institute of Standards and Technology (NIST), a greedy algorithm is one “that always takes the best immediate, or local, solution while finding an answer. Greedy algorithms find the overall, or globally, optimal solution for some optimization problems, but may find less-than-optimal solutions for some instances of other problems.”\nWhat’s all that mean? Well, suppose that a cashier owes a customer some change and in that cashier’s drawer are quarters (25¢), dimes (10¢), nickels (5¢), and pennies (1¢). The problem to be solved is to decide which coins and how many of each to hand to the customer. Think of a “greedy” cashier as one who wants to take the biggest bite out of this problem as possible with each coin they take out of the drawer. For instance, if some customer is owed 41¢, the biggest first (i.e., best immediate, or local) bite that can be taken is 25¢. (That bite is “best” inasmuch as it gets us closer to 0¢ faster than any other coin would.) Note that a bite of this size would whittle what was a 41¢ problem down to a 16¢ problem, since 41 - 25 = 16. That is, the remainder is a similar but smaller problem. Needless to say, another 25¢ bite would be too big (assuming the cashier prefers not to lose money), and so our greedy cashier would move on to a bite of size 10¢, leaving him or her with a 6¢ problem. At that point, greed calls for one 5¢ bite followed by one 1¢ bite, at which point the problem is solved. The customer receives one quarter, one dime, one nickel, and one penny: four coins in total.\nIt turns out that this greedy approach (i.e., algorithm) is not only locally optimal but also globally so for America’s currency (and also the European Union’s). That is, so long as a cashier has enough of each coin, this largest-to-smallest approach will yield the fewest coins possible. How few? Well, you tell us!"
   },
   {
     "objectID": "homework/hw_2/2.4_cash.html#how-to-submit",
     "href": "homework/hw_2/2.4_cash.html#how-to-submit",
-    "title": "Cash",
+    "title": "2.4 Cash",
     "section": "How to Submit",
-    "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/cash"
+    "text": "How to Submit\n\nClick and accept the Homework Link on the homework 2 main page.\nComplete each assignment for week 2 in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
+  },
+  {
+    "objectID": "homework/hw_2/2.4_cash.html#advice",
+    "href": "homework/hw_2/2.4_cash.html#advice",
+    "title": "2.4 Cash",
+    "section": "Advice",
+    "text": "Advice\nWrite some code that you know will compile\nEven though this program won’t do anything, it should at least compile with make!\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n\n}\n\nNotice that you’ve now included cs50.h and stdio.h, two “header files” that will give you access to functions that might help you solve this problem.\nWrite some pseudocode before writing more code\nIf unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really only a handful of problems:\n\nPrompt the user for change owed, in cents.\nCalculate how many quarters you should give customer. Subtract the value of those quarters from cents.\nCalculate how many dimes you should give customer. Subtract the value of those dimes from remaining cents.\nCalculate how many nickels you should give customer. Subtract the value of those nickels from remaining cents.\nCalculate how many pennies you should give customer. Subtract the value of those pennies from remaining cents.\nSum the number of quarters, dimes, nickels, and pennies used.\nPrint that sum.\n\nThis is the greedy algorithm you can use to solve this problem, so let’s write some pseudcode as comments to remind you to do just that:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for change owed, in cents\n\n    // Calculate how many quarters you should give customer\n    // Subtract the value of those quarters from cents\n\n    // Calculate how many dimes you should give customer\n    // Subtract the value of those dimes from remaining cents\n\n    // Calculate how many nickels you should give customer\n    // Subtract the value of those nickels from remaining cents\n\n    // Calculate how many pennies you should give customer\n    // Subtract the value of those pennies from remaining cents\n\n    // Sum the number of quarters, dimes, nickels, and pennies used\n    // Print that sum\n}\n\nConvert the pseudocode to code\nFirst, consider how you might prompt the user for the cents they are owed. Recall that a do while loop is helpful when you want to do something at least once, and possibly again and again, as in the below:\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint main(void)\n{\n    // Prompt the user for change owed, in cents\n    int cents;\n    do\n    {\n        cents = get_int(\"Change owed: \");\n    }\n    while (cents &lt; 0);\n}\n\nIt’s wise to stop here and make your program. Test to be sure your program compiles, and that it reprompts you if you enter less than 0 cents (or if you enter an input like “cat”).\nNext, consider how to calculate how many quarters you should give the customer. Since we’re using a greedy algorithm, this question becomes “what’s the greatest number of quarters could you give them?”. You could write a solution to this problem in your main function. But, it might clear up your thinking to write a new function: one called calculate_quarters. That way you can better focus on the logic to calculate quarters. Later, you can integrate this function into your larger solution.\nint calculate_quarters(int cents)\n{\n    // Calculate how many quarters you should give customer\n}\n\nNotice that this function is indeed named calculate_quarters. Per int cents in parentheses, it takes an int called cents as input. And, per the int in front of its name, it should also “return” an int. That is, the output of this function is an integer: the number of quarters that fit into cents. If curious about this idea, recall there are several sample programs in Week 1’s Source Code that illustrate how functions can return a value.\nNow consider this way of implementing calculate_quarters by adding to the number of quarters until we’ve run out of cents to convert to quarters:\nint calculate_quarters(int cents)\n{\n    // Calculate how many quarters you should give customer\n    int quarters = 0;\n    while (cents &gt;= 25)\n    {\n        quarters++;\n        cents = cents - 25;\n    }\n    return quarters;\n}\n\nGranted, there is at least one simpler way to solve this calculate_quarters problem. But we’ll leave that up to you to figure out!\nWith calculate_quarters functioning as intended, you can integrate this function into your program. Take care to “declare” the function’s “signature” (i.e., int calculate_quarters(int cents)) above your main function, so you can indeed use calculate_quarters there while defining it later, below main.\n#include &lt;cs50.h&gt;\n#include &lt;stdio.h&gt;\n\nint calculate_quarters(int cents);\n\nint main(void)\n{\n    // Prompt the user for change owed, in cents\n    int cents;\n    do\n    {\n        cents = get_int(\"Change owed: \");\n    }\n    while (cents &lt; 0);\n\n    // Calculate how many quarters you should give customer\n    int quarters = calculate_quarters(cents);\n\n    // Subtract the value of those quarters from cents\n    cents = cents - (quarters * 25);\n}\n\nint calculate_quarters(int cents)\n{\n    // Calculate how many quarters you should give customer\n    int quarters = 0;\n    while (cents &gt;= 25)\n    {\n        quarters++;\n        cents = cents - 25;\n    }\n    return quarters;\n}\n\nA few problems down, and a few more to go! Notice a pattern you could re-use here?\nHow to Test\nFor this program, try testing your code manually. It’s good practice:\n\nIf you input -1, does your program prompt you again?\nIf you input 0, does your program output 0?\nIf you input 1, does your program output 1 (i.e., one penny)?\nIf you input 4, does your program output 4 (i.e., four pennies)?\nIf you input 5, does your program output 1 (i.e., one nickel)?\nIf you input 24, does your program output 6 (i.e., two dimes and four pennies)?\nIf you input 25, does your program output 1 (i.e., one quarter)?\nIf you input 26, does your program output 2 (i.e., one quarter and one penny)?\nIf you input 99, does your program output 9 (i.e., three quarters, two dimes, and four pennies)?"
   },
   {
     "objectID": "homework/hw_2/2.x_mario2.html",
