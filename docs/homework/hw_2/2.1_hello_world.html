@@ -785,30 +785,24 @@ int main(void)
 <p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>mkdir world
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> world</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to make a folder called <code>world</code> in (the default or “root” directory of) your codespace.</p>
 <p>Then execute</p>
-<pre><code>cd world
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> world</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to change directories into that folder. You should now see your terminal prompt as <code>world/ $</code>. You can now execute</p>
-<pre><code>code hello.c
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> hello.c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a file called <code>hello.c</code> in which you can write your code.</p>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>Recall that you can compile <code>hello.c</code> with:</p>
-<pre><code>make hello
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> hello</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you don’t see an error message, it compiled successfully! You can confirm as much with</p>
-<pre><code>ls
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>which should list not only <code>hello.c</code> (which is source code) but also <code>hello</code> (which is machine code).</p>
 <p>If you do see an error message, try to fix your code and try to compile it again. If you don’t understand the error message, seek help.</p>
 <p>Once your code compiles successfully, you can execute your program with:</p>
-<pre><code>./hello
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./hello</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="correctness" class="level3">
 <h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
 <p>Execute the below to evaluate the correctness of your code using <code>check50</code>, a command-line program that will output happy faces whenever your code passes CS50’s automated tests and sad faces whenever it doesn’t!</p>
