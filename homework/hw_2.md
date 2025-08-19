@@ -4,7 +4,7 @@ title: "Homework week 2"
 
 ## [Homework Link for turn-in]()
 
-**Note all homeworks for each week will be turned in via the same Github Reposity via the link**
+**Note all homeworks for each week will be turned in via a weekly Github Repository**
 
 ## What to do
 
