@@ -366,7 +366,7 @@
 
     ![scratch as algorithm](images/week_0/Week0Slide169.png)
 
-    Notice that the inputs `hello,` and `answer` are provided to `join`, resulting in the side effect of `hello, David`.
+    Notice that the inputs `hello,` and `answer` are provided to `join`, resulting in the side effect of `hello, Ed`.
 
 -   Quite similarly, we can modify our program as follows:
 
@@ -463,7 +463,7 @@
 
 ## Oscartime {#oscartime}
 
--   *Oscartime* is one of David’s own Scratch programs – though the music may haunt him because of the number of hours he listened to it while creating this program. Take a few moments to play through the game yourself.
+-   *Oscartime* is an example Scratch program – though the music may haunt you... Take a few moments to play through the game yourself.
 
 -   Building Oscartime ourselves, we first add the lamp post.
 
