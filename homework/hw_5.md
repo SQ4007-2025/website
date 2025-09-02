@@ -10,7 +10,7 @@ title: "Homework week 5"
 
 🟢 [5.1 Volume](hw_5/5.1_volume.html).
 
-🟢 [5.2 Filter (Less Comfortable)](hw_5/5.2filter.html).
+🟢 [5.2 Filter](hw_5/5.2filter.html).
 
 🟢 [5.3 Recover](hw_5/5.3_recover.html).
 
