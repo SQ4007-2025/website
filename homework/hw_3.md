@@ -14,8 +14,6 @@ title: "Homework week 3"
 
 🟢 [3.3 Caesar](hw_3/3.3_caesar.html).
 
-🟢 [3.4 Substitution](hw_3/3.4_substitution.html).
-
 ## Advice
 
 * Try out any of the programs from lectures via the source code tab on the [schedule page](module-schedule.html).
