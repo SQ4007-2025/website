@@ -2133,6 +2133,28 @@
     "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/finance\n\n\nWhy does my submission pass check50, but shows “No results” in my Gradebook after running submit50?\nIn some cases, submit50 may not grade the assignment due to (1) inconsistent formatting in your app.py file, and/or (2) additional, unneeded files being submitted with the problem set. To fix these issues, run style50 app.py in the finance folder. Address any issues that are revealed. Next, examine the contents of your finance folder. Delete extraneous files, such as flask sessions or other files that are not part of your implementation of the problem set. Further, run check50 again to ensure your submission still functions. Finally, run the submit50 command above again. Your result will appear in your Gradebook within a few minutes.\nPlease note that if there is a numerical score next to your finance submission in the submissions area of your Gradebook, the procedure discussed above does not apply to you. Likely, you have not fully addressed the requirements of the problem set and should rely upon check50 for clues as to what work remains."
   },
   {
+    "objectID": "homework/hw_1.html",
+    "href": "homework/hw_1.html",
+    "title": "Homework week 1",
+    "section": "",
+    "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
+    "crumbs": [
+      "Homework",
+      "Homework 01 🐈"
+    ]
+  },
+  {
+    "objectID": "homework/hw_1.html#homework-link-for-turn-in",
+    "href": "homework/hw_1.html#homework-link-for-turn-in",
+    "title": "Homework week 1",
+    "section": "",
+    "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
+    "crumbs": [
+      "Homework",
+      "Homework 01 🐈"
+    ]
+  },
+  {
     "objectID": "homework/hw_1.html#what-to-do",
     "href": "homework/hw_1.html#what-to-do",
     "title": "Homework week 1",
@@ -2453,9 +2475,20 @@
   {
     "objectID": "homework/hw_3.html",
     "href": "homework/hw_3.html",
-    "title": "Problem Set 2",
+    "title": "Homework week 3",
     "section": "",
-    "text": "Week 2 Problem Set\nSource: https://cs50.harvard.edu/x/psets/2/",
+    "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
+    "crumbs": [
+      "Homework",
+      "Homework 03 🟢"
+    ]
+  },
+  {
+    "objectID": "homework/hw_3.html#homework-link-for-turn-in",
+    "href": "homework/hw_3.html#homework-link-for-turn-in",
+    "title": "Homework week 3",
+    "section": "",
+    "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
       "Homework",
       "Homework 03 🟢"
@@ -2464,7 +2497,18 @@
   {
     "objectID": "homework/hw_3.html#what-to-do",
     "href": "homework/hw_3.html#what-to-do",
-    "title": "Problem Set 2",
+    "title": "Homework week 3",
+    "section": "What to do",
+    "text": "What to do",
+    "crumbs": [
+      "Homework",
+      "Homework 03 🟢"
+    ]
+  },
+  {
+    "objectID": "homework/hw_3.html#what-to-do-1",
+    "href": "homework/hw_3.html#what-to-do-1",
+    "title": "Homework week 3",
     "section": "What to Do",
     "text": "What to Do\n\nLog into cs50.dev using your GitHub account using Chrome, Edge, or Safari, not Firefox\nRun update50 in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click Rebuild now\nSubmit Scrabble\nSubmit Readability\nSubmit one of:\n\nCaesar, if feeling less comfortable\nSubstitution, if feeling more comfortable\n\n\nIf you submit both Caesar and Substitution, we’ll record the higher of your two scores.",
     "crumbs": [
@@ -2475,7 +2519,7 @@
   {
     "objectID": "homework/hw_3.html#when-to-do-it",
     "href": "homework/hw_3.html#when-to-do-it",
-    "title": "Problem Set 2",
+    "title": "Homework week 3",
     "section": "When to Do It",
     "text": "When to Do It\nBy 2025-12-31T23:59:00+00:00.",
     "crumbs": [
@@ -2486,7 +2530,7 @@
   {
     "objectID": "homework/hw_3.html#advice",
     "href": "homework/hw_3.html#advice",
-    "title": "Problem Set 2",
+    "title": "Homework week 3",
     "section": "Advice",
     "text": "Advice\n\nTry out any of David’s programs from class via Week 2’s examples.\nTo see the manual pages for C functions, visit manual.cs50.io.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking help50 for help. For instance, if trying to compile readability, and\nmake readability\n\nis yielding errors, try running\nhelp50 make readability\n\ninstead!",
     "crumbs": [
