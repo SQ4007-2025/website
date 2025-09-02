@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>cash – Computing Technology</title>
+<title>readability – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -686,8 +686,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cash" id="toc-cash" class="nav-link active" data-scroll-target="#cash">Cash</a></li>
-  <li><a href="#cash-1" id="toc-cash-1" class="nav-link" data-scroll-target="#cash-1">Cash</a>
+  <li><a href="#readability" id="toc-readability" class="nav-link active" data-scroll-target="#readability">Readability</a></li>
+  <li><a href="#readability-1" id="toc-readability-1" class="nav-link" data-scroll-target="#readability-1">Readability</a>
   <ul class="collapse">
   <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
   <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
@@ -700,7 +700,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.4_cash.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.5_readability.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -709,17 +709,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="cash" class="level1">
-<h1>Cash</h1>
-<p><strong>Week 6, Problem 4</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/6/cash/</p>
+<section id="readability" class="level1">
+<h1>Readability</h1>
+<p><strong>Week 6, Problem 6</strong></p>
+<p>Source: https://cs50.harvard.edu/x/psets/6/readability/</p>
 <hr>
 </section>
-<section id="cash-1" class="level1">
-<h1>Cash</h1>
+<section id="readability-1" class="level1">
+<h1>Readability</h1>
 <section id="problem-to-solve" class="level2">
 <h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
-<p>In a file called <code>cash.py</code> in a folder called <code>sentimental-cash</code>, write a program that asks the user how much change is owed and then spits out the minimum number of coins with which said change can be made. You can do this exactly as you did in <a href="../../1/">Problem Set 1</a>, except that your program this time should be written in Python, and you should assume that the user will input their change in dollars (e.g., 0.50 dollars instead of 50 cents).</p>
+<p>Write, in a file called <code>readability.py</code> in a folder called <code>sentimental-readability</code>, a program that first asks the user to type in some text, and then outputs the grade level for the text, according to the Coleman-Liau formula, exactly as you did in <a href="../../2/">Problem Set 2</a>, except that your program this time should be written in Python.</p>
 </section>
 <section id="demo" class="level2">
 <h2 class="anchored" data-anchor-id="demo">Demo</h2>
@@ -727,42 +727,42 @@ ul.task-list li input[type="checkbox"] {
 <section id="specification" class="level2">
 <h2 class="anchored" data-anchor-id="specification">Specification</h2>
 <ul>
-<li>Use <code>get_float</code> from the CS50 Library to get the user’s input and <code>print</code> to output your answer. Assume that the only coins available are quarters (25¢), dimes (10¢), nickels (5¢), and pennies (1¢).
-<ul>
-<li>We ask that you use <code>get_float</code> so that you can handle dollars and cents, albeit sans dollar sign. In other words, if some customer is owed $9.75 (as in the case where a newspaper costs 25¢ but the customer pays with a $10 bill), assume that your program’s input will be <code>9.75</code> and not <code>$9.75</code> or <code>975</code>. However, if some customer is owed $9 exactly, assume that your program’s input will be <code>9.00</code> or just <code>9</code> but, again, not <code>$9</code> or <code>900</code>. Of course, by nature of floating-point values, your program will likely work with inputs like <code>9.0</code> and <code>9.000</code> as well; you need not worry about checking whether the user’s input is “formatted” like money should be.</li>
-</ul></li>
-<li>If the user fails to provide a non-negative value, your program should re-prompt the user for a valid amount again and again until the user complies.</li>
-<li>Incidentally, so that we can automate some tests of your code, we ask that your program’s last line of output be only the minimum number of coins possible: an integer followed by a newline.</li>
+<li>Recall that the Coleman-Liau index is computed as <code>0.0588 * L - 0.296 * S - 15.8</code>, where <code>L</code> is the average number of letters per 100 words in the text, and <code>S</code> is the average number of sentences per 100 words in the text.</li>
+<li>Use <code>get_string</code> from the CS50 Library to get the user’s input, and <code>print</code> to output your answer.</li>
+<li>Your program should count the number of letters, words, and sentences in the text. You may assume that a letter is any lowercase character from <code>a</code> to <code>z</code> or any uppercase character from <code>A</code> to <code>Z</code>, any sequence of characters separated by spaces should count as a word, and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.</li>
+<li>Your program should print as output <code>"Grade X"</code> where <code>X</code> is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.</li>
+<li>If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code>"Grade 16+"</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code>"Before Grade 1"</code>.</li>
 </ul>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>While <code>check50</code> is available for this problem, you’re encouraged to first test your code on your own for each of the following.</p>
 <ul>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>0.41</code> and press enter. Your program should output <code>4</code>.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>0.01</code> and press enter. Your program should output <code>1</code>.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>0.15</code> and press enter. Your program should output <code>2</code>.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>1.60</code> and press enter. Your program should output <code>7</code>.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>23</code> and press enter. Your program should output <code>92</code>.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>4.2</code> and press enter. Your program should output <code>18</code>.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>-1</code> and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Type in <code>foo</code> and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
-<li>Run your program as <code>python cash.py</code>, and wait for a prompt for input. Do not type anything, and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>One fish. Two fish. Red fish. Blue fish.</code> and press enter. Your program should output <code>Before Grade 1</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Would you like them here or there? I would not like them here or there. I would not like them anywhere.</code> and press enter. Your program should output <code>Grade 2</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Congratulations! Today is your day. You're off to Great Places! You're off and away!</code> and press enter. Your program should output <code>Grade 3</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.</code> and press enter. Your program should output <code>Grade 5</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</code> and press enter. Your program should output <code>Grade 7</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?"</code> and press enter. Your program should output <code>Grade 8</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.</code> and press enter. Your program should output <code>Grade 8</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy.</code> and press enter. Your program should output <code>Grade 9</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.</code> and press enter. Your program should output <code>Grade 10</code>.</li>
+<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.</code> and press enter. Your program should output <code>Grade 16+</code>.</li>
 </ul>
 <section id="correctness" class="level3">
 <h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/sentimental/cash
+<pre><code>check50 cs50/problems/2025/x/sentimental/readability
 </code></pre>
 </section>
 <section id="style" class="level3">
 <h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 cash.py
+<pre><code>style50 readability.py
 </code></pre>
 </section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/sentimental/cash
+<pre><code>submit50 cs50/problems/2025/x/sentimental/readability
 </code></pre>
 
 
@@ -1190,7 +1190,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.4_cash.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.5_readability.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

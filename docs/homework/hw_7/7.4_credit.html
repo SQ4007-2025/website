@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>readability – Computing Technology</title>
+<title>credit – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -686,12 +686,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#readability" id="toc-readability" class="nav-link active" data-scroll-target="#readability">Readability</a></li>
-  <li><a href="#readability-1" id="toc-readability-1" class="nav-link" data-scroll-target="#readability-1">Readability</a>
+  <li><a href="#credit" id="toc-credit" class="nav-link active" data-scroll-target="#credit">Credit</a></li>
+  <li><a href="#credit-1" id="toc-credit-1" class="nav-link" data-scroll-target="#credit-1">Credit</a>
   <ul class="collapse">
   <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
   <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
   <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a></li>
+  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
   <ul class="collapse">
   <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
@@ -700,7 +701,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.6_readability.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.4_credit.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -709,17 +710,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="readability" class="level1">
-<h1>Readability</h1>
-<p><strong>Week 6, Problem 6</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/6/readability/</p>
+<section id="credit" class="level1">
+<h1>Credit</h1>
+<p><strong>Week 6, Problem 5</strong></p>
+<p>Source: https://cs50.harvard.edu/x/psets/6/credit/</p>
 <hr>
 </section>
-<section id="readability-1" class="level1">
-<h1>Readability</h1>
+<section id="credit-1" class="level1">
+<h1>Credit</h1>
 <section id="problem-to-solve" class="level2">
 <h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
-<p>Write, in a file called <code>readability.py</code> in a folder called <code>sentimental-readability</code>, a program that first asks the user to type in some text, and then outputs the grade level for the text, according to the Coleman-Liau formula, exactly as you did in <a href="../../2/">Problem Set 2</a>, except that your program this time should be written in Python.</p>
+<p>In a filed called <code>credit.py</code> in a folder called <code>sentimental-credit</code>, write a program that prompts the user for a credit card number and then reports (via <code>print</code>) whether it is a valid American Express, MasterCard, or Visa card number, exactly as you did in <a href="../../1/">Problem Set 1</a>. Your program this time should be written in Python!</p>
 </section>
 <section id="demo" class="level2">
 <h2 class="anchored" data-anchor-id="demo">Demo</h2>
@@ -727,42 +728,43 @@ ul.task-list li input[type="checkbox"] {
 <section id="specification" class="level2">
 <h2 class="anchored" data-anchor-id="specification">Specification</h2>
 <ul>
-<li>Recall that the Coleman-Liau index is computed as <code>0.0588 * L - 0.296 * S - 15.8</code>, where <code>L</code> is the average number of letters per 100 words in the text, and <code>S</code> is the average number of sentences per 100 words in the text.</li>
-<li>Use <code>get_string</code> from the CS50 Library to get the user’s input, and <code>print</code> to output your answer.</li>
-<li>Your program should count the number of letters, words, and sentences in the text. You may assume that a letter is any lowercase character from <code>a</code> to <code>z</code> or any uppercase character from <code>A</code> to <code>Z</code>, any sequence of characters separated by spaces should count as a word, and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.</li>
-<li>Your program should print as output <code>"Grade X"</code> where <code>X</code> is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.</li>
-<li>If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code>"Grade 16+"</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code>"Before Grade 1"</code>.</li>
+<li>So that we can automate some tests of your code, we ask that your program’s last line of output be <code>AMEX\n</code> or <code>MASTERCARD\n</code> or <code>VISA\n</code> or <code>INVALID\n</code>, nothing more, nothing less.</li>
+<li>For simplicity, you may assume that the user’s input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card).</li>
+<li>Best to use <code>get_int</code> or <code>get_string</code> from CS50’s library to get users’ input, depending on how you to decide to implement this one.</li>
+</ul>
+</section>
+<section id="hints" class="level2">
+<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<ul>
+<li>It’s possible to use regular expressions to validate user input. You might use Python’s <a href="https://docs.python.org/3/library/re.html"><code>re</code></a> module, for example, to check whether the user’s input is indeed a sequence of digits of the correct length.</li>
 </ul>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>While <code>check50</code> is available for this problem, you’re encouraged to first test your code on your own for each of the following.</p>
 <ul>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>One fish. Two fish. Red fish. Blue fish.</code> and press enter. Your program should output <code>Before Grade 1</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Would you like them here or there? I would not like them here or there. I would not like them anywhere.</code> and press enter. Your program should output <code>Grade 2</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Congratulations! Today is your day. You're off to Great Places! You're off and away!</code> and press enter. Your program should output <code>Grade 3</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.</code> and press enter. Your program should output <code>Grade 5</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</code> and press enter. Your program should output <code>Grade 7</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?"</code> and press enter. Your program should output <code>Grade 8</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.</code> and press enter. Your program should output <code>Grade 8</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy.</code> and press enter. Your program should output <code>Grade 9</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.</code> and press enter. Your program should output <code>Grade 10</code>.</li>
-<li>Run your program as <code>python readability.py</code>, and wait for a prompt for input. Type in <code>A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.</code> and press enter. Your program should output <code>Grade 16+</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>378282246310005</code> and press enter. Your program should output <code>AMEX</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>371449635398431</code> and press enter. Your program should output <code>AMEX</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>5555555555554444</code> and press enter. Your program should output <code>MASTERCARD</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>5105105105105100</code> and press enter. Your program should output <code>MASTERCARD</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>4111111111111111</code> and press enter. Your program should output <code>VISA</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>4012888888881881</code> and press enter. Your program should output <code>VISA</code>.</li>
+<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>1234567890</code> and press enter. Your program should output <code>INVALID</code>.</li>
 </ul>
 <section id="correctness" class="level3">
 <h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/sentimental/readability
+<pre><code>check50 cs50/problems/2025/x/sentimental/credit
 </code></pre>
 </section>
 <section id="style" class="level3">
 <h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 readability.py
+<pre><code>style50 credit.py
 </code></pre>
 </section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/sentimental/readability
+<pre><code>submit50 cs50/problems/2025/x/sentimental/credit
 </code></pre>
 
 
@@ -1190,7 +1192,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.6_readability.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.4_credit.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

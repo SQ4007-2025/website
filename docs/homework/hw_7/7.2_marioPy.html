@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>credit – Computing Technology</title>
+<title>mariopy – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_7/pyramid.png">
 <meta property="og:site_name" content="Computing Technology">
 <meta name="twitter:title" content="Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
@@ -686,13 +687,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#credit" id="toc-credit" class="nav-link active" data-scroll-target="#credit">Credit</a></li>
-  <li><a href="#credit-1" id="toc-credit-1" class="nav-link" data-scroll-target="#credit-1">Credit</a>
+  <li><a href="#this-version-of-mario" id="toc-this-version-of-mario" class="nav-link active" data-scroll-target="#this-version-of-mario">this version of Mario</a></li>
+  <li><a href="#mario" id="toc-mario" class="nav-link" data-scroll-target="#mario">Mario</a>
   <ul class="collapse">
   <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
   <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
   <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
   <ul class="collapse">
   <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
@@ -701,7 +701,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.5_credit.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.2_marioPy.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -710,17 +710,23 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="credit" class="level1">
-<h1>Credit</h1>
-<p><strong>Week 6, Problem 5</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/6/credit/</p>
+<section id="this-version-of-mario" class="level1">
+<h1>this version of Mario</h1>
+<p><strong>Week 6, Problem 2</strong></p>
+<p>Source: https://cs50.harvard.edu/x/psets/6/mario/less/</p>
 <hr>
 </section>
-<section id="credit-1" class="level1">
-<h1>Credit</h1>
+<section id="mario" class="level1">
+<h1>Mario</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pyramid.png" class="img-fluid figure-img"></p>
+<figcaption>screenshot of Mario jumping up pyramid</figcaption>
+</figure>
+</div>
 <section id="problem-to-solve" class="level2">
 <h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
-<p>In a filed called <code>credit.py</code> in a folder called <code>sentimental-credit</code>, write a program that prompts the user for a credit card number and then reports (via <code>print</code>) whether it is a valid American Express, MasterCard, or Visa card number, exactly as you did in <a href="../../1/">Problem Set 1</a>. Your program this time should be written in Python!</p>
+<p>In a file called <code>mario.py</code> in a folder called <code>sentimental-mario-less</code>, write a program that recreates a half-pyramid using hashes (<code>#</code>) for blocks, exactly as you did in <a href="../../../1/">Problem Set 1</a>. Your program this time should be written in Python!</p>
 </section>
 <section id="demo" class="level2">
 <h2 class="anchored" data-anchor-id="demo">Demo</h2>
@@ -728,43 +734,64 @@ ul.task-list li input[type="checkbox"] {
 <section id="specification" class="level2">
 <h2 class="anchored" data-anchor-id="specification">Specification</h2>
 <ul>
-<li>So that we can automate some tests of your code, we ask that your program’s last line of output be <code>AMEX\n</code> or <code>MASTERCARD\n</code> or <code>VISA\n</code> or <code>INVALID\n</code>, nothing more, nothing less.</li>
-<li>For simplicity, you may assume that the user’s input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card).</li>
-<li>Best to use <code>get_int</code> or <code>get_string</code> from CS50’s library to get users’ input, depending on how you to decide to implement this one.</li>
-</ul>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<ul>
-<li>It’s possible to use regular expressions to validate user input. You might use Python’s <a href="https://docs.python.org/3/library/re.html"><code>re</code></a> module, for example, to check whether the user’s input is indeed a sequence of digits of the correct length.</li>
+<li>To make things more interesting, first prompt the user with <code>get_int</code> for the half-pyramid’s height, a positive integer between <code>1</code> and <code>8</code>, inclusive.</li>
+<li>If the user fails to provide a positive integer no greater than <code>8</code>, you should re-prompt for the same again.</li>
+<li>Then, generate (with the help of <code>print</code> and one or more loops) the desired half-pyramid.</li>
+<li>Take care to align the bottom-left corner of your half-pyramid with the left-hand edge of your terminal window.</li>
 </ul>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>While <code>check50</code> is available for this problem, you’re encouraged to first test your code on your own for each of the following.</p>
 <ul>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>378282246310005</code> and press enter. Your program should output <code>AMEX</code>.</li>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>371449635398431</code> and press enter. Your program should output <code>AMEX</code>.</li>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>5555555555554444</code> and press enter. Your program should output <code>MASTERCARD</code>.</li>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>5105105105105100</code> and press enter. Your program should output <code>MASTERCARD</code>.</li>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>4111111111111111</code> and press enter. Your program should output <code>VISA</code>.</li>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>4012888888881881</code> and press enter. Your program should output <code>VISA</code>.</li>
-<li>Run your program as <code>python credit.py</code>, and wait for a prompt for input. Type in <code>1234567890</code> and press enter. Your program should output <code>INVALID</code>.</li>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>-1</code> and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>0</code> and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>1</code> and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.</li>
+</ul>
+<pre><code>#
+</code></pre>
+<ul>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>2</code> and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.</li>
+</ul>
+<pre><code> #
+##
+</code></pre>
+<ul>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>8</code> and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.</li>
+</ul>
+<pre><code>       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
+</code></pre>
+<ul>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>9</code> and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number. Then, type in <code>2</code> and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.</li>
+</ul>
+<pre><code> #
+##
+</code></pre>
+<ul>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Type in <code>foo</code> and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
+<li>Run your program as <code>python mario.py</code> and wait for a prompt for input. Do not type anything, and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.</li>
 </ul>
 <section id="correctness" class="level3">
 <h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/sentimental/credit
+<pre><code>check50 cs50/problems/2025/x/sentimental/mario/less
 </code></pre>
 </section>
 <section id="style" class="level3">
 <h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 credit.py
+<pre><code>style50 mario.py
 </code></pre>
 </section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/sentimental/credit
+<pre><code>submit50 cs50/problems/2025/x/sentimental/mario/less
 </code></pre>
 
 
@@ -1192,7 +1219,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>📊 <a href="https://thestatisticslab.com">The Statistics Lab</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.5_credit.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_7/7.2_marioPy.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>🚀 Built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
