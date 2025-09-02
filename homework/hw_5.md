@@ -1,46 +1,27 @@
-# Problem Set 4
-
-**Week 4 Problem Set**
-
-Source: https://cs50.harvard.edu/x/psets/4/
-
+---
+title: "Homework week 5"
 ---
 
-# Problem Set 4
+## [Homework Link for turn-in]()
 
-Collaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you, per the course’s policy on [academic honesty](../../syllabus/#academic-honesty).
+**Note all homeworks for each week will be turned in via a weekly Github Repository**
 
-The staff conducts random audits of submissions to CS50x. Students found to be in violation of this policy will be removed from the course. Students who have already completed CS50x, if found to be in violation, will have their CS50 Certificate permanently revoked.
+## What to do
 
-## What to Do
+🟢 [5.1 Volume](hw_5/5.1_volume.html).
 
-1. Log into [cs50.dev](https://cs50.dev) using your GitHub account
-2. Run `update50` in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
-3. Submit [Volume](volume/)
-4. Submit one of:
-   * [this version of Filter](filter/less/) if feeling less comfortable
-   * [this version of Filter](filter/more/) if feeling more comfortable
-5. Submit [Recover](recover/)
+🟢 [5.2 Filter (Less Comfortable)](hw_5/5.2filter.html).
 
-## When to Do It
-
-By [2025-12-31T23:59:00+00:00](https://time.cs50.io/20251231T235900Z).
+🟢 [5.3 Recover](hw_5/5.3_recover.html).
 
 ## Advice
 
-* Try out any of David’s programs from [Week 4](../../weeks/4/).
-* If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking `help50` for help. For instance, if trying to compile `filter`, and
+* Try out any of the programs from lectures via the source code tab on the [schedule page](module-schedule.html).
+* See this [style guide for C](https://cs50.readthedocs.io/style/c/) for tips on how to improve your code style.
+* If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help. 
 
-  ```
-  make filter
+## Academic integrity
 
-  ```
+Collaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you.  AI use to **generate any code or text** related to assignments is **not permitted**.
 
-  is yielding errors, try running
-
-  ```
-  help50 make filter
-
-  ```
-
-  instead!
+The staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for [Academic Misconduct](https://www.harper-adams.ac.uk/documents/Academic-misconduct-procedure.pdf). 
