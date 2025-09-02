@@ -4,13 +4,9 @@ title: "Homework week 3"
 
 ## [Homework Link for turn-in]()
 
-# Problem Set 2
+**Note all homeworks for each week will be turned in via a weekly Github Repository**
 
-**Week 2 Problem Set**
-
-Source: https://cs50.harvard.edu/x/psets/2/
-
----
+## What to do
 
 # Problem Set 2
 
