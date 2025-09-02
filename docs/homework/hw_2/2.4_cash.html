@@ -688,8 +688,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
-  <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
+  <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_2/2.4_cash.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -716,14 +716,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/coins.jpg" class="img-fluid figure-img"></p>
 <figcaption>US coins</figcaption>
 </figure>
 </div>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Suppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You’ll need to pay them their “change,” the amount leftover after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you’re dispensing for each customer, lest you run out (or annoy the customer!). In a file called <code>cash.c</code> in a folder called <code>cash</code>, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:</p>
 <pre><code>Change owed: 25
 1
@@ -738,15 +738,6 @@ ul.task-list li input[type="checkbox"] {
 <p>According to the National Institute of Standards and Technology (NIST), a greedy algorithm is one “that always takes the best immediate, or local, solution while finding an answer. Greedy algorithms find the overall, or globally, optimal solution for some optimization problems, but may find less-than-optimal solutions for some instances of other problems.”</p>
 <p>What’s all that mean? Well, suppose that a cashier owes a customer some change and in that cashier’s drawer are quarters (25¢), dimes (10¢), nickels (5¢), and pennies (1¢). The problem to be solved is to decide which coins and how many of each to hand to the customer. Think of a “greedy” cashier as one who wants to take the biggest bite out of this problem as possible with each coin they take out of the drawer. For instance, if some customer is owed 41¢, the biggest first (i.e., best immediate, or local) bite that can be taken is 25¢. (That bite is “best” inasmuch as it gets us closer to 0¢ faster than any other coin would.) Note that a bite of this size would whittle what was a 41¢ problem down to a 16¢ problem, since 41 - 25 = 16. That is, the remainder is a similar but smaller problem. Needless to say, another 25¢ bite would be too big (assuming the cashier prefers not to lose money), and so our greedy cashier would move on to a bite of size 10¢, leaving him or her with a 6¢ problem. At that point, greed calls for one 5¢ bite followed by one 1¢ bite, at which point the problem is solved. The customer receives one quarter, one dime, one nickel, and one penny: four coins in total.</p>
 <p>It turns out that this greedy approach (i.e., algorithm) is not only locally optimal but also globally so for America’s currency (and also the European Union’s). That is, so long as a cashier has enough of each coin, this largest-to-smallest approach will yield the fewest coins possible. How few? Well, you tell us!</p>
-</section>
-<section id="how-to-submit" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<ul>
-<li>Click and accept the Homework Link on the homework 2 main page.</li>
-<li>Complete each assignment for week 2 in the Github Codespaces environment.</li>
-<li>Save and click “Commit changes”.</li>
-<li>The autograder runs automatically; see the Actions tab for feedback.</li>
-</ul>
 </section>
 <section id="advice" class="level2">
 <h2 class="anchored" data-anchor-id="advice">Advice</h2>
@@ -882,6 +873,15 @@ int calculate_quarters(int cents)
 <li>If you input <code>25</code>, does your program output <code>1</code> (i.e., one quarter)?</li>
 <li>If you input <code>26</code>, does your program output <code>2</code> (i.e., one quarter and one penny)?</li>
 <li>If you input <code>99</code>, does your program output <code>9</code> (i.e., three quarters, two dimes, and four pennies)?</li>
+</ul>
+</section>
+<section id="how-to-submit" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
 </ul>
 
 
