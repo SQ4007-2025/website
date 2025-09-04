@@ -810,28 +810,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#define MAX_VOTERS </span><span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#define MAX_CANDIDATES </span><span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice that <code>MAX_CANDIDATES</code> is used to size an array, <code>candidates</code>.</p>
-<pre><code>// Array of candidates
-candidate candidates[MAX_CANDIDATES];
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Array of candidates</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>candidate candidates<span class="op">[</span>MAX_CANDIDATES<span class="op">];</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>candidates</code> is an array of <code>candidate</code>s. In <code>runoff.c</code> a <code>candidate</code> is a <code>struct</code>. Every <code>candidate</code> has a <code>string</code> field for their <code>name</code>, an <code>int</code> representing the number of <code>votes</code> they currently have, and a <code>bool</code> value called <code>eliminated</code> that indicates whether the candidate has been eliminated from the election. The array <code>candidates</code> will keep track of all of the candidates in the election.</p>
-<pre><code>// Candidates have name, vote count, eliminated status
-typedef struct
-{
-    string name;
-    int votes;
-    bool eliminated;
-}
-candidate;
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Candidates have name, vote count, eliminated status</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">struct</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    string name<span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> votes<span class="op">;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bool</span> eliminated<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>candidate<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now you can better understand <code>preferences</code>, the two-dimensional array. The array <code>preferences[i]</code> will represent all of the preferences for voter number <code>i</code>. The integer, <code>preferences[i][j]</code>, will store the index of the candidate, from the <code>candidates</code> array, who is the <code>j</code>th preference for voter <code>i</code>.</p>
-<pre><code>// preferences[i][j] is jth preference for voter i
-int preferences[MAX_VOTERS][MAX_CANDIDATES];
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// preferences[i][j] is jth preference for voter i</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> preferences<span class="op">[</span>MAX_VOTERS<span class="op">][</span>MAX_CANDIDATES<span class="op">];</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The program also has two global variables: <code>voter_count</code> and <code>candidate_count</code>.</p>
-<pre><code>// Numbers of voters and candidates
-int voter_count;
-int candidate_count;
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Numbers of voters and candidates</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> voter_count<span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> candidate_count<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now onto <code>main</code>. Notice that after determining the number of candidates and the number of voters, the main voting loop begins, giving every voter a chance to vote. As the voter enters their preferences, the <code>vote</code> function is called to keep track of all of the preferences. If at any point, the ballot is deemed to be invalid, the program exits.</p>
 <p>Once all of the votes are in, another loop begins: this one’s going to keep looping through the runoff process of checking for a winner and eliminating the last place candidate until there is a winner.</p>
 <p>The first call here is to a function called <code>tabulate</code>, which should look at all of the voters’ preferences and compute the current vote totals, by looking at each voter’s top choice candidate who hasn’t yet been eliminated. Next, the <code>print_winner</code> function should print out the winner if there is one; if there is, the program is over. But otherwise, the program needs to determine the fewest number of votes anyone still in the election received (via a call to <code>find_min</code>). If it turns out that everyone in the election is tied with the same number of votes (as determined by the <code>is_tie</code> function), the election is declared a tie; otherwise, the last-place candidate (or candidates) is eliminated from the election via a call to the <code>eliminate</code> function.</p>
