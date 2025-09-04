@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>sort – Computing Technology</title>
+<title>4.1 Sort – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="4.1 Sort – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:title" content="4.1 Sort – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_4/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -254,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">4.1 Sort</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -686,11 +686,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sort" id="toc-sort" class="nav-link active" data-scroll-target="#sort">Sort</a></li>
-  <li><a href="#sort-1" id="toc-sort-1" class="nav-link" data-scroll-target="#sort-1">Sort</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
   <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
@@ -698,27 +694,34 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
   </ul></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_4/4.1_sort.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">4.1 Sort</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="sort" class="level1">
-<h1>Sort</h1>
-<p><strong>Week 3, Problem 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/3/sort/</p>
-<hr>
-</section>
-<section id="sort-1" class="level1">
-<h1>Sort</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+</header>
+
+
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Recall from lecture that we saw a few algorithms for sorting a sequence of numbers: selection sort, bubble sort, and merge sort.</p>
 <ul>
 <li>Selection sort iterates through the unsorted portions of a list, selecting the smallest element each time and moving it to its correct location.</li>
@@ -726,17 +729,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Merge sort recursively divides the list into two repeatedly and then merges the smaller lists back into a larger one in the correct order.</li>
 </ul>
 <p>In this problem, you’ll analyze three (compiled!) sorting programs to determine which algorithms they use. In a file called <code>answers.txt</code> in a folder called <code>sort</code>, record your answers, along with an explanation for each program, by filling in the blanks marked <code>TODO</code>.</p>
-</section>
-<section id="distribution-code" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
+<p><strong>Distribution Code</strong></p>
 <p>For this problem, you’ll need some “distribution code”—that is, code written by CS50’s staff. Provided to you are three already-compiled C programs, <code>sort1</code>, <code>sort2</code>, and <code>sort3</code>, as well as several <code>.txt</code> files for input and another file, <code>answers.txt</code>, in which to write your answers. Each of <code>sort1</code>, <code>sort2</code>, and <code>sort3</code> implements a different sorting algorithm: selection sort, bubble sort, or merge sort (though not necessarily in that order!). Your task is to determine which sorting algorithm is used by each file. Start by downloading these files.</p>
 <p>Download distribution files</p>
-<p>Open <a href="https://cs50.dev/">VS Code</a>.</p>
+<p>Open The Sandbox homework codespace.</p>
 <p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
 <pre><code>$
 </code></pre>
 <p>Click inside of that terminal window and then execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/3/sort.zip
+<pre><code>wget https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/sort.zip
 </code></pre>
 <p>followed by Enter in order to download a ZIP called <code>sort.zip</code> in your codespace. Take care not to overlook the space between <code>wget</code> and the following URL, or any other character for that matter!</p>
 <p>Now execute</p>
@@ -785,7 +786,6 @@ ul.task-list li input[type="checkbox"] {
 </code></pre>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

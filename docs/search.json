@@ -1798,97 +1798,90 @@
   {
     "objectID": "homework/hw_4/4.1_sort.html",
     "href": "homework/hw_4/4.1_sort.html",
-    "title": "Sort",
+    "title": "4.1 Sort",
     "section": "",
-    "text": "Week 3, Problem 1\nSource: https://cs50.harvard.edu/x/psets/3/sort/"
+    "text": "Recall from lecture that we saw a few algorithms for sorting a sequence of numbers: selection sort, bubble sort, and merge sort.\n\nSelection sort iterates through the unsorted portions of a list, selecting the smallest element each time and moving it to its correct location.\nBubble sort compares pairs of adjacent values one at a time and swaps them if they are in the incorrect order. This continues until the list is sorted.\nMerge sort recursively divides the list into two repeatedly and then merges the smaller lists back into a larger one in the correct order.\n\nIn this problem, you’ll analyze three (compiled!) sorting programs to determine which algorithms they use. In a file called answers.txt in a folder called sort, record your answers, along with an explanation for each program, by filling in the blanks marked TODO.\nDistribution Code\nFor this problem, you’ll need some “distribution code”—that is, code written by CS50’s staff. Provided to you are three already-compiled C programs, sort1, sort2, and sort3, as well as several .txt files for input and another file, answers.txt, in which to write your answers. Each of sort1, sort2, and sort3 implements a different sorting algorithm: selection sort, bubble sort, or merge sort (though not necessarily in that order!). Your task is to determine which sorting algorithm is used by each file. Start by downloading these files.\nDownload distribution files\nOpen The Sandbox homework codespace.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\n\nClick inside of that terminal window and then execute\nwget https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/sort.zip\n\nfollowed by Enter in order to download a ZIP called sort.zip in your codespace. Take care not to overlook the space between wget and the following URL, or any other character for that matter!\nNow execute\nunzip sort.zip\n\nto create a folder called sort. You no longer need the ZIP file, so you can execute\nrm sort.zip\n\nand respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded."
   },
   {
-    "objectID": "homework/hw_4/4.1_sort.html#problem-to-solve",
-    "href": "homework/hw_4/4.1_sort.html#problem-to-solve",
-    "title": "Sort",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nRecall from lecture that we saw a few algorithms for sorting a sequence of numbers: selection sort, bubble sort, and merge sort.\n\nSelection sort iterates through the unsorted portions of a list, selecting the smallest element each time and moving it to its correct location.\nBubble sort compares pairs of adjacent values one at a time and swaps them if they are in the incorrect order. This continues until the list is sorted.\nMerge sort recursively divides the list into two repeatedly and then merges the smaller lists back into a larger one in the correct order.\n\nIn this problem, you’ll analyze three (compiled!) sorting programs to determine which algorithms they use. In a file called answers.txt in a folder called sort, record your answers, along with an explanation for each program, by filling in the blanks marked TODO."
-  },
-  {
-    "objectID": "homework/hw_4/4.1_sort.html#distribution-code",
-    "href": "homework/hw_4/4.1_sort.html#distribution-code",
-    "title": "Sort",
-    "section": "Distribution Code",
-    "text": "Distribution Code\nFor this problem, you’ll need some “distribution code”—that is, code written by CS50’s staff. Provided to you are three already-compiled C programs, sort1, sort2, and sort3, as well as several .txt files for input and another file, answers.txt, in which to write your answers. Each of sort1, sort2, and sort3 implements a different sorting algorithm: selection sort, bubble sort, or merge sort (though not necessarily in that order!). Your task is to determine which sorting algorithm is used by each file. Start by downloading these files.\nDownload distribution files\nOpen VS Code.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\n\nClick inside of that terminal window and then execute\nwget https://cdn.cs50.net/2024/fall/psets/3/sort.zip\n\nfollowed by Enter in order to download a ZIP called sort.zip in your codespace. Take care not to overlook the space between wget and the following URL, or any other character for that matter!\nNow execute\nunzip sort.zip\n\nto create a folder called sort. You no longer need the ZIP file, so you can execute\nrm sort.zip\n\nand respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded."
+    "objectID": "homework/hw_4/4.1_sort.html#what-to-do",
+    "href": "homework/hw_4/4.1_sort.html#what-to-do",
+    "title": "4.1 Sort",
+    "section": "",
+    "text": "Recall from lecture that we saw a few algorithms for sorting a sequence of numbers: selection sort, bubble sort, and merge sort.\n\nSelection sort iterates through the unsorted portions of a list, selecting the smallest element each time and moving it to its correct location.\nBubble sort compares pairs of adjacent values one at a time and swaps them if they are in the incorrect order. This continues until the list is sorted.\nMerge sort recursively divides the list into two repeatedly and then merges the smaller lists back into a larger one in the correct order.\n\nIn this problem, you’ll analyze three (compiled!) sorting programs to determine which algorithms they use. In a file called answers.txt in a folder called sort, record your answers, along with an explanation for each program, by filling in the blanks marked TODO.\nDistribution Code\nFor this problem, you’ll need some “distribution code”—that is, code written by CS50’s staff. Provided to you are three already-compiled C programs, sort1, sort2, and sort3, as well as several .txt files for input and another file, answers.txt, in which to write your answers. Each of sort1, sort2, and sort3 implements a different sorting algorithm: selection sort, bubble sort, or merge sort (though not necessarily in that order!). Your task is to determine which sorting algorithm is used by each file. Start by downloading these files.\nDownload distribution files\nOpen The Sandbox homework codespace.\nStart by clicking inside your terminal window, then execute cd by itself. You should find that its “prompt” resembles the below.\n$\n\nClick inside of that terminal window and then execute\nwget https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/sort.zip\n\nfollowed by Enter in order to download a ZIP called sort.zip in your codespace. Take care not to overlook the space between wget and the following URL, or any other character for that matter!\nNow execute\nunzip sort.zip\n\nto create a folder called sort. You no longer need the ZIP file, so you can execute\nrm sort.zip\n\nand respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded."
   },
   {
     "objectID": "homework/hw_4/4.1_sort.html#hints",
     "href": "homework/hw_4/4.1_sort.html#hints",
-    "title": "Sort",
+    "title": "4.1 Sort",
     "section": "Hints",
     "text": "Hints\nClick the below toggles to read some advice!\nExplore the .txt files\n\nMultiple .txt files are provided to you. These files contain n lines of values, either reversed, shuffled, or sorted.\n\nFor example, reversed10000.txt contains 10000 lines of numbers that are reversed from 10000, while random50000.txt contains 50000 lines of numbers that are in random order.\n\nThe different types of .txt files may help you determine which sort is which. Consider how each algorithm performs with an already sorted list. How about a reversed list? Or shuffled list? It may help to work through a smaller list of each type and walk through each sorting process. Time each sort with different inputs\nTo run the sorts on the text files, in the terminal, run ./[program_name] [text_file.txt]. Make sure you have made use of cd to move into the sort directory!\n\nFor example, to sort reversed10000.txt with sort1, run ./sort1 reversed10000.txt.\n\nYou may find it helpful to time your sorts. To do so, run time ./[sort_file] [text_file.txt].\n\nFor example, you could run time ./sort1 reversed10000.txt to run sort1 on 10,000 reversed numbers. At the end of your terminal’s output, you can look at the real time to see how much time actually elapsed while running the program."
   },
   {
     "objectID": "homework/hw_4/4.1_sort.html#walkthrough",
     "href": "homework/hw_4/4.1_sort.html#walkthrough",
-    "title": "Sort",
+    "title": "4.1 Sort",
     "section": "Walkthrough",
     "text": "Walkthrough\nNot sure how to solve?"
   },
   {
     "objectID": "homework/hw_4/4.1_sort.html#how-to-test",
     "href": "homework/hw_4/4.1_sort.html#how-to-test",
-    "title": "Sort",
+    "title": "4.1 Sort",
     "section": "How to Test",
     "text": "How to Test\n\nCorrectness\ncheck50 cs50/problems/2025/x/sort"
   },
   {
     "objectID": "homework/hw_4/4.1_sort.html#how-to-submit",
     "href": "homework/hw_4/4.1_sort.html#how-to-submit",
-    "title": "Sort",
+    "title": "4.1 Sort",
     "section": "How to Submit",
     "text": "How to Submit\nsubmit50 cs50/problems/2025/x/sort"
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html",
-    "href": "homework/hw_3/3.4_substitution.html",
+    "objectID": "homework/hw_3/3.x_substitution.html",
+    "href": "homework/hw_3/3.x_substitution.html",
     "title": "Substitution",
     "section": "",
     "text": "Week 2, Problem 4\nSource: https://cs50.harvard.edu/x/psets/2/substitution/"
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html#problem-to-solve",
-    "href": "homework/hw_3/3.4_substitution.html#problem-to-solve",
+    "objectID": "homework/hw_3/3.x_substitution.html#problem-to-solve",
+    "href": "homework/hw_3/3.x_substitution.html#problem-to-solve",
     "title": "Substitution",
     "section": "Problem to Solve",
     "text": "Problem to Solve\nIn a substitution cipher, we “encrypt” (i.e., conceal in a reversible way) a message by replacing every letter with another letter. To do so, we use a key: in this case, a mapping of each of the letters of the alphabet to the letter it should correspond to when we encrypt it. To “decrypt” the message, the receiver of the message would need to know the key, so that they can reverse the process: translating the encrypt text (generally called ciphertext) back into the original message (generally called plaintext).\nA key, for example, might be the string NQXPOMAFTRHLZGECYJIUWSKDVB. This 26-character key means that A (the first letter of the alphabet) should be converted into N (the first character of the key), B (the second letter of the alphabet) should be converted into Q (the second character of the key), and so forth.\nA message like HELLO, then, would be encrypted as FOLLE, replacing each of the letters according to the mapping determined by the key.\nIn a file called substitution.c in a folder called substitution, create a program that enables you to encrypt messages using a substitution cipher. At the time the user executes the program, they should decide, by providing a command-line argument, on what the key should be in the secret message they’ll provide at runtime."
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html#demo",
-    "href": "homework/hw_3/3.4_substitution.html#demo",
+    "objectID": "homework/hw_3/3.x_substitution.html#demo",
+    "href": "homework/hw_3/3.x_substitution.html#demo",
     "title": "Substitution",
     "section": "Demo",
     "text": "Demo"
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html#specification",
-    "href": "homework/hw_3/3.4_substitution.html#specification",
+    "objectID": "homework/hw_3/3.x_substitution.html#specification",
+    "href": "homework/hw_3/3.x_substitution.html#specification",
     "title": "Substitution",
     "section": "Specification",
     "text": "Specification\nDesign and implement a program, substitution, that encrypts messages using a substitution cipher.\n\nImplement your program in a file called substitution.c in a directory called substitution.\nYour program must accept a single command-line argument, the key to use for the substitution. The key itself should be case-insensitive, so whether any character in the key is uppercase or lowercase should not affect the behavior of your program.\nIf your program is executed without any command-line arguments or with more than one command-line argument, your program should print an error message of your choice (with printf) and return from main a value of 1 (which tends to signify an error) immediately.\nIf the key is invalid (as by not containing 26 characters, containing any character that is not an alphabetic character, or not containing each letter exactly once), your program should print an error message of your choice (with printf) and return from main a value of 1 immediately.\nYour program must output plaintext: (without a newline) and then prompt the user for a string of plaintext (using get_string).\nYour program must output ciphertext: (without a newline) followed by the plaintext’s corresponding ciphertext, with each alphabetical character in the plaintext substituted for the corresponding character in the ciphertext; non-alphabetical characters should be outputted unchanged.\nYour program must preserve case: capitalized letters must remain capitalized letters; lowercase letters must remain lowercase letters.\nAfter outputting ciphertext, you should print a newline. Your program should then exit by returning 0 from main.\n\nYou might find one or more functions declared in ctype.h to be helpful, per manual.cs50.io."
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html#walkthrough",
-    "href": "homework/hw_3/3.4_substitution.html#walkthrough",
+    "objectID": "homework/hw_3/3.x_substitution.html#walkthrough",
+    "href": "homework/hw_3/3.x_substitution.html#walkthrough",
     "title": "Substitution",
     "section": "Walkthrough",
     "text": "Walkthrough"
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html#how-to-test",
-    "href": "homework/hw_3/3.4_substitution.html#how-to-test",
+    "objectID": "homework/hw_3/3.x_substitution.html#how-to-test",
+    "href": "homework/hw_3/3.x_substitution.html#how-to-test",
     "title": "Substitution",
     "section": "How to Test",
     "text": "How to Test\n\nCorrectness\nIn your terminal, execute the below to check your work’s correctness.\ncheck50 cs50/problems/2025/x/substitution\n\nHow to Use debug50\nLooking to run debug50? You can do so as follows, after compiling your code successfully with make,\ndebug50 ./substitution KEY\n\nwherein KEY is the key you give as a command-line argument to your program. Note that running\ndebug50 ./substitution\n\nwill (ideally!) cause your program end by prompting the user for a key.\n\n\nStyle\nExecute the below to evaluate the style of your code using style50.\nstyle50 substitution.c"
   },
   {
-    "objectID": "homework/hw_3/3.4_substitution.html#how-to-submit",
-    "href": "homework/hw_3/3.4_substitution.html#how-to-submit",
+    "objectID": "homework/hw_3/3.x_substitution.html#how-to-submit",
+    "href": "homework/hw_3/3.x_substitution.html#how-to-submit",
     "title": "Substitution",
     "section": "How to Submit",
     "text": "How to Submit\nIn your terminal, execute the below to submit your work.\nsubmit50 cs50/problems/2025/x/substitution"
@@ -2353,13 +2346,6 @@
     "text": "In a file called hello.c, in a folder called me, implement a program in C that prompts the user for their name and then says hello to that user. For instance, if the user’s name is Adele, your program should print hello, Adele\\n!"
   },
   {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#how-to-submit",
-    "href": "homework/hw_2/2.2_hello_its_me.html#how-to-submit",
-    "title": "2.2 Hello, It’s Me",
-    "section": "How to Submit",
-    "text": "How to Submit\n\nClick and accept the Homework Link on the homework 2 main page.\nComplete each assignment for week 2 in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
-  },
-  {
     "objectID": "homework/hw_2/2.2_hello_its_me.html#advice",
     "href": "homework/hw_2/2.2_hello_its_me.html#advice",
     "title": "2.2 Hello, It’s Me",
@@ -2367,8 +2353,8 @@
     "text": "Advice\n\nHints * Recall that you can get a string from a user with get_string, which is declared in cs50.h. * Recall that you can print a string with printf, which is declared in stdio.h. * Recall that you can format a string with printf with %s.\n\nExecute cd by itself in your terminal window. You should find that your terminal window’s prompt resembles the below:\n$\nNext execute\nmkdir me\nto make a folder called me in your codespace.\nThen execute\ncd me\nto change directories into that folder. You should now see your terminal prompt as me/ $. You can now execute\ntouch hello.c\nto create a file called hello.c in which you can write your code."
   },
   {
-    "objectID": "homework/hw_2/2.2_hello_its_me.html#how-to-submit-1",
-    "href": "homework/hw_2/2.2_hello_its_me.html#how-to-submit-1",
+    "objectID": "homework/hw_2/2.2_hello_its_me.html#how-to-submit",
+    "href": "homework/hw_2/2.2_hello_its_me.html#how-to-submit",
     "title": "2.2 Hello, It’s Me",
     "section": "How to Submit",
     "text": "How to Submit\n\nClick and accept the Homework Link on the homework main page for this week.\nComplete each assignment for this week in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
@@ -2590,71 +2576,71 @@
     "text": "How to Submit\nsubmit50 cs50/problems/2025/x/plurality"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html",
-    "href": "homework/hw_4/4.4_tideman.html",
+    "objectID": "homework/hw_4/4.x_tideman.html",
+    "href": "homework/hw_4/4.x_tideman.html",
     "title": "Tideman",
     "section": "",
     "text": "Week 3, Problem 4\nSource: https://cs50.harvard.edu/x/psets/3/tideman/"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#problem-to-solve",
-    "href": "homework/hw_4/4.4_tideman.html#problem-to-solve",
+    "objectID": "homework/hw_4/4.x_tideman.html#problem-to-solve",
+    "href": "homework/hw_4/4.x_tideman.html#problem-to-solve",
     "title": "Tideman",
     "section": "Problem to Solve",
     "text": "Problem to Solve\nYou already know about plurality elections, which follow a very simple algorithm for determining the winner of an election: every voter gets one vote, and the candidate with the most votes wins.\nBut the plurality vote does have some disadvantages. What happens, for instance, in an election with three candidates, and the ballots below are cast?\n\n\n\nFive ballots, tie betweeen Alice and Bob\n\n\nA plurality vote would here declare a tie between Alice and Bob, since each has two votes. But is that the right outcome?\nThere’s another kind of voting system known as a ranked-choice voting system. In a ranked-choice system, voters can vote for more than one candidate. Instead of just voting for their top choice, they can rank the candidates in order of preference. The resulting ballots might therefore look like the below.\n\n\n\nFive ballots, with ranked preferences\n\n\nHere, each voter, in addition to specifying their first preference candidate, has also indicated their second and third choices. And now, what was previously a tied election could now have a winner. The race was originally tied between Alice and Bob. But the voter who chose Charlie preferred Alice over Bob, so Alice could here be declared the winner.\nRanked choice voting can also solve yet another potential drawback of plurality voting. Take a look at the following ballots.\n\n\n\nNine ballots, with ranked preferences\n\n\nWho should win this election? In a plurality vote where each voter chooses their first preference only, Charlie wins this election with four votes compared to only three for Bob and two for Alice. (Note that, if you’re familiar with the instant runoff voting system, Charlie wins here under that system as well). Alice, however, might reasonably make the argument that she should be the winner of the election instead of Charlie: after all, of the nine voters, a majority (five of them) preferred Alice over Charlie, so most people would be happier with Alice as the winner instead of Charlie.\nAlice is, in this election, the so-called “Condorcet winner” of the election: the person who would have won any head-to-head matchup against another candidate. If the election had been just Alice and Bob, or just Alice and Charlie, Alice would have won.\nThe Tideman voting method (also known as “ranked pairs”) is a ranked-choice voting method that’s guaranteed to produce the Condorcet winner of the election if one exists. In a file called tideman.c in a folder called tideman, create a program to simulate an election by the Tideman voting method."
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#demo",
-    "href": "homework/hw_4/4.4_tideman.html#demo",
+    "objectID": "homework/hw_4/4.x_tideman.html#demo",
+    "href": "homework/hw_4/4.x_tideman.html#demo",
     "title": "Tideman",
     "section": "Demo",
     "text": "Demo"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#distribution-code",
-    "href": "homework/hw_4/4.4_tideman.html#distribution-code",
+    "objectID": "homework/hw_4/4.x_tideman.html#distribution-code",
+    "href": "homework/hw_4/4.x_tideman.html#distribution-code",
     "title": "Tideman",
     "section": "Distribution Code",
     "text": "Distribution Code\nDownload the distribution code\nLog into cs50.dev, click on your terminal window, and execute cd by itself. You should find that your terminal window’s prompt resembles the below:\n$\n\nNext execute\nwget https://cdn.cs50.net/2024/fall/psets/3/tideman.zip\n\nin order to download a ZIP called tideman.zip into your codespace.\nThen execute\nunzip tideman.zip\n\nto create a folder called tideman. You no longer need the ZIP file, so you can execute\nrm tideman.zip\n\nand respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.\nNow type\ncd tideman\n\nfollowed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.\ntideman/ $\n\nIf all was successful, you should execute\nls\n\nand see a file named tideman.c. Executing code tideman.c should open the file where you will type your code for this problem set. If not, retrace your steps and see if you can determine where you went wrong!"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#background",
-    "href": "homework/hw_4/4.4_tideman.html#background",
+    "objectID": "homework/hw_4/4.x_tideman.html#background",
+    "href": "homework/hw_4/4.x_tideman.html#background",
     "title": "Tideman",
     "section": "Background",
     "text": "Background\nGenerally speaking, the Tideman method works by constructing a “graph” of candidates, where an arrow (i.e. edge) from candidate A to candidate B indicates that candidate A wins against candidate B in a head-to-head matchup. The graph for the above election, then, would look like the below.\n\n\n\nNine ballots, with ranked preferences\n\n\nThe arrow from Alice to Bob means that more voters prefer Alice to Bob (5 prefer Alice, 4 prefer Bob). Likewise, the other arrows mean that more voters prefer Alice to Charlie, and more voters prefer Charlie to Bob.\nLooking at this graph, the Tideman method says the winner of the election should be the “source” of the graph (i.e. the candidate that has no arrow pointing at them). In this case, the source is Alice — Alice is the only one who has no arrow pointing at her, which means nobody is preferred head-to-head over Alice. Alice is thus declared the winner of the election.\nIt’s possible, however, that when the arrows are drawn, there is no Condorcet winner. Consider the below ballots.\n\n\n\nNine ballots, with ranked preferences\n\n\nBetween Alice and Bob, Alice is preferred over Bob by a 7-2 margin. Between Bob and Charlie, Bob is preferred over Charlie by a 5-4 margin. But between Charlie and Alice, Charlie is preferred over Alice by a 6-3 margin. If we draw out the graph, there is no source! We have a cycle of candidates, where Alice beats Bob who beats Charlie who beats Alice (much like a game of rock-paper-scissors). In this case, it looks like there’s no way to pick a winner.\nTo handle this, the Tideman algorithm must be careful to avoid creating cycles in the candidate graph. How does it do this? The algorithm locks in the strongest edges first, since those are arguably the most significant. In particular, the Tideman algorithm specifies that matchup edges should be “locked in” to the graph one at a time, based on the “strength” of the victory (the more people who prefer a candidate over their opponent, the stronger the victory). So long as the edge can be locked into the graph without creating a cycle, the edge is added; otherwise, the edge is ignored.\nHow would this work in the case of the votes above? Well, the biggest margin of victory for a pair is Alice beating Bob, since 7 voters prefer Alice over Bob (no other head-to-head matchup has a winner preferred by more than 7 voters). So the Alice-Bob arrow is locked into the graph first. The next biggest margin of victory is Charlie’s 6-3 victory over Alice, so that arrow is locked in next.\nNext up is Bob’s 5-4 victory over Charlie. But notice: if we were to add an arrow from Bob to Charlie now, we would create a cycle! Since the graph can’t allow cycles, we should skip this edge, and not add it to the graph at all. If there were more arrows to consider, we would look to those next, but that was the last arrow, so the graph is complete.\nThis step-by-step process is shown below, with the final graph at right.\n\n\n\nNine ballots, with ranked preferences\n\n\nBased on the resulting graph, Charlie is the source (there’s no arrow pointing towards Charlie), so Charlie is declared the winner of this election.\nPut more formally, the Tideman voting method consists of three parts:\n\nTally: Once all of the voters have indicated all of their preferences, determine, for each pair of candidates, who the preferred candidate is and by what margin they are preferred.\nSort: Sort the pairs of candidates in decreasing order of strength of victory, where strength of victory is defined to be the number of voters who prefer the preferred candidate.\nLock: Starting with the strongest pair, go through the pairs of candidates in order and “lock in” each pair to the candidate graph, so long as locking in that pair does not create a cycle in the graph.\n\nOnce the graph is complete, the source of the graph (the one with no edges pointing towards it) is the winner!"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#understanding",
-    "href": "homework/hw_4/4.4_tideman.html#understanding",
+    "objectID": "homework/hw_4/4.x_tideman.html#understanding",
+    "href": "homework/hw_4/4.x_tideman.html#understanding",
     "title": "Tideman",
     "section": "Understanding",
     "text": "Understanding\nLet’s take a look at tideman.c.\nFirst, notice the two-dimensional array preferences. The integer preferences[i][j] will represent the number of voters who prefer candidate i over candidate j.\nThe file also defines another two-dimensional array, called locked, which will represent the candidate graph. locked is a boolean array, so locked[i][j] being true represents the existence of an edge pointing from candidate i to candidate j; false means there is no edge. (If curious, this representation of a graph is known as an “adjacency matrix”).\nNext up is a struct called pair, used to represent a pair of candidates: each pair includes the winner’s candidate index and the loser’s candidate index.\nThe candidates themselves are stored in the array candidates, which is an array of strings representing the names of each of the candidates. There’s also an array of pairs, which will represent all of the pairs of candidates (for which one is preferred over the other) in the election.\nThe program also has two global variables: pair_count and candidate_count, representing the number of pairs and number of candidates in the arrays pairs and candidates, respectively.\nNow onto main. Notice that after determining the number of candidates, the program loops through the locked graph and initially sets all of the values to false, which means our initial graph will have no edges in it.\nNext, the program loops over all of the voters and collects their preferences in an array called ranks (via a call to vote), where ranks[i] is the index of the candidate who is the ith preference for the voter. These ranks are passed into the record_preference function, whose job it is to take those ranks and update the global preferences variable.\nOnce all of the votes are in, the pairs of candidates are added to the pairs array via a called to add_pairs, sorted via a call to sort_pairs, and locked into the graph via a call to lock_pairs. Finally, print_winner is called to print out the name of the election’s winner!\nFurther down in the file, you’ll see that the functions vote, record_preference, add_pairs,sort_pairs, lock_pairs, and print_winner are left blank. That’s up to you!"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#specification",
-    "href": "homework/hw_4/4.4_tideman.html#specification",
+    "objectID": "homework/hw_4/4.x_tideman.html#specification",
+    "href": "homework/hw_4/4.x_tideman.html#specification",
     "title": "Tideman",
     "section": "Specification",
     "text": "Specification\nComplete the implementation of tideman.c in such a way that it simulates a Tideman election.\n\nComplete the vote function.\n\nThe function takes arguments rank, name, and ranks. If name is a match for the name of a valid candidate, then you should update the ranks array to indicate that the voter has the candidate as their rank preference (where 0 is the first preference, 1 is the second preference, etc.)\nRecall that ranks[i] here represents the user’s ith preference.\nThe function should return true if the rank was successfully recorded, and false otherwise (if, for instance, name is not the name of one of the candidates).\nYou may assume that no two candidates will have the same name.\n\nComplete the record_preferences function.\n\nThe function is called once for each voter, and takes as argument the ranks array, (recall that ranks[i] is the voter’s ith preference, where ranks[0] is the first preference).\nThe function should update the global preferences array to add the current voter’s preferences. Recall that preferences[i][j] should represent the number of voters who prefer candidate i over candidate j.\nYou may assume that every voter will rank each of the candidates.\n\nComplete the add_pairs function.\n\nThe function should add all pairs of candidates where one candidate is preferred to the pairs array. A pair of candidates who are tied (one is not preferred over the other) should not be added to the array.\nThe function should update the global variable pair_count to be the number of pairs of candidates. (The pairs should thus all be stored between pairs[0] and pairs[pair_count - 1], inclusive).\n\nComplete the sort_pairs function.\n\nThe function should sort the pairs array in decreasing order of strength of victory, where strength of victory is defined to be the number of voters who prefer the preferred candidate. If multiple pairs have the same strength of victory, you may assume that the order does not matter.\n\nComplete the lock_pairs function.\n\nThe function should create the locked graph, adding all edges in decreasing order of victory strength so long as the edge would not create a cycle.\n\nComplete the print_winner function.\n\nThe function should print out the name of the candidate who is the source of the graph. You may assume there will not be more than one source.\n\n\nYou should not modify anything else in tideman.c other than the implementations of the vote, record_preferences, add_pairs, sort_pairs, lock_pairs, and print_winner functions (and the inclusion of additional header files, if you’d like). You are permitted to add additional functions to tideman.c, so long as you do not change the declarations of any of the existing functions."
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#walkthrough",
-    "href": "homework/hw_4/4.4_tideman.html#walkthrough",
+    "objectID": "homework/hw_4/4.x_tideman.html#walkthrough",
+    "href": "homework/hw_4/4.x_tideman.html#walkthrough",
     "title": "Tideman",
     "section": "Walkthrough",
     "text": "Walkthrough"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#how-to-test",
-    "href": "homework/hw_4/4.4_tideman.html#how-to-test",
+    "objectID": "homework/hw_4/4.x_tideman.html#how-to-test",
+    "href": "homework/hw_4/4.x_tideman.html#how-to-test",
     "title": "Tideman",
     "section": "How to Test",
     "text": "How to Test\nBe sure to test your code to make sure it handles…\n\nAn election with any number of candidate (up to the MAX of 9)\nVoting for a candidate by name\nInvalid votes for candidates who are not on the ballot\nPrinting the winner of the election\n\n\nCorrectness\ncheck50 cs50/problems/2025/x/tideman\n\n\n\nStyle\nstyle50 tideman.c"
   },
   {
-    "objectID": "homework/hw_4/4.4_tideman.html#how-to-submit",
-    "href": "homework/hw_4/4.4_tideman.html#how-to-submit",
+    "objectID": "homework/hw_4/4.x_tideman.html#how-to-submit",
+    "href": "homework/hw_4/4.x_tideman.html#how-to-submit",
     "title": "Tideman",
     "section": "How to Submit",
     "text": "How to Submit\nsubmit50 cs50/problems/2025/x/tideman"
