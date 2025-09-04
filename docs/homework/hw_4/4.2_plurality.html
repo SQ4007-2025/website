@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>plurality – Computing Technology</title>
+<title>4.2 Plurality – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,10 +108,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="4.2 Plurality – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:title" content="4.2 Plurality – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_4/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -254,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">4.2 Plurality</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -686,70 +721,55 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#plurality" id="toc-plurality" class="nav-link active" data-scroll-target="#plurality">Plurality</a></li>
-  <li><a href="#plurality-1" id="toc-plurality-1" class="nav-link" data-scroll-target="#plurality-1">Plurality</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  <li><a href="#how-to-submit-1" id="toc-how-to-submit-1" class="nav-link" data-scroll-target="#how-to-submit-1">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_4/4.2_plurality.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">4.2 Plurality</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="plurality" class="level1">
-<h1>Plurality</h1>
-<p><strong>Week 3, Problem 2</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/3/plurality/</p>
-<hr>
-</section>
-<section id="plurality-1" class="level1">
-<h1>Plurality</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+</header>
+
+
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Elections come in all shapes and sizes. In the UK, the <a href="https://www.parliament.uk/education/about-your-parliament/general-elections/">Prime Minister</a> is officially appointed by the monarch, who generally chooses the leader of the political party that wins the most seats in the House of Commons. The United States uses a multi-step <a href="https://www.archives.gov/federal-register/electoral-college/about.html">Electoral College</a> process where citizens vote on how each state should allocate Electors who then elect the President.</p>
 <p>Perhaps the simplest way to hold an election, though, is via a method commonly known as the “plurality vote” (also known as “first-past-the-post” or “winner take all”). In the plurality vote, every voter gets to vote for one candidate. At the end of the election, whichever candidate has the greatest number of votes is declared the winner of the election.</p>
 <p>For this problem, you’ll implement a program that runs a plurality election, per the below.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="distribution-code" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
-<p>For this problem, you’ll extend the functionality of “distribution code” provided to you by CS50’s staff.</p>
-<p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of “distribution code” provided to you by the course staff.</p>
+<p>Download the distribution code.</p>
+<p>Open the homework codespace.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/3/plurality.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/plurality.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>plurality.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip plurality.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> plurality.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>plurality</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm plurality.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> plurality.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd plurality
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> plurality</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
 <pre><code>plurality/ $
 </code></pre>
@@ -815,9 +835,8 @@ void print_winner(void)
 </code></pre>
 <p>This part is up to you to complete! <strong>You should not modify anything else in <code>plurality.c</code> other than the implementations of the <code>vote</code> and <code>print_winner</code> functions (and the inclusion of additional header files, if you’d like).</strong></p>
 </section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<p>Click the below toggles to read some advice!</p>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <p>Complete the <code>vote</code> function</p>
 <p>Next, complete the <code>vote</code> function.</p>
 <ul>
@@ -871,12 +890,7 @@ void print_winner(void)
 }
 </code></pre>
 <p>We’ll leave the code, though, up to you!</p>
-</section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-</section>
-<section id="how-to-test" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
+<p><strong>How to Test</strong></p>
 <p>Be sure to test your code to make sure it handles…</p>
 <ul>
 <li>An election with any number of candidate (up to the <code>MAX</code> of <code>9</code>)</li>
@@ -885,24 +899,9 @@ void print_winner(void)
 <li>Printing the winner of the election if there is only one</li>
 <li>Printing the winner of the election if there are multiple winners</li>
 </ul>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/plurality
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 plurality.c
-</code></pre>
-</section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/plurality
-</code></pre>
-</section>
-<section id="how-to-submit-1" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-submit-1">How to Submit</h2>
 <ul>
 <li>Click and accept the Homework Link on the homework main page for this week.</li>
 <li>Complete each assignment for this week in the Github Codespaces environment.</li>
@@ -911,7 +910,6 @@ void print_winner(void)
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

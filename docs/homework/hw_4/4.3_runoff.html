@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>runoff – Computing Technology</title>
+<title>4.3 Runoff – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="4.3 Runoff – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/fptp_ballot_1.png">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/fptp_ballot_1.png">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta property="og:image:height" content="456">
+<meta property="og:image:width" content="1662">
+<meta name="twitter:title" content="4.3 Runoff – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_4/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">4.3 Runoff</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,47 +724,42 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#runoff" id="toc-runoff" class="nav-link active" data-scroll-target="#runoff">Runoff</a></li>
-  <li><a href="#runoff-1" id="toc-runoff-1" class="nav-link" data-scroll-target="#runoff-1">Runoff</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  <li><a href="#how-to-submit-1" id="toc-how-to-submit-1" class="nav-link" data-scroll-target="#how-to-submit-1">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_4/4.3_runoff.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">4.3 Runoff</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="runoff" class="level1">
-<h1>Runoff</h1>
-<p><strong>Week 3, Problem 3</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/3/runoff/</p>
-<hr>
-</section>
-<section id="runoff-1" class="level1">
-<h1>Runoff</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+</header>
+
+
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>You already know about plurality elections, which follow a very simple algorithm for determining the winner of an election: every voter gets one vote, and the candidate with the most votes wins.</p>
 <p>But the plurality vote does have some disadvantages. What happens, for instance, in an election with three candidates, and the ballots below are cast?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../fptp_ballot_1.png" class="img-fluid figure-img"></p>
+<p><img src="../images/fptp_ballot_1.png" class="img-fluid figure-img"></p>
 <figcaption>Five ballots, tie betweeen Alice and Bob</figcaption>
 </figure>
 </div>
@@ -735,7 +767,7 @@ ul.task-list li input[type="checkbox"] {
 <p>There’s another kind of voting system known as a ranked-choice voting system. In a ranked-choice system, voters can vote for more than one candidate. Instead of just voting for their top choice, they can rank the candidates in order of preference. The resulting ballots might therefore look like the below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../ranked_ballot_1.png" class="img-fluid figure-img"></p>
+<p><img src="../images/ranked_ballot_1.png" class="img-fluid figure-img"></p>
 <figcaption>Five ballots, with ranked preferences</figcaption>
 </figure>
 </div>
@@ -743,7 +775,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Ranked choice voting can also solve yet another potential drawback of plurality voting. Take a look at the following ballots.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../ranked_ballot_3.png" class="img-fluid figure-img"></p>
+<p><img src="../images/ranked_ballot_3.png" class="img-fluid figure-img"></p>
 <figcaption>Nine ballots, with ranked preferences</figcaption>
 </figure>
 </div>
@@ -752,44 +784,31 @@ ul.task-list li input[type="checkbox"] {
 <p>If no candidate has more than 50% of the vote, then an “instant runoff” occurrs. The candidate who received the fewest number of votes is eliminated from the election, and anyone who originally chose that candidate as their first preference now has their second preference considered. Why do it this way? Effectively, this simulates what would have happened if the least popular candidate had not been in the election to begin with.</p>
 <p>The process repeats: if no candidate has a majority of the votes, the last place candidate is eliminated, and anyone who voted for them will instead vote for their next preference (who hasn’t themselves already been eliminated). Once a candidate has a majority, that candidate is declared the winner.</p>
 <p>Sounds a bit more complicated than a plurality vote, doesn’t it? But it arguably has the benefit of being an election system where the winner of the election more accurately represents the preferences of the voters. In a file called <code>runoff.c</code> in a folder called <code>runoff</code>, create a program to simulate a runoff election.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="distribution-code" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
+<p><strong>Distribution Code</strong></p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/3/runoff.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://cdn.cs50.net/2024/fall/psets/3/runoff.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>runoff.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip runoff.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> runoff.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>runoff</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm runoff.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> runoff.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd runoff
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> runoff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>runoff/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">runoff/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If all was successful, you should execute</p>
-<pre><code>ls
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and see a file named <code>runoff.c</code>. Executing <code>code runoff.c</code> should open the file where you will type your code for this problem set. If not, retrace your steps and see if you can determine where you went wrong!</p>
 <p>Understand the code in <code>runoff.c</code></p>
 <p>Whenever you’ll extend the functionality of existing code, it’s best to be sure you first understand it in its present state.</p>
 <p>Look at the top of <code>runoff.c</code> first. Two constants are defined: <code>MAX_CANDIDATES</code> for the maximum number of candidates in the election, and <code>MAX_VOTERS</code> for the maximum number of voters in the election.</p>
-<pre><code>// Max voters and candidates
-#define MAX_VOTERS 100
-#define MAX_CANDIDATES 9
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Max voters and candidates</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#define MAX_VOTERS </span><span class="dv">100</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#define MAX_CANDIDATES </span><span class="dv">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice that <code>MAX_CANDIDATES</code> is used to size an array, <code>candidates</code>.</p>
 <pre><code>// Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -817,9 +836,7 @@ int candidate_count;
 <p>Once all of the votes are in, another loop begins: this one’s going to keep looping through the runoff process of checking for a winner and eliminating the last place candidate until there is a winner.</p>
 <p>The first call here is to a function called <code>tabulate</code>, which should look at all of the voters’ preferences and compute the current vote totals, by looking at each voter’s top choice candidate who hasn’t yet been eliminated. Next, the <code>print_winner</code> function should print out the winner if there is one; if there is, the program is over. But otherwise, the program needs to determine the fewest number of votes anyone still in the election received (via a call to <code>find_min</code>). If it turns out that everyone in the election is tied with the same number of votes (as determined by the <code>is_tie</code> function), the election is declared a tie; otherwise, the last-place candidate (or candidates) is eliminated from the election via a call to the <code>eliminate</code> function.</p>
 <p>If you look a bit further down in the file, you’ll see that the rest of the functions—<code>vote</code>, <code>tabulate</code>, <code>print_winner</code>, <code>find_min</code>, <code>is_tie</code>, and <code>eliminate</code>—are all left to up to you to complete! <strong>You should only modify these functions in runoff.c, though you may <code>#include</code> additional header files atop runoff.c if you’d like</strong></p>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<p><strong>Hints</strong></p>
 <p>Click the below toggles to read some advice!</p>
 <p>Complete the <code>vote</code> function</p>
 <p>Complete the <code>vote</code> function.</p>
@@ -828,7 +845,7 @@ int candidate_count;
 <li>If <code>name</code> is a match for the name of a valid candidate, then you should update the global preferences array to indicate that the voter <code>voter</code> has that candidate as their <code>rank</code> preference. Keep in mind <code>0</code> is the first preference, <code>1</code> is the second preference, etc. You may assume that no two candidates will have the same name.</li>
 <li>If the preference is successfully recorded, the function should return <code>true</code>. The function should return <code>false</code> otherwise. Consider, for instance, when <code>name</code> is not the name of one of the candidates.</li>
 </ul>
-<p>As you write your code, consider these hints:</p>
+<p>As you write your code, consider:</p>
 <ul>
 <li>Recall that <code>candidate_count</code> stores the number of candidates in the election.</li>
 <li>Recall that you can use <a href="https://man.cs50.io/3/strcmp"><code>strcmp</code></a> to compare two strings.</li>
@@ -839,7 +856,7 @@ int candidate_count;
 <li>The function should update the number of <code>votes</code> each candidate has at this stage in the runoff.</li>
 <li>Recall that at each stage in the runoff, every voter effectively votes for their top-preferred candidate who has not already been eliminated.</li>
 </ul>
-<p>As you write your code, consider these hints:</p>
+<p>Moar hints!:</p>
 <ul>
 <li>Recall that <code>voter_count</code> stores the number of voters in the election and that, for each voter in our election, we want to count one ballot.</li>
 <li>Recall that for a voter <code>i</code>, their top choice candidate is represented by <code>preferences[i][0]</code>, their second choice candidate by <code>preferences[i][1]</code>, etc.</li>
@@ -852,7 +869,7 @@ int candidate_count;
 <li>If any candidate has more than half of the vote, their name should be printed and the function should return <code>true</code>.</li>
 <li>If nobody has won the election yet, the function should return <code>false</code>.</li>
 </ul>
-<p>As you write your code, consider this hint:</p>
+<p>Yet moar hints!:</p>
 <ul>
 <li>Recall that <code>voter_count</code> stores the number of voters in the election. Given that, how would you express the number of votes needed to win the election? Complete the <code>find_min</code> function</li>
 </ul>
@@ -879,9 +896,6 @@ int candidate_count;
 <li>The function should eliminate the candidate (or candidates) who have <code>min</code> number of votes.</li>
 </ul>
 </section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-</section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>Be sure to test your code to make sure it handles…</p>
@@ -892,24 +906,9 @@ int candidate_count;
 <li>Printing the winner of the election if there is only one</li>
 <li>Not eliminating anyone in the case of a tie between all remaining candidates</li>
 </ul>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/runoff
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 runoff.c
-</code></pre>
-</section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/runoff
-</code></pre>
-</section>
-<section id="how-to-submit-1" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-submit-1">How to Submit</h2>
 <ul>
 <li>Click and accept the Homework Link on the homework main page for this week.</li>
 <li>Complete each assignment for this week in the Github Codespaces environment.</li>
@@ -918,7 +917,6 @@ int candidate_count;
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
