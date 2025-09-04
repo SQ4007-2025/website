@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -687,12 +722,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  </ul></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_4/4.1_sort.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -734,22 +764,18 @@ ul.task-list li input[type="checkbox"] {
 <p>Download distribution files</p>
 <p>Open The Sandbox homework codespace.</p>
 <p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
-<pre><code>$
-</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Click inside of that terminal window and then execute</p>
-<pre><code>wget https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/sort.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/sort.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter in order to download a ZIP called <code>sort.zip</code> in your codespace. Take care not to overlook the space between <code>wget</code> and the following URL, or any other character for that matter!</p>
 <p>Now execute</p>
-<pre><code>unzip sort.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> sort.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>sort</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm sort.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> sort.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 </section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <p>Click the below toggles to read some advice!</p>
 <p>Explore the <code>.txt</code> files</p>
 <ul>
@@ -768,22 +794,14 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-<p>Not sure how to solve?</p>
-</section>
-<section id="how-to-test" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/sort
-</code></pre>
-</section>
-</section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/sort
-</code></pre>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
 </section>
