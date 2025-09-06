@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>inheritance – Computing Technology</title>
+<title>6.1 Inheritance – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,10 +108,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="6.1 Inheritance – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:title" content="6.1 Inheritance – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_6/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -254,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">6.1 Inheritance</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -686,80 +721,61 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#inheritance" id="toc-inheritance" class="nav-link active" data-scroll-target="#inheritance">Inheritance</a></li>
-  <li><a href="#inheritance-1" id="toc-inheritance-1" class="nav-link" data-scroll-target="#inheritance-1">Inheritance</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
-  <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a>
-  <ul class="collapse">
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  </ul></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
+  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_6/6.1_inheritance.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">6.1 Inheritance</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="inheritance" class="level1">
-<h1>Inheritance</h1>
-<p><strong>Week 5, Problem 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/5/inheritance/</p>
-<hr>
-</section>
-<section id="inheritance-1" class="level1">
-<h1>Inheritance</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+</header>
+
+
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>A person’s blood type is determined by two alleles (i.e., different forms of a gene). The three possible alleles are A, B, and O, of which each person has two (possibly the same, possibly different). Each of a child’s parents randomly passes one of their two blood type alleles to their child. The possible blood type combinations, then, are: OO, OA, OB, AO, AA, AB, BO, BA, and BB.</p>
 <p>For example, if one parent has blood type AO and the other parent has blood type BB, then the child’s possible blood types would be AB and OB, depending on which allele is received from each parent. Similarly, if one parent has blood type AO and the other OB, then the child’s possible blood types would be AO, OB, AB, and OO.</p>
 <p>In a file called <code>inheritance.c</code> in a folder called <code>inheritance</code>, simulate the inheritance of blood types for each member of a family.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="distribution-code" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
-<p>For this problem, you’ll extend the functionality of code provided to you by CS50’s staff.</p>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of code provided to you by course staff.</p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/5/inheritance.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/inheritance.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>inheritance.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip inheritance.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> inheritance.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>inheritance</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm inheritance.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> inheritance.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd inheritance
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> inheritance</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>inheritance/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">inheritance/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute <code>ls</code> by itself, and you should see and see a file named <code>inheritance.c</code>.</p>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
-</section>
-<section id="implementation-details" class="level2">
-<h2 class="anchored" data-anchor-id="implementation-details">Implementation Details</h2>
+<p><strong>Implementation Details</strong></p>
 <p>Complete the implementation of <code>inheritance.c</code>, such that it creates a family of a specified generation size and assigns blood type alleles to each family member. The oldest generation will have alleles assigned randomly to them.</p>
 <ul>
 <li>The <code>create_family</code> function takes an integer (<code>generations</code>) as input and should allocate (as via <code>malloc</code>) one <code>person</code> for each member of the family of that number of generations, returning a pointer to the <code>person</code> in the youngest generation.
@@ -770,36 +786,30 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<p>Click the below toggles to read some advice!</p>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <p>Understand the code in <code>inheritance.c</code></p>
 <p>Take a look at the distribution code in <code>inheritance.c</code>.</p>
 <p>Notice the definition of a type called <code>person</code>. Each person has an array of two <code>parents</code>, each of which is a pointer to another <code>person</code> struct. Each person also has an array of two <code>alleles</code>, each of which is a <code>char</code> (either <code>'A'</code>, <code>'B'</code>, or <code>'O'</code>).</p>
-<pre><code>// Each person has two parents and two alleles
-typedef struct person
-{
-    struct person *parents[2];
-    char alleles[2];
-}
-person;
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Each person has two parents and two alleles</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">struct</span> person</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">struct</span> person <span class="op">*</span>parents<span class="op">[</span><span class="dv">2</span><span class="op">];</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> alleles<span class="op">[</span><span class="dv">2</span><span class="op">];</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>person<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, take a look at the <code>main</code> function. The function begins by “seeding” (i.e., providing some initial input to) a random number generator, which we’ll use later to generate random alleles.</p>
-<pre><code>// Seed random number generator
-srandom(time(0));
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Seed random number generator</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>srandom<span class="op">(</span>time<span class="op">(</span><span class="dv">0</span><span class="op">));</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>main</code> function then calls the <code>create_family</code> function to simulate the creation of <code>person</code> structs for a family of 3 generations (i.e.&nbsp;a person, their parents, and their grandparents).</p>
-<pre><code>// Create a new family with three generations
-person *p = create_family(GENERATIONS);
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a new family with three generations</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>person <span class="op">*</span>p <span class="op">=</span> create_family<span class="op">(</span>GENERATIONS<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We then call <code>print_family</code> to print out each of those family members and their blood types.</p>
-<pre><code>// Print family tree of blood types
-print_family(p, 0);
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Print family tree of blood types</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>print_family<span class="op">(</span>p<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Finally, the function calls <code>free_family</code> to <code>free</code> any memory that was previously allocated with <code>malloc</code>.</p>
-<pre><code>// Free memory
-free_family(p);
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Free memory</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>free_family<span class="op">(</span>p<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>create_family</code> and <code>free_family</code> functions are left to you to write!</p>
 <p>Complete the <code>create_family</code> function</p>
 <p>The <code>create_family</code> function should return a pointer to a <code>person</code> who has inherited their blood type from the number of <code>generations</code> given as input.</p>
@@ -812,40 +822,36 @@ free_family(p);
 </ul>
 <p>To solve this problem, you’ll find several TODOs in the distribution code.</p>
 <p>First, you should allocate memory for a new person. Recall that you can use <code>malloc</code> to allocate memory, and <code>sizeof(person)</code> to get the number of bytes to allocate.</p>
-<pre><code>// Allocate memory for new person
-person *new_person = malloc(sizeof(person));
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Allocate memory for new person</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>person <span class="op">*</span>new_person <span class="op">=</span> malloc<span class="op">(</span><span class="kw">sizeof</span><span class="op">(</span>person<span class="op">));</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next, you should check if there are still generations left to create: that is, whether <code>generations &gt; 1</code>.</p>
 <p>If <code>generations &gt; 1</code>, then there are more generations that still need to be allocated. We’ve already created two new parents, <code>parent0</code> and <code>parent1</code>, by recursively calling <code>create_family</code>. Your <code>create_family</code> function should then set the parent pointers of the new person you created. Finally, assign both <code>alleles</code> for the new person by randomly choosing one allele from each parent.</p>
 <ul>
 <li>Remember, to access a variable via a pointer, you can use arrow notation. For example, if <code>p</code> is a pointer to a person, then a pointer to this person’s first parent can be accessed by <code>p-&gt;parents[0]</code>.</li>
 <li>You might find the <code>random()</code> function useful for randomly assigning alleles. This function returns an integer between <code>0</code> and <code>RAND_MAX</code>, or <code>32767</code>. In particular, to generate a pseudorandom number that is either <code>0</code> or <code>1</code>, you can use the expression <code>random() % 2</code>.</li>
 </ul>
-<pre><code>// Create two new parents for current person by recursively calling create_family
-person *parent0 = create_family(generations - 1);
-person *parent1 = create_family(generations - 1);
-
-// Set parent pointers for current person
-new_person-&gt;parents[0] = parent0;
-new_person-&gt;parents[1] = parent1;
-
-// Randomly assign current person's alleles based on the alleles of their parents
-new_person-&gt;alleles[0] = parent0-&gt;alleles[random() % 2];
-new_person-&gt;alleles[1] = parent1-&gt;alleles[random() % 2];
-</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create two new parents for current person by recursively calling create_family</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>person <span class="op">*</span>parent0 <span class="op">=</span> create_family<span class="op">(</span>generations <span class="op">-</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>person <span class="op">*</span>parent1 <span class="op">=</span> create_family<span class="op">(</span>generations <span class="op">-</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Set parent pointers for current person</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>parents<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> parent0<span class="op">;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>parents<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> parent1<span class="op">;</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">// Randomly assign current person's alleles based on the alleles of their parents</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>alleles<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> parent0<span class="op">-&gt;</span>alleles<span class="op">[</span>random<span class="op">()</span> <span class="op">%</span> <span class="dv">2</span><span class="op">];</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>alleles<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> parent1<span class="op">-&gt;</span>alleles<span class="op">[</span>random<span class="op">()</span> <span class="op">%</span> <span class="dv">2</span><span class="op">];</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let’s say there are no more generations left to simulate. That is, <code>generations == 1</code>. If so, there will be no parent data for this person. Both parents of your new person should be set to <code>NULL</code>, and each <code>allele</code> should be generated randomly.</p>
-<pre><code>// Set parent pointers to NULL
-new_person-&gt;parents[0] = NULL;
-new_person-&gt;parents[1] = NULL;
-
-// Randomly assign alleles
-new_person-&gt;alleles[0] = random_allele();
-new_person-&gt;alleles[1] = random_allele();
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Set parent pointers to NULL</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>parents<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> NULL<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>parents<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> NULL<span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Randomly assign alleles</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>alleles<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> random_allele<span class="op">();</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>new_person<span class="op">-&gt;</span>alleles<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> random_allele<span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Finally, your function should return a pointer for the <code>person</code> that was allocated.</p>
-<pre><code>// Return newly created person
-return new_person;
-</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Return newly created person</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> new_person<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Complete the <code>free_family</code> function</p>
 <p>The <code>free_family</code> function should accept as input a pointer to a <code>person</code>, free memory for that person, and then recursively free memory for all of their ancestors.</p>
 <ul>
@@ -853,59 +859,46 @@ return new_person;
 <li>Otherwise, you should recursively <code>free</code> both of the person’s parents before <code>free</code>ing the child.</li>
 </ul>
 <p>The below is quite the hint, but here’s how to do just that!</p>
-<pre><code>// Free `p` and all ancestors of `p`.
-void free_family(person *p)
-{
-    // Handle base case
-    if (p == NULL)
-    {
-        return;
-    }
-
-    // Free parents recursively
-    free_family(p-&gt;parents[0]);
-    free_family(p-&gt;parents[1]);
-
-    // Free child
-    free(p);
-}
-</code></pre>
-<section id="walkthrough" class="level3">
-<h3 class="anchored" data-anchor-id="walkthrough">Walkthrough</h3>
-<p>Not sure how to solve?</p>
-</section>
+<div class="sourceCode" id="cb16"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Free `p` and all ancestors of `p`.</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> free_family<span class="op">(</span>person <span class="op">*</span>p<span class="op">)</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Handle base case</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>p <span class="op">==</span> NULL<span class="op">)</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Free parents recursively</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    free_family<span class="op">(</span>p<span class="op">-&gt;</span>parents<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    free_family<span class="op">(</span>p<span class="op">-&gt;</span>parents<span class="op">[</span><span class="dv">1</span><span class="op">]);</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Free child</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    free<span class="op">(</span>p<span class="op">);</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>Upon running <code>./inheritance</code>, your program should adhere to the rules described in the background. The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents.</p>
 <p>For example, in the example below, the child in Generation 0 received an O allele from both Generation 1 parents. The first parent received an A from the first grandparent and a O from the second grandparent. Similarly, the second parent received an O and a B from their grandparents.</p>
-<pre><code>$ ./inheritance
-Child (Generation 0): blood type OO
-    Parent (Generation 1): blood type AO
-        Grandparent (Generation 2): blood type OA
-        Grandparent (Generation 2): blood type BO
-    Parent (Generation 1): blood type OB
-        Grandparent (Generation 2): blood type AO
-        Grandparent (Generation 2): blood type BO
-</code></pre>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/inheritance
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 inheritance.c
-</code></pre>
-</section>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./inheritance</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Child</span> <span class="er">(</span><span class="ex">Generation</span> 0<span class="kw">)</span><span class="bu">:</span> blood type OO</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Parent</span> <span class="er">(</span><span class="ex">Generation</span> 1<span class="kw">)</span><span class="bu">:</span> blood type AO</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">Grandparent</span> <span class="er">(</span><span class="ex">Generation</span> 2<span class="kw">)</span><span class="bu">:</span> blood type OA</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="ex">Grandparent</span> <span class="er">(</span><span class="ex">Generation</span> 2<span class="kw">)</span><span class="bu">:</span> blood type BO</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Parent</span> <span class="er">(</span><span class="ex">Generation</span> 1<span class="kw">)</span><span class="bu">:</span> blood type OB</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="ex">Grandparent</span> <span class="er">(</span><span class="ex">Generation</span> 2<span class="kw">)</span><span class="bu">:</span> blood type AO</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">Grandparent</span> <span class="er">(</span><span class="ex">Generation</span> 2<span class="kw">)</span><span class="bu">:</span> blood type BO</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/inheritance
-</code></pre>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

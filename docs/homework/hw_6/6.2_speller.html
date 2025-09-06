@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>speller – Computing Technology</title>
+<title>6.2 Speller – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,10 +108,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="6.2 Speller – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:title" content="6.2 Speller – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_6/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -254,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">6.2 Speller</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -686,165 +721,132 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#speller" id="toc-speller" class="nav-link active" data-scroll-target="#speller">Speller</a></li>
-  <li><a href="#speller-1" id="toc-speller-1" class="nav-link" data-scroll-target="#speller-1">Speller</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
-  <ul class="collapse">
-  <li><a href="#understanding" id="toc-understanding" class="nav-link" data-scroll-target="#understanding">Understanding</a></li>
-  </ul></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a></li>
   <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthroughs" id="toc-walkthroughs" class="nav-link" data-scroll-target="#walkthroughs">Walkthroughs</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
+  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a></li>
   <li><a href="#staffs-solution" id="toc-staffs-solution" class="nav-link" data-scroll-target="#staffs-solution">Staff’s Solution</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_6/6.2_speller.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">6.2 Speller</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="speller" class="level1">
-<h1>Speller</h1>
-<p><strong>Week 5, Problem 2</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/5/speller/</p>
-<hr>
-</section>
-<section id="speller-1" class="level1">
-<h1>Speller</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
-<p>For this problem, you’ll implement a program that spell-checks a file, a la the below, using a hash table.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
+</header>
+
+
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>For this problem, you’ll implement a program that spell-checks a file using a hash table.</p>
 </section>
 <section id="distribution-code" class="level2">
 <h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
-<p>For this problem, you’ll extend the functionality of code provided to you by CS50’s staff.</p>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of code provided to you by course staff.</p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/5/speller.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/speller.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>speller.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip speller.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> speller.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>speller</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm speller.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> speller.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd speller
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> speller</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>speller/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">speller/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute <code>ls</code> by itself, and you should see a few files and folders:</p>
-<pre><code>dictionaries/  dictionary.c  dictionary.h  keys/  Makefile  speller.c  speller50  texts/
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dictionaries/</span>  dictionary.c  dictionary.h  keys/  Makefile  speller.c  speller50  texts/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <p><strong>Given the many files in this program, it’s important to read this section in its entirety before starting. You’ll then know what to do and how to do it!</strong></p>
 <p>Theoretically, on input of size <em>n</em>, an algorithm with a running time of <em>n</em> is “asymptotically equivalent,” in terms of <em>O</em>, to an algorithm with a running time of <em>2n</em>. Indeed, when describing the running time of an algorithm, we typically focus on the dominant (i.e., most impactful) term (i.e., <em>n</em> in this case, since <em>n</em> could be much larger than 2). In the real world, though, the fact of the matter is that <em>2n</em> feels twice as slow as <em>n</em>.</p>
 <p>The challenge ahead of you is to implement the fastest spell checker you can! By “fastest,” though, we’re talking actual “wall-clock,” not asymptotic, time.</p>
 <p>In <code>speller.c</code>, we’ve put together a program that’s designed to spell-check a file after loading a dictionary of words from disk into memory. That dictionary, meanwhile, is implemented in a file called <code>dictionary.c</code>. (It could just be implemented in <code>speller.c</code>, but as programs get more complex, it’s often convenient to break them into multiple files.) The prototypes for the functions therein, meanwhile, are defined not in <code>dictionary.c</code> itself but in <code>dictionary.h</code> instead. That way, both <code>speller.c</code> and <code>dictionary.c</code> can <code>#include</code> the file. Unfortunately, we didn’t quite get around to implementing the loading part. Or the checking part. Both (and a bit more) we leave to you! But first, a tour.</p>
-<section id="understanding" class="level3">
-<h3 class="anchored" data-anchor-id="understanding">Understanding</h3>
-<section id="dictionary.h" class="level4">
-<h4 class="anchored" data-anchor-id="dictionary.h"><code>dictionary.h</code></h4>
+<p><strong><code>dictionary.h</code></strong></p>
 <p>Open up <code>dictionary.h</code>, and you’ll see some new syntax, including a few lines that mention <code>DICTIONARY_H</code>. No need to worry about those, but, if curious, those lines just ensure that, even though <code>dictionary.c</code> and <code>speller.c</code> (which you’ll see in a moment) <code>#include</code> this file, <code>clang</code> will only compile it once.</p>
 <p>Next notice how we <code>#include</code> a file called <code>stdbool.h</code>. That’s the file in which <code>bool</code> itself is defined. You’ve not needed it before, since the CS50 Library used to <code>#include</code> that for you.</p>
 <p>Also notice our use of <code>#define</code>, a “preprocessor directive” that defines a “constant” called <code>LENGTH</code> that has a value of <code>45</code>. It’s a constant in the sense that you can’t (accidentally) change it in your own code. In fact, <code>clang</code> will replace any mentions of <code>LENGTH</code> in your own code with, literally, <code>45</code>. In other words, it’s not a variable, just a find-and-replace trick.</p>
 <p>Finally, notice the prototypes for five functions: <code>check</code>, <code>hash</code>, <code>load</code>, <code>size</code>, and <code>unload</code>. Notice how three of those take a pointer as an argument, per the <code>*</code>:</p>
-<pre><code>bool check(const char *word);
-unsigned int hash(const char *word);
-bool load(const char *dictionary);
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> check<span class="op">(</span><span class="dt">const</span> <span class="dt">char</span> <span class="op">*</span>word<span class="op">);</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">unsigned</span> <span class="dt">int</span> hash<span class="op">(</span><span class="dt">const</span> <span class="dt">char</span> <span class="op">*</span>word<span class="op">);</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> load<span class="op">(</span><span class="dt">const</span> <span class="dt">char</span> <span class="op">*</span>dictionary<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Recall that <code>char *</code> is what we used to call <code>string</code>. So those three prototypes are essentially just:</p>
-<pre><code>bool check(const string word);
-unsigned int hash(const string word);
-bool load(const string dictionary);
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> check<span class="op">(</span><span class="dt">const</span> string word<span class="op">);</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">unsigned</span> <span class="dt">int</span> hash<span class="op">(</span><span class="dt">const</span> string word<span class="op">);</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> load<span class="op">(</span><span class="dt">const</span> string dictionary<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And <code>const</code>, meanwhile, just says that those strings, when passed in as arguments, must remain constant; you won’t be able to change them, accidentally or otherwise!</p>
-</section>
-<section id="dictionary.c" class="level4">
-<h4 class="anchored" data-anchor-id="dictionary.c"><code>dictionary.c</code></h4>
+<p><strong><code>dictionary.c</code></strong></p>
 <p>Now open up <code>dictionary.c</code>. Notice how, atop the file, we’ve defined a <code>struct</code> called <code>node</code> that represents a node in a hash table. And we’ve declared a global pointer array, <code>table</code>, which will (soon) represent the hash table you will use to keep track of words in the dictionary. The array contains <code>N</code> node pointers, and we’ve set <code>N</code> equal to <code>26</code> for now, to match with the default <code>hash</code> function as described below. You will likely want to increase this depending on your own implementation of <code>hash</code>.</p>
 <p>Next, notice that we’ve implemented <code>load</code>, <code>check</code>, <code>size</code>, and <code>unload</code>, but only barely, just enough for the code to compile. Notice too that we’ve implemented <code>hash</code> with a sample algorithm based on the first letter of the word. Your job, ultimately, is to re-implement those functions as cleverly as possible so that this spell checker works as advertised. And fast!</p>
-</section>
-<section id="speller.c" class="level4">
-<h4 class="anchored" data-anchor-id="speller.c"><code>speller.c</code></h4>
+<p><strong><code>speller.c</code></strong></p>
 <p>Okay, next open up <code>speller.c</code> and spend some time looking over the code and comments therein. You won’t need to change anything in this file, and you don’t need to understand its entirety, but do try to get a sense of its functionality nonetheless. Notice how, by way of a function called <code>getrusage</code>, we’ll be “benchmarking” (i.e., timing the execution of) your implementations of <code>check</code>, <code>load</code>, <code>size</code>, and <code>unload</code>. Also notice how we go about passing <code>check</code>, word by word, the contents of some file to be spell-checked. Ultimately, we report each misspelling in that file along with a bunch of statistics.</p>
 <p>Notice, incidentally, that we have defined the usage of <code>speller</code> to be</p>
-<pre><code>Usage: ./speller [dictionary] text
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Usage:</span> ./speller <span class="pp">[</span><span class="ss">dictionary</span><span class="pp">]</span> text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>where <code>dictionary</code> is assumed to be a file containing a list of lowercase words, one per line, and <code>text</code> is a file to be spell-checked. As the brackets suggest, provision of <code>dictionary</code> is optional; if this argument is omitted, <code>speller</code> will use <code>dictionaries/large</code> by default. In other words, running</p>
-<pre><code>./speller text
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>will be equivalent to running</p>
-<pre><code>./speller dictionaries/large text
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> dictionaries/large text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>where <code>text</code> is the file you wish to spell-check. Suffice it to say, the former is easier to type! (Of course, <code>speller</code> will not be able to load any dictionaries until you implement <code>load</code> in <code>dictionary.c</code>! Until then, you’ll see <code>Could not load</code>.)</p>
 <p>Within the default dictionary, mind you, are 143,091 words, all of which must be loaded into memory! In fact, take a peek at that file to get a sense of its structure and size. Notice that every word in that file appears in lowercase (even, for simplicity, proper nouns and acronyms). From top to bottom, the file is sorted lexicographically, with only one word per line (each of which ends with <code>\n</code>). No word is longer than 45 characters, and no word appears more than once. During development, you may find it helpful to provide <code>speller</code> with a <code>dictionary</code> of your own that contains far fewer words, lest you struggle to debug an otherwise enormous structure in memory. In <code>dictionaries/small</code> is one such dictionary. To use it, execute</p>
-<pre><code>./speller dictionaries/small text
-</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> dictionaries/small text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>where <code>text</code> is the file you wish to spell-check. Don’t move on until you’re sure you understand how <code>speller</code> itself works!</p>
 <p>Odds are, you didn’t spend enough time looking over <code>speller.c</code>. Go back one square and walk yourself through it again!</p>
-</section>
-<section id="texts" class="level4">
-<h4 class="anchored" data-anchor-id="texts"><code>texts/</code></h4>
+<p><strong><code>texts/</code></strong></p>
 <p>So that you can test your implementation of <code>speller</code>, we’ve also provided you with a whole bunch of texts, among them the script from <em>La La Land</em>, the text of the Affordable Care Act, three million bytes from Tolstoy, some excerpts from <em>The Federalist Papers</em> and Shakespeare, and more. So that you know what to expect, open and skim each of those files, all of which are in a directory called <code>texts</code> within your <code>pset5</code> directory.</p>
 <p>Now, as you should know from having read over <code>speller.c</code> carefully, the output of <code>speller</code>, if executed with, say,</p>
-<pre><code>./speller texts/lalaland.txt
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> texts/lalaland.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>will eventually resemble the below.</p>
 <p>Below’s some of the output you’ll see. For information’s sake, we’ve excerpted some examples of “misspellings.” And lest we spoil the fun, we’ve omitted our own statistics for now.</p>
-<pre><code>MISSPELLED WORDS
-
-[...]
-AHHHHHHHHHHHHHHHHHHHHHHHHHHHT
-[...]
-Shangri
-[...]
-fianc
-[...]
-Sebastian's
-[...]
-
-WORDS MISSPELLED:
-WORDS IN DICTIONARY:
-WORDS IN TEXT:
-TIME IN load:
-TIME IN check:
-TIME IN size:
-TIME IN unload:
-TIME IN TOTAL:
-</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MISSPELLED</span> WORDS</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[...]</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ex">AHHHHHHHHHHHHHHHHHHHHHHHHHHHT</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[...]</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Shangri</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[...]</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="ex">fianc</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="ex">[...]</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Sebastian</span><span class="st">'s</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="st">[...]</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="st">WORDS MISSPELLED:</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="st">WORDS IN DICTIONARY:</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="st">WORDS IN TEXT:</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="st">TIME IN load:</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="st">TIME IN check:</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="st">TIME IN size:</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="st">TIME IN unload:</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="st">TIME IN TOTAL:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>TIME IN load</code> represents the number of seconds that <code>speller</code> spends executing your implementation of <code>load</code>. <code>TIME IN check</code> represents the number of seconds that <code>speller</code> spends, in total, executing your implementation of <code>check</code>. <code>TIME IN size</code> represents the number of seconds that <code>speller</code> spends executing your implementation of <code>size</code>. <code>TIME IN unload</code> represents the number of seconds that <code>speller</code> spends executing your implementation of <code>unload</code>. <code>TIME IN TOTAL</code> is the sum of those four measurements.</p>
 <p><strong>Note that these times may vary somewhat across executions of <code>speller</code>, depending on what else your codespace is doing, even if you don’t change your code.</strong></p>
 <p>Incidentally, to be clear, by “misspelled” we simply mean that some word is not in the <code>dictionary</code> provided.</p>
-</section>
-<section id="makefile" class="level4">
-<h4 class="anchored" data-anchor-id="makefile"><code>Makefile</code></h4>
+<p><strong><code>Makefile</code></strong></p>
 <p>And, lastly, recall that <code>make</code> automates compilation of your code so that you don’t have to execute <code>clang</code> manually along with a whole bunch of switches. However, as your programs grow in size, <code>make</code> won’t be able to infer from context anymore how to compile your code; you’ll need to start telling <code>make</code> how to compile your program, particularly when they involve multiple source (i.e., <code>.c</code>) files, as in the case of this problem. And so we’ll utilize a <code>Makefile</code>, a configuration file that tells <code>make</code> exactly what to do. Open up <code>Makefile</code>, and you should see four lines:</p>
 <ol type="1">
 <li>The first line tells <code>make</code> to execute the subsequent lines whenever you yourself execute <code>make speller</code> (or just <code>make</code>).</li>
@@ -853,8 +855,6 @@ TIME IN TOTAL:
 <li>The fourth line tells <code>make</code> to link <code>speller.o</code> and <code>dictionary.o</code> in a file called <code>speller</code>.</li>
 </ol>
 <p><strong>Be sure to compile <code>speller</code> by executing <code>make speller</code> (or just <code>make</code>). Executing <code>make dictionary</code> won’t work!</strong></p>
-</section>
-</section>
 </section>
 <section id="specification" class="level2">
 <h2 class="anchored" data-anchor-id="specification">Specification</h2>
@@ -896,44 +896,41 @@ TIME IN TOTAL:
 <li>Close the dictionary file</li>
 </ol>
 <p>Write some pseudocode to remind yourself to do just that:</p>
-<pre><code>bool load(const char *dictionary)
-{
-    // Open the dictionary file
-
-    // Read each word in the file
-
-        // Add each word to the hash table
-
-    // Close the dictionary file
-}
-</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> load<span class="op">(</span><span class="dt">const</span> <span class="dt">char</span> <span class="op">*</span>dictionary<span class="op">)</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Open the dictionary file</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Read each word in the file</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Add each word to the hash table</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Close the dictionary file</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Consider first how to open the dictionary file. <a href="https://manual.cs50.io/3/fopen"><code>fopen</code></a> is a natural choice. You can use mode <code>r</code>, given that you need only <em>read</em> words from the dictionary file (not <em>write</em> or <em>append</em> them).</p>
-<pre><code>bool load(const char *dictionary)
-{
-    // Open the dictionary file
-    FILE *source = fopen(dictionary, "r");
-
-    // Read each word in the file
-
-        // Add each word to the hash table
-
-    // Close the dictionary file
-}
-</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> load<span class="op">(</span><span class="dt">const</span> <span class="dt">char</span> <span class="op">*</span>dictionary<span class="op">)</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Open the dictionary file</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">FILE</span> <span class="op">*</span>source <span class="op">=</span> fopen<span class="op">(</span>dictionary<span class="op">,</span> <span class="st">"r"</span><span class="op">);</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Read each word in the file</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Add each word to the hash table</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Close the dictionary file</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Before moving on, you should write code to check whether the file opened correctly. That’s up to you! It’s also best to ensure you close every file you open, so now’s a good time to write the code to close the dictionary file:</p>
-<pre><code>bool load(const char *dictionary)
-{
-    // Open the dictionary file
-    FILE *source = fopen(dictionary, "r");
-
-    // Read each word in the file
-
-        // Add each word to the hash table
-
-    // Close the dictionary file
-    fclose(source);
-}
-</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> load<span class="op">(</span><span class="dt">const</span> <span class="dt">char</span> <span class="op">*</span>dictionary<span class="op">)</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Open the dictionary file</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">FILE</span> <span class="op">*</span>source <span class="op">=</span> fopen<span class="op">(</span>dictionary<span class="op">,</span> <span class="st">"r"</span><span class="op">);</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Read each word in the file</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Add each word to the hash table</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Close the dictionary file</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    fclose<span class="op">(</span>source<span class="op">);</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>What remains is to read each word in the file and to add each word to the hash table. Return <code>true</code> when the entire operation is successful and <code>false</code> if it ever fails. Consider following this problem’s walkthrough and continue to break sub-problems into even smaller problems. For example, adding each word to the hash table might only be a matter of implementing a few, even smaller, steps:</p>
 <ol type="1">
 <li>Create space for a new hash table node</li>
@@ -967,74 +964,53 @@ TIME IN TOTAL:
 <p>Implement <code>unload</code></p>
 <p>Complete the <code>unload</code> function. Be sure to <code>free</code> in <code>unload</code> any memory that you allocated in <code>load</code>!</p>
 <p>Recall that <code>valgrind</code> is your newest best friend. Know that <code>valgrind</code> watches for leaks while your program is actually running, so be sure to provide command-line arguments if you want <code>valgrind</code> to analyze <code>speller</code> while you use a particular <code>dictionary</code> and/or text, as in the below. Best to use a small text, though, else <code>valgrind</code> could take quite a while to run.</p>
-<pre><code>valgrind ./speller texts/cat.txt
-</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">valgrind</span> ./speller texts/cat.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you run <code>valgrind</code> without specifying a <code>text</code> for <code>speller</code>, your implementations of <code>load</code> and <code>unload</code> won’t actually get called (and thus analyzed).</p>
 <p>If unsure how to interpret the output of <code>valgrind</code>, do just ask <code>help50</code> for help:</p>
-<pre><code>help50 valgrind ./speller texts/cat.txt
-</code></pre>
-</section>
-<section id="walkthroughs" class="level2">
-<h2 class="anchored" data-anchor-id="walkthroughs">Walkthroughs</h2>
-<p><strong>Note that there are 6 videos in this playlist.</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">help50</span> valgrind ./speller texts/cat.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>How to check whether your program is outting the right misspelled words? Well, you’re welcome to consult the “answer keys” that are inside of the <code>keys</code> directory that’s inside of your <code>speller</code> directory. For instance, inside of <code>keys/lalaland.txt</code> are all of the words that your program <em>should</em> think are misspelled.</p>
 <p>You could therefore run your program on some text in one window, as with the below.</p>
-<pre><code>./speller texts/lalaland.txt
-</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> texts/lalaland.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And you could then run the staff’s solution on the same text in another window, as with the below.</p>
-<pre><code>./speller50 texts/lalaland.txt
-</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller50</span> texts/lalaland.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And you could then compare the windows visually side by side. That could get tedious quickly, though. So you might instead want to “redirect” your program’s output to a file, as with the below.</p>
-<pre><code>./speller texts/lalaland.txt &gt; student.txt
-./speller50 texts/lalaland.txt &gt; staff.txt
-</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> texts/lalaland.txt <span class="op">&gt;</span> student.txt</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller50</span> texts/lalaland.txt <span class="op">&gt;</span> staff.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can then compare both files side by side in the same window with a program like <code>diff</code>, as with the below.</p>
-<pre><code>diff -y student.txt staff.txt
-</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> <span class="at">-y</span> student.txt staff.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Alternatively, to save time, you could just compare your program’s output (assuming you redirected it to, e.g., <code>student.txt</code>) against one of the answer keys without running the staff’s solution, as with the below.</p>
-<pre><code>diff -y student.txt keys/lalaland.txt
-</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> <span class="at">-y</span> student.txt keys/lalaland.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If your program’s output matches the staff’s, <code>diff</code> will output two columns that should be identical except for, perhaps, the running times at the bottom. If the columns differ, though, you’ll see a <code>&gt;</code> or <code>|</code> where they differ. For instance, if you see</p>
-<pre><code>MISSPELLED WORDS                                                MISSPELLED WORDS
-
-TECHNO                                                          TECHNO
-L                                                               L
-                                                              &gt; Thelonious
-Prius                                                           Prius
-                                                              &gt; MIA
-L                                                               L
-</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MISSPELLED</span> WORDS                                                MISSPELLED WORDS</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="ex">TECHNO</span>                                                          TECHNO</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="ex">L</span>                                                               L</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>                                                              <span class="op">&gt;</span> Thelonious</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Prius</span>                                                           Prius</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                                                              <span class="op">&gt;</span> MIA</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="ex">L</span>                                                               L</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>that means your program (whose output is on the left) does not think that <code>Thelonious</code> or <code>MIA</code> is misspelled, even though the staff’s output (on the right) does, as is implied by the absence of, say, <code>Thelonious</code> in the lefthand column and the presence of <code>Thelonious</code> in the righthand column.</p>
 <p>Finally, be sure to test with both the default large and small dictionaries. Be careful not to assume that if your solution runs successfully with the large dictionary it will also run successfully with the small one. Here’s how to try the small dictionary:</p>
-<pre><code>./speller dictionaries/small texts/cat.txt 
-</code></pre>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/speller
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 dictionary.c
-</code></pre>
-</section>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller</span> dictionaries/small texts/cat.txt </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="staffs-solution" class="level2">
 <h2 class="anchored" data-anchor-id="staffs-solution">Staff’s Solution</h2>
 <p>How to assess just how fast (and correct) your code is? Well, as always, feel free to play with the staff’s solution, as with the below, and compare its numbers against yours.</p>
-<pre><code>./speller50 texts/lalaland.txt
-</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./speller50</span> texts/lalaland.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/speller
-</code></pre>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
