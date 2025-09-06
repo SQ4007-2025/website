@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>volume – Computing Technology</title>
+<title>5.1 Volume – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="5.1 Volume – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_5/wav_file.png">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/wav_file.png">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta property="og:image:height" content="612">
+<meta property="og:image:width" content="2846">
+<meta name="twitter:title" content="5.1 Volume – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_5/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">5.1 Volume</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,86 +724,68 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#volume" id="toc-volume" class="nav-link active" data-scroll-target="#volume">Volume</a></li>
-  <li><a href="#volume-1" id="toc-volume-1" class="nav-link" data-scroll-target="#volume-1">Volume</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
-  <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details</a></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
+  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_5/5.1_volume.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">5.1 Volume</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="volume" class="level1">
-<h1>Volume</h1>
-<p><strong>Week 4, Problem 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/4/volume/</p>
-<hr>
-</section>
-<section id="volume-1" class="level1">
-<h1>Volume</h1>
+</header>
+
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="wav_file.png" class="img-fluid figure-img"></p>
-<figcaption>WAV file waveform</figcaption>
+<p><img src="../images/wav_file.png" class="img-fluid figure-img"></p>
+<figcaption>WAV files</figcaption>
 </figure>
 </div>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p><a href="https://docs.fileformat.com/audio/wav/">WAV files</a> are a common file format for representing audio. WAV files store audio as a sequence of “samples”: numbers that represent the value of some audio signal at a particular point in time. WAV files begin with a 44-byte “header” that contains information about the file itself, including the size of the file, the number of samples per second, and the size of each sample. After the header, the WAV file contains a sequence of samples, each a single 2-byte (16-bit) integer representing the audio signal at a particular point in time.</p>
 <p>Scaling each sample value by a given factor has the effect of changing the volume of the audio. Multiplying each sample value by 2.0, for example, will have the effect of doubling the volume of the origin audio. Multiplying each sample by 0.5, meanwhile, will have the effect of cutting the volume in half.</p>
 <p>In a file called <code>volume.c</code> in a folder called <code>volume</code>, write a program to modify the volume of an audio file.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="distribution-code" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
-<p>For this problem, you’ll extend the functionality of code provided to you by CS50’s staff.</p>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of code provided to you by course staff.</p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/4/volume.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/volume.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>volume.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip volume.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> volume.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>volume</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm volume.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> volume.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd volume
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> volume</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>volume/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">volume/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If all was successful, you should execute</p>
-<pre><code>ls
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and see a file named <code>volume.c</code>. Executing <code>code volume.c</code> should open the file where you will type your code for this problem set. If not, retrace your steps and see if you can determine where you went wrong!</p>
-</section>
-<section id="implementation-details" class="level2">
-<h2 class="anchored" data-anchor-id="implementation-details">Implementation Details</h2>
+<p><strong>Implementation</strong></p>
 <p>Complete the implementation of <code>volume.c</code>, such that it changes the volume of a sound file by a given factor.</p>
 <ul>
 <li>The program should accept three command-line arguments. The first is <code>input</code>, which represents the name of the original audio file. The second is <code>output</code>, which represents the name of the new audio file that should be generated. The third is <code>factor</code>, which is the amount by which the volume of the original audio file should be scaled.
@@ -783,57 +802,51 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="hints" class="level2">
 <h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<p>Click the below toggles to read some advice!</p>
 <p>Understand the code in <code>volume.c</code></p>
 <p>Notice first that <code>volume.c</code> is already set up to take three command-line arguments, <code>input</code>, <code>output</code>, and <code>factor</code>.</p>
 <ul>
 <li><code>main</code> takes both an <code>int</code>, <code>argc</code>, and an array of <code>char *</code>s (strings!), <code>argv</code>.</li>
 <li>If <code>argc</code>, the number of arguments at the command-line including the program itself, is not equal to 4, the program will print its proper usage and exit with status code 1.</li>
 </ul>
-<pre><code>int main(int argc, char *argv[])
-{
-    // Check command-line arguments
-    if (argc != 4)
-    {
-        printf("Usage: ./volume input.wav output.wav factor\n");
-        return 1;
-    }
-
-    // ...
-}
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span> <span class="op">*</span>argv<span class="op">[])</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Check command-line arguments</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>argc <span class="op">!=</span> <span class="dv">4</span><span class="op">)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">"Usage: ./volume input.wav output.wav factor</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next, <code>volume.c</code> uses <a href="https://manual.cs50.io/3/fopen"><code>fopen</code></a> to open the two files provided as command-line arguments.</p>
 <ul>
 <li>It’s best practice to check if the result of calling <code>fopen</code> is <code>NULL</code>. If it is, the file wasn’t found or wasn’t able to be opened.</li>
 </ul>
-<pre><code>// Open files and determine scaling factor
-FILE *input = fopen(argv[1], "r");
-if (input == NULL)
-{
-    printf("Could not open file.\n");
-    return 1;
-}
-
-FILE *output = fopen(argv[2], "w");
-if (output == NULL)
-{
-    printf("Could not open file.\n");
-    return 1;
-}
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Open files and determine scaling factor</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">FILE</span> <span class="op">*</span>input <span class="op">=</span> fopen<span class="op">(</span>argv<span class="op">[</span><span class="dv">1</span><span class="op">],</span> <span class="st">"r"</span><span class="op">);</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>input <span class="op">==</span> NULL<span class="op">)</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"Could not open file.</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="dt">FILE</span> <span class="op">*</span>output <span class="op">=</span> fopen<span class="op">(</span>argv<span class="op">[</span><span class="dv">2</span><span class="op">],</span> <span class="st">"w"</span><span class="op">);</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>output <span class="op">==</span> NULL<span class="op">)</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"Could not open file.</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Later, these files are closed with <code>fclose</code>. Whenever you call <code>fopen</code>, you should later call <code>fclose</code>!</p>
-<pre><code>// Close files
-fclose(input);
-fclose(output);
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Close files</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>fclose<span class="op">(</span>input<span class="op">);</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>fclose<span class="op">(</span>output<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Before closing the files, though, notice that we have a few TODOs.</p>
-<pre><code>// TODO: Copy header from input file to output file
-
-// TODO: Read samples from input file and write updated data to output file
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// </span><span class="al">TODO</span><span class="co">: Copy header from input file to output file</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">// </span><span class="al">TODO</span><span class="co">: Read samples from input file and write updated data to output file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Odds are you’ll need to know the factor by which to scale the volume, hence why <code>volume.c</code> already converts the third command-line argument to a <code>float</code> for you!</p>
-<pre><code>float factor = atof(argv[3]);
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> factor <span class="op">=</span> atof<span class="op">(</span>argv<span class="op">[</span><span class="dv">3</span><span class="op">]);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Copy WAV header from input file to output file</p>
 <p>Your first TODO is to copy the WAV file header from <code>input</code> and write it to <code>output</code>. First, though, you’ll need to learn about a few special data types.</p>
 <p>So far, we’ve seen a number of different types in C, including <code>int</code>, <code>bool</code>, <code>char</code>, <code>double</code>, <code>float</code>, and <code>long</code>. However, inside a header file called <code>stdint.h</code> are the declarations of a number of <em>other</em> types that allow us to very precisely define the size (in bits) and sign (signed or unsigned) of an integer. Two types in particular will be useful to us when working with WAV files:</p>
@@ -842,122 +855,100 @@ fclose(output);
 <li><code>int16_t</code> is a type that stores a 16-bit signed (i.e., positive or negative) integer. We can treat each sample of audio in a WAV file as an <code>int16_t</code> value.</li>
 </ul>
 <p>You’ll likely want to create an array of bytes to store the data from the WAV file header that you’ll read from the input file. Using the <code>uint8_t</code> type to represent a byte, you can create an array of <code>n</code> bytes for your header with syntax like</p>
-<pre><code>uint8_t header[n];
-</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">uint8_t</span> header<span class="op">[</span>n<span class="op">];</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>replacing <code>n</code> with the number of bytes. You can then use <code>header</code> as an argument to <a href="https://manual.cs50.io/3/fread"><code>fread</code></a> or <a href="https://manual.cs50.io/3/fwrite"><code>fwrite</code></a> to read into or write from the header.</p>
 <p>Recall that a WAV file’s header is always exactly 44 bytes long. Note that <code>volume.c</code> already defines a variable for you called <code>HEADER_SIZE</code>, equal to the number of bytes in the header.</p>
 <p>The below is a pretty big hint, but here’s how you could accomplish this TODO!</p>
-<pre><code>// Copy header from input file to output file
-uint8_t header[HEADER_SIZE];
-fread(header, HEADER_SIZE, 1, input);
-fwrite(header, HEADER_SIZE, 1, output);
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Copy header from input file to output file</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="dt">uint8_t</span> header<span class="op">[</span>HEADER_SIZE<span class="op">];</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>fread<span class="op">(</span>header<span class="op">,</span> HEADER_SIZE<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> input<span class="op">);</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>fwrite<span class="op">(</span>header<span class="op">,</span> HEADER_SIZE<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> output<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Write updated data to output file</p>
 <p>Your next TODO is to read samples from <code>input</code>, update those samples, and write the updated samples to <code>output</code>. When reading files, it’s common to create a “buffer” in which to temporarily store data. There, you can modify the data and—once it’s ready—write the buffer’s data to a new file.</p>
 <p>Recall that we can use the <code>int16_t</code> type to represent a sample of a WAV file. To store an audio sample, then, you can create a buffer variable with syntax like:</p>
-<pre><code>// Create a buffer for a single sample
-int16_t buffer;
-</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a buffer for a single sample</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int16_t</span> buffer<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With a buffer for samples in place, you can now read data into it, one sample at a time. Try using <code>fread</code> for this task! You can use <code>&amp;buffer</code>, the address of <code>buffer</code>, as an argument to <code>fread</code> or <code>fwrite</code> to read into or write from the buffer. (Recall that the <code>&amp;</code> operator is used to get the address of the variable.)</p>
-<pre><code>// Create a buffer for a single sample
-int16_t buffer;
-
-// Read single sample into buffer
-fread(&amp;buffer, sizeof(int16_t), 1, input);
-</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a buffer for a single sample</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int16_t</span> buffer<span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Read single sample into buffer</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>fread<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> input<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, to increase (or decrease) the volume of a sample, you need only multiply it by some factor.</p>
-<pre><code>// Create a buffer for a single sample
-int16_t buffer;
-
-// Read single sample into buffer
-fread(&amp;buffer, sizeof(int16_t), 1, input);
-
-// Update volume of sample
-buffer *= factor;
-</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a buffer for a single sample</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int16_t</span> buffer<span class="op">;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Read single sample into buffer</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>fread<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> input<span class="op">);</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Update volume of sample</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>buffer <span class="op">*=</span> factor<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And finally, you can write that updated sample to <code>output</code>:</p>
-<pre><code>// Create a buffer for a single sample
-int16_t buffer;
-
-// Read single sample from input into buffer
-fread(&amp;buffer, sizeof(int16_t), 1, input);
-
-// Update volume of sample
-buffer *= factor;
-
-// Write updated sample to new file
-fwrite(&amp;buffer, sizeof(int16_t), 1, output);
-</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a buffer for a single sample</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int16_t</span> buffer<span class="op">;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Read single sample from input into buffer</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>fread<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> input<span class="op">);</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Update volume of sample</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>buffer <span class="op">*=</span> factor<span class="op">;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">// Write updated sample to new file</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>fwrite<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> output<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>There’s just one problem: you’ll need to <em>continue</em> reading a sample into your buffer, updating its volume, and writing the updated sample to the output file while there are still samples left to read.</p>
 <ul>
 <li><p>Thankfully, per its documentation, <code>fread</code> will return the number of items of data successfully read. You may find this useful to check for when you’ve reached the end of the file!</p></li>
 <li><p>Keep in mind there’s no reason you can’t call <code>fread</code> inside of a <code>while</code> loop’s conditional. You could, for example, make a call to <code>fread</code> like the following:</p>
-<pre><code>while (fread(...))
-{
-
-}
-</code></pre></li>
+<div class="sourceCode" id="cb19"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>fread<span class="op">(...))</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 <p>It’s quite the hint, but see the below for an efficient way to solve this problem:</p>
-<pre><code>// Create a buffer for a single sample
-int16_t buffer;
-
-// Read single sample from input into buffer while there are samples left to read
-while (fread(&amp;buffer, sizeof(int16_t), 1, input) != 0)
-{
-    // Update volume of sample
-    buffer *= factor;
-
-    // Write updated sample to new file
-    fwrite(&amp;buffer, sizeof(int16_t), 1, output);
-}
-</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a buffer for a single sample</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int16_t</span> buffer<span class="op">;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Read single sample from input into buffer while there are samples left to read</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>fread<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> input<span class="op">)</span> <span class="op">!=</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Update volume of sample</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    buffer <span class="op">*=</span> factor<span class="op">;</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Write updated sample to new file</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    fwrite<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> output<span class="op">);</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Because the version of C you’re using treats non-zero values as <code>true</code> and zero values as <code>false</code>, you could simplify the above syntax to the following:</p>
-<pre><code>// Create a buffer for a single sample
-int16_t buffer;
-
-// Read single sample from input into buffer while there are samples left to read
-while (fread(&amp;buffer, sizeof(int16_t), 1, input))
-{
-    // Update volume of sample
-    buffer *= factor;
-
-    // Write updated sample to new file
-    fwrite(&amp;buffer, sizeof(int16_t), 1, output);
-}
-</code></pre>
-</section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-<p>Not sure how to solve?</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a buffer for a single sample</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int16_t</span> buffer<span class="op">;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Read single sample from input into buffer while there are samples left to read</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>fread<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> input<span class="op">))</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Update volume of sample</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    buffer <span class="op">*=</span> factor<span class="op">;</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Write updated sample to new file</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    fwrite<span class="op">(&amp;</span>buffer<span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int16_t</span><span class="op">),</span> <span class="dv">1</span><span class="op">,</span> output<span class="op">);</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
 <p>Your program should behave per the examples below.</p>
-<pre><code>$ ./volume input.wav output.wav 2.0
-</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>$ <span class="op">./</span>volume input<span class="op">.</span>wav output<span class="op">.</span>wav <span class="fl">2.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you listen to <code>output.wav</code> (as by control-clicking on <code>output.wav</code> in the file browser, choosing <strong>Download</strong>, and then opening the file in an audio player on your computer), it should be twice as loud as <code>input.wav</code>!</p>
-<pre><code>$ ./volume input.wav output.wav 0.5
-</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>$ <span class="op">./</span>volume input<span class="op">.</span>wav output<span class="op">.</span>wav <span class="fl">0.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you listen to <code>output.wav</code>, it should be half as loud as <code>input.wav</code>!</p>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/volume
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 volume.c
-</code></pre>
-</section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/volume
-</code></pre>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

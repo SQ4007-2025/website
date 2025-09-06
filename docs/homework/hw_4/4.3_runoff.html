@@ -725,6 +725,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   </ul>
@@ -832,7 +833,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Once all of the votes are in, another loop begins: this one’s going to keep looping through the runoff process of checking for a winner and eliminating the last place candidate until there is a winner.</p>
 <p>The first call here is to a function called <code>tabulate</code>, which should look at all of the voters’ preferences and compute the current vote totals, by looking at each voter’s top choice candidate who hasn’t yet been eliminated. Next, the <code>print_winner</code> function should print out the winner if there is one; if there is, the program is over. But otherwise, the program needs to determine the fewest number of votes anyone still in the election received (via a call to <code>find_min</code>). If it turns out that everyone in the election is tied with the same number of votes (as determined by the <code>is_tie</code> function), the election is declared a tie; otherwise, the last-place candidate (or candidates) is eliminated from the election via a call to the <code>eliminate</code> function.</p>
 <p>If you look a bit further down in the file, you’ll see that the rest of the functions—<code>vote</code>, <code>tabulate</code>, <code>print_winner</code>, <code>find_min</code>, <code>is_tie</code>, and <code>eliminate</code>—are all left to up to you to complete! <strong>You should only modify these functions in runoff.c, though you may <code>#include</code> additional header files atop runoff.c if you’d like</strong></p>
-<p><strong>Hints</strong></p>
+</section>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <p>Click the below toggles to read some advice!</p>
 <p>Complete the <code>vote</code> function</p>
 <p>Complete the <code>vote</code> function.</p>

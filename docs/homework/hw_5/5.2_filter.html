@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>filter – Computing Technology</title>
+<title>5.1 Volume – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="5.1 Volume – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_5/yard-grayscale.bmp">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/yard-grayscale.bmp">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:title" content="5.1 Volume – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_5/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">5.1 Volume</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,13 +722,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-version-of-filter" id="toc-this-version-of-filter" class="nav-link active" data-scroll-target="#this-version-of-filter">this version of Filter</a></li>
-  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">Filter</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#distribution-code" id="toc-distribution-code" class="nav-link" data-scroll-target="#distribution-code">Distribution Code</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a>
   <ul class="collapse">
   <li><a href="#a-bitmap-more-technical" id="toc-a-bitmap-more-technical" class="nav-link" data-scroll-target="#a-bitmap-more-technical">A Bit(map) More Technical</a></li>
   <li><a href="#image-filtering" id="toc-image-filtering" class="nav-link" data-scroll-target="#image-filtering">Image Filtering</a></li>
@@ -708,44 +738,45 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a></li>
   <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  </ul></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_5/5.2_filter.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">5.1 Volume</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="this-version-of-filter" class="level1">
-<h1>this version of Filter</h1>
-<p><strong>Week 4, Problem 2</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/4/filter/less/</p>
-<hr>
-</section>
-<section id="filter" class="level1">
-<h1>Filter</h1>
+</header>
+
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="yard-grayscale.bmp" class="img-fluid figure-img"></p>
-<figcaption>Harvard Yard in grayscale</figcaption>
+<p><img src="../images/yard-grayscale.bmp" class="img-fluid figure-img"></p>
+<figcaption>WAV files</figcaption>
 </figure>
 </div>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="bitmap.png" class="img-fluid figure-img"></p>
+<p><img src="../images/bitmap.png" class="img-fluid figure-img"></p>
 <figcaption>a simple bitmap</figcaption>
 </figure>
 </div>
@@ -753,38 +784,27 @@ ul.task-list li input[type="checkbox"] {
 <p>A 24-bit BMP uses 8 bits to signify the amount of red in a pixel’s color, 8 bits to signify the amount of green in a pixel’s color, and 8 bits to signify the amount of blue in a pixel’s color. If you’ve ever heard of RGB color, well, there you have it: red, green, blue.</p>
 <p>If the R, G, and B values of some pixel in a BMP are, say, <code>0xff</code>, <code>0x00</code>, and <code>0x00</code> in hexadecimal, that pixel is purely red, as <code>0xff</code> (otherwise known as <code>255</code> in decimal) implies “a lot of red,” while <code>0x00</code> and <code>0x00</code> imply “no green” and “no blue,” respectively. In this problem, you’ll manipulate these R, G, and B values of individual pixels, ultimately creating your very own image filters.</p>
 <p>In a file called <code>helpers.c</code> in a folder called <code>filter-less</code>, write a program to apply filters to BMPs.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="distribution-code" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-code">Distribution Code</h2>
+<p><strong>Distribution Code</strong></p>
 <p>For this problem, you’ll extend the functionality of code provided to you by CS50’s staff.</p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/4/filter-less.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/filter-less.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>filter-less.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip filter-less.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> filter-less.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>filter-less</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm filter-less.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> filter-less.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd filter-less
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> filter-less</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>filter-less/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">filter-less/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute <code>ls</code> by itself, and you should see a few files: <code>bmp.h</code>, <code>filter.c</code>, <code>helpers.h</code>, <code>helpers.c</code>, and <code>Makefile</code>. You should also see a folder, <code>images/</code>, with four BMP files. If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <section id="a-bitmap-more-technical" class="level3">
 <h3 class="anchored" data-anchor-id="a-bitmap-more-technical">A Bit(map) More Technical</h3>
 <p>Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel’s color. But a BMP file also contains some “metadata,” information like an image’s height and width. That metadata is stored at the beginning of the file in the form of two data structures generally referred to as “headers,” not to be confused with C’s header files. (Incidentally, these headers have evolved over time. This problem uses the latest version of Microsoft’s BMP format, 4.0, which debuted with Windows 95.)</p>
@@ -836,11 +856,9 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="makefile"><code>Makefile</code></h3>
 <p>Finally, let’s look at <code>Makefile</code>. This file specifies what should happen when we run a terminal command like <code>make filter</code>. Whereas programs you may have written before were confined to just one file, <code>filter</code> seems to use multiple files: <code>filter.c</code> and <code>helpers.c</code>. So we’ll need to tell <code>make</code> how to compile this file.</p>
 <p>Try compiling <code>filter</code> for yourself by going to your terminal and running</p>
-<pre><code>$ make filter
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>$ make filter</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then, you can run the program by running:</p>
-<pre><code>$ ./filter -g images/yard.bmp out.bmp
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>$ <span class="op">./</span>filter <span class="op">-</span>g images<span class="op">/</span>yard<span class="op">.</span>bmp out<span class="op">.</span>bmp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>which takes the image at <code>images/yard.bmp</code>, and generates a new image called <code>out.bmp</code> after running the pixels through the <code>grayscale</code> function. <code>grayscale</code> doesn’t do anything just yet, though, so the output image should look the same as the original yard.</p>
 </section>
 </section>
@@ -866,10 +884,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>An image can be converted to sepia by taking each pixel, and computing new red, green, and blue values based on the original values of the three.</p></li>
 <li><p>There are a number of algorithms for converting an image to sepia, but for this problem, we’ll ask you to use the following algorithm. For each pixel, the sepia color values should be calculated based on the original color values per the below.</p>
-<pre><code>sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
-sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
-sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
-</code></pre></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sepiaRed <span class="op">=</span> <span class="fl">.393</span> <span class="op">*</span> originalRed <span class="op">+</span> <span class="fl">.769</span> <span class="op">*</span> originalGreen <span class="op">+</span> <span class="fl">.189</span> <span class="op">*</span> originalBlue</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>sepiaGreen <span class="op">=</span> <span class="fl">.349</span> <span class="op">*</span> originalRed <span class="op">+</span> <span class="fl">.686</span> <span class="op">*</span> originalGreen <span class="op">+</span> <span class="fl">.168</span> <span class="op">*</span> originalBlue</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>sepiaBlue <span class="op">=</span> <span class="fl">.272</span> <span class="op">*</span> originalRed <span class="op">+</span> <span class="fl">.534</span> <span class="op">*</span> originalGreen <span class="op">+</span> <span class="fl">.131</span> <span class="op">*</span> originalBlue</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Of course, the result of each of these formulas may not be an integer, but each value could be rounded to the nearest integer. It’s also possible that the result of the formula is a number greater than 255, the maximum value for an 8-bit color value. In that case, the red, green, and blue values should be capped at 255. As a result, we can guarantee that the resulting red, green, and blue values will be whole numbers between 0 and 255, inclusive.</p></li>
 </ul>
 <p>If you apply the above algorithm to each pixel in the image, the result will be an image converted to sepia.</p>
@@ -904,52 +921,48 @@ sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
 </section>
 <section id="hints" class="level2">
 <h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<p>Click the below toggles to read some advice!</p>
 <p>Implement <code>grayscale</code></p>
 <p>Given the grayscale algorithm you learned about above, let’s write some pseudocode to help you tackle this problem:</p>
-<pre><code>void grayscale(int height, int width, RGBTRIPLE image[height][width])
-{
-    // Loop over all pixels
-
-        // Take average of red, green, and blue
-
-        // Update pixel values
-}
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> grayscale<span class="op">(</span><span class="dt">int</span> height<span class="op">,</span> <span class="dt">int</span> width<span class="op">,</span> RGBTRIPLE image<span class="op">[</span>height<span class="op">][</span>width<span class="op">])</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Loop over all pixels</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Take average of red, green, and blue</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Update pixel values</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>First, how might you loop over all pixels? Recall that the image’s pixels are stored in the two-dimensional array, <code>image</code>. To iterate over a two-dimensional array, you’ll need two loops, one nested inside the other.</p>
-<pre><code>void grayscale(int height, int width, RGBTRIPLE image[height][width])
-{
-    // Loop over all pixels
-    for (int i = 0; i &lt; height; i++)
-    {
-        for (int j = 0; j &lt; width; j++)
-        {
-            // Take average of red, green, and blue
-
-            // Update pixel values
-        }
-    }
-}
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> grayscale<span class="op">(</span><span class="dt">int</span> height<span class="op">,</span> <span class="dt">int</span> width<span class="op">,</span> RGBTRIPLE image<span class="op">[</span>height<span class="op">][</span>width<span class="op">])</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Loop over all pixels</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> height<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> width<span class="op">;</span> j<span class="op">++)</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Take average of red, green, and blue</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Update pixel values</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, you can use <code>image[i][j]</code> to access any individual pixel of the image. But how to take the average of the red, green, and blue elements? Recall each element of <code>image</code> is an <code>RGBTRIPLE</code>, which is the <code>struct</code> defined in <code>bmp.h</code> to represent a pixel. The usual syntax to access members of a <code>struct</code> applies, wherein <code>image[i][j].rgbtRed</code> will give you access to the <code>RGBTRIPLE</code>’s red value, <code>image[i][j].rgbtGreen</code> will give you access to its green value, and so on.</p>
 <p>When you compute the average, keep in mind the values of a pixel’s <code>rgbtRed</code>, <code>rgbtGreen</code>, and <code>rgbtBlue</code> components are all integers. So be sure to <a href="https://manual.cs50.io/3/round">round</a> any floating-point numbers to the nearest integer when assigning them to a pixel value! And why might you want to divide the sum of these integers by 3.0 and not 3?</p>
 <p>Once you’ve averaged the pixel’s red, green, and blue values into a resulting grayscale color, go ahead and update the pixel’s red, green, and blue values. By now, you’re already acquainted with the syntax for assignment!</p>
 <p>Implement <code>sepia</code></p>
 <p>Let’s write some pseudocode to help you implement the <code>sepia</code> algorithm we learned about above, recalling the use of nested <code>for</code> loops to visit every pixel.</p>
-<pre><code>void sepia(int height, int width, RGBTRIPLE image[height][width])
-{
-    // Loop over all pixels
-    for (int i = 0; i &lt; height; i++)
-    {
-        for (int j = 0; j &lt; width; j++)
-        {
-            // Compute sepia values
-
-            // Update pixel with sepia values
-        }
-    }
-}
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> sepia<span class="op">(</span><span class="dt">int</span> height<span class="op">,</span> <span class="dt">int</span> width<span class="op">,</span> RGBTRIPLE image<span class="op">[</span>height<span class="op">][</span>width<span class="op">])</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Loop over all pixels</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> height<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> width<span class="op">;</span> j<span class="op">++)</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Compute sepia values</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Update pixel with sepia values</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To compute the <code>sepia</code> values, revisit the above bullets. You have a formula to compute the sepia values, but there are still a few catches. In particular, you’ll need to…</p>
 <ul>
 <li>Round the result of each computation to the nearest integer</li>
@@ -958,62 +971,45 @@ sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
 <p>How might a function that returns the lesser of two integers come in handy while implementing <code>sepia</code>, particularly when you need to make sure a color’s value is no higher than 255? You’re welcome, but not required, to write a helper function of your own to do just that!</p>
 <p>Implement <code>reflect</code></p>
 <p>Using what you know about the algorithm for image reflection, you know that in the <code>reflect</code> function, you’ll need to swap the values of pixels on opposite sides of a row. Write some pseudocode to help you get started:</p>
-<pre><code>void reflect(int height, int width, RGBTRIPLE image[height][width])
-{
-    // Loop over all pixels
-    for (int i = 0; i &lt; height; i++)
-    {
-        for (int j = 0; j &lt; width; j++)
-        {
-            // Swap pixels
-        }
-    }
-}
-</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> reflect<span class="op">(</span><span class="dt">int</span> height<span class="op">,</span> <span class="dt">int</span> width<span class="op">,</span> RGBTRIPLE image<span class="op">[</span>height<span class="op">][</span>width<span class="op">])</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Loop over all pixels</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> height<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> width<span class="op">;</span> j<span class="op">++)</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Swap pixels</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Recall from lecture how we implemented swapping two values with a temporary variable. No need to use a separate function for swapping unless you would like to!</p>
 <p>And now’s a good time to think about your nested <code>for</code> loops. The outer <code>for</code> loop iterates over every row, while the inner <code>for</code> loop iterates over every pixel in that row. To successfully reflect a row, though, need you iterate over every pixel in it?</p>
 <p>Implement <code>blur</code></p>
 <p>When implementing the <code>blur</code> algorithm, you might find that blurring one pixel ends up affecting the blur of another pixel. Therefore, it might be best to create a copy of <code>image</code> by declaring a new, two-dimensional array with code like <code>RGBTRIPLE copy[height][width];</code>. Then copy <code>image</code> into <code>copy</code>, pixel by pixel, with nested <code>for</code> loops, like so:</p>
-<pre><code>void blur(int height, int width, RGBTRIPLE image[height][width])
-{
-    // Create a copy of image
-    RGBTRIPLE copy[height][width];
-    for (int i = 0; i &lt; height; i++)
-    {
-        for (int j = 0; j &lt; width; j++)
-        {
-            copy[i][j] = image[i][j];
-        }
-    }
-}
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> blur<span class="op">(</span><span class="dt">int</span> height<span class="op">,</span> <span class="dt">int</span> width<span class="op">,</span> RGBTRIPLE image<span class="op">[</span>height<span class="op">][</span>width<span class="op">])</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Create a copy of image</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    RGBTRIPLE copy<span class="op">[</span>height<span class="op">][</span>width<span class="op">];</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> height<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> width<span class="op">;</span> j<span class="op">++)</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>            copy<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> image<span class="op">[</span>i<span class="op">][</span>j<span class="op">];</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, you can read pixels’ colors from <code>copy</code> but write (i.e., change) pixels’ colors in <code>image</code>!</p>
-</section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-<p><strong>Please note that there are 5 videos in this playlist.</strong></p>
-</section>
-<section id="how-to-test" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
-<p>Be sure to test all of your filters on the sample bitmap files provided!</p>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/filter/less
-</code></pre>
-</section>
-<section id="style" class="level3">
-<h3 class="anchored" data-anchor-id="style">Style</h3>
-<pre><code>style50 helpers.c
-</code></pre>
-</section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/filter/less
-</code></pre>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
