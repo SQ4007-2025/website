@@ -1380,44 +1380,16 @@
   {
     "objectID": "homework/hw_7/7.2_marioPy.html",
     "href": "homework/hw_7/7.2_marioPy.html",
-    "title": "this version of Mario",
+    "title": "7.2 Mario (Py)",
     "section": "",
-    "text": "Week 6, Problem 2\nSource: https://cs50.harvard.edu/x/psets/6/mario/less/"
+    "text": "screenshot of Mario jumping up pyramid"
   },
   {
-    "objectID": "homework/hw_7/7.2_marioPy.html#problem-to-solve",
-    "href": "homework/hw_7/7.2_marioPy.html#problem-to-solve",
-    "title": "this version of Mario",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nIn a file called mario.py in a folder called sentimental-mario-less, write a program that recreates a half-pyramid using hashes (#) for blocks, exactly as you did in Problem Set 1. Your program this time should be written in Python!"
-  },
-  {
-    "objectID": "homework/hw_7/7.2_marioPy.html#demo",
-    "href": "homework/hw_7/7.2_marioPy.html#demo",
-    "title": "this version of Mario",
-    "section": "Demo",
-    "text": "Demo"
-  },
-  {
-    "objectID": "homework/hw_7/7.2_marioPy.html#specification",
-    "href": "homework/hw_7/7.2_marioPy.html#specification",
-    "title": "this version of Mario",
-    "section": "Specification",
-    "text": "Specification\n\nTo make things more interesting, first prompt the user with get_int for the half-pyramid’s height, a positive integer between 1 and 8, inclusive.\nIf the user fails to provide a positive integer no greater than 8, you should re-prompt for the same again.\nThen, generate (with the help of print and one or more loops) the desired half-pyramid.\nTake care to align the bottom-left corner of your half-pyramid with the left-hand edge of your terminal window."
-  },
-  {
-    "objectID": "homework/hw_7/7.2_marioPy.html#how-to-test",
-    "href": "homework/hw_7/7.2_marioPy.html#how-to-test",
-    "title": "this version of Mario",
-    "section": "How to Test",
-    "text": "How to Test\nWhile check50 is available for this problem, you’re encouraged to first test your code on your own for each of the following.\n\nRun your program as python mario.py and wait for a prompt for input. Type in -1 and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\nRun your program as python mario.py and wait for a prompt for input. Type in 0 and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\nRun your program as python mario.py and wait for a prompt for input. Type in 1 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n#\n\n\nRun your program as python mario.py and wait for a prompt for input. Type in 2 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n #\n##\n\n\nRun your program as python mario.py and wait for a prompt for input. Type in 8 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\n\nRun your program as python mario.py and wait for a prompt for input. Type in 9 and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number. Then, type in 2 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n #\n##\n\n\nRun your program as python mario.py and wait for a prompt for input. Type in foo and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\nRun your program as python mario.py and wait for a prompt for input. Do not type anything, and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\n\n\nCorrectness\ncheck50 cs50/problems/2025/x/sentimental/mario/less\n\n\n\nStyle\nstyle50 mario.py"
-  },
-  {
-    "objectID": "homework/hw_7/7.2_marioPy.html#how-to-submit",
-    "href": "homework/hw_7/7.2_marioPy.html#how-to-submit",
-    "title": "this version of Mario",
-    "section": "How to Submit",
-    "text": "How to Submit\nsubmit50 cs50/problems/2025/x/sentimental/mario/less"
+    "objectID": "homework/hw_7/7.2_marioPy.html#what-to-do",
+    "href": "homework/hw_7/7.2_marioPy.html#what-to-do",
+    "title": "7.2 Mario (Py)",
+    "section": "What to do",
+    "text": "What to do\nIn a file called mario.py in a folder called sentimental-mario-less, write a program that recreates a half-pyramid using hashes (#) for blocks, exactly as you did in Problem Set 2. Your program this time should be written in Python!\nSpecification\n\nTo make things more interesting, first prompt the user with get_int for the half-pyramid’s height, a positive integer between 1 and 8, inclusive.\nIf the user fails to provide a positive integer no greater than 8, you should re-prompt for the same again.\nThen, generate (with the help of print and one or more loops) the desired half-pyramid.\nTake care to align the bottom-left corner of your half-pyramid with the left-hand edge of your terminal window.\n\nHow to Test\nYou’re encouraged to first test your code on your own for each of the following.\n\nRun your program as python mario.py and wait for a prompt for input. Type in -1 and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\nRun your program as python mario.py and wait for a prompt for input. Type in 0 and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\nRun your program as python mario.py and wait for a prompt for input. Type in 1 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n#\n\nRun your program as python mario.py and wait for a prompt for input. Type in 2 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n #\n##\n\nRun your program as python mario.py and wait for a prompt for input. Type in 8 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n       #\n      ##\n     ###\n    ####\n   #####\n  ######\n #######\n########\n\nRun your program as python mario.py and wait for a prompt for input. Type in 9 and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number. Then, type in 2 and press enter. Your program should generate the below output. Be sure that the pyramid is aligned to the bottom-left corner of your terminal, and that there are no extra spaces at the end of each line.\n\n #\n##\n\nRun your program as python mario.py and wait for a prompt for input. Type in foo and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number.\nRun your program as python mario.py and wait for a prompt for input. Do not type anything, and press enter. Your program should reject this input as invalid, as by re-prompting the user to type in another number."
   },
   {
     "objectID": "homework/hw_6.html",
@@ -2703,37 +2675,30 @@
   {
     "objectID": "homework/hw_7/7.1_hello.html",
     "href": "homework/hw_7/7.1_hello.html",
-    "title": "Hello",
+    "title": "7.1 Hello (again)",
     "section": "",
-    "text": "Week 6, Problem 1\nSource: https://cs50.harvard.edu/x/psets/6/hello/"
+    "text": "In a file called hello.py in a folder called sentimental-hello, implement a program that prompts a user for their name, and then prints hello, so-and-so, where so-and-so is their provided name, exactly as you did in Problem Set 2. Except that your program this time should be written in Python!\nHints\n\nRecall that you can get a str from a user with get_string, which is declared in the cs50 library.\nRecall that you can print a str with print.\nRecall that you can create formatted strings in Python by prepending f to a string itself. For example, f\"{name}\" will substitute (“interpolate”) the value of the variable name where you’ve written {name}."
   },
   {
-    "objectID": "homework/hw_7/7.1_hello.html#problem-to-solve",
-    "href": "homework/hw_7/7.1_hello.html#problem-to-solve",
-    "title": "Hello",
-    "section": "Problem to Solve",
-    "text": "Problem to Solve\nIn a file called hello.py in a folder called sentimental-hello, implement a program that prompts a user for their name, and then prints hello, so-and-so, where so-and-so is their provided name, exactly as you did in Problem Set 1. Except that your program this time should be written in Python!\nHints\n\nRecall that you can get a str from a user with get_string, which is declared in the cs50 library.\nRecall that you can print a str with print.\nRecall that you can create formatted strings in Python by prepending f to a string itself. For example, f\"{name}\" will substitute (“interpolate”) the value of the variable name where you’ve written {name}."
-  },
-  {
-    "objectID": "homework/hw_7/7.1_hello.html#demo",
-    "href": "homework/hw_7/7.1_hello.html#demo",
-    "title": "Hello",
-    "section": "Demo",
-    "text": "Demo"
+    "objectID": "homework/hw_7/7.1_hello.html#what-to-do",
+    "href": "homework/hw_7/7.1_hello.html#what-to-do",
+    "title": "7.1 Hello (again)",
+    "section": "",
+    "text": "In a file called hello.py in a folder called sentimental-hello, implement a program that prompts a user for their name, and then prints hello, so-and-so, where so-and-so is their provided name, exactly as you did in Problem Set 2. Except that your program this time should be written in Python!\nHints\n\nRecall that you can get a str from a user with get_string, which is declared in the cs50 library.\nRecall that you can print a str with print.\nRecall that you can create formatted strings in Python by prepending f to a string itself. For example, f\"{name}\" will substitute (“interpolate”) the value of the variable name where you’ve written {name}."
   },
   {
     "objectID": "homework/hw_7/7.1_hello.html#how-to-test",
     "href": "homework/hw_7/7.1_hello.html#how-to-test",
-    "title": "Hello",
+    "title": "7.1 Hello (again)",
     "section": "How to Test",
-    "text": "How to Test\nWhile check50 is available for this problem, you’re encouraged to first test your code on your own for each of the following.\n\nRun your program as python hello.py, and wait for a prompt for input. Type in David and press enter. Your program should output hello, David.\nRun your program as python hello.py, and wait for a prompt for input. Type in Inno and press enter. Your program should output hello, Inno.\nRun your program as python hello.py, and wait for a prompt for input. Type in Kamryn and press enter. Your program should output hello, Kamryn.\n\n\nCorrectness\ncheck50 cs50/problems/2025/x/sentimental/hello\n\n\n\nStyle\nstyle50 hello.py"
+    "text": "How to Test\nYou’re encouraged to first test your code on your own for each of the following.\n\nRun your program as python hello.py, and wait for a prompt for input. Type in David and press enter. Your program should output hello, David.\nRun your program as python hello.py, and wait for a prompt for input. Type in Inno and press enter. Your program should output hello, Inno.\nRun your program as python hello.py, and wait for a prompt for input. Type in Kamryn and press enter. Your program should output hello, Kamryn."
   },
   {
     "objectID": "homework/hw_7/7.1_hello.html#how-to-submit",
     "href": "homework/hw_7/7.1_hello.html#how-to-submit",
-    "title": "Hello",
+    "title": "7.1 Hello (again)",
     "section": "How to Submit",
-    "text": "How to Submit\nsubmit50 cs50/problems/2025/x/sentimental/hello"
+    "text": "How to Submit\n\nClick and accept the Homework Link on the homework main page for this week.\nComplete each assignment for this week in the Github Codespaces environment.\nSave and click “Commit changes”.\nThe autograder runs automatically; see the Actions tab for feedback."
   },
   {
     "objectID": "homework/hw_7/7.3_cash.html",
