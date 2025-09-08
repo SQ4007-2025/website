@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>fiftyville – Computing Technology</title>
+<title>8.3 Fiftyville – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,10 +108,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="8.3 Fiftyville – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta name="twitter:title" content="8.3 Fiftyville – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_8/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -254,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">8.3 Fiftyville</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -686,39 +721,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fiftyville" id="toc-fiftyville" class="nav-link active" data-scroll-target="#fiftyville">Fiftyville</a></li>
-  <li><a href="#fiftyville-1" id="toc-fiftyville-1" class="nav-link" data-scroll-target="#fiftyville-1">Fiftyville</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_8/8.3_fiftyville.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">8.3 Fiftyville</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="fiftyville" class="level1">
-<h1>Fiftyville</h1>
-<p><strong>Week 7, Problem 3</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/7/fiftyville/</p>
-<hr>
-</section>
-<section id="fiftyville-1" class="level1">
-<h1>Fiftyville</h1>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
-<p>The CS50 Duck has been stolen! The town of Fiftyville has called upon you to solve the mystery of the stolen duck. Authorities believe that the thief stole the duck and then, shortly afterwards, took a flight out of town with the help of an accomplice. Your goal is to identify:</p>
+</header>
+
+
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>Our debugging Rubber Duck has been stolen! The town of Fiftyville has called upon you to solve the mystery of the stolen duck. Authorities believe that the thief stole the duck and then, shortly afterwards, took a flight out of town with the help of an accomplice. Your goal is to identify:</p>
 <ul>
 <li>Who the thief is,</li>
 <li>What city the thief escaped to, and</li>
@@ -726,51 +761,34 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>All you know is that the theft <strong>took place on July 28, 2024</strong> and that it <strong>took place on Humphrey Street</strong>.</p>
 <p>How will you go about solving this mystery? The Fiftyville authorities have taken some of the town’s records from around the time of the theft and prepared a SQLite database for you, <code>fiftyville.db</code>, which contains tables of data from around the town. You can query that table using SQL <code>SELECT</code> queries to access the data of interest to you. Using just the information in the database, your task is to solve the mystery.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>For this problem, you’ll use a database provided to you by CS50’s staff.</p>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of code provided to you by course staff.</p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/7/fiftyville.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/fiftyville.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>fiftyville.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip fiftyville.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> fiftyville.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>fiftyville</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm fiftyville.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> fiftyville.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd fiftyville
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> fiftyville</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>fiftyville/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fiftyville/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute <code>ls</code> by itself, and you should see a few files:</p>
-<pre><code>answers.txt  fiftyville.db  log.sql
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">answers.txt</span>  fiftyville.db  log.sql</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
-</section>
-<section id="specification" class="level2">
-<h2 class="anchored" data-anchor-id="specification">Specification</h2>
+<p><strong>Specification</strong></p>
 <p>For this problem, equally as important as solving the mystery itself is the process that you use to solve the mystery. In <code>log.sql</code>, keep a log of all SQL queries that you run on the database. Above each query, label each with a comment (in SQL, comments are any lines that begin with <code>--</code>) describing why you’re running the query and/or what information you’re hoping to get out of that particular query. You can use comments in the log file to add additional notes about your thought process as you solve the mystery: ultimately, this file should serve as evidence of the process you used to identify the thief!</p>
 <p>As you write your queries, you may notice that some of them can become quite complex. To help keep your queries readable, see principles of good style at <a href="https://www.sqlstyle.guide">sqlstyle.guide</a>. The <a href="https://www.sqlstyle.guide/#indentation">indentation</a> section may be particularly helpful!</p>
 <p>Once you solve the mystery, complete each of the lines in <code>answers.txt</code> by filling in the name of the thief, the city that the thief escaped to, and the name of the thief’s accomplice who helped them escape town. (Be sure not to change any of the existing text in the file or to add any other lines to the file!)</p>
 <p>Ultimately, you should submit both your <code>log.sql</code> and <code>answers.txt</code> files.</p>
 </section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <ul>
 <li>Execute <code>sqlite3 fiftyville.db</code> to begin running queries on the database.
 <ul>
@@ -795,7 +813,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Inspired by another case over at <a href="https://mystery.knightlab.com/">SQL City</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
