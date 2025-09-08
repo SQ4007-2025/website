@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>movies – Computing Technology</title>
+<title>8.2 Movies – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="8.2 Movies – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_8/imdb.png">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/imdb.png">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta property="og:image:height" content="1291">
+<meta property="og:image:width" content="2560">
+<meta name="twitter:title" content="8.2 Movies – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_8/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">8.2 Movies</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,80 +724,65 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#movies" id="toc-movies" class="nav-link active" data-scroll-target="#movies">Movies</a></li>
-  <li><a href="#movies-1" id="toc-movies-1" class="nav-link" data-scroll-target="#movies-1">Movies</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_8/8.2_movies.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">8.2 Movies</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="movies" class="level1">
-<h1>Movies</h1>
-<p><strong>Week 7, Problem 2</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/7/movies/</p>
-<hr>
-</section>
-<section id="movies-1" class="level1">
-<h1>Movies</h1>
+</header>
+
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imdb.png" class="img-fluid figure-img"></p>
+<p><img src="../images/imdb.png" class="img-fluid figure-img"></p>
 <figcaption>IMDb Logo</figcaption>
 </figure>
 </div>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Provided to you is a file called <code>movies.db</code>, a SQLite database that stores data from <a href="https://www.imdb.com/">IMDb</a> about movies, the people who directed and starred in them, and their ratings. Write SQL queries to answer questions about this database of movies.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>For this problem, you’ll use a database provided to you by CS50’s staff.</p>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of code provided to you by course staff.</p>
 <p>Download the distribution code</p>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/7/movies.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/movies.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>movies.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip movies.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> movies.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>movies</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm movies.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> movies.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd movies
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> movies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>movies/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">movies/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute <code>ls</code> by itself, and you should see 13 .sql files, as well as <code>movies.db</code>.</p>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
-</section>
-<section id="specification" class="level2">
-<h2 class="anchored" data-anchor-id="specification">Specification</h2>
+<p><strong>Specification</strong></p>
 <p>For each of the following problems, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query, though you may nest other queries inside of your query. You <strong>should not</strong> assume anything about the <code>id</code>s of any particular movies or people: your queries should be accurate even if the <code>id</code> of any particular movie or person were different. Finally, each query should return only the data necessary to answer the question: if the problem only asks you to output the names of movies, for example, then your query should not also output each movie’s release year.</p>
 <p>You’re welcome to check your queries’ results against <a href="https://www.imdb.com/">IMDb</a> itself, but realize that ratings on the website might differ from those in <code>movies.db</code>, as more votes might have been cast since we downloaded the data!</p>
 <ol type="1">
@@ -831,114 +853,100 @@ ul.task-list li input[type="checkbox"] {
 <li>Kevin Bacon himself should not be included in the resulting list.</li>
 </ul></li>
 </ol>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<p>Click the below toggles to read some advice!</p>
-<p>Understand the schema of <code>movies.db</code></p>
+<p><strong>Hints</strong></p>
+<p><em>Understand the schema of <code>movies.db</code></em></p>
 <p>Whenever you engage with a new database, it’s best to first understand its <em>schema</em>. In a terminal window, run <code>sqlite3 movies.db</code> so that you can begin executing queries on the database.</p>
 <p>First, when <code>sqlite3</code> prompts you to provide a query, type <code>.schema</code> and press enter. This will output the <code>CREATE TABLE</code> statements that were used to generate each of the tables in the database. By examining those statements, you can identify the columns present in each table.</p>
 <p>Notice that the <code>movies</code> table has an <code>id</code> column that uniquely identifies each movie, as well as columns for the <code>title</code> of a movie and the <code>year</code> in which the movie was released. The <code>people</code> table also has an <code>id</code> column, and also has columns for each person’s <code>name</code> and <code>birth</code> year.</p>
 <p>Movie ratings, meanwhile, are stored in the <code>ratings</code> table. The first column in the table is <code>movie_id</code>: a foreign key that references the <code>id</code> of the <code>movies</code> table. The rest of the row contains data about the <code>rating</code> for each movie and the number of <code>votes</code> the movie has received on IMDb.</p>
 <p>Finally, the <code>stars</code> and <code>directors</code> tables match people to the movies in which they acted or directed. (Only <a href="https://www.imdb.com/interfaces/">principal</a> stars and directors are included.) Each table has just two columns: <code>movie_id</code> and <code>person_id</code>, which reference a specific movie and person, respectively.</p>
 <p>The challenge ahead of you is to write SQL queries to answer a variety of different questions by selecting data from one or more of these tables.</p>
-<p>Consistently style your queries</p>
+<p><em>Consistently style your queries</em></p>
 <p>See <a href="https://www.sqlstyle.guide/">sqlstyle.guide</a> for pointers on good style in SQL, especially as your queries get more complex!</p>
 <p>List the titles of all movies released in 2008</p>
 <p>Recall that you can select one (or more) columns from a database using <code>SELECT</code>, per the example below,</p>
-<pre><code>SELECT column0, column1 FROM table;
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column0, column1 <span class="kw">FROM</span> <span class="kw">table</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>where <code>column0</code> is the title of one column, and <code>column1</code> is the title of another.</p>
 <p>And recall that you can filter the rows returned in a query with the <code>WHERE</code> keyword, followed by a condition. You can use <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, and <a href="https://www.w3schools.com/sql/sql_operators.asp">other operators</a> too.</p>
-<pre><code>SELECT column FROM table
-WHERE condition;
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">column</span> <span class="kw">FROM</span> <span class="kw">table</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> condition;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>See <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">this SQL keywords reference</a> for some SQL syntax that may be helpful!</p>
 <p>Determine the birth year of Emma Stone</p>
 <p>Recall that a <code>WHERE</code> clause can evaluate conditions not just with numbers, but with strings.</p>
-<p>List the titles of all movies with a release date on or after 2018, in alphabetical order</p>
+<p><em>List the titles of all movies with a release date on or after 2018, in alphabetical order</em></p>
 <p>Try breaking this query into two steps. First, find the movies with a release date on or after 2018. Then, put those movies’ titles in alphabetical order.</p>
 <p>To find the movies with a release date on or after 2018, recall that a condition in SQL supports the use of many common <a href="https://www.w3schools.com/sql/sql_operators.asp">comparison operators</a>, including <code>&gt;=</code> for “greater than or equal to.” Check to see if your query returns the correct number of movies, per <a href="#how-to-test">How to Test</a>.</p>
 <p>Finally, sort the query’s results alphabetically by title. Recall that <code>ORDER BY</code> can sort data by a column in your results, per the example below.</p>
-<pre><code>...
-ORDER BY column;
-</code></pre>
-<p>Determine the number of movies with an IMDb rating of 10.0</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="kw">column</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Determine the number of movies with an IMDb rating of 10.0</em></p>
 <p>Notice this question asks you not for <em>individual</em> movies with a rating of 10.0, but for the <em>number</em> of movies with such a rating. In other words, you should collect (“aggregate”) the results of your query into a single number (the number of rows). Recall that SQL supports an “aggregation function” called <code>COUNT</code>, which you can use on a column per the example below.</p>
-<pre><code>SELECT COUNT(column)
-FROM table;
-</code></pre>
-<p>List the titles and release years of all Harry Potter movies, in chronological order</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="kw">column</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>List the titles and release years of all Harry Potter movies, in chronological order</em></p>
 <p>For this query, you’ll likely want to make use of SQL’s <code>LIKE</code> keyword. Recall that <code>LIKE</code> can make use of so-called “wildcard characters”, such as <code>%</code>, that will match any character (or sequence thereof).</p>
-<pre><code>SELECT column0, column1
-FROM table
-WHERE column1 LIKE pattern;
-</code></pre>
-<p>Determine the average rating of all movies released in 2012</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column0, column1</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">table</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> column1 <span class="kw">LIKE</span> pattern;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Determine the average rating of all movies released in 2012</em></p>
 <p>Here’s another example of a query in which you’ll need to aggregate data. Consider SQL’s <code>AVG</code> aggregation function, to compute an average.</p>
 <p>Consider, too, that this query makes use of data stored in two separate tables: <code>ratings</code> and <code>movies</code>. Recall that—so long as one table has a foreign key that matches a column in another table—you can combine two tables using SQL’s <code>JOIN</code> keyword. To use the <code>JOIN</code> keyword, you should specify the table you’d like to join and the column by which to do so.</p>
-<pre><code>SELECT column0
-FROM table0
-JOIN table1 ON table0.column1 = table1.column2
-</code></pre>
-<p>List all movies released in 2010 and their ratings, in descending order by rating</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> column0</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table0</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> table1 <span class="kw">ON</span> table0.column1 <span class="op">=</span> table1.column2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>List all movies released in 2010 and their ratings, in descending order by rating</em></p>
 <p>Recall that <code>ORDER BY</code> need not always sort in ascending order. You can specify that your results be sorted in <em>descending</em> order by appending <code>DESC</code>.</p>
-<pre><code>...
-ORDER BY column DESC;
-</code></pre>
-<p>List the names of all people who starred in Toy Story</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="kw">column</span> <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>List the names of all people who starred in Toy Story</em></p>
 <p>When you see a more complex query such as this one, it’s best to break it down into smaller pieces. Ultimately, your query should arrive at a list of names, per the below.</p>
-<pre><code>-- Select names
-SELECT name
-FROM people
-WHERE ...
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select names</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> people</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="op">..</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>But how’s best to arrive at the names of those who starred in Toy Story? Consider that the <code>people</code> table alone doesn’t have this information (but the <code>stars</code> table might!). Indeed, the <code>stars</code> table combines two columns, <code>person_id</code> and <code>movie_id</code>: any person with a <code>person_id</code> that is associated with Toy Story’s <code>movie_id</code> starred in Toy Story.</p>
-<pre><code>-- Select names
-SELECT name
-FROM people
-WHERE ...
-
--- Select person IDs
-SELECT person_id
-FROM stars
-WHERE movie_id = ...
-</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select names</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> people</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="op">..</span>.</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select person IDs</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> person_id</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> stars</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> movie_id <span class="op">=</span> <span class="op">..</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>A natural next step, then, is to find Toy Story’s movie ID.</p>
-<pre><code>-- Select names
-SELECT name
-FROM people
-WHERE ...
-
--- Select person IDs
-SELECT person_id
-FROM stars
-WHERE movie_id = ...
-
--- Find Toy Story's ID
-SELECT id
-FROM movies
-WHERE title = 'Toy Story';
-</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select names</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> people</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="op">..</span>.</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select person IDs</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> person_id</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> stars</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> movie_id <span class="op">=</span> <span class="op">..</span>.</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">-- Find Toy Story's ID</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">id</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> movies</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> title <span class="op">=</span> <span class="st">'Toy Story'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Of course, you’ve presently written three <em>separate</em> queries. But notice that some queries (the first two) would be complete by including results of the query directly below them. The process of making a query that depends on the results of a “subquery” is called “nesting” queries. It’s quite the hint, but here’s one way to nest the above queries!</p>
-<pre><code>-- Select names
-SELECT name
-FROM people
-WHERE id IN
-(
-    -- Select person IDs
-    SELECT person_id
-    FROM stars
-    WHERE movie_id = (
-
-        -- Select Toy Story's ID
-        SELECT id
-        FROM movies
-        WHERE title = 'Toy Story'
-    )
-);
-</code></pre>
-<p>List the names of all people who starred in a movie released in 2004, ordered by birth year</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select names</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> people</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="kw">IN</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- Select person IDs</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> person_id</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> stars</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> movie_id <span class="op">=</span> (</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- Select Toy Story's ID</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">SELECT</span> <span class="kw">id</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">FROM</span> movies</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        <span class="kw">WHERE</span> title <span class="op">=</span> <span class="st">'Toy Story'</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>List the names of all people who starred in a movie released in 2004, ordered by birth year</em></p>
 <p>Notice that this query, like the previous, requires you to use data from multiple tables. Recall that you can “nest” queries in SQL, which allows you to break a larger query into smaller ones. Perhaps you could write queries to…</p>
 <ol type="1">
 <li>Find the IDs of movies released in 2004</li>
@@ -946,7 +954,7 @@ WHERE id IN
 <li>Find the names of people with those people IDs</li>
 </ol>
 <p>Then, try nesting those queries to arrive at a single query that returns all people who starred in a movie released in 2004. Consider how you might then order the results of your query.</p>
-<p>List the names of all people who have directed a movie that received a rating of at least 9.0</p>
+<p><em>List the names of all people who have directed a movie that received a rating of at least 9.0</em></p>
 <p>Notice that this query, like the previous, requires you to use data from multiple tables. Recall that you can “nest” queries in SQL, which allows you to break a larger query into smaller ones. Perhaps you could write queries to…</p>
 <ol type="1">
 <li>Find the IDs of movies with at least a 9.0 rating</li>
@@ -954,7 +962,7 @@ WHERE id IN
 <li>Find the names of people with those people IDs</li>
 </ol>
 <p>Then, try nesting those queries to arrive at a single query that returns the names of all people who have directed a movie that received a rating of at least 9.0.</p>
-<p>List the titles of the five highest rated movies (in order) that Chadwick Boseman starred in, starting with the highest rated</p>
+<p><em>List the titles of the five highest rated movies (in order) that Chadwick Boseman starred in, starting with the highest rated</em></p>
 <p>Notice that this query, like the previous, requires you to use data from multiple tables. Recall that you can “nest” queries in SQL, which allows you to break a larger query into smaller ones. Perhaps you could write queries to…</p>
 <ol type="1">
 <li>Find the ID of Chadwick Boseman</li>
@@ -964,7 +972,7 @@ WHERE id IN
 <p>Then, try nesting those queries to arrive at a single query that returns the titles of Chadwick Boseman’s movies.</p>
 <p>From there, you’ll need to determine the ratings of those titles and sort those titles by rating, in descending order. Consider how you could combine a relevant table (likely <code>ratings</code>!) and order the results by a relevant column.</p>
 <p>Finally, read up on SQL’s <a href="https://www.sqlitetutorial.net/sqlite-limit/"><code>LIMIT</code></a> keyword, which will return the top (n) rows in a query.</p>
-<p>List the titles of all movies in which both Bradley Cooper and Jennifer Lawrence starred</p>
+<p><em>List the titles of all movies in which both Bradley Cooper and Jennifer Lawrence starred</em></p>
 <p>Notice that this query, like the previous, requires you to use data from multiple tables. Recall that you can “nest” queries in SQL, which allows you to break a larger query into smaller ones. Perhaps you could write queries to…</p>
 <ol type="1">
 <li>Find the ID of Bradley Cooper</li>
@@ -975,7 +983,7 @@ WHERE id IN
 </ol>
 <p>Then, try nesting those queries to arrive at a single query that returns the movies in which both Bradley Cooper and Jennifer Lawrence starred.</p>
 <p>Recall that you can build compound conditions in SQL using <code>AND</code> or <code>OR</code>.</p>
-<p>List the names of all people who starred in a movie in which Kevin Bacon also starred</p>
+<p><em>List the names of all people who starred in a movie in which Kevin Bacon also starred</em></p>
 <p>Notice that this query, like the previous, requires you to use data from multiple tables. Recall that you can “nest” queries in SQL, which allows you to break a larger query into smaller ones. Perhaps you could write queries to…</p>
 <ol type="1">
 <li>Find the ID of Kevin Bacon (the one born in 1958!)</li>
@@ -985,23 +993,16 @@ WHERE id IN
 </ol>
 <p>Then, try nesting those queries to arrive at a single query that returns the names of all people who starred in a movie in which Kevin Bacon also starred. <strong>Keep in mind that you’ll want to exclude Kevin Bacon himself from the results!</strong></p>
 </section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-</section>
-<section id="usage" class="level2">
-<h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>To test your queries in VS Code, you can query the database by running</p>
-<pre><code>$ cat filename.sql | sqlite3 movies.db
-</code></pre>
-<p>where <code>filename.sql</code> is the file containing your SQL query.</p>
-<p>You can also run</p>
-<pre><code>$ cat filename.sql | sqlite3 movies.db &gt; output.txt
-</code></pre>
-<p>to redirect the output of the query to a text file called <code>output.txt</code>. (This can be useful for checking how many rows are returned by your query!)</p>
-</section>
 <section id="how-to-test" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
-<p>While <code>check50</code> is available for this problem, you’re encouraged to instead test your code on your own for each of the following. You can run <code>sqlite3 movies.db</code> to run additional queries on the database to ensure that your result is correct.</p>
+<p>To test your queries in VS Code, you can query the database by running</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat filename.sql <span class="kw">|</span> <span class="ex">sqlite3</span> movies.db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <code>filename.sql</code> is the file containing your SQL query.</p>
+<p>You can also run</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat filename.sql <span class="kw">|</span> <span class="ex">sqlite3</span> movies.db <span class="op">&gt;</span> output.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>to redirect the output of the query to a text file called <code>output.txt</code>. (This can be useful for checking how many rows are returned by your query!)</p>
+<p>You’re encouraged to test your code on your own for each of the following.</p>
+<p>You can run <code>sqlite3 movies.db</code> to run additional queries on the database to ensure that your result is correct.</p>
 <p>If you’re using the <code>movies.db</code> database provided in this problem set’s distribution, you should find that</p>
 <ul>
 <li>Executing <code>1.sql</code> results in a table with 1 column and 10,494 rows.</li>
@@ -1035,7 +1036,6 @@ WHERE id IN
 <p>Information courtesy of IMDb (<a href="https://www.imdb.com">imdb.com</a>). Used with permission.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
