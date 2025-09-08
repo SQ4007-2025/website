@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>songs – Computing Technology</title>
+<title>8.1 Songs – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="8.1 Songs – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_8/wrapped.png">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/wrapped.png">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta property="og:image:height" content="387">
+<meta property="og:image:width" content="720">
+<meta name="twitter:title" content="8.1 Songs – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_8/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">8.1 Songs</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,95 +724,70 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#songs" id="toc-songs" class="nav-link active" data-scroll-target="#songs">Songs</a></li>
-  <li><a href="#songs-1" id="toc-songs-1" class="nav-link" data-scroll-target="#songs-1">Songs</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#understanding" id="toc-understanding" class="nav-link" data-scroll-target="#understanding">Understanding</a></li>
-  <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#spotify-wrapped" id="toc-spotify-wrapped" class="nav-link" data-scroll-target="#spotify-wrapped">Spotify Wrapped</a></li>
-  <li><a href="#how-to-test" id="toc-how-to-test" class="nav-link" data-scroll-target="#how-to-test">How to Test</a>
-  <ul class="collapse">
-  <li><a href="#correctness" id="toc-correctness" class="nav-link" data-scroll-target="#correctness">Correctness</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_8/8.1_songs.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">8.1 Songs</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="songs" class="level1">
-<h1>Songs</h1>
-<p><strong>Week 7, Problem 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/7/songs/</p>
-<hr>
-</section>
-<section id="songs-1" class="level1">
-<h1>Songs</h1>
+</header>
+
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="wrapped.png" class="img-fluid figure-img"></p>
+<p><img src="../images/wrapped.png" class="img-fluid figure-img"></p>
 <figcaption>Spotify Wrapped ’22 Logo</figcaption>
 </figure>
 </div>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Write SQL queries to answer questions about a database of the 100 most-streamed songs on <a href="https://en.wikipedia.org/wiki/Spotify">Spotify</a> in 2018.</p>
-</section>
-<section id="demo" class="level2">
-<h2 class="anchored" data-anchor-id="demo">Demo</h2>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>For this problem, you’ll use a database provided to you by CS50’s staff.</p>
+<p><strong>Distribution Code</strong></p>
+<p>For this problem, you’ll extend the functionality of code provided to you by course staff.</p>
 <p>Download the distribution code</p>
-<p>Open <a href="https://cs50.dev/">VS Code</a>.</p>
-<p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
-<pre><code>$
-</code></pre>
+<p>Log into the homework codespace, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Click inside of that terminal window and then execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/7/songs.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/songs.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter in order to download a ZIP called <code>songs.zip</code> in your codespace. Take care not to overlook the space between <code>wget</code> and the following URL, or any other character for that matter!</p>
 <p>Now execute</p>
-<pre><code>unzip songs.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> songs.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>songs</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm songs.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> songs.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd songs
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> songs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>songs/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">songs/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If all was successful, you should execute</p>
-<pre><code>ls
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and you should see 8 .sql files, <code>songs.db</code>, and <code>answers.txt</code>.</p>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
-</section>
-<section id="understanding" class="level2">
-<h2 class="anchored" data-anchor-id="understanding">Understanding</h2>
+<p><strong>Understanding</strong></p>
 <p>Provided to you is a file called <code>songs.db</code>, a SQLite database that stores data from <a href="https://developer.spotify.com/documentation/web-api/">Spotify</a> about songs and their artists. This dataset contains the top 100 streamed songs on Spotify in 2018. In a terminal window, run <code>sqlite3 songs.db</code> so that you can begin executing queries on the database.</p>
 <p>First, when <code>sqlite3</code> prompts you to provide a query, type <code>.schema</code> and press enter. This will output the <code>CREATE TABLE</code> statements that were used to generate each of the tables in the database. By examining those statements, you can identify the columns present in each table.</p>
 <p>Notice that every <code>artist</code> has an <code>id</code> and a <code>name</code>. Notice, too, that every song has a <code>name</code>, an <code>artist_id</code> (corresponding to the <code>id</code> of the artist of the song), as well as values for the danceability, energy, key, loudness, speechiness (presence of spoken words in a track), valence, tempo, and duration of the song (measured in milliseconds).</p>
 <p>The challenge ahead of you is to write SQL queries to answer a variety of different questions by selecting data from one or more of these tables. After you do so, you’ll reflect on the ways Spotify might use this same data in their annual <a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify Wrapped</a> campaign to characterize listeners’ habits.</p>
-</section>
-<section id="implementation-details" class="level2">
-<h2 class="anchored" data-anchor-id="implementation-details">Implementation Details</h2>
+<p><strong>Implementation</strong></p>
 <p>For each of the following problems, you should write a single SQL query that outputs the results specified by each problem. Your response must take the form of a single SQL query, though you may nest other queries inside of your query. You <strong>should not</strong> assume anything about the <code>id</code>s of any particular songs or artists: your queries should be accurate even if the <code>id</code> of any particular song or person were different. Finally, each query should return only the data necessary to answer the question: if the problem only asks you to output the names of songs, for example, then your query should not also output each song’s tempo.</p>
 <ol type="1">
 <li>In <code>1.sql</code>, write a SQL query to list the names of all songs in the database.
@@ -814,106 +826,86 @@ ul.task-list li input[type="checkbox"] {
 <li>Your query should output a table with a single column for the name of each song.</li>
 </ul></li>
 </ol>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<p><strong>Hints</strong></p>
 <p>See <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">this SQL keywords reference</a> for some SQL syntax that may be helpful!</p>
-<p>Click the below toggles to read some advice!</p>
 <p>List the names of all songs in the database</p>
 <p>Recall that, to select all values in a table’s column, you can use SQL’s <code>SELECT</code> keyword. <code>SELECT</code> is followed by the column (or columns) you’d like to select, which is in turn followed by <code>FROM table</code> where <code>table</code> is the name of the table you’d like to select from.</p>
 <p>In <code>1.sql</code>, then, try writing the following:</p>
-<pre><code>-- All songs in the database.
-SELECT name
-FROM songs;
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- All songs in the database.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>List the names of all songs in increasing order of tempo</p>
 <p>Recall that SQL has an <code>ORDER BY</code> keyword, by which you can order the results of your query by the value in a certain column. For example, <code>ORDER BY tempo</code> will order results by the column <code>tempo</code>.</p>
 <p>In <code>2.sql</code>, then, try writing the following:</p>
-<pre><code>-- All songs in increasing order of tempo.
-SELECT name
-FROM songs
-ORDER BY tempo;
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- All songs in increasing order of tempo.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> tempo;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>List the names of the top 5 longest songs, in descending order of length</p>
 <p>Recall that <code>ORDER BY</code> need not always sort in ascending order. You can specify that your results be sorted in <em>descending</em> order by appending <code>DESC</code>. For example, <code>ORDER BY duration_ms DESC</code> will list results in descending order, by duration.</p>
 <p>And recall, too, that <code>LIMIT n</code> can specify that you only want the first (n) rows that match a specific query. For example, <code>LIMIT 5</code> will return only the first five results of the query.</p>
 <p>In <code>3.sql</code>, then, try writing the following:</p>
-<pre><code>-- The names of the top 5 longest songs, in descending order of length.
-SELECT name
-FROM songs
-ORDER BY duration_ms DESC
-LIMIT 5;
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The names of the top 5 longest songs, in descending order of length.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> duration_ms <span class="kw">DESC</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">5</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>List the names of any songs that have danceability, energy, and valence greater than 0.75</p>
 <p>Recall that you can filter results in SQL with <code>WHERE</code> clauses, which are followed by some condition which typically tests the values in a row’s columns.</p>
 <p>Recall, too, that SQL’s operators function much the same way as C’s. For example, <code>&gt;</code> evaluates to “true” when the value on the left is greater than the value on the right. You may chain these expressions together, using <code>AND</code> or <code>OR</code>, to form one larger condition.</p>
 <p>In <code>4.sql</code>, then, try writing the following:</p>
-<pre><code>-- The names of any songs that have danceability, energy, and valence greater than 0.75.
-SELECT name
-FROM songs
-WHERE danceability &gt; 0.75 AND energy &gt; 0.75 AND valence &gt; 0.75;
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The names of any songs that have danceability, energy, and valence greater than 0.75.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> danceability <span class="op">&gt;</span> <span class="fl">0.75</span> <span class="kw">AND</span> energy <span class="op">&gt;</span> <span class="fl">0.75</span> <span class="kw">AND</span> valence <span class="op">&gt;</span> <span class="fl">0.75</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Find average energy of all the songs</p>
 <p>Recall that SQL supports keywords not just to select particular rows, but also to <em>aggregate</em> the data in those rows. In particular, you might find the <code>AVG</code> keyword (to compute averages) useful. To aggregate the results of a column, just apply the aggregation function to that column. For example, <code>SELECT AVG(energy)</code> will find the average of the values in the energy column for the given query.</p>
 <p>In <code>5.sql</code>, then, try writing the following:</p>
-<pre><code>-- The average energy of all the songs.
-SELECT AVG(energy)
-FROM songs;
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The average energy of all the songs.</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">AVG</span>(energy)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>List the names of songs that are by Post Malone</p>
 <p>Notice that, if you execute <code>.schema songs</code> in your sqlite prompt, the <code>songs</code> table has song names but not artist names! Instead, <code>songs</code> has an <code>artist_id</code> column. To list the names of songs by Post Malone, then, you’ll first need to identify Post Malone’s artist id.</p>
-<pre><code>-- Identify Post Malone's artist id
-SELECT id
-FROM artists
-WHERE name = 'Post Malone';
-</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Identify Post Malone's artist id</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">id</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> artists</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> name <span class="op">=</span> <span class="st">'Post Malone'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This query returns 54. Now, you could query the <code>songs</code> table for any song with Post Malone’s id.</p>
-<pre><code>SELECT name
-FROM songs
-WHERE artist_id = 54;
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> artist_id <span class="op">=</span> <span class="dv">54</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>But, per the specification, you should be mindful not to assume knowledge of any ids. You could improve the design of this query by <em>nesting</em> your two queries.</p>
 <p>In <code>6.sql</code>, then, try writing the following:</p>
-<pre><code>-- The names of songs that are by Post Malone.
-SELECT name
-FROM songs
-WHERE artist_id =
-(
-    SELECT id
-    FROM artists
-    WHERE name = 'Post Malone'
-);
-</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The names of songs that are by Post Malone.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> artist_id <span class="op">=</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>(</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="kw">id</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> artists</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> name <span class="op">=</span> <span class="st">'Post Malone'</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Find the average energy of songs that are by Drake</p>
 <p>Notice that, similar to the previous query, you’ll need to combine multiple tables to successfully run this query. You could again use nested subqueries, but consider another approach too!</p>
 <p>Recall that you can use SQL’s <code>JOIN</code> keyword to combine multiple tables into one, so long as you specify which columns across those tables should ultimately match. For example, the following query joins the <code>songs</code> and <code>artists</code> tables, indicating that the <code>artist_id</code> column in the <code>songs</code> table and the <code>id</code> column in the <code>artists</code> table should match:</p>
-<pre><code>SELECT *
-FROM songs
-JOIN artists ON songs.artist_id = artists.id
-</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> artists <span class="kw">ON</span> songs.artist_id <span class="op">=</span> artists.<span class="kw">id</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With these two tables combined, it’s only a matter of filtering your selection to find the average energy of songs by Drake.</p>
 <p>In <code>7.sql</code>, then, try writing the following:</p>
-<pre><code>-- The average energy of songs that are by Drake
-SELECT AVG(energy)
-FROM songs
-JOIN artists ON songs.artist_id = artists.id
-WHERE artists.name = 'Drake';
-</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The average energy of songs that are by Drake</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">AVG</span>(energy)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> artists <span class="kw">ON</span> songs.artist_id <span class="op">=</span> artists.<span class="kw">id</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> artists.name <span class="op">=</span> <span class="st">'Drake'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>List the names of the songs that feature other artists</p>
 <p>For this query, note that songs which feature other artists typically have some mention of “feat.” in their title. Recall that SQL’s <code>LIKE</code> keyword can be used to match strings with certain phrases (like “feat.”!). To do so, you can use <code>%</code>: a wildcard character that matches any sequence of characters.</p>
 <p>In <code>8.sql</code>, then, try writing the following:</p>
-<pre><code>-- The names of songs that feature other artists.
-SELECT name
-FROM songs
-WHERE name LIKE '%feat.%';
-</code></pre>
-</section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-<p>Not sure how to solve?</p>
-</section>
-<section id="spotify-wrapped" class="level2">
-<h2 class="anchored" data-anchor-id="spotify-wrapped">Spotify Wrapped</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- The names of songs that feature other artists.</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> name</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> songs</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> name <span class="kw">LIKE</span> <span class="st">'%feat.%'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Spotify Wrapped</strong></p>
 <p><a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify Wrapped</a> is a feature presenting Spotify users’ 100 most played songs from the past year. In 2021, Spotify Wrapped calculated an <a href="https://newsroom.spotify.com/2021-12-01/learn-more-about-the-audio-aura-in-your-spotify-2021-wrapped-with-aura-reader-mystic-michaela/">“Audio Aura”</a> for each user, a “reading of [their] two most prominent moods as dictated by [their] top songs and artists of the year.” Suppose Spotify determines an audio aura by looking at the average energy, valence, and danceability of a person’s top 100 songs from the past year. In <code>answers.txt</code>, reflect on the following questions:</p>
 <ul>
 <li>If <code>songs.db</code> contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?</li>
@@ -921,25 +913,16 @@ WHERE name LIKE '%feat.%';
 </ul>
 <p>Be sure to submit <code>answers.txt</code> along with each of your <code>.sql</code> files!</p>
 </section>
-<section id="how-to-test" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-test">How to Test</h2>
-<section id="correctness" class="level3">
-<h3 class="anchored" data-anchor-id="correctness">Correctness</h3>
-<pre><code>check50 cs50/problems/2025/x/songs
-</code></pre>
-</section>
-</section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/songs
-</code></pre>
-</section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>Dataset from <a href="https://www.kaggle.com/nadintamer/top-spotify-tracks-of-2018">Kaggle</a>.</p>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
