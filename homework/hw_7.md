@@ -10,15 +10,13 @@ title: "Homework week 7"
 
 🐍 [7.1 Hello](hw_7/7.1_hello.html).
 
-🐍 [7.2 Mario (Less Comfortable)](hw_7/7.2_marioPy.html).
+🐍 [7.2 Mario Py](hw_7/7.2_marioPy.html).
 
 🐍 [7.3 Cash](hw_7/7.3_cash.html).
 
-🐍 [7.4 Credit](hw_7/7.4_credit.html).
+🐍 [7.4 Readability](hw_7/7.4_readability.html).
 
-🐍 [7.5 Readability](hw_7/7.5_readability.html).
-
-🐍 [7.6 DNA](hw_7/7.6_dna.html).
+🐍 [7.5 DNA](hw_7/7.5_dna.html).
 
 ## Advice
 
