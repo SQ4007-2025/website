@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>birthdays – Computing Technology</title>
+<title>10.1 Birthdays – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="10.1 Birthdays – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_10/birthdays.png">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/birthdays.png">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta property="og:image:height" content="834">
+<meta property="og:image:width" content="1392">
+<meta name="twitter:title" content="10.1 Birthdays – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_10/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">10.1 Birthdays</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,89 +724,70 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#birthdays" id="toc-birthdays" class="nav-link active" data-scroll-target="#birthdays">Birthdays</a></li>
-  <li><a href="#birthdays-1" id="toc-birthdays-1" class="nav-link" data-scroll-target="#birthdays-1">Birthdays</a>
-  <ul class="collapse">
-  <li><a href="#problem-to-solve" id="toc-problem-to-solve" class="nav-link" data-scroll-target="#problem-to-solve">Problem to Solve</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#understanding" id="toc-understanding" class="nav-link" data-scroll-target="#understanding">Understanding</a></li>
-  <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a>
-  <ul class="collapse">
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_10/10.1_birthdays.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">10.1 Birthdays</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="birthdays" class="level1">
-<h1>Birthdays</h1>
-<p><strong>Week 9, Problem 1</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/9/birthdays/</p>
-<hr>
-</section>
-<section id="birthdays-1" class="level1">
-<h1>Birthdays</h1>
+</header>
+
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="birthdays.png" class="img-fluid figure-img"></p>
+<p><img src="../images/birthdays.png" class="img-fluid figure-img"></p>
 <figcaption>screenshot of birthdays website</figcaption>
 </figure>
 </div>
-<section id="problem-to-solve" class="level2">
-<h2 class="anchored" data-anchor-id="problem-to-solve">Problem to Solve</h2>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Create a web application to keep track of friends’ birthdays.</p>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<p><strong>Getting Started</strong></p>
 <p>Download the distribution code</p>
-<p>Open <a href="https://cs50.dev">cs50.dev</a>.</p>
 <p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
-<pre><code>$
-</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Click inside of that terminal window and then execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/9/birthdays.zip
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/birthdays.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter in order to download a ZIP called <code>birthdays.zip</code> in your codespace. Take care not to overlook the space between <code>wget</code> and the following URL, or any other character for that matter!</p>
 <p>Now execute</p>
-<pre><code>unzip birthdays.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> birthdays.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>birthdays</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm birthdays.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> birthdays.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd birthdays
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> birthdays</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>birthdays/ $
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">birthdays/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If all was successful, you should execute</p>
-<pre><code>ls
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and you should see the following files and folders:</p>
-<pre><code>app.py  birthdays.db  static/  templates/
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">app.py</span>  birthdays.db  static/  templates/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
-</section>
-<section id="understanding" class="level2">
-<h2 class="anchored" data-anchor-id="understanding">Understanding</h2>
+<p><strong>Understanding</strong></p>
 <p>In <code>app.py</code>, you’ll find the start of a Flask web application. The application has one route (<code>/</code>) that accepts both <code>POST</code> requests (after the <code>if</code>) and <code>GET</code> requests (after the <code>else</code>). Currently, when the <code>/</code> route is requested via <code>GET</code>, the <code>index.html</code> template is rendered. When the <code>/</code> route is requested via <code>POST</code>, the user is redirected back to <code>/</code> via <code>GET</code>.</p>
 <p><code>birthdays.db</code> is a SQLite database with one table, <code>birthdays</code>, that has four columns: <code>id</code>, <code>name</code>, <code>month</code>, and <code>day</code>. There are a few rows already in this table, though ultimately your web application will support the ability to insert rows into this table!</p>
 <p>In the <code>static</code> directory is a <code>styles.css</code> file containing the CSS code for this web application. No need to edit this file, though you’re welcome to if you’d like!</p>
 <p>In the <code>templates</code> directory is an <code>index.html</code> file that will be rendered when the user views your web application.</p>
-</section>
-<section id="implementation-details" class="level2">
-<h2 class="anchored" data-anchor-id="implementation-details">Implementation Details</h2>
+<p><strong>Implementation</strong></p>
 <p>Complete the implementation of a web application to let users store and keep track of birthdays.</p>
 <ul>
 <li>When the <code>/</code> route is requested via <code>GET</code>, your web application should display, in a table, all of the people in your database along with their birthdays.
@@ -788,208 +806,181 @@ ul.task-list li input[type="checkbox"] {
 <li>Add the ability to delete and/or edit birthday entries.</li>
 <li>Add any additional features of your choosing!</li>
 </ul>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<p><strong>Hints</strong></p>
 <p>Click the below toggles to read some advice!</p>
 <p>Create a form via which users can submit birthdays</p>
 <p>In <code>index.html</code>, notice the following TODO:</p>
-<pre><code>&lt;!-- TODO: Create a form for users to submit a name, a month, and a day --&gt;
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span><span class="al">TODO</span><span class="co">: Create a form for users to submit a name, a month, and a day --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Recall that, to create a form, you can use the <code>form</code> HTML element. You can create a <code>form</code> HTML element with the following opening and closing tags:</p>
-<pre><code>&lt;form&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Of course, a form still needs input fields (and a button via which the user can submit the form!). Recall that HTML <code>input</code> elements create, among other things, input boxes within a form. You can specify their <code>type</code> attribute to allow them to accept <code>text</code> or <code>number</code>s. Also give the <code>input</code> elements a <code>name</code> attribute so you can differentiate them.</p>
-<pre><code>&lt;form&gt;
-    &lt;input name="name" type="text"&gt;
-    &lt;input name="month" type="number"&gt;
-    &lt;input name="day" type="number"&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"month"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"day"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Your form might benefit from a button the user could click to submit their data. Add an <code>input</code> element of type <code>submit</code>, which will allow the user to do just that. If you’d like the button itself to have explanatory text, try setting the <code>value</code> attribute.</p>
-<pre><code>&lt;form&gt;
-    &lt;input name="name" type="text"&gt;
-    &lt;input name="month" type="number"&gt;
-    &lt;input name="day" type="number"&gt;
-    &lt;input type="submit" value="Add Birthday"&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"month"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"day"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Add Birthday"</span><span class="dt">&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Where will the user’s data be submitted? Currently, nowhere! Recall that you can specify a form’s <code>action</code> attribute to dictate which route should be requested after the form is submitted. The form data will be submitted along with the resulting request. The <code>method</code> attribute specifies which HTTP request method to use when submitting the form.</p>
-<pre><code>&lt;form action="/" method="post"&gt;
-    &lt;input name="name" type="text"&gt;
-    &lt;input name="month" type="number"&gt;
-    &lt;input name="day" type="number"&gt;
-    &lt;input type="submit" value="Add Birthday"&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"/"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"month"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"day"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Add Birthday"</span><span class="dt">&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>With that, your form should be perfectly functional, though it could still be improved! Consider adding <code>placeholder</code> values to spruce things up a bit:</p>
-<pre><code>&lt;form action="/" method="post"&gt;
-    &lt;input name="name" placeholder="Name" type="text"&gt;
-    &lt;input name="month" placeholder="Month" type="number"&gt;
-    &lt;input name="day" placeholder="Day" type="number"&gt;
-    &lt;input type="submit" value="Add Birthday"&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"/"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Name"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"month"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Month"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"day"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Day"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="dt">&gt;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Add Birthday"</span><span class="dt">&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And consider adding some <em>client-side validation</em>, to ensure the user cooperates with the intent of your form. For example, an <code>input</code> field of type <code>number</code> can also have a <code>min</code> and <code>max</code> attribute specified, which determine the minimum and maximum value a user can enter.</p>
-<pre><code>&lt;form action="/" method="post"&gt;
-    &lt;input name="name" placeholder="Name" type="text"&gt;
-    &lt;input name="month" placeholder="Month" type="number" min="1" max="12"&gt;
-    &lt;input name="day" placeholder="Day" type="number" min="1" max="31"&gt;
-    &lt;input type="submit" value="Add Birthday"&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"/"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Name"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"month"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Month"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="ot"> min</span><span class="op">=</span><span class="st">"1"</span><span class="ot"> max</span><span class="op">=</span><span class="st">"12"</span><span class="dt">&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"day"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Day"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="ot"> min</span><span class="op">=</span><span class="st">"1"</span><span class="ot"> max</span><span class="op">=</span><span class="st">"31"</span><span class="dt">&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Add Birthday"</span><span class="dt">&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Add a user’s form submission to the database</p>
 <p>In <code>app.py</code>, notice the following TODO:</p>
-<pre><code># TODO: Add the user's entry into the database
-</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Add the user's entry into the database</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Recall that Flask has some handy methods to access form data submitted via <code>POST</code>! In particular:</p>
-<pre><code># Access form data
-request.form.get(NAME)
-</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access form data</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>request.form.get(NAME)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>where <code>NAME</code> refers to the <code>name</code> attribute of the particular <code>input</code> element with submitted data. If your <code>input</code> elements were named <code>name</code>, <code>month</code>, and <code>day</code>, you could access (and store!) their values respectively with the following:</p>
-<pre><code># Access form data
-name = request.form.get("name")
-month = request.form.get("month")
-day = request.form.get("day")
-</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access form data</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> request.form.get(<span class="st">"name"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> request.form.get(<span class="st">"month"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> request.form.get(<span class="st">"day"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now the values submitted by the user in the <code>name</code>, <code>month</code>, and <code>day</code> input elements are available to you as Python variables.</p>
 <p>The next step is to add these values to your database! Thanks to this particular line</p>
-<pre><code>db = SQL("sqlite:///birthdays.db")
-</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> SQL(<span class="st">"sqlite:///birthdays.db"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>app.py</code> has already established a connection to <code>birthdays.db</code> under the name <code>db</code>. You can now execute SQL queries by calling <code>db.execute</code> with a valid SQL query. If you wanted to add Carter’s birthday on January 1st, you might run the following SQL statement:</p>
-<pre><code>INSERT INTO birthdays (name, month, day) VALUES('Carter', 1, 1);
-</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> birthdays (name, <span class="dt">month</span>, <span class="dt">day</span>) <span class="kw">VALUES</span>(<span class="st">'Carter'</span>, <span class="dv">1</span>, <span class="dv">1</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Configure <code>app.py</code> to run that same query, but with placeholders for the values to insert, as follows:</p>
-<pre><code># Access form data
-name = request.form.get("name")
-month = request.form.get("month")
-day = request.form.get("day")
-
-# Insert data into database
-db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
-</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access form data</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> request.form.get(<span class="st">"name"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> request.form.get(<span class="st">"month"</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> request.form.get(<span class="st">"day"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert data into database</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>db.execute(<span class="st">"INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)"</span>, name, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And that should do it! Try submitting the form, opening <code>birthdays.db</code>, and using a <code>SELECT</code> query to view the contents of the <code>birthdays</code> table. You should see the submitted form data available to you.</p>
 <p>As you create more advanced applications, you’ll also want to add <em>server-side validation</em>: that is, a way to check whether the user’s data is valid <em>before</em> doing anything else! One of the first validations you might make is whether the user submitted any data at all! Should you try to retrieve form data with <code>request.form.get</code> where the user didn’t submit any, <code>request.form.get</code> will return an empty string. You can check for this value in Python as follows:</p>
-<pre><code># Access form data
-name = request.form.get("name")
-if not name:
-    return redirect("/")
-
-month = request.form.get("month")
-if not month:
-    return redirect("/")
-
-day = request.form.get("day")
-if not day:
-    return redirect("/")
-
-# Insert data into database
-db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
-</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access form data</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> request.form.get(<span class="st">"name"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> name:</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> request.form.get(<span class="st">"month"</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> month:</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> request.form.get(<span class="st">"day"</span>)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> day:</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert data into database</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>db.execute(<span class="st">"INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)"</span>, name, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, you won’t insert a row until you’re sure the user has provided all the data you need.</p>
 <p>A few more things could still go wrong! What if the user doesn’t, in fact, provide a numeric value for <code>month</code> or <code>day</code>? One way to check is to <code>try</code> to convert the value to an integer with <code>int</code> and, if the conversion fails, to redirect the user back to the homepage.</p>
-<pre><code># Access form data
-name = request.form.get("name")
-if not name:
-    return redirect("/")
-
-month = request.form.get("month")
-if not month:
-    return redirect("/")
-try:
-    month = int(month)
-except ValueError:
-    return redirect("/")
-
-day = request.form.get("day")
-if not day:
-    return redirect("/")
-try:
-    day = int(day)
-except ValueError:
-    return redirect("/")
-
-# Insert data into database
-db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
-</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access form data</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> request.form.get(<span class="st">"name"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> name:</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> request.form.get(<span class="st">"month"</span>)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> month:</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    month <span class="op">=</span> <span class="bu">int</span>(month)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> request.form.get(<span class="st">"day"</span>)</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> day:</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    day <span class="op">=</span> <span class="bu">int</span>(day)</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert data into database</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>db.execute(<span class="st">"INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)"</span>, name, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And even if the user has entered a number, best to check it’s in the right range!</p>
-<pre><code># Access form data
-name = request.form.get("name")
-if not name:
-    return redirect("/")
-
-month = request.form.get("month")
-if not month:
-    return redirect("/")
-try:
-    month = int(month)
-except ValueError:
-    return redirect("/")
-if month &lt; 1 or month &gt; 12:
-    return redirect("/")
-
-day = request.form.get("day")
-if not day:
-    return redirect("/")
-try:
-    day = int(day)
-except ValueError:
-    return redirect("/")
-if day &lt; 1 or day &gt; 31:
-    return redirect("/")
-
-# Insert data into database
-db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
-</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access form data</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> request.form.get(<span class="st">"name"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> name:</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> request.form.get(<span class="st">"month"</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> month:</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    month <span class="op">=</span> <span class="bu">int</span>(month)</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> month <span class="op">&lt;</span> <span class="dv">1</span> <span class="kw">or</span> month <span class="op">&gt;</span> <span class="dv">12</span>:</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> request.form.get(<span class="st">"day"</span>)</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> day:</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>    day <span class="op">=</span> <span class="bu">int</span>(day)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> day <span class="op">&lt;</span> <span class="dv">1</span> <span class="kw">or</span> day <span class="op">&gt;</span> <span class="dv">31</span>:</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> redirect(<span class="st">"/"</span>)</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert data into database</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>db.execute(<span class="st">"INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)"</span>, name, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Render birthdays in <code>birthdays.db</code></p>
 <p>Once a user can submit birthdays and store them in <code>birthdays.db</code>, your next task is to ensure those birthdays are rendered in <code>index.html</code>.</p>
 <p>First, you’ll need to retrieve all birthdays from <code>birthdays.db</code>. You could so with the SQL query:</p>
-<pre><code>SELECT * FROM birthdays;
-</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> birthdays;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>See the following TODO in <code>app.py</code>:</p>
-<pre><code># TODO: Display the entries in the database on index.html
-</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Display the entries in the database on index.html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Consider configuring <code>app.py</code> to run this SQL query each time the page is loaded with a <code>GET</code> request:</p>
-<pre><code># Query for all birthdays
-birthdays = db.execute("SELECT * FROM birthdays")
-</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query for all birthdays</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>birthdays <span class="op">=</span> db.execute(<span class="st">"SELECT * FROM birthdays"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, all birthdays in the <code>birthdays</code> table of <code>birthdays.db</code> are available to you in a Python variable named <code>birthdays</code>. In particular, the results of the SQL query are stored as a list of dictionaries. Each dictionary represents one row returned by the query, and each key in the dictionary corresponds to a column name of the <code>birthdays</code> table (i.e., “name”, “month”, and “day”).</p>
 <p>To render these birthdays in <code>index.html</code>, you can rely on Flask’s <code>render_template</code> function. You can specify that <code>index.html</code> should be rendered with the <code>birthdays</code> variable by specifying a keyword argument, also called <code>birthdays</code>, and setting it equal to the <code>birthdays</code> variable you just recently created.</p>
-<pre><code># Query for all birthdays
-birthdays = db.execute("SELECT * FROM birthdays")
-
-# Render birthdays page
-return render_template("index.html", birthdays=birthdays)
-</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query for all birthdays</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>birthdays <span class="op">=</span> db.execute(<span class="st">"SELECT * FROM birthdays"</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Render birthdays page</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> render_template(<span class="st">"index.html"</span>, birthdays<span class="op">=</span>birthdays)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To be clear, the name on the left-hand side of the <code>=</code>, <code>birthdays</code>, is the name under which you can access the birthdays data within <code>index.html</code> itself.</p>
 <p>Now that <code>index.html</code> is being rendered with access to the birthdays data, you can use Jinja to render the data properly. Jinja, like Python, can loop through elements of a list. And Jinja, like Python, can access elements a dictionary by their keys. In this case, the Jinja syntax to do so is the name of the dictionary, followed by a <code>.</code>, then the name of the key to access.</p>
-<pre><code>{% for birthday in birthdays %}
-    &lt;tr&gt;
-        &lt;td&gt;&lt;/td&gt;
-        &lt;td&gt;/&lt;/td&gt;
-    &lt;/tr&gt;
-{% endfor %}
-</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>{% for birthday in birthdays %}</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>/<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>{% endfor %}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And that’s it! Try reloading the page to see the birthdays rendered.</p>
-<section id="walkthrough" class="level3">
-<h3 class="anchored" data-anchor-id="walkthrough">Walkthrough</h3>
-<p>This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!</p>
-<p>Not sure how to solve?</p>
-</section>
-<section id="testing" class="level3">
-<h3 class="anchored" data-anchor-id="testing">Testing</h3>
-<p>No <code>check50</code> for this problem set! But be sure to test your web application by adding some birthdays and ensuring that the data appears in your table as expected.</p>
+<p><strong>Testing</strong></p>
+<p>Be sure to test your web application by adding some birthdays and ensuring that the data appears in your table as expected.</p>
 <p>Run <code>flask run</code> in your terminal while in your <code>birthdays</code> directory to start a web server that serves your Flask application.</p>
-</section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
-<pre><code>submit50 cs50/problems/2025/x/birthdays
-</code></pre>
+<ul>
+<li>Click and accept the Homework Link on the homework main page for this week.</li>
+<li>Complete each assignment for this week in the Github Codespaces environment.</li>
+<li>Save and click “Commit changes”.</li>
+<li>The autograder runs automatically; see the Actions tab for feedback.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
