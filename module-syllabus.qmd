@@ -60,17 +60,17 @@ While there is no textbook for the module, these may be of interest.
 
 **Books**
 
-Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions of a Coder. Addison-Wesley Professional, Reading, Mass.
+Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions of a Coder. Addison-Wesley.
 
-Bhargava, A., 2024. Grokking Algorithms. Manning Publications, Shelter Island, NY.
+Bhargava, A., 2024. Grokking Algorithms. Manning.
 
-Hermans, F., 2021. The Programmer’s Brain: What every programmer needs to know about cognition. Manning, Shelter Island, NY.
+Hermans, F., 2021. The Programmer’s Brain: What every programmer needs to know about cognition. Manning.
 
-Hunt, A., Thomas, D., 1999. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley Professional.
+Hunt, A., Thomas, D., 1999. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley.
 
-Kenett, R.S., Redman, T.C., 2019. The Real Work of Data Science: Turning data into information, better decisions, and stronger organizations. Wiley, Hoboken & Chichester.
+Kenett, R.S., Redman, T.C., 2019. The Real Work of Data Science: Turning data into information, better decisions, and stronger organizations. Wiley.
 
-McConnell, S., 2004. Code Complete: A Practical Handbook of Software Construction, Second Edition. Microsoft Press, Redmond, Washington.
+McConnell, S., 2004. Code Complete: A Practical Handbook of Software Construction, Second Edition. Microsoft Press.
 
 ## Five tips for success
 
