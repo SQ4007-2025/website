@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>finance – Computing Technology</title>
+<title>10.1 Birthdays – Computing Technology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,11 +108,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing Technology">
+<meta property="og:title" content="10.1 Birthdays – Computing Technology">
 <meta property="og:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
-<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/hw_10/finance_2024.png">
+<meta property="og:image" content="https://SQ4007-2025.github.io/website/homework/images/finance_2024.png">
 <meta property="og:site_name" content="Computing Technology">
-<meta name="twitter:title" content="Computing Technology">
+<meta property="og:image:height" content="1546">
+<meta property="og:image:width" content="2248">
+<meta name="twitter:title" content="10.1 Birthdays – Computing Technology">
 <meta name="twitter:description" content="Computing Technology is an introduction to computer science through a range of programming languages, suitable for those with or without prior programming experience. This module emphasizes problem-solving, focusing on correctness, design, and style. The module demonstrates concepts using various programming languages.">
 <meta name="twitter:image" content="https://SQ4007-2025.github.io/website/homework/hw_10/images/twitter-card.png">
 <meta name="twitter:creator" content="@EdHarris9000">
@@ -255,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">10.1 Birthdays</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -687,200 +724,153 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#finance" id="toc-finance" class="nav-link active" data-scroll-target="#finance">Finance</a></li>
-  <li><a href="#c50-finance" id="toc-c50-finance" class="nav-link" data-scroll-target="#c50-finance">C$50 Finance</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
-  <ul class="collapse">
-  <li><a href="#running" id="toc-running" class="nav-link" data-scroll-target="#running">Running</a></li>
-  <li><a href="#understanding" id="toc-understanding" class="nav-link" data-scroll-target="#understanding">Understanding</a></li>
-  </ul></li>
-  <li><a href="#specification" id="toc-specification" class="nav-link" data-scroll-target="#specification">Specification</a>
-  <ul class="collapse">
-  <li><a href="#register" id="toc-register" class="nav-link" data-scroll-target="#register"><code>register</code></a></li>
-  <li><a href="#quote" id="toc-quote" class="nav-link" data-scroll-target="#quote"><code>quote</code></a></li>
-  <li><a href="#buy" id="toc-buy" class="nav-link" data-scroll-target="#buy"><code>buy</code></a></li>
-  <li><a href="#index" id="toc-index" class="nav-link" data-scroll-target="#index"><code>index</code></a></li>
-  <li><a href="#sell" id="toc-sell" class="nav-link" data-scroll-target="#sell"><code>sell</code></a></li>
-  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history"><code>history</code></a></li>
-  <li><a href="#personal-touch" id="toc-personal-touch" class="nav-link" data-scroll-target="#personal-touch">personal touch</a></li>
-  </ul></li>
-  <li><a href="#walkthrough" id="toc-walkthrough" class="nav-link" data-scroll-target="#walkthrough">Walkthrough</a></li>
-  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
-  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
-  <li><a href="#staffs-solution" id="toc-staffs-solution" class="nav-link" data-scroll-target="#staffs-solution">Staff’s Solution</a></li>
-  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
-  <li><a href="#faqs" id="toc-faqs" class="nav-link" data-scroll-target="#faqs">FAQs</a>
-  <ul class="collapse">
-  <li><a href="#importerror-no-module-named-application" id="toc-importerror-no-module-named-application" class="nav-link" data-scroll-target="#importerror-no-module-named-application">ImportError: No module named ‘application’</a></li>
-  <li><a href="#oserror-errno-98-address-already-in-use" id="toc-oserror-errno-98-address-already-in-use" class="nav-link" data-scroll-target="#oserror-errno-98-address-already-in-use">OSError: [Errno 98] Address already in use</a></li>
-  </ul></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link active" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#advice" id="toc-advice" class="nav-link" data-scroll-target="#advice">Advice</a></li>
   <li><a href="#how-to-submit" id="toc-how-to-submit" class="nav-link" data-scroll-target="#how-to-submit">How to Submit</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SQ4007-2025/website/edit/main/homework/hw_10/10.2_finance.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SQ4007-2025/website/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">10.1 Birthdays</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="finance" class="level1">
-<h1>Finance</h1>
-<p><strong>Week 9, Problem 2</strong></p>
-<p>Source: https://cs50.harvard.edu/x/psets/9/finance/</p>
-<hr>
-</section>
-<section id="c50-finance" class="level1">
-<h1>C$50 Finance</h1>
-<p>Implement a website via which users can “buy” and “sell” stocks, à la the below.</p>
+</header>
+
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="finance_2024.png" class="img-fluid figure-img"></p>
+<p><img src="../images/finance_2024.png" class="img-fluid figure-img"></p>
 <figcaption>C$50 Finance</figcaption>
 </figure>
 </div>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>Implement a website via which users can “buy” and “sell” stocks, à la the below.</p>
+<p><strong>Background</strong></p>
 <p>If you’re not quite sure what it means to buy and sell stocks (i.e., shares of a company), head <a href="https://www.investopedia.com/articles/basics/06/invest1000.asp">here</a> for a tutorial.</p>
 <p>You’re about to implement C$50 Finance, a web app via which you can manage portfolios of stocks. Not only will this tool allow you to check real stocks’ prices and portfolios’ values, it will also let you buy (okay, “buy”) and sell (okay, “sell”) stocks by querying for stocks’ prices.</p>
 <p>Indeed, there are tools (one is known as IEX) that let you download stock quotes via their API (application programming interface) using URLs like <code>https://api.iex.cloud/v1/data/core/quote/nflx?token=API_KEY</code>. Notice how Netflix’s symbol (NFLX) is embedded in this URL; that’s how IEX knows whose data to return. That link won’t actually return any data because IEX requires you to use an API key, but if it did, you’d see a response in JSON (JavaScript Object Notation) format like this:</p>
-<pre><code>{
-  "avgTotalVolume":6787785,
-  "calculationPrice":"tops",
-  "change":1.46,
-  "changePercent":0.00336,
-  "close":null,
-  "closeSource":"official",
-  "closeTime":null,
-  "companyName":"Netflix Inc.",
-  "currency":"USD",
-  "delayedPrice":null,
-  "delayedPriceTime":null,
-  "extendedChange":null,
-  "extendedChangePercent":null,
-  "extendedPrice":null,
-  "extendedPriceTime":null,
-  "high":null,
-  "highSource":"IEX real time price",
-  "highTime":1699626600947,
-  "iexAskPrice":460.87,
-  "iexAskSize":123,
-  "iexBidPrice":435,
-  "iexBidSize":100,
-  "iexClose":436.61,
-  "iexCloseTime":1699626704609,
-  "iexLastUpdated":1699626704609,
-  "iexMarketPercent":0.00864679844447232,
-  "iexOpen":437.37,
-  "iexOpenTime":1699626600859,
-  "iexRealtimePrice":436.61,
-  "iexRealtimeSize":5,
-  "iexVolume":965,
-  "lastTradeTime":1699626704609,
-  "latestPrice":436.61,
-  "latestSource":"IEX real time price",
-  "latestTime":"9:31:44 AM",
-  "latestUpdate":1699626704609,
-  "latestVolume":null,
-  "low":null,
-  "lowSource":"IEX real time price",
-  "lowTime":1699626634509,
-  "marketCap":192892118443,
-  "oddLotDelayedPrice":null,
-  "oddLotDelayedPriceTime":null,
-  "open":null,
-  "openTime":null,
-  "openSource":"official",
-  "peRatio":43.57,
-  "previousClose":435.15,
-  "previousVolume":2735507,
-  "primaryExchange":"NASDAQ",
-  "symbol":"NFLX",
-  "volume":null,
-  "week52High":485,
-  "week52Low":271.56,
-  "ytdChange":0.4790450244167119,
-  "isUSMarketOpen":true
-}
-</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"avgTotalVolume"</span><span class="fu">:</span><span class="dv">6787785</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"calculationPrice"</span><span class="fu">:</span><span class="st">"tops"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"change"</span><span class="fu">:</span><span class="fl">1.46</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"changePercent"</span><span class="fu">:</span><span class="fl">0.00336</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"close"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"closeSource"</span><span class="fu">:</span><span class="st">"official"</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"closeTime"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"companyName"</span><span class="fu">:</span><span class="st">"Netflix Inc."</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"currency"</span><span class="fu">:</span><span class="st">"USD"</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"delayedPrice"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"delayedPriceTime"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"extendedChange"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"extendedChangePercent"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"extendedPrice"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"extendedPriceTime"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"high"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"highSource"</span><span class="fu">:</span><span class="st">"IEX real time price"</span><span class="fu">,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"highTime"</span><span class="fu">:</span><span class="dv">1699626600947</span><span class="fu">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexAskPrice"</span><span class="fu">:</span><span class="fl">460.87</span><span class="fu">,</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexAskSize"</span><span class="fu">:</span><span class="dv">123</span><span class="fu">,</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexBidPrice"</span><span class="fu">:</span><span class="dv">435</span><span class="fu">,</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexBidSize"</span><span class="fu">:</span><span class="dv">100</span><span class="fu">,</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexClose"</span><span class="fu">:</span><span class="fl">436.61</span><span class="fu">,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexCloseTime"</span><span class="fu">:</span><span class="dv">1699626704609</span><span class="fu">,</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexLastUpdated"</span><span class="fu">:</span><span class="dv">1699626704609</span><span class="fu">,</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexMarketPercent"</span><span class="fu">:</span><span class="fl">0.00864679844447232</span><span class="fu">,</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexOpen"</span><span class="fu">:</span><span class="fl">437.37</span><span class="fu">,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexOpenTime"</span><span class="fu">:</span><span class="dv">1699626600859</span><span class="fu">,</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexRealtimePrice"</span><span class="fu">:</span><span class="fl">436.61</span><span class="fu">,</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexRealtimeSize"</span><span class="fu">:</span><span class="dv">5</span><span class="fu">,</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"iexVolume"</span><span class="fu">:</span><span class="dv">965</span><span class="fu">,</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"lastTradeTime"</span><span class="fu">:</span><span class="dv">1699626704609</span><span class="fu">,</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"latestPrice"</span><span class="fu">:</span><span class="fl">436.61</span><span class="fu">,</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"latestSource"</span><span class="fu">:</span><span class="st">"IEX real time price"</span><span class="fu">,</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"latestTime"</span><span class="fu">:</span><span class="st">"9:31:44 AM"</span><span class="fu">,</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"latestUpdate"</span><span class="fu">:</span><span class="dv">1699626704609</span><span class="fu">,</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"latestVolume"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"low"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"lowSource"</span><span class="fu">:</span><span class="st">"IEX real time price"</span><span class="fu">,</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"lowTime"</span><span class="fu">:</span><span class="dv">1699626634509</span><span class="fu">,</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"marketCap"</span><span class="fu">:</span><span class="dv">192892118443</span><span class="fu">,</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"oddLotDelayedPrice"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"oddLotDelayedPriceTime"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"open"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"openTime"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"openSource"</span><span class="fu">:</span><span class="st">"official"</span><span class="fu">,</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"peRatio"</span><span class="fu">:</span><span class="fl">43.57</span><span class="fu">,</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"previousClose"</span><span class="fu">:</span><span class="fl">435.15</span><span class="fu">,</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"previousVolume"</span><span class="fu">:</span><span class="dv">2735507</span><span class="fu">,</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"primaryExchange"</span><span class="fu">:</span><span class="st">"NASDAQ"</span><span class="fu">,</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"symbol"</span><span class="fu">:</span><span class="st">"NFLX"</span><span class="fu">,</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"volume"</span><span class="fu">:</span><span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"week52High"</span><span class="fu">:</span><span class="dv">485</span><span class="fu">,</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"week52Low"</span><span class="fu">:</span><span class="fl">271.56</span><span class="fu">,</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"ytdChange"</span><span class="fu">:</span><span class="fl">0.4790450244167119</span><span class="fu">,</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"isUSMarketOpen"</span><span class="fu">:</span><span class="kw">true</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice how, between the curly braces, there’s a comma-separated list of key-value pairs, with a colon separating each key from its value. We’re going to be doing something very similar with our own stock database API.</p>
-<p>Let’s turn our attention now to getting this problem’s distribution code!</p>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>Log into <a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute <code>cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
-<pre><code>$
-</code></pre>
+<p><strong>Getting Started</strong></p>
+<p>Download the distribution code</p>
+<p>Start by clicking inside your terminal window, then execute <code>cd</code> by itself. You should find that its “prompt” resembles the below.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next execute</p>
-<pre><code>wget https://cdn.cs50.net/2024/fall/psets/9/finance.zip
-</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/SQ4007-2025/website/raw/refs/heads/master/homework/data/finance.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in order to download a ZIP called <code>finance.zip</code> into your codespace.</p>
 <p>Then execute</p>
-<pre><code>unzip finance.zip
-</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> finance.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to create a folder called <code>finance</code>. You no longer need the ZIP file, so you can execute</p>
-<pre><code>rm finance.zip
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> finance.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
 <p>Now type</p>
-<pre><code>cd finance
-</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> finance</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
-<pre><code>finance/ $
-</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">finance/</span> $</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Execute <code>ls</code> by itself, and you should see a few files and folders:</p>
-<pre><code>app.py  finance.db  helpers.py  requirements.txt  static/  templates/
-</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">app.py</span>  finance.db  helpers.py  requirements.txt  static/  templates/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong!</p>
-<section id="running" class="level3">
-<h3 class="anchored" data-anchor-id="running">Running</h3>
+<p><strong>Running</strong></p>
 <p>Start Flask’s built-in web server (within <code>finance/</code>):</p>
-<pre><code>$ flask run
-</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> flask run</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Visit the URL outputted by <code>flask</code> to see the distribution code in action. You won’t be able to log in or register, though, just yet!</p>
 <p>Within <code>finance/</code>, run <code>sqlite3 finance.db</code> to open <code>finance.db</code> with <code>sqlite3</code>. If you run <code>.schema</code> in the SQLite prompt, notice how <code>finance.db</code> comes with a table called <code>users</code>. Take a look at its structure (i.e., schema). Notice how, by default, new users will receive $10,000 in cash. But if you run <code>SELECT * FROM users;</code>, there aren’t (yet!) any users (i.e., rows) therein to browse.</p>
 <p>Another way to view <code>finance.db</code> is with a program called phpLiteAdmin. Click on <code>finance.db</code> in your codespace’s file browser, then click the link shown underneath the text “Please visit the following link to authorize GitHub Preview”. You should see information about the database itself, as well as a table, <code>users</code>, just like you saw in the <code>sqlite3</code> prompt with <code>.schema</code>.</p>
-</section>
-<section id="understanding" class="level3">
-<h3 class="anchored" data-anchor-id="understanding">Understanding</h3>
-<section id="app.py" class="level4">
-<h4 class="anchored" data-anchor-id="app.py"><code>app.py</code></h4>
-<p>Open up <code>app.py</code>. Atop the file are a bunch of imports, among them CS50’s SQL module and a few helper functions. More on those soon.</p>
+<p><strong>Understanding</strong></p>
+<p><code>app.py</code></p>
+<p>Open up <code>app.py</code>. Atop the file are a bunch of imports, among them a SQL module and a few helper functions. More on those soon.</p>
 <p>After configuring <a href="https://flask.palletsprojects.com/en/stable/">Flask</a>, notice how this file disables caching of responses (provided you’re in debugging mode, which you are by default in your code50 codespace), lest you make a change to some file but your browser not notice. Notice next how it configures <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a> with a custom “filter,” <code>usd</code>, a function (defined in <code>helpers.py</code>) that will make it easier to format values as US dollars (USD). It then further configures Flask to store <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions">sessions</a> on the local filesystem (i.e., disk) as opposed to storing them inside of (digitally signed) cookies, which is Flask’s default. The file then configures CS50’s SQL module to use <code>finance.db</code>.</p>
 <p>Thereafter are a whole bunch of routes, only two of which are fully implemented: <code>login</code> and <code>logout</code>. Read through the implementation of <code>login</code> first. Notice how it uses <code>db.execute</code> (from CS50’s library) to query <code>finance.db</code>. And notice how it uses <code>check_password_hash</code> to compare hashes of users’ passwords. Also notice how <code>login</code> “remembers” that a user is logged in by storing his or her <code>user_id</code>, an INTEGER, in <code>session</code>. That way, any of this file’s routes can check which user, if any, is logged in. Finally, notice how once the user has successfully logged in, <code>login</code> will redirect to <code>"/"</code>, taking the user to their home page. Meanwhile, notice how <code>logout</code> simply clears <code>session</code>, effectively logging a user out.</p>
 <p>Notice how most routes are “decorated” with <code>@login_required</code> (a function defined in <code>helpers.py</code> too). That decorator ensures that, if a user tries to visit any of those routes, he or she will first be redirected to <code>login</code> so as to log in.</p>
 <p>Notice too how most routes support GET and POST. Even so, most of them (for now!) simply return an “apology,” since they’re not yet implemented.</p>
-</section>
-<section id="helpers.py" class="level4">
-<h4 class="anchored" data-anchor-id="helpers.py"><code>helpers.py</code></h4>
+<p><code>helpers.py</code></p>
 <p>Next take a look at <code>helpers.py</code>. Ah, there’s the implementation of <code>apology</code>. Notice how it ultimately renders a template, <code>apology.html</code>. It also happens to define within itself another function, <code>escape</code>, that it simply uses to replace special characters in apologies. By defining <code>escape</code> inside of <code>apology</code>, we’ve scoped the former to the latter alone; no other functions will be able (or need) to call it.</p>
 <p>Next in the file is <code>login_required</code>. No worries if this one’s a bit cryptic, but if you’ve ever wondered how a function can return another function, here’s an example!</p>
 <p>Thereafter is <code>lookup</code>, a function that, given a <code>symbol</code> (e.g., NFLX), returns a stock quote for a company in the form of a <code>dict</code> with three keys: <code>name</code>, whose value is a <code>str</code>; <code>price</code>, whose value is a <code>float</code>; and <code>symbol</code>, whose value is a <code>str</code>, a canonicalized (uppercase) version of a stock’s symbol, irrespective of how that symbol was capitalized when passed into <code>lookup</code>. Note that these are not “real-time” prices but do change over time, just like in the real world!</p>
 <p>Last in the file is <code>usd</code>, a short function that simply formats a <code>float</code> as USD (e.g., <code>1234.56</code> is formatted as <code>$1,234.56</code>).</p>
-</section>
-<section id="requirements.txt" class="level4">
-<h4 class="anchored" data-anchor-id="requirements.txt"><code>requirements.txt</code></h4>
+<p><code>requirements.txt</code></p>
 <p>Next take a quick look at <code>requirements.txt</code>. That file simply prescribes the packages on which this app will depend.</p>
-</section>
-<section id="static" class="level4">
-<h4 class="anchored" data-anchor-id="static"><code>static/</code></h4>
+<p><code>static/</code></p>
 <p>Glance too at <code>static/</code>, inside of which is <code>styles.css</code>. That’s where some initial CSS lives. You’re welcome to alter it as you see fit.</p>
-</section>
-<section id="templates" class="level4">
-<h4 class="anchored" data-anchor-id="templates"><code>templates/</code></h4>
+<p><code>templates/</code></p>
 <p>Now look in <code>templates/</code>. In <code>login.html</code> is, essentially, just an HTML form, stylized with <a href="https://getbootstrap.com/">Bootstrap</a>. In <code>apology.html</code>, meanwhile, is a template for an apology. Recall that <code>apology</code> in <code>helpers.py</code> took two arguments: <code>message</code>, which was passed to <code>render_template</code> as the value of <code>bottom</code>, and, optionally, <code>code</code>, which was passed to <code>render_template</code> as the value of <code>top</code>. Notice in <code>apology.html</code> how those values are ultimately used! And <a href="https://github.com/jacebrowning/memegen">here’s why</a> 0:-)</p>
 <p>Last up is <code>layout.html</code>. It’s a bit bigger than usual, but that’s mostly because it comes with a fancy, mobile-friendly “navbar” (navigation bar), also based on Bootstrap. Notice how it defines a block, <code>main</code>, inside of which templates (including <code>apology.html</code> and <code>login.html</code>) shall go. It also includes support for Flask’s <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#message-flashing">message flashing</a> so that you can relay messages from one route to another for the user to see.</p>
-</section>
-</section>
-</section>
-<section id="specification" class="level2">
-<h2 class="anchored" data-anchor-id="specification">Specification</h2>
-<section id="register" class="level3">
-<h3 class="anchored" data-anchor-id="register"><code>register</code></h3>
+<p><strong>Specification</strong></p>
+<p><code>register</code></p>
 <p>Complete the implementation of <code>register</code> in such a way that it allows a user to register for an account via a form.</p>
 <ul>
 <li>Require that a user input a username, implemented as a text field whose <code>name</code> is <code>username</code>. Render an apology if the user’s input is blank or the username already exists.
@@ -892,18 +882,14 @@ ul.task-list li input[type="checkbox"] {
 <li><code>INSERT</code> the new user into <code>users</code>, storing a hash of the user’s password, not the password itself. Hash the user’s password with <a href="https://werkzeug.palletsprojects.com/en/2.3.x/utils/#werkzeug.security.generate_password_hash"><code>generate_password_hash</code></a> Odds are you’ll want to create a new template (e.g., <code>register.html</code>) that’s quite similar to <code>login.html</code>.</li>
 </ul>
 <p>Once you’ve implemented <code>register</code> correctly, you should be able to register for an account and log in (since <code>login</code> and <code>logout</code> already work)! And you should be able to see your rows via phpLiteAdmin or <code>sqlite3</code>.</p>
-</section>
-<section id="quote" class="level3">
-<h3 class="anchored" data-anchor-id="quote"><code>quote</code></h3>
+<p><code>quote</code></p>
 <p>Complete the implementation of <code>quote</code> in such a way that it allows a user to look up a stock’s current price.</p>
 <ul>
 <li>Require that a user input a stock’s symbol, implemented as a text field whose <code>name</code> is <code>symbol</code>.</li>
 <li>Submit the user’s input via <code>POST</code> to <code>/quote</code>.</li>
 <li>Odds are you’ll want to create two new templates (e.g., <code>quote.html</code> and <code>quoted.html</code>). When a user visits <code>/quote</code> via GET, render one of those templates, inside of which should be an HTML form that submits to <code>/quote</code> via POST. In response to a POST, <code>quote</code> can render that second template, embedding within it one or more values from <code>lookup</code>.</li>
 </ul>
-</section>
-<section id="buy" class="level3">
-<h3 class="anchored" data-anchor-id="buy"><code>buy</code></h3>
+<p><code>buy</code></p>
 <p>Complete the implementation of <code>buy</code> in such a way that it enables a user to buy stocks.</p>
 <ul>
 <li>Require that a user input a stock’s symbol, implemented as a text field whose <code>name</code> is <code>symbol</code>. Render an apology if the input is blank or the symbol does not exist (as per the return value of <code>lookup</code>).</li>
@@ -922,17 +908,13 @@ ul.task-list li input[type="checkbox"] {
 <li>You don’t need to worry about race conditions (or use transactions).</li>
 </ul>
 <p>Once you’ve implemented <code>buy</code> correctly, you should be able to see users’ purchases in your new table(s) via phpLiteAdmin or <code>sqlite3</code>.</p>
-</section>
-<section id="index" class="level3">
-<h3 class="anchored" data-anchor-id="index"><code>index</code></h3>
+<p><code>index</code></p>
 <p>Complete the implementation of <code>index</code> in such a way that it displays an HTML table summarizing, for the user currently logged in, which stocks the user owns, the numbers of shares owned, the current price of each stock, and the total value of each holding (i.e., shares times price). Also display the user’s current cash balance along with a grand total (i.e., stocks’ total value plus cash).</p>
 <ul>
 <li>Odds are you’ll want to execute multiple <code>SELECT</code>s. Depending on how you implement your table(s), you might find <a href="https://www.google.com/search?q=SQLite+GROUP+BY">GROUP BY</a>, <a href="https://www.google.com/search?q=SQLite+HAVING">HAVING</a>, <a href="https://www.google.com/search?q=SQLite+SUM">SUM</a>, and/or <a href="https://www.google.com/search?q=SQLite+WHERE">WHERE</a> of interest.</li>
 <li>Odds are you’ll want to call <code>lookup</code> for each stock.</li>
 </ul>
-</section>
-<section id="sell" class="level3">
-<h3 class="anchored" data-anchor-id="sell"><code>sell</code></h3>
+<p><code>sell</code></p>
 <p>Complete the implementation of <code>sell</code> in such a way that it enables a user to sell shares of a stock (that he or she owns).</p>
 <ul>
 <li>Require that a user input a stock’s symbol, implemented as a <code>select</code> menu whose <code>name</code> is <code>symbol</code>. Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.</li>
@@ -941,17 +923,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Upon completion, redirect the user to the home page.</li>
 <li>You don’t need to worry about race conditions (or use transactions).</li>
 </ul>
-</section>
-<section id="history" class="level3">
-<h3 class="anchored" data-anchor-id="history"><code>history</code></h3>
+<p><code>history</code></p>
 <p>Complete the implementation of <code>history</code> in such a way that it displays an HTML table summarizing all of a user’s transactions ever, listing row by row each and every buy and every sell.</p>
 <ul>
 <li>For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price, the number of shares bought or sold, and the date and time at which the transaction occurred.</li>
 <li>You might need to alter the table you created for <code>buy</code> or supplement it with an additional table. Try to minimize redundancies.</li>
 </ul>
-</section>
-<section id="personal-touch" class="level3">
-<h3 class="anchored" data-anchor-id="personal-touch">personal touch</h3>
+<p><strong>Personal touch</strong></p>
 <p>Implement at least one personal touch of your choice:</p>
 <ul>
 <li>Allow users to change their passwords.</li>
@@ -959,13 +937,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Allow users to buy more shares or sell shares of stocks they already own via <code>index</code> itself, without having to type stocks’ symbols manually.</li>
 <li>Implement some other feature of comparable scope.</li>
 </ul>
-</section>
-</section>
-<section id="walkthrough" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough">Walkthrough</h2>
-</section>
-<section id="testing" class="level2">
-<h2 class="anchored" data-anchor-id="testing">Testing</h2>
+<p><strong>Testing</strong></p>
 <p>Be sure to test your web app manually, as by</p>
 <ul>
 <li>registering a new user and verifying that their portfolio page loads with the correct information,</li>
@@ -984,26 +956,9 @@ ul.task-list li input[type="checkbox"] {
 <li>inputting an invalid stock symbol, and</li>
 <li>including potentially dangerous characters like <code>'</code> and <code>;</code> in SQL queries.</li>
 </ul>
-<p>You can also check the validity of your HTML by clicking the <strong>I ♥ VALIDATOR</strong> button in the footer of each of your pages, which will POST your HTML to <a href="https://validator.w3.org/">validator.w3.org</a>.</p>
-<p>Once satisfied, to test your code with <code>check50</code>, execute the below.</p>
-<pre><code>check50 cs50/problems/2025/x/finance
-</code></pre>
-<p>Be aware that <code>check50</code> will test your entire program as a whole. If you run it <strong>before</strong> completing all required functions, it may report errors on functions that are actually correct but depend on other functions.</p>
 </section>
-<section id="style" class="level2">
-<h2 class="anchored" data-anchor-id="style">Style</h2>
-<pre><code>style50 app.py
-</code></pre>
-</section>
-<section id="staffs-solution" class="level2">
-<h2 class="anchored" data-anchor-id="staffs-solution">Staff’s Solution</h2>
-<p>You’re welcome to stylize your own app differently, but here’s what the staff’s solution looks like!</p>
-<p><a href="https://finance.cs50.net/" class="uri">https://finance.cs50.net/</a></p>
-<p>Feel free to register for an account and play around. Do <strong>not</strong> use a password that you use on other sites.</p>
-<p>It is <strong>reasonable</strong> to look at the staff’s HTML and CSS.</p>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
 <ul>
 <li><p>To format a value as a US dollar value (with cents listed to two decimal places), you can use the <code>usd</code> filter in your Jinja templates (printing values as <code>{ value | usd }</code> instead of <code>{ value }</code>.</p></li>
 <li><p>Within <code>cs50.SQL</code> is an <code>execute</code> method whose first argument should be a <code>str</code> of SQL. If that <code>str</code> contains question mark parameters to which values should be bound, those values can be provided as additional named parameters to <code>execute</code>. See the implementation of <code>login</code> for one such example. The return value of <code>execute</code> is as follows:</p>
@@ -1028,17 +983,15 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>You may find <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/">Flask’s documentation</a> and <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/">Jinja’s documentation</a> helpful!</p></li>
 </ul>
-</section>
-<section id="faqs" class="level2">
-<h2 class="anchored" data-anchor-id="faqs">FAQs</h2>
-<section id="importerror-no-module-named-application" class="level3">
-<h3 class="anchored" data-anchor-id="importerror-no-module-named-application">ImportError: No module named ‘application’</h3>
+<p><strong>FAQs</strong></p>
+<ul>
+<li>ImportError: No module named ‘application’</li>
+</ul>
 <p>By default, <code>flask</code> looks for a file called <code>app.py</code> in your current working directory (because we’ve configured the value of <code>FLASK_APP</code>, an environment variable, to be <code>app.py</code>). If seeing this error, odds are you’ve run <code>flask</code> in the wrong directory!</p>
-</section>
-<section id="oserror-errno-98-address-already-in-use" class="level3">
-<h3 class="anchored" data-anchor-id="oserror-errno-98-address-already-in-use">OSError: [Errno 98] Address already in use</h3>
+<ul>
+<li>OSError: [Errno 98] Address already in use</li>
+</ul>
 <p>If, upon running <code>flask</code>, you see this error, odds are you (still) have <code>flask</code> running in another tab. Be sure to kill that other process, as with ctrl-c, before starting <code>flask</code> again. If you haven’t any such other tab, execute <code>fuser -k 8080/tcp</code> to kill any processes that are (still) listening on TCP port 8080.</p>
-</section>
 </section>
 <section id="how-to-submit" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-submit">How to Submit</h2>
@@ -1050,7 +1003,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
