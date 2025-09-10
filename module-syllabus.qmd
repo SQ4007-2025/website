@@ -28,7 +28,7 @@ Material may be livestreamed to YouTube and recorded for later viewing.
 
 ## Online resources
 
-All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the [module website](SQ4007-2025.github.io/website).
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the [module website](SQ4007-2025.github.io/website). This material is completely open and accessible to all without login or other barriers.
 
 [Harper Adams module website](https://vle.harper-adams.ac.uk/course/view.php?id=282) (university enrolled students only, requires login)
 
