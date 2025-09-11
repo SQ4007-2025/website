@@ -54,6 +54,30 @@ For the project you can opt to work individually or collaborate with up to two o
 
 While there is no textbook for the module, these may be of interest.
 
+**Articles**
+
+Beck, K., Cunningham, W., 1989. A laboratory for teaching object oriented thinking. ACM SIGPLAN Notices.
+
+Brewer, E., 2012. CAP twelve years later: How the “rules” have changed. Computer 45, 23–29.
+
+Brooks, F., 1987. No Silver Bullet Essence and Accidents of Software Engineering. Computer 20, 10–19.
+
+Codd, E.F., 1970. A relational model of data for large shared data banks. Commun. ACM 13, 377–387.
+
+Dijkstra, E.W., 1988. On the cruelty of really teaching computing science.
+
+Dijkstra, E.W., 1972. The humble programmer. Commun. ACM 15, 859–866.
+
+Dijkstra, E.W., 1968. Letters to the editor: go to statement considered harmful. Commun. ACM 11, 147–148.
+
+Goldberg, D., 1991. What every computer scientist should know about floating-point arithmetic. ACM Comput. Surv. 23, 5–48.
+
+Hoare, C., 1969. An axiomatic basis for computer programming. Communications of the ACM.
+
+Stroustrup, B., 1988. What is object-oriented programming? IEEE Software 5, 10–20.
+
+Thompson, K., 1984. Reflections on trusting trust. Commun. ACM 27, 761–763.
+
 **Blogs**
 
 [Julia Silge's Blog](https://juliasilge.com/blog/) :: [Andrew Gelman's Blog](https://statmodeling.stat.columbia.edu/) :: [Simply Statistics](https://simplystatistics.org/) :: [R bloggers](https://www.r-bloggers.com/) :: [Ethan Mollick's Blog](https://www.oneusefulthing.org/)
@@ -78,7 +102,7 @@ Your success on this module depends very much on you and the effort you put into
 
 1.  Complete all the preparation work before class.
 2.  Ask questions. As often as you can. In class, out of class. Ask me, ask the course staff, ask your friends, ask the person sitting next to you. This will help you more than anything else. If you get a question wrong on an assessment, ask us why. If you're not sure about the homework, let's talk about it. If you hear something on the news that sounds related to what we discussed, share it and let's discuss. If the reading is confusing, ask.
-3.  Do some of the optional readings, read and share relevant Twitter/X posts, read and share relevant Hacker News articles.
+3.  Do some of the optional readings, read and share relevant Twitter/X posts, read and share relevant Hacker News articles. Consider joining or forming a reading group that meets once per week to discuss.
 4.  Do the homework and the tutorials. The earlier you start, the better. It's not enough to just mechanically plow through the exercises. You should ask yourself how these exercises relate to earlier material, and imagine how they might be changed (to make questions for an exam, for example.)
 5.  Don't procrastinate. If something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, and eventually you won't know where to begin asking questions. Don't let the week end with unanswered questions. But if you find yourself falling behind and not knowing where to begin asking, ask for help, and let us help you identify a good (re)starting point.
 
