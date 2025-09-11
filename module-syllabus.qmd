@@ -54,9 +54,9 @@ For the project you can opt to work individually or collaborate with up to two o
 
 While there is no textbook for the module, these may be of interest.
 
-**Articles**
+**Articles** (Classic papers in programming and computing)
 
-Beck, K., Cunningham, W., 1989. A laboratory for teaching object oriented thinking. ACM SIGPLAN Notices.
+[Beck, K., Cunningham, W., 1989. A laboratory for teaching object oriented thinking. ACM SIGPLAN Notices. ](pdfs/Beck and Cunningham - 1989 - A laboratory for teaching object oriented thinking.pdf)
 
 Brewer, E., 2012. CAP twelve years later: How the “rules” have changed. Computer 45, 23–29.
 
@@ -78,11 +78,11 @@ Stroustrup, B., 1988. What is object-oriented programming? IEEE Software 5, 10�
 
 Thompson, K., 1984. Reflections on trusting trust. Commun. ACM 27, 761–763.
 
-**Blogs**
+**Blogs** (Writings by data science leaders)
 
 [Julia Silge's Blog](https://juliasilge.com/blog/) :: [Andrew Gelman's Blog](https://statmodeling.stat.columbia.edu/) :: [Simply Statistics](https://simplystatistics.org/) :: [R bloggers](https://www.r-bloggers.com/) :: [Ethan Mollick's Blog](https://www.oneusefulthing.org/)
 
-**Books**
+**Books** (Classic texts and essay collections about computing)
 
 Bentley, J., 1988. More Programming Pearls: Confessions of a Coder: Confessions of a Coder. Addison-Wesley.
 
