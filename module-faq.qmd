@@ -2,18 +2,19 @@
 title: "FAQ"
 ---
 
-::: {.columns}
+::::: columns
 ::: {.column width="28%"}
 ```{=html}
-<iframe width="200" height="125" src="https://www.youtube.com/embed/cAHCMpPJx3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="200" height="125" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 :::
-::: {.column}
+
+::: column
 ## How do I submit my homework assignments?
 :::
-:::
----
+:::::
 
+------------------------------------------------------------------------
 
 ## Can I just code on my own computer?
 
@@ -23,12 +24,9 @@ If you want to explore this path, here are the main things you need to do:
 
 For a start...
 
-* Download and install Python (> v3.11): <https://www.python.org/downloads/>
-* Download and install VS Code: <https://code.visualstudio.com/download>
-* Install C/C++ in VS Code: <https://code.visualstudio.com/docs/languages/cpp>
-* Install Git: <https://happygitwithr.com/install-git.html>
+-   Download and install Python (\> v3.11): <https://www.python.org/downloads/>
+-   Download and install VS Code: <https://code.visualstudio.com/download>
+-   Install C/C++ in VS Code: <https://code.visualstudio.com/docs/languages/cpp>
+-   Install Git: <https://happygitwithr.com/install-git.html>
 
----
-
-
-
+------------------------------------------------------------------------
