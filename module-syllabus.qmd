@@ -58,27 +58,27 @@ While there is no textbook for this module, these readings may be useful.
 
 **Articles** (Classic papers in programming and computing)
 
-[Beck, K., Cunningham, W., 1989. A laboratory for teaching object oriented thinking. ACM SIGPLAN Notices.](pdfs/Beck%20and%20Cunningham%20-%201989%20-%20A%20laboratory%20for%20teaching%20object%20oriented%20thinking.pdf)
+[Beck, K., Cunningham, W., 1989. A laboratory for teaching object oriented thinking. ACM SIGPLAN Notices. Cited by 916.](pdfs/Beck%20and%20Cunningham%20-%201989%20-%20A%20laboratory%20for%20teaching%20object%20oriented%20thinking.pdf)
 
-[Brewer, E., 2012. CAP twelve years later: How the “rules” have changed. Computer 45, 23–29.](pdfs/Brewer%20-%202012%20-%20CAP%20twelve%20years%20later%20How%20the%20rules%20have%20changed.pdf)
+[Brewer, E., 2012. CAP twelve years later: How the "rules" have changed. Computer 45, 23–29. Cited by 1024.](pdfs/Brewer%20-%202012%20-%20CAP%20twelve%20years%20later%20How%20the%20rules%20have%20changed.pdf)
 
-[Brooks, F., 1987. No Silver Bullet Essence and Accidents of Software Engineering. Computer 20, 10–19.](pdfs/Brooks%20-%201987%20-%20No%20Silver%20Bullet%20Essence%20and%20Accidents%20of%20Software%20Engineering.pdf)
+[Brooks, F., 1987. No Silver Bullet Essence and Accidents of Software Engineering. Computer 20, 10–19. Cited by 6089.](pdfs/Brooks%20-%201987%20-%20No%20Silver%20Bullet%20Essence%20and%20Accidents%20of%20Software%20Engineering.pdf)
 
-[Codd, E.F., 1970. A relational model of data for large shared data banks. Commun. ACM 13, 377–387.](pdfs/Codd%20-%201970%20-%20A%20relational%20model%20of%20data%20for%20large%20shared%20data%20banks.pdf)
+[Codd, E.F., 1970. A relational model of data for large shared data banks. Commun. ACM 13, 377–387. Cited by 15263.](pdfs/Codd%20-%201970%20-%20A%20relational%20model%20of%20data%20for%20large%20shared%20data%20banks.pdf)
 
-[Dijkstra, E.W., 1988. On the cruelty of really teaching computing science.](pdfs/Dijkstra%20-%20On%20the%20cruelty%20of%20really%20teaching%20computing%20science.pdf)
+[Dijkstra, E.W., 1988. On the cruelty of really teaching computing science. Cited by 668.](pdfs/Dijkstra%20-%20On%20the%20cruelty%20of%20really%20teaching%20computing%20science.pdf)
 
-[Dijkstra, E.W., 1972. The humble programmer. Commun. ACM 15, 859–866.](pdfs/Dijkstra%20-%201972%20-%20The%20humble%20programmer.pdf)
+[Dijkstra, E.W., 1972. The humble programmer. Commun. ACM 15, 859–866. Cited by 1550.](pdfs/Dijkstra%20-%201972%20-%20The%20humble%20programmer.pdf)
 
-[Dijkstra, E.W., 1968. Letters to the editor: go to statement considered harmful. Commun. ACM 11, 147–148.](pdfs/Dijkstra%20-%201968%20-%20Letters%20to%20the%20editor%20go%20to%20statement%20considered%20harmful.pdf)
+[Dijkstra, E.W., 1968. Letters to the editor: go to statement considered harmful. Commun. ACM 11, 147–148. Cited by 2233.](pdfs/Dijkstra%20-%201968%20-%20Letters%20to%20the%20editor%20go%20to%20statement%20considered%20harmful.pdf)
 
-[Goldberg, D., 1991. What every computer scientist should know about floating-point arithmetic. ACM Comput. Surv. 23, 5–48.](pdfs/Goldberg%20-%201991%20-%20What%20every%20computer%20scientist%20should%20know%20about%20floating-point%20arithmetic.pdf)
+[Goldberg, D., 1991. What every computer scientist should know about floating-point arithmetic. ACM Comput. Surv. 23, 5–48. Cited by 3169.](pdfs/Goldberg%20-%201991%20-%20What%20every%20computer%20scientist%20should%20know%20about%20floating-point%20arithmetic.pdf)
 
-[Hoare, C., 1969. An axiomatic basis for computer programming. Communications of the ACM.](pdfs/Hoare%20-%201969%20-%20An%20axiomatic%20basis%20for%20computer%20programming.pdf)
+[Hoare, C., 1969. An axiomatic basis for computer programming. Communications of the ACM. Cited by 9912.](pdfs/Hoare%20-%201969%20-%20An%20axiomatic%20basis%20for%20computer%20programming.pdf)
 
-[Stroustrup, B., 1988. What is object-oriented programming? IEEE Software 5, 10–20.](pdfs/Stroustrup%20-%201988%20-%20What%20is%20object-oriented%20programming.pdf)
+[Stroustrup, B., 1988. What is object-oriented programming? IEEE Software 5, 10–20. Cited by 409.](pdfs/Stroustrup%20-%201988%20-%20What%20is%20object-oriented%20programming.pdf)
 
-[Thompson, K., 1984. Reflections on trusting trust. Commun. ACM 27, 761–763.](pdfs/Thompson%20-%201984%20-%20Reflections%20on%20trusting%20trust.pdf)
+[Thompson, K., 1984. Reflections on trusting trust. Commun. ACM 27, 761–763. Cited by 1213.](pdfs/Thompson%20-%201984%20-%20Reflections%20on%20trusting%20trust.pdf)
 
 ------------------------------------------------------------------------
 
