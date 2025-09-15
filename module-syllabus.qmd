@@ -82,7 +82,7 @@ While there is no textbook for this module, these readings may be useful.
 
 ------------------------------------------------------------------------
 
-**Blogs** (Writings by data science leaders)
+**Blogs** (Classic writings by data science leaders)
 
 [Julia Silge's Blog](https://juliasilge.com/blog/) :: [Andrew Gelman's Blog](https://statmodeling.stat.columbia.edu/) :: [Simply Statistics](https://simplystatistics.org/) :: [R bloggers](https://www.r-bloggers.com/) :: [Ethan Mollick's Blog](https://www.oneusefulthing.org/)
 
