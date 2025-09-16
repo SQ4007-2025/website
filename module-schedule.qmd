@@ -5,7 +5,7 @@ tbl-colwidths: [5,12,4,4,4,10,4]
 
 This schedule is an outline of the topics, content, and assignments. Note that this may be updated as the module progresses.
 
-| Week | Topics | Lectures | Notes | Code | Tutorials | Homework |
+| Week | Topics | Lectures | Notes | Code | Tutorials | Problem Sets |
 |:---------:|-----------|:---------:|:---------:|:---------:|:---------:|:---------:|
 | 01 | 🐈 Scratch | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_1.pptx) | [📕](notes/notes_1.html "Notes 1") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src1) |  | [🏠](homework/hw_1.html "Homework 1") |
 | 02 | 🟢 C | ▶ [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_2.pptx) | [📕](notes/notes_2.html "Notes 2") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src2) | [👨‍🏫](tutorials/tutorial-week-2.html) | [🏠](homework/hw_2.html "Homework 2") |
