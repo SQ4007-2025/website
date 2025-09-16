@@ -42,7 +42,7 @@ All lecture notes, assignment instructions, an up-to-date schedule, and other co
 
 ### Assessment 1
 
-**Homework:** These homework problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.
+**Problem Sets:** These problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.
 
 ### Assessment 2
 

@@ -10,7 +10,7 @@ title: "FAQ"
 :::
 
 ::: column
-## How do I submit my homework assignments?
+## How do I submit my problem set assignments?
 :::
 :::::
 

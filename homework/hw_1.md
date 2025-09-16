@@ -1,8 +1,8 @@
 ---
-title: "Homework week 1"
+title: "Problem Set week 1"
 ---
 
-## [Homework Link for turn-in](https://classroom.github.com/a/y-bJCLIw)
+## [Link for turn-in](https://classroom.github.com/a/y-bJCLIw)
 
 **Note all homeworks for each week will be turned in via a weekly Github Repository**
 
