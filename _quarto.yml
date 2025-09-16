@@ -144,28 +144,28 @@ website:
             text: "Tutorial 09 🌐"
           - href: tutorials/tutorial-week-10.qmd
             text: "Tutorial 10 🐍"
-      - section: "Homework"
+      - section: "Problem Sets"
         contents:
           - href: homework/hw_1.md
-            text: "Homework 01 🐈"
+            text: "Problem Set 01 🐈"
           - href: homework/hw_2.md
-            text: "Homework 02 🟢"
+            text: "Problem Set 02 🟢"
           - href: homework/hw_3.md
-            text: "Homework 03 🟢"
+            text: "Problem Set 03 🟢"
           - href: homework/hw_4.md
-            text: "Homework 04 🟢"
+            text: "Problem Set 04 🟢"
           - href: homework/hw_5.md
-            text: "Homework 05 🟢"
+            text: "Problem Set 05 🟢"
           - href: homework/hw_6.md
-            text: "Homework 06 🟢"
+            text: "Problem Set 06 🟢"
           - href: homework/hw_7.md
-            text: "Homework 07 🐍"
+            text: "Problem Set 07 🐍"
           - href: homework/hw_8.md
-            text: "Homework 08 📊"
+            text: "Problem Set 08 📊"
           - href: homework/hw_9.md
-            text: "Homework 09 🌐"
+            text: "Problem Set 09 🌐"
           - href: homework/hw_10.md
-            text: "Homework 10 🐍"
+            text: "Problem Set 10 🐍"
 
 format:
   html:
