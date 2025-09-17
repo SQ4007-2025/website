@@ -967,7 +967,7 @@
     "href": "module-syllabus.html#assessments",
     "title": "Syllabus",
     "section": "Assessments",
-    "text": "Assessments\n\nAssessment 1\nHomework: These homework problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.\n\n\nAssessment 2\nProject: This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large.\nFor the project you can opt to work individually or collaborate with up to two other classmates, with the expectation that each member contributes equally to the project design and implementation. The complexity of the project should reflect the size of the group, with group projects expected to be more intricate than individual ones. The final project is assessed based on the project complexity and scope, the effectiveness of the implemented solution, creativity, and the overall quality of the code. For group projects, the assessment also considers individual contributions and the collaborative effort. NB for group projects, the scope and ambition of the project should reflect the size of the group.",
+    "text": "Assessments\n\nAssessment 1\nProblem Sets: These problem sets will typically be distributed throughout the module and are designed to test the grasp and application of programming concepts ranging from basic syntax to topics like data structures and algorithms. Each set will consist of practical tasks involving various programming challenges.\n\n\nAssessment 2\nProject: This is an opportunity to apply programming skills in developing your own software solution. This project encourages creativity and innovation, allowing you to choose an appropriate programming language and build an application that is personally meaningful, solves real-world problems, or potentially impacts the community or world at large.\nFor the project you can opt to work individually or collaborate with up to two other classmates, with the expectation that each member contributes equally to the project design and implementation. The complexity of the project should reflect the size of the group, with group projects expected to be more intricate than individual ones. The final project is assessed based on the project complexity and scope, the effectiveness of the implemented solution, creativity, and the overall quality of the code. For group projects, the assessment also considers individual contributions and the collaborative effort. NB for group projects, the scope and ambition of the project should reflect the size of the group.",
     "crumbs": [
       "Syllabus"
     ]
@@ -1081,7 +1081,7 @@
   {
     "objectID": "homework/hw_8.html",
     "href": "homework/hw_8.html",
-    "title": "Homework week 8",
+    "title": "Problem Set week 8",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1090,9 +1090,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_8.html#homework-link-for-turn-in",
-    "href": "homework/hw_8.html#homework-link-for-turn-in",
-    "title": "Homework week 8",
+    "objectID": "homework/hw_8.html#link-for-turn-in",
+    "href": "homework/hw_8.html#link-for-turn-in",
+    "title": "Problem Set week 8",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1103,7 +1103,7 @@
   {
     "objectID": "homework/hw_8.html#what-to-do",
     "href": "homework/hw_8.html#what-to-do",
-    "title": "Homework week 8",
+    "title": "Problem Set week 8",
     "section": "What to do",
     "text": "What to do\n📊 8.1 Songs.\n📊 8.2 Movies.\n📊 8.3 Fiftyville.",
     "crumbs": [
@@ -1114,7 +1114,7 @@
   {
     "objectID": "homework/hw_8.html#advice",
     "href": "homework/hw_8.html#advice",
-    "title": "Homework week 8",
+    "title": "Problem Set week 8",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -1125,7 +1125,7 @@
   {
     "objectID": "homework/hw_8.html#academic-integrity",
     "href": "homework/hw_8.html#academic-integrity",
-    "title": "Homework week 8",
+    "title": "Problem Set week 8",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -1171,7 +1171,7 @@
   {
     "objectID": "homework/hw_7.html",
     "href": "homework/hw_7.html",
-    "title": "Homework week 7",
+    "title": "Problem Set week 7",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1180,9 +1180,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_7.html#homework-link-for-turn-in",
-    "href": "homework/hw_7.html#homework-link-for-turn-in",
-    "title": "Homework week 7",
+    "objectID": "homework/hw_7.html#link-for-turn-in",
+    "href": "homework/hw_7.html#link-for-turn-in",
+    "title": "Problem Set week 7",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1193,7 +1193,7 @@
   {
     "objectID": "homework/hw_7.html#what-to-do",
     "href": "homework/hw_7.html#what-to-do",
-    "title": "Homework week 7",
+    "title": "Problem Set week 7",
     "section": "What to do",
     "text": "What to do\n🐍 7.1 Hello.\n🐍 7.2 Mario Py.\n🐍 7.3 Cash.\n🐍 7.4 Readability.\n🐍 7.5 DNA.",
     "crumbs": [
@@ -1204,7 +1204,7 @@
   {
     "objectID": "homework/hw_7.html#advice",
     "href": "homework/hw_7.html#advice",
-    "title": "Homework week 7",
+    "title": "Problem Set week 7",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -1215,7 +1215,7 @@
   {
     "objectID": "homework/hw_7.html#academic-integrity",
     "href": "homework/hw_7.html#academic-integrity",
-    "title": "Homework week 7",
+    "title": "Problem Set week 7",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -1317,7 +1317,7 @@
   {
     "objectID": "homework/hw_6.html",
     "href": "homework/hw_6.html",
-    "title": "Homework week 6",
+    "title": "Problem Set week 6",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1326,9 +1326,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_6.html#homework-link-for-turn-in",
-    "href": "homework/hw_6.html#homework-link-for-turn-in",
-    "title": "Homework week 6",
+    "objectID": "homework/hw_6.html#link-for-turn-in",
+    "href": "homework/hw_6.html#link-for-turn-in",
+    "title": "Problem Set week 6",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1339,7 +1339,7 @@
   {
     "objectID": "homework/hw_6.html#what-to-do",
     "href": "homework/hw_6.html#what-to-do",
-    "title": "Homework week 6",
+    "title": "Problem Set week 6",
     "section": "What to do",
     "text": "What to do\n🟢 6.1 Inheritance.\n🟢 6.2 Speller.",
     "crumbs": [
@@ -1350,7 +1350,7 @@
   {
     "objectID": "homework/hw_6.html#advice",
     "href": "homework/hw_6.html#advice",
-    "title": "Homework week 6",
+    "title": "Problem Set week 6",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -1361,7 +1361,7 @@
   {
     "objectID": "homework/hw_6.html#academic-integrity",
     "href": "homework/hw_6.html#academic-integrity",
-    "title": "Homework week 6",
+    "title": "Problem Set week 6",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -1533,7 +1533,7 @@
   {
     "objectID": "homework/hw_4.html",
     "href": "homework/hw_4.html",
-    "title": "Homework week 4",
+    "title": "Problem Set week 4",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1542,9 +1542,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_4.html#homework-link-for-turn-in",
-    "href": "homework/hw_4.html#homework-link-for-turn-in",
-    "title": "Homework week 4",
+    "objectID": "homework/hw_4.html#link-for-turn-in",
+    "href": "homework/hw_4.html#link-for-turn-in",
+    "title": "Problem Set week 4",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1555,7 +1555,7 @@
   {
     "objectID": "homework/hw_4.html#what-to-do",
     "href": "homework/hw_4.html#what-to-do",
-    "title": "Homework week 4",
+    "title": "Problem Set week 4",
     "section": "What to do",
     "text": "What to do\n🟢 4.1 Sort.\n🟢 4.2 Plurality.\n🟢 4.3 Runoff.",
     "crumbs": [
@@ -1566,7 +1566,7 @@
   {
     "objectID": "homework/hw_4.html#advice",
     "href": "homework/hw_4.html#advice",
-    "title": "Homework week 4",
+    "title": "Problem Set week 4",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -1577,7 +1577,7 @@
   {
     "objectID": "homework/hw_4.html#academic-integrity",
     "href": "homework/hw_4.html#academic-integrity",
-    "title": "Homework week 4",
+    "title": "Problem Set week 4",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -1728,7 +1728,7 @@
   {
     "objectID": "homework/hw_2.html",
     "href": "homework/hw_2.html",
-    "title": "Homework week 2",
+    "title": "Problem Set week 2",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1737,9 +1737,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_2.html#homework-link-for-turn-in",
-    "href": "homework/hw_2.html#homework-link-for-turn-in",
-    "title": "Homework week 2",
+    "objectID": "homework/hw_2.html#link-for-turn-in",
+    "href": "homework/hw_2.html#link-for-turn-in",
+    "title": "Problem Set week 2",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1750,7 +1750,7 @@
   {
     "objectID": "homework/hw_2.html#what-to-do",
     "href": "homework/hw_2.html#what-to-do",
-    "title": "Homework week 2",
+    "title": "Problem Set week 2",
     "section": "What to do",
     "text": "What to do\n🟢 2.1 Hello, World.\n🟢 2.2 Hello, it’s me.\n🟢 2.3 Mario.\n🟢 2.4 Cash.",
     "crumbs": [
@@ -1761,7 +1761,7 @@
   {
     "objectID": "homework/hw_2.html#advice",
     "href": "homework/hw_2.html#advice",
-    "title": "Homework week 2",
+    "title": "Problem Set week 2",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -1772,7 +1772,7 @@
   {
     "objectID": "homework/hw_2.html#academic-integrity",
     "href": "homework/hw_2.html#academic-integrity",
-    "title": "Homework week 2",
+    "title": "Problem Set week 2",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -1909,7 +1909,7 @@
   {
     "objectID": "homework/hw_1.html",
     "href": "homework/hw_1.html",
-    "title": "Homework week 1",
+    "title": "Problem Set week 1",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1918,9 +1918,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_1.html#homework-link-for-turn-in",
-    "href": "homework/hw_1.html#homework-link-for-turn-in",
-    "title": "Homework week 1",
+    "objectID": "homework/hw_1.html#link-for-turn-in",
+    "href": "homework/hw_1.html#link-for-turn-in",
+    "title": "Problem Set week 1",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -1931,7 +1931,7 @@
   {
     "objectID": "homework/hw_1.html#what-to-do",
     "href": "homework/hw_1.html#what-to-do",
-    "title": "Homework week 1",
+    "title": "Problem Set week 1",
     "section": "What to do",
     "text": "What to do\n🐈 1.1 Scratch.",
     "crumbs": [
@@ -1942,7 +1942,7 @@
   {
     "objectID": "homework/hw_1.html#advice",
     "href": "homework/hw_1.html#advice",
-    "title": "Homework week 1",
+    "title": "Problem Set week 1",
     "section": "Advice",
     "text": "Advice\nIf you have trouble running Scratch in your browser, use Chrome; consider downloading and installing the latest version of Chrome, if you don’t have it already.\nHere are some examples from lecture if you’d like to review! To see the source code of each, click See inside.",
     "crumbs": [
@@ -1953,7 +1953,7 @@
   {
     "objectID": "homework/hw_1.html#academic-integrity",
     "href": "homework/hw_1.html#academic-integrity",
-    "title": "Homework week 1",
+    "title": "Problem Set week 1",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -2013,7 +2013,7 @@
   {
     "objectID": "homework/hw_10.html",
     "href": "homework/hw_10.html",
-    "title": "Homework week 10",
+    "title": "Problem Set week 10",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2022,9 +2022,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_10.html#homework-link-for-turn-in",
-    "href": "homework/hw_10.html#homework-link-for-turn-in",
-    "title": "Homework week 10",
+    "objectID": "homework/hw_10.html#link-for-turn-in",
+    "href": "homework/hw_10.html#link-for-turn-in",
+    "title": "Problem Set week 10",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2035,7 +2035,7 @@
   {
     "objectID": "homework/hw_10.html#what-to-do",
     "href": "homework/hw_10.html#what-to-do",
-    "title": "Homework week 10",
+    "title": "Problem Set week 10",
     "section": "What to do",
     "text": "What to do\n🐍 10.1 Birthdays.\n🐍 10.2 Finance.",
     "crumbs": [
@@ -2046,7 +2046,7 @@
   {
     "objectID": "homework/hw_10.html#advice",
     "href": "homework/hw_10.html#advice",
-    "title": "Homework week 10",
+    "title": "Problem Set week 10",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -2057,7 +2057,7 @@
   {
     "objectID": "homework/hw_10.html#academic-integrity",
     "href": "homework/hw_10.html#academic-integrity",
-    "title": "Homework week 10",
+    "title": "Problem Set week 10",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -2201,7 +2201,7 @@
   {
     "objectID": "homework/hw_3.html",
     "href": "homework/hw_3.html",
-    "title": "Homework week 3",
+    "title": "Problem Set week 3",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2210,9 +2210,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_3.html#homework-link-for-turn-in",
-    "href": "homework/hw_3.html#homework-link-for-turn-in",
-    "title": "Homework week 3",
+    "objectID": "homework/hw_3.html#link-for-turn-in",
+    "href": "homework/hw_3.html#link-for-turn-in",
+    "title": "Problem Set week 3",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2223,7 +2223,7 @@
   {
     "objectID": "homework/hw_3.html#what-to-do",
     "href": "homework/hw_3.html#what-to-do",
-    "title": "Homework week 3",
+    "title": "Problem Set week 3",
     "section": "What to do",
     "text": "What to do\n🟢 3.1 Scrabble.\n🟢 3.2 Readability.\n🟢 3.3 Caesar.",
     "crumbs": [
@@ -2234,7 +2234,7 @@
   {
     "objectID": "homework/hw_3.html#advice",
     "href": "homework/hw_3.html#advice",
-    "title": "Homework week 3",
+    "title": "Problem Set week 3",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -2245,7 +2245,7 @@
   {
     "objectID": "homework/hw_3.html#academic-integrity",
     "href": "homework/hw_3.html#academic-integrity",
-    "title": "Homework week 3",
+    "title": "Problem Set week 3",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -2410,7 +2410,7 @@
   {
     "objectID": "homework/hw_5.html",
     "href": "homework/hw_5.html",
-    "title": "Homework week 5",
+    "title": "Problem Set week 5",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2419,9 +2419,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_5.html#homework-link-for-turn-in",
-    "href": "homework/hw_5.html#homework-link-for-turn-in",
-    "title": "Homework week 5",
+    "objectID": "homework/hw_5.html#link-for-turn-in",
+    "href": "homework/hw_5.html#link-for-turn-in",
+    "title": "Problem Set week 5",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2432,7 +2432,7 @@
   {
     "objectID": "homework/hw_5.html#what-to-do",
     "href": "homework/hw_5.html#what-to-do",
-    "title": "Homework week 5",
+    "title": "Problem Set week 5",
     "section": "What to do",
     "text": "What to do\n🟢 5.1 Volume.\n🟢 5.2 Filter.\n🟢 5.3 Recover.",
     "crumbs": [
@@ -2443,7 +2443,7 @@
   {
     "objectID": "homework/hw_5.html#advice",
     "href": "homework/hw_5.html#advice",
-    "title": "Homework week 5",
+    "title": "Problem Set week 5",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -2454,7 +2454,7 @@
   {
     "objectID": "homework/hw_5.html#academic-integrity",
     "href": "homework/hw_5.html#academic-integrity",
-    "title": "Homework week 5",
+    "title": "Problem Set week 5",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
@@ -2731,7 +2731,7 @@
   {
     "objectID": "homework/hw_9.html",
     "href": "homework/hw_9.html",
-    "title": "Homework week 9",
+    "title": "Problem Set week 9",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2740,9 +2740,9 @@
     ]
   },
   {
-    "objectID": "homework/hw_9.html#homework-link-for-turn-in",
-    "href": "homework/hw_9.html#homework-link-for-turn-in",
-    "title": "Homework week 9",
+    "objectID": "homework/hw_9.html#link-for-turn-in",
+    "href": "homework/hw_9.html#link-for-turn-in",
+    "title": "Problem Set week 9",
     "section": "",
     "text": "Note all homeworks for each week will be turned in via a weekly Github Repository",
     "crumbs": [
@@ -2753,7 +2753,7 @@
   {
     "objectID": "homework/hw_9.html#what-to-do",
     "href": "homework/hw_9.html#what-to-do",
-    "title": "Homework week 9",
+    "title": "Problem Set week 9",
     "section": "What to do",
     "text": "What to do\n🌐 9.1 Trivia.\n🌐 9.2 Homepage.",
     "crumbs": [
@@ -2764,7 +2764,7 @@
   {
     "objectID": "homework/hw_9.html#advice",
     "href": "homework/hw_9.html#advice",
-    "title": "Homework week 9",
+    "title": "Problem Set week 9",
     "section": "Advice",
     "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
     "crumbs": [
@@ -2775,7 +2775,7 @@
   {
     "objectID": "homework/hw_9.html#academic-integrity",
     "href": "homework/hw_9.html#academic-integrity",
-    "title": "Homework week 9",
+    "title": "Problem Set week 9",
     "section": "Academic integrity",
     "text": "Academic integrity\nCollaboration on problem sets is not permitted except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. AI use to generate any code or text related to assignments is not permitted.\nThe staff conduct audits of submissions to Computing Technology. Students found to be in violation of this policy will be referred for Academic Misconduct.",
     "crumbs": [
