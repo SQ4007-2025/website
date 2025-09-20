@@ -15,8 +15,8 @@ title: "Problem Set week 9"
 ## Advice
 
 * Try out any of the programs from lectures via the source code tab on the [schedule page](module-schedule.html).
-* See this [style guide for C](https://cs50.readthedocs.io/style/c/) for tips on how to improve your code style.
-* If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help. 
+* See this [style guide for HTML](https://www.w3schools.com/html/html5_syntax.asp) for tips on how to improve your code style.
+* If you see any errors when inspecting your page, focus first on fixing the very first error you see and continuing. To decipher the error message meaning, try asking in discord, or looking in tutorials. 
 
 ## Academic integrity
 
