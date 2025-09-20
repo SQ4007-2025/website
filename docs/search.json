@@ -1116,7 +1116,7 @@
     "href": "homework/hw_8.html#advice",
     "title": "Problem Set week 8",
     "section": "Advice",
-    "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for C for tips on how to improve your code style.\nIf you see any errors when compiling your code with make, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, tutorials, or even Google/AI for help.",
+    "text": "Advice\n\nTry out any of the programs from lectures via the source code tab on the schedule page.\nSee this style guide for SQL for tips on how to improve your code style.\nIf you see any errors when running your code, focus first on fixing the very first error you see, scrolling up as needed. To decipher the error message meaning, try asking in discord, or tutorials.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 08 📊"
