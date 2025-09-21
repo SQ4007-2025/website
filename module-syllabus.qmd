@@ -4,7 +4,7 @@ title: "Syllabus"
 
 ## Your instructors
 
-[![Dr. Ed Harris, Data Scientist, Statistician, and coffee enthusiast.](images/team/ed.png){fig-align="left" width="200"}](https://weharris.me) :: 
+[![Dr. Ed Harris, Module Leader, Data Scientist, Statistician, and coffee enthusiast.](images/team/ed.png){fig-align="left" width="200"}](https://weharris.me) :: [Dr. Megan Lewis, Assistand Lecturer, Data Scientist](images/team/MeganLewis.jpeg){fig-align="left" width="200"}
 
 ## Learning objectives
 
