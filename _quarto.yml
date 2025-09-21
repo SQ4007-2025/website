@@ -10,6 +10,7 @@ website:
   favicon: "images/favicon.ico"
 
   repo-url: https://github.com/SQ4007-2025/website
+  repo-branch: master
   repo-actions: [edit, issue]
 
   open-graph: true
