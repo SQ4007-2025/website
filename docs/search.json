@@ -917,7 +917,7 @@
     "href": "module-syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Dr. Ed Harris, Data Scientist, Statistician, and coffee enthusiast.",
+    "text": ":: Dr. Megan Lewis, Assistand Lecturer, Data Scientist",
     "crumbs": [
       "Syllabus"
     ]
@@ -3875,6 +3875,16 @@
     "crumbs": [
       "Tutorials",
       "Tutorial 08 📊"
+    ]
+  },
+  {
+    "objectID": "module-syllabus.html#your-instructors",
+    "href": "module-syllabus.html#your-instructors",
+    "title": "Syllabus",
+    "section": "",
+    "text": ":: Dr. Megan Lewis, Assistand Lecturer, Data Scientist",
+    "crumbs": [
+      "Syllabus"
     ]
   }
 ]
