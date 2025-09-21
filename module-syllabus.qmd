@@ -2,9 +2,9 @@
 title: "Syllabus"
 ---
 
-## Your instructor
+## Your instructors
 
-[![Dr. Ed Harris, Data Scientist, Statistician, and coffee enthusiast.](images/team/ed.png){fig-align="left" width="250"}](https://weharris.me)
+[![Dr. Ed Harris, Data Scientist, Statistician, and coffee enthusiast.](images/team/ed.png){fig-align="left" width="200"}](https://weharris.me) :: 
 
 ## Learning objectives
 
