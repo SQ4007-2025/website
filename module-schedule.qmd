@@ -1,6 +1,6 @@
 ---
 title: "Schedule"
-tbl-colwidths: [5,10,4,4,4,4,6]
+tbl-colwidths: [4,10,4,4,4,4,6]
 ---
 
 🔗 ["The Sandbox" coding environment (Github Codespace)](https://classroom.github.com/a/n-LXZmS6)
