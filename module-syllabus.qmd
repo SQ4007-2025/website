@@ -37,7 +37,7 @@ All lecture notes, assignment instructions, an up-to-date schedule, and other co
 -   [Discord - join the community](https://discord.gg/QqHhD7S7vU) - for live discussion and support
 -   [GitHub - the module repository](https://github.com/SQ4007-2025) - for the module materials
 -   [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab) - for live streams and recordings
--   [Twitch - the DataGiri channel](https://www.twitch.tv/DataGiri) - for live streams and recordings
+-   [Twitch - The Statistics Lab channel](https://www.twitch.tv/thestatisticslab) - for live streams and recordings
 -   [Twitter - Follow Ed's account](https://x.com/EdHarris9000) - for information, and memes
 
 ## Assessments
