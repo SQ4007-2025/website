@@ -4,7 +4,7 @@ title: "Useful links"
 
 🔗 [🛝 Join "The Sandbox" coding environment (Github Codespace)](https://classroom.github.com/a/n-LXZmS6) - Once you "accept the assessment" you will be able to access and code in The Sandbox anytime (💡 Tip: Save the link).
 
-🔗 [Discord - join the community](https://discord.gg/QqHhD7S7vU) - for live discussion and support
+🔗 [Discord - join the community](https://discord.gg/QqHhD7S7vU) - for live discussion and support (please set your server name to your real name, e.g. "Ed Harris")
 
 🔗 [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab) - for live streams and recordings
 
