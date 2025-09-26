@@ -6,8 +6,13 @@ title: "Useful links"
 
 🔗 [Discord - join the community](https://discord.gg/QqHhD7S7vU) - for live discussion and support
 
-🔗 [🏢 Harper Adams VLE site for this module (HAU enrolled students only)](https://vle.harper-adams.ac.uk/course/view.php?id=282)
+🔗 [YouTube - The Statistics Lab channel](https://www.youtube.com/@thestatisticslab) - for live streams and recordings
+
+🔗 [Twitch - The Statistics Lab channel](https://www.twitch.tv/thestatisticslab) - for live streams and recordings
 
 🔗 [🏠 Access your Codespaces](https://github.com/codespaces)
 
 🔗 [🎤 Statistics Lab & Code Club meetings](module-extras.html)
+
+🔗 [🏢 Harper Adams VLE site for this module (HAU enrolled students only)](https://vle.harper-adams.ac.uk/course/view.php?id=282)
+
