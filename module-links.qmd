@@ -10,7 +10,7 @@ title: "Useful links"
 
 🔗 [Twitch - The Statistics Lab channel](https://www.twitch.tv/thestatisticslab) - for live streams and recordings
 
-🔗 [🏠 Access your Codespaces](https://github.com/codespaces)
+🔗 [🏠 Access Codespaces](https://github.com/codespaces)
 
 🔗 [🎤 Statistics Lab & Code Club meetings](module-extras.html)
 
