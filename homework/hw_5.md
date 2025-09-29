@@ -2,7 +2,7 @@
 title: "Problem Set week 5"
 ---
 
-## [Link for turn-in]()
+## [Link for turn-in](https://classroom.github.com/a/V3VnWLyT)
 
 **Note all homeworks for each week will be turned in via a weekly Github Repository**
 
