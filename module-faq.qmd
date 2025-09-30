@@ -5,7 +5,7 @@ title: "FAQ"
 ::::: columns
 ::: {.column width="28%"}
 ```{=html}
-<iframe width="200" height="125" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="200" height="125" src="https://youtu.be/WVPIzkYjxvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 :::
 
@@ -14,7 +14,7 @@ title: "FAQ"
 :::
 :::::
 
-----
+------------------------------------------------------------------------
 
 ::::: columns
 ::: {.column width="28%"}
@@ -28,7 +28,7 @@ title: "FAQ"
 :::
 :::::
 
-----
+------------------------------------------------------------------------
 
 ## Can I just code on my own computer?
 
