@@ -48,7 +48,7 @@
   + `rm`, for removing (deleting) files
   + `rmdir`, for removing (deleting) directories
 * The most commonly used is `ls` which will list all the files in the current directory. Go ahead and type `ls` into the terminal window and hit `enter`. You’ll see all the files in the current folder.
-* Use [our VS Code Sandbox](https://classroom.github.com/a/zT0wsGr1)
+* Use [our VS Code Sandbox](https://classroom.github.com/a/n-LXZmS6)
 * Because this IDE is preconfigured with all the necessary software, you should use it to complete all assignments for this course.
 
 ## Hello World
