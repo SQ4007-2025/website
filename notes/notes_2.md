@@ -143,7 +143,7 @@
 * The statement at the start of the code `#include <stdio.h>` is a very special command that tells the compile that you want to use the capabilities of a *library* called `stdio.h`, a *header file*. This allows you, among many other things, to utilize the `printf` function.
 * A *library* is a collection of code created by someone. Libraries are collections of pre-written code and functions that others have written in the past that we can utilize in our code.
 * You can read about all the capabilities of this library on the [Manual Pages](https://manual.cs50.io). The Manual Pages provide a means by which to learn what various commands do and how they function.
-* It turns out that CS50 has its own library called `cs50.h`. There are numerous functions that are included that provide *training wheels* while you get started in C:
+* We use a C library called `cs50.h`. There are numerous functions that are included that provide *training wheels* while you get started in C:
 
   ```
   get_char
