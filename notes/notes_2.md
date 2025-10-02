@@ -763,9 +763,9 @@
 ## Correctness, Design, Style
 
 * Code can be evaluated upon three axes.
-* First, *correctness* refers to “Does the code run as intended?” You can check the correctness of your code with `check50`.
-* Second, *design* refers to “How well is the code designed?” You can evaluate the design of your code using `design50`.
-* Finally, *style* refers to “How aesthetically pleasing and consistent is the code?” You can evaluate the style of your code with `style50`.
+* First, *correctness* refers to “Does the code run as intended?”.
+* Second, *design* refers to “How well is the code designed?”.
+* Finally, *style* refers to “How aesthetically pleasing and consistent is the code?”.
 
 ## Mario
 
