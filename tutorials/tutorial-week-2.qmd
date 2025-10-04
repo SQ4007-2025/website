@@ -2,7 +2,7 @@
 title: "Tutorials week 2"
 ---
 
-[video ▶](https://youtu.be/-_jqfeS4WHY "Command line") 👨‍🏫 [Command line](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.command_line.pdf)
+[vid ▶](https://youtu.be/-_jqfeS4WHY "Command line") 👨‍🏫 [Command line](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.command_line.pdf)
 
 👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
 
