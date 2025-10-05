@@ -4,7 +4,7 @@ title: "Schedule"
 
 🔗 ["The Sandbox" coding environment (Github Codespace)](https://classroom.github.com/a/n-LXZmS6)
 
-This schedule is an outline of the topics, with links to all content, and assignments. Note that this may be updated as the module progresses. Test.
+This schedule is an outline of the topics, with links to all content, and assignments. Note that this may be updated as the module progresses.
 
 | Week | Topics | Lectures | Notes | Code | Tutorials | Problem Sets |
 |:---------:|:----------|:---------:|:---------:|:---------:|:---------:|:---------:|
