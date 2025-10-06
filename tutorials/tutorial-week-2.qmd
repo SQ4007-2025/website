@@ -6,7 +6,7 @@ title: "Tutorials week 2"
 
 👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
 
-👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pdf)
+[vid ▶](https://youtu.be/njBROcEeUMQ "Data types") 👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pdf)
 
 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
 
