@@ -4,12 +4,13 @@ title: "Tutorials week 2"
 
 [vid ▶](https://youtu.be/-_jqfeS4WHY "Command line") 👨‍🏫 [Command line](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.command_line.pdf)
 
-👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
-
 [vid ▶](https://youtu.be/njBROcEeUMQ "Data types") 👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pdf)
+
+[vid ▶](https://youtu.be/smY6G4sX2Z8 "Operators") 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pdf)
+
+👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
 
 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
 
 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
 
-👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pdf)
