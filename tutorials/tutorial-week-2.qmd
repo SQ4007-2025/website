@@ -8,9 +8,9 @@ title: "Tutorials week 2"
 
 [vid ▶](https://youtu.be/smY6G4sX2Z8 "Operators") 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pdf)
 
-👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
+[vid ▶](https://youtu.be/kueoIYt_7Qg "Loops") 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
 
-👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
+👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
 
 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
 
