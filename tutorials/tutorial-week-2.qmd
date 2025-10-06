@@ -10,7 +10,7 @@ title: "Tutorials week 2"
 
 [vid ▶](https://youtu.be/X4aG60Sat2Y "Loops") 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
 
-👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
+[vid ▶](https://youtu.be/pS_OEylG1XU "Magic numbers") 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
 
-👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
+👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
 
