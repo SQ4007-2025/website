@@ -2,6 +2,8 @@
 title: "Useful links"
 ---
 
+🔗 [ℹ Reference manual for C header functions!](https://manual.cs50.io/) - Probably very useful...
+
 🔗 [🛝 Join "The Sandbox" coding environment (Github Codespace)](https://classroom.github.com/a/n-LXZmS6) - Once you "accept the assessment" you will be able to access and code in The Sandbox anytime (💡 Tip: Save the link).
 
 🔗 [Discord - join the community](https://discord.gg/QqHhD7S7vU) - for live discussion and support (please set your server name to your real name, e.g. "Ed Harris")
@@ -15,4 +17,3 @@ title: "Useful links"
 🔗 [🎤 Statistics Lab & Code Club meetings](module-extras.html)
 
 🔗 [🏢 Harper Adams VLE site for this module (HAU enrolled students only)](https://vle.harper-adams.ac.uk/course/view.php?id=282)
-
