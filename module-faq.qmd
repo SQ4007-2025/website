@@ -30,6 +30,12 @@ title: "FAQ"
 
 ------------------------------------------------------------------------
 
+## Flipped Classroom: Can I still come to lecture if I don't watch the videos and go through the notes for that week before class?
+
+Yes, of course you can and should!  But...
+
+The point of the flipped classroom is to maximise the time spent in class discussing and solving problems.  If you don't watch the videos and go through the notes for that week before class, you will miss out on this and potentially fall behind while others are getting on with their problem set work during classtime.
+
 ## Can I just code on my own computer?
 
 The short answer is, heck yeah!! But, you will still need to use our Github Codespaces to submit your work.
