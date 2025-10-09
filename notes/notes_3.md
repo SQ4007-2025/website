@@ -31,7 +31,7 @@
 * An encrypted piece of text may look like the following:
 
   ```
-  U  I  J  T   J  T   D  T  5  0
+  J    M  P  X  F    D
 
   ```
 * Recall that last week, you learned about a *compiler*, a specialized computer program that converts *source code* into *machine code* that can be understood by a computer.
