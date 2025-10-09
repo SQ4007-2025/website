@@ -1,8 +1,6 @@
 ---
-qmd
+title: "Schedule"
 ---
-
-## title: "Schedule"
 
 🔗 ["The Sandbox" coding environment (Github Codespace)](https://classroom.github.com/a/n-LXZmS6)
 
