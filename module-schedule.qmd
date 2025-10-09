@@ -6,7 +6,7 @@ title: "Schedule"
 
 This schedule is an outline of the topics, with links to all content, and assignments. Note that this may be updated as the module progresses.
 
-| Week | Topics | Lectures | Notes | Code | Tutorials | Problem Sets (last commit 11pm) |
+| Week | Topics | Lectures | Notes | Code | Tutorials | Problem Sets (due, last commit 11pm) |
 |:---------:|:----------|:---------:|:---------:|:---------:|:---------:|:---------:|
 | 01 | 🐈 Scratch | [💻(Megan)](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/Megan_wk1.pptx "Megan's intoro slides") [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_1.pptx) | [📕](notes/notes_1.html "Notes 1") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src1) |  | (10-07) [🏠](homework/hw_1.html) |
 | 02 | 🟢 C | [live ▶](https://youtu.be/HOYbWXub-a8 "live session") [notes ▶](https://youtu.be/Y4SnK7uvF7M "Notes week 2 C") [💻](https://github.com/SQ4007-2025/website/raw/refs/heads/master/lectures/slides_2.pptx) | [📕](notes/notes_2.html "Notes 2") | [🤖](https://github.com/SQ4007-2025/website/tree/master/code/src2) | [👨‍🏫](tutorials/tutorial-week-2.html) | (10-14) [🏠](homework/hw_2.html) |
