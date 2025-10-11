@@ -4,9 +4,9 @@ title: "Tutorials week 3"
 
 [video ▶](https://youtu.be/91Iw3qQNkNI "arrays") 👨‍🏫 [Arrays](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.arrays.pdf)
 
-[video ▶](https://youtu.be/10nx-vVxg2s "Command line arguments") ▶ 👨‍🏫 [Command line arguments](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.command_line_arguments.pdf)
+[video ▶](https://youtu.be/10nx-vVxg2s "Command line arguments") 👨‍🏫 [Command line arguments](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.command_line_arguments.pdf)
 
-[video ▶](https://youtu.be/Wrs0tFG70kM "Functions") ▶ 👨‍🏫 [Functions](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.functions.pdf)
+[video ▶](https://youtu.be/Wrs0tFG70kM "Functions") 👨‍🏫 [Functions](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.functions.pdf)
 
-[video ▶](https://youtu.be/cXl1ObfES04 "Variables and scope") ▶ 👨‍🏫 [Variables and scope](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.variables_and_scope.pdf)
+[video ▶](https://youtu.be/cXl1ObfES04 "Variables and scope") 👨‍🏫 [Variables and scope](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.variables_and_scope.pdf)
 
