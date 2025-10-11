@@ -8,5 +8,5 @@ title: "Tutorials week 3"
 
 [video ▶](https://youtu.be/Wrs0tFG70kM "Functions") ▶ 👨‍🏫 [Functions](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.functions.pdf)
 
-▶ 👨‍🏫 [Variables and scope](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.variables_and_scope.pdf)
+[video ▶](https://youtu.be/cXl1ObfES04 "Variables and scope") ▶ 👨‍🏫 [Variables and scope](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.variables_and_scope.pdf)
 
