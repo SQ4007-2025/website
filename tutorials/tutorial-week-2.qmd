@@ -4,12 +4,12 @@ title: "Tutorials week 2"
 
 [video ▶](https://youtu.be/-_jqfeS4WHY "Command line") 👨‍🏫 [Command line](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.command_line.pdf)
 
-[vid](https://youtu.be/njBROcEeUMQ "Data types")[eo](https://youtu.be/-_jqfeS4WHY "Command line")[ ▶](https://youtu.be/njBROcEeUMQ "Data types") 👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pdf)
+[vid](https://youtu.be/njBROcEeUMQ "Data types")[eo](https://youtu.be/-_jqfeS4WHY "Command line") [▶](https://youtu.be/njBROcEeUMQ "Data types") 👨‍🏫 [Data types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.data_types.pdf)
 
-[vid](https://youtu.be/smY6G4sX2Z8 "Operators")[eo](https://youtu.be/-_jqfeS4WHY "Command line")[ ▶](https://youtu.be/smY6G4sX2Z8 "Operators") 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pdf)
+[vid](https://youtu.be/smY6G4sX2Z8 "Operators")[eo](https://youtu.be/-_jqfeS4WHY "Command line") [▶](https://youtu.be/smY6G4sX2Z8 "Operators") 👨‍🏫 [Operators](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.operators.pdf)
 
-[vid](https://youtu.be/X4aG60Sat2Y "Loops")[eo](https://youtu.be/-_jqfeS4WHY "Command line")[ ▶](https://youtu.be/X4aG60Sat2Y "Loops") 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
+[vid](https://youtu.be/X4aG60Sat2Y "Loops")[eo](https://youtu.be/-_jqfeS4WHY "Command line") [▶](https://youtu.be/X4aG60Sat2Y "Loops") 👨‍🏫 [Loops](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.loops.pdf)
 
-[vid](https://youtu.be/pS_OEylG1XU "Magic numbers")[eo](https://youtu.be/-_jqfeS4WHY "Command line")[ ▶](https://youtu.be/pS_OEylG1XU "Magic numbers") 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
+[vid](https://youtu.be/pS_OEylG1XU "Magic numbers")[eo](https://youtu.be/-_jqfeS4WHY "Command line") [▶](https://youtu.be/pS_OEylG1XU "Magic numbers") 👨‍🏫 [Magic numbers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.magic_numbers.pdf)
 
-[vid](https://youtu.be/zmhG6v3MS0I "Conditionals")[eo](https://youtu.be/-_jqfeS4WHY "Command line")[ ▶](https://youtu.be/zmhG6v3MS0I "Conditionals") 👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
+[vid](https://youtu.be/zmhG6v3MS0I "Conditionals")[eo](https://youtu.be/-_jqfeS4WHY "Command line") [▶](https://youtu.be/zmhG6v3MS0I "Conditionals") 👨‍🏫 [Conditional statements](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_2/2.conditional_statements.pdf)
