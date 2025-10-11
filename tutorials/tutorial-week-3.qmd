@@ -6,6 +6,7 @@ title: "Tutorials week 3"
 
 ▶ 👨‍🏫 [Command line arguments](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.command_line_arguments.pdf)
 
-▶ 👨‍🏫 [Functions](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.functions.pdf)
+[video ▶](https://youtu.be/Wrs0tFG70kM "Functions") ▶ 👨‍🏫 [Functions](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.functions.pdf)
 
 ▶ 👨‍🏫 [Variables and scope](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_3/3.variables_and_scope.pdf)
+
