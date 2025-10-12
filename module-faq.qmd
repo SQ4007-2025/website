@@ -2,6 +2,24 @@
 title: "FAQ"
 ---
 
+## What is the deadline for problem set assessments?
+
+There are several published deadlines for problem set assessments, which can cause confusion.  
+
+The **ultimate** deadline for problem sets is set by the university and can be found in the SQ4007 Assessment (problem set) document linked on the [Harper Adams module page](https://vle.harper-adams.ac.uk/course/view.php?id=282).  This Submission Deadline is **15.00 on 2025-12-11 (Thursday, 11 Dec)**, by which time and date all of your problems sets must be completed and submitted to gain credit for them.
+
+The weekly deadlines on the schedule are the (strongly) suggested pace of work to keep up with the module.  They are not the ultimate deadline for the problem set assessment.
+
+------------------------------------------------------------------------
+
+## Flipped Classroom: Can I still come to lecture if I don't watch the videos and go through the notes for that week before class?
+
+Yes, of course you can and should! But...
+
+The point of the flipped classroom is to maximise the time spent in class discussing and solving problems. If you don't watch the videos and go through the notes for that week before class, you will miss out on this and potentially fall behind while others are getting on with their problem set work during classtime.
+
+------------------------------------------------------------------------
+
 ::::: columns
 ::: {.column width="28%"}
 ```{=html}
@@ -32,9 +50,11 @@ title: "FAQ"
 
 ## Flipped Classroom: Can I still come to lecture if I don't watch the videos and go through the notes for that week before class?
 
-Yes, of course you can and should!  But...
+Yes, of course you can and should! But...
 
-The point of the flipped classroom is to maximise the time spent in class discussing and solving problems.  If you don't watch the videos and go through the notes for that week before class, you will miss out on this and potentially fall behind while others are getting on with their problem set work during classtime.
+The point of the flipped classroom is to maximise the time spent in class discussing and solving problems. If you don't watch the videos and go through the notes for that week before class, you will miss out on this and potentially fall behind while others are getting on with their problem set work during classtime.
+
+------------------------------------------------------------------------
 
 ## Can I just code on my own computer?
 
