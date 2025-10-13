@@ -2,6 +2,8 @@
 title: "FAQ"
 ---
 
+## Can I work ahead on the problem sets?    
+
 ## What is the deadline for problem set assessments?
 
 There are several published deadlines for problem set assessments, which can cause confusion.  
