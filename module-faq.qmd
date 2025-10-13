@@ -4,7 +4,7 @@ title: "FAQ"
 
 ## Can I work ahead on the problem sets?  
     
-Yes, you *can* work ahead on the problem sets.  However, you should not submit your problem sets until the deadline.  If you submit your problem sets early, you will not be able to get feedback on your work and you will not be able to improve your work.
+Yes, you *can* work ahead on the problem sets, in the sense it is possible and you are not restricted from doing so if they have already been posted in advance.  However, consider doing them on the suggested pace of work, as this will allow you to work as acohort and make full use of the co-coding sessions during classtime and to interact with your classmates.
 
 ## What is the deadline for problem set assessments?
 
