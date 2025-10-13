@@ -2795,7 +2795,7 @@
     "href": "module-faq.html",
     "title": "FAQ",
     "section": "",
-    "text": "There are several published deadlines for problem set assessments, which can cause confusion.\nThe ultimate deadline for problem sets is set by the university and can be found in the SQ4007 Assessment (problem set) document linked on the Harper Adams module page. This Submission Deadline is 15.00 on 2025-12-11 (Thursday, 11 Dec), by which time and date all of your problems sets must be completed and submitted to gain credit for them.\nThe weekly deadlines on the schedule are the (strongly) suggested pace of work to keep up with the module. They are not the ultimate deadline for the problem set assessment (i.e. you can submit your problem sets and still gain credit up to 15:00 on 2025-12-11).",
+    "text": "Yes, you can work ahead on the problem sets, in the sense it is possible and you are not restricted from doing so if they have already been posted in advance. However, we’d prefer you consider doing them on the suggested pace of work, as this will allow you to work as a cohort and make full use of the co-coding sessions during classtime and to interact with your classmates.",
     "crumbs": [
       "FAQ"
     ]
@@ -2804,8 +2804,8 @@
     "objectID": "module-faq.html#what-is-the-deadline-for-problem-set-assessments",
     "href": "module-faq.html#what-is-the-deadline-for-problem-set-assessments",
     "title": "FAQ",
-    "section": "",
-    "text": "There are several published deadlines for problem set assessments, which can cause confusion.\nThe ultimate deadline for problem sets is set by the university and can be found in the SQ4007 Assessment (problem set) document linked on the Harper Adams module page. This Submission Deadline is 15.00 on 2025-12-11 (Thursday, 11 Dec), by which time and date all of your problems sets must be completed and submitted to gain credit for them.\nThe weekly deadlines on the schedule are the (strongly) suggested pace of work to keep up with the module. They are not the ultimate deadline for the problem set assessment (i.e. you can submit your problem sets and still gain credit up to 15:00 on 2025-12-11).",
+    "section": "What is the deadline for problem set assessments?",
+    "text": "What is the deadline for problem set assessments?\nThere are several published deadlines for problem set assessments, which can cause confusion.\nThe ultimate deadline for problem sets is set by the university and can be found in the SQ4007 Assessment (problem set) document linked on the Harper Adams module page. This Submission Deadline is 15.00 on 2025-12-11 (Thursday, 11 Dec), by which time and date all of your problems sets must be completed and submitted to gain credit for them.\nThe weekly deadlines on the schedule are the (strongly) suggested pace of work to keep up with the module. They are not the ultimate deadline for the problem set assessment (i.e. you can submit your problem sets and still gain credit up to 15:00 on 2025-12-11).\n\n\n\n\n\n\nHow do I log into The Sandbox coding environment?\n\n\n\n\n\n\n\n\n\nHow do I submit my problem set assignments?",
     "crumbs": [
       "FAQ"
     ]
@@ -3905,6 +3905,36 @@
     "crumbs": [
       "Tutorials",
       "Tutorial 08 📊"
+    ]
+  },
+  {
+    "objectID": "module-faq.html#can-i-work-ahead-on-the-problem-sets",
+    "href": "module-faq.html#can-i-work-ahead-on-the-problem-sets",
+    "title": "FAQ",
+    "section": "",
+    "text": "Yes, you can work ahead on the problem sets, in the sense it is possible and you are not restricted from doing so if they have already been posted in advance. However, we’d prefer you consider doing them on the suggested pace of work, as this will allow you to work as a cohort and make full use of the co-coding sessions during classtime and to interact with your classmates.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "module-faq.html#how-do-i-log-into-the-sandbox-coding-environment",
+    "href": "module-faq.html#how-do-i-log-into-the-sandbox-coding-environment",
+    "title": "FAQ",
+    "section": "How do I log into The Sandbox coding environment?",
+    "text": "How do I log into The Sandbox coding environment?",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "module-faq.html#how-do-i-submit-my-problem-set-assignments",
+    "href": "module-faq.html#how-do-i-submit-my-problem-set-assignments",
+    "title": "FAQ",
+    "section": "How do I submit my problem set assignments?",
+    "text": "How do I submit my problem set assignments?",
+    "crumbs": [
+      "FAQ"
     ]
   }
 ]
