@@ -4,9 +4,9 @@ title: "Tutorials week 4"
 
 [video ▶](https://youtu.be/irLdhQjiYu4 "video") 👨‍🏫 [Binary search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.binary_search.pdf)
 
-▶ 👨‍🏫 [Bubble sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.bubble_sort.pdf)
+[video ▶](https://youtu.be/l9dJElZ_StM "video") 👨‍🏫 [Bubble sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.bubble_sort.pdf)
 
-▶ 👨‍🏫 [Call stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.call_stacks.pdf)
+[video ▶](https://youtu.be/N-DVeMCsoJM "video") 👨‍🏫 [Call stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.call_stacks.pdf)
 
 ▶ 👨‍🏫 [Linear search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.linear_search.pdf)
 
