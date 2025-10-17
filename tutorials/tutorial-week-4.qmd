@@ -2,7 +2,7 @@
 title: "Tutorials week 4"
 ---
 
-▶ 👨‍🏫 [Binary search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.binary_search.pdf)
+[video ▶](https://youtu.be/irLdhQjiYu4 "video") 👨‍🏫 [Binary search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.binary_search.pdf)
 
 ▶ 👨‍🏫 [Bubble sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.bubble_sort.pdf)
 
