@@ -10,7 +10,7 @@ title: "Tutorials week 4"
 
 [video ▶](https://youtu.be/mQw1pIUUG80 "video") 👨‍🏫 [Linear search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.linear_search.pdf)
 
-▶ 👨‍🏫 [Merge sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pdf)
+[video ▶](https://youtu.be/sFhaNLiO5MU "video") 👨‍🏫 [Merge sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pdf)
 
 ▶ 👨‍🏫 [Recursion](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pdf)
 
