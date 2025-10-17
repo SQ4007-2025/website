@@ -14,4 +14,4 @@ title: "Tutorials week 4"
 
 [video ▶](https://youtu.be/4KTmhWciHWw "video") 👨‍🏫 [Recursion](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pdf)
 
-▶ 👨‍🏫 [Selection sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.selection_sort.pdf)
+[video ▶](https://youtu.be/ZBfdCgYS1e4 "video") 👨‍🏫 [Selection sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.selection_sort.pdf)
