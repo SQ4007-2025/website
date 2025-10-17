@@ -12,6 +12,6 @@ title: "Tutorials week 4"
 
 [video ▶](https://youtu.be/sFhaNLiO5MU "video") 👨‍🏫 [Merge sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pdf)
 
-▶ 👨‍🏫 [Recursion](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pdf)
+[video ▶](https://youtu.be/4KTmhWciHWw "video") 👨‍🏫 [Recursion](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.recursion.pdf)
 
 ▶ 👨‍🏫 [Selection sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.selection_sort.pdf)
