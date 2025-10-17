@@ -8,7 +8,7 @@ title: "Tutorials week 4"
 
 [video ▶](https://youtu.be/N-DVeMCsoJM "video") 👨‍🏫 [Call stacks](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.call_stacks.pdf)
 
-▶ 👨‍🏫 [Linear search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.linear_search.pdf)
+[video ▶](https://youtu.be/mQw1pIUUG80 "video") 👨‍🏫 [Linear search](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.linear_search.pdf)
 
 ▶ 👨‍🏫 [Merge sort](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_4/4.merge_sort.pdf)
 
