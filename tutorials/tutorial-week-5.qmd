@@ -4,10 +4,10 @@ title: "Tutorials week 5"
 
 [video ▶](https://youtu.be/c-Rz2Qst9uI "Tutorial defining custom types") 👨‍🏫 [Defining custom types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.defining_custom_types.pdf)
 
+[video ▶](https://youtu.be/U-D2VyJ9UUM "Tutorial wk5 Pointers") 👨‍🏫 [Pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.pointers.pdf)
+
 ▶ 👨‍🏫 [Dynamic memory allocation](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.dynamic_memory_allocation.pdf)
 
 ▶ 👨‍🏫 [File pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.file_pointers.pdf)
 
 ▶ 👨‍🏫 [Hexadecimal](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.hexadecimal.pdf)
-
-[video ▶](https://youtu.be/U-D2VyJ9UUM "Tutorial wk5 Pointers") 👨‍🏫 [Pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.pointers.pdf)
