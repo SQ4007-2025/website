@@ -10,4 +10,4 @@ title: "Tutorials week 5"
 
 ▶ 👨‍🏫 [Hexadecimal](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.hexadecimal.pdf)
 
-▶ 👨‍🏫 [Pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.pointers.pdf)
+[video ▶](https://youtu.be/U-D2VyJ9UUM "Tutorial wk5 Pointers") 👨‍🏫 [Pointers](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.pointers.pdf)
