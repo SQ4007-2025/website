@@ -2,7 +2,7 @@
 title: "Tutorials week 5"
 ---
 
-▶ 👨‍🏫 [Defining custom types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.defining_custom_types.pdf)
+[video ▶](https://youtu.be/c-Rz2Qst9uI "Tutorial defining custom types") 👨‍🏫 [Defining custom types](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.defining_custom_types.pdf)
 
 ▶ 👨‍🏫 [Dynamic memory allocation](https://github.com/SQ4007-2025/website/raw/refs/heads/master/tutorials/week_5/5.dynamic_memory_allocation.pdf)
 
