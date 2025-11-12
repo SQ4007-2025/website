@@ -2,7 +2,7 @@
 title: "Problem Set week 7"
 ---
 
-## [Link for turn-in](https://classroom.github.com/classrooms/224173471-computing-technology/assignments/hw07-py)
+## [Link for turn-in](https://classroom.github.com/a/qU-iNFfu)
 
 **Note all homeworks for each week will be turned in via a weekly Github Repository**
 
