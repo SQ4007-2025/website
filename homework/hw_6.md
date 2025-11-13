@@ -1,5 +1,5 @@
 ---
-title: "Problem Set week 6"
+title: "Problem Set week 6" 
 ---
 
 ## [Link for turn-in](https://classroom.github.com/a/y6Qskmlc)
