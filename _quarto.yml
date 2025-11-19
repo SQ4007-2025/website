@@ -55,6 +55,8 @@ website:
         text: Useful links
       - href: module-faq.qmd
         text: FAQ
+      - href: module-project.qmd
+        text: Final Project
       - section: "Lectures"
         contents:
           - href: lectures/slides_1.pptx

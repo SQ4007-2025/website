@@ -1,0 +1,60 @@
+---
+title: "Module Project"
+---
+
+### Final Project
+
+The capstone of this course is the final project. The final project is your opportunity to take your new programming skills and create your own piece of software. **So long as your project draws upon this module's lessons**, the nature of your project is entirely up to you. You may implement your project in any language covered in the module. We ask is that you build something of interest to you, that you solve an actual problem, that you impact your community, or that you change the world. Strive to create something great that outlives this module.
+
+You are allowed an opportunity to collaborate with one or two classmates for this final project. It is expected that every student in any such group contribute equally to the design and implementation of that project. Moreover, it is expected that the scope of a two- or three-person group’s project be, respectively, two or three times that of a typical one-person project. 
+
+Ideas
+* a web-based application using Python, and SQL
+* an educational game using Scratch
+* a command-line program using C
+
+### Getting Started
+
+Creating an entire project may seem daunting. Here are some questions that you should think about as you start:
+
+What will your software do? What features will it have? How will it be executed?
+What new skills will you need to acquire? What topics will you need to research?
+If working with one or two classmates, who will do what?
+In the world of software, most everything takes longer to implement than you expect. And so it’s not uncommon to accomplish less in a fixed amount of time than you hope. What might you consider to be a good outcome for your project? A better outcome? The best outcome?
+Consider making goal milestones to keep you on track.
+
+Your project should be developed based on a Github repository. You should create a new repository for your project, and then add your project files to it. You should then add a README.md file to the repository, and a LICENSE file (if you want to use a license). You should then push your project to the repository.  If in a group with more than one person, you should add the other members as collaborators to the repository.  The project repository should be on the group leader's account and the README should list the group membership including real name, Github name, and briefly detail contributions.
+
+### How to Submit
+
+You must complete the steps below before the project deadline.
+
+**Step 1**
+Create a short video (no more than 3 minutes in length) in which you present and "pitch" your project to the world. 
+
+Your video must begin with an opening section that displays:
+
+* your project’s title
+* your names
+* your GitHub usernames
+* your home town and country
+* and, the date you have recorded this video.
+It should then go on to demonstrate your project in action, as with slides, screenshots, voiceover, and/or live action. See [howtogeek.com/205742/how-to-record-your-windows-mac-linux-android-or-ios-screen](https://howtogeek.com/205742/how-to-record-your-windows-mac-linux-android-or-ios-screen) for tips on how to make a “screencast,” though you’re welcome to use an actual camera. Upload your video to YouTube (or, if blocked in your country, a similar site) and take note of its URL; it’s fine to flag it as “unlisted,” but don’t flag it as “private.”
+
+**Step 2**
+Your README.md text file (named exactly that!) in your project repository must document and explain your project. This file should include your Project Title, the URL of your video (created in step 1 above) and a description of your project. You may use the below as a template.
+
+# YOUR PROJECT TITLE
+## Group name:
+## Group members:
+* Name: GitHub username:
+* Name: GitHub username:
+#### Video Demo:  <URL HERE>
+#### Description:
+#### TODO list:
+If unfamiliar with Markdown syntax, you might find GitHub’s Basic Writing and Formatting Syntax helpful. You can also preview your .md file by clicking the ‘preview’ icon as explained here: Markdown Preview in vscode. Standard software project READMEs can often run into the thousands or tens of thousands of words in length; yours need not be that long, but should at least be several hundred words that describe things in detail!
+
+Your README.md file should be minimally multiple paragraphs in length, and should explain what your project is, what each of the files you wrote for the project contains and does, and if you debated certain design choices, explaining why you made them. Ensure you allocate sufficient time and energy to writing a README.md that documents your project thoroughly. Be proud of it! A README.md in the neighborhood of 750 words is likely to be sufficient for describing your project and all aspects of its functionality. If unable to reach that threshold, that probably means your project is insufficiently complex.
+
+The Github repository link for your project must be submitted via the Harper Adams Hub BY EACH GROUP MEMBER.
+
