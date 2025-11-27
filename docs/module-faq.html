@@ -699,6 +699,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#can-i-work-ahead-on-the-problem-sets" id="toc-can-i-work-ahead-on-the-problem-sets" class="nav-link active" data-scroll-target="#can-i-work-ahead-on-the-problem-sets">Can I work ahead on the problem sets?</a></li>
   <li><a href="#what-is-the-deadline-for-problem-set-assessments" id="toc-what-is-the-deadline-for-problem-set-assessments" class="nav-link" data-scroll-target="#what-is-the-deadline-for-problem-set-assessments">What is the deadline for problem set assessments?</a></li>
   <li><a href="#flipped-classroom-can-i-still-come-to-lecture-if-i-dont-watch-the-videos-and-go-through-the-notes-for-that-week-before-class" id="toc-flipped-classroom-can-i-still-come-to-lecture-if-i-dont-watch-the-videos-and-go-through-the-notes-for-that-week-before-class" class="nav-link" data-scroll-target="#flipped-classroom-can-i-still-come-to-lecture-if-i-dont-watch-the-videos-and-go-through-the-notes-for-that-week-before-class">Flipped Classroom: Can I still come to lecture if I don’t watch the videos and go through the notes for that week before class?</a></li>
+  <li><a href="#why-do-i-keep-running-out-of-github-codespace-time" id="toc-why-do-i-keep-running-out-of-github-codespace-time" class="nav-link" data-scroll-target="#why-do-i-keep-running-out-of-github-codespace-time">Why do I keep running out of GitHub Codespace time?</a></li>
   <li><a href="#large-file-detected-week-8-movies---large-file-error" id="toc-large-file-detected-week-8-movies---large-file-error" class="nav-link" data-scroll-target="#large-file-detected-week-8-movies---large-file-error">Large file detected! Week 8 Movies - Large file error</a></li>
   <li><a href="#can-i-just-code-on-my-own-computer" id="toc-can-i-just-code-on-my-own-computer" class="nav-link" data-scroll-target="#can-i-just-code-on-my-own-computer">Can I just code on my own computer?</a></li>
   </ul>
@@ -763,6 +764,28 @@ ul.task-list li input[type="checkbox"] {
 <p>Yes, of course you can and should! But…</p>
 <p>The point of the flipped classroom is to maximise the time spent in class discussing and solving problems. If you don’t watch the videos and go through the notes for that week before class, you will miss out on this and potentially fall behind while others are getting on with their problem set work during classtime.</p>
 <hr>
+</section>
+<section id="why-do-i-keep-running-out-of-github-codespace-time" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-i-keep-running-out-of-github-codespace-time">Why do I keep running out of GitHub Codespace time?</h2>
+<p>There are two types of Codespaces usage: compute and storage. Each month as you use Codespaces, your compute and storage usage is deducted from the quota of free usage that’s included in your personal GitHub account until either compute or storage is consumed.</p>
+<p>Once one of those limits is reached, your use of GitHub Codespaces will be restricted. You will not be able to create new Codespaces or open existing Codespaces, until the monthly quota renews in the following month.</p>
+<p>Standard allowance is 15GB-hours of storage per month and 120 hours of compute time. If you sign up to <a href="https://github.com/education">GitHub Education</a>, this increases to 20GB-hours and 180 hours of compute time. <strong>Highly recommend doing this - it can take 72 hours to be confirmed following application</strong></p>
+<section id="how-can-i-get-the-most-out-of-my-codespace-time" class="level4">
+<h4 class="anchored" data-anchor-id="how-can-i-get-the-most-out-of-my-codespace-time">How can I get the most out of my Codespace time?</h4>
+<p>Some tips from GitHub for making allowed usage go further:</p>
+<ul>
+<li><p>Your codespaces consume compute usage while they are running. If you’re not using a codespace, stopping the codespace prevents unnecessary compute usage. <a href="https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace">See Stopping and starting a codespace</a>.</p></li>
+<li><p>You can reduce the idle timeout for Codespaces in your personal settings to less than the default 30 minutes. This will shorten the period of inactivity before your codespaces are automatically stopped. This can save on compute usage. <a href="https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces">See Setting your timeout period for GitHub Codespaces</a>.</p></li>
+<li><p>Your codespaces consume storage while they exist. You should delete a codespace you have finished using and know that you will not use again. <a href="https://docs.github.com/en/codespaces/developing-in-a-codespace/deleting-a-codespace">See Deleting a codespace</a>.</p></li>
+<li><p>Configure your retention period to ensure codespaces you forget to delete are deleted automatically. The default retention period is 30 days. <a href="https://docs.github.com/en/codespaces/setting-your-user-preferences/configuring-automatic-deletion-of-your-codespaces">See Configuring automatic deletion of your codespaces</a>.</p></li>
+<li><p>Visual Studio Code extensions consume storage. Make sure you are only installing extensions that you need. You can find out how much space is being used by extensions by running this command in your codespace.</p></li>
+</ul>
+<p><code>du -h -s ~/.vscode-remote/extensions</code></p>
+<ul>
+<li>Monitor your compute and storage usage by going to your <a href="https://github.com/settings/billing">billing page on GitHub</a>, and reviewing the figures in the “Codespaces” section.</li>
+</ul>
+<hr>
+</section>
 </section>
 <section id="large-file-detected-week-8-movies---large-file-error" class="level2">
 <h2 class="anchored" data-anchor-id="large-file-detected-week-8-movies---large-file-error">Large file detected! Week 8 Movies - Large file error</h2>

@@ -52,6 +52,37 @@ The point of the flipped classroom is to maximise the time spent in class discus
 
 ------------------------------------------------------------------------
 
+## Why do I keep running out of GitHub Codespace time?
+
+There are two types of Codespaces usage: compute and storage.
+Each month as you use Codespaces, your compute and storage usage is deducted from the quota of free usage that's included in your personal GitHub account until either compute or storage is consumed. 
+
+Once one of those limits is reached, your use of GitHub Codespaces will be restricted. You will not be able to create new Codespaces or open existing Codespaces, until the monthly quota renews in the following month. 
+
+Standard allowance is 15GB-hours of storage per month and 120 hours of compute time. 
+If you sign up to [GitHub Education](https://github.com/education), this increases to 20GB-hours and 180 hours of compute time. **Highly recommend doing this - it can take 72 hours to be confirmed following application**
+
+
+#### How can I get the most out of my Codespace time?
+Some tips from GitHub for making allowed usage go further: 
+
+* Your codespaces consume compute usage while they are running. If you're not using a codespace, stopping the codespace prevents unnecessary compute usage. [See Stopping and starting a codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace).
+
+* You can reduce the idle timeout for Codespaces in your personal settings to less than the default 30 minutes. This will shorten the period of inactivity before your codespaces are automatically stopped. This can save on compute usage. [See Setting your timeout period for GitHub Codespaces](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces).
+
+* Your codespaces consume storage while they exist. You should delete a codespace you have finished using and know that you will not use again. [See Deleting a codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/deleting-a-codespace).
+
+* Configure your retention period to ensure codespaces you forget to delete are deleted automatically. The default retention period is 30 days. [See Configuring automatic deletion of your codespaces](https://docs.github.com/en/codespaces/setting-your-user-preferences/configuring-automatic-deletion-of-your-codespaces).
+
+* Visual Studio Code extensions consume storage. Make sure you are only installing extensions that you need. You can find out how much space is being used by extensions by running this command in your codespace.
+
+
+`du -h -s ~/.vscode-remote/extensions ` 
+
+* Monitor your compute and storage usage by going to your [billing page on GitHub](https://github.com/settings/billing), and reviewing the figures in the "Codespaces" section.
+
+------------------------------------------------------------------------
+
 ## Large file detected! Week 8 Movies - Large file error
 
 If you've tried the week 8 problem set and found yourself getting an error when trying to commit your work to your github repository (*or are about to start this problem and want to avoid the error altogether*), follow the steps [here](pdfs/Wk8_large_file_github_issue.pdf).
