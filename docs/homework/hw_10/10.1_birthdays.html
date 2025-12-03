@@ -813,8 +813,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Add any additional features of your choosing!</li>
 </ul>
 <p><strong>Hints</strong></p>
-<p>Click the below toggles to read some advice!</p>
-<p>Create a form via which users can submit birthdays</p>
+<p><strong>Create a form via which users can submit birthdays</strong></p>
 <p>In <code>index.html</code>, notice the following TODO:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span><span class="al">TODO</span><span class="co">: Create a form for users to submit a name, a month, and a day --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Recall that, to create a form, you can use the <code>form</code> HTML element. You can create a <code>form</code> HTML element with the following opening and closing tags:</p>
@@ -854,7 +853,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> name</span><span class="op">=</span><span class="st">"day"</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">"Day"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"number"</span><span class="ot"> min</span><span class="op">=</span><span class="st">"1"</span><span class="ot"> max</span><span class="op">=</span><span class="st">"31"</span><span class="dt">&gt;</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Add Birthday"</span><span class="dt">&gt;</span></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Add a user’s form submission to the database</p>
+<p><strong>Add a user’s form submission to the database</strong></p>
 <p>In <code>app.py</code>, notice the following TODO:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Add the user's entry into the database</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Recall that Flask has some handy methods to access form data submitted via <code>POST</code>! In particular:</p>
@@ -948,7 +947,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert data into database</span></span>
 <span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>db.execute(<span class="st">"INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)"</span>, name, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Render birthdays in <code>birthdays.db</code></p>
+<p><strong>Render birthdays in <code>birthdays.db</code></strong></p>
 <p>Once a user can submit birthdays and store them in <code>birthdays.db</code>, your next task is to ensure those birthdays are rendered in <code>index.html</code>.</p>
 <p>First, you’ll need to retrieve all birthdays from <code>birthdays.db</code>. You could so with the SQL query:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> birthdays;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
