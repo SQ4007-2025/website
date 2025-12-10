@@ -2,21 +2,6 @@
 title: "Module Project"
 ---
 
-::: callout-note
-## Reminder: Project Pitch in Week 10
-
-During class in Week 10 is the opportunity to get formative feedback on your project idea. \
-In a fun, no pressure, "Dragon's Den" type set up, explain your project idea in 3 minutes and get feedback!
-
-Some things to think about:
-
--   What problem are you solving?
-
--   How are you solving it?
-
--   What tech stack or programming languages are you using?
-:::
-
 ### Final Project
 
 The capstone of this course is the final project. The final project is your opportunity to take your new programming skills and create your own piece of software. **So long as your project draws upon this module's lessons**, the nature of your project is entirely up to you. You may implement your project in any language covered in the module. We ask is that you build something of interest to you, that you solve an actual problem, that you impact your community, or that you change the world. Strive to create something great that outlives this module.
