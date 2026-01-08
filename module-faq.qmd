@@ -2,9 +2,9 @@
 title: "FAQ"
 ---
 
-## Can I work ahead on the problem sets?
+## When will I get feedback for assessment 1 (Problem Sets)
 
-Yes, you *can* work ahead on the problem sets, in the sense it is possible and you are not restricted from doing so if they have already been posted in advance. However, we'd prefer you consider doing them on the suggested pace of work, as this will allow you to work as a cohort and make full use of the co-coding sessions during classtime and to interact with your classmates.
+Immediate feedback is available for every commit to the Github Repository for each assessment (via the actions tab).  Further feedback and marks will also be given overall four working weeks after the deadline (not accounting for the two weeks of winter holidays), for the week of January 19th 2026
 
 ## What is the deadline for problem set assessments?
 
@@ -13,6 +13,11 @@ Submission Deadline: **15.00 on 2025-12-11 (Thursday, 11 Dec)**, by which time a
 This is the **ultimate** deadline for problem sets, set by the university and it can be found in the SQ4007 Assessment (problem set) document linked on the [Harper Adams module page](https://vle.harper-adams.ac.uk/course/view.php?id=282).
 
 However, there are several **suggested** deadlines for each problem set, which might cause confusion. The weekly deadlines on the schedule are the (strongly) suggested pace of work to keep up with the module. They are not the ultimate deadline for the problem set assessment (i.e. you can submit your problem sets and still gain credit up to the ultimate deadline).
+
+## Can I work ahead on the problem sets?
+
+Yes, you *can* work ahead on the problem sets, in the sense it is possible and you are not restricted from doing so if they have already been posted in advance. However, we'd prefer you consider doing them on the suggested pace of work, as this will allow you to work as a cohort and make full use of the co-coding sessions during classtime and to interact with your classmates.
+
 
 ------------------------------------------------------------------------
 
