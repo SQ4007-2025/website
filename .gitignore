@@ -17,3 +17,4 @@ staging/
 answers/
 
 movies.zip
+**/*.quarto_ipynb
