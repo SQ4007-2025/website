@@ -34,6 +34,7 @@ Your video must begin with an opening section that displays:
 
 **Step 2** Your README.md text file (named exactly that!) in your project repository must document and explain your project. This file should include your Project Title, the URL of your video (created in step 1 above) and a description of your project. You may use the below as a template.
 
+
 # YOUR PROJECT TITLE
 
 ```         
@@ -50,4 +51,7 @@ If unfamiliar with Markdown syntax, you might find GitHub’s Basic Writing and 
 
 Your README.md file should be minimally multiple paragraphs in length, and should explain what your project is, what each of the files you wrote for the project contains and does, and if you debated certain design choices, explaining why you made them. Ensure you allocate sufficient time and energy to writing a README.md that documents your project thoroughly. Be proud of it! A README.md in the neighborhood of 750 words is likely to be sufficient for describing your project and all aspects of its functionality. If unable to reach that threshold, that probably means your project is insufficiently complex.
 
+**Step 3** Submit a word document or PDF file containing the README.md information to the VLE turn-it-in link. 
 The Github repository link for your project must be submitted via the Harper Adams Hub BY EACH GROUP MEMBER.
+
+
